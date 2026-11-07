@@ -1,0 +1,12 @@
+!.env.example
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+.expo/
+.sst
+.sst/
+android/
+dist/
+ios/
+node_modules/

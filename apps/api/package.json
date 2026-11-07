@@ -1,0 +1,29 @@
+{
+  "name": "@tekluma/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/dev.ts",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.0",
+    "@neondatabase/serverless": "^1.0.0",
+    "@tekluma/shared": "workspace:*",
+    "drizzle-orm": "^0.44.0",
+    "hono": "^4.9.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.19.0",
+    "@types/node": "^24.0.0",
+    "drizzle-kit": "^0.31.0",
+    "tsx": "^4.20.0",
+    "typescript": "~6.0.3",
+    "@types/aws-lambda": "^8.10.0"
+  }
+}

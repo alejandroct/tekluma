@@ -1,0 +1,23 @@
+{
+  "name": "tekluma",
+  "private": true,
+  "packageManager": "pnpm@10.34.9",
+  "scripts": {
+    "dev:api": "pnpm --filter @tekluma/api dev",
+    "dev:admin": "pnpm --filter @tekluma/admin dev",
+    "dev:mobile": "pnpm --filter @tekluma/mobile start",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "pnpm --filter @tekluma/api db:generate",
+    "db:migrate": "pnpm --filter @tekluma/api db:migrate",
+    "sst:dev": "sst dev",
+    "deploy": "sst deploy --stage produccion"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "devDependencies": {
+    "sst": "^3.17.0"
+  }
+}

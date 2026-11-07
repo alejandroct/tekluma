@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 760" width="1500" height="760" font-family="Inter, SF Pro Display, Helvetica Neue, Arial, sans-serif">
+<rect width="1500" height="760" fill="#F6F5F2"/>
+<text x="80" y="80" font-size="30" font-weight="700" fill="#0F1B2D" letter-spacing="-0.5">Tekluma · Conceptos de logo</text>
+<text x="80" y="114" font-size="18" fill="#6B7280">Navy #0F1B2D · Ámbar obra #FF8A1F · Blanco</text>
+<g transform="translate(159,160) scale(0.5)">
+  <defs>
+    <linearGradient id="hazL0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF8A1F"/>
+      <stop offset="1" stop-color="#FF8A1F" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0F1B2D"/>
+  <polygon points="228,188 284,188 332,392 180,392" fill="url(#hazL0)"/>
+  <rect x="120" y="128" width="272" height="60" rx="16" fill="#FFFFFF"/>
+  <rect x="160" y="392" width="192" height="8" rx="4" fill="#FFFFFF" opacity="0.25"/>
+</g>
+<text x="287" y="500" text-anchor="middle" font-size="58" font-weight="700" fill="#0F1B2D" letter-spacing="-2">tekluma</text>
+<text x="287" y="560" text-anchor="middle" font-size="22" font-weight="600" fill="#FF8A1F">A · Haz de luz</text>
+<text x="287" y="592" text-anchor="middle" font-size="17" fill="#6B7280">Una viga que ilumina: la T de Tekluma</text>
+<rect x="107" y="630" width="360" height="90" rx="20" fill="#0F1B2D"/>
+<g transform="translate(127,645) scale(0.117)">
+  <defs>
+    <linearGradient id="hazD0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF8A1F"/>
+      <stop offset="1" stop-color="#FF8A1F" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0F1B2D"/>
+  <polygon points="228,188 284,188 332,392 180,392" fill="url(#hazD0)"/>
+  <rect x="120" y="128" width="272" height="60" rx="16" fill="#FFFFFF"/>
+  <rect x="160" y="392" width="192" height="8" rx="4" fill="#FFFFFF" opacity="0.25"/>
+</g>
+<text x="205" y="690" font-size="38" font-weight="700" fill="#FFFFFF" letter-spacing="-1.2">tekluma</text>
+<g transform="translate(629,160) scale(0.5)">
+  <rect width="512" height="512" rx="112" fill="#0F1B2D"/>
+  <path d="M146 392 V330 A110 110 0 0 1 366 330 V392" fill="none" stroke="#FFFFFF" stroke-width="44"/>
+  <polygon points="226,180 286,180 274,254 238,254" fill="#FF8A1F" stroke="#0F1B2D" stroke-width="10" stroke-linejoin="round"/>
+</g>
+<text x="757" y="500" text-anchor="middle" font-size="58" font-weight="700" fill="#0F1B2D" letter-spacing="-2">tekluma</text>
+<text x="757" y="560" text-anchor="middle" font-size="22" font-weight="600" fill="#FF8A1F">B · Dovela clave</text>
+<text x="757" y="592" text-anchor="middle" font-size="17" fill="#6B7280">El arco se sostiene por su pieza clave</text>
+<rect x="577" y="630" width="360" height="90" rx="20" fill="#0F1B2D"/>
+<g transform="translate(597,645) scale(0.117)">
+  <rect width="512" height="512" rx="112" fill="#0F1B2D"/>
+  <path d="M146 392 V330 A110 110 0 0 1 366 330 V392" fill="none" stroke="#FFFFFF" stroke-width="44"/>
+  <polygon points="226,180 286,180 274,254 238,254" fill="#FF8A1F" stroke="#0F1B2D" stroke-width="10" stroke-linejoin="round"/>
+</g>
+<text x="675" y="690" font-size="38" font-weight="700" fill="#FFFFFF" letter-spacing="-1.2">tekluma</text>
+<g transform="translate(1099,160) scale(0.5)">
+  <rect width="512" height="512" rx="112" fill="#0F1B2D"/>
+  <rect x="146" y="112" width="220" height="288" rx="32" fill="#FFFFFF" opacity="0.18" transform="rotate(12 256 256)"/>
+  <rect x="146" y="112" width="220" height="288" rx="32" fill="#FFFFFF" opacity="0.38" transform="rotate(5 256 256)"/>
+  <rect x="146" y="112" width="220" height="288" rx="32" fill="#FFFFFF" transform="rotate(-3 256 256)"/>
+  <g transform="rotate(-3 256 256)">
+    <rect x="196" y="184" width="120" height="30" rx="8" fill="#FF8A1F"/>
+    <rect x="241" y="184" width="30" height="144" rx="8" fill="#0F1B2D"/>
+  </g>
+</g>
+<text x="1227" y="500" text-anchor="middle" font-size="58" font-weight="700" fill="#0F1B2D" letter-spacing="-2">tekluma</text>
+<text x="1227" y="560" text-anchor="middle" font-size="22" font-weight="600" fill="#FF8A1F">C · Mazo</text>
+<text x="1227" y="592" text-anchor="middle" font-size="17" fill="#6B7280">Tus tarjetas, apiladas como una obra</text>
+<rect x="1047" y="630" width="360" height="90" rx="20" fill="#0F1B2D"/>
+<g transform="translate(1067,645) scale(0.117)">
+  <rect width="512" height="512" rx="112" fill="#0F1B2D"/>
+  <rect x="146" y="112" width="220" height="288" rx="32" fill="#FFFFFF" opacity="0.18" transform="rotate(12 256 256)"/>
+  <rect x="146" y="112" width="220" height="288" rx="32" fill="#FFFFFF" opacity="0.38" transform="rotate(5 256 256)"/>
+  <rect x="146" y="112" width="220" height="288" rx="32" fill="#FFFFFF" transform="rotate(-3 256 256)"/>
+  <g transform="rotate(-3 256 256)">
+    <rect x="196" y="184" width="120" height="30" rx="8" fill="#FF8A1F"/>
+    <rect x="241" y="184" width="30" height="144" rx="8" fill="#0F1B2D"/>
+  </g>
+</g>
+<text x="1145" y="690" font-size="38" font-weight="700" fill="#FFFFFF" letter-spacing="-1.2">tekluma</text>
+</svg>

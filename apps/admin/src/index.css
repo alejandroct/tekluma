@@ -1,0 +1,27 @@
+:root {
+  --navy: #0f1b2d;
+  --ambar: #ff8a1f;
+  --pizarra: #3b5174;
+  --niebla: #a9b7cc;
+  --fondo: #f6f5f2;
+  --superficie: #ffffff;
+  --texto: #0f1b2d;
+  --suave: #5b6b85;
+  --borde: #e3e1dc;
+  --error: #d64545;
+  --ok: #1f9d55;
+  font-family: Manrope, Inter, system-ui, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #0f1b2d;
+    --superficie: #18263c;
+    --texto: #f6f5f2;
+    --suave: #a9b7cc;
+    --borde: #26364f;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; }

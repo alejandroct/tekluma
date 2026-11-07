@@ -1,0 +1,1158 @@
+{
+  "id": "ff14e287-06a6-4c67-9a46-91ebf88c594b",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.articulos": {
+      "name": "articulos",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "version_norma_id": {
+          "name": "version_norma_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "numero": {
+          "name": "numero",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "encabezado": {
+          "name": "encabezado",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "texto": {
+          "name": "texto",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "articulos_version_numero_uq": {
+          "name": "articulos_version_numero_uq",
+          "columns": [
+            {
+              "expression": "version_norma_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "numero",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "articulos_version_norma_id_versiones_norma_id_fk": {
+          "name": "articulos_version_norma_id_versiones_norma_id_fk",
+          "tableFrom": "articulos",
+          "tableTo": "versiones_norma",
+          "columnsFrom": [
+            "version_norma_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.citas_tarjeta": {
+      "name": "citas_tarjeta",
+      "schema": "",
+      "columns": {
+        "tarjeta_id": {
+          "name": "tarjeta_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "articulo_id": {
+          "name": "articulo_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "extracto": {
+          "name": "extracto",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "citas_articulo_idx": {
+          "name": "citas_articulo_idx",
+          "columns": [
+            {
+              "expression": "articulo_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "citas_tarjeta_tarjeta_id_tarjetas_id_fk": {
+          "name": "citas_tarjeta_tarjeta_id_tarjetas_id_fk",
+          "tableFrom": "citas_tarjeta",
+          "tableTo": "tarjetas",
+          "columnsFrom": [
+            "tarjeta_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "citas_tarjeta_articulo_id_articulos_id_fk": {
+          "name": "citas_tarjeta_articulo_id_articulos_id_fk",
+          "tableFrom": "citas_tarjeta",
+          "tableTo": "articulos",
+          "columnsFrom": [
+            "articulo_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "citas_tarjeta_tarjeta_id_articulo_id_pk": {
+          "name": "citas_tarjeta_tarjeta_id_articulo_id_pk",
+          "columns": [
+            "tarjeta_id",
+            "articulo_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.desbloqueos_mazo": {
+      "name": "desbloqueos_mazo",
+      "schema": "",
+      "columns": {
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mazo_id": {
+          "name": "mazo_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "desbloqueos_mazo_usuario_id_usuarios_id_fk": {
+          "name": "desbloqueos_mazo_usuario_id_usuarios_id_fk",
+          "tableFrom": "desbloqueos_mazo",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "desbloqueos_mazo_mazo_id_mazos_id_fk": {
+          "name": "desbloqueos_mazo_mazo_id_mazos_id_fk",
+          "tableFrom": "desbloqueos_mazo",
+          "tableTo": "mazos",
+          "columnsFrom": [
+            "mazo_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "desbloqueos_mazo_usuario_id_mazo_id_pk": {
+          "name": "desbloqueos_mazo_usuario_id_mazo_id_pk",
+          "columns": [
+            "usuario_id",
+            "mazo_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.estados_repaso": {
+      "name": "estados_repaso",
+      "schema": "",
+      "columns": {
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tarjeta_id": {
+          "name": "tarjeta_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vence": {
+          "name": "vence",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "estabilidad": {
+          "name": "estabilidad",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "dificultad": {
+          "name": "dificultad",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "repeticiones": {
+          "name": "repeticiones",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fallos": {
+          "name": "fallos",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "estado": {
+          "name": "estado",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ultimo_repaso": {
+          "name": "ultimo_repaso",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "actualizado_en": {
+          "name": "actualizado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "estados_vence_idx": {
+          "name": "estados_vence_idx",
+          "columns": [
+            {
+              "expression": "usuario_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "vence",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "estados_repaso_usuario_id_usuarios_id_fk": {
+          "name": "estados_repaso_usuario_id_usuarios_id_fk",
+          "tableFrom": "estados_repaso",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "estados_repaso_tarjeta_id_tarjetas_id_fk": {
+          "name": "estados_repaso_tarjeta_id_tarjetas_id_fk",
+          "tableFrom": "estados_repaso",
+          "tableTo": "tarjetas",
+          "columnsFrom": [
+            "tarjeta_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "estados_repaso_usuario_id_tarjeta_id_pk": {
+          "name": "estados_repaso_usuario_id_tarjeta_id_pk",
+          "columns": [
+            "usuario_id",
+            "tarjeta_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.mazos": {
+      "name": "mazos",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "slug": {
+          "name": "slug",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "titulo": {
+          "name": "titulo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "descripcion": {
+          "name": "descripcion",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        },
+        "norma_id": {
+          "name": "norma_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "acceso": {
+          "name": "acceso",
+          "type": "acceso_mazo",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'premium'"
+        },
+        "precio_monedas": {
+          "name": "precio_monedas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "orden": {
+          "name": "orden",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "mazos_norma_id_normas_id_fk": {
+          "name": "mazos_norma_id_normas_id_fk",
+          "tableFrom": "mazos",
+          "tableTo": "normas",
+          "columnsFrom": [
+            "norma_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "mazos_slug_unique": {
+          "name": "mazos_slug_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "slug"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.movimientos_monedas": {
+      "name": "movimientos_monedas",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cantidad": {
+          "name": "cantidad",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "motivo": {
+          "name": "motivo",
+          "type": "motivo_monedas",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "referencia": {
+          "name": "referencia",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "movimientos_usuario_idx": {
+          "name": "movimientos_usuario_idx",
+          "columns": [
+            {
+              "expression": "usuario_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "movimientos_motivo_ref_uq": {
+          "name": "movimientos_motivo_ref_uq",
+          "columns": [
+            {
+              "expression": "motivo",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "referencia",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "movimientos_monedas_usuario_id_usuarios_id_fk": {
+          "name": "movimientos_monedas_usuario_id_usuarios_id_fk",
+          "tableFrom": "movimientos_monedas",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.normas": {
+      "name": "normas",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "codigo": {
+          "name": "codigo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "titulo": {
+          "name": "titulo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "disciplina": {
+          "name": "disciplina",
+          "type": "disciplina",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "normas_codigo_unique": {
+          "name": "normas_codigo_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "codigo"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.publicaciones_mazo": {
+      "name": "publicaciones_mazo",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "mazo_id": {
+          "name": "mazo_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "clave_s3": {
+          "name": "clave_s3",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_tarjetas": {
+          "name": "total_tarjetas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "publicado_por": {
+          "name": "publicado_por",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "publicaciones_mazo_version_uq": {
+          "name": "publicaciones_mazo_version_uq",
+          "columns": [
+            {
+              "expression": "mazo_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "version",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "publicaciones_mazo_mazo_id_mazos_id_fk": {
+          "name": "publicaciones_mazo_mazo_id_mazos_id_fk",
+          "tableFrom": "publicaciones_mazo",
+          "tableTo": "mazos",
+          "columnsFrom": [
+            "mazo_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "publicaciones_mazo_publicado_por_usuarios_id_fk": {
+          "name": "publicaciones_mazo_publicado_por_usuarios_id_fk",
+          "tableFrom": "publicaciones_mazo",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "publicado_por"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.revisiones_editoriales": {
+      "name": "revisiones_editoriales",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "tarjeta_id": {
+          "name": "tarjeta_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revisor_id": {
+          "name": "revisor_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "aprobada": {
+          "name": "aprobada",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "comentario": {
+          "name": "comentario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "revisiones_editoriales_tarjeta_id_tarjetas_id_fk": {
+          "name": "revisiones_editoriales_tarjeta_id_tarjetas_id_fk",
+          "tableFrom": "revisiones_editoriales",
+          "tableTo": "tarjetas",
+          "columnsFrom": [
+            "tarjeta_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "revisiones_editoriales_revisor_id_usuarios_id_fk": {
+          "name": "revisiones_editoriales_revisor_id_usuarios_id_fk",
+          "tableFrom": "revisiones_editoriales",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "revisor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.tarjetas": {
+      "name": "tarjetas",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "mazo_id": {
+          "name": "mazo_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revision": {
+          "name": "revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "contenido": {
+          "name": "contenido",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "estado": {
+          "name": "estado",
+          "type": "estado_editorial",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'borrador'"
+        },
+        "autor_id": {
+          "name": "autor_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revisor_id": {
+          "name": "revisor_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "actualizado_en": {
+          "name": "actualizado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "tarjetas_mazo_estado_idx": {
+          "name": "tarjetas_mazo_estado_idx",
+          "columns": [
+            {
+              "expression": "mazo_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "estado",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "tarjetas_mazo_id_mazos_id_fk": {
+          "name": "tarjetas_mazo_id_mazos_id_fk",
+          "tableFrom": "tarjetas",
+          "tableTo": "mazos",
+          "columnsFrom": [
+            "mazo_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "tarjetas_autor_id_usuarios_id_fk": {
+          "name": "tarjetas_autor_id_usuarios_id_fk",
+          "tableFrom": "tarjetas",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "autor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "tarjetas_revisor_id_usuarios_id_fk": {
+          "name": "tarjetas_revisor_id_usuarios_id_fk",
+          "tableFrom": "tarjetas",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "revisor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.usuarios": {
+      "name": "usuarios",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nombre": {
+          "name": "nombre",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "profesion": {
+          "name": "profesion",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rol_staff": {
+          "name": "rol_staff",
+          "type": "rol_staff",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "premium_hasta": {
+          "name": "premium_hasta",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "usuarios_email_unique": {
+          "name": "usuarios_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.versiones_norma": {
+      "name": "versiones_norma",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "norma_id": {
+          "name": "norma_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "dispositivo": {
+          "name": "dispositivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "publicada_en": {
+          "name": "publicada_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vigente": {
+          "name": "vigente",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "versiones_norma_norma_idx": {
+          "name": "versiones_norma_norma_idx",
+          "columns": [
+            {
+              "expression": "norma_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "versiones_norma_norma_id_normas_id_fk": {
+          "name": "versiones_norma_norma_id_normas_id_fk",
+          "tableFrom": "versiones_norma",
+          "tableTo": "normas",
+          "columnsFrom": [
+            "norma_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.acceso_mazo": {
+      "name": "acceso_mazo",
+      "schema": "public",
+      "values": [
+        "gratis",
+        "monedas",
+        "premium"
+      ]
+    },
+    "public.disciplina": {
+      "name": "disciplina",
+      "schema": "public",
+      "values": [
+        "habilitaciones_urbanas",
+        "arquitectura",
+        "estructuras",
+        "instalaciones_sanitarias",
+        "instalaciones_electromecanicas",
+        "generales"
+      ]
+    },
+    "public.estado_editorial": {
+      "name": "estado_editorial",
+      "schema": "public",
+      "values": [
+        "borrador",
+        "en_revision",
+        "aprobado",
+        "publicado",
+        "obsoleto"
+      ]
+    },
+    "public.motivo_monedas": {
+      "name": "motivo_monedas",
+      "schema": "public",
+      "values": [
+        "anuncio",
+        "compra",
+        "desbloqueo",
+        "bono",
+        "ajuste"
+      ]
+    },
+    "public.rol_staff": {
+      "name": "rol_staff",
+      "schema": "public",
+      "values": [
+        "autor",
+        "revisor",
+        "admin"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
