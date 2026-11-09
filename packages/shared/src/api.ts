@@ -32,3 +32,9 @@ export type EstadoRepaso = z.infer<typeof estadoRepasoSchema>;
 export const sincronizarRepasosSchema = z.object({
   estados: z.array(estadoRepasoSchema).max(500),
 });
+
+export const accesosSchema = z.object({
+  premium: z.boolean(),
+  desbloqueados: z.array(z.uuid()),
+});
+export type Accesos = z.infer<typeof accesosSchema>;

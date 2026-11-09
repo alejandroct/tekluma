@@ -1,17 +1,7 @@
-import * as SQLite from "expo-sqlite";
 import { createEmptyCard, fsrs, Rating, type Card, type Grade } from "ts-fsrs";
-
-const db = SQLite.openDatabaseSync("tekluma.db");
-db.execSync(`
-  create table if not exists estados (
-    tarjeta_id text primary key not null,
-    mazo_id text not null,
-    vence integer not null,
-    tarjeta text not null,
-    sincronizado integer not null default 0
-  );
-  create index if not exists estados_mazo_vence on estados (mazo_id, vence);
-`);
+import type { EstadoRepaso } from "@tekluma/shared";
+import { api } from "./auth";
+import { db } from "./db";
 
 const planificador = fsrs({ request_retention: 0.9, enable_fuzz: true });
 
@@ -50,4 +40,31 @@ export function pendientes(mazoId: string, ids: string[]): string[] {
     const vence = vistas.get(id);
     return vence === undefined || vence <= ahora;
   });
+}
+
+/** Sube los estados pendientes a la API; si falla (sin conexión), se reintenta la próxima vez. */
+export async function sincronizar() {
+  const filas = db.getAllSync<{ tarjeta_id: string; tarjeta: string }>(
+    "select tarjeta_id, tarjeta from estados where sincronizado = 0 limit 500",
+  );
+  if (filas.length === 0) return 0;
+  const estados: EstadoRepaso[] = filas.map((f) => {
+    const t = JSON.parse(f.tarjeta) as Card & { due: string; last_review?: string };
+    return {
+      tarjetaId: f.tarjeta_id,
+      vence: new Date(t.due).toISOString(),
+      estabilidad: t.stability,
+      dificultad: t.difficulty,
+      repeticiones: t.reps,
+      fallos: t.lapses,
+      estado: t.state,
+      ultimoRepaso: t.last_review ? new Date(t.last_review).toISOString() : null,
+    };
+  });
+  await api("/repasos", { method: "PUT", body: JSON.stringify({ estados }) });
+  // Solo marca los que no cambiaron mientras se subían.
+  for (const f of filas) {
+    db.runSync("update estados set sincronizado = 1 where tarjeta_id = ? and tarjeta = ?", f.tarjeta_id, f.tarjeta);
+  }
+  return filas.length;
 }

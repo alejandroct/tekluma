@@ -28,7 +28,10 @@ una base local PGlite en `apps/api/.pglite/` (no requiere instalar Postgres); co
 
 ```bash
 pnpm db:migrate
+pnpm --filter @tekluma/api db:seed   # mazos de prueba: E.030 (gratis) y E.060 (50 monedas)
 ```
+
+Con PGlite, detén la API antes de migrar o sembrar: solo un proceso puede abrir la base.
 
 Login: Better Auth con código de 6 dígitos por correo. Sin `RESEND_API_KEY` el código se imprime en la
 consola de la API. Apple y Google se activan al definir sus credenciales en `.env`.

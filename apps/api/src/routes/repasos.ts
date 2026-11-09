@@ -1,9 +1,9 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
-import { sql } from "drizzle-orm";
+import { inArray, sql } from "drizzle-orm";
 import { sincronizarRepasosSchema } from "@tekluma/shared";
 import { db } from "../db/client";
-import { estadosRepaso } from "../db/schema";
+import { estadosRepaso, tarjetas } from "../db/schema";
 import { requiereUsuario, type AuthVars } from "../middleware/auth";
 
 export const repasos = new Hono<AuthVars>()
@@ -13,7 +13,11 @@ export const repasos = new Hono<AuthVars>()
     const { estados } = c.req.valid("json");
     if (estados.length === 0) return c.json({ guardados: 0 });
 
-    const filas = estados.map((e) => ({
+    // Ignora tarjetas que ya no existen (p. ej. borradas) para no bloquear la sincronización.
+    const existentes = new Set(
+      (await db.select({ id: tarjetas.id }).from(tarjetas).where(inArray(tarjetas.id, estados.map((e) => e.tarjetaId)))).map((t) => t.id),
+    );
+    const filas = estados.filter((e) => existentes.has(e.tarjetaId)).map((e) => ({
       usuarioId,
       tarjetaId: e.tarjetaId,
       vence: new Date(e.vence),
@@ -24,6 +28,8 @@ export const repasos = new Hono<AuthVars>()
       estado: e.estado,
       ultimoRepaso: e.ultimoRepaso ? new Date(e.ultimoRepaso) : null,
     }));
+
+    if (filas.length === 0) return c.json({ guardados: 0 });
 
     // Gana el repaso más reciente (útil si el usuario estudia en dos dispositivos).
     await db

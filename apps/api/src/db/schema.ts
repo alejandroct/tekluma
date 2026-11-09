@@ -20,6 +20,7 @@ import {
   MOTIVOS_MONEDAS,
   ROLES_STAFF,
   type ContenidoTarjeta,
+  type PaqueteMazo,
 } from "@tekluma/shared";
 
 const id = () => uuid("id").primaryKey().defaultRandom();
@@ -193,14 +194,18 @@ export const revisionesEditoriales = pgTable("revisiones_editoriales", {
   creadoEn: creadoEn(),
 });
 
-/** Versión publicada (inmutable) de un mazo; el paquete vive en S3. */
+/**
+ * Versión publicada (inmutable) de un mazo. El paquete se guarda aquí y la API lo sirve;
+ * al desplegar se copiará también a S3/CloudFront (`claveS3`) para descargas masivas.
+ */
 export const publicacionesMazo = pgTable(
   "publicaciones_mazo",
   {
     id: id(),
     mazoId: uuid("mazo_id").notNull().references(() => mazos.id),
     version: integer("version").notNull(),
-    claveS3: text("clave_s3").notNull(),
+    paquete: jsonb("paquete").$type<PaqueteMazo>().notNull(),
+    claveS3: text("clave_s3"),
     totalTarjetas: integer("total_tarjetas").notNull(),
     publicadoPor: uuid("publicado_por").notNull().references(() => usuarios.id),
     publicadoEn: creadoEn(),

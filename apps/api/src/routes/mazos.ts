@@ -26,6 +26,20 @@ async function tieneAcceso(usuarioId: string, mazoId: string) {
 export const mazosRoutes = new Hono<AuthVars>()
   .use(requiereUsuario)
 
+  /** Qué puede abrir el usuario: todo si es premium, o los mazos que desbloqueó con monedas. */
+  .get("/accesos", async (c) => {
+    const usuarioId = c.get("usuarioId");
+    const [usuario] = await db.select({ premiumHasta: usuarios.premiumHasta }).from(usuarios).where(eq(usuarios.id, usuarioId));
+    const desbloqueos = await db
+      .select({ mazoId: desbloqueosMazo.mazoId })
+      .from(desbloqueosMazo)
+      .where(eq(desbloqueosMazo.usuarioId, usuarioId));
+    return c.json({
+      premium: Boolean(usuario?.premiumHasta && usuario.premiumHasta > new Date()),
+      desbloqueados: desbloqueos.map((d) => d.mazoId),
+    });
+  })
+
   .get("/:id/paquete", async (c) => {
     const mazoId = c.req.param("id");
     const { acceso } = await tieneAcceso(c.get("usuarioId"), mazoId);
@@ -39,8 +53,7 @@ export const mazosRoutes = new Hono<AuthVars>()
       .limit(1);
     if (!pub) throw new HTTPException(404, { message: "Mazo sin publicar" });
 
-    // TODO: devolver URL firmada de CloudFront cuando SST esté desplegado.
-    return c.json({ version: pub.version, clave: pub.claveS3 });
+    return c.json(pub.paquete);
   })
 
   .post("/:id/desbloquear", async (c) => {
