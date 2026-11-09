@@ -7,7 +7,8 @@ export default $config({
       home: "aws",
       removal: input?.stage === "produccion" ? "retain" : "remove",
       protect: input?.stage === "produccion",
-      providers: { aws: { region: "sa-east-1" } },
+      // Perfil propio para no mezclar credenciales con otros proyectos de la misma cuenta.
+      providers: { aws: { region: "sa-east-1", profile: process.env.CI ? undefined : "tekluma" } },
     };
   },
   async run() {
