@@ -30,6 +30,8 @@ export default $config({
       ...Object.fromEntries(Object.entries(secretos).map(([clave, secreto]) => [clave, secreto.value])),
     };
 
+    // Node 22 trae WebSocket global, que necesita el driver de Neon (en Node 20 la conexión falla).
+    const runtime = "nodejs22.x" as const;
     const nodejs = {
       // PGlite es solo para desarrollo local; en Lambda siempre hay DATABASE_URL.
       esbuild: { external: ["@electric-sql/pglite", "drizzle-orm/pglite"] },
@@ -39,11 +41,13 @@ export default $config({
     const mazos = new sst.aws.Bucket("Mazos");
 
     // Al publicar un mazo: empaquetar, subir a S3 y avisar por push.
-    const publicaciones = new sst.aws.Queue("Publicaciones");
+    // AWS exige que la visibilidad del mensaje sea mayor que el timeout del consumidor (2 min).
+    const publicaciones = new sst.aws.Queue("Publicaciones", { visibilityTimeout: "3 minutes" });
     publicaciones.subscribe({
       handler: "apps/api/src/workers/publicar.handler",
       link: [mazos],
       architecture: "arm64",
+      runtime,
       timeout: "2 minutes",
       environment,
       nodejs,
@@ -52,6 +56,7 @@ export default $config({
     const api = new sst.aws.Function("Api", {
       handler: "apps/api/src/index.handler",
       architecture: "arm64",
+      runtime,
       memory: "1024 MB",
       timeout: "20 seconds",
       url: true,
