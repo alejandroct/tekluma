@@ -1,4 +1,5 @@
-import { Stack } from "expo-router";
+import { Pressable, Text } from "react-native";
+import { router, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useTema } from "@/lib/tema";
 
@@ -15,7 +16,18 @@ export default function RootLayout() {
         }}
       >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="repaso/[mazoId]" options={{ title: "Repaso", presentation: "fullScreenModal" }} />
+        <Stack.Screen
+          name="repaso/[mazoId]"
+          options={{
+            title: "Repaso",
+            presentation: "fullScreenModal",
+            headerLeft: () => (
+              <Pressable onPress={() => router.back()} hitSlop={12}>
+                <Text style={{ color: t.texto, fontSize: 17 }}>Cerrar</Text>
+              </Pressable>
+            ),
+          }}
+        />
       </Stack>
     </>
   );
