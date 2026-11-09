@@ -32,6 +32,8 @@ export default $config({
       BETTER_AUTH_SECRET: new sst.Secret("BetterAuthSecret"),
       REVENUECAT_SECRET_KEY: new sst.Secret("RevenueCatSecretKey", ""),
       REVENUECAT_WEBHOOK_SECRET: new sst.Secret("RevenueCatWebhookSecret", ""),
+      // Emails (comma-separated) promoted to admin of the editorial panel on first access.
+      ADMIN_EMAILS: new sst.Secret("AdminEmails", ""),
     };
     const environment = {
       // Fuera de producción quedan habilitadas las rutas de prueba (p. ej. /cupo/anuncio-prueba).
@@ -106,6 +108,9 @@ export default $config({
       environment: { VITE_API_URL: router.url },
     });
 
-    return { api: router.url, admin: admin.url, lambda: api.url, remitente: correo.sender };
+    // Landing y páginas legales (/terminos, /privacidad), enlazadas desde la app y las tiendas.
+    const web = new sst.aws.StaticSite("Web", { path: "apps/web", domain: { name: dominio, dns } });
+
+    return { web: web.url, api: router.url, admin: admin.url, lambda: api.url, remitente: correo.sender };
   },
 });

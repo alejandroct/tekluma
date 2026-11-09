@@ -8,6 +8,7 @@ Repaso de normas técnicas (RNE) con tarjetas y repetición espaciada para ingen
 apps/mobile     App Expo (iOS + Android): Expo Router, SQLite offline, FSRS
 apps/api        API Hono → AWS Lambda; Drizzle + Neon Postgres
 apps/admin      Panel editorial (Vite + React) → S3 + CloudFront
+apps/web        Landing y páginas legales estáticas (sin build)
 packages/shared Tipos y esquemas Zod compartidos (tarjetas, paquetes, API)
 assets/brand    Logo e íconos en SVG
 sst.config.ts   Infraestructura AWS (sa-east-1)
@@ -48,10 +49,20 @@ de los stages que no son producción, el código también se imprime en consola.
 
 ## Dominios
 
-| Stage | API | Panel | Remitente |
-|---|---|---|---|
-| `produccion` | `api.tekluma.app` | `admin.tekluma.app` | `hola@tekluma.app` |
-| otros (p. ej. `dev`) | `api.<stage>.tekluma.app` | `admin.<stage>.tekluma.app` | `hola@<stage>.tekluma.app` |
+| Stage | Web y legales | API | Panel | Remitente |
+|---|---|---|---|---|
+| `produccion` | `tekluma.app` | `api.tekluma.app` | `admin.tekluma.app` | `hola@tekluma.app` |
+| otros (p. ej. `dev`) | `<stage>.tekluma.app` | `api.<stage>.tekluma.app` | `admin.<stage>.tekluma.app` | `hola@<stage>.tekluma.app` |
+
+## Panel editorial
+
+Solo entra el equipo (`users.staff_role`): se ingresa con código por correo, igual que en la app.
+
+- **Autor**: crea y edita tarjetas (contenido JSON validado + al menos una cita) y las envía a revisión.
+- **Revisor**: aprueba o rechaza (con comentario) tarjetas de otros autores y publica versiones del mazo.
+- **Admin**: además crea normas, artículos y mazos, y da o quita acceso en la pestaña Equipo.
+
+El primer admin sale del secreto `AdminEmails` (correos separados por coma): al entrar por primera vez al panel se le asigna el rol. Editar una tarjeta aprobada o publicada la devuelve a borrador como nueva revisión; la app solo ve los cambios cuando se publica otra versión del mazo.
 
 ## Despliegue
 

@@ -1,87 +1,77 @@
-import { useMemo, useState } from "react";
-import { contenidoTarjetaSchema, type TipoTarjeta } from "@tekluma/shared";
+import { useCallback, useEffect, useState } from "react";
+import { api, auth, ErrorApi, type Yo } from "./api";
+import { ROLES } from "./etiquetas";
+import { Equipo } from "./vistas/Equipo";
+import { Login } from "./vistas/Login";
+import { Mazos } from "./vistas/Mazos";
+import { Normas } from "./vistas/Normas";
 import "./App.css";
 
-const PLANTILLAS: Record<TipoTarjeta, object> = {
-  concepto: { tipo: "concepto", pregunta: "", respuesta: "", explicacion: "" },
-  opcion_multiple: { tipo: "opcion_multiple", pregunta: "", opciones: ["", "", "", ""], correcta: 0 },
-  completar: { tipo: "completar", texto: "El recubrimiento mínimo es {{70 mm}}." },
-  tabla: {
-    tipo: "tabla",
-    titulo: "",
-    columnas: [""],
-    filas: [{ etiqueta: "", valores: [""] }],
-    pregunta: { fila: 0, columna: 0 },
-  },
-  caso_numerico: {
-    tipo: "caso_numerico",
-    enunciado: "Calcula V para Z = {Z} ...",
-    variables: { Z: { etiqueta: "Factor de zona", valores: [0.45, 0.35] } },
-    formula: "Z*1.0",
-    unidadResultado: "tf",
-    tolerancia: 0.02,
-  },
-  imagen: { tipo: "imagen", pregunta: "", imagenUrl: "https://", respuesta: "" },
-};
+type Sesion = { tipo: "cargando" } | { tipo: "anonimo" } | { tipo: "sin-acceso"; mensaje: string } | { tipo: "staff"; yo: Yo };
+type Vista = "mazos" | "normas" | "equipo";
 
 export default function App() {
-  const [tipo, setTipo] = useState<TipoTarjeta>("concepto");
-  const [json, setJson] = useState(() => JSON.stringify(PLANTILLAS.concepto, null, 2));
+  const [sesion, setSesion] = useState<Sesion>({ tipo: "cargando" });
+  const [vista, setVista] = useState<Vista>("mazos");
 
-  const resultado = useMemo(() => {
-    try {
-      return contenidoTarjetaSchema.safeParse(JSON.parse(json));
-    } catch (e) {
-      return { success: false as const, error: { issues: [{ path: [], message: (e as Error).message }] } };
-    }
-  }, [json]);
+  const cargar = useCallback(() => {
+    api<Yo>("/editorial/yo").then(
+      (yo) => setSesion({ tipo: "staff", yo }),
+      (e) =>
+        setSesion(
+          e instanceof ErrorApi && e.status === 403
+            ? { tipo: "sin-acceso", mensaje: e.message }
+            : e instanceof ErrorApi && e.status === 401
+              ? { tipo: "anonimo" }
+              : { tipo: "sin-acceso", mensaje: "No pudimos conectar con la API." },
+        ),
+    );
+  }, []);
+  useEffect(cargar, [cargar]);
 
+  const salir = async () => {
+    await auth.salir().catch(() => {});
+    setSesion({ tipo: "anonimo" });
+  };
+
+  if (sesion.tipo === "cargando") return null;
+  if (sesion.tipo === "anonimo") return <Login onIngreso={cargar} />;
+  if (sesion.tipo === "sin-acceso")
+    return (
+      <div className="login">
+        <div className="caja">
+          <h1>Sin acceso</h1>
+          <p className="nota">{sesion.mensaje}</p>
+          <button className="secundario" onClick={salir}>
+            Cerrar sesión
+          </button>
+        </div>
+      </div>
+    );
+
+  const { yo } = sesion;
   return (
     <div className="pagina">
       <header>
-        <img src="/favicon.svg" alt="" width={36} height={36} />
+        <img src="/favicon.svg" alt="" width={32} height={32} />
         <h1>Panel editorial</h1>
+        <nav>
+          {(["mazos", "normas", ...(yo.rol === "admin" ? (["equipo"] as const) : [])] as Vista[]).map((v) => (
+            <button key={v} className={`chip ${vista === v ? "activo" : ""}`} onClick={() => setVista(v)}>
+              {v[0]!.toUpperCase() + v.slice(1)}
+            </button>
+          ))}
+        </nav>
+        <span className="usuario nota">
+          {yo.name || yo.email} · {ROLES[yo.rol]}
+        </span>
+        <button className="enlace" onClick={salir}>
+          Salir
+        </button>
       </header>
-
-      <section className="editor">
-        <div className="columna">
-          <label>
-            Tipo de tarjeta
-            <select
-              value={tipo}
-              onChange={(e) => {
-                const t = e.target.value as TipoTarjeta;
-                setTipo(t);
-                setJson(JSON.stringify(PLANTILLAS[t], null, 2));
-              }}
-            >
-              {Object.keys(PLANTILLAS).map((t) => (
-                <option key={t}>{t}</option>
-              ))}
-            </select>
-          </label>
-          <textarea value={json} onChange={(e) => setJson(e.target.value)} spellCheck={false} />
-        </div>
-
-        <div className="columna">
-          <h2>Validación</h2>
-          {resultado.success ? (
-            <p className="ok">✓ Tarjeta válida, lista para enviar a revisión.</p>
-          ) : (
-            <ul className="errores">
-              {resultado.error.issues.map((i, n) => (
-                <li key={n}>
-                  <code>{i.path.join(".") || "(raíz)"}</code> {i.message}
-                </li>
-              ))}
-            </ul>
-          )}
-          <p className="nota">
-            Flujo: borrador → en revisión → aprobado → publicado. El revisor debe ser distinto del autor y cada
-            tarjeta debe citar al menos un artículo.
-          </p>
-        </div>
-      </section>
+      {vista === "mazos" && <Mazos yo={yo} />}
+      {vista === "normas" && <Normas yo={yo} />}
+      {vista === "equipo" && <Equipo />}
     </div>
   );
 }

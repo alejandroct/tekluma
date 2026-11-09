@@ -1,0 +1,5 @@
+{
+  "name": "@tekluma/web",
+  "private": true,
+  "description": "Landing y páginas legales estáticas (tekluma.app). Sin build: SST sube la carpeta tal cual."
+}
