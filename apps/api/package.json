@@ -12,6 +12,7 @@
     "db:seed": "tsx --env-file=.env src/seed.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.1165.0",
     "@better-auth/expo": "1.7.18",
     "@electric-sql/pglite": "^0.5.16",
     "@hono/zod-validator": "^0.7.0",

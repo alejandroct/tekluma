@@ -33,8 +33,8 @@ pnpm --filter @tekluma/api db:seed   # mazos de prueba: E.030 y E.060
 
 Con PGlite, detén la API antes de migrar o sembrar: solo un proceso puede abrir la base.
 
-Login: Better Auth con código de 6 dígitos por correo. Sin `RESEND_API_KEY` el código se imprime en la
-consola de la API. Apple y Google se activan al definir sus credenciales en `.env`.
+Login: Better Auth con código de 6 dígitos por correo, enviado con Amazon SES en AWS. En local, y en los logs
+de los stages que no son producción, el código también se imprime en consola. Apple y Google se activan al definir sus credenciales en `.env`.
 
 ## Monetización: cupo diario
 
@@ -45,6 +45,13 @@ consola de la API. Apple y Google se activan al definir sus credenciales en `.en
 - Premium: sin límite ni anuncios, vía RevenueCat (`POST /webhooks/revenuecat` y sincronización tras comprar).
   Pasos de configuración de App Store, RevenueCat y AdMob en [docs/configurar-pagos.md](docs/configurar-pagos.md).
 - Todas las reglas se ajustan con variables `CUPO_*` (ver `apps/api/.env.example`).
+
+## Dominios
+
+| Stage | API | Panel | Remitente |
+|---|---|---|---|
+| `produccion` | `api.tekluma.app` | `admin.tekluma.app` | `hola@tekluma.app` |
+| otros (p. ej. `dev`) | `api.<stage>.tekluma.app` | `admin.<stage>.tekluma.app` | `hola@<stage>.tekluma.app` |
 
 ## Despliegue
 

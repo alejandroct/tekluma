@@ -1,19 +1,27 @@
-/** Envía un correo con Resend; sin RESEND_API_KEY (desarrollo) solo lo imprime. */
+import { SESv2Client, SendEmailCommand } from "@aws-sdk/client-sesv2";
+
+let ses: SESv2Client | null = null;
+
+/**
+ * Envía un correo con Amazon SES (en AWS, con el permiso del rol de la Lambda: sin claves).
+ * Sin CORREO_PROVEEDOR=ses (desarrollo local) solo lo imprime. Fuera de producción también
+ * se imprime en los logs, para poder probar aunque SES siga en sandbox.
+ */
 export async function enviarCorreo(para: string, asunto: string, texto: string) {
-  const clave = process.env.RESEND_API_KEY;
-  if (!clave) {
-    console.log(`\n📧 Para: ${para}\n   ${asunto}\n   ${texto}\n`);
-    return;
-  }
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${clave}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from: process.env.CORREO_REMITENTE ?? "Tekluma <hola@tekluma.app>",
-      to: para,
-      subject: asunto,
-      text: texto,
+  if (process.env.NODE_ENV !== "production") console.log(`\n📧 Para: ${para}\n   ${asunto}\n   ${texto}\n`);
+  if (process.env.CORREO_PROVEEDOR !== "ses") return;
+
+  ses ??= new SESv2Client({});
+  await ses.send(
+    new SendEmailCommand({
+      FromEmailAddress: process.env.CORREO_REMITENTE,
+      Destination: { ToAddresses: [para] },
+      Content: {
+        Simple: {
+          Subject: { Data: asunto, Charset: "UTF-8" },
+          Body: { Text: { Data: texto, Charset: "UTF-8" } },
+        },
+      },
     }),
-  });
-  if (!res.ok) throw new Error(`Resend respondió ${res.status}: ${await res.text()}`);
+  );
 }

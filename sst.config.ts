@@ -14,19 +14,31 @@ export default $config({
   async run() {
     const produccion = $app.stage === "produccion";
 
+    // Producción usa el dominio raíz; cada stage, su subdominio (una identidad de SES no se puede repetir).
+    const dominio = produccion ? "tekluma.app" : `${$app.stage}.tekluma.app`;
+    const dns = sst.aws.dns();
+
+    // Correos transaccionales (códigos de login) con SES; SST crea los registros DKIM en Route 53.
+    const correo = new sst.aws.Email("Correo", {
+      sender: dominio,
+      dns,
+      dmarc: "v=DMARC1; p=quarantine; adkim=s; aspf=s;",
+    });
+
     // Secretos: `npx sst secret set <Nombre> "<valor>" --stage <stage>`.
     // Los que tienen placeholder "" son opcionales; vacío equivale a "no configurado".
     const secretos = {
       DATABASE_URL: new sst.Secret("DatabaseUrl"),
       BETTER_AUTH_SECRET: new sst.Secret("BetterAuthSecret"),
-      RESEND_API_KEY: new sst.Secret("ResendApiKey", ""),
-      CORREO_REMITENTE: new sst.Secret("CorreoRemitente", "Tekluma <hola@tekluma.app>"),
       REVENUECAT_SECRET_KEY: new sst.Secret("RevenueCatSecretKey", ""),
       REVENUECAT_WEBHOOK_SECRET: new sst.Secret("RevenueCatWebhookSecret", ""),
     };
     const environment = {
       // Fuera de producción quedan habilitadas las rutas de prueba (p. ej. /cupo/anuncio-prueba).
       NODE_ENV: produccion ? "production" : "development",
+      BETTER_AUTH_URL: `https://api.${dominio}`,
+      CORREO_PROVEEDOR: "ses",
+      CORREO_REMITENTE: `Tekluma <hola@${dominio}>`,
       ...Object.fromEntries(Object.entries(secretos).map(([clave, secreto]) => [clave, secreto.value])),
     };
 
@@ -60,17 +72,22 @@ export default $config({
       memory: "1024 MB",
       timeout: "20 seconds",
       url: true,
-      link: [mazos, publicaciones],
+      link: [mazos, publicaciones, correo],
       environment,
       nodejs,
     });
 
+    // Dominio propio para la API (CloudFront delante de la URL de la Lambda).
+    const router = new sst.aws.Router("ApiRouter", { domain: { name: `api.${dominio}`, dns } });
+    router.route("/", api.url);
+
     const admin = new sst.aws.StaticSite("Admin", {
       path: "apps/admin",
+      domain: { name: `admin.${dominio}`, dns },
       build: { command: "pnpm build", output: "dist" },
-      environment: { VITE_API_URL: api.url },
+      environment: { VITE_API_URL: router.url },
     });
 
-    return { api: api.url, admin: admin.url };
+    return { api: router.url, admin: admin.url, lambda: api.url, remitente: correo.sender };
   },
 });
