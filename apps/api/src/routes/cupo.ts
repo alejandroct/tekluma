@@ -5,6 +5,7 @@ import { zValidator } from "@hono/zod-validator";
 import { consumirTarjetaSchema } from "@tekluma/shared";
 import { acreditarAnuncio, ampliarConMonedas, consumirTarjeta, estadoCupo } from "../cupo";
 import { requiereUsuario, type AuthVars } from "../middleware/auth";
+import { sincronizarPremium } from "../premium";
 
 export const cupo = new Hono<AuthVars>()
   .use(requiereUsuario)
@@ -20,6 +21,12 @@ export const cupo = new Hono<AuthVars>()
   .post("/monedas", async (c) => {
     const resultado = await ampliarConMonedas(c.get("usuarioId"));
     return c.json(resultado, resultado.ampliado ? 200 : 402);
+  })
+
+  /** La app lo llama tras comprar o restaurar, para no esperar al webhook de RevenueCat. */
+  .post("/premium/sincronizar", async (c) => {
+    await sincronizarPremium(c.get("usuarioId"));
+    return c.json(await estadoCupo(c.get("usuarioId")));
   })
 
   /**

@@ -3,6 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
 import type { EstadoCupo } from "@tekluma/shared";
 import { authClient } from "@/lib/auth";
+import { cerrarSesionCompras } from "@/lib/compras";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { useTema } from "@/lib/tema";
 
@@ -38,7 +39,10 @@ export default function Perfil() {
           <Text style={{ color: t.navy, fontSize: 16, fontWeight: "800" }}>★ Hazte Premium · 7 días gratis</Text>
         </Pressable>
       )}
-      <Pressable onPress={() => authClient.signOut()} style={({ pressed }) => [estilos.salir, { borderColor: t.borde, opacity: pressed ? 0.7 : 1 }]}>
+      <Pressable onPress={async () => {
+          await cerrarSesionCompras();
+          await authClient.signOut();
+        }} style={({ pressed }) => [estilos.salir, { borderColor: t.borde, opacity: pressed ? 0.7 : 1 }]}>
         <Text style={{ color: "#D64545", fontSize: 16, fontWeight: "600" }}>Cerrar sesión</Text>
       </Pressable>
     </ScrollView>

@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { verificarRecompensa } from "../admob";
 import { acreditarAnuncio } from "../cupo";
+import { procesarEventoRevenueCat, webhookAutorizado } from "../premium";
 
 export const webhooks = new Hono()
   /** AdMob llama aquí cuando el usuario termina un anuncio con recompensa. */
@@ -12,5 +13,13 @@ export const webhooks = new Hono()
     // AdMob verifica la URL al configurarla con una llamada sin usuario: respondemos 200.
     if (!usuarioId || !transaccion) return c.text("ok");
     await acreditarAnuncio(usuarioId, `admob-${transaccion}`);
+    return c.text("ok");
+  })
+
+  /** RevenueCat avisa compras, renovaciones, cancelaciones y vencimientos de Premium. */
+  .post("/revenuecat", async (c) => {
+    if (!webhookAutorizado(c.req.header("authorization"))) return c.text("no autorizado", 401);
+    const { event } = await c.req.json<{ event: Parameters<typeof procesarEventoRevenueCat>[0] }>();
+    await procesarEventoRevenueCat(event);
     return c.text("ok");
   });

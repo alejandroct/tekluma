@@ -42,7 +42,8 @@ consola de la API. Apple y Google se activan al definir sus credenciales en `.en
 - Anuncio con recompensa: +5 tarjetas, hasta 8 al día. En producción lo acredita AdMob llamando a
   `GET /webhooks/admob` (verificación SSV firmada); en desarrollo, la app usa `POST /cupo/anuncio-prueba`.
 - Monedas: 5 monedas = 5 tarjetas extra. Intersticial al terminar sesión, máximo 2 al día.
-- Premium: sin límite ni anuncios. Los cobros (RevenueCat) están pendientes.
+- Premium: sin límite ni anuncios, vía RevenueCat (`POST /webhooks/revenuecat` y sincronización tras comprar).
+  Pasos de configuración de App Store, RevenueCat y AdMob en [docs/configurar-pagos.md](docs/configurar-pagos.md).
 - Todas las reglas se ajustan con variables `CUPO_*` (ver `apps/api/.env.example`).
 
 ## Despliegue

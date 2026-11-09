@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import { iniciarAnuncios } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
+import { iniciarCompras } from "@/lib/compras";
 import { useTema } from "@/lib/tema";
 
 export default function RootLayout() {
@@ -13,6 +14,12 @@ export default function RootLayout() {
   useEffect(() => {
     iniciarAnuncios().catch(() => {});
   }, []);
+
+  // Las compras quedan a nombre del usuario de Tekluma (mismo id en RevenueCat y en la API).
+  const usuarioId = sesion?.user.id;
+  useEffect(() => {
+    if (usuarioId) iniciarCompras(usuarioId).catch(() => {});
+  }, [usuarioId]);
 
   if (isPending) {
     return (
