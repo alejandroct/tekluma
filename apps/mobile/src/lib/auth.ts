@@ -1,0 +1,26 @@
+import { createAuthClient } from "better-auth/react";
+import { emailOTPClient } from "better-auth/client/plugins";
+import { expoClient } from "@better-auth/expo/client";
+import * as SecureStore from "expo-secure-store";
+
+/** En el simulador la API local es accesible por localhost. */
+export const API_URL = process.env.EXPO_PUBLIC_API_URL ?? "http://localhost:8787";
+
+export const authClient = createAuthClient({
+  baseURL: `${API_URL}/auth`,
+  plugins: [
+    // Guarda la sesión en el llavero del dispositivo (Keychain / Keystore).
+    expoClient({ scheme: "tekluma", storagePrefix: "tekluma", storage: SecureStore }),
+    emailOTPClient(),
+  ],
+});
+
+/** fetch a la API con la sesión del usuario adjunta. */
+export async function api<T>(ruta: string, init: RequestInit = {}): Promise<T> {
+  const res = await fetch(`${API_URL}${ruta}`, {
+    ...init,
+    headers: { "Content-Type": "application/json", Cookie: await authClient.getCookie(), ...init.headers },
+  });
+  if (!res.ok) throw new Error(`${init.method ?? "GET"} ${ruta} → ${res.status}`);
+  return res.json() as Promise<T>;
+}

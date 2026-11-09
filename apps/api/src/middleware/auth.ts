@@ -1,17 +1,13 @@
 import { createMiddleware } from "hono/factory";
 import { HTTPException } from "hono/http-exception";
+import { auth } from "../auth";
 
 export type AuthVars = { Variables: { usuarioId: string } };
 
-/**
- * TODO: reemplazar por la verificación real del token (proveedor de auth por decidir).
- * Mientras tanto, solo fuera de producción se acepta el header `x-dev-usuario`.
- */
+/** Exige una sesión válida de Better Auth (cookie o header enviado por la app). */
 export const requiereUsuario = createMiddleware<AuthVars>(async (c, next) => {
-  const devUsuario = c.req.header("x-dev-usuario");
-  if (process.env.NODE_ENV !== "production" && devUsuario) {
-    c.set("usuarioId", devUsuario);
-    return next();
-  }
-  throw new HTTPException(401, { message: "No autenticado" });
+  const sesion = await auth.api.getSession({ headers: c.req.raw.headers });
+  if (!sesion) throw new HTTPException(401, { message: "No autenticado" });
+  c.set("usuarioId", sesion.user.id);
+  return next();
 });

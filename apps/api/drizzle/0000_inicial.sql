@@ -19,6 +19,22 @@ CREATE TABLE "citas_tarjeta" (
 	CONSTRAINT "citas_tarjeta_tarjeta_id_articulo_id_pk" PRIMARY KEY("tarjeta_id","articulo_id")
 );
 --> statement-breakpoint
+CREATE TABLE "cuentas" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"usuario_id" uuid NOT NULL,
+	"cuenta_proveedor_id" text NOT NULL,
+	"proveedor" text NOT NULL,
+	"access_token" text,
+	"refresh_token" text,
+	"id_token" text,
+	"access_token_expira_en" timestamp with time zone,
+	"refresh_token_expira_en" timestamp with time zone,
+	"scope" text,
+	"password" text,
+	"creado_en" timestamp with time zone DEFAULT now() NOT NULL,
+	"actualizado_en" timestamp with time zone DEFAULT now() NOT NULL
+);
+--> statement-breakpoint
 CREATE TABLE "desbloqueos_mazo" (
 	"usuario_id" uuid NOT NULL,
 	"mazo_id" uuid NOT NULL,
@@ -90,6 +106,18 @@ CREATE TABLE "revisiones_editoriales" (
 	"creado_en" timestamp with time zone DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
+CREATE TABLE "sesiones" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"usuario_id" uuid NOT NULL,
+	"token" text NOT NULL,
+	"expira_en" timestamp with time zone NOT NULL,
+	"ip" text,
+	"user_agent" text,
+	"creado_en" timestamp with time zone DEFAULT now() NOT NULL,
+	"actualizado_en" timestamp with time zone DEFAULT now() NOT NULL,
+	CONSTRAINT "sesiones_token_unique" UNIQUE("token")
+);
+--> statement-breakpoint
 CREATE TABLE "tarjetas" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"mazo_id" uuid NOT NULL,
@@ -105,12 +133,24 @@ CREATE TABLE "tarjetas" (
 CREATE TABLE "usuarios" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"email" text NOT NULL,
-	"nombre" text,
+	"email_verificado" boolean DEFAULT false NOT NULL,
+	"nombre" text DEFAULT '' NOT NULL,
+	"imagen" text,
 	"profesion" text,
 	"rol_staff" "rol_staff",
 	"premium_hasta" timestamp with time zone,
 	"creado_en" timestamp with time zone DEFAULT now() NOT NULL,
+	"actualizado_en" timestamp with time zone DEFAULT now() NOT NULL,
 	CONSTRAINT "usuarios_email_unique" UNIQUE("email")
+);
+--> statement-breakpoint
+CREATE TABLE "verificaciones" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"identificador" text NOT NULL,
+	"valor" text NOT NULL,
+	"expira_en" timestamp with time zone NOT NULL,
+	"creado_en" timestamp with time zone DEFAULT now() NOT NULL,
+	"actualizado_en" timestamp with time zone DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE "versiones_norma" (
@@ -125,6 +165,7 @@ CREATE TABLE "versiones_norma" (
 ALTER TABLE "articulos" ADD CONSTRAINT "articulos_version_norma_id_versiones_norma_id_fk" FOREIGN KEY ("version_norma_id") REFERENCES "public"."versiones_norma"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "citas_tarjeta" ADD CONSTRAINT "citas_tarjeta_tarjeta_id_tarjetas_id_fk" FOREIGN KEY ("tarjeta_id") REFERENCES "public"."tarjetas"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "citas_tarjeta" ADD CONSTRAINT "citas_tarjeta_articulo_id_articulos_id_fk" FOREIGN KEY ("articulo_id") REFERENCES "public"."articulos"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "cuentas" ADD CONSTRAINT "cuentas_usuario_id_usuarios_id_fk" FOREIGN KEY ("usuario_id") REFERENCES "public"."usuarios"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "desbloqueos_mazo" ADD CONSTRAINT "desbloqueos_mazo_usuario_id_usuarios_id_fk" FOREIGN KEY ("usuario_id") REFERENCES "public"."usuarios"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "desbloqueos_mazo" ADD CONSTRAINT "desbloqueos_mazo_mazo_id_mazos_id_fk" FOREIGN KEY ("mazo_id") REFERENCES "public"."mazos"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "estados_repaso" ADD CONSTRAINT "estados_repaso_usuario_id_usuarios_id_fk" FOREIGN KEY ("usuario_id") REFERENCES "public"."usuarios"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
@@ -135,15 +176,19 @@ ALTER TABLE "publicaciones_mazo" ADD CONSTRAINT "publicaciones_mazo_mazo_id_mazo
 ALTER TABLE "publicaciones_mazo" ADD CONSTRAINT "publicaciones_mazo_publicado_por_usuarios_id_fk" FOREIGN KEY ("publicado_por") REFERENCES "public"."usuarios"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "revisiones_editoriales" ADD CONSTRAINT "revisiones_editoriales_tarjeta_id_tarjetas_id_fk" FOREIGN KEY ("tarjeta_id") REFERENCES "public"."tarjetas"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "revisiones_editoriales" ADD CONSTRAINT "revisiones_editoriales_revisor_id_usuarios_id_fk" FOREIGN KEY ("revisor_id") REFERENCES "public"."usuarios"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "sesiones" ADD CONSTRAINT "sesiones_usuario_id_usuarios_id_fk" FOREIGN KEY ("usuario_id") REFERENCES "public"."usuarios"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "tarjetas" ADD CONSTRAINT "tarjetas_mazo_id_mazos_id_fk" FOREIGN KEY ("mazo_id") REFERENCES "public"."mazos"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "tarjetas" ADD CONSTRAINT "tarjetas_autor_id_usuarios_id_fk" FOREIGN KEY ("autor_id") REFERENCES "public"."usuarios"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "tarjetas" ADD CONSTRAINT "tarjetas_revisor_id_usuarios_id_fk" FOREIGN KEY ("revisor_id") REFERENCES "public"."usuarios"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "versiones_norma" ADD CONSTRAINT "versiones_norma_norma_id_normas_id_fk" FOREIGN KEY ("norma_id") REFERENCES "public"."normas"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 CREATE UNIQUE INDEX "articulos_version_numero_uq" ON "articulos" USING btree ("version_norma_id","numero");--> statement-breakpoint
 CREATE INDEX "citas_articulo_idx" ON "citas_tarjeta" USING btree ("articulo_id");--> statement-breakpoint
+CREATE INDEX "cuentas_usuario_idx" ON "cuentas" USING btree ("usuario_id");--> statement-breakpoint
 CREATE INDEX "estados_vence_idx" ON "estados_repaso" USING btree ("usuario_id","vence");--> statement-breakpoint
 CREATE INDEX "movimientos_usuario_idx" ON "movimientos_monedas" USING btree ("usuario_id");--> statement-breakpoint
 CREATE UNIQUE INDEX "movimientos_motivo_ref_uq" ON "movimientos_monedas" USING btree ("motivo","referencia");--> statement-breakpoint
 CREATE UNIQUE INDEX "publicaciones_mazo_version_uq" ON "publicaciones_mazo" USING btree ("mazo_id","version");--> statement-breakpoint
+CREATE INDEX "sesiones_usuario_idx" ON "sesiones" USING btree ("usuario_id");--> statement-breakpoint
 CREATE INDEX "tarjetas_mazo_estado_idx" ON "tarjetas" USING btree ("mazo_id","estado");--> statement-breakpoint
+CREATE INDEX "verificaciones_identificador_idx" ON "verificaciones" USING btree ("identificador");--> statement-breakpoint
 CREATE INDEX "versiones_norma_norma_idx" ON "versiones_norma" USING btree ("norma_id");

@@ -1,12 +1,14 @@
-!.env.example
+node_modules/
+dist/
+.expo/
+ios/
+android/
+.sst/
+.pglite/
 *.tsbuildinfo
 .DS_Store
+
+# Variables de entorno: solo se versiona la plantilla
 .env
 .env.*
-.expo/
-.sst
-.sst/
-android/
-dist/
-ios/
-node_modules/
+!.env.example

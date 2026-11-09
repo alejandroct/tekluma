@@ -23,11 +23,15 @@ pnpm dev:admin         # Panel editorial
 pnpm typecheck
 ```
 
-Base de datos (Neon): copia `apps/api/.env.example` a `apps/api/.env`, y luego:
+Copia `apps/api/.env.example` a `apps/api/.env` y define `BETTER_AUTH_SECRET`. Sin `DATABASE_URL`, la API usa
+una base local PGlite en `apps/api/.pglite/` (no requiere instalar Postgres); con ella, usa Neon.
 
 ```bash
 pnpm db:migrate
 ```
+
+Login: Better Auth con código de 6 dígitos por correo. Sin `RESEND_API_KEY` el código se imprime en la
+consola de la API. Apple y Google se activan al definir sus credenciales en `.env`.
 
 ## Despliegue
 

@@ -33,10 +33,14 @@ export const motivoMonedasEnum = pgEnum("motivo_monedas", MOTIVOS_MONEDAS);
 
 // ───────────── Usuarios ─────────────
 
+// Tablas gestionadas por Better Auth (ver src/auth.ts para el mapeo de campos).
+
 export const usuarios = pgTable("usuarios", {
   id: id(),
   email: text("email").notNull().unique(),
-  nombre: text("nombre"),
+  emailVerificado: boolean("email_verificado").notNull().default(false),
+  nombre: text("nombre").notNull().default(""),
+  imagen: text("imagen"),
   /** Profesión declarada: ingeniero civil, arquitecto, estudiante, etc. */
   profesion: text("profesion"),
   /** Si es parte del equipo editorial. */
@@ -44,7 +48,58 @@ export const usuarios = pgTable("usuarios", {
   /** Fin de la suscripción vigente según RevenueCat (null = sin premium). */
   premiumHasta: timestamp("premium_hasta", { withTimezone: true }),
   creadoEn: creadoEn(),
+  actualizadoEn: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
 });
+
+export const sesiones = pgTable(
+  "sesiones",
+  {
+    id: id(),
+    userId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
+    token: text("token").notNull().unique(),
+    expiresAt: timestamp("expira_en", { withTimezone: true }).notNull(),
+    ipAddress: text("ip"),
+    userAgent: text("user_agent"),
+    createdAt: creadoEn(),
+    updatedAt: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("sesiones_usuario_idx").on(t.userId)],
+);
+
+/** Proveedores vinculados a un usuario (Apple, Google). */
+export const cuentas = pgTable(
+  "cuentas",
+  {
+    id: id(),
+    userId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
+    accountId: text("cuenta_proveedor_id").notNull(),
+    providerId: text("proveedor").notNull(),
+    accessToken: text("access_token"),
+    refreshToken: text("refresh_token"),
+    idToken: text("id_token"),
+    accessTokenExpiresAt: timestamp("access_token_expira_en", { withTimezone: true }),
+    refreshTokenExpiresAt: timestamp("refresh_token_expira_en", { withTimezone: true }),
+    scope: text("scope"),
+    password: text("password"),
+    createdAt: creadoEn(),
+    updatedAt: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("cuentas_usuario_idx").on(t.userId)],
+);
+
+/** Códigos de un solo uso (OTP por correo) y estados de OAuth. */
+export const verificaciones = pgTable(
+  "verificaciones",
+  {
+    id: id(),
+    identifier: text("identificador").notNull(),
+    value: text("valor").notNull(),
+    expiresAt: timestamp("expira_en", { withTimezone: true }).notNull(),
+    createdAt: creadoEn(),
+    updatedAt: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("verificaciones_identificador_idx").on(t.identifier)],
+);
 
 // ───────────── Normativa ─────────────
 

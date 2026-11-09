@@ -11,19 +11,22 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@better-auth/expo": "1.7.18",
+    "@electric-sql/pglite": "^0.5.16",
     "@hono/zod-validator": "^0.7.0",
     "@neondatabase/serverless": "^1.0.0",
     "@tekluma/shared": "workspace:*",
+    "better-auth": "1.7.18",
     "drizzle-orm": "^0.44.0",
     "hono": "^4.9.0",
     "zod": "^4.1.0"
   },
   "devDependencies": {
     "@hono/node-server": "^1.19.0",
+    "@types/aws-lambda": "^8.10.0",
     "@types/node": "^24.0.0",
     "drizzle-kit": "^0.31.0",
     "tsx": "^4.20.0",
-    "typescript": "~6.0.3",
-    "@types/aws-lambda": "^8.10.0"
+    "typescript": "~6.0.3"
   }
 }
