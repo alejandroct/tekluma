@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ACCESOS_MAZO, DISCIPLINAS } from "./enums";
+import { DECK_ACCESS, DISCIPLINES } from "./enums";
 
 /** Mazo en el catálogo que ve la app. */
 export const mazoCatalogoSchema = z.object({
@@ -7,9 +7,9 @@ export const mazoCatalogoSchema = z.object({
   slug: z.string(),
   titulo: z.string(),
   descripcion: z.string(),
-  disciplina: z.enum(DISCIPLINAS),
+  disciplina: z.enum(DISCIPLINES),
   normaCodigo: z.string(),
-  acceso: z.enum(ACCESOS_MAZO),
+  acceso: z.enum(DECK_ACCESS),
   totalTarjetas: z.number().int().nonnegative(),
   versionPublicada: z.number().int().positive(),
 });
@@ -46,6 +46,11 @@ export const reglasCupoSchema = z.object({
   maxIntersticialesDia: z.number().int().nonnegative(),
   /** Monedas que cuesta (y tarjetas que da) cada ampliación con monedas: 1 moneda = 1 tarjeta. */
   tarjetasPorCompraMonedas: z.number().int().positive(),
+  /** Anuncios para ganar monedas (contador separado de los anuncios por tarjetas). */
+  monedasPorAnuncio: z.number().int().positive(),
+  maxAnunciosMonedasDia: z.number().int().nonnegative(),
+  /** Recompensa del check-in según el día de la racha (se repite tras el último). */
+  checkIn: z.array(z.number().int().positive()).min(1),
 });
 export type ReglasCupo = z.infer<typeof reglasCupoSchema>;
 
@@ -61,5 +66,21 @@ export const estadoCupoSchema = z.object({
   reglas: reglasCupoSchema,
 });
 export type EstadoCupo = z.infer<typeof estadoCupoSchema>;
+
+/** Pantalla de recompensas: check-in diario con racha y anuncios para ganar monedas. */
+export const estadoRecompensasSchema = z.object({
+  fecha: z.iso.date(),
+  monedas: z.number().int(),
+  checkIn: z.object({
+    hechoHoy: z.boolean(),
+    /** Días seguidos con check-in, contando hoy si ya se hizo. */
+    racha: z.number().int(),
+    /** Monedas que da el check-in de hoy (o el de mañana, si hoy ya se hizo). */
+    proxima: z.number().int(),
+  }),
+  anunciosMonedasVistos: z.number().int(),
+  reglas: reglasCupoSchema,
+});
+export type EstadoRecompensas = z.infer<typeof estadoRecompensasSchema>;
 
 export const consumirTarjetaSchema = z.object({ tarjetaId: z.uuid() });

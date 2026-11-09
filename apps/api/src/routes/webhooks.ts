@@ -12,7 +12,8 @@ export const webhooks = new Hono()
     const transaccion = params.get("transaction_id");
     // AdMob verifica la URL al configurarla con una llamada sin usuario: respondemos 200.
     if (!usuarioId || !transaccion) return c.text("ok");
-    await acreditarAnuncio(usuarioId, `admob-${transaccion}`);
+    // custom_data tells what the ad was for ("monedas" from the rewards screen; otherwise cards).
+    await acreditarAnuncio(usuarioId, `admob-${transaccion}`, params.get("custom_data") === "monedas" ? "monedas" : "tarjetas");
     return c.text("ok");
   })
 

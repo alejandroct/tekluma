@@ -1,36 +1,43 @@
-/** Títulos del RNE y otras fuentes normativas, agrupados por público. */
-export const DISCIPLINAS = [
-  "habilitaciones_urbanas", // GH, OS
-  "arquitectura", // A.010 – A.140
-  "estructuras", // E.020 – E.090
-  "instalaciones_sanitarias", // IS
-  "instalaciones_electromecanicas", // EM
-  "generales", // G.010 – G.050
+/** Peruvian building code (RNE) titles and other sources, grouped by audience. */
+export const DISCIPLINES = [
+  "urban_development", // GH, OS
+  "architecture", // A.010 – A.140
+  "structures", // E.020 – E.090
+  "plumbing", // IS
+  "electromechanical", // EM
+  "general", // G.010 – G.050
 ] as const;
-export type Disciplina = (typeof DISCIPLINAS)[number];
+export type Discipline = (typeof DISCIPLINES)[number];
 
-/** Flujo editorial: autor y revisor deben ser personas distintas. */
-export const ESTADOS_EDITORIALES = [
-  "borrador",
-  "en_revision",
-  "aprobado",
-  "publicado",
-  "obsoleto",
+/** Editorial flow: author and reviewer must be different people. */
+export const EDITORIAL_STATUSES = ["draft", "in_review", "approved", "published", "deprecated"] as const;
+export type EditorialStatus = (typeof EDITORIAL_STATUSES)[number];
+
+export const STAFF_ROLES = ["author", "reviewer", "admin"] as const;
+export type StaffRole = (typeof STAFF_ROLES)[number];
+
+/** Free decks count against the daily quota; premium decks require a subscription. */
+export const DECK_ACCESS = ["free", "premium"] as const;
+export type DeckAccess = (typeof DECK_ACCESS)[number];
+
+export const COIN_REASONS = [
+  "ad", // rewarded ad
+  "purchase", // IAP coin pack
+  "extra_cards", // spent to extend today's quota
+  "check_in", // daily check-in reward
+  "bonus", // referrals, welcome, promotions
+  "adjustment", // manual support correction
 ] as const;
-export type EstadoEditorial = (typeof ESTADOS_EDITORIALES)[number];
+export type CoinReason = (typeof COIN_REASONS)[number];
 
-export const ROLES_STAFF = ["autor", "revisor", "admin"] as const;
-export type RolStaff = (typeof ROLES_STAFF)[number];
-
-/** Cómo se accede a un mazo: los gratis cuentan contra el cupo diario; los premium requieren suscripción. */
-export const ACCESOS_MAZO = ["gratis", "premium"] as const;
-export type AccesoMazo = (typeof ACCESOS_MAZO)[number];
-
-export const MOTIVOS_MONEDAS = [
-  "anuncio", // recompensa por ver un anuncio
-  "compra", // paquete comprado vía IAP
-  "tarjetas_extra", // gasto para ampliar el cupo del día
-  "bono", // racha, referidos, bienvenida
-  "ajuste", // corrección manual de soporte
+/** Professions offered during onboarding. */
+export const PROFESSIONS = [
+  "civil_engineer",
+  "architect",
+  "electrical_engineer",
+  "mechanical_engineer",
+  "sanitary_engineer",
+  "student",
+  "other",
 ] as const;
-export type MotivoMonedas = (typeof MOTIVOS_MONEDAS)[number];
+export type Profession = (typeof PROFESSIONS)[number];

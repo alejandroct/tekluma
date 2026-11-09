@@ -3,7 +3,7 @@ import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { zValidator } from "@hono/zod-validator";
 import { consumirTarjetaSchema } from "@tekluma/shared";
-import { acreditarAnuncio, ampliarConMonedas, consumirTarjeta, estadoCupo } from "../cupo";
+import { acreditarAnuncio, ampliarConMonedas, consumirTarjeta, estadoCupo, estadoRecompensas, hacerCheckIn, type TipoRecompensa } from "../cupo";
 import { requiereUsuario, type AuthVars } from "../middleware/auth";
 import { sincronizarPremium } from "../premium";
 
@@ -35,5 +35,11 @@ export const cupo = new Hono<AuthVars>()
    */
   .post("/anuncio-prueba", async (c) => {
     if (process.env.NODE_ENV === "production") throw new HTTPException(404);
-    return c.json(await acreditarAnuncio(c.get("usuarioId"), `prueba-${randomUUID()}`));
-  });
+    const tipo: TipoRecompensa = c.req.query("tipo") === "monedas" ? "monedas" : "tarjetas";
+    const { acreditado } = await acreditarAnuncio(c.get("usuarioId"), `prueba-${randomUUID()}`, tipo);
+    return c.json({ acreditado, estado: await estadoCupo(c.get("usuarioId")) });
+  })
+
+  /** Rewards screen: daily check-in and coin ads. */
+  .get("/recompensas", async (c) => c.json(await estadoRecompensas(c.get("usuarioId"))))
+  .post("/recompensas/check-in", async (c) => c.json(await hacerCheckIn(c.get("usuarioId"))));

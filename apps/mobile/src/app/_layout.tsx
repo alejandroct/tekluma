@@ -42,7 +42,11 @@ export default function RootLayout() {
         <Stack.Protected guard={!sesion}>
           <Stack.Screen name="login" options={{ headerShown: false }} />
         </Stack.Protected>
-        <Stack.Protected guard={!!sesion}>
+        {/* Tras el primer login, nombre y profesión antes de entrar. */}
+        <Stack.Protected guard={!!sesion && !sesion.user.name}>
+          <Stack.Screen name="bienvenida" options={{ headerShown: false }} />
+        </Stack.Protected>
+        <Stack.Protected guard={!!sesion?.user.name}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen
             name="repaso/[mazoId]"

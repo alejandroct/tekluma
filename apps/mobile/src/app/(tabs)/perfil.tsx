@@ -5,6 +5,8 @@ import type { EstadoCupo } from "@tekluma/shared";
 import { authClient } from "@/lib/auth";
 import { cerrarSesionCompras } from "@/lib/compras";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
+import { NOMBRES_PROFESION } from "@/lib/profesiones";
+import type { Profession } from "@tekluma/shared";
 import { useTema } from "@/lib/tema";
 
 export default function Perfil() {
@@ -23,7 +25,12 @@ export default function Perfil() {
   return (
     <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={{ padding: 20, gap: 12 }} contentInsetAdjustmentBehavior="automatic">
       <Text style={[estilos.titulo, { color: t.texto }]}>Perfil</Text>
-      <Text style={{ color: t.textoSuave, fontSize: 15, marginBottom: 4 }}>{sesion?.user.email}</Text>
+      <View style={{ gap: 2, marginBottom: 4 }}>
+        <Text style={{ color: t.texto, fontSize: 18, fontWeight: "700" }}>{sesion?.user.name}</Text>
+        <Text style={{ color: t.textoSuave, fontSize: 15 }}>
+          {[sesion?.user.profession && NOMBRES_PROFESION[sesion.user.profession as Profession], sesion?.user.email].filter(Boolean).join(" · ")}
+        </Text>
+      </View>
       <View style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={{ color: t.texto, fontSize: 16 }}>Monedas</Text>
         <Text style={{ color: t.ambar, fontSize: 16, fontWeight: "800" }}>{cupo?.monedas ?? "—"}</Text>

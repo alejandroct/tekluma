@@ -1,5 +1,5 @@
 import { createAuthClient } from "better-auth/react";
-import { emailOTPClient } from "better-auth/client/plugins";
+import { emailOTPClient, inferAdditionalFields } from "better-auth/client/plugins";
 import { expoClient } from "@better-auth/expo/client";
 import * as SecureStore from "expo-secure-store";
 
@@ -12,6 +12,8 @@ export const authClient = createAuthClient({
     // Guarda la sesión en el llavero del dispositivo (Keychain / Keystore).
     expoClient({ scheme: "tekluma", storagePrefix: "tekluma", storage: SecureStore }),
     emailOTPClient(),
+    // Must match `user.additionalFields` in apps/api/src/auth.ts.
+    inferAdditionalFields({ user: { profession: { type: "string", required: false } } }),
   ],
 });
 

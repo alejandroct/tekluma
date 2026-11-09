@@ -1,6 +1,6 @@
 import { Platform } from "react-native";
 import MobileAds, { AdEventType, InterstitialAd, RewardedAd, RewardedAdEventType, TestIds } from "react-native-google-mobile-ads";
-import { acreditarAnuncioDePrueba, obtenerCupo } from "./cupo";
+import { acreditarAnuncioDePrueba, obtenerCupo, type TipoRecompensa } from "./cupo";
 import { guardarAjuste, leerAjuste } from "./db";
 
 /** En desarrollo se usan los bloques de prueba de Google; en producción, los de AdMob vía variables de entorno. */
@@ -15,14 +15,16 @@ let iniciado: Promise<unknown> | null = null;
 export const iniciarAnuncios = () => (iniciado ??= MobileAds().initialize());
 
 /**
- * Muestra un anuncio con recompensa. En producción AdMob avisa al servidor (SSV) con el
- * `userId`, y el servidor amplía el cupo; aquí solo se espera y se refresca el estado.
- * Devuelve el estado nuevo, o null si el usuario cerró el anuncio sin terminarlo.
+ * Muestra un anuncio con recompensa: tarjetas extra para hoy o monedas. En producción AdMob
+ * avisa al servidor (SSV) con el `userId` y el tipo en `customData`, y el servidor acredita.
+ * Devuelve true si el usuario terminó el anuncio (quien llama debe refrescar su estado).
  */
-export async function verAnuncioConRecompensa(usuarioId: string) {
+export async function verAnuncioConRecompensa(usuarioId: string, tipo: TipoRecompensa) {
   await iniciarAnuncios();
   const ganado = await new Promise<boolean>((resolve, reject) => {
-    const anuncio = RewardedAd.createForAdRequest(ID_RECOMPENSA, { serverSideVerificationOptions: { userId: usuarioId } });
+    const anuncio = RewardedAd.createForAdRequest(ID_RECOMPENSA, {
+      serverSideVerificationOptions: { userId: usuarioId, customData: tipo },
+    });
     let recompensa = false;
     anuncio.addAdEventListener(RewardedAdEventType.LOADED, () => anuncio.show().catch(reject));
     anuncio.addAdEventListener(RewardedAdEventType.EARNED_REWARD, () => (recompensa = true));
@@ -30,11 +32,12 @@ export async function verAnuncioConRecompensa(usuarioId: string) {
     anuncio.addAdEventListener(AdEventType.ERROR, reject);
     anuncio.load();
   });
-  if (!ganado) return null;
-  if (__DEV__) return acreditarAnuncioDePrueba();
-  // La llamada de AdMob al servidor tarda un momento.
-  await new Promise((r) => setTimeout(r, 1500));
-  return obtenerCupo();
+  if (!ganado) return false;
+  if (__DEV__) await acreditarAnuncioDePrueba(tipo);
+  // En producción la llamada de AdMob al servidor tarda un momento.
+  else await new Promise((r) => setTimeout(r, 1500));
+  await obtenerCupo().catch(() => {});
+  return true;
 }
 
 /** Intersticial al terminar una sesión, con tope diario. Nunca a usuarios Premium. */

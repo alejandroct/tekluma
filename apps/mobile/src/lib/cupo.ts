@@ -1,4 +1,4 @@
-import type { EstadoCupo } from "@tekluma/shared";
+import type { EstadoCupo, EstadoRecompensas } from "@tekluma/shared";
 import { api, solicitar } from "./auth";
 import { guardarAjuste, leerAjuste } from "./db";
 
@@ -49,8 +49,15 @@ export async function ampliarConMonedas() {
   return { ampliado, estado: guardar(estado) };
 }
 
+export type TipoRecompensa = "tarjetas" | "monedas";
+
 /** Solo en desarrollo: el servidor simula la verificación de AdMob. */
-export async function acreditarAnuncioDePrueba() {
-  const { estado } = await api<{ acreditado: boolean; estado: EstadoCupo }>("/cupo/anuncio-prueba", { method: "POST" });
+export async function acreditarAnuncioDePrueba(tipo: TipoRecompensa) {
+  const { estado } = await api<{ acreditado: boolean; estado: EstadoCupo }>(`/cupo/anuncio-prueba?tipo=${tipo}`, { method: "POST" });
   return guardar(estado);
 }
+
+export const obtenerRecompensas = () => api<EstadoRecompensas>("/cupo/recompensas");
+
+export const hacerCheckIn = () =>
+  api<{ otorgadas: number; estado: EstadoRecompensas }>("/cupo/recompensas/check-in", { method: "POST" });

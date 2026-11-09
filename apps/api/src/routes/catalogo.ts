@@ -2,36 +2,32 @@ import { Hono } from "hono";
 import { desc, eq, sql } from "drizzle-orm";
 import type { MazoCatalogo } from "@tekluma/shared";
 import { db } from "../db/client";
-import { mazos, normas, publicacionesMazo } from "../db/schema";
+import { deckReleases, decks, standards } from "../db/schema";
 
 export const catalogo = new Hono().get("/", async (c) => {
-  // Última publicación de cada mazo; los mazos nunca publicados no aparecen.
+  // Latest release of each deck; decks never published are not listed.
   const ultima = db
-    .selectDistinctOn([publicacionesMazo.mazoId], {
-      mazoId: publicacionesMazo.mazoId,
-      version: publicacionesMazo.version,
-      totalTarjetas: publicacionesMazo.totalTarjetas,
-    })
-    .from(publicacionesMazo)
-    .orderBy(publicacionesMazo.mazoId, desc(publicacionesMazo.version))
+    .selectDistinctOn([deckReleases.deckId], { deckId: deckReleases.deckId, version: deckReleases.version, cardCount: deckReleases.cardCount })
+    .from(deckReleases)
+    .orderBy(deckReleases.deckId, desc(deckReleases.version))
     .as("ultima");
 
   const filas = await db
     .select({
-      id: mazos.id,
-      slug: mazos.slug,
-      titulo: mazos.titulo,
-      descripcion: mazos.descripcion,
-      disciplina: normas.disciplina,
-      normaCodigo: normas.codigo,
-      acceso: mazos.acceso,
-      totalTarjetas: ultima.totalTarjetas,
+      id: decks.id,
+      slug: decks.slug,
+      titulo: decks.title,
+      descripcion: decks.description,
+      disciplina: standards.discipline,
+      normaCodigo: standards.code,
+      acceso: decks.access,
+      totalTarjetas: ultima.cardCount,
       versionPublicada: ultima.version,
     })
-    .from(mazos)
-    .innerJoin(normas, eq(normas.id, mazos.normaId))
-    .innerJoin(ultima, eq(ultima.mazoId, mazos.id))
-    .orderBy(mazos.orden, sql`${mazos.titulo} asc`);
+    .from(decks)
+    .innerJoin(standards, eq(standards.id, decks.standardId))
+    .innerJoin(ultima, eq(ultima.deckId, decks.id))
+    .orderBy(decks.sortOrder, sql`${decks.title} asc`);
 
   return c.json(filas satisfies MazoCatalogo[]);
 });

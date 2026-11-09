@@ -4,7 +4,7 @@ import { router } from "expo-router";
 import type { EstadoCupo } from "@tekluma/shared";
 import { verAnuncioConRecompensa } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
-import { ampliarConMonedas } from "@/lib/cupo";
+import { ampliarConMonedas, obtenerCupo } from "@/lib/cupo";
 import { useTema } from "@/lib/tema";
 
 type Props = { estado: EstadoCupo; onAmpliado: (estado: EstadoCupo) => void };
@@ -22,8 +22,7 @@ export function CupoAgotado({ estado, onAmpliado }: Props) {
     if (!sesion) return;
     setOcupado("anuncio");
     try {
-      const nuevo = await verAnuncioConRecompensa(sesion.user.id);
-      if (nuevo) onAmpliado(nuevo);
+      if (await verAnuncioConRecompensa(sesion.user.id, "tarjetas")) onAmpliado(await obtenerCupo());
     } catch {
       Alert.alert("No hay anuncios disponibles", "Inténtalo de nuevo en un momento.");
     } finally {

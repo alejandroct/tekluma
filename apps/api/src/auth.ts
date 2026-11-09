@@ -2,27 +2,49 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { emailOTP } from "better-auth/plugins/email-otp";
 import { expo } from "@better-auth/expo";
+import { PROFESSIONS } from "@tekluma/shared";
 import { db } from "./db/client";
 import * as schema from "./db/schema";
 import { enviarCorreo } from "./correo";
 
-const { APPLE_CLIENT_ID, APPLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
+const { APPLE_CLIENT_ID, APPLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_URL, COOKIE_DOMAIN } = process.env;
+
+/** Origins allowed to use cookie-based sessions (the editorial panel). */
+export const origenesPanel = ADMIN_URL ? [ADMIN_URL] : ["http://localhost:5173"];
 
 export const auth = betterAuth({
   basePath: "/auth",
   database: drizzleAdapter(db, { provider: "pg", schema }),
-  advanced: { database: { generateId: "uuid" } },
-
-  // Mapeo a nuestras tablas en español; los campos no listados usan el mismo nombre.
-  user: {
-    modelName: "usuarios",
-    fields: { name: "nombre", emailVerified: "emailVerificado", image: "imagen", createdAt: "creadoEn", updatedAt: "actualizadoEn" },
+  advanced: {
+    database: { generateId: "uuid" },
+    // The panel (admin.<domain>) and the API (api.<domain>) share the session cookie.
+    ...(COOKIE_DOMAIN ? { crossSubDomainCookies: { enabled: true, domain: COOKIE_DOMAIN } } : {}),
   },
-  session: { modelName: "sesiones", expiresIn: 60 * 60 * 24 * 60 /* 60 días */ },
-  account: { modelName: "cuentas", accountLinking: { enabled: true, trustedProviders: ["apple", "google"] } },
-  verification: { modelName: "verificaciones" },
 
-  // Solo se activan si están configurados (ver .env.example).
+  user: {
+    modelName: "users",
+    additionalFields: {
+      profession: { type: "string", required: false, input: true },
+    },
+  },
+  session: { modelName: "sessions", expiresIn: 60 * 60 * 24 * 60 /* 60 days */ },
+  account: { modelName: "accounts", accountLinking: { enabled: true, trustedProviders: ["apple", "google"] } },
+  verification: { modelName: "verifications" },
+
+  databaseHooks: {
+    user: {
+      update: {
+        // Only professions from the onboarding list are accepted.
+        before: async (datos) => {
+          const profession = (datos as { profession?: unknown }).profession;
+          if (profession != null && !(PROFESSIONS as readonly unknown[]).includes(profession)) return false;
+          return { data: datos };
+        },
+      },
+    },
+  },
+
+  // Only enabled when configured (see .env.example).
   socialProviders: {
     ...(APPLE_CLIENT_ID && APPLE_CLIENT_SECRET
       ? { apple: { clientId: APPLE_CLIENT_ID, clientSecret: APPLE_CLIENT_SECRET, appBundleIdentifier: "app.tekluma" } }
@@ -30,11 +52,11 @@ export const auth = betterAuth({
     ...(GOOGLE_CLIENT_ID && GOOGLE_CLIENT_SECRET ? { google: { clientId: GOOGLE_CLIENT_ID, clientSecret: GOOGLE_CLIENT_SECRET } } : {}),
   },
 
-  trustedOrigins: ["tekluma://", ...(process.env.NODE_ENV === "production" ? [] : ["exp://"])],
+  trustedOrigins: ["tekluma://", ...origenesPanel, ...(process.env.NODE_ENV === "production" ? [] : ["exp://"])],
 
   plugins: [
     expo(),
-    // Sin contraseñas: el usuario entra con un código de 6 dígitos enviado al correo.
+    // Passwordless: users sign in with a 6-digit code sent by email.
     emailOTP({
       otpLength: 6,
       expiresIn: 10 * 60,

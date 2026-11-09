@@ -1,72 +1,65 @@
 import { and, desc, eq, inArray } from "drizzle-orm";
 import { paqueteMazoSchema, type PaqueteMazo } from "@tekluma/shared";
 import { db } from "./db/client";
-import { articulos, citasTarjeta, mazos, normas, publicacionesMazo, tarjetas, versionesNorma } from "./db/schema";
+import { articles, cardCitations, cards, deckReleases, decks, standards, standardVersions } from "./db/schema";
 
 /**
- * Publica una nueva versión de un mazo con sus tarjetas aprobadas (o ya publicadas).
- * El paquete resultante es inmutable: corregir una tarjeta implica publicar otra versión.
+ * Publishes a new version of a deck with its approved (or already published) cards.
+ * The resulting package is immutable: fixing a card means publishing another version.
  */
-export async function publicarMazo(mazoId: string, publicadoPor: string) {
+export async function publicarMazo(deckId: string, publishedBy: string) {
   return db.transaction(async (tx) => {
     const [mazo] = await tx
-      .select({ id: mazos.id, codigo: normas.codigo, titulo: normas.titulo, normaId: normas.id })
-      .from(mazos)
-      .innerJoin(normas, eq(normas.id, mazos.normaId))
-      .where(eq(mazos.id, mazoId));
-    if (!mazo) throw new Error(`Mazo ${mazoId} no existe`);
+      .select({ id: decks.id, code: standards.code, title: standards.title, standardId: standards.id })
+      .from(decks)
+      .innerJoin(standards, eq(standards.id, decks.standardId))
+      .where(eq(decks.id, deckId));
+    if (!mazo) throw new Error(`Mazo ${deckId} no existe`);
 
     const [vigente] = await tx
-      .select({ dispositivo: versionesNorma.dispositivo })
-      .from(versionesNorma)
-      .where(and(eq(versionesNorma.normaId, mazo.normaId), eq(versionesNorma.vigente, true)));
+      .select({ decree: standardVersions.decree })
+      .from(standardVersions)
+      .where(and(eq(standardVersions.standardId, mazo.standardId), eq(standardVersions.isCurrent, true)));
 
     const filas = await tx
       .select()
-      .from(tarjetas)
-      .where(and(eq(tarjetas.mazoId, mazoId), inArray(tarjetas.estado, ["aprobado", "publicado"])))
-      .orderBy(tarjetas.creadoEn);
+      .from(cards)
+      .where(and(eq(cards.deckId, deckId), inArray(cards.status, ["approved", "published"])))
+      .orderBy(cards.createdAt);
     if (filas.length === 0) throw new Error("El mazo no tiene tarjetas aprobadas");
 
     const citas = await tx
-      .select({
-        tarjetaId: citasTarjeta.tarjetaId,
-        articuloId: citasTarjeta.articuloId,
-        extracto: citasTarjeta.extracto,
-        articulo: articulos.numero,
-      })
-      .from(citasTarjeta)
-      .innerJoin(articulos, eq(articulos.id, citasTarjeta.articuloId))
-      .where(inArray(citasTarjeta.tarjetaId, filas.map((t) => t.id)));
+      .select({ cardId: cardCitations.cardId, articleId: cardCitations.articleId, excerpt: cardCitations.excerpt, number: articles.number })
+      .from(cardCitations)
+      .innerJoin(articles, eq(articles.id, cardCitations.articleId))
+      .where(inArray(cardCitations.cardId, filas.map((t) => t.id)));
 
     const [ultima] = await tx
-      .select({ version: publicacionesMazo.version })
-      .from(publicacionesMazo)
-      .where(eq(publicacionesMazo.mazoId, mazoId))
-      .orderBy(desc(publicacionesMazo.version))
+      .select({ version: deckReleases.version })
+      .from(deckReleases)
+      .where(eq(deckReleases.deckId, deckId))
+      .orderBy(desc(deckReleases.version))
       .limit(1);
     const version = (ultima?.version ?? 0) + 1;
 
+    // The package keeps the shared (Spanish) contract that the app consumes.
     const paquete: PaqueteMazo = paqueteMazoSchema.parse({
-      mazoId,
+      mazoId: deckId,
       version,
       publicadoEn: new Date().toISOString(),
-      norma: { codigo: mazo.codigo, titulo: mazo.titulo, version: vigente?.dispositivo ?? "" },
+      norma: { codigo: mazo.code, titulo: mazo.title, version: vigente?.decree ?? "" },
       tarjetas: filas.map((t) => ({
         id: t.id,
         revision: t.revision,
-        contenido: t.contenido,
+        contenido: t.content,
         citas: citas
-          .filter((c) => c.tarjetaId === t.id)
-          .map(({ articuloId, extracto, articulo }) => ({ articuloId, extracto, articulo })),
+          .filter((c) => c.cardId === t.id)
+          .map(({ articleId, excerpt, number }) => ({ articuloId: articleId, extracto: excerpt, articulo: number })),
       })),
     });
 
-    await tx.insert(publicacionesMazo).values({ mazoId, version, paquete, totalTarjetas: filas.length, publicadoPor });
-    await tx
-      .update(tarjetas)
-      .set({ estado: "publicado" })
-      .where(inArray(tarjetas.id, filas.map((t) => t.id)));
+    await tx.insert(deckReleases).values({ deckId, version, package: paquete, cardCount: filas.length, publishedBy });
+    await tx.update(cards).set({ status: "published" }).where(inArray(cards.id, filas.map((t) => t.id)));
 
     return { version, totalTarjetas: filas.length };
   });

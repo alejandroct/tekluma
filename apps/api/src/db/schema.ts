@@ -15,273 +15,272 @@ import {
   index,
 } from "drizzle-orm/pg-core";
 import {
-  ACCESOS_MAZO,
-  DISCIPLINAS,
-  ESTADOS_EDITORIALES,
-  MOTIVOS_MONEDAS,
-  ROLES_STAFF,
+  COIN_REASONS,
+  DECK_ACCESS,
+  DISCIPLINES,
+  EDITORIAL_STATUSES,
+  STAFF_ROLES,
   type ContenidoTarjeta,
   type PaqueteMazo,
 } from "@tekluma/shared";
 
 const id = () => uuid("id").primaryKey().defaultRandom();
-const creadoEn = () => timestamp("creado_en", { withTimezone: true }).notNull().defaultNow();
+const createdAt = () => timestamp("created_at", { withTimezone: true }).notNull().defaultNow();
+const updatedAt = () => timestamp("updated_at", { withTimezone: true }).notNull().defaultNow();
 
-export const disciplinaEnum = pgEnum("disciplina", DISCIPLINAS);
-export const estadoEditorialEnum = pgEnum("estado_editorial", ESTADOS_EDITORIALES);
-export const rolStaffEnum = pgEnum("rol_staff", ROLES_STAFF);
-export const accesoMazoEnum = pgEnum("acceso_mazo", ACCESOS_MAZO);
-export const motivoMonedasEnum = pgEnum("motivo_monedas", MOTIVOS_MONEDAS);
+export const disciplineEnum = pgEnum("discipline", DISCIPLINES);
+export const editorialStatusEnum = pgEnum("editorial_status", EDITORIAL_STATUSES);
+export const staffRoleEnum = pgEnum("staff_role", STAFF_ROLES);
+export const deckAccessEnum = pgEnum("deck_access", DECK_ACCESS);
+export const coinReasonEnum = pgEnum("coin_reason", COIN_REASONS);
 
-// ───────────── Usuarios ─────────────
+// ───────────── Users (tables managed by Better Auth, see src/auth.ts) ─────────────
 
-// Tablas gestionadas por Better Auth (ver src/auth.ts para el mapeo de campos).
-
-export const usuarios = pgTable("usuarios", {
+export const users = pgTable("users", {
   id: id(),
   email: text("email").notNull().unique(),
-  emailVerificado: boolean("email_verificado").notNull().default(false),
-  nombre: text("nombre").notNull().default(""),
-  imagen: text("imagen"),
-  /** Profesión declarada: ingeniero civil, arquitecto, estudiante, etc. */
-  profesion: text("profesion"),
-  /** Si es parte del equipo editorial. */
-  rolStaff: rolStaffEnum("rol_staff"),
-  /** Fin de la suscripción vigente según RevenueCat (null = sin premium). */
-  premiumHasta: timestamp("premium_hasta", { withTimezone: true }),
-  creadoEn: creadoEn(),
-  actualizadoEn: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+  emailVerified: boolean("email_verified").notNull().default(false),
+  name: text("name").notNull().default(""),
+  image: text("image"),
+  /** Declared profession: civil engineer, architect, student, etc. */
+  profession: text("profession"),
+  /** Editorial team role (null for regular users). */
+  staffRole: staffRoleEnum("staff_role"),
+  /** End of the current subscription according to RevenueCat (null = not premium). */
+  premiumUntil: timestamp("premium_until", { withTimezone: true }),
+  createdAt: createdAt(),
+  updatedAt: updatedAt(),
 });
 
-export const sesiones = pgTable(
-  "sesiones",
+export const sessions = pgTable(
+  "sessions",
   {
     id: id(),
-    userId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
     token: text("token").notNull().unique(),
-    expiresAt: timestamp("expira_en", { withTimezone: true }).notNull(),
-    ipAddress: text("ip"),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    ipAddress: text("ip_address"),
     userAgent: text("user_agent"),
-    createdAt: creadoEn(),
-    updatedAt: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+    createdAt: createdAt(),
+    updatedAt: updatedAt(),
   },
-  (t) => [index("sesiones_usuario_idx").on(t.userId)],
+  (t) => [index("sessions_user_idx").on(t.userId)],
 );
 
-/** Proveedores vinculados a un usuario (Apple, Google). */
-export const cuentas = pgTable(
-  "cuentas",
+/** Linked identity providers (Apple, Google). */
+export const accounts = pgTable(
+  "accounts",
   {
     id: id(),
-    userId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
-    accountId: text("cuenta_proveedor_id").notNull(),
-    providerId: text("proveedor").notNull(),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    accountId: text("account_id").notNull(),
+    providerId: text("provider_id").notNull(),
     accessToken: text("access_token"),
     refreshToken: text("refresh_token"),
     idToken: text("id_token"),
-    accessTokenExpiresAt: timestamp("access_token_expira_en", { withTimezone: true }),
-    refreshTokenExpiresAt: timestamp("refresh_token_expira_en", { withTimezone: true }),
+    accessTokenExpiresAt: timestamp("access_token_expires_at", { withTimezone: true }),
+    refreshTokenExpiresAt: timestamp("refresh_token_expires_at", { withTimezone: true }),
     scope: text("scope"),
     password: text("password"),
-    createdAt: creadoEn(),
-    updatedAt: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+    createdAt: createdAt(),
+    updatedAt: updatedAt(),
   },
-  (t) => [index("cuentas_usuario_idx").on(t.userId)],
+  (t) => [index("accounts_user_idx").on(t.userId)],
 );
 
-/** Códigos de un solo uso (OTP por correo) y estados de OAuth. */
-export const verificaciones = pgTable(
-  "verificaciones",
+/** One-time codes (email OTP) and OAuth state. */
+export const verifications = pgTable(
+  "verifications",
   {
     id: id(),
-    identifier: text("identificador").notNull(),
-    value: text("valor").notNull(),
-    expiresAt: timestamp("expira_en", { withTimezone: true }).notNull(),
-    createdAt: creadoEn(),
-    updatedAt: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+    identifier: text("identifier").notNull(),
+    value: text("value").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    createdAt: createdAt(),
+    updatedAt: updatedAt(),
   },
-  (t) => [index("verificaciones_identificador_idx").on(t.identifier)],
+  (t) => [index("verifications_identifier_idx").on(t.identifier)],
 );
 
-// ───────────── Normativa ─────────────
+// ───────────── Building codes ─────────────
 
-export const normas = pgTable("normas", {
+export const standards = pgTable("standards", {
   id: id(),
-  /** Ej. "E.030" */
-  codigo: text("codigo").notNull().unique(),
-  titulo: text("titulo").notNull(),
-  disciplina: disciplinaEnum("disciplina").notNull(),
-  creadoEn: creadoEn(),
+  /** e.g. "E.030" */
+  code: text("code").notNull().unique(),
+  title: text("title").notNull(),
+  discipline: disciplineEnum("discipline").notNull(),
+  createdAt: createdAt(),
 });
 
-/** Cada modificación oficial de una norma (DS, RM) es una versión. */
-export const versionesNorma = pgTable(
-  "versiones_norma",
+/** Each official amendment of a standard (DS, RM) is a version. */
+export const standardVersions = pgTable(
+  "standard_versions",
   {
     id: id(),
-    normaId: uuid("norma_id").notNull().references(() => normas.id),
-    /** Ej. "DS 003-2016-VIVIENDA" */
-    dispositivo: text("dispositivo").notNull(),
-    publicadaEn: timestamp("publicada_en", { withTimezone: true }).notNull(),
-    vigente: boolean("vigente").notNull().default(false),
-    creadoEn: creadoEn(),
+    standardId: uuid("standard_id").notNull().references(() => standards.id),
+    /** e.g. "DS 003-2016-VIVIENDA" */
+    decree: text("decree").notNull(),
+    publishedAt: timestamp("published_at", { withTimezone: true }).notNull(),
+    isCurrent: boolean("is_current").notNull().default(false),
+    createdAt: createdAt(),
   },
-  (t) => [index("versiones_norma_norma_idx").on(t.normaId)],
+  (t) => [index("standard_versions_standard_idx").on(t.standardId)],
 );
 
-export const articulos = pgTable(
-  "articulos",
+export const articles = pgTable(
+  "articles",
   {
     id: id(),
-    versionNormaId: uuid("version_norma_id").notNull().references(() => versionesNorma.id),
-    /** Ej. "28.2" */
-    numero: text("numero").notNull(),
-    encabezado: text("encabezado"),
-    texto: text("texto").notNull(),
-    creadoEn: creadoEn(),
+    standardVersionId: uuid("standard_version_id").notNull().references(() => standardVersions.id),
+    /** e.g. "28.2" */
+    number: text("number").notNull(),
+    heading: text("heading"),
+    body: text("body").notNull(),
+    createdAt: createdAt(),
   },
-  (t) => [uniqueIndex("articulos_version_numero_uq").on(t.versionNormaId, t.numero)],
+  (t) => [uniqueIndex("articles_version_number_uq").on(t.standardVersionId, t.number)],
 );
 
-// ───────────── Contenido editorial ─────────────
+// ───────────── Editorial content ─────────────
 
-export const mazos = pgTable("mazos", {
+export const decks = pgTable("decks", {
   id: id(),
   slug: text("slug").notNull().unique(),
-  titulo: text("titulo").notNull(),
-  descripcion: text("descripcion").notNull().default(""),
-  normaId: uuid("norma_id").notNull().references(() => normas.id),
-  acceso: accesoMazoEnum("acceso").notNull().default("premium"),
-  orden: integer("orden").notNull().default(0),
-  creadoEn: creadoEn(),
+  title: text("title").notNull(),
+  description: text("description").notNull().default(""),
+  standardId: uuid("standard_id").notNull().references(() => standards.id),
+  access: deckAccessEnum("access").notNull().default("free"),
+  sortOrder: integer("sort_order").notNull().default(0),
+  createdAt: createdAt(),
 });
 
-export const tarjetas = pgTable(
-  "tarjetas",
+export const cards = pgTable(
+  "cards",
   {
     id: id(),
-    mazoId: uuid("mazo_id").notNull().references(() => mazos.id),
-    /** Se incrementa en cada cambio aprobado; la app la usa para invalidar caché. */
+    deckId: uuid("deck_id").notNull().references(() => decks.id),
+    /** Bumped on every approved change; the app uses it to invalidate its cache. */
     revision: integer("revision").notNull().default(1),
-    contenido: jsonb("contenido").$type<ContenidoTarjeta>().notNull(),
-    estado: estadoEditorialEnum("estado").notNull().default("borrador"),
-    autorId: uuid("autor_id").notNull().references(() => usuarios.id),
-    revisorId: uuid("revisor_id").references(() => usuarios.id),
-    creadoEn: creadoEn(),
-    actualizadoEn: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+    content: jsonb("content").$type<ContenidoTarjeta>().notNull(),
+    status: editorialStatusEnum("status").notNull().default("draft"),
+    authorId: uuid("author_id").notNull().references(() => users.id),
+    reviewerId: uuid("reviewer_id").references(() => users.id),
+    createdAt: createdAt(),
+    updatedAt: updatedAt(),
   },
-  (t) => [index("tarjetas_mazo_estado_idx").on(t.mazoId, t.estado)],
+  (t) => [index("cards_deck_status_idx").on(t.deckId, t.status)],
 );
 
-/** Artículos que respaldan cada tarjeta; permite saber qué tarjetas afecta un cambio de norma. */
-export const citasTarjeta = pgTable(
-  "citas_tarjeta",
+/** Articles backing each card; tells which cards a standard amendment affects. */
+export const cardCitations = pgTable(
+  "card_citations",
   {
-    tarjetaId: uuid("tarjeta_id").notNull().references(() => tarjetas.id, { onDelete: "cascade" }),
-    articuloId: uuid("articulo_id").notNull().references(() => articulos.id),
-    extracto: text("extracto").notNull(),
+    cardId: uuid("card_id").notNull().references(() => cards.id, { onDelete: "cascade" }),
+    articleId: uuid("article_id").notNull().references(() => articles.id),
+    excerpt: text("excerpt").notNull(),
   },
-  (t) => [primaryKey({ columns: [t.tarjetaId, t.articuloId] }), index("citas_articulo_idx").on(t.articuloId)],
+  (t) => [primaryKey({ columns: [t.cardId, t.articleId] }), index("card_citations_article_idx").on(t.articleId)],
 );
 
-/** Historial de decisiones de revisión. */
-export const revisionesEditoriales = pgTable("revisiones_editoriales", {
+/** History of review decisions. */
+export const editorialReviews = pgTable("editorial_reviews", {
   id: id(),
-  tarjetaId: uuid("tarjeta_id").notNull().references(() => tarjetas.id, { onDelete: "cascade" }),
-  revisorId: uuid("revisor_id").notNull().references(() => usuarios.id),
-  aprobada: boolean("aprobada").notNull(),
-  comentario: text("comentario"),
-  creadoEn: creadoEn(),
+  cardId: uuid("card_id").notNull().references(() => cards.id, { onDelete: "cascade" }),
+  reviewerId: uuid("reviewer_id").notNull().references(() => users.id),
+  approved: boolean("approved").notNull(),
+  comment: text("comment"),
+  createdAt: createdAt(),
 });
 
 /**
- * Versión publicada (inmutable) de un mazo. El paquete se guarda aquí y la API lo sirve;
- * al desplegar se copiará también a S3/CloudFront (`claveS3`) para descargas masivas.
+ * Published (immutable) version of a deck. The package is stored here and served by the API;
+ * `s3Key` is reserved for copying it to S3/CloudFront later.
  */
-export const publicacionesMazo = pgTable(
-  "publicaciones_mazo",
+export const deckReleases = pgTable(
+  "deck_releases",
   {
     id: id(),
-    mazoId: uuid("mazo_id").notNull().references(() => mazos.id),
+    deckId: uuid("deck_id").notNull().references(() => decks.id),
     version: integer("version").notNull(),
-    paquete: jsonb("paquete").$type<PaqueteMazo>().notNull(),
-    claveS3: text("clave_s3"),
-    totalTarjetas: integer("total_tarjetas").notNull(),
-    publicadoPor: uuid("publicado_por").notNull().references(() => usuarios.id),
-    publicadoEn: creadoEn(),
+    package: jsonb("package").$type<PaqueteMazo>().notNull(),
+    s3Key: text("s3_key"),
+    cardCount: integer("card_count").notNull(),
+    publishedBy: uuid("published_by").notNull().references(() => users.id),
+    publishedAt: createdAt(),
   },
-  (t) => [uniqueIndex("publicaciones_mazo_version_uq").on(t.mazoId, t.version)],
+  (t) => [uniqueIndex("deck_releases_version_uq").on(t.deckId, t.version)],
 );
 
-// ───────────── Monetización ─────────────
+// ───────────── Monetization ─────────────
 
-/** Libro de movimientos: el saldo es la suma de `cantidad`. Nunca se edita, solo se agrega. */
-export const movimientosMonedas = pgTable(
-  "movimientos_monedas",
+/** Append-only ledger: the balance is the sum of `amount`. */
+export const coinTransactions = pgTable(
+  "coin_transactions",
   {
     id: id(),
-    usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id),
-    cantidad: integer("cantidad").notNull(),
-    motivo: motivoMonedasEnum("motivo").notNull(),
-    /** Id externo para idempotencia (transacción de AdMob SSV, IAP, mazo desbloqueado). */
-    referencia: text("referencia"),
-    creadoEn: creadoEn(),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    amount: integer("amount").notNull(),
+    reason: coinReasonEnum("reason").notNull(),
+    /** External id for idempotency (AdMob transaction, IAP, check-in date). */
+    reference: text("reference"),
+    createdAt: createdAt(),
   },
-  (t) => [
-    index("movimientos_usuario_idx").on(t.usuarioId),
-    uniqueIndex("movimientos_motivo_ref_uq").on(t.motivo, t.referencia),
-  ],
+  (t) => [index("coin_transactions_user_idx").on(t.userId), uniqueIndex("coin_transactions_reason_ref_uq").on(t.reason, t.reference)],
 );
 
-/** Consumo del cupo por usuario y día (fecha de Lima). */
-export const cuposDiarios = pgTable(
-  "cupos_diarios",
+/** Daily quota usage per user (date in Lima time). */
+export const dailyQuotas = pgTable(
+  "daily_quotas",
   {
-    usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
-    fecha: date("fecha").notNull(),
-    /** Tarjetas añadidas al cupo base con anuncios o monedas. */
-    extra: integer("extra").notNull().default(0),
-    anuncios: integer("anuncios").notNull().default(0),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    day: date("day").notNull(),
+    /** Cards added to the base quota with ads or coins. */
+    extraCards: integer("extra_cards").notNull().default(0),
+    /** Rewarded ads watched for cards. */
+    cardAds: integer("card_ads").notNull().default(0),
+    /** Rewarded ads watched for coins. */
+    coinAds: integer("coin_ads").notNull().default(0),
   },
-  (t) => [primaryKey({ columns: [t.usuarioId, t.fecha] })],
+  (t) => [primaryKey({ columns: [t.userId, t.day] })],
 );
 
-/** Tarjetas distintas vistas en el día: repetir una tarjeta el mismo día no consume cupo. */
-export const vistasDiarias = pgTable(
-  "vistas_diarias",
+/** Distinct cards seen per day: repeating a card the same day does not use quota. */
+export const dailyCardViews = pgTable(
+  "daily_card_views",
   {
-    usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
-    fecha: date("fecha").notNull(),
-    tarjetaId: uuid("tarjeta_id").notNull().references(() => tarjetas.id),
-    creadoEn: creadoEn(),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    day: date("day").notNull(),
+    cardId: uuid("card_id").notNull().references(() => cards.id),
+    createdAt: createdAt(),
   },
-  (t) => [primaryKey({ columns: [t.usuarioId, t.fecha, t.tarjetaId] })],
+  (t) => [primaryKey({ columns: [t.userId, t.day, t.cardId] })],
 );
 
-/** Recompensas de anuncios ya acreditadas (idempotencia por transacción de AdMob). */
-export const recompensasAnuncio = pgTable("recompensas_anuncio", {
-  transaccion: text("transaccion").primaryKey(),
-  usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
-  fecha: date("fecha").notNull(),
-  creadoEn: creadoEn(),
+/** Rewarded ads already credited (idempotency by AdMob transaction). */
+export const adRewards = pgTable("ad_rewards", {
+  transactionId: text("transaction_id").primaryKey(),
+  userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  day: date("day").notNull(),
+  createdAt: createdAt(),
 });
 
-// ───────────── Progreso (FSRS) ─────────────
+// ───────────── Progress (FSRS) ─────────────
 
-/** Copia en servidor del estado FSRS; la fuente primaria es la app (offline-first). */
-export const estadosRepaso = pgTable(
-  "estados_repaso",
+/** Server copy of the FSRS state; the app is the primary source (offline-first). */
+export const reviewStates = pgTable(
+  "review_states",
   {
-    usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id),
-    tarjetaId: uuid("tarjeta_id").notNull().references(() => tarjetas.id),
-    vence: timestamp("vence", { withTimezone: true }).notNull(),
-    estabilidad: real("estabilidad").notNull(),
-    dificultad: real("dificultad").notNull(),
-    repeticiones: integer("repeticiones").notNull(),
-    fallos: integer("fallos").notNull(),
-    estado: smallint("estado").notNull(),
-    ultimoRepaso: timestamp("ultimo_repaso", { withTimezone: true }),
-    actualizadoEn: timestamp("actualizado_en", { withTimezone: true }).notNull().defaultNow(),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    cardId: uuid("card_id").notNull().references(() => cards.id),
+    due: timestamp("due", { withTimezone: true }).notNull(),
+    stability: real("stability").notNull(),
+    difficulty: real("difficulty").notNull(),
+    reps: integer("reps").notNull(),
+    lapses: integer("lapses").notNull(),
+    state: smallint("state").notNull(),
+    lastReview: timestamp("last_review", { withTimezone: true }),
+    updatedAt: updatedAt(),
   },
-  (t) => [primaryKey({ columns: [t.usuarioId, t.tarjetaId] }), index("estados_vence_idx").on(t.usuarioId, t.vence)],
+  (t) => [primaryKey({ columns: [t.userId, t.cardId] }), index("review_states_due_idx").on(t.userId, t.due)],
 );

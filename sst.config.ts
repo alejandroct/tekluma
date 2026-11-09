@@ -38,6 +38,8 @@ export default $config({
       NODE_ENV: produccion ? "production" : "development",
       BETTER_AUTH_URL: `https://api.${dominio}`,
       CORREO_PROVEEDOR: "ses",
+      ADMIN_URL: `https://admin.${dominio}`,
+      COOKIE_DOMAIN: dominio,
       CORREO_REMITENTE: `Tekluma <hola@${dominio}>`,
       ...Object.fromEntries(Object.entries(secretos).map(([clave, secreto]) => [clave, secreto.value])),
     };
@@ -48,6 +50,22 @@ export default $config({
       // PGlite es solo para desarrollo local; en Lambda siempre hay DATABASE_URL.
       esbuild: { external: ["@electric-sql/pglite", "drizzle-orm/pglite"] },
     };
+
+    // Applies migrations on every deploy (and the demo content outside production).
+    const migrador = new sst.aws.Function("Migrador", {
+      handler: "apps/api/src/workers/migrar.handler",
+      architecture: "arm64",
+      runtime,
+      timeout: "5 minutes",
+      environment: { ...environment, SEMBRAR: produccion ? "0" : "1" },
+      nodejs,
+      copyFiles: [{ from: "apps/api/drizzle", to: "drizzle" }],
+    });
+    new aws.lambda.Invocation("Migrar", {
+      functionName: migrador.name,
+      input: JSON.stringify({}),
+      triggers: { despliegue: Date.now().toString() },
+    });
 
     // Paquetes de mazos e imágenes (se servirán vía CloudFront con URL firmada).
     const mazos = new sst.aws.Bucket("Mazos");

@@ -21,7 +21,7 @@ export async function obtenerCatalogo(): Promise<MazoConAcceso[]> {
   );
   return catalogo.map((m) => ({
     ...m,
-    abierto: m.acceso === "gratis" || cupo.premium,
+    abierto: m.acceso === "free" || cupo.premium,
     descargado: locales.has(m.id),
     desactualizado: (locales.get(m.id) ?? m.versionPublicada) < m.versionPublicada,
   }));
