@@ -15,12 +15,17 @@ export const authClient = createAuthClient({
   ],
 });
 
-/** fetch a la API con la sesión del usuario adjunta. */
-export async function api<T>(ruta: string, init: RequestInit = {}): Promise<T> {
-  const res = await fetch(`${API_URL}${ruta}`, {
+/** fetch a la API con la sesión del usuario adjunta; devuelve la respuesta tal cual. */
+export async function solicitar(ruta: string, init: RequestInit = {}) {
+  return fetch(`${API_URL}${ruta}`, {
     ...init,
     headers: { "Content-Type": "application/json", Cookie: await authClient.getCookie(), ...init.headers },
   });
+}
+
+/** Como `solicitar`, pero lanza si la respuesta no es 2xx y devuelve el JSON. */
+export async function api<T>(ruta: string, init: RequestInit = {}): Promise<T> {
+  const res = await solicitar(ruta, init);
   if (!res.ok) throw new Error(`${init.method ?? "GET"} ${ruta} → ${res.status}`);
   return res.json() as Promise<T>;
 }

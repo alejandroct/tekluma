@@ -1,5 +1,5 @@
 {
-  "id": "b29516da-5214-4940-b0c2-ade472de43ed",
+  "id": "809da0ea-ef9c-45d8-b2d8-c98d95b95c04",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -297,8 +297,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.desbloqueos_mazo": {
-      "name": "desbloqueos_mazo",
+    "public.cupos_diarios": {
+      "name": "cupos_diarios",
       "schema": "",
       "columns": {
         "usuario_id": {
@@ -307,25 +307,32 @@
           "primaryKey": false,
           "notNull": true
         },
-        "mazo_id": {
-          "name": "mazo_id",
-          "type": "uuid",
+        "fecha": {
+          "name": "fecha",
+          "type": "date",
           "primaryKey": false,
           "notNull": true
         },
-        "creado_en": {
-          "name": "creado_en",
-          "type": "timestamp with time zone",
+        "extra": {
+          "name": "extra",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true,
-          "default": "now()"
+          "default": 0
+        },
+        "anuncios": {
+          "name": "anuncios",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
         }
       },
       "indexes": {},
       "foreignKeys": {
-        "desbloqueos_mazo_usuario_id_usuarios_id_fk": {
-          "name": "desbloqueos_mazo_usuario_id_usuarios_id_fk",
-          "tableFrom": "desbloqueos_mazo",
+        "cupos_diarios_usuario_id_usuarios_id_fk": {
+          "name": "cupos_diarios_usuario_id_usuarios_id_fk",
+          "tableFrom": "cupos_diarios",
           "tableTo": "usuarios",
           "columnsFrom": [
             "usuario_id"
@@ -333,29 +340,16 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        },
-        "desbloqueos_mazo_mazo_id_mazos_id_fk": {
-          "name": "desbloqueos_mazo_mazo_id_mazos_id_fk",
-          "tableFrom": "desbloqueos_mazo",
-          "tableTo": "mazos",
-          "columnsFrom": [
-            "mazo_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
+          "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {
-        "desbloqueos_mazo_usuario_id_mazo_id_pk": {
-          "name": "desbloqueos_mazo_usuario_id_mazo_id_pk",
+        "cupos_diarios_usuario_id_fecha_pk": {
+          "name": "cupos_diarios_usuario_id_fecha_pk",
           "columns": [
             "usuario_id",
-            "mazo_id"
+            "fecha"
           ]
         }
       },
@@ -538,12 +532,6 @@
           "primaryKey": false,
           "notNull": true,
           "default": "'premium'"
-        },
-        "precio_monedas": {
-          "name": "precio_monedas",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
         },
         "orden": {
           "name": "orden",
@@ -770,11 +758,17 @@
           "primaryKey": false,
           "notNull": true
         },
+        "paquete": {
+          "name": "paquete",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
         "clave_s3": {
           "name": "clave_s3",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": false
         },
         "total_tarjetas": {
           "name": "total_tarjetas",
@@ -844,6 +838,58 @@
             "id"
           ],
           "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.recompensas_anuncio": {
+      "name": "recompensas_anuncio",
+      "schema": "",
+      "columns": {
+        "transaccion": {
+          "name": "transaccion",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fecha": {
+          "name": "fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "recompensas_anuncio_usuario_id_usuarios_id_fk": {
+          "name": "recompensas_anuncio_usuario_id_usuarios_id_fk",
+          "tableFrom": "recompensas_anuncio",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },
@@ -1404,6 +1450,80 @@
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false
+    },
+    "public.vistas_diarias": {
+      "name": "vistas_diarias",
+      "schema": "",
+      "columns": {
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fecha": {
+          "name": "fecha",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tarjeta_id": {
+          "name": "tarjeta_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creado_en": {
+          "name": "creado_en",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "vistas_diarias_usuario_id_usuarios_id_fk": {
+          "name": "vistas_diarias_usuario_id_usuarios_id_fk",
+          "tableFrom": "vistas_diarias",
+          "tableTo": "usuarios",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "vistas_diarias_tarjeta_id_tarjetas_id_fk": {
+          "name": "vistas_diarias_tarjeta_id_tarjetas_id_fk",
+          "tableFrom": "vistas_diarias",
+          "tableTo": "tarjetas",
+          "columnsFrom": [
+            "tarjeta_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "vistas_diarias_usuario_id_fecha_tarjeta_id_pk": {
+          "name": "vistas_diarias_usuario_id_fecha_tarjeta_id_pk",
+          "columns": [
+            "usuario_id",
+            "fecha",
+            "tarjeta_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
     }
   },
   "enums": {
@@ -1412,7 +1532,6 @@
       "schema": "public",
       "values": [
         "gratis",
-        "monedas",
         "premium"
       ]
     },
@@ -1445,7 +1564,7 @@
       "values": [
         "anuncio",
         "compra",
-        "desbloqueo",
+        "tarjetas_extra",
         "bono",
         "ajuste"
       ]

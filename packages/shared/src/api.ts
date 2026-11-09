@@ -10,7 +10,6 @@ export const mazoCatalogoSchema = z.object({
   disciplina: z.enum(DISCIPLINAS),
   normaCodigo: z.string(),
   acceso: z.enum(ACCESOS_MAZO),
-  precioMonedas: z.number().int().nonnegative().nullable(),
   totalTarjetas: z.number().int().nonnegative(),
   versionPublicada: z.number().int().positive(),
 });
@@ -33,8 +32,34 @@ export const sincronizarRepasosSchema = z.object({
   estados: z.array(estadoRepasoSchema).max(500),
 });
 
-export const accesosSchema = z.object({
-  premium: z.boolean(),
-  desbloqueados: z.array(z.uuid()),
+/**
+ * Reglas del cupo diario. Viven en el servidor (variables de entorno) para
+ * ajustarlas sin publicar una versión nueva de la app.
+ */
+export const reglasCupoSchema = z.object({
+  cupoGratis: z.number().int().positive(),
+  /** Cupo mayor durante los primeros días, para formar el hábito. */
+  cupoBienvenida: z.number().int().positive(),
+  diasBienvenida: z.number().int().nonnegative(),
+  tarjetasPorAnuncio: z.number().int().positive(),
+  maxAnunciosDia: z.number().int().nonnegative(),
+  maxIntersticialesDia: z.number().int().nonnegative(),
+  /** Monedas que cuesta (y tarjetas que da) cada ampliación con monedas: 1 moneda = 1 tarjeta. */
+  tarjetasPorCompraMonedas: z.number().int().positive(),
 });
-export type Accesos = z.infer<typeof accesosSchema>;
+export type ReglasCupo = z.infer<typeof reglasCupoSchema>;
+
+/** Estado del día del usuario (fecha en hora de Lima). */
+export const estadoCupoSchema = z.object({
+  fecha: z.iso.date(),
+  premium: z.boolean(),
+  limite: z.number().int(),
+  usadas: z.number().int(),
+  restantes: z.number().int(),
+  anunciosVistos: z.number().int(),
+  monedas: z.number().int(),
+  reglas: reglasCupoSchema,
+});
+export type EstadoCupo = z.infer<typeof estadoCupoSchema>;
+
+export const consumirTarjetaSchema = z.object({ tarjetaId: z.uuid() });

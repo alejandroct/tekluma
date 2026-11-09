@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import type { PaqueteMazo } from "@tekluma/shared";
+import type { EstadoCupo, PaqueteMazo } from "@tekluma/shared";
 import { router, useLocalSearchParams } from "expo-router";
 import * as Haptics from "expo-haptics";
 import type { Grade } from "ts-fsrs";
+import { CupoAgotado } from "@/components/CupoAgotado";
 import { Tarjeta } from "@/components/Tarjeta";
+import { intersticialAlTerminar } from "@/lib/anuncios";
+import { consumirTarjeta, cupoEnCache } from "@/lib/cupo";
 import { descargarPaquete, paqueteLocal } from "@/lib/mazos";
 import { calificar, pendientes, Rating, sincronizar } from "@/lib/repaso";
 import { useTema } from "@/lib/tema";
@@ -23,6 +26,12 @@ export default function Repaso() {
   const [error, setError] = useState<string | null>(null);
   const [cola, setCola] = useState<string[]>(() => (mazo ? pendientes(mazoId, mazo.tarjetas.map((c) => c.id)) : []));
   const [revelada, setRevelada] = useState(false);
+  const [cupo, setCupo] = useState<EstadoCupo | null>(cupoEnCache);
+  /** Tarjeta para la que el servidor ya dio permiso (consumió cupo o ya se había visto hoy). */
+  const [permitida, setPermitida] = useState<string | null>(null);
+  const [agotado, setAgotado] = useState(false);
+  const vistasEnSesion = useRef(0);
+  const actualId = mazo ? cola[0] : undefined;
 
   // Primera vez que se abre el mazo: se descarga y queda disponible sin conexión.
   useEffect(() => {
@@ -34,6 +43,30 @@ export default function Repaso() {
       })
       .catch(() => setError("No pudimos descargar el mazo. Revisa tu conexión."));
   }, [mazo, mazoId]);
+
+  // Antes de mostrar cada tarjeta se descuenta del cupo diario.
+  useEffect(() => {
+    if (!actualId || permitida === actualId || agotado) return;
+    let vigente = true;
+    consumirTarjeta(actualId).then(({ permitido, estado }) => {
+      if (!vigente) return;
+      if (estado) setCupo(estado);
+      if (permitido) {
+        vistasEnSesion.current += 1;
+        setPermitida(actualId);
+      } else setAgotado(true);
+    });
+    return () => {
+      vigente = false;
+    };
+  }, [actualId, permitida, agotado]);
+
+  // Al terminar una sesión con tarjetas vistas, un intersticial (con tope diario; nunca a Premium).
+  useEffect(() => {
+    if (mazo && !actualId && vistasEnSesion.current > 0 && cupo) {
+      intersticialAlTerminar(cupo.reglas.maxIntersticialesDia, cupo.premium).catch(() => {});
+    }
+  }, [mazo, actualId, cupo]);
 
   // Al salir del repaso se sube el progreso.
   useEffect(() => () => void sincronizar().catch(() => {}), []);
@@ -59,6 +92,28 @@ export default function Repaso() {
     );
   }
 
+  if (agotado && cupo) {
+    return (
+      <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={{ padding: 24 }}>
+        <CupoAgotado
+          estado={cupo}
+          onAmpliado={(nuevo) => {
+            setCupo(nuevo);
+            if (nuevo.restantes > 0) setAgotado(false);
+          }}
+        />
+      </ScrollView>
+    );
+  }
+
+  if (permitida !== actual.id) {
+    return (
+      <View style={[estilos.fin, { backgroundColor: t.fondo }]}>
+        <ActivityIndicator color={t.ambar} />
+      </View>
+    );
+  }
+
   const responder = (nota: Grade) => {
     Haptics.selectionAsync();
     calificar(mazoId, actual.id, nota);
@@ -72,6 +127,7 @@ export default function Repaso() {
       <ScrollView contentContainerStyle={{ padding: 20, gap: 16 }}>
         <Text style={{ color: t.textoSuave, fontWeight: "600" }}>
           {mazo.norma.codigo} · quedan {cola.length}
+          {cupo && !cupo.premium ? ` · cupo de hoy: ${cupo.restantes}` : ""}
         </Text>
         <Tarjeta key={`${actual.id}-${cola.length}`} contenido={actual.contenido} revelada={revelada} onRevelar={() => setRevelada(true)} />
         {revelada &&

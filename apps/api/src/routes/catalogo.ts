@@ -25,7 +25,6 @@ export const catalogo = new Hono().get("/", async (c) => {
       disciplina: normas.disciplina,
       normaCodigo: normas.codigo,
       acceso: mazos.acceso,
-      precioMonedas: mazos.precioMonedas,
       totalTarjetas: ultima.totalTarjetas,
       versionPublicada: ultima.version,
     })

@@ -1,12 +1,18 @@
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { router, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
+import { iniciarAnuncios } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { useTema } from "@/lib/tema";
 
 export default function RootLayout() {
   const t = useTema();
   const { data: sesion, isPending } = authClient.useSession();
+
+  useEffect(() => {
+    iniciarAnuncios().catch(() => {});
+  }, []);
 
   if (isPending) {
     return (
@@ -43,6 +49,7 @@ export default function RootLayout() {
               ),
             }}
           />
+          <Stack.Screen name="premium" options={{ title: "", presentation: "modal", headerShadowVisible: false }} />
         </Stack.Protected>
       </Stack>
     </>

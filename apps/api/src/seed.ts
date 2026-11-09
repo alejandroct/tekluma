@@ -18,7 +18,7 @@ type NormaSemilla = {
   dispositivo: string;
   publicadaEn: string;
   articulos: Record<string, string>; // número → encabezado
-  mazo: Pick<typeof mazos.$inferInsert, "slug" | "titulo" | "descripcion" | "acceso" | "precioMonedas" | "orden">;
+  mazo: Pick<typeof mazos.$inferInsert, "slug" | "titulo" | "descripcion" | "acceso" | "orden">;
   tarjetas: TarjetaSemilla[];
 };
 
@@ -37,7 +37,6 @@ const contenido: NormaSemilla[] = [
       titulo: "E.030 · Diseño sismorresistente",
       descripcion: "Zonificación, factor de uso y cortante basal.",
       acceso: "gratis",
-      precioMonedas: null,
       orden: 1,
     },
     tarjetas: [
@@ -110,8 +109,7 @@ const contenido: NormaSemilla[] = [
       slug: "e060-basico",
       titulo: "E.060 · Concreto armado",
       descripcion: "Resistencias mínimas y recubrimientos.",
-      acceso: "monedas",
-      precioMonedas: 50,
+      acceso: "gratis",
       orden: 2,
     },
     tarjetas: [

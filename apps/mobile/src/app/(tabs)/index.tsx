@@ -1,6 +1,8 @@
 import { useCallback, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
+import type { EstadoCupo } from "@tekluma/shared";
+import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { paquetesLocales } from "@/lib/mazos";
 import { pendientes, sincronizar } from "@/lib/repaso";
 import { useTema } from "@/lib/tema";
@@ -10,6 +12,7 @@ type Resumen = { mazoId: string; codigo: string; pendientes: number };
 export default function Hoy() {
   const t = useTema();
   const [resumen, setResumen] = useState<Resumen[] | null>(null);
+  const [cupo, setCupo] = useState<EstadoCupo | null>(cupoEnCache);
 
   useFocusEffect(
     useCallback(() => {
@@ -20,6 +23,9 @@ export default function Hoy() {
           pendientes: pendientes(p.mazoId, p.tarjetas.map((c) => c.id)).length,
         })),
       );
+      obtenerCupo()
+        .then(setCupo)
+        .catch(() => {});
       // Sube el progreso en segundo plano; si no hay conexión se reintenta luego.
       sincronizar().catch(() => {});
     }, []),
@@ -47,6 +53,26 @@ export default function Hoy() {
           </Text>
         </Pressable>
       </View>
+
+      {cupo && (
+        <Pressable
+          disabled={cupo.premium}
+          onPress={() => router.push("/premium")}
+          style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}
+        >
+          <View style={{ flex: 1, gap: 6 }}>
+            <Text style={{ color: t.texto, fontSize: 15, fontWeight: "700" }}>
+              {cupo.premium ? "★ Premium · tarjetas ilimitadas" : `Cupo de hoy: ${cupo.restantes} de ${cupo.limite} tarjetas`}
+            </Text>
+            {!cupo.premium && (
+              <View style={[estilos.barra, { backgroundColor: t.borde }]}>
+                <View style={[estilos.barraLlena, { backgroundColor: t.ambar, width: `${Math.min(100, (cupo.usadas / Math.max(1, cupo.limite)) * 100)}%` }]} />
+              </View>
+            )}
+          </View>
+          {!cupo.premium && <Text style={{ color: t.ambar, fontWeight: "800", marginLeft: 12 }}>Ilimitado ›</Text>}
+        </Pressable>
+      )}
 
       {resumen && resumen.length > 1 && (
         <View style={{ gap: 8, marginTop: 8 }}>
@@ -77,5 +103,7 @@ const estilos = StyleSheet.create({
   boton: { borderRadius: 14, paddingVertical: 14, alignItems: "center" },
   botonInactivo: { backgroundColor: "#26364F" },
   botonTexto: { color: "#0F1B2D", fontSize: 17, fontWeight: "700" },
-  fila: { flexDirection: "row", justifyContent: "space-between", padding: 16, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth },
+  barra: { height: 6, borderRadius: 3, overflow: "hidden" },
+  barraLlena: { height: 6, borderRadius: 3 },
+  fila: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 16, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth },
 });

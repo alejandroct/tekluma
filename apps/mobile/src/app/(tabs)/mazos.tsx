@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Alert, FlatList, Pressable, RefreshControl, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, FlatList, Pressable, RefreshControl, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
-import { desbloquear, obtenerCatalogo, type MazoConAcceso } from "@/lib/mazos";
+import { obtenerCatalogo, type MazoConAcceso } from "@/lib/mazos";
 import { useTema } from "@/lib/tema";
 
 export default function Mazos() {
@@ -28,27 +28,7 @@ export default function Mazos() {
     }, [cargar]),
   );
 
-  const abrir = (m: MazoConAcceso) => {
-    if (m.abierto) return router.push(`/repaso/${m.id}`);
-    if (m.acceso === "premium") {
-      return Alert.alert("Mazo Premium", "Este mazo estará disponible con la suscripción Tekluma Premium.");
-    }
-    Alert.alert(m.titulo, `¿Desbloquear este mazo por ${m.precioMonedas} monedas?`, [
-      { text: "Cancelar", style: "cancel" },
-      {
-        text: "Desbloquear",
-        onPress: async () => {
-          try {
-            await desbloquear(m.id);
-            await cargar();
-          } catch (e) {
-            const sinSaldo = e instanceof Error && e.message.endsWith("402");
-            Alert.alert(sinSaldo ? "Monedas insuficientes" : "No se pudo desbloquear", sinSaldo ? "Gana monedas viendo anuncios o suscríbete a Premium." : undefined);
-          }
-        },
-      },
-    ]);
-  };
+  const abrir = (m: MazoConAcceso) => router.push(m.abierto ? `/repaso/${m.id}` : "/premium");
 
   return (
     <FlatList
@@ -88,10 +68,10 @@ export default function Mazos() {
 }
 
 function etiqueta(m: MazoConAcceso) {
-  if (!m.abierto) return m.acceso === "premium" ? "🔒 Premium" : `🔒 ${m.precioMonedas} monedas`;
+  if (!m.abierto) return "★ Premium";
   if (m.desactualizado) return "Nueva versión disponible";
   if (m.descargado) return "✓ Descargado";
-  return m.acceso === "gratis" ? "Gratis" : "Desbloqueado";
+  return m.acceso === "premium" ? "★ Premium" : "Incluido en tu cupo diario";
 }
 
 const estilos = StyleSheet.create({

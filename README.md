@@ -28,13 +28,22 @@ una base local PGlite en `apps/api/.pglite/` (no requiere instalar Postgres); co
 
 ```bash
 pnpm db:migrate
-pnpm --filter @tekluma/api db:seed   # mazos de prueba: E.030 (gratis) y E.060 (50 monedas)
+pnpm --filter @tekluma/api db:seed   # mazos de prueba: E.030 y E.060
 ```
 
 Con PGlite, detén la API antes de migrar o sembrar: solo un proceso puede abrir la base.
 
 Login: Better Auth con código de 6 dígitos por correo. Sin `RESEND_API_KEY` el código se imprime en la
 consola de la API. Apple y Google se activan al definir sus credenciales en `.env`.
+
+## Monetización: cupo diario
+
+- Gratis: 15 tarjetas distintas al día (30 los primeros 3 días). Repetir una tarjeta el mismo día no consume cupo.
+- Anuncio con recompensa: +5 tarjetas, hasta 8 al día. En producción lo acredita AdMob llamando a
+  `GET /webhooks/admob` (verificación SSV firmada); en desarrollo, la app usa `POST /cupo/anuncio-prueba`.
+- Monedas: 5 monedas = 5 tarjetas extra. Intersticial al terminar sesión, máximo 2 al día.
+- Premium: sin límite ni anuncios. Los cobros (RevenueCat) están pendientes.
+- Todas las reglas se ajustan con variables `CUPO_*` (ver `apps/api/.env.example`).
 
 ## Despliegue
 

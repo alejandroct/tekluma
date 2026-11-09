@@ -1,18 +1,27 @@
-import type { Accesos, MazoCatalogo, PaqueteMazo } from "@tekluma/shared";
+import type { MazoCatalogo, PaqueteMazo } from "@tekluma/shared";
 import { api } from "./auth";
+import { obtenerCupo } from "./cupo";
 import { db } from "./db";
 
 export type MazoConAcceso = MazoCatalogo & { abierto: boolean; descargado: boolean; desactualizado: boolean };
 
-/** Catálogo del servidor combinado con los accesos del usuario y lo que ya está en el dispositivo. */
+/** Catálogo del servidor combinado con el plan del usuario y lo que ya está en el dispositivo. */
 export async function obtenerCatalogo(): Promise<MazoConAcceso[]> {
-  const [catalogo, accesos] = await Promise.all([api<MazoCatalogo[]>("/catalogo"), api<Accesos>("/mazos/accesos")]);
+  const [catalogo, cupo] = await Promise.all([api<MazoCatalogo[]>("/catalogo"), obtenerCupo()]);
+  // Mazos retirados del catálogo ya no se pueden estudiar: se borran del dispositivo.
+  const vigentes = new Set(catalogo.map((m) => m.id));
+  for (const { mazo_id } of db.getAllSync<{ mazo_id: string }>("select mazo_id from paquetes")) {
+    if (!vigentes.has(mazo_id)) {
+      db.runSync("delete from paquetes where mazo_id = ?", mazo_id);
+      db.runSync("delete from estados where mazo_id = ?", mazo_id);
+    }
+  }
   const locales = new Map(
     db.getAllSync<{ mazo_id: string; version: number }>("select mazo_id, version from paquetes").map((p) => [p.mazo_id, p.version]),
   );
   return catalogo.map((m) => ({
     ...m,
-    abierto: m.acceso === "gratis" || accesos.premium || accesos.desbloqueados.includes(m.id),
+    abierto: m.acceso === "gratis" || cupo.premium,
     descargado: locales.has(m.id),
     desactualizado: (locales.get(m.id) ?? m.versionPublicada) < m.versionPublicada,
   }));
@@ -37,9 +46,4 @@ export function paqueteLocal(mazoId: string): PaqueteMazo | null {
 
 export function paquetesLocales(): PaqueteMazo[] {
   return db.getAllSync<{ contenido: string }>("select contenido from paquetes").map((f) => JSON.parse(f.contenido) as PaqueteMazo);
-}
-
-/** Devuelve el saldo restante, o lanza si no alcanza. */
-export async function desbloquear(mazoId: string) {
-  return api<{ desbloqueado: boolean; saldo?: number }>(`/mazos/${mazoId}/desbloquear`, { method: "POST" });
 }

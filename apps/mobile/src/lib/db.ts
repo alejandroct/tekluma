@@ -13,9 +13,27 @@ db.execSync(`
   );
   create index if not exists estados_mazo_vence on estados (mazo_id, vence);
 
+  create table if not exists ajustes (
+    clave text primary key not null,
+    valor text not null
+  );
+
   create table if not exists paquetes (
     mazo_id text primary key not null,
     version integer not null,
     contenido text not null
   );
 `);
+
+export function leerAjuste<T>(clave: string): T | null {
+  const fila = db.getFirstSync<{ valor: string }>("select valor from ajustes where clave = ?", clave);
+  return fila ? (JSON.parse(fila.valor) as T) : null;
+}
+
+export function guardarAjuste(clave: string, valor: unknown) {
+  db.runSync(
+    "insert into ajustes (clave, valor) values (?, ?) on conflict (clave) do update set valor = excluded.valor",
+    clave,
+    JSON.stringify(valor),
+  );
+}

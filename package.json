@@ -15,7 +15,11 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "react": "19.3.0",
+      "react-dom": "19.3.0"
+    }
   },
   "devDependencies": {
     "sst": "^3.17.0"

@@ -165,5 +165,6 @@ const estilos = StyleSheet.create({
   opcion: { borderWidth: 1, borderRadius: 14, padding: 14 },
   tabla: { borderWidth: 1, borderRadius: 12, overflow: "hidden" },
   filaTabla: { flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 14, paddingVertical: 10 },
-  input: { borderWidth: 1, borderRadius: 14, padding: 14, fontSize: 18 },
+  // letterSpacing explícito: iOS reutiliza vistas nativas de TextInput y puede heredar el de otra pantalla.
+  input: { borderWidth: 1, borderRadius: 14, padding: 14, fontSize: 18, letterSpacing: 0 },
 });

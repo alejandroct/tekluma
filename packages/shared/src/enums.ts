@@ -22,14 +22,14 @@ export type EstadoEditorial = (typeof ESTADOS_EDITORIALES)[number];
 export const ROLES_STAFF = ["autor", "revisor", "admin"] as const;
 export type RolStaff = (typeof ROLES_STAFF)[number];
 
-/** Cómo se accede a un mazo. */
-export const ACCESOS_MAZO = ["gratis", "monedas", "premium"] as const;
+/** Cómo se accede a un mazo: los gratis cuentan contra el cupo diario; los premium requieren suscripción. */
+export const ACCESOS_MAZO = ["gratis", "premium"] as const;
 export type AccesoMazo = (typeof ACCESOS_MAZO)[number];
 
 export const MOTIVOS_MONEDAS = [
   "anuncio", // recompensa por ver un anuncio
   "compra", // paquete comprado vía IAP
-  "desbloqueo", // gasto al abrir un mazo
+  "tarjetas_extra", // gasto para ampliar el cupo del día
   "bono", // racha, referidos, bienvenida
   "ajuste", // corrección manual de soporte
 ] as const;

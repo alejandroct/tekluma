@@ -10,6 +10,7 @@ import {
   real,
   smallint,
   primaryKey,
+  date,
   uniqueIndex,
   index,
 } from "drizzle-orm/pg-core";
@@ -151,7 +152,6 @@ export const mazos = pgTable("mazos", {
   descripcion: text("descripcion").notNull().default(""),
   normaId: uuid("norma_id").notNull().references(() => normas.id),
   acceso: accesoMazoEnum("acceso").notNull().default("premium"),
-  precioMonedas: integer("precio_monedas"),
   orden: integer("orden").notNull().default(0),
   creadoEn: creadoEn(),
 });
@@ -233,15 +233,38 @@ export const movimientosMonedas = pgTable(
   ],
 );
 
-export const desbloqueosMazo = pgTable(
-  "desbloqueos_mazo",
+/** Consumo del cupo por usuario y día (fecha de Lima). */
+export const cuposDiarios = pgTable(
+  "cupos_diarios",
   {
-    usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id),
-    mazoId: uuid("mazo_id").notNull().references(() => mazos.id),
+    usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
+    fecha: date("fecha").notNull(),
+    /** Tarjetas añadidas al cupo base con anuncios o monedas. */
+    extra: integer("extra").notNull().default(0),
+    anuncios: integer("anuncios").notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.usuarioId, t.fecha] })],
+);
+
+/** Tarjetas distintas vistas en el día: repetir una tarjeta el mismo día no consume cupo. */
+export const vistasDiarias = pgTable(
+  "vistas_diarias",
+  {
+    usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
+    fecha: date("fecha").notNull(),
+    tarjetaId: uuid("tarjeta_id").notNull().references(() => tarjetas.id),
     creadoEn: creadoEn(),
   },
-  (t) => [primaryKey({ columns: [t.usuarioId, t.mazoId] })],
+  (t) => [primaryKey({ columns: [t.usuarioId, t.fecha, t.tarjetaId] })],
 );
+
+/** Recompensas de anuncios ya acreditadas (idempotencia por transacción de AdMob). */
+export const recompensasAnuncio = pgTable("recompensas_anuncio", {
+  transaccion: text("transaccion").primaryKey(),
+  usuarioId: uuid("usuario_id").notNull().references(() => usuarios.id, { onDelete: "cascade" }),
+  fecha: date("fecha").notNull(),
+  creadoEn: creadoEn(),
+});
 
 // ───────────── Progreso (FSRS) ─────────────
 
