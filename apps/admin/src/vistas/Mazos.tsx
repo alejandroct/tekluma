@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState, type FormEvent } from "react";
 import type { EditorialStatus } from "@tekluma/shared";
 import { api, type Mazo, type Norma, type Tarjeta, type Yo } from "../api";
 import { ESTADOS, TIPOS, resumen } from "../etiquetas";
-import { IconoBuscar, IconoChevron, IconoMas, IconoPublicar } from "../iconos";
+import { IconoBuscar, IconoChevron, IconoEliminar, IconoMas, IconoPublicar } from "../iconos";
 import { Aviso, EncabezadoPagina, Estado, Vacio } from "../ui";
 import { Editor } from "./Editor";
 
@@ -61,6 +61,25 @@ export function Mazos({ yo }: { yo: Yo }) {
       setMensaje(`Versión ${(mazo.version ?? 0) + 1} publicada.`);
       cargarMazos();
       cargarTarjetas();
+    } catch (e) {
+      setMensaje((e as Error).message);
+    }
+  };
+
+  const eliminar = async () => {
+    if (!mazo) return;
+    const escrito = prompt(
+      `Vas a eliminar "${mazo.title}" con sus ${tarjetas.length} tarjetas y todas sus versiones. Desaparece de la app y no se puede deshacer.\n\nPara confirmar, escribe: ${mazo.slug}`,
+    );
+    if (escrito === null) return;
+    if (escrito.trim() !== mazo.slug) {
+      setMensaje("No se eliminó: el texto no coincide con el identificador del mazo.");
+      return;
+    }
+    try {
+      await api(`/editorial/mazos/${mazo.id}`, { method: "DELETE", body: { confirmar: escrito.trim() } });
+      elegir(null);
+      cargarMazos();
     } catch (e) {
       setMensaje((e as Error).message);
     }
@@ -200,6 +219,12 @@ export function Mazos({ yo }: { yo: Yo }) {
                 <IconoPublicar tamano={16} />
                 Publicar v{(mazo.version ?? 0) + 1}
                 <span className="boton-cuenta">+{aprobadas}</span>
+              </button>
+            )}
+            {yo.rol === "admin" && (
+              <button className="boton peligro" onClick={eliminar}>
+                <IconoEliminar tamano={16} />
+                Eliminar mazo
               </button>
             )}
             <button className="boton primario" onClick={() => setAbierta("nueva")}>

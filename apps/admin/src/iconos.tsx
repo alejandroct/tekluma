@@ -99,6 +99,16 @@ export const IconoPublicar = (p: Props) => (
   </Icono>
 );
 
+/** Delete: bin with a flat lid. */
+export const IconoEliminar = (p: Props) => (
+  <Icono {...p}>
+    <path d="M3.5 5.5H16.5" />
+    <path d="M8 5.5V3.5H12V5.5" />
+    <path d="M5 5.5L5.75 16.75H14.25L15 5.5" />
+    <path d="M8.5 9V13.5M11.5 9V13.5" />
+  </Icono>
+);
+
 /** Edit: square-ended drafting pencil. */
 export const IconoEditar = (p: Props) => (
   <Icono {...p}>

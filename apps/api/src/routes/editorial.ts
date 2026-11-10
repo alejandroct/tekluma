@@ -9,6 +9,7 @@ import { auth } from "../auth";
 import { db } from "../db/client";
 import { articles, cardCitations, cards, deckReleases, decks, editorialReviews, standards, standardVersions, users } from "../db/schema";
 import { publicarMazo } from "../publicacion";
+import { eliminarMazo } from "../eliminacion";
 import { importar, ImportacionError } from "../importacion";
 
 type StaffVars = { Variables: { usuarioId: string; rol: StaffRole } };
@@ -164,6 +165,15 @@ export const editorial = new Hono<StaffVars>()
       return c.json(mazo, 201);
     },
   )
+
+  /** Permanently deletes a deck (see eliminarMazo). The slug must be sent back as confirmation. */
+  .delete("/mazos/:id", requiereStaff("admin"), zValidator("json", z.object({ confirmar: z.string() })), async (c) => {
+    const [mazo] = await db.select({ id: decks.id, slug: decks.slug }).from(decks).where(eq(decks.id, c.req.param("id")));
+    if (!mazo) throw new HTTPException(404, { message: "Mazo no encontrado" });
+    if (c.req.valid("json").confirmar !== mazo.slug) throw new HTTPException(400, { message: "El texto de confirmación no coincide con el identificador del mazo" });
+
+    return c.json(await eliminarMazo(mazo.id));
+  })
 
   .post("/mazos/:id/publicar", requiereStaff("reviewer"), async (c) => {
     try {
