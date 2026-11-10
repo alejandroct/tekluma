@@ -9,7 +9,8 @@ import { auth } from "../auth";
 import { db } from "../db/client";
 import { articles, cardCitations, cards, deckReleases, decks, editorialReviews, standards, standardVersions, users } from "../db/schema";
 import { publicarMazo } from "../publicacion";
-import { eliminarMazo } from "../eliminacion";
+import { eliminarMazo, eliminarNorma } from "../eliminacion";
+import { compararNumeros } from "../util";
 import { importar, ImportacionError } from "../importacion";
 
 type StaffVars = { Variables: { usuarioId: string; rol: StaffRole } };
@@ -94,14 +95,24 @@ export const editorial = new Hono<StaffVars>()
     },
   )
 
+  /** Permanently deletes a standard without decks (see eliminarNorma). The code must be sent back as confirmation. */
+  .delete("/normas/:id", requiereStaff("admin"), zValidator("json", z.object({ confirmar: z.string() })), async (c) => {
+    const [norma] = await db.select({ code: standards.code }).from(standards).where(eq(standards.id, c.req.param("id")));
+    if (!norma) throw new HTTPException(404, { message: "Norma no encontrada" });
+    if (c.req.valid("json").confirmar.trim().toUpperCase() !== norma.code.toUpperCase())
+      throw new HTTPException(400, { message: "El texto de confirmación no coincide con el código de la norma" });
+    const resultado = await eliminarNorma(c.req.param("id"));
+    if (resultado && "bloqueo" in resultado) throw new HTTPException(409, { message: resultado.bloqueo });
+    return c.json(resultado);
+  })
+
   .get("/normas/:id/articulos", async (c) => {
     const filas = await db
       .select({ id: articles.id, number: articles.number, heading: articles.heading, body: articles.body, sourcePage: articles.sourcePage })
       .from(articles)
       .innerJoin(standardVersions, eq(standardVersions.id, articles.standardVersionId))
-      .where(and(eq(standardVersions.standardId, c.req.param("id")), eq(standardVersions.isCurrent, true)))
-      .orderBy(articles.number);
-    return c.json(filas);
+      .where(and(eq(standardVersions.standardId, c.req.param("id")), eq(standardVersions.isCurrent, true)));
+    return c.json(filas.sort((x, y) => compararNumeros(x.number, y.number)));
   })
 
   .post(

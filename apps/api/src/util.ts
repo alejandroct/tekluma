@@ -8,3 +8,7 @@ export const canonico = (v: unknown): string =>
           .map((k) => `${JSON.stringify(k)}:${canonico((v as Record<string, unknown>)[k])}`)
           .join(",")}}`
       : JSON.stringify(v);
+
+/** Orders article numbers as the standard does: 2.1 before 10.1, and 7.1 before 7.1.1. */
+export const compararNumeros = (a: string, b: string): number =>
+  a.localeCompare(b, "es", { numeric: true, sensitivity: "base" });

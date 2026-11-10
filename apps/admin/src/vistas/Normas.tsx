@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { DISCIPLINES } from "@tekluma/shared";
 import { api, type Articulo, type Norma, type Yo } from "../api";
 import { DISCIPLINAS } from "../etiquetas";
-import { IconoBuscar, IconoMas } from "../iconos";
+import { IconoBuscar, IconoEliminar, IconoMas } from "../iconos";
 import { Aviso, EncabezadoPagina, Vacio } from "../ui";
 
 export function Normas({ yo }: { yo: Yo }) {
@@ -36,6 +36,23 @@ export function Normas({ yo }: { yo: Yo }) {
   };
 
   const norma = normas.find((n) => n.id === normaId);
+
+  const eliminar = async () => {
+    if (!norma) return;
+    const escrito = prompt(
+      `Vas a eliminar ${norma.code} con sus ${norma.articleCount} artículos. Solo se puede si ya no tiene mazos, y no se puede deshacer.\n\nPara confirmar, escribe: ${norma.code}`,
+    );
+    if (escrito === null) return;
+    setError(null);
+    try {
+      await api(`/editorial/normas/${norma.id}`, { method: "DELETE", body: { confirmar: escrito.trim() } });
+      setNormaId(null);
+      setArticulos([]);
+      cargar();
+    } catch (err) {
+      setError((err as Error).message);
+    }
+  };
   const q = busqueda.trim().toLowerCase();
   const filtradas = q ? normas.filter((n) => `${n.code} ${n.title}`.toLowerCase().includes(q)) : normas;
 
@@ -146,10 +163,16 @@ export function Normas({ yo }: { yo: Yo }) {
                   {norma.title}
                 </h2>
                 {admin && !agregando && (
-                  <button className="boton secundario" onClick={() => setAgregando(true)}>
-                    <IconoMas tamano={16} />
-                    Agregar artículo
-                  </button>
+                  <div className="encabezado-acciones">
+                    <button className="boton peligro" onClick={eliminar}>
+                      <IconoEliminar tamano={16} />
+                      Eliminar norma
+                    </button>
+                    <button className="boton secundario" onClick={() => setAgregando(true)}>
+                      <IconoMas tamano={16} />
+                      Agregar artículo
+                    </button>
+                  </div>
                 )}
               </div>
               <dl className="ficha bajo-cab">
