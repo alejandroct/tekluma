@@ -1,0 +1,534 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "16.1",
+   "epigrafe": "Alcance",
+   "texto": "ALCANCE",
+   "pagina": 151
+  },
+  {
+   "numero": "16.1.1",
+   "texto": "Todas las disposiciones de esta Norma que no sean específicamente excluidas y que no contradigan las disposiciones del Capítulo 16, deben aplicarse a las estructuras que incorporan elementos estructurales prefabricados de concreto.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.1.2",
+   "texto": "Las disposiciones de este Capítulo no cubren los requerimientos específicos para el diseño de pórticos y muros prefabricados que conformen el sistema sismorresistente de edificaciones ubicadas en las zonas de alto riesgo sísmico (zonas 2 y 3 de la NTE E.030). En este caso, los sistemas constructivos prefabricados serán considerados “no convencionales”. Véase 1.3.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.2",
+   "epigrafe": "Generalidades",
+   "texto": "GENERALIDADES",
+   "pagina": 151
+  },
+  {
+   "numero": "16.2.1",
+   "texto": "El diseño de elementos prefabricados y sus conexiones debe incluir las condiciones de carga y de restricción, desde la fabricación inicial hasta completar la estructura, incluyendo el desencofrado, almacenamiento, transporte y montaje. En las estructuras prefabricadas, se requiere de una especial atención en el diseño de las conexiones para minimizar o transmitir, según sea el caso, las fuerzas debidas a retracción, flujo plástico, variación de temperatura, deformaciones elásticas, asentamientos diferenciales, viento y sismo.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.2.2",
+   "texto": "Cuando se incorporen elementos prefabricados en un sistema estructural, las fuerzas y deformaciones que se produzcan en y junto a las conexiones deben ser incluidas en el diseño.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.2.3",
+   "texto": "Deben especificarse las tolerancias tanto para los elementos prefabricados como para los vaciados en sitio y los elementos de conexión. El diseño de los elementos prefabricados y de las conexiones debe incluir los efectos de estas tolerancias.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.2.4",
+   "texto": "Debe incluirse en los planos lo siguiente:\n (a) Detallado del refuerzo, insertos y dispositivos de izaje necesarios para resistir la fuerzas temporales derivadas del manejo, almacenamiento, transporte y montaje. (b) Resistencia del concreto a las edades o etapas de construcción establecidas.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.3",
+   "epigrafe": "Distribución De Fuerzas Entre Elementos",
+   "texto": "DISTRIBUCIÓN DE FUERZAS ENTRE ELEMENTOS",
+   "pagina": 151
+  },
+  {
+   "numero": "16.3.1",
+   "texto": "La distribución de fuerzas perpendiculares al plano de los elementos debe establecerse por medio de análisis o ensayos.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.3.2",
+   "texto": "Cuando el comportamiento del sistema requiera que las fuerzas en el plano sean transferidas entre los elementos de un sistema de muro o piso prefabricado, deben aplicarse 16.3.2.1 y 16.3.2.2.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.3.2.1",
+   "texto": "La trayectoria de las fuerzas en el plano debe ser continua tanto a través de las conexiones como a través de los elementos.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.3.2.2",
+   "texto": "Cuando se produzcan fuerzas de tracción, debe proporcionarse una trayectoria continua de refuerzo de acero.",
+   "pagina": 151
+  },
+  {
+   "numero": "16.4",
+   "epigrafe": "Diseño De Los Elementos",
+   "texto": "DISEÑO DE LOS ELEMENTOS",
+   "pagina": 151
+  },
+  {
+   "numero": "16.4.1",
+   "texto": "En losas de piso o techo en una dirección y en paneles de muros prefabricados preesforzados, con anchos menores de 3,6 m, y cuando los elementos no estén conectados mecánicamente como para provocar una restricción en la dirección transversal, se permite que los requisitos de refuerzo por retracción y temperatura de 9.7 en la dirección normal al refuerzo por flexión sean omitidos. Esta omisión no se aplica a elementos que requieren el refuerzo para resistir esfuerzos transversales de flexión, tales como T simples o dobles con alas delgadas y anchas.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.4.2",
+   "texto": "En muros prefabricados no preesforzados, el refuerzo debe diseñarse de acuerdo con las disposiciones de los Capítulos 10 ó 14 excepto que el área de refuerzo vertical y horizontal debe, cada una, no ser menor de 0,001 Ag, donde Ag es el área bruta del muro. El espaciamiento del refuerzo no debe exceder de 5 veces el espesor del muro ni 750 mm para muros interiores o 450 mm para muros exteriores.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5",
+   "epigrafe": "Integridad Estructural",
+   "texto": "INTEGRIDAD ESTRUCTURAL",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5.1",
+   "texto": "Excepto cuando controlen las disposiciones de 16.5.2, deben aplicarse las disposiciones mínimas sobre integridad estructural de 16.5.1.1 a 16.5.1.4 en todas las estructuras prefabricadas.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5.1.1",
+   "texto": "Los amarres longitudinales y transversales deben conectar los elementos a un sistema resistente a cargas laterales.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5.1.2",
+   "texto": "Cuando elementos prefabricados formen diafragmas de techo o piso, las conexiones entre el diafragma y aquellos elementos que están siendo soportados lateralmente deben tener una resistencia nominal a la tracción no menor que 4,5 kN por metro lineal.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5.1.3",
+   "texto": "Los elementos estructurales verticales, excepto enchapes de fachada, deben contar con amarres verticales de tracción para lograr que las conexiones en las juntas horizontales cumplan lo especificado en:\n (a) Las columnas prefabricadas deben tener una resistencia nominal a tracción no menor a 1,5 Ag en Newtons. En columnas con una sección transversal mayor a la requerida por consideraciones de carga, se permite emplear un área efectiva reducida Ag basada en la sección transversal requerida, pero no menor a la mitad del área total. (b) Los paneles de muro prefabricados deben tener un mínimo de dos amarres por panel, con una resistencia nominal a la tracción no menor a 45 kN por amarre. (c) Cuando las fuerzas de diseño no generen tracción en la base, se permite que los amarres requeridos por 16.5.1.3 (b) sean anclados en una losa de concreto apoyada sobre el terreno, apropiadamente reforzada.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5.1.4",
+   "texto": "No se deben usar detalles de conexión que dependan solamente de la fricción producida por las cargas gravitacionales.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5.2",
+   "texto": "En estructuras con muros portantes de concreto prefabricado que tengan dos o más pisos de altura, deben aplicarse las disposiciones mínimas de 16.5.2.1 a 16.5.2.5.\n\n Fig. 16.5.2. Disposición de amarres de tracción en estructuras de paneles prefabricados.",
+   "pagina": 152
+  },
+  {
+   "numero": "16.5.2.1",
+   "texto": "En los sistemas de piso y techo se deben especificar amarres transversales y longitudinales capaces de ofrecer una resistencia nominal no menor de 25 kN por metro de ancho o largo. Los amarres deben colocarse sobre los apoyos de los muros interiores y entre los elementos y los muros exteriores. Los amarres deben estar ubicados en o dentro de 600 mm del plano del sistema de piso o techo.",
+   "pagina": 153
+  },
+  {
+   "numero": "16.5.2.2",
+   "texto": "Los amarres longitudinales paralelos a la dirección de armado de la losa de piso o techo, deben espaciarse a no más de 3 m medido entre centros. Deben tomarse provisiones para transferir las fuerzas alrededor de aberturas.",
+   "pagina": 153
+  },
+  {
+   "numero": "16.5.2.3",
+   "texto": "Los amarres transversales perpendiculares a la dirección de armado de la losa de piso o techo, deben tener un espaciamiento no mayor al espaciamiento de los muros de carga.",
+   "pagina": 153
+  },
+  {
+   "numero": "16.5.2.4",
+   "texto": "Los amarres alrededor del perímetro de cada piso o techo, dentro de 1,2 m del borde, deben proporcionar una resistencia nominal a tracción no menor a 75 kN.",
+   "pagina": 153
+  },
+  {
+   "numero": "16.5.2.5",
+   "texto": "Deben proporcionarse amarres verticales de tracción en todos los muros y deben ser continuos en toda la altura de la edificación. Deben, además, proporcionar una resistencia nominal a la tracción no menor a 45 kN por metro horizontal de muro. Debe proporcionarse no menos de dos amarres por cada panel prefabricado.",
+   "pagina": 153
+  },
+  {
+   "numero": "16.6",
+   "epigrafe": "Diseño De Conexiones Y Apoyos",
+   "texto": "DISEÑO DE CONEXIONES Y APOYOS",
+   "pagina": 153
+  },
+  {
+   "numero": "16.6.1",
+   "texto": "Se permite que las fuerzas sean transmitidas entre los elementos a través de juntas inyectadas con mortero, llaves de cortante, conectores mecánicos, conexiones con refuerzo de acero, sobrelosa de piso reforzada o una combinación de estos métodos.",
+   "pagina": 153
+  },
+  {
+   "numero": "16.6.1.1",
+   "texto": "La efectividad de las conexiones para transmitir fuerzas entre elementos debe ser determinada por medio del análisis o de ensayos. Cuando el cortante sea la principal carga impuesta, se permite usar las disposiciones de 11.7.",
+   "pagina": 153
+  },
+  {
+   "numero": "16.6.1.2",
+   "texto": "Cuando se diseña una conexión usando materiales con diferentes propiedades estructurales, deben considerarse sus rigideces, resistencias y ductilidades relativas.",
+   "pagina": 154
+  },
+  {
+   "numero": "16.6.2",
+   "texto": "Los apoyos simples de elementos prefabricados de piso o techo deben satisfacer 16.6.2.1 y 16.6.2.2.",
+   "pagina": 154
+  },
+  {
+   "numero": "16.6.2.1",
+   "texto": "El esfuerzo de aplastamiento en la superficie de contacto entre el elemento de apoyo y el apoyado y entre cualquier elemento de apoyo intermedio, no debe exceder la resistencia al aplastamiento de ninguna de las superficies ni del elemento de apoyo. La resistencia al aplastamiento del concreto será la especificada en 10.17.",
+   "pagina": 154
+  },
+  {
+   "numero": "16.6.2.2",
+   "texto": "A menos que se demuestre por medio del análisis o ensayos que el comportamiento no se ve afectado, debe cumplirse con (a) y (b):\n (a) Cada elemento y su sistema de apoyo debe tener dimensiones de diseño seleccionadas de manera que, después de considerar las tolerancias, la distancia desde el borde del apoyo al extremo del elemento prefabricado en la dirección de la luz sea al menos /180 n\n\n , pero no menos que: Para losas sólidas o alveolares … 50 mm Para vigas o elementos en forma de T … 75 mm\n (b) Los dispositivos de soporte en bordes no reforzados deben desplazarse un mínimo de 13 mm desde la cara del apoyo, o al menos la dimensión del chaflán en bordes achaflanados.\n\n Fig. 16.6.2. Longitud de apoyo de un elemento prefabricado.",
+   "pagina": 154
+  },
+  {
+   "numero": "16.6.2.3",
+   "texto": "Los requisitos de 12.11.1 no se aplican al refuerzo para momento positivo en elementos prefabricados estáticamente determinados, pero al menos un tercio de dicho refuerzo debe extenderse hasta el centro del apoyo, tomando en consideración las tolerancias permitidas en 7.5.2.2 y 16.2.3.",
+   "pagina": 154
+  },
+  {
+   "numero": "16.7",
+   "epigrafe": "Elementos Embebidos Después De La Colocación Del Concreto",
+   "texto": "ELEMENTOS EMBEBIDOS DESPUÉS DE LA COLOCACIÓN DEL CONCRETO",
+   "pagina": 154
+  },
+  {
+   "numero": "16.7.1",
+   "texto": "Cuando lo apruebe el proyectista, se permite que los elementos embebidos (como espigas – dowels – o insertos) que sobresalgan del concreto o que queden expuestos para inspección sean embebidos mientras el concreto está en estado plástico, siempre que se cumpla con 16.7.1.1, 16.7.1.2 y 16.7.1.3.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.7.1.1",
+   "texto": "No se requiera que los elementos embebidos sean enganchados o amarrados al refuerzo dentro del concreto.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.7.1.2",
+   "texto": "Los elementos embebidos sean mantenidos en la posición correcta mientras el concreto está en estado plástico.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.7.1.3",
+   "texto": "El concreto sea compactado adecuadamente alrededor de los elementos embebidos.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.8",
+   "epigrafe": "Marcas E Identificación",
+   "texto": "MARCAS E IDENTIFICACIÓN",
+   "pagina": 155
+  },
+  {
+   "numero": "16.8.1",
+   "texto": "Todo elemento prefabricado debe ser marcado para indicar su ubicación y orientación en la estructura y su fecha de fabricación.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.8.2",
+   "texto": "Las marcas de identificación deben corresponder con las de los planos de montaje.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.9",
+   "epigrafe": "Manipulación",
+   "texto": "MANIPULACIÓN",
+   "pagina": 155
+  },
+  {
+   "numero": "16.9.1",
+   "texto": "El diseño de los elementos debe considerar las fuerzas y distorsiones que ocurren durante el curado, desencofrado, almacenamiento y montaje, de manera que los elementos prefabricados no sufran sobreesfuerzos o daños.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.9.2",
+   "texto": "Las estructuras y elementos prefabricados deben estar adecuadamente apoyados y arriostrados durante el montaje para asegurar el adecuado alineamiento e integridad estructural hasta que se completen las conexiones permanentes.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.10",
+   "epigrafe": "Evaluación De La Resistencia De Estructuras Prefabricadas",
+   "texto": "EVALUACIÓN DE LA RESISTENCIA DE ESTRUCTURAS PREFABRICADAS",
+   "pagina": 155
+  },
+  {
+   "numero": "16.10.1",
+   "texto": "Se permite que un elemento prefabricado que se transforma en uno compuesto mediante concreto colocado en sitio, sea ensayado como un elemento prefabricado aislado en flexión de acuerdo con 16.10.1.1 y 16.10.1.2.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.10.1.1",
+   "texto": "Las cargas de ensayo deben ser aplicadas sólo cuando los cálculos indiquen que para el elemento prefabricado aislado no es crítica la compresión o el pandeo.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.10.1.2",
+   "texto": "La carga de ensayo debe ser la carga que, cuando se aplica al elemento prefabricado aislado, induce las mismas fuerzas totales en el refuerzo de tracción que las que se inducirían al cargar el elemento compuesto con las cargas de ensayo requeridas por 20.3.2.",
+   "pagina": 155
+  },
+  {
+   "numero": "16.10.2",
+   "texto": "Las disposiciones de 20.5 deben ser la base para la aceptación o rechazo de los elementos prefabricados.",
+   "pagina": 155
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c16-prefabricado",
+   "titulo": "E.060 · Cap. 16 · Concreto prefabricado",
+   "descripcion": "Diseño por etapas, refuerzo de muros, integridad estructural, amarres y longitudes de apoyo.",
+   "acceso": "free",
+   "orden": 116,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué etapas de carga se consideran al diseñar un elemento prefabricado?",
+      "respuesta": "Todas, desde la fabricación hasta la estructura terminada: desencofrado, almacenamiento, transporte y montaje, además de las fuerzas en las conexiones."
+     },
+     "citas": [
+      {
+       "articulo": "16.2.1",
+       "extracto": "El diseño de elementos prefabricados y sus conexiones debe incluir las condiciones de carga y de restricción, desde la fabricación inicial hasta completar la estructura, incluyendo el desencofrado, almacenamiento, transporte y montaje."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cubre el Capítulo 16 los pórticos y muros prefabricados sismorresistentes en las zonas sísmicas 2 y 3?",
+      "opciones": [
+       "Sí, completamente",
+       "No, esos casos requieren sustento especial",
+       "Solo los muros",
+       "Solo los pórticos"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "16.1.2",
+       "extracto": "Las disposiciones de este Capítulo no cubren los requerimientos específicos para el diseño de pórticos y muros prefabricados que conformen el sistema sismorresistente de edificaciones ubicadas en las zonas de alto riesgo sísmico (zonas 2 y 3 de la NTE E.030)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué refuerzo mínimo llevan los muros prefabricados no preesforzados?",
+      "respuesta": "0,001 Ag vertical y 0,001 Ag horizontal, con espaciamiento no mayor que 5 veces el espesor ni 750 mm (interiores) o 450 mm (exteriores)."
+     },
+     "citas": [
+      {
+       "articulo": "16.4.2",
+       "extracto": "…el área de refuerzo vertical y horizontal debe, cada una, no ser menor de 0,001 Ag… El espaciamiento del refuerzo no debe exceder de 5 veces el espesor del muro ni 750 mm para muros interiores o 450 mm para muros exteriores."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Amarres de integridad estructural en prefabricados",
+      "columnas": [
+       "Resistencia nominal mínima"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Diafragma con elementos soportados lateralmente",
+        "valores": [
+         "4,5 kN por metro"
+        ]
+       },
+       {
+        "etiqueta": "Columnas prefabricadas (amarre vertical)",
+        "valores": [
+         "1,5 Ag (N)"
+        ]
+       },
+       {
+        "etiqueta": "Paneles de muro",
+        "valores": [
+         "2 amarres por panel de 45 kN cada uno"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "16.5.1.3",
+       "extracto": "(a) Las columnas prefabricadas deben tener una resistencia nominal a tracción no menor a 1,5 Ag en Newtons… (b) Los paneles de muro prefabricados deben tener un mínimo de dos amarres por panel, con una resistencia nominal a la tracción no menor a 45 kN por amarre."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna prefabricada de {B} × {B} mm. ¿Resistencia nominal mínima a tracción de su amarre vertical (kN)?",
+      "variables": {
+       "B": {
+        "etiqueta": "Lado",
+        "valores": [
+         300,
+         400,
+         500
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "1.5*B*B/1000",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN"
+     },
+     "citas": [
+      {
+       "articulo": "16.5.1.3",
+       "extracto": "(a) Las columnas prefabricadas deben tener una resistencia nominal a tracción no menor a 1,5 Ag en Newtons."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "No se deben usar conexiones que dependan solo de la {{fricción}} producida por las cargas de gravedad."
+     },
+     "citas": [
+      {
+       "articulo": "16.5.1.4",
+       "extracto": "No se deben usar detalles de conexión que dependan solamente de la fricción producida por las cargas gravitacionales."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Muros portantes prefabricados de dos o más pisos (16.5.2)",
+      "columnas": [
+       "Requisito"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Amarres de piso y techo",
+        "valores": [
+         "25 kN por metro de ancho o largo"
+        ]
+       },
+       {
+        "etiqueta": "Amarres longitudinales",
+        "valores": [
+         "Espaciados ≤ 3 m"
+        ]
+       },
+       {
+        "etiqueta": "Amarre perimetral (a ≤ 1,2 m del borde)",
+        "valores": [
+         "75 kN"
+        ]
+       },
+       {
+        "etiqueta": "Amarres verticales en muros",
+        "valores": [
+         "45 kN por metro, continuos en toda la altura"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "16.5.2.4",
+       "extracto": "Los amarres alrededor del perímetro de cada piso o techo, dentro de 1,2 m del borde, deben proporcionar una resistencia nominal a tracción no menor a 75 kN."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Longitud mínima de apoyo de elementos prefabricados",
+      "columnas": [
+       "Mínimo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Losas sólidas o alveolares",
+        "valores": [
+         "ℓn/180 y 50 mm"
+        ]
+       },
+       {
+        "etiqueta": "Vigas o elementos en T",
+        "valores": [
+         "ℓn/180 y 75 mm"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "16.6.2.2",
+       "extracto": "…la distancia desde el borde del apoyo al extremo del elemento prefabricado en la dirección de la luz sea al menos ℓn/180, pero no menos que: Para losas sólidas o alveolares … 50 mm Para vigas o elementos en forma de T … 75 mm"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga prefabricada de luz libre ℓn = {L} mm. ¿Longitud mínima de apoyo (mm)?",
+      "variables": {
+       "L": {
+        "etiqueta": "ℓn",
+        "valores": [
+         15000,
+         18000,
+         21000
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "L/180",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "Con estas luces ℓn/180 supera los 75 mm mínimos."
+     },
+     "citas": [
+      {
+       "articulo": "16.6.2.2",
+       "extracto": "…al menos ℓn/180, pero no menos que… Para vigas o elementos en forma de T … 75 mm"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué datos debe llevar cada elemento prefabricado?",
+      "respuesta": "Marcas de su ubicación y orientación en la estructura y su fecha de fabricación, coincidentes con los planos de montaje."
+     },
+     "citas": [
+      {
+       "articulo": "16.8.1",
+       "extracto": "Todo elemento prefabricado debe ser marcado para indicar su ubicación y orientación en la estructura y su fecha de fabricación."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

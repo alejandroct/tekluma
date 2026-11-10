@@ -1,0 +1,370 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "19.1",
+   "epigrafe": "Alcance Y Definiciones",
+   "texto": "ALCANCE Y DEFINICIONES",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.1",
+   "texto": "Las disposiciones de este Capítulo se deben aplicar a cáscaras delgadas y láminas plegadas de concreto, incluyendo las nervaduras y elementos de borde.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.2",
+   "texto": "Todas las disposiciones de esta Norma, que no estén excluidas específicamente y que no estén en conflicto con las disposiciones de este Capítulo, deben aplicarse a las cáscaras delgadas.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.3",
+   "texto": "Cáscaras delgadas.- Son estructuras espaciales, formadas por una o más losas curvas o láminas plegadas, cuyos espesores son pequeños comparados con sus otras dimensiones. Las cáscaras delgadas se caracterizan por su manera espacial de soportar las cargas, la que es determinada por su forma geométrica, la manera en que están apoyadas y el tipo de carga aplicada.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.4",
+   "texto": "Láminas plegadas.- Son un tipo especial de cáscaras formadas por la unión, a lo largo de sus bordes, de losas delgadas planas, de manera de crear una estructura espacial.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.5",
+   "texto": "Cáscaras nervadas.- Son estructuras espaciales con el material colocado principalmente a lo largo de líneas nervadas, con el área entre los nervios abierta o cubierta con una losa delgada.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.6",
+   "texto": "Elementos auxiliares.- Son las vigas de borde o nervios que sirven para rigidizar, hacer más resistente o servir de apoyo a la cáscara. Por lo general los elementos auxiliares actúan en conjunto con la cáscara.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.7",
+   "texto": "Análisis elástico.- Es un análisis de fuerzas internas y deformaciones basado en satisfacer las condiciones de equilibrio y compatibilidad de deformaciones, asumiendo un comportamiento elástico. El análisis deberá representar, con una aproximación adecuada, el comportamiento tridimensional de la cáscara junto con sus elementos auxiliares.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.8",
+   "texto": "Análisis inelástico.- Es un análisis de fuerzas internas y deformaciones basado en satisfacer las condiciones de equilibrio, la compatibilidad de deformaciones, las relaciones no lineales de esfuerzo-deformación para el concreto y el acero, considerando la fisuración y las acciones dependientes del tiempo. El análisis deberá representar, con una aproximación adecuada, el comportamiento tridimensional de la cáscara junto con sus elementos auxiliares.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.1.9",
+   "texto": "Análisis experimental.- Es un procedimiento de análisis basado en la medición de los desplazamientos o deformaciones unitarias de la estructura o su modelo. El análisis experimental puede basarse en un comportamiento elástico o inelástico.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.2",
+   "epigrafe": "Análisis Y Diseño",
+   "texto": "ANÁLISIS Y DISEÑO",
+   "pagina": 173
+  },
+  {
+   "numero": "19.2.1",
+   "texto": "El comportamiento elástico será un fundamento aceptado para determinar las fuerzas internas y los desplazamientos de las cáscaras. Este tipo de comportamiento puede establecerse por cálculos basados en un análisis de la estructura de concreto no fisurada, en la que se asume que el material es linealmente elástico, homogéneo e isotrópico. El módulo de Poisson del concreto puede asumirse igual a cero.",
+   "pagina": 173
+  },
+  {
+   "numero": "19.2.2",
+   "texto": "El análisis inelástico podrá usarse cuando se demuestre que proporciona una base segura para el diseño de la cáscara y sus elementos auxiliares.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.3",
+   "texto": "Se deberán realizar verificaciones del equilibrio de las fuerzas internas y las cargas externas para asegurar la consistencia de los resultados.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.4",
+   "texto": "Los procedimientos de análisis numérico o experimental podrán utilizarse cuando se demuestre que estos proporcionan una base segura para el diseño.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.5",
+   "texto": "Los métodos aproximados de análisis podrán usarse cuando se demuestre que proporcionan una base segura para el diseño.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.6",
+   "texto": "En cáscaras preesforzadas, el análisis deberá considerar el comportamiento bajo las cargas inducidas por el preesforzado, tanto al nivel de cargas de fisuración como de cargas amplificadas. Cuando los tendones de preesfuerzo se curven dentro de una cáscara, el diseño tendrá en cuenta las componentes de las fuerzas sobre la cáscara ocasionadas por la curvatura del tendón resultante.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.7",
+   "texto": "El espesor de la cáscara y su refuerzo serán definidos para satisfacer la resistencia y las condiciones de servicio requeridas.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.8",
+   "texto": "El diseño de las cáscaras deberá considerar y evitar la posibilidad de una falla por inestabilidad general o local.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.9",
+   "texto": "Los elementos auxiliares se diseñarán aplicando las disposiciones pertinentes de esta Norma. Se puede suponer que una porción de la cáscara igual al ancho del ala especificado en 8.10 actúa conjuntamente con el elemento auxiliar. En esas partes de la cáscara, el refuerzo perpendicular al elemento auxiliar será por lo menos igual al exigido en 8.10.5 para el ala de una viga T.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.10",
+   "texto": "El diseño por resistencia, para los esfuerzos de membrana y de flexión de losas que forman parte de cáscaras, debe estar basado en la distribución de esfuerzos y deformaciones determinada a partir de un análisis elástico o inelástico.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.2.11",
+   "texto": "En una región en la cual se ha previsto fisuración debido a los esfuerzos de membrana, la resistencia nominal a compresión en la dirección paralela a las fisuras debe tomarse como 0,4 f’c.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.3",
+   "epigrafe": "Resistencia De Diseño De Los Materiales",
+   "texto": "RESISTENCIA DE DISEÑO DE LOS MATERIALES",
+   "pagina": 174
+  },
+  {
+   "numero": "19.3.1",
+   "texto": "La resistencia en compresión especificada del concreto f’c a los 28 días no será menor que 21 MPa.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.3.2",
+   "texto": "El esfuerzo de fluencia especificado del acero fy no será mayor de 420 MPa.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.4",
+   "epigrafe": "Refuerzo De La Cáscara",
+   "texto": "REFUERZO DE LA CÁSCARA",
+   "pagina": 174
+  },
+  {
+   "numero": "19.4.1",
+   "texto": "El refuerzo de la cáscara se colocará para resistir los esfuerzos de tracción producidos por las fuerzas membranales, para resistir los momentos de flexión y de torsión, para controlar la fisuración producida por la contracción de fragua y cambios de temperatura y como refuerzo especial en los bordes, aberturas y puntos de aplicación de las cargas a la cáscara.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.4.2",
+   "texto": "El refuerzo por tracción debe disponerse en dos o más direcciones y debe proporcionarse de manera tal que su resistencia en cualquier dirección iguale o exceda a la componente de las fuerzas internas en esa dirección.\n\n Alternativamente, el refuerzo para las fuerzas membranales en la losa puede calcularse como el refuerzo requerido para resistir las fuerzas de tracción axial más las fuerzas de tracción debidas al cortante por fricción necesario para transferir el cortante a través de cualquier sección transversal de la membrana. El coeficiente de fricción, μ, no debe exceder de 1,0 para concreto de peso normal, 0,85 para concreto liviano con arena de peso normal, y 0,75 para concreto liviano en todos sus componentes. Se permite la interpolación lineal cuando se usa reemplazo parcial de arena.",
+   "pagina": 174
+  },
+  {
+   "numero": "19.4.3",
+   "texto": "El área de refuerzo de la cáscara en cualquier sección, medida en dos direcciones perpendiculares, no será menor que el refuerzo exigido para las losas indicado en 9.7 por efectos de contracción de fragua y temperatura.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.4",
+   "texto": "El refuerzo por cortante y momento flector alrededor de ejes en el plano de la losa, deben calcularse de acuerdo con los Capítulos 10, 11 y 13.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.5",
+   "texto": "El área de refuerzo por tracción en la cáscara debe estar limitada de manera tal que el refuerzo fluya antes de que tenga lugar el aplastamiento del concreto en compresión o el pandeo de la cáscara.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.6",
+   "texto": "En las zonas de grandes tracciones, el refuerzo de membrana debe colocarse, cuando resulte práctico, en las direcciones generales de los esfuerzos principales de tracción. Cuando esta medida no resulte práctica, se puede colocar el refuerzo de membrana en dos o más direcciones componentes.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.7",
+   "texto": "Si la dirección del refuerzo varía en más de 10º respecto de la dirección de la fuerza membranal principal de tracción, deberá revisarse la cantidad de refuerzo en relación con la fisuración al nivel de cargas de servicio.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.8",
+   "texto": "Cuando la magnitud de los esfuerzos membranales principales de tracción varíe significativamente sobre el área de la superficie de la cáscara, el área de refuerzo que resiste la tracción total podrá concentrarse en las zonas de máximo esfuerzo de tracción, cuando se demuestre que esto da una base segura para el diseño. Sin embargo, la cuantía de refuerzo en todas las zonas de tracción de la cáscara no será menor de 0,0035, calculado sobre la base del espesor total de la cáscara.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.9",
+   "texto": "El refuerzo requerido para resistir momentos de flexión de la cáscara debe diseñarse considerando la acción simultánea de las fuerzas axiales de membrana en el mismo sitio. Cuando se requiere refuerzo sólo en una cara para resistir los momentos de flexión, se deben colocar cantidades iguales cerca de ambas superficies de la cáscara, aún cuando el análisis no indique reversión de los momentos de flexión en esa zona.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.10",
+   "texto": "El refuerzo de la cáscara en cualquier dirección no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara. Cuando el esfuerzo membranal principal de tracción sobre el área total de concreto, debido a cargas amplificadas, exceda de 0,33 f c′ φ , el refuerzo no debe espaciarse a más de tres veces el espesor de la cáscara.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.11",
+   "texto": "El refuerzo de la cáscara en la unión de esta con los elementos de apoyo o los elementos de borde se debe anclar o extender a través de dichos elementos de acuerdo con los requisitos del Capítulo 12, excepto que la longitud de desarrollo mínima debe ser 1,2 d\n\n , pero no menor de 450 mm.",
+   "pagina": 175
+  },
+  {
+   "numero": "19.4.12",
+   "texto": "Las longitudes de empalme del refuerzo de la cáscara deben regirse por las disposiciones del Capítulo 12, excepto que la longitud mínima de empalme por traslape de barras en tracción debe ser 1,2 veces el valor requerido en el Capítulo 12, pero no menor de 450 mm. El número de empalmes en el refuerzo principal de tracción debe mantenerse en un mínimo práctico. Donde los empalmes sean necesarios, se deben escalonar a distancias libres no menores a d\n\n , con no más de un tercio del refuerzo empalmado en cualquier sección.",
+   "pagina": 176
+  },
+  {
+   "numero": "19.5",
+   "epigrafe": "Construcción",
+   "texto": "CONSTRUCCIÓN",
+   "pagina": 176
+  },
+  {
+   "numero": "19.5.1",
+   "texto": "Cuando el plazo de remoción del encofrado esté basado en la obtención de un módulo de elasticidad específico del concreto debido a consideraciones de estabilidad o deflexiones, el valor del módulo de elasticidad, Ec, se determinará a partir de ensayos de flexión en probetas de vigas curadas en condiciones de obra. El número de probetas ensayadas, las dimensiones de las probetas y el procedimiento de ensayo serán especificados por el Ingeniero Proyectista.",
+   "pagina": 176
+  },
+  {
+   "numero": "19.5.2",
+   "texto": "El Ingeniero Proyectista debe especificar las tolerancias para la forma de la cáscara. Cuando la construcción tenga desviaciones de la forma mayores que las tolerancias especificadas, se debe hacer un análisis del efecto de las desviaciones y se deben tomar las medidas correctivas necesarias para garantizar un comportamiento seguro.",
+   "pagina": 176
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c19-cascaras",
+   "titulo": "E.060 · Cap. 19 · Cáscaras y losas plegadas",
+   "descripcion": "Definiciones, materiales, refuerzo, espaciamientos, anclajes y empalmes.",
+   "acceso": "free",
+   "orden": 119,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es una cáscara delgada y qué es una lámina plegada?",
+      "respuesta": "Cáscara: estructura espacial de una o más losas curvas o plegadas de espesor pequeño frente a sus otras dimensiones. Lámina plegada: losas planas delgadas unidas por sus bordes para formar una estructura espacial."
+     },
+     "citas": [
+      {
+       "articulo": "19.1.3",
+       "extracto": "Cáscaras delgadas.- Son estructuras espaciales, formadas por una o más losas curvas o láminas plegadas, cuyos espesores son pequeños comparados con sus otras dimensiones."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Materiales en cáscaras",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "f′c mínimo a 28 días",
+        "valores": [
+         "21 MPa"
+        ]
+       },
+       {
+        "etiqueta": "fy máximo",
+        "valores": [
+         "420 MPa"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "19.3.1",
+       "extracto": "La resistencia en compresión especificada del concreto f’c a los 28 días no será menor que 21 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Donde se prevé fisuración por esfuerzos de membrana, la resistencia a compresión paralela a las fisuras se toma como {{0,4 f′c}}."
+     },
+     "citas": [
+      {
+       "articulo": "19.2.11",
+       "extracto": "…la resistencia nominal a compresión en la dirección paralela a las fisuras debe tomarse como 0,4 f’c."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué espaciamiento máximo tiene el refuerzo de una cáscara?",
+      "respuesta": "450 mm y 5 veces el espesor. Si la tracción membranal amplificada supera 0,33 φ √f′c, no más de 3 veces el espesor."
+     },
+     "citas": [
+      {
+       "articulo": "19.4.10",
+       "extracto": "El refuerzo de la cáscara en cualquier dirección no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Cáscara de {T} mm de espesor con tracción membranal moderada. ¿Espaciamiento máximo del refuerzo (mm)?",
+      "variables": {
+       "T": {
+        "etiqueta": "Espesor",
+        "valores": [
+         60,
+         75,
+         80
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "5*T",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "Con estos espesores, 5t queda por debajo de 450 mm."
+     },
+     "citas": [
+      {
+       "articulo": "19.4.10",
+       "extracto": "…no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Si el refuerzo se desvía más de {{10°}} de la tracción membranal principal, se revisa la fisuración en servicio."
+     },
+     "citas": [
+      {
+       "articulo": "19.4.7",
+       "extracto": "Si la dirección del refuerzo varía en más de 10º respecto de la dirección de la fuerza membranal principal de tracción, deberá revisarse la cantidad de refuerzo en relación con la fisuración al nivel de cargas de servicio."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué longitudes mínimas de anclaje y empalme tiene el refuerzo de una cáscara?",
+      "respuesta": "Desarrollo en los bordes: 1,2 ℓd y no menos de 450 mm. Traslapes en tracción: 1,2 veces el del Cap. 12 y no menos de 450 mm, escalonados y con no más de un tercio del refuerzo empalmado por sección."
+     },
+     "citas": [
+      {
+       "articulo": "19.4.12",
+       "extracto": "…la longitud mínima de empalme por traslape de barras en tracción debe ser 1,2 veces el valor requerido en el Capítulo 12, pero no menor de 450 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuánto refuerzo mínimo lleva una cáscara?",
+      "respuesta": "En dos direcciones perpendiculares, al menos el refuerzo de retracción y temperatura de losas (9.7)."
+     },
+     "citas": [
+      {
+       "articulo": "19.4.3",
+       "extracto": "El área de refuerzo de la cáscara en cualquier sección, medida en dos direcciones perpendiculares, no será menor que el refuerzo exigido para las losas indicado en 9.7 por efectos de contracción de fragua y temperatura."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

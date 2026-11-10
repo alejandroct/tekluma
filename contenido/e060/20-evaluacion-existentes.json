@@ -1,0 +1,456 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "20.1",
+   "epigrafe": "Generalidades",
+   "texto": "GENERALIDADES",
+   "pagina": 177
+  },
+  {
+   "numero": "20.1.1",
+   "texto": "Si existen dudas respecto de la seguridad de una estructura o de alguno de sus elementos o si se necesita información acerca de la capacidad de carga de una estructura en servicio para fijar sus límites de carga, se podrá efectuar una evaluación de la resistencia estructural ya sea por análisis, empleando pruebas de carga o por una combinación de ambos procedimientos.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.1.2",
+   "texto": "Si los efectos de una deficiencia en la resistencia son bien comprendidos y es posible medir las propiedades de los materiales y dimensiones que se requieren para llevar a cabo un análisis, es suficiente una evaluación analítica de la resistencia basada en dichas mediciones. Los datos necesarios deben determinarse de acuerdo con 20.2.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.1.3",
+   "texto": "En el caso que los efectos de una deficiencia en la resistencia no sean bien comprendidos o no sea posible establecer las dimensiones y propiedades del material a través de mediciones, se requiere una prueba de carga.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.1.4",
+   "texto": "Si la duda respecto a la seguridad de una parte o de toda una estructura involucra al deterioro de la misma y si la respuesta observada durante la prueba de carga satisface los criterios de aceptación, se permite que la estructura o parte de ella se mantenga en servicio por un período de tiempo especificado. En estos casos deben realizarse reevaluaciones periódicas.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.2",
+   "epigrafe": "Determinación",
+   "texto": "DE LAS PROPIEDADES DE LOS MATERIALES Y DIMENSIONES DE LOS ELEMENTOS ESTRUCTURALES",
+   "pagina": 177
+  },
+  {
+   "numero": "20.2.1",
+   "texto": "Deben comprobarse en obra las dimensiones de los elementos estructurales.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.2.2",
+   "texto": "La ubicación y tamaño de las barras de refuerzo, refuerzo electrosoldado de alambre o tendones deben determinarse a través de mediciones. Para la ubicación del refuerzo se pueden utilizar los planos disponibles siempre que se realicen verificaciones puntuales para confirmar la información de los planos.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.2.3",
+   "texto": "Si se requiere, la resistencia del concreto debe basarse en resultados de ensayos confiables de probetas tomadas durante la construcción o de ensayos de núcleos extraídos en la parte de la estructura cuya resistencia está en duda. Las resistencias del concreto deben determinarse como se especifica en 5.6.5.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.2.4",
+   "texto": "Si se requiere, la resistencia del refuerzo o del acero de preesforzado debe basarse en ensayos de tracción de muestras representativas del material de la estructura en cuestión.",
+   "pagina": 177
+  },
+  {
+   "numero": "20.2.5",
+   "texto": "Si las dimensiones y propiedades del material requeridas se determinan a través de mediciones o ensayos, y si los cálculos se pueden realizar de acuerdo con 20.1.2, se puede incrementar el valor del coeficiente de reducción de resistencia (φ) con respecto a los valores dados en 9.3, pero este no deberá ser mayor a:\n - Flexión sin carga axial\n\n 1,00 - Tracción axial con o sin flexión\n\n 1,00 - Compresión axial con o sin flexión:\n Elementos con espiral que cumplan con 10.9.3\n 0,90\n\n Otros elementos\n\n 0,85 - Cortante o torsión\n\n 0,90 - Aplastamiento del concreto\n\n 0,85",
+   "pagina": 177
+  },
+  {
+   "numero": "20.3",
+   "epigrafe": "Procedimiento Para La Prueba De Carga",
+   "texto": "PROCEDIMIENTO PARA LA PRUEBA DE CARGA",
+   "pagina": 178
+  },
+  {
+   "numero": "20.3.1",
+   "epigrafe": "Disposición de la carga",
+   "texto": "El número y disposición de tramos o paños cargados debe seleccionarse para maximizar las deflexiones y esfuerzos en las zonas críticas de los elementos estructurales cuya resistencia esté en duda. Debe usarse más de un patrón de carga si un patrón único no produce simultáneamente valores máximos de los efectos (tal como deflexión, rotaciones o esfuerzos) necesarios para demostrar la idoneidad de la estructura.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.3.2",
+   "epigrafe": "Intensidad de la carga",
+   "texto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que ( ) 0,85 1,4CM 1,7CV + . Se puede reducir la carga viva de acuerdo con\n las disposiciones de la NTE E.020 Cargas.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.3.3",
+   "texto": "Una prueba de carga no debe realizarse hasta que la porción de la estructura que se someterá a la carga tenga al menos 56 días. Se pueden realizar las pruebas a una edad menor si el propietario de la estructura, el constructor, y todas las partes involucradas están de acuerdo.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.4",
+   "epigrafe": "Aplicación De La Carga Prueba",
+   "texto": "APLICACIÓN DE LA CARGA PRUEBA",
+   "pagina": 178
+  },
+  {
+   "numero": "20.4.1",
+   "texto": "Debe obtenerse el valor inicial de todas las mediciones de la respuesta que sean pertinentes (tales como deflexión, rotación, deformación unitaria, deslizamiento, ancho de fisura) no más de una hora antes de la aplicación del primer incremento de carga. Las mediciones deben realizarse en ubicaciones donde se esperen las respuestas máximas. Deben realizarse mediciones adicionales si así se requiere.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.4.2",
+   "texto": "La carga de prueba debe aplicarse en no menos de cuatro incrementos aproximadamente iguales.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.4.3",
+   "texto": "La carga repartida de prueba debe aplicarse de manera que se asegure su distribución uniforme a la estructura o parte de la estructura que está siendo ensayada. Debe evitarse el efecto de arco en la carga aplicada.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.4.4",
+   "texto": "Deben realizarse las mediciones de las respuestas después de colocar cada incremento de carga y después de haber colocado el total de la carga sobre la estructura, por al menos 24 horas.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.4.5",
+   "texto": "Debe removerse toda la carga de prueba inmediatamente después que se han realizado todas las mediciones de la respuesta definidas en 20.4.4.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.4.6",
+   "texto": "Debe realizarse un conjunto final de mediciones de la respuesta, 24 horas después que se ha removido la carga de prueba.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.5",
+   "epigrafe": "Criterio De Aceptación",
+   "texto": "CRITERIO DE ACEPTACIÓN",
+   "pagina": 178
+  },
+  {
+   "numero": "20.5.1",
+   "texto": "La porción de la estructura ensayada no debe mostrar evidencias de falla. El descascaramiento y aplastamiento del concreto comprimido deben considerarse como indicadores de falla.",
+   "pagina": 178
+  },
+  {
+   "numero": "20.5.2",
+   "texto": "Las deflexiones máximas medidas deben satisfacer una de las siguientes condiciones:\n\n 2 1 20000 t\n h Δ≤ (20-1)\n\n 1 4 r Δ Δ≤ (20-2)\n donde h es el peralte del elemento y t la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor. Para losas armadas en dos direcciones, t será la luz mas corta. Para voladizos, t deberá considerarse como el doble de la distancia del apoyo al extremo del voladizo.\n\n Si la máxima deflexión medida, 1 Δ, y la deflexión residual, r Δ, no satisfacen (20-1) ó (20-2), se puede repetir la prueba de carga.\n La repetición de la prueba no debe realizarse antes de 72 horas desde la remoción de la carga correspondiente a la primera prueba. La porción de la estructura ensayada en la repetición de la prueba debe considerarse aceptable si la recuperación de la deflexión r Δ satisface la condición:\n\n (20-3)\n donde 2 Δ es la deflexión máxima medida durante la segunda prueba, relativa a la posición de la estructura al iniciar la segunda prueba.",
+   "pagina": 179
+  },
+  {
+   "numero": "20.5.3",
+   "texto": "Los elementos estructurales ensayados no deben tener fisuras que indiquen la inminencia de una falla por cortante.",
+   "pagina": 179
+  },
+  {
+   "numero": "20.5.4",
+   "texto": "En las zonas de elementos estructurales que no cuenten con refuerzo transversal, la aparición de fisuras estructurales inclinadas respecto al eje longitudinal y que tengan una proyección horizontal mayor que la altura del elemento (medida en el punto medio de la fisura) debe ser evaluada.",
+   "pagina": 179
+  },
+  {
+   "numero": "20.5.5",
+   "texto": "En zonas de anclaje o empalmes por traslape del refuerzo, la aparición a lo largo de la línea de refuerzo de una serie de fisuras cortas inclinadas o de fisuras horizontales debe ser investigada.",
+   "pagina": 179
+  },
+  {
+   "numero": "20.6",
+   "epigrafe": "Disposiciones Para La Aceptación De Cargas De Servicio",
+   "texto": "MENORES\n Si la estructura no satisface las condiciones o criterios de 20.1.2, 20.5.2 ó 20.5.3, se puede utilizar la estructura para un nivel menor de cargas, con base en los resultados de la prueba de carga o del análisis, siempre que lo apruebe la autoridad responsable.",
+   "pagina": 179
+  },
+  {
+   "numero": "20.7",
+   "epigrafe": "Seguridad",
+   "texto": "SEGURIDAD",
+   "pagina": 179
+  },
+  {
+   "numero": "20.7.1",
+   "texto": "Las pruebas de carga deben efectuarse de tal forma que existan condiciones seguras para las personas y para la estructura durante la prueba.",
+   "pagina": 179
+  },
+  {
+   "numero": "20.7.2.1",
+   "texto": "Ninguna medida de seguridad debe interferir en los procedimientos de la prueba de carga ni afectar los resultados.\n 2 5 r Δ Δ≤\n\n CAPITULO 21 DISPOSICIONES ESPECIALES PARA EL DISEÑO SISMICO",
+   "pagina": 179
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c20-evaluacion-existentes",
+   "titulo": "E.060 · Cap. 20 · Evaluación de estructuras existentes",
+   "descripcion": "Evaluación analítica, φ máximos, prueba de carga y criterios de aceptación.",
+   "acceso": "free",
+   "orden": 120,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo basta una evaluación analítica y cuándo se requiere una prueba de carga?",
+      "respuesta": "Analítica: si la deficiencia se entiende bien y se pueden medir materiales y dimensiones. Prueba de carga: si sus efectos no se entienden bien o no se pueden medir."
+     },
+     "citas": [
+      {
+       "articulo": "20.1.3",
+       "extracto": "En el caso que los efectos de una deficiencia en la resistencia no sean bien comprendidos o no sea posible establecer las dimensiones y propiedades del material a través de mediciones, se requiere una prueba de carga."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "φ máximo en una evaluación analítica con propiedades medidas",
+      "columnas": [
+       "φ máximo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Flexión sin carga axial",
+        "valores": [
+         "1,00"
+        ]
+       },
+       {
+        "etiqueta": "Compresión, elementos con espiral",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Compresión, otros elementos",
+        "valores": [
+         "0,85"
+        ]
+       },
+       {
+        "etiqueta": "Cortante o torsión",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Aplastamiento",
+        "valores": [
+         "0,85"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 3,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "20.2.5",
+       "extracto": "…se puede incrementar el valor del coeficiente de reducción de resistencia (φ) con respecto a los valores dados en 9.3, pero este no deberá ser mayor a: - Flexión sin carga axial 1,00… - Cortante o torsión 0,90 - Aplastamiento del concreto 0,85"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué carga total se aplica en una prueba de carga?",
+      "respuesta": "No menos de 0,85 (1,4 CM + 1,7 CV), incluida la carga muerta ya presente. La carga viva puede reducirse según la E.020."
+     },
+     "citas": [
+      {
+       "articulo": "20.3.2",
+       "extracto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Losa con CM = {D} kN/m² y CV = {L} kN/m². ¿Carga total mínima de la prueba (kN/m²)?",
+      "variables": {
+       "D": {
+        "etiqueta": "CM",
+        "valores": [
+         4,
+         5,
+         6
+        ],
+        "unidad": "kN/m²"
+       },
+       "L": {
+        "etiqueta": "CV",
+        "valores": [
+         2,
+         2.5,
+         4
+        ],
+        "unidad": "kN/m²"
+       }
+      },
+      "formula": "0.85*(1.4*D+1.7*L)",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN/m²"
+     },
+     "citas": [
+      {
+       "articulo": "20.3.2",
+       "extracto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Procedimiento de la prueba de carga",
+      "columnas": [
+       "Requisito"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Edad mínima de la estructura",
+        "valores": [
+         "56 días (menos si todos están de acuerdo)"
+        ]
+       },
+       {
+        "etiqueta": "Lectura inicial",
+        "valores": [
+         "No más de 1 hora antes del primer incremento"
+        ]
+       },
+       {
+        "etiqueta": "Incrementos de carga",
+        "valores": [
+         "Al menos 4, aproximadamente iguales"
+        ]
+       },
+       {
+        "etiqueta": "Carga total aplicada",
+        "valores": [
+         "Al menos 24 horas"
+        ]
+       },
+       {
+        "etiqueta": "Lectura final",
+        "valores": [
+         "24 horas después de retirar la carga"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "20.4.2",
+       "extracto": "La carga de prueba debe aplicarse en no menos de cuatro incrementos aproximadamente iguales."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué criterios de deflexión debe cumplir una prueba de carga?",
+      "respuesta": "Δ1 ≤ ℓt² / (20 000 h) o bien Δr ≤ Δ1/4. Si no cumple, se puede repetir tras 72 horas y se acepta si Δr ≤ Δ2/5."
+     },
+     "citas": [
+      {
+       "articulo": "20.5.2",
+       "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) Δr ≤ Δ1 / 4 (20-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga de peralte h = {H} mm y luz ℓt = {L} mm en prueba de carga. ¿Deflexión máxima permitida por la ec. 20-1 (mm)?",
+      "variables": {
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         500,
+         600
+        ],
+        "unidad": "mm"
+       },
+       "L": {
+        "etiqueta": "ℓt",
+        "valores": [
+         6000,
+         7000,
+         8000
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "L^2/(20000*H)",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm"
+     },
+     "citas": [
+      {
+       "articulo": "20.5.2",
+       "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "En una prueba de carga se midió una deflexión máxima Δ1 = {D} mm. ¿Deflexión residual máxima aceptable por la ec. 20-2 (mm)?",
+      "variables": {
+       "D": {
+        "etiqueta": "Δ1",
+        "valores": [
+         8,
+         12,
+         16,
+         20
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "D/4",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm"
+     },
+     "citas": [
+      {
+       "articulo": "20.5.2",
+       "extracto": "Δr ≤ Δ1 / 4 (20-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué se considera señal de falla en una prueba de carga?",
+      "respuesta": "Descascaramiento o aplastamiento del concreto comprimido, fisuras que anticipen una falla por cortante y, en zonas de anclaje o empalmes, series de fisuras cortas inclinadas u horizontales a lo largo del refuerzo (a investigar)."
+     },
+     "citas": [
+      {
+       "articulo": "20.5.1",
+       "extracto": "La porción de la estructura ensayada no debe mostrar evidencias de falla. El descascaramiento y aplastamiento del concreto comprimido deben considerarse como indicadores de falla."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué pasa si la estructura no supera la evaluación?",
+      "respuesta": "Puede usarse para un nivel menor de cargas, según la prueba o el análisis, si lo aprueba la autoridad responsable."
+     },
+     "citas": [
+      {
+       "articulo": "20.6",
+       "extracto": "Si la estructura no satisface las condiciones o criterios de 20.1.2, 20.5.2 ó 20.5.3, se puede utilizar la estructura para un nivel menor de cargas…"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

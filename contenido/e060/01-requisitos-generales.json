@@ -1,0 +1,297 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "1.1",
+   "epigrafe": "Alcance",
+   "texto": "ALCANCE",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.1",
+   "texto": "Esta Norma fija los requisitos y exigencias mínimas para el análisis, el diseño, los materiales, la construcción, el control de calidad y la supervisión de estructuras de concreto armado, preesforzado y simple.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.2",
+   "texto": "Los planos y las especificaciones técnicas del proyecto estructural deberán cumplir con esta Norma.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.3",
+   "texto": "Lo establecido en esta Norma tiene prioridad cuando está en discrepancia con otras normas a las que ella hace referencia.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.4",
+   "texto": "Para estructuras especiales tales como arcos, tanques, reservorios, depósitos, silos, chimeneas y estructuras resistentes a explosiones, las disposiciones de esta Norma regirán en lo que sean aplicables.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.5",
+   "texto": "Esta Norma no controla el diseño e instalación de las porciones de pilotes de concreto, pilas excavadas y cajones de cimentación que quedan enterrados en el suelo, excepto en lo dispuesto en el Capítulo 21.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.6",
+   "texto": "Esta Norma no rige el diseño y la construcción de losas apoyadas en el suelo, a menos que la losa transmita cargas verticales o laterales desde otras partes de la estructura al suelo.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.7",
+   "texto": "El diseño y construcción de losas de concreto estructural, vaciadas sobre moldes permanentes de acero consideradas como no compuestas, están regidos por esta Norma.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.1.8",
+   "texto": "Esta Norma no rige para el diseño de losas de concreto estructural vaciadas sobre moldes permanentes de acero consideradas como compuestas. El concreto usado en la construcción de tales losas debe estar regido por los Capítulos 1 a 7 de esta Norma, en lo que sea aplicable.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2",
+   "epigrafe": "Proyecto, Ejecución E Inspección De La Obra",
+   "texto": "PROYECTO, EJECUCIÓN E INSPECCIÓN DE LA OBRA",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2.1",
+   "epigrafe": "Requisitos Generales",
+   "texto": "Requisitos Generales",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2.1.1",
+   "texto": "Todas las etapas del proyecto estructural, construcción, supervisión e inspección de la obra deberán ser realizadas por personal profesional y técnico calificado.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2.1.2",
+   "texto": "Los cálculos, planos, detalles y especificaciones técnicas deberán llevar la firma de un Ingeniero Civil Colegiado, el cual será el único autorizado a aprobar cualquier modificación a los mismos.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2.1.3",
+   "texto": "La construcción deberá ser ejecutada e inspeccionada por ingenieros civiles colegiados, los cuales serán responsables del cumplimiento de lo indicado en los planos y especificaciones técnicas.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2.2",
+   "epigrafe": "Proyecto",
+   "texto": "Proyecto",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2.2.1",
+   "epigrafe": "La concepción estructural deberá hacerse de acuerdo a los criterios de estructuración",
+   "texto": "indicados en la NTE E.030 Diseño Sismorresistente.",
+   "pagina": 1
+  },
+  {
+   "numero": "1.2.2.2",
+   "texto": "La determinación de las cargas actuantes se hará de acuerdo a lo indicado en la NTE E.020 Cargas y en la NTE E.030 Diseño Sismorresistente.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.2.3",
+   "texto": "El Ingeniero Proyectista podrá elegir los procedimientos de análisis. El diseño de la estructura deberá cumplir con los requerimientos de esta Norma.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.2.4",
+   "texto": "Los planos del proyecto estructural deberán contener como mínimo la siguiente información:\n (a) Relación de las Normas empleadas en el diseño.\n (b) Carga viva y otras cargas utilizadas en el diseño. De ser el caso, la carga\n correspondiente a la tabiquería móvil.\n (c) Resistencia especificada a la compresión del concreto. De ser el caso, se\n precisarán las resistencias a edades específicas.\n (d) Resistencia especificada o tipo de acero del refuerzo.\n (e) Tamaño, localización y refuerzo de todos los elementos estructurales. (f) Detalles de anclajes y empalmes del refuerzo.\n (g) Ubicación y detallado de todas las juntas de separación con edificaciones\n vecinas. De ser el caso, se indicarán los detalles y las ubicaciones de las juntas de contracción o expansión.\n (h) Características de la albañilería, mortero y los detalles de refuerzo de acuerdo a\n la NTE E.070 Albañilería. De ser el caso, detalles de unión o separación de los muros o tabiques de albañilería. (i) Magnitud y localización de las fuerzas de preesforzado.\n (j) Resistencia mínima a compresión del concreto en el momento de aplicación del postensado.\n (k) Secuencia de aplicación de las fuerzas en los tendones de postensado.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.3",
+   "epigrafe": "Ejecución de la obra",
+   "texto": "Ejecución de la obra",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.3.1",
+   "texto": "Para la ejecución de la obra, el Constructor designará al Ingeniero Civil Colegiado que actuará como Ingeniero Residente de la Obra y que lo representará en ella.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.3.2",
+   "texto": "El Constructor ejecutará los trabajos requeridos en la obra de acuerdo a lo indicado en la presente Norma, los planos y las especificaciones técnicas.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.3.3",
+   "texto": "Las ocurrencias técnicas de la obra se registrarán en el Cuaderno de Obra, de acuerdo a lo indicado en 1.2.4.4.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.4",
+   "epigrafe": "Supervisión",
+   "texto": "Supervisión",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.4.1",
+   "texto": "La Supervisión será seleccionada por el propietario para representarlo ante el Constructor.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.4.2",
+   "texto": "La Supervisión tendrá el derecho y la obligación de hacer cumplir la presente Norma, los planos y las especificaciones técnicas.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.4.3",
+   "texto": "El Constructor proporcionará a la supervisión todas las facilidades que requiera en la obra para el cumplimiento de sus obligaciones.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.2.4.4",
+   "texto": "La Supervisión llevará el control del Cuaderno de Obra, en el cual registrará las ocurrencias técnicas. En lo correspondiente a los elementos de concreto armado, los registros de supervisión deben incluir como mínimo:\n\n (a) Calidad y dosificación de los materiales del concreto y la resistencia del\n concreto.\n (b) Colocación y remoción de encofrado y apuntalamientos. (c) Colocación del refuerzo y anclajes.\n (d) Mezclado, ubicación de las tandas de concreto en la estructura y\n procedimientos de colocación y curado del concreto. (e) Secuencia de montaje y conexión de elementos prefabricados.\n (f) Tensado de los tendones del preesforzado.\n (g) Cargas de construcción significativa aplicada sobre pisos, muros u otros\n elementos terminados.\n (h) Avance general de la obra.\n (i) Cuando la temperatura ambiente sea menor que 5º C o mayor que 35º C, debe llevarse un registro de las temperaturas del concreto y de la protección dada al concreto durante su colocación y curado.",
+   "pagina": 2
+  },
+  {
+   "numero": "1.3",
+   "epigrafe": "Sistemas No Convencionales",
+   "texto": "SISTEMAS NO CONVENCIONALES",
+   "pagina": 3
+  },
+  {
+   "numero": "1.3.1",
+   "texto": "Los promotores de cualquier sistema de construcción dentro del alcance de esta Norma, cuya idoneidad ha sido demostrada por el éxito en su empleo o por medio de análisis o ensayos, pero que no cumple con las disposiciones de este Norma o no esté explícitamente tratado en ella, deberán presentar los estudios en los que se basa su diseño a SENCICO, el cual luego de la evaluación pertinente, propondrá al Ministerio de Vivienda, Construcción y Saneamiento su aprobación.",
+   "pagina": 3
+  },
+  {
+   "numero": "1.4",
+   "epigrafe": "Normas De Materiales Y Procedimientos Citados",
+   "texto": "Ver Anexo 1.",
+   "pagina": 3
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c01-requisitos-generales",
+   "titulo": "E.060 · Cap. 1 · Requisitos generales",
+   "descripcion": "Alcance, responsabilidades del proyectista, constructor y supervisión, planos y sistemas no convencionales.",
+   "acceso": "free",
+   "orden": 101,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué abarca la Norma E.060?",
+      "respuesta": "Los requisitos mínimos de análisis, diseño, materiales, construcción, control de calidad y supervisión de estructuras de concreto armado, preesforzado y simple."
+     },
+     "citas": [
+      {
+       "articulo": "1.1.1",
+       "extracto": "Esta Norma fija los requisitos y exigencias mínimas para el análisis, el diseño, los materiales, la construcción, el control de calidad y la supervisión de estructuras de concreto armado, preesforzado y simple."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Si la E.060 discrepa con otra norma a la que hace referencia, tiene {{prioridad}} lo establecido en la E.060."
+     },
+     "citas": [
+      {
+       "articulo": "1.1.3",
+       "extracto": "Lo establecido en esta Norma tiene prioridad cuando está en discrepancia con otras normas a las que ella hace referencia."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué elementos no controla la E.060?",
+      "respuesta": "Las partes enterradas de pilotes, pilas excavadas y cajones (salvo lo del Cap. 21), las losas sobre el suelo que no transmiten cargas de la estructura, y las losas compuestas sobre moldes permanentes de acero."
+     },
+     "citas": [
+      {
+       "articulo": "1.1.5",
+       "extracto": "Esta Norma no controla el diseño e instalación de las porciones de pilotes de concreto, pilas excavadas y cajones de cimentación que quedan enterrados en el suelo, excepto en lo dispuesto en el Capítulo 21."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Quién firma y quién puede modificar los cálculos y planos estructurales?",
+      "respuesta": "Un Ingeniero Civil Colegiado, que es el único autorizado a aprobar sus modificaciones. La obra también la ejecutan e inspeccionan ingenieros civiles colegiados."
+     },
+     "citas": [
+      {
+       "articulo": "1.2.1.2",
+       "extracto": "Los cálculos, planos, detalles y especificaciones técnicas deberán llevar la firma de un Ingeniero Civil Colegiado, el cual será el único autorizado a aprobar cualquier modificación a los mismos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué información mínima deben contener los planos estructurales?",
+      "respuesta": "Entre otras: las normas usadas, la carga viva y otras cargas de diseño, el f′c especificado, el tipo y grado del acero, y los detalles necesarios para la construcción."
+     },
+     "citas": [
+      {
+       "articulo": "1.2.2.4",
+       "extracto": "(a) Relación de las Normas empleadas en el diseño. (b) Carga viva y otras cargas utilizadas en el diseño… (c) Resistencia especificada a la compresión del concreto…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién lleva el control del Cuaderno de Obra?",
+      "opciones": [
+       "El Ingeniero Residente",
+       "La Supervisión",
+       "El propietario",
+       "El proyectista"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.2.4.4",
+       "extracto": "La Supervisión llevará el control del Cuaderno de Obra, en el cual registrará las ocurrencias técnicas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué rol tienen el Ingeniero Residente y la Supervisión en la obra?",
+      "respuesta": "El Residente es el ingeniero civil colegiado que designa el Constructor para representarlo. La Supervisión la elige el propietario para representarlo ante el Constructor y hacer cumplir la norma, los planos y las especificaciones."
+     },
+     "citas": [
+      {
+       "articulo": "1.2.4.1",
+       "extracto": "La Supervisión será seleccionada por el propietario para representarlo ante el Constructor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué se hace con un sistema constructivo no convencional que no cumple la E.060?",
+      "respuesta": "Sus promotores deben presentar a SENCICO los estudios que sustentan su diseño para su evaluación."
+     },
+     "citas": [
+      {
+       "articulo": "1.3.1",
+       "extracto": "…deberán presentar los estudios en los que se basa su diseño a SENCICO…"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,347 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "2.1",
+   "epigrafe": "Notación",
+   "texto": "Los términos en esta lista se utilizan en esta Norma.\n a = profundidad del bloque rectangular equivalente de esfuerzos, mm, Capítulo 10.\n av = luz de cortante, igual a la distancia del centro de una carga concentrada a la\n cara del apoyo para elementos continuos o en voladizo, o al centro del apoyo para elementos simplemente apoyados, mm, Capítulo 11.\n Ab = área de una barra o alambre individual, mm2, Capítulos 10, 12.\n Ac = área de la sección de concreto que resiste la transferencia de cortante, mm2,\n Capítulo 11.\n Ach = área de la sección transversal de un elemento estructural, medida entre los\n bordes exteriores del refuerzo transversal, mm2, Capítulos 10, 21.\n Acp = área encerrada por el perímetro exterior de la sección transversal de\n concreto, mm2, Capítulo 11.\n Act = área de aquella parte de la sección transversal comprendida entre la cara en\n tracción por flexión y el centro de gravedad de la sección bruta, mm2, Capítulo 18.\n Acv = área bruta de la sección de concreto limitada por el espesor del alma y la\n longitud de la sección en la dirección de la fuerza de cortante considerada, mm2, Capítulo 21.\n Acw = área de la sección de concreto de un segmento vertical individual de un\n muro, segmento horizontal de un muro o viga de acople, que resiste cortante, mm2, Capítulo 21.\n Af = área del acero de refuerzo en una ménsula o cartela que resiste el momento amplificado, mm2, Capítulo 11.\n Ag = área bruta de la sección, mm2. Para una sección con vacíos, es el área del\n concreto solo y no incluye el área de los vacíos, Capítulos 9-11, 14-16, 21, 22.\n Ah = área total de refuerzo para cortante paralelo al refuerzo principal de tracción\n en una ménsula o cartela, mm2, Capítulo 11.\n Aj = área efectiva de la sección transversal dentro de un nudo medida en un plano paralelo al plano del refuerzo que genera cortante en el nudo, mm2, Capítulo 21.\n A\n\n = área total del refuerzo longitudinal para resistir torsión, mm2, Capítulo 11.\n ,min A\n\n = área mínima de refuerzo longitudinal para resistir torsión, mm2, Capítulo\n 11.\n An = área de refuerzo en una ménsula o cartela que resiste la fuerza de tracción\n Nuc, mm2, Capítulo 11.\n Ao = área bruta encerrada por la trayectoria del flujo de cortante, mm2, Capítulo\n 11.\n Aoh = área encerrada por el eje del refuerzo transversal cerrado más externo\n dispuesto para resistir la torsión, mm2, Capítulo 11.\n\n Aps = área de acero preesforzado en la zona de tracción por flexión, mm2, Capítulo\n 18.\n As = área de refuerzo longitudinal no preesforzado a tracción, mm2, Capítulos 10-\n 12, 14, 15, 18.\n A’s = área del refuerzo longitudinal a compresión, mm2,\n Asc = área de refuerzo principal a tracción en una ménsula o cartela, mm2,\n Capítulo 11.\n Ash = área total de refuerzo transversal (incluyendo ganchos suplementarios)\n colocado dentro del espaciamiento s y perpendicular a la dimensión bc, mm2, Capítulo 21.\n As,min = área mínima de refuerzo de flexión, mm2, Capítulo 10.\n Ast = área total de refuerzo longitudinal no preesforzado (barras o perfiles de\n acero), mm2, Capítulos 10, 21.\n Asx = área del perfil o tubo estructural de acero en una sección compuesta, mm2,\n Capítulo 10.\n At = área de una rama de un estribo cerrado que resiste la torsión con un espaciamiento s, mm2, Capítulo 11.\n Atr = área total de todo el refuerzo transversal dentro de un espaciamiento s que\n cruza el plano potencial de hendimiento a través del refuerzo que está siendo desarrollado, mm2, Capítulo 12.\n Av = área de refuerzo de cortante con un espaciamiento s, mm2, Capítulos 11, 17.\n Avd = área total de refuerzo en cada grupo de barras diagonales en una viga de\n acoplamiento con refuerzo en diagonal, mm2, Capítulo 21.\n Avf = área de refuerzo de cortante por fricción, mm2, Capítulo 11.\n Avh = área del refuerzo de cortante paralelo al refuerzo de tracción por flexión con\n un espaciamiento 2s , mm2, Capítulo 11.\n Av,min = área mínima de refuerzo para cortante con un espaciamiento s, mm2,\n Capítulo 11.\n A1 = área cargada, mm2, Capítulos 10, 22.\n A2 = el área de la base inferior del tronco mayor de la pirámide, cono o cuña\n ahusada, contenida en su totalidad dentro del apoyo y que tenga por base superior el área cargada y pendientes laterales de 1 vertical por 2 horizontal, mm2, Capítulos 10, 22.\n b = ancho de la cara en compresión del elemento, mm, Capítulo 10.\n bc = dimensión transversal del núcleo de la columna medida centro a centro de\n las ramas exteriores del refuerzo transversal con área, Ash, mm, Capítulo 21.\n bo = perímetro de la sección crítica para cortante en losas y zapatas, mm,\n Capítulos 11, 22.\n bt = ancho de la parte de la sección transversal que contiene los estribos cerrados que resisten la torsión, mm, Capítulo 11.\n bv = ancho de la sección transversal en la superficie de contacto que se investiga\n por cortante horizontal, mm, Capítulo 17.\n bw = ancho del alma o diámetro de la sección circular, mm, Capítulos 10-12, 21,\n 22.\n\n b1 = dimensión de la sección crítica bo medida en la dirección de la luz para la\n cual se determinan los momentos, mm, Capítulo 13.\n b2 = dimensión de la sección crítica bo medida en dirección perpendicular a b1,\n mm, Capítulo 13.\n Bn = resistencia nominal al aplastamiento, Capítulo 22.\n Bu = carga amplificada de aplastamiento, Capítulo 22.\n c = distancia medida desde la fibra extrema en compresión al eje neutro, mm, Capítulos 9, 10, 14, 21.\n cb = la menor de la distancia medida del centro de una barra o alambre a la\n superficie más cercana del concreto o la mitad de la separación centro a centro de las barras o alambres que se desarrollan, mm, Capítulo 12.\n Cc = recubrimiento libre del refuerzo, mm, Capítulo 9.\n c1= dimensión de una columna rectangular o rectangular equivalente, de un capitel o de una ménsula, medida en la dirección de la luz para la cual se determinan los momentos, mm, Capítulos 11, 13.\n c2 = dimensión de una columna rectangular o rectangular equivalente, de un\n capitel o de una ménsula, medida en la dirección perpendicular a c1, mm, Capítulo 13\n C = constante de la sección transversal para definir propiedades a la torsión de losas y vigas, Capítulo 13.\n CE = cargas debidas al peso y empuje del suelo, del agua en el suelo, u otros\n materiales, o momentos y fuerzas internas correspondientes, Capítulo 9.\n CL = cargas debidas al peso y presión de fluidos con densidades bien definidas y\n alturas máximas controlables, o momentos y fuerzas internas correspondientes, Capítulo 9.\n Cm = factor que relaciona el diagrama real de momentos con un diagrama\n equivalente de momento uniforme, Capítulo 10.\n CM = cargas muertas, o momentos y fuerzas internas correspondientes, Capítulos\n 9, 20, 21.\n CS = efectos de carga producidos por el sismo o momentos y fuerzas internas\n correspondientes, Capítulos 9, 21.\n CT = efectos acumulados de variación de temperatura, flujo plástico, retracción,\n asentamiento diferencial, y retracción del concreto de retracción compensada, Capítulo 9.\n CV = cargas vivas, o momentos y fuerzas internas correspondientes, Capítulos 9,\n 20, 21.\n CVi = carga por viento, o momentos y fuerzas internas correspondientes, Capítulo\n 9.\n d = distancia desde la fibra extrema en compresión hasta el centroide del refuerzo longitudinal en tracción, mm, Capítulos 7, 9-12, 14, 17, 18, 21.\n d’ = distancia desde la fibra extrema en compresión al centroide del refuerzo longitudinal en compresión, mm, Capítulos 9, 18.\n db = diámetro nominal de una barra, alambre o torón de preesforzado, mm,\n Capítulos 7, 12, 21.\n dp = distancia desde la fibra extrema en compresión al centroide del acero\n preesforzado, mm, Capítulos 11, 18.\n\n e = base de los logaritmos neperianos, Capítulo 18.\n Ec = módulo de elasticidad del concreto, MPa, Capítulos 8-10, 14, 19.\n Ecb = módulo de elasticidad del concreto de la viga, MPa, Capítulo 13.\n Ecs = módulo de elasticidad del concreto de la losa, MPa, Capítulo 13.\n EI = rigidez a la flexión de una sección, N·mm2, Capítulo 10.\n Ep = módulo de elasticidad del acero de preesfuerzo, MPa, véase, Capítulo 8.\n Es = módulo de elasticidad del refuerzo y del acero estructural, MPa, véase 8.5.2,\n Capítulos 8, 10, 14.\n f’c = resistencia especificada a la compresión del concreto, MPa, Capítulos 4, 5,\n 8-12, 14, 18, 19, 21, 22.\n f’ci = resistencia especificada a la compresión del concreto al momento del\n preesforzado inicial, MPa, Capítulos 7, 18.\n f’cr = resistencia promedio a la compresión requerida del concreto, empleada\n como base para la dosificación del concreto, MPa, Capítulo 5.\n\n fct = resistencia promedio a la tracción por hendimiento (compresión diametral)\n del concreto liviano, MPa, Capítulos 5, 9, 11, 12, 22.\n fpc = esfuerzo de compresión en el concreto (después de que han ocurrido todas\n las pérdidas de preesforzado) en el centroide de la sección transversal que resiste las cargas aplicadas externamente, o en la unión del alma y el ala cuando el centroide está localizado dentro del ala, MPa. En un elemento compuesto, fpc es el esfuerzo de compresión resultante en el centroide de la sección compuesta, o en la unión del alma y el ala cuando el centroide se encuentra dentro del ala, debido tanto al preesforzado como a los momentos resistidos por el elemento prefabricado actuando individualmente, Capítulo 11.\n fpe = esfuerzo de compresión en el concreto debido únicamente a las fuerzas\n efectivas del preesforzado (después de que han ocurrido todas las pérdidas de preesforzado) en la fibra extrema de una sección en la cual los esfuerzos de tracción han sido producidos por la cargas aplicadas externamente, MPa, Capítulo 11.\n fps = esfuerzo en el acero de preesfuerzo en el estado de resistencia nominal a la\n flexión, MPa, Capítulos 12, 18.\n fpu = resistencia especificada a la tracción del acero de preesforzado, MPa,\n Capítulos 11, 18.\n fpy = resistencia especificada a la fluencia del acero de preesforzado, MPa,\n Capítulo 18.\n fr = módulo de ruptura del concreto, MPa, véase 9.5.2.3, Capítulos 9, 14, 18, Apéndice B.\n fs = esfuerzo en el refuerzo calculado para las cargas de servicio, MPa, Capítulos\n 10, 18.\n fse = esfuerzo efectivo en el acero de preesfuerzo (después de que han ocurrido\n todas la pérdidas de preesforzado), MPa, Capítulos 12, 18.\n\n ft = esfuerzo en la fibra extrema por tracción en la zona de tracción precomprimida, calculado para las cargas de servicio usando las propiedades de la sección bruta, MPa, véase 18.3.3, Capítulo 18.\n fy = resistencia especificada a la fluencia del refuerzo, MPa, Capítulos 3, 7, 9-12,\n 14, 17-19, 21.\n fyt = resistencia especificada a la fluencia del refuerzo transversal, MPa,\n Capítulos 10-12, 21.\n h = espesor total o altura de un elemento, mm, Capítulos 9-12, 14, 17, 18, 20-22.\n hm = altura total de un muro medida desde la base hasta la parte superior o altura\n del segmento de muro considerado, mm, Capítulos 11, 21.\n hx = espaciamiento máximo horizontal, medido centro a centro, entre ganchos\n suplementarios o ramas de estribos cerrados de confinamiento en todas las caras de la columna, mm, Capítulo 21.\n I = momento de inercia de la sección con respecto al eje que pasa por el centroide, mm4, Capítulos 10, 11.\n Ib = momento de inercia de la sección bruta de una viga con respecto al eje que pasa por el centroide, mm4, Capítulo 13.\n Icr = momento de inercia de la sección fisurada transformada a concreto, mm4,\n Capítulos 9, 14.\n Ie = momento de inercia efectivo para el cálculo de las deflexiones, mm4,\n Capítulos 9, 14.\n Ig = momento de inercia de la sección bruta del elemento con respecto al eje que\n pasa por el centroide, sin tener en cuenta el refuerzo, mm4, Capítulo 9, 10.\n\n Is = Momento de inercia de la sección bruta de una losa con respecto al eje que\n pasa por el centroide definido para el cálculo de f α y tβ, mm4, Capítulo 13.\n Ise = momento de inercia del refuerzo con respecto al eje que pasa por el\n centroide de la sección transversal del elemento, mm4, Capítulo 10.\n Isx = momento de inercia de un perfil o tubo de acero estructural, con respecto al\n eje que pasa por el centroide de la sección transversal del elemento compuesto, mm4, Capítulo 10.\n k = factor de longitud efectiva para elementos en compresión, Capítulos 10, 14.\n K = coeficiente de fricción por desviación accidental, por metro de tendón de preesforzado, Capítulo 18.\n Ktr = índice de refuerzo transversal, Capítulo 12.\n ℓ = luz de la viga o losa en una dirección; proyección libre del voladizo, mm, Capítulo 9.\n a\n\n = longitud de anclaje adicional más allá del centro del apoyo o punto de\n inflexión, mm, Capítulo 12.\n c\n\n = longitud del elemento en compresión en un pórtico, medida centro a centro\n de los nudos del pórtico, mm, Capítulo 10, 14, 22.\n d\n\n = longitud de desarrollo en tracción para barras corrugadas, alambres\n corrugados, refuerzo electrosoldado de alambre liso o corrugado o torones de preesfuerzo, mm, Capítulos 7, 12, 19, 21.\n\n dc\n\n = longitud de desarrollo de las barras corrugadas y alambres corrugados en\n compresión, mm, Capítulo 12.\n dg\n\n = longitud de desarrollo en tracción de barras corrugadas o alambres\n corrugados con un gancho estándar, medida desde la sección crítica hasta el extremo exterior del gancho (longitud recta embebida en el concreto entre la sección crítica y el inicio del gancho - punto de tangencia - más el radio interno del doblez y un diámetro de barra), mm, Capítulo 12.\n ℓm = longitud del muro completo o longitud del segmento de muro considerado en\n dirección de la fuerza de cortante, mm, Capítulos 11,14, 21.\n n\n\n = luz libre medida entre caras de los apoyos, mm, Capítulos 8, 11, 13, 16, 18,\n 21.\n o\n\n = longitud, medida desde la cara del nudo a lo largo del eje del elemento\n estructural, dentro de la cual debe colocarse refuerzo transversal especial, mm, Capítulo 21.\n px\n\n = distancia, en un elemento de acero de preesfuerzo, desde el extremo del\n gato al punto bajo consideración, m, Capítulo 18.\n t\n\n = luz del elemento sometido a la prueba de carga (tomada como la luz menor\n en sistemas de losas en dos direcciones), mm. La luz es la menor entre la distancia entre los centros de los apoyos, y la distancia libre entre los apoyos más el espesor h del elemento. La luz de un voladizo debe tomarse como el doble de la distancia entre la cara del apoyo y el extremo del voladizo, mm, Capítulo 20.\n u\n\n = longitud sin soporte lateral de un elemento en compresión, mm, Capítulo 10.\n 1\n\n = luz en la dirección en que se determinan los momentos, medida centro a\n centro de los apoyos, mm, Capítulo 13.\n 2\n\n = luz medida en la dirección perpendicular a 1ℓ, medida centro a centro de los apoyos, mm, véanse 13.6.2.3 y 13.6.2.4, Capítulo 13.\n M = máximo momento no amplificado debido a cargas de servicio, incluyendo los\n efectos P −Δ, N.mm, Capítulo 14.\n Ma = momento máximo no amplificado presente en el elemento en la etapa para la\n que se calcula la deflexión, N.mm, Capítulos 9, 14.\n Mc = momento amplificado por los efectos de curvatura del elemento para usarse\n en el diseño de un elemento en compresión, N.mm, Capítulo 10.\n Mcr = momento de fisuración, N.mm, Capítulos 9, 14.\n Mcre = momento que produce fisuración por flexión en la sección debido a cargas\n aplicadas externamente, N.mm, Capítulo 11.\n Mm = momento amplificado modificado para tener en cuenta el efecto de\n compresión axial, N.mm, Capítulo 11.\n Mmax = máximo momento amplificado en la sección debido a las cargas aplicadas externamente, N.mm, Capítulo 11.\n Mn = resistencia nominal a flexión en la sección, N.mm, Capítulos 11, 12, 14, 18,\n 21, 22.\n Mnb = resistencia nominal a flexión de la viga, incluyendo el efecto de la losa\n cuando está en tracción, que llega a un nudo, N.mm, Capítulo 21.\n\n Mnc = resistencia nominal a flexión de la columna que llega a un nudo, calculada\n para la carga axial amplificada, consistente con la dirección de las fuerzas laterales consideradas, que resulta en la menor resistencia a flexión, N.mm, Capítulo 21.\n Mo = momento estático total amplificado, N.mm, Capítulo 13.\n Mpr = resistencia probable a la flexión de los elementos, con o sin carga axial,\n determinada usando las propiedades de los elementos en las caras de los nudos suponiendo un esfuerzo en tracción para las barras longitudinales de fy y un factor de reducción de la resistencia φ de 1,0, N.mm, Capítulo 21.\n Ms = momento amplificado debido a cargas que producen un desplazamiento\n lateral apreciable, N.mm, Capítulo 10.\n Mu = momento amplificado en la sección, N.mm, Capítulos 10, 11, 13, 14, 21, 22.\n M1 = el menor momento amplificado de uno de los extremos de un elemento en\n compresión, debe tomarse como positivo si el elemento presenta curvatura simple y negativo si tiene curvatura doble, N.mm, Capítulo 10.\n M1ns = momento amplificado en el extremo del elemento en compresión en el cual\n actúa M1 y que se debe a cargas que no causan un desplazamiento lateral apreciable, calculado por medio de un análisis estructural elástico de primer orden, N.mm, Capítulo 10.\n M1s = momento amplificado en el extremo del elemento en compresión en el cual\n actúa M1 y que se debe a cargas que causan un desplazamiento lateral apreciable, calculado por medio de un análisis estructural elástico de primer orden, N.mm, Capítulo 10.\n M2 = el mayor momento amplificado de uno de los extremos de un elemento en\n compresión, siempre positivo, N.mm, Capítulo 10.\n M2,min = valor mínimo de M2, N.mm, Capítulo 10\n M2ns = momento amplificado en el extremo del elemento en compresión en el cual actúa M2 y que se debe a cargas que no causan un desplazamiento lateral apreciable, calculado por medio de un análisis estructural elástico de primer orden, N.mm, Capítulo 10.\n M2s = momento amplificado en el extremo del elemento en compresión en el cual\n actúa M2 y que se debe a cargas que causan un desplazamiento lateral apreciable, calculado por medio de un análisis estructural elástico de primer orden, N.mm, Capítulo 10.\n n = número de unidades, tales como ensayos de resistencia, barras, alambres, dispositivos de anclaje para torones individuales o anclajes, Capítulos 5, 11, 12, 18.\n Nc = fuerza de tracción en el concreto debida a la carga muerta más la carga viva\n no amplificadas, N, Capítulo 18.\n Nu = carga axial amplificada normal a la sección transversal, que ocurre\n simultáneamente con Vu o Tu; debe tomarse como positiva para compresión y como negativa para tracción, N, Capítulo 11.\n Nuc = fuerza horizontal de tracción amplificada que actúa simultáneamente con Vu\n en la parte superior de una ménsula o cartela, debe ser tomada como positiva para la tracción, N, Capítulo 11.\n Pcp = perímetro exterior de la sección transversal de concreto, mm, Capítulo 11.\n Ph = perímetro del eje del refuerzo transversal cerrado dispuesto para torsión,\n mm, Capítulo 11.\n\n Pb = resistencia axial nominal en condiciones de deformación unitaria balanceada,\n N, Capítulos 9, 10.\n Pc = carga crítica a pandeo, N. Capítulo 10.\n Pn = resistencia axial nominal de la sección transversal, N, Capítulos 9, 10, 14,\n 22.\n Pn,max = máximo valor permitido de Pn, N, Capítulo 10.\n Po = resistencia axial nominal para una excentricidad igual a cero, N, Capítulo 10.\n Ppj = fuerza de preesforzado en el extremo del gato, N, Capítulo 18.\n Ppu = fuerza amplificada de preesforzado en el dispositivo de anclaje, N, Capítulo\n 18.\n Ppx = fuerza de preesforzado evaluada a una distancia px ℓ del extremo del gato,\n N, Capítulo 18.\n Pu = fuerza axial amplificada; debe tomarse como positiva para compresión y\n negativa para tracción, N, Capítulos 10, 14, 21, 22.\n qDu = carga muerta amplificada por unidad de área, Capítulo 13.\n qLu = carga viva amplificada por unidad de área, Capítulo 13.\n qu = carga amplificada por unidad de área, Capítulo 13.\n Q = índice de estabilidad de un piso, Capítulo 10.\n r = radio de giro de la sección transversal de un elemento en compresión, mm, Capítulo 10.\n s = espaciamiento medido centro a centro de unidades tales como refuerzo longitudinal, refuerzo transversal, tendones de preesfuerzo, alambres, o anclajes, mm, Capítulos 10,12, 17, 21.\n so = espaciamiento centro a centro del refuerzo transversal dentro de una\n longitud o ℓ, mm, Capítulo 21.\n ss = desviación estándar de la muestra, MPa, Capítulo 5.\n s2 = espaciamiento centro a centro del refuerzo longitudinal de cortante o torsión,\n mm, Capítulo 11.\n Sm = módulo elástico de la sección, mm3, Capítulo 22.\n t = espesor de una pared de una sección con vacíos, mm, Capítulo 11.\n Tn = resistencia nominal a torsión, N.mm, Capítulo 11.\n Tu = torsión amplificada en la sección, N·mm, Capítulo 11.\n U = resistencia requerida para resistir las cargas amplificadas o momentos y fuerzas internas correspondientes, Capítulo 9.\n vn = esfuerzo resistente nominal de cortante, MPa, Capítulos 11, 21.\n Vc = resistencia nominal al cortante proporcionada por el concreto, N, Capítulos 8,\n 11, 13, 21.\n Vci = resistencia nominal al cortante proporcionada por el concreto cuando se\n produce la fisuración diagonal como resultado de la combinación de cortante y momento, N, Capítulo 11.\n Vcw = resistencia nominal a cortante proporcionada por el concreto cuando se produce la fisuración diagonal como resultado de esfuerzos principales de tracción altos en el alma, N, Capítulo 11.\n\n Vd = fuerza cortante en la sección debido a la carga muerta no amplificada, N,\n Capítulo 11.\n Vi = fuerza cortante amplificada en la sección, debido a cargas aplicadas\n externamente que se presentan simultáneamente con Mmax, N, Capítulo 11.\n Vn = resistencia nominal a cortante, N, Capítulos 8, 10, 11, 21, 22.\n Vnh = resistencia nominal a cortante horizontal, N, Capítulo 17.\n Vp = componente vertical de la fuerza efectiva de preesforzado en una sección, N,\n Capítulo 11.\n Vs = resistencia nominal a cortante proporcionada por el refuerzo de cortante, N,\n Capítulo 11.\n Vu = fuerza cortante amplificada en la sección, N, Capítulos 11,13, 17, 21, 22.\n wc = peso unitario del concreto, kg/m3, Capítulos 8, 9.\n wu = carga amplificada por unidad de longitud de viga, o losa en una dirección,\n Capítulo 8.\n x = menor dimensión de la parte rectangular de una sección transversal, mm, Capítulo 13.\n y = mayor dimensión de la parte rectangular de una sección transversal, mm, Capítulo 13.\n Yt = distancia desde el eje centroidal de la sección total a la fibra extrema en tracción sin considerar el refuerzo, mm, Capítulos 9, 11.\n α = ángulo que define la orientación del refuerzo, Capítulos 11, 21.\n αf = relación entre la rigidez a flexión de una sección de viga y la rigidez a flexión de una franja de losa limitada lateralmente por los ejes centrales de los paneles adyacentes (si los hay) a cada lado de la viga, Capítulos 9, 13.\n αf m = valor promedio de αf para todas las vigas en los bordes de un panel, Capítulo 9.\n αf 1 = valor de αf en la dirección de 1\n\n , Capítulo 13.\n αf 2 = valor de αf en la dirección de 2\n\n , Capítulo 13\n αpx = cambio angular total de la trayectoria del tendón desde el extremo del gato\n hasta cualquier punto bajo consideración, radianes, Capítulo 18.\n αs = constante usada para calcular Vc en losas y zapatas, Capítulo 11.\n β = relación de la dimensión larga a corta de las luces libres para losas en dos\n direcciones, de los lados de una columna; del área de carga concentrada o de reacción o de los lados de una zapata, Capítulos 9, 11, 15, 22.\n βd = relación utilizada para calcular los momentos magnificados en columnas\n debidos a las cargas permanentes, Capítulo 10.\n\n βp = factor usado para calcular Vc en losas preesforzadas, Capítulo 11.\n βt = relación entre la rigidez a torsión de la sección de la viga de borde y la rigidez a flexión de una franja de losa cuyo ancho es igual a la longitud de la luz de la viga medida centro a centro de los apoyos, Capítulo 13.\n\n β1 = factor que relaciona la profundidad de bloque rectangular equivalente de\n esfuerzos de compresión con la profundidad del eje neutro, Capítulos 10, 18.\n γf = factor utilizado para determinar el momento no balanceado transmitido por flexión en las conexiones losa-columna, Capítulos 11, 13, 21.\n γs = factor utilizado para determinar la porción del refuerzo que se debe localizar\n en la banda central de una zapata, Capítulo 15.\n δns = factor de amplificación de momento para pórticos arriostrados contra\n desplazamiento lateral, refleja los efectos de la curvatura entre los extremos del elemento en compresión, Capítulo 10.\n δs = factor de amplificación del momento en pórticos no arriostrados contra\n desplazamiento lateral, refleja el desplazamiento lateral causado por las cargas gravitacionales y laterales, Capítulo 10.\n δu = desplazamiento de diseño, mm, Capítulo 21.\n Δo = desplazamiento lateral relativo (deriva) medido entre la parte superior e\n inferior de un piso debida a las fuerzas laterales, calculado por medio de un análisis estructural elástico de primer orden utilizando valores de rigidez que cumplan con 10.11.1, mm, Capítulo 10.\n Δr = diferencia entre las deflexiones inicial y final (después de la remoción de la\n carga) en una prueba de carga o la repetición de la prueba de carga, mm, Capítulo 20.\n Δ1 = deflexión máxima medida durante la primera prueba de carga, mm, Capítulo\n 20.\n Δ2 = deflexión máxima medida durante la segunda prueba, relativa a la posición\n de la estructura al iniciar la segunda prueba, mm, Capítulo 20.\n λ = factor de modificación relacionado con la densidad del concreto, Capítulos 11, 12, 17-19.\n λΔ = factor para deflexiones adicionales debidas a efectos de largo plazo,\n Capítulo 9.\n μ = coeficiente de fricción, Capítulo 11.\n μp = coeficiente de fricción por curvatura en postensado, Capítulo 18.\n ξ = factor que depende del tiempo para cargas sostenidas, Capítulo 9.\n ρ = cuantía del refuerzo As evaluada sobre el área bd, Capítulos 11, 13, 21.\n ρ’ = cuantía del refuerzo A’s evaluada sobre el área bd, Capítulo 9.\n ρb = cuantía de refuerzo As evaluada sobre el área bd que produce condiciones\n balanceadas de deformación unitaria.\n ρ\n\n = relación entre el área de refuerzo longitudinal distribuido al área bruta de\n concreto perpendicular a este refuerzo, Capítulos 11, 14, 21.\n ρp = cuantía de refuerzo Aps evaluada sobre el área bdp, Capítulo 18.\n ρs = relación entre el volumen de refuerzo en espiral y el volumen total del núcleo\n confinado por la espiral (medido hasta el diámetro exterior de la espiral), Capítulos 10, 21.\n\n ρt = cuantía del área de refuerzo transversal distribuido al área bruta de concreto de una sección perpendicular a este refuerzo, Capítulos 11, 14, 21.\n ρv = relación entre el área de estribos y el área de la superficie de contacto,\n Capítulo 17.\n ρw = cuantía del área de refuerzo As evaluada sobre el área bwd, Capítulo 11.\n φ = factor de reducción de resistencia, véase 9.3, Capítulos 8, 11, 13, 14, 17, 22.\n Ψe = factor de modificación para la longitud de desarrollo con base en el\n tratamiento superficial del refuerzo, Capítulo 12.\n Ψs = factor de modificación para la longitud de desarrollo con base en el tamaño\n del refuerzo, Capítulo 12.\n Ψt = factor de modificación para la longitud de desarrollo con base en la\n localización del refuerzo, Capítulo 12.\n ω = índice del refuerzo a tracción, Capítulo 18.\n ω’ = índice del refuerzo a compresión, Capítulo 18.",
+   "pagina": 4
+  },
+  {
+   "numero": "2.2",
+   "epigrafe": "Definiciones",
+   "texto": "A continuación se definen los términos de uso general en esta Norma.\n Ábaco — Engrosamiento de la losa en su apoyo sobre la columna. La proyección del ábaco por debajo de la losa debe ser de por lo menos una cuarta parte del espesor de la losa fuera del ábaco.\n Acero de preesforzado — Elemento de acero de alta resistencia como alambre, barra, torón, o un paquete (tendón) de estos elementos, utilizado para aplicar fuerzas de preesforzado al concreto.\n Acero extremo en tracción — Refuerzo (preesforzado o no preesforzado) más alejado de la fibra extrema en compresión.\n Aditivo — Material distinto del agua, de los agregados o del cemento hidráulico, utilizado como componente del concreto, y que se añade a éste antes o durante su mezclado a fin de modificar sus propiedades.\n Aditivo acelerante — Sustancia que al ser añadida el concreto, mortero o lechada, acorta el tiempo de fraguado, incrementando la velocidad de desarrollo inicial de resistencia.\n\n Aditivo incorporador de aire — Es el aditivo cuyo propósito es incorporar aire en forma de burbujas esferoidales uniformemente distribuidas en la mezcla, con la finalidad principal de hacerlo resistente a las heladas.\n Aditivo retardador — Aditivo que prolonga el tiempo de fraguado.\n\n Agregado — Material granular, de origen natural o artificial, como arena, grava, piedra triturada y escoria de hierro de alto horno, empleado con un medio cementante para formar concreto o mortero hidráulico.\n Agregado denominado Hormigón — Material compuesto de grava y arena empleado en su forma natural de extracción.\n\n Agregado Fino — Agregado proveniente de la desintegración natural o artificial, que pasa el tamiz 9,5 mm (3/8\").\n\n Agregado Grueso — Agregado retenido en el tamiz 4,75 mm (Nº 4), proveniente de la desintegración natural o mecánica de las rocas.\n Agregado liviano — Agregado con una densidad cuando está seco y suelto de 1100 kg/m3 o menos.\n Arena — Agregado fino, proveniente de la desintegración natural de las rocas.\n Capitel — Ensanche de la parte superior de la columna.\n Carga de servicio — La carga (sin amplificar) especificada en la Norma NTE. E.020 Cargas, del Reglamento Nacional de Edificaciones del cual esta Norma forma parte.\n Carga amplificada o factorizada — La carga, multiplicada por los factores de carga apropiados, que se utiliza para diseñar los elementos utilizando el método de diseño por resistencia de esta Norma.\n Cemento — Material pulverizado que por adición de una cantidad conveniente de agua forma una pasta aglomerante capaz de endurecer, tanto bajo el agua como en el aire. Quedan excluidas las cales hidráulicas, las cales aéreas y los yesos.\n\n Cemento Portland — Producto obtenido por la pulverización del clinker portland con la adición eventual de sulfato de calcio. Se admite la adición de otros productos que no excedan del 1% en peso del total siempre que la norma correspondiente establezca que su inclusión no afecta las propiedades del cemento resultante. Todos los productos adicionados deberán ser pulverizados conjuntamente con el clinker.\n\n Cemento Portland Puzolánico — Es el cemento Portland que presenta un porcentaje adicionado de puzolana.\n\n Columna — Elemento con una relación entre altura y menor dimensión lateral mayor que tres, usado principalmente para resistir carga axial de compresión.\n Concreto — Mezcla de cemento Portland o cualquier otro cemento hidráulico, agregado fino, agregado grueso y agua, con o sin aditivos.\n Concreto estructural — Todo concreto utilizado con propósitos estructurales incluyendo al concreto simple y al concreto reforzado.\n Concreto armado o reforzado — Concreto estructural reforzado con no menos de la cantidad mínima de acero, preesforzado o no, especificada en los Capítulos 1 al 21.\n Concreto simple — Concreto estructural sin armadura de refuerzo o con menos refuerzo que el mínimo especificado para concreto reforzado.\n Concreto estructural liviano — Concreto con agregado liviano que cumple con lo especificado en 3.3, y tiene una densidad de equilibrio, determinada por “Test Method for Determining Density of Structural Lightweight Concrete” (ASTM C 567), que no excede 1850 kg/m3. En esta Norma, un concreto liviano sin arena natural se llama “concreto liviano en todos sus componentes” y un concreto liviano en el que todo el agregado fino sea arena de peso normal se llama “concreto liviano con arena de peso normal”.\n Concreto de Peso Normal — Es un concreto que tiene un peso aproximado de 2300 Kg/m3.\n\n Concreto Ciclópeo — Es el concreto simple en cuya masa se incorporan piedras grandes.\n\n Concreto de Cascote — Es el constituido por cemento, agregado fino, cascote de ladrillo y agua.\n\n Concreto Premezclado — Es el concreto que se dosifica en planta, que puede ser mezclado en la misma o en camiones mezcladores y que es transportado a obra.\n Concreto Preesforzado — Concreto estructural al que se le han introducido esfuerzos internos con el fin de reducir los esfuerzos potenciales de tracción en el concreto causados por las cargas.\n Dispositivo de Anclaje — En postensado, el dispositivo usado para transferir la fuerza de postensado desde el acero de preesforzado al concreto.\n Ducto de Postensado — Ducto (liso o corrugado) para colocar el acero de preesforzado que se requiere para aplicar el postensado.\n Elementos compuestos de concreto sometidos a flexión — Elementos conformados por dos o más partes interconectadas de tal manera que responden a las cargas como una unidad. Estas partes pueden ser prefabricadas o construidas en obra, en etapas separadas.\n Envoltura para tendones de preesfuerzo no adheridos (Sheating) — Material que encapsula el acero de preesforzado para impedir la adherencia del acero de preesforzado al concreto que lo rodea, para proporcionar protección contra la corrosión y para contener la envoltura inhibidora de la corrosión.\n Estribo — Refuerzo colocado perpendicularmente o en ángulo con respecto al refuerzo longitudinal, empleado para resistir esfuerzos de cortante y de torsión en un elemento estructural. Los estribos también cumplen función de control del pandeo de las barras longitudinales y de confinamiento al concreto.\n\n Fricción por curvatura — Fricción que resulta de los dobleces o la curvatura del trazado especificado de los tendones de preesforzado.\n Fricción por desviación involuntaria — En concreto preesforzado, la fricción provocada por una desviación no intencional del ducto de preesforzado de su perfil especificado.\n Fuerza de tensado del gato — En concreto preesforzado, la fuerza que temporalmente ejerce el dispositivo que se utiliza para tensar el acero de preesforzado.\n Grava — Agregado grueso, proveniente de la desintegración natural de los materiales pétreos. Se encuentra comúnmente en canteras y lechos de ríos, depositado en forma natural.\n\n Junta de contracción — Muesca moldeada, aserrada o labrada en una estructura de concreto para crear un plano de debilidad y regular la ubicación del agrietamiento resultante de las variaciones dimensionales de las diferentes partes de la estructura.\n Junta de expansión — Separación entre partes adyacentes de una estructura de concreto, usualmente un plano vertical, en una ubicación definida en el diseño de tal modo que interfiera al mínimo con el comportamiento de la estructura, y al mismo tiempo permita movimientos relativos en tres direcciones y evite la formación de fisuras en otro lugar del concreto y a través de la cual se interrumpe parte o todo el refuerzo adherido.\n Longitud embebida — Longitud del refuerzo embebido en el concreto que se extiende más allá de una sección crítica.\n Longitud de desarrollo — Longitud embebida del refuerzo, incluyendo torones de preesforzado, en el concreto que se requiere para poder desarrollar la resistencia de diseño del refuerzo en una sección crítica.\n Longitud de transferencia — Longitud embebida del torón de preesforzado en el concreto que se requiere para transferir el preesfuerzo efectivo al concreto.\n Losa — Elemento estructural de espesor reducido respecto de sus otras dimensiones usado como techo o piso, generalmente horizontal y armado en una o dos direcciones según el tipo de apoyo existente en su contorno. Usado también como diafragma rígido para mantener la unidad de la estructura frente a cargas horizontales de sismo.\n Materiales Cementantes — Materiales que se especifican en el Capítulo 3, que tienen propiedades cementantes por sí mismos al ser utilizados en el concreto, tales como el cemento Pórtland, los cementos hidráulicos adicionados y los cementos expansivos, o dichos materiales combinados con cenizas volantes, otras puzolanas crudas o calcinadas, microsílice, y escoria granulada de alto horno o ambos.\n Módulo de elasticidad — Relación entre el esfuerzo normal y la deformación unitaria correspondiente, para esfuerzos de tracción o compresión menores que el límite de proporcionalidad del material.\n Muro estructural — Elemento estructural, generalmente vertical empleado para encerrar o separar ambientes, resistir cargas axiales de gravedad y resistir cargas perpendiculares a su plano proveniente de empujes laterales de suelos o líquidos.\n Muro de corte o Placa — Muro estructural diseñado para resistir combinaciones de fuerzas cortantes, momentos y fuerzas axiales inducidas por cargas laterales.\n Mortero de Cemento — Es la mezcla constituida por cemento, agregados predominantemente finos y agua.\n\n Pasta de Cemento — Es una mezcla de cemento y agua.\n Pedestal — Elemento vertical en compresión que tiene una relación entre la altura sin apoyo y el promedio de la menor dimensión lateral no mayor a 3.\n Peralte efectivo o Altura útil de la sección (d) — La distancia medida desde la fibra extrema en compresión hasta el centroide del refuerzo longitudinal sometido a tracción.\n\n Piedra Triturada o Chancada — Agregado grueso, obtenido por trituración artificial de rocas o gravas.\n Pórtico resistente a momentos — Pórtico en el cual los elementos y los nudos resisten las cargas a través de flexión, cortante y fuerza axial.\n Postensado — Método de preesforzado en el cual el acero de preesforzado se tensa después que el concreto ha endurecido.\n Preesforzado efectivo — Esfuerzo en el acero de preesforzado después que han ocurrido todas las pérdidas.\n Pretensado — Método en el cual el acero de preesforzado se tensa antes de la colocación del concreto.\n Puntales — Elementos de apoyo verticales o inclinados diseñados para soportar el peso del encofrado, del concreto y de las cargas de construcción sobre ellos.\n Puntales de reapuntalamiento — Puntales colocados ajustadamente bajo una losa de concreto u otro elemento estructural después que el encofrado y los puntales originales han sido retirados de un área significativa, permitiendo así que la nueva losa o elemento estructural se deforme y soporte su propio peso y las cargas de construcción existentes antes de la instalación de los puntales de reapuntalamiento.\n Refuerzo — Material que cumple con lo especificado en 3.5, excluyendo el acero de preesforzado, a menos que se incluya en forma explícita.\n Refuerzo corrugado — Barras de refuerzo corrugado, mallas de barras, alambre corrugado o refuerzo electrosoldado de alambre, que cumplan con 3.5.3.\n\n Refuerzo electrosoldado de alambre — Elementos de refuerzo compuestos por alambres lisos o corrugados, que cumplen con ASTM A 82 o A 496, respectivamente, fabricados en forma de mallas de acuerdo con ASTM A 185 o A 497M, respectivamente.\n Refuerzo en espiral — Refuerzo continuo enrollado en forma de hélice cilíndrica.\n Refuerzo liso — Refuerzo que no cumple con la definición de refuerzo corrugado. Véase 3.5.4.\n Resistencia a la fluencia — Resistencia a la fluencia mínima especificada o punto de fluencia del refuerzo. La resistencia a la fluencia o el punto de fluencia deben determinarse en tracción, de acuerdo con las Normas Técnicas Peruanas (NTP) aplicables, con las modificaciones de 3.5 de esta Norma.\n Resistencia a la tracción por hendimiento o compresión diametral (fct) (Splitting tensile strength) — Resistencia a la tracción del concreto determinada de acuerdo con ASTM C 496M, tal como se describe en “Standard Specification for Lightweight Aggregates for Structural Concrete” (ASTM C 330).\n Resistencia de diseño — Resistencia nominal multiplicada por el factor de reducción de resistencia φ que corresponda.\n Resistencia especificada a la compresión del concreto (f’c) — Resistencia a la compresión del concreto empleada en el diseño y evaluada de acuerdo con las consideraciones del Capítulo 5, expresada en MPa. Cuando dicha cantidad esté bajo un signo radical, se quiere indicar sólo la raíz cuadrada del valor numérico, por lo que el resultado está en MPa.\n Resistencia Nominal — Resistencia de un elemento o una sección transversal calculada con las disposiciones e hipótesis del método de diseño por resistencia de esta Norma, antes de aplicar el factor de reducción de resistencia.\n Resistencia Requerida — Resistencia que un elemento o una sección transversal debe tener para resistir las cargas amplificadas o los momentos y fuerzas internas correspondientes combinadas según lo estipulado en esta Norma.\n Tendón — En aplicaciones de preesforzado, el tendón es el acero preesforzado. En las aplicaciones de postensado, el tendón es el conjunto completo consistente en anclajes, acero preesforzado y ductos para aplicaciones no adheridas o ductos inyectados con mortero para aplicaciones adheridas.\n Tendón de Preesfuerzo Adherido — Tendón en el que el acero de preesforzado está adherido al concreto ya sea directamente o con mortero de inyección.\n Tendón de Preesfuerzo no Adherido — Tendón en el que se impide que el acero de preesforzado se adhiera al concreto y queda libre para moverse con respecto al concreto. La fuerza de preesforzado se trasmite en forma permanente al concreto solamente en los extremos del tendón a través de los anclajes.\n Transferencia — Operación de transferir los esfuerzos del acero de preesforzado desde los gatos o del banco de tensado al elemento de concreto.\n Viga — Elemento estructural que trabaja fundamentalmente a flexión y cortante.\n Zona de Anclaje — En elementos postensados, la porción del elemento en la cual la distribución de esfuerzos normales se ve afectada por la concentración de esfuerzos producida por el anclaje. Su extensión es igual a la longitud de la mayor dimensión de la sección transversal del elemento. En anclajes localizados lejos del extremo de un elemento, la zona de anclaje incluye la zona perturbada delante y detrás del dispositivo de anclaje.\n Zona de Tracción Precomprimida — Porción de un elemento preesforzado donde ocurriría tracción producida por flexión si la fuerza de preesfuerzo no estuviera presente, calculada usando las propiedades de la sección bruta, bajo carga muerta y viva no amplificadas.\n\n MATERIALES",
+   "pagina": 14
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c02-definiciones",
+   "titulo": "E.060 · Cap. 2 · Definiciones",
+   "descripcion": "Glosario esencial: ábaco, capitel, columna y pedestal, agregados, tipos de concreto, preesforzado y resistencias.",
+   "acceso": "free",
+   "orden": 102,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «ábaco» según la E.060?",
+      "respuesta": "Un engrosamiento de la losa en su apoyo sobre la columna; debe proyectarse bajo la losa al menos un cuarto del espesor de la losa."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Ábaco — Engrosamiento de la losa en su apoyo sobre la columna. La proyección del ábaco por debajo de la losa debe ser de por lo menos una cuarta parte del espesor de la losa fuera del ábaco."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «capitel» según la E.060?",
+      "respuesta": "Un ensanche de la parte superior de la columna."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Capitel — Ensanche de la parte superior de la columna."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Columna o pedestal (definiciones de la E.060)",
+      "columnas": [
+       "Relación altura / menor dimensión lateral"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Columna",
+        "valores": [
+         "Mayor que 3"
+        ]
+       },
+       {
+        "etiqueta": "Pedestal",
+        "valores": [
+         "No mayor que 3"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Columna — Elemento con una relación entre altura y menor dimensión lateral mayor que tres, usado principalmente para resistir carga axial de compresión. … Pedestal — Elemento vertical en compresión que tiene una relación entre la altura sin apoyo y el promedio de la menor dimensión lateral no mayor a 3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Agregados según la E.060",
+      "columnas": [
+       "Definición"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Agregado fino",
+        "valores": [
+         "Pasa el tamiz 9,5 mm (3/8″)"
+        ]
+       },
+       {
+        "etiqueta": "Agregado grueso",
+        "valores": [
+         "Retenido en el tamiz 4,75 mm (N.º 4)"
+        ]
+       },
+       {
+        "etiqueta": "Hormigón",
+        "valores": [
+         "Grava y arena en su forma natural de extracción"
+        ]
+       },
+       {
+        "etiqueta": "Agregado liviano",
+        "valores": [
+         "Densidad seca y suelta ≤ 1100 kg/m³"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Agregado Fino — Agregado… que pasa el tamiz 9,5 mm (3/8\"). Agregado Grueso — Agregado retenido en el tamiz 4,75 mm (Nº 4)…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «concreto armado o reforzado» según la E.060?",
+      "respuesta": "Concreto estructural con al menos el refuerzo mínimo (preesforzado o no) de los Capítulos 1 al 21. Con menos refuerzo es concreto simple."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Concreto armado o reforzado — Concreto estructural reforzado con no menos de la cantidad mínima de acero, preesforzado o no, especificada en los Capítulos 1 al 21."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El concreto de peso normal pesa aproximadamente {{2300 kg/m³}}."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Concreto de Peso Normal — Es un concreto que tiene un peso aproximado de 2300 Kg/m3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «concreto ciclópeo» según la E.060?",
+      "respuesta": "Concreto simple en cuya masa se incorporan piedras grandes."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Concreto Ciclópeo — Es el concreto simple en cuya masa se incorporan piedras grandes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «concreto preesforzado» según la E.060?",
+      "respuesta": "Concreto estructural al que se le introducen esfuerzos internos para reducir las tracciones que causarían las cargas."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Concreto Preesforzado — Concreto estructural al que se le han introducido esfuerzos internos con el fin de reducir los esfuerzos potenciales de tracción en el concreto causados por las cargas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Pretensado o postensado",
+      "columnas": [
+       "¿Cuándo se tensa el acero?"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Pretensado",
+        "valores": [
+         "Antes de colocar el concreto"
+        ]
+       },
+       {
+        "etiqueta": "Postensado",
+        "valores": [
+         "Después de que el concreto endurece"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Postensado — Método de preesforzado en el cual el acero de preesforzado se tensa después que el concreto ha endurecido. … Pretensado — Método en el cual el acero de preesforzado se tensa antes de la colocación del concreto."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «peralte efectivo (d)» según la E.060?",
+      "respuesta": "La distancia desde la fibra extrema en compresión hasta el centroide del refuerzo longitudinal en tracción."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Peralte efectivo o Altura útil de la sección (d) — La distancia medida desde la fibra extrema en compresión hasta el centroide del refuerzo longitudinal sometido a tracción."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Resistencias en el diseño por resistencia",
+      "columnas": [
+       "Definición"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Resistencia nominal",
+        "valores": [
+         "Calculada con las hipótesis de la norma, antes de aplicar φ"
+        ]
+       },
+       {
+        "etiqueta": "Resistencia de diseño",
+        "valores": [
+         "Resistencia nominal × φ"
+        ]
+       },
+       {
+        "etiqueta": "Resistencia requerida",
+        "valores": [
+         "La necesaria para las cargas amplificadas combinadas"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Resistencia de diseño — Resistencia nominal multiplicada por el factor de reducción de resistencia φ que corresponda."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «muro de corte o placa» según la E.060?",
+      "respuesta": "Un muro estructural diseñado para resistir combinaciones de cortante, momento y carga axial inducidas por cargas laterales."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Muro de corte o Placa — Muro estructural diseñado para resistir combinaciones de fuerzas cortantes, momentos y fuerzas axiales inducidas por cargas laterales."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «longitud de desarrollo» según la E.060?",
+      "respuesta": "La longitud embebida que necesita el refuerzo para desarrollar su resistencia de diseño en una sección crítica."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Longitud de desarrollo — Longitud embebida del refuerzo, incluyendo torones de preesforzado, en el concreto que se requiere para poder desarrollar la resistencia de diseño del refuerzo en una sección crítica."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «junta de contracción» según la E.060?",
+      "respuesta": "Una muesca moldeada, aserrada o labrada que crea un plano de debilidad para controlar dónde se fisura el concreto por cambios dimensionales."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Junta de contracción — Muesca moldeada, aserrada o labrada en una estructura de concreto para crear un plano de debilidad y regular la ubicación del agrietamiento…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es «zona de tracción precomprimida» según la E.060?",
+      "respuesta": "La parte de un elemento preesforzado que estaría en tracción por flexión si no hubiera preesfuerzo."
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Zona de Tracción Precomprimida — Porción de un elemento preesforzado donde ocurriría tracción producida por flexión si la fuerza de preesfuerzo no estuviera presente…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué aditivo acorta el tiempo de fraguado y acelera la resistencia inicial?",
+      "opciones": [
+       "Retardador",
+       "Incorporador de aire",
+       "Acelerante",
+       "Plastificante"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "2.2",
+       "extracto": "Aditivo acelerante — Sustancia que al ser añadida el concreto, mortero o lechada, acorta el tiempo de fraguado, incrementando la velocidad de desarrollo inicial de resistencia."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
