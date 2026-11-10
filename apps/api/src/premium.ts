@@ -68,3 +68,14 @@ export async function procesarEventoRevenueCat(evento: EventoRevenueCat) {
   if (!EVENTOS_CON_VENCIMIENTO.has(evento.type) || !evento.entitlement_ids?.includes(ENTITLEMENT)) return;
   await guardarVencimiento(evento.app_user_id, evento.expiration_at_ms ? new Date(evento.expiration_at_ms) : SIN_VENCIMIENTO);
 }
+
+/** Deletes the customer from RevenueCat when the account is deleted. Does not cancel store subscriptions. */
+export async function eliminarSuscriptor(userId: string) {
+  const clave = process.env.REVENUECAT_SECRET_KEY;
+  if (!clave) return;
+  const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(userId)}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${clave}` },
+  });
+  if (!res.ok && res.status !== 404) throw new Error(`RevenueCat respondió ${res.status}`);
+}

@@ -37,3 +37,8 @@ export function guardarAjuste(clave: string, valor: unknown) {
     JSON.stringify(valor),
   );
 }
+
+/** Borra el progreso y los ajustes del usuario; los paquetes (contenido público) se conservan. */
+export function borrarDatosDeUsuario() {
+  db.execSync("delete from estados; delete from ajustes;");
+}

@@ -1,9 +1,10 @@
 import { useCallback, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
 import type { EstadoCupo } from "@tekluma/shared";
 import { authClient } from "@/lib/auth";
 import { cerrarSesionCompras } from "@/lib/compras";
+import { eliminarCuenta } from "@/lib/cuenta";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { NOMBRES_PROFESION } from "@/lib/profesiones";
 import type { Profession } from "@tekluma/shared";
@@ -21,6 +22,32 @@ export default function Perfil() {
         .catch(() => {});
     }, []),
   );
+
+  const confirmarEliminacion = () => {
+    const aviso = cupo?.premium
+      ? "\n\nTu suscripción Premium NO se cancela sola: cancélala en la configuración de tu tienda para que no se renueve."
+      : "";
+    Alert.alert(
+      "¿Eliminar tu cuenta?",
+      `Se borrarán para siempre tu progreso, tus monedas y tus datos. Esta acción no se puede deshacer.${aviso}`,
+      [
+        { text: "Cancelar", style: "cancel" },
+        ...(cupo?.premium
+          ? [{
+              text: "Gestionar suscripción",
+              onPress: () =>
+                Linking.openURL(Platform.OS === "ios" ? "https://apps.apple.com/account/subscriptions" : "https://play.google.com/store/account/subscriptions"),
+            }]
+          : []),
+        {
+          text: "Eliminar",
+          style: "destructive",
+          onPress: () =>
+            eliminarCuenta().catch((e: Error) => Alert.alert("No se pudo eliminar", e.message)),
+        },
+      ],
+    );
+  };
 
   return (
     <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={{ padding: 20, gap: 12 }} contentInsetAdjustmentBehavior="automatic">
@@ -51,6 +78,9 @@ export default function Perfil() {
           await authClient.signOut();
         }} style={({ pressed }) => [estilos.salir, { borderColor: t.borde, opacity: pressed ? 0.7 : 1 }]}>
         <Text style={{ color: "#D64545", fontSize: 16, fontWeight: "600" }}>Cerrar sesión</Text>
+      </Pressable>
+      <Pressable onPress={confirmarEliminacion} hitSlop={8} style={{ alignItems: "center", paddingVertical: 8 }}>
+        <Text style={{ color: t.textoSuave, fontSize: 14, textDecorationLine: "underline" }}>Eliminar mi cuenta</Text>
       </Pressable>
     </ScrollView>
   );
