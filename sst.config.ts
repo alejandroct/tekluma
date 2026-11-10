@@ -60,7 +60,7 @@ export default $config({
       architecture: "arm64",
       runtime,
       timeout: "5 minutes",
-      environment: { ...environment, SEMBRAR: produccion ? "0" : "1" },
+      environment,
       nodejs,
       copyFiles: [{ from: "apps/api/drizzle", to: "drizzle" }],
     });
