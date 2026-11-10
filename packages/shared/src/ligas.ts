@@ -86,7 +86,7 @@ export const TITULOS = [
   { desde: 700, nombre: "Residente de Obra" },
   { desde: 1500, nombre: "Supervisor" },
   { desde: 3000, nombre: "Gerente de Proyecto" },
-  { desde: 6000, nombre: "Ingeniero de la Norma" },
+  { desde: 6000, nombre: "Especialista de la Norma" },
 ] as const;
 
 export function tituloDe(puntos: number) {
