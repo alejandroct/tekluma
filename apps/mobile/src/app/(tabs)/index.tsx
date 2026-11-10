@@ -4,6 +4,7 @@ import { router, useFocusEffect } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import type { EstadoCupo, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, NumeroAnimado } from "@/components/Animaciones";
+import { Casillas, IconoChevron, IconoDuelo, IconoPreguntaDia, MarcoIcono } from "@/components/Iconos";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { obtenerDiaria } from "@/lib/diaria";
 import { paquetesLocales } from "@/lib/mazos";
@@ -52,16 +53,7 @@ export default function Hoy() {
       <Text style={[estilos.titulo, { color: t.texto }]}>Que la norma fragüe.</Text>
 
       {diaria && <TarjetaDiaria diaria={diaria} />}
-      <Animated.View entering={FadeInDown.delay(60).springify()}>
-        <BotonVivo onPress={() => router.push("/duelo/nuevo")} style={[estilos.diaria, { backgroundColor: t.superficie, borderColor: t.borde }]}>
-          <Text style={{ fontSize: 30 }}>⚔️</Text>
-          <View style={{ flex: 1, gap: 2 }}>
-            <Text style={{ color: t.ambar, fontWeight: "800", fontSize: 13 }}>DUELO</Text>
-            <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>Reta a un colega por WhatsApp</Text>
-          </View>
-          <Text style={{ color: t.ambar, fontSize: 22, fontWeight: "800" }}>›</Text>
-        </BotonVivo>
-      </Animated.View>
+      <AccesoDuelo />
 
       <Animated.View entering={FadeInDown.springify()} style={[estilos.tarjeta, { backgroundColor: t.navy }]}>
         <NumeroAnimado valor={total} style={estilos.numero} />
@@ -119,31 +111,57 @@ export default function Hoy() {
   );
 }
 
-/** Acceso a la pregunta del día: invita a jugar o, si ya jugó, a compartir. */
+/** Acceso a la pregunta del día: invita a jugar o, si ya jugó, muestra el resultado y anima a compartir. */
 function TarjetaDiaria({ diaria }: { diaria: PreguntaDiaria }) {
   const t = useTema();
   const { estado } = diaria;
-  const marcador = estado.intentos.map((o) => (o === estado.solucion?.correcta ? "✅" : "❌")).join("");
   return (
     <Animated.View entering={FadeInDown.springify()}>
-      <BotonVivo onPress={() => router.push("/diaria")} style={[estilos.diaria, { backgroundColor: t.superficie, borderColor: estado.terminada ? t.borde : t.ambar }]}>
-        <Text style={{ fontSize: 30 }}>{estado.terminada ? (estado.resuelta ? "🎯" : "🧱") : "❓"}</Text>
-        <View style={{ flex: 1, gap: 2 }}>
-          <Text style={{ color: t.ambar, fontWeight: "800", fontSize: 13 }}>
-            PREGUNTA DEL DÍA #{diaria.numero} · {diaria.norma}
+      <BotonVivo onPress={() => router.push("/diaria")} style={[estilos.acceso, { backgroundColor: t.superficie, borderColor: estado.terminada ? t.borde : t.ambar }]}>
+        <MarcoIcono borde={t.borde} fondo={t.fondo}>
+          <IconoPreguntaDia color={t.texto} acento={t.ambar} />
+        </MarcoIcono>
+        <View style={{ flex: 1, gap: 4 }}>
+          <Text style={[estilos.accesoEtiqueta, { color: t.textoSuave }]}>
+            PREGUNTA DEL DÍA <Text style={{ color: t.ambar }}>#{diaria.numero}</Text> · {diaria.norma}
           </Text>
-          <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>
-            {estado.terminada ? `${marcador}  ·  Reta a tu grupo` : `Juega y gana hasta +${diaria.premios[0]} monedas`}
-          </Text>
+          {estado.terminada ? (
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+              <Casillas intentos={estado.intentos} correcta={estado.solucion?.correcta} maximo={diaria.intentosMax} vacio={t.borde} />
+              <Text style={[estilos.accesoTitulo, { color: t.texto }]}>Reta a tu grupo</Text>
+            </View>
+          ) : (
+            <Text style={[estilos.accesoTitulo, { color: t.texto }]}>Juega y gana hasta {diaria.premios[0]} monedas</Text>
+          )}
         </View>
-        <Text style={{ color: t.ambar, fontSize: 22, fontWeight: "800" }}>›</Text>
+        <IconoChevron color={t.textoSuave} />
+      </BotonVivo>
+    </Animated.View>
+  );
+}
+
+function AccesoDuelo() {
+  const t = useTema();
+  return (
+    <Animated.View entering={FadeInDown.delay(60).springify()}>
+      <BotonVivo onPress={() => router.push("/duelo/nuevo")} style={[estilos.acceso, { backgroundColor: t.superficie, borderColor: t.borde }]}>
+        <MarcoIcono borde={t.borde} fondo={t.fondo}>
+          <IconoDuelo color={t.texto} acento={t.ambar} />
+        </MarcoIcono>
+        <View style={{ flex: 1, gap: 4 }}>
+          <Text style={[estilos.accesoEtiqueta, { color: t.textoSuave }]}>DUELO 1 VS 1</Text>
+          <Text style={[estilos.accesoTitulo, { color: t.texto }]}>Reta a un colega por WhatsApp</Text>
+        </View>
+        <IconoChevron color={t.textoSuave} />
       </BotonVivo>
     </Animated.View>
   );
 }
 
 const estilos = StyleSheet.create({
-  diaria: { flexDirection: "row", alignItems: "center", gap: 14, padding: 16, borderRadius: 18, borderWidth: 1.5, marginBottom: 8 },
+  acceso: { flexDirection: "row", alignItems: "center", gap: 14, paddingVertical: 14, paddingHorizontal: 14, borderRadius: 10, borderWidth: 1, marginBottom: 8 },
+  accesoEtiqueta: { fontSize: 11, fontWeight: "800", letterSpacing: 1.2 },
+  accesoTitulo: { fontSize: 16, fontWeight: "700" },
   contenedor: { padding: 20, gap: 8 },
   saludo: { fontSize: 15, fontWeight: "600" },
   titulo: { fontSize: 28, fontWeight: "800", letterSpacing: -0.5, marginBottom: 16 },
