@@ -5,6 +5,7 @@ import * as Haptics from "expo-haptics";
 import Animated, { FadeInDown, FadeInRight, ZoomIn } from "react-native-reanimated";
 import type { Duelo, ResultadoDuelo } from "@tekluma/shared";
 import { BotonVivo } from "@/components/Animaciones";
+import { Figura } from "@/components/Tarjeta";
 import { compartirOtros, compartirPorWhatsApp } from "@/lib/diaria";
 import { crearDuelo, jugarDuelo, textoReto, verDuelo } from "@/lib/duelos";
 import { sonarMoneda } from "@/lib/sonidos";
@@ -137,6 +138,7 @@ function Partida({ duelo, onFin }: { duelo: Duelo; onFin: (r: ResultadoDuelo) =>
           PREGUNTA {indice + 1}/{duelo.preguntas.length}
         </Text>
         <Text style={[estilos.pregunta, { color: t.texto }]}>{pregunta.pregunta}</Text>
+        {pregunta.imagenUrl && <Figura uri={pregunta.imagenUrl} />}
         {pregunta.opciones.map((texto, i) => {
           const activa = elegida === i;
           return (

@@ -61,6 +61,8 @@
 
       const leer = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
       const escribir = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+      // Solo imágenes embebidas (data:image/…) que vienen de la propia API.
+      const figura = (u) => (typeof u === "string" && /^data:image\/(jpeg|png|webp);base64,/.test(u) ? `<figure class="figura"><img src="${u}" alt="Figura de la pregunta" /></figure>` : "");
       const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
       const norma = (n) => (n === "RNE" ? "del RNE" : `de la ${n}`);
       const icono = (id, clase = "") => `<svg class="i ${clase}" aria-hidden="true"><use href="/iconos.svg?v=20261110#${id}"/></svg>`;
@@ -142,7 +144,7 @@
             <div><span class="etq">Tiempo</span><span class="valor reloj">${icono("i-reloj")}<span id="reloj">${segs()} s</span></span></div>
           </div>
           <div class="progreso" aria-hidden="true">${segmentos}</div>
-          <p class="pregunta">${esc(p.pregunta)}</p>
+          <p class="pregunta">${esc(p.pregunta)}</p>${figura(p.imagenUrl)}
           <div class="opciones">${p.opciones
             .map((t, k) => `<button class="opcion" data-k="${k}"><span class="letra">${"ABCDEF"[k]}</span><span class="texto">${esc(t)}</span></button>`)
             .join("")}</div>`;

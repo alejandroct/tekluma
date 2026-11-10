@@ -134,7 +134,12 @@ export async function verDuelo(codigo: string, userId: string | null): Promise<D
     norma: duelo.norma,
     retador: nombreVisible(duelo.retador),
     soyRetador: userId === duelo.creatorId,
-    preguntas: duelo.preguntas.map((p) => ({ id: p.id, pregunta: p.contenido.pregunta, opciones: p.contenido.opciones })),
+    preguntas: duelo.preguntas.map((p) => ({
+      id: p.id,
+      pregunta: p.contenido.pregunta,
+      ...(p.contenido.imagenUrl ? { imagenUrl: p.contenido.imagenUrl } : {}),
+      opciones: p.contenido.opciones,
+    })),
     ...(yaJugado ? { resultado: await resultado(duelo, userId) } : {}),
   };
 }

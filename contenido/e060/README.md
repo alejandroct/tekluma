@@ -6,8 +6,8 @@ Formato: `tekluma-mazos/1` (ver `packages/shared/src/importacion.ts`). Se cargan
 | Archivo | Contenido |
 |---|---|
 | `00-e060-articulos.json` | Los 1 621 artículos de los 22 capítulos, con texto literal y página del PDF. Sin mazos. |
-| `01-requisitos-generales.json` | Cap. 1 · 8 tarjetas (alcance, responsabilidades, planos, Cuaderno de Obra) |
-| `02-definiciones.json` | Cap. 2 · 16 tarjetas (glosario esencial) |
+| `01-requisitos-generales.json` | Cap. 1 · 23 tarjetas, 16 de opción múltiple (alcance, responsabilidades, planos, Cuaderno de Obra) |
+| `02-definiciones.json` | Cap. 2 · 57 tarjetas, 42 de opción múltiple; 11 con figura de otros capítulos para la notación (ℓdg, Aoh, Aj, A2, hx…) |
 | `03-materiales.json` | Cap. 3 · 19 tarjetas |
 | `04-durabilidad.json` | Cap. 4 · 17 tarjetas (Tablas 4.1 a 4.5) |
 | `05-calidad-concreto.json` | Cap. 5 · 23 tarjetas (f′cr y Tablas 5.1 a 5.3, muestreo, aceptación, núcleos, curado) |
@@ -29,7 +29,7 @@ Formato: `tekluma-mazos/1` (ver `packages/shared/src/importacion.ts`). Se cargan
 | `21-diseno-sismico.json` | Cap. 21 · 65 tarjetas (vigas, columnas y nudos por sistema, columna fuerte, muros y elementos de borde, ductilidad limitada; 11 figuras) |
 | `22-concreto-simple.json` | Cap. 22 · 19 tarjetas (límites de uso, Mn, Pn, Vn, muros, zapatas, concreto ciclópeo) |
 
-Los 22 capítulos tienen mazo (555 tarjetas). Orden sugerido: primero `00` (carga toda la norma como fuente), luego los capítulos; cada mazo se ubica en el catálogo según su número de capítulo (`orden` = 100 + capítulo). Cada archivo de capítulo trae también sus artículos, así que se puede importar solo.
+Los 22 capítulos tienen mazo (611 tarjetas). Orden sugerido: primero `00` (carga toda la norma como fuente), luego los capítulos; cada mazo se ubica en el catálogo según su número de capítulo (`orden` = 100 + capítulo). Cada archivo de capítulo trae también sus artículos, así que se puede importar solo.
 
 ## Cómo se hicieron
 

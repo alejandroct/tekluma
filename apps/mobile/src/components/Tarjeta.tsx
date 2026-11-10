@@ -14,7 +14,8 @@ type Props = {
  * Figura de la norma (gráfico o tabla extraída del PDF). Va embebida en el paquete, así que se
  * cifra con él; se muestra sobre blanco para que se lea igual en modo oscuro.
  */
-function Figura({ uri }: { uri: string }) {
+/** Figura de la tarjeta sobre fondo blanco, con su proporción real. */
+export function Figura({ uri }: { uri: string }) {
   const t = useTema();
   const [proporcion, setProporcion] = useState(4 / 3);
   return (

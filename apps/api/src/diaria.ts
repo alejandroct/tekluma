@@ -123,6 +123,7 @@ export function vistaPublica(p: Pregunta, estado: EstadoDiaria): PreguntaDiaria 
     fecha: p.day,
     norma: p.norma,
     pregunta: p.contenido.pregunta,
+    ...(p.contenido.imagenUrl ? { imagenUrl: p.contenido.imagenUrl } : {}),
     opciones: p.contenido.opciones,
     intentosMax: INTENTOS_MAX,
     premios: PREMIOS,

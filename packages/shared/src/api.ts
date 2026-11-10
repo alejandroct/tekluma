@@ -112,6 +112,8 @@ export const preguntaDiariaSchema = z.object({
   fecha: z.iso.date(),
   norma: z.string(),
   pregunta: z.string(),
+  /** Figura de la pregunta (data URI), cuando la tarjeta la tiene. */
+  imagenUrl: z.string().optional(),
   opciones: z.array(z.string()),
   intentosMax: z.number().int().positive(),
   /** Monedas por acertar al 1.er, 2.º y 3.er intento. */
@@ -130,7 +132,7 @@ export const intentoDiariaSchema = z.object({
 /** Duelo 1 vs 1: 5 preguntas de opción múltiple, un intento cada una; gana quien acierta más y, a igualdad, el más rápido. */
 export const PREGUNTAS_DUELO = 5;
 
-export type PreguntaDuelo = { id: string; pregunta: string; opciones: string[] };
+export type PreguntaDuelo = { id: string; pregunta: string; imagenUrl?: string; opciones: string[] };
 export type JugadaDuelo = { nombre: string; aciertos: number; segundos: number; esRetador: boolean; soyYo: boolean };
 
 export type Duelo = {

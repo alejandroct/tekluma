@@ -12,6 +12,7 @@ import Animated, {
 } from "react-native-reanimated";
 import type { EstadoDiaria, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, GananciaFlotante } from "@/components/Animaciones";
+import { Figura } from "@/components/Tarjeta";
 import { compartirOtros, compartirPorWhatsApp, faltaParaLaSiguiente, intentarDiaria, obtenerDiaria, textoCompartir } from "@/lib/diaria";
 import { sonarMoneda } from "@/lib/sonidos";
 import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
@@ -95,6 +96,7 @@ export default function Diaria() {
       <Animated.Text entering={FadeInDown.springify()} style={[estilos.pregunta, { color: t.texto }]}>
         {pregunta.pregunta}
       </Animated.Text>
+      {pregunta.imagenUrl && <Figura uri={pregunta.imagenUrl} />}
 
       {!estado.terminada && (
         <Text style={{ color: t.textoSuave, fontSize: 14 }}>

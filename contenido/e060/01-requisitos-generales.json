@@ -290,6 +290,291 @@
        "extracto": "…deberán presentar los estudios en los que se basa su diseño a SENCICO…"
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién debe firmar los cálculos, planos y especificaciones del proyecto estructural?",
+      "opciones": [
+       "Un arquitecto colegiado",
+       "Un Ingeniero Civil Colegiado",
+       "El constructor",
+       "La Supervisión"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.2.1.2",
+       "extracto": "Los cálculos, planos, detalles y especificaciones técnicas deberán llevar la firma de un Ingeniero Civil Colegiado…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién puede aprobar una modificación a los planos estructurales firmados?",
+      "opciones": [
+       "El Ingeniero Residente",
+       "La Supervisión",
+       "Solo el Ingeniero Civil Colegiado que los firma",
+       "El propietario"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "1.2.1.2",
+       "extracto": "…el cual será el único autorizado a aprobar cualquier modificación a los mismos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si la E.060 contradice a otra norma que ella misma cita, ¿qué prevalece?",
+      "opciones": [
+       "La E.060",
+       "La norma citada",
+       "La más exigente de las dos",
+       "Lo que decida el constructor"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "1.1.3",
+       "extracto": "Lo establecido en esta Norma tiene prioridad cuando está en discrepancia con otras normas a las que ella hace referencia."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién designa al Ingeniero Residente de la obra?",
+      "opciones": [
+       "El propietario",
+       "El Constructor",
+       "La Supervisión",
+       "SENCICO"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.2.3.1",
+       "extracto": "Para la ejecución de la obra, el Constructor designará al Ingeniero Civil Colegiado que actuará como Ingeniero Residente de la Obra y que lo representará en ella."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién selecciona a la Supervisión de la obra?",
+      "opciones": [
+       "El Constructor",
+       "El proyectista",
+       "El propietario",
+       "La municipalidad"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "1.2.4.1",
+       "extracto": "La Supervisión será seleccionada por el propietario para representarlo ante el Constructor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Dónde se registran las ocurrencias técnicas de la obra?",
+      "opciones": [
+       "En el Cuaderno de Obra",
+       "En los planos de replanteo",
+       "En el expediente municipal",
+       "En el acta de entrega"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "1.2.3.3",
+       "extracto": "Las ocurrencias técnicas de la obra se registrarán en el Cuaderno de Obra, de acuerdo a lo indicado en 1.2.4.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A partir de qué temperaturas ambiente debe registrarse en el Cuaderno de Obra la temperatura del concreto y su protección?",
+      "opciones": [
+       "Menor de 10 °C o mayor de 30 °C",
+       "Menor de 5 °C o mayor de 35 °C",
+       "Menor de 0 °C o mayor de 40 °C",
+       "Siempre, sin importar la temperatura"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.2.4.4",
+       "extracto": "(i) Cuando la temperatura ambiente sea menor que 5º C o mayor que 35º C, debe llevarse un registro de las temperaturas del concreto y de la protección dada al concreto durante su colocación y curado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estos datos NO exige la E.060 como información mínima de los planos estructurales?",
+      "opciones": [
+       "Las normas empleadas",
+       "La carga viva usada en el diseño",
+       "El f′c especificado",
+       "El costo unitario del concreto"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "1.2.2.4",
+       "extracto": "(a) Relación de las Normas empleadas en el diseño. (b) Carga viva y otras cargas utilizadas en el diseño… (c) Resistencia especificada a la compresión del concreto…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una obra postensada, ¿qué dato adicional deben indicar los planos?",
+      "opciones": [
+       "La marca del gato hidráulico",
+       "La resistencia mínima del concreto al aplicar el postensado",
+       "El peso de cada torón",
+       "El nombre del operador del gato"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.2.2.4",
+       "extracto": "(j) Resistencia mínima a compresión del concreto en el momento de aplicación del postensado. (k) Secuencia de aplicación de las fuerzas en los tendones de postensado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Rige la E.060 una losa de concreto apoyada sobre el suelo que no transmite cargas de la estructura?",
+      "opciones": [
+       "Sí, siempre",
+       "No",
+       "Solo si tiene refuerzo",
+       "Solo en zona sísmica 4"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.1.6",
+       "extracto": "Esta Norma no rige el diseño y la construcción de losas apoyadas en el suelo, a menos que la losa transmita cargas verticales o laterales desde otras partes de la estructura al suelo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué parte de los pilotes y cajones de cimentación no controla la E.060 (salvo lo del Cap. 21)?",
+      "opciones": [
+       "La que queda enterrada en el suelo",
+       "El cabezal",
+       "El refuerzo longitudinal",
+       "Ninguna, los controla completos"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "1.1.5",
+       "extracto": "Esta Norma no controla el diseño e instalación de las porciones de pilotes de concreto, pilas excavadas y cajones de cimentación que quedan enterrados en el suelo, excepto en lo dispuesto en el Capítulo 21."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Una losa vaciada sobre plancha colaborante de acero considerada compuesta: ¿qué rige la E.060?",
+      "opciones": [
+       "Todo su diseño",
+       "Solo el concreto usado, según los Caps. 1 a 7",
+       "Nada",
+       "Solo el refuerzo de temperatura"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.1.8",
+       "extracto": "Esta Norma no rige para el diseño de losas de concreto estructural vaciadas sobre moldes permanentes de acero consideradas como compuestas. El concreto usado en la construcción de tales losas debe estar regido por los Capítulos 1 a 7 de esta Norma…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Ante quién se presenta un sistema constructivo no convencional para su aprobación?",
+      "opciones": [
+       "El Colegio de Ingenieros",
+       "SENCICO, que propone su aprobación al Ministerio de Vivienda",
+       "La municipalidad",
+       "INDECOPI"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.3.1",
+       "extracto": "…deberán presentar los estudios en los que se basa su diseño a SENCICO, el cual luego de la evaluación pertinente, propondrá al Ministerio de Vivienda, Construcción y Saneamiento su aprobación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para silos, chimeneas o tanques, ¿cómo se aplica la E.060?",
+      "opciones": [
+       "No se aplica",
+       "En lo que sea aplicable",
+       "Solo para el refuerzo",
+       "Solo en la cimentación"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.1.4",
+       "extracto": "Para estructuras especiales tales como arcos, tanques, reservorios, depósitos, silos, chimeneas y estructuras resistentes a explosiones, las disposiciones de esta Norma regirán en lo que sean aplicables."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué norma fija las cargas de diseño que usa la E.060?",
+      "opciones": [
+       "E.050",
+       "E.020 (y la E.030 para el sismo)",
+       "E.070",
+       "E.090"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "1.2.2.2",
+       "extracto": "La determinación de las cargas actuantes se hará de acuerdo a lo indicado en la NTE E.020 Cargas y en la NTE E.030 Diseño Sismorresistente."
+      }
+     ]
     }
    ]
   }
