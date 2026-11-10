@@ -7,8 +7,8 @@ import { IconoAlerta, IconoCheck } from "./iconos";
 export function Logo({ alto = 22 }: { alto?: number }) {
   return (
     <picture className="logo">
-      <source srcSet="/logo-oscuro.svg" media="(prefers-color-scheme: dark)" />
-      <img src="/logo.svg" alt="Tekluma" height={alto} width={Math.round((alto * 1075) / 280)} />
+      <source srcSet="/logo-oscuro.svg?v=20261110" media="(prefers-color-scheme: dark)" />
+      <img src="/logo.svg?v=20261110" alt="Tekluma" height={alto} width={Math.round((alto * 1075) / 280)} />
     </picture>
   );
 }

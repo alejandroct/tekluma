@@ -108,10 +108,29 @@ export default $config({
       domain: { name: `admin.${dominio}`, dns },
       build: { command: "pnpm build", output: "dist" },
       environment: { VITE_API_URL: router.url },
+      assets: {
+        fileOptions: [
+          // Vite pone hash en el nombre de lo que está en assets/: se puede guardar para siempre.
+          { files: "**", cacheControl: "public,max-age=0,must-revalidate" },
+          { files: "assets/**", cacheControl: "max-age=31536000,public,immutable" },
+          { files: "**/*.html", cacheControl: "max-age=0,no-cache,no-store,must-revalidate" },
+        ],
+      },
     });
 
     // Landing y páginas legales (/terminos, /privacidad), enlazadas desde la app y las tiendas.
-    const web = new sst.aws.StaticSite("Web", { path: "apps/web", domain: { name: dominio, dns } });
+    // Sin build ni hashes en los nombres: el navegador revalida en cada visita (304 si no cambió),
+    // para que un rediseño nunca quede con estilos viejos en caché.
+    const web = new sst.aws.StaticSite("Web", {
+      path: "apps/web",
+      domain: { name: dominio, dns },
+      assets: {
+        fileOptions: [
+          { files: "**", cacheControl: "public,max-age=0,must-revalidate" },
+          { files: "**/*.html", cacheControl: "max-age=0,no-cache,no-store,must-revalidate" },
+        ],
+      },
+    });
 
     return { web: web.url, api: router.url, admin: admin.url, lambda: api.url, remitente: correo.sender };
   },
