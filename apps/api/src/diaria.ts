@@ -110,11 +110,28 @@ async function racha(userId: string, hoy: string) {
   return n;
 }
 
+/** Below this many finished players the percentage is not shown: it would not be credible. */
+const MIN_JUGADORES_ESTADISTICA = 10;
+
+/** Share of today's finished players who solved it on the first try (for the share text). */
+async function conEstadistica(p: Pregunta, estado: EstadoDiaria): Promise<EstadoDiaria> {
+  if (!estado.terminada) return estado;
+  const [fila] = await db
+    .select({
+      total: sql<number>`count(*)::int`,
+      primera: sql<number>`count(*) filter (where ${dailyAnswers.solved} and jsonb_array_length(${dailyAnswers.guesses}) = 1)::int`,
+    })
+    .from(dailyAnswers)
+    .where(and(eq(dailyAnswers.day, p.day), sql`${dailyAnswers.finishedAt} is not null`));
+  if (!fila || fila.total < MIN_JUGADORES_ESTADISTICA) return estado;
+  return { ...estado, aPrimera: Math.round((100 * fila.primera) / fila.total) };
+}
+
 async function estadoUsuario(p: Pregunta, userId: string): Promise<EstadoDiaria> {
   const [fila] = await db.select().from(dailyAnswers).where(and(eq(dailyAnswers.userId, userId), eq(dailyAnswers.day, p.day)));
   const estado = evaluar(p, fila?.guesses ?? []);
   const monedas = estado.resuelta ? (PREMIOS[estado.intentos.length - 1] ?? 0) : 0;
-  return { ...estado, racha: await racha(userId, p.day), monedas };
+  return conEstadistica(p, { ...estado, racha: await racha(userId, p.day), monedas });
 }
 
 export function vistaPublica(p: Pregunta, estado: EstadoDiaria): PreguntaDiaria {
@@ -158,8 +175,8 @@ export async function intentar(userId: string | null, numero: number, opcion: nu
 
   if (!userId) {
     const antes = evaluar(p, [...new Set(previas)].filter((o) => o < p.contenido.opciones.length).slice(0, INTENTOS_MAX));
-    if (antes.terminada) return antes;
-    return evaluar(p, antes.intentos.includes(opcion) ? antes.intentos : [...antes.intentos, opcion]);
+    if (antes.terminada) return conEstadistica(p, antes);
+    return conEstadistica(p, evaluar(p, antes.intentos.includes(opcion) ? antes.intentos : [...antes.intentos, opcion]));
   }
 
   await db.transaction(async (tx) => {

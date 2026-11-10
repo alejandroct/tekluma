@@ -104,6 +104,8 @@ export const estadoDiariaSchema = z.object({
   racha: z.number().int().optional(),
   /** Monedas ganadas al resolverla; solo con sesión. */
   monedas: z.number().int().optional(),
+  /** % de quienes ya la terminaron hoy que la acertaron al primer intento; solo con suficientes jugadores. */
+  aPrimera: z.number().int().min(0).max(100).optional(),
 });
 export type EstadoDiaria = z.infer<typeof estadoDiariaSchema>;
 

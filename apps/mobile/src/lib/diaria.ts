@@ -11,11 +11,40 @@ export const intentarDiaria = (numero: number, opcion: number) =>
   api<EstadoDiaria>("/diaria/intento", { method: "POST", body: JSON.stringify({ numero, opcion }) });
 
 /** Resultado sin spoilers, pensado para grupos de WhatsApp. */
+/**
+ * Text to share after playing. It carries the question and its options (so the group debates in
+ * the chat before opening the link), the result without revealing the answer, a stat that
+ * provokes and a clear call to play. Keep in sync with textoCompartir in apps/web/diaria.html.
+ */
 export function textoCompartir(p: PreguntaDiaria, estado: EstadoDiaria) {
+  const corta = (t: string) => (t.length > 70 ? `${t.slice(0, 67).trimEnd()}…` : t);
   const casillas = estado.intentos.map((o) => (o === estado.solucion?.correcta ? "✅" : "❌")).join("");
-  const marcador = estado.resuelta ? `${estado.intentos.length}/${p.intentosMax}` : `X/${p.intentosMax}`;
-  const racha = estado.racha && estado.racha > 1 ? `\n🔥 Racha: ${estado.racha} días` : "";
-  return `Tekluma #${p.numero} · ${p.norma} 🏗️\n${casillas} ${marcador}${racha}\n¿Tú la sacas? ${WEB_URL}/diaria?n=${p.numero}`;
+  const n = estado.intentos.length;
+  const resultado = !estado.resuelta
+    ? `${casillas} Hoy me ganó la norma 😅`
+    : n === 1
+      ? `${casillas} La saqué a la primera 💪`
+      : `${casillas} La saqué al ${n}.º intento`;
+  const dato =
+    estado.aPrimera === undefined
+      ? ""
+      : estado.aPrimera <= 50
+        ? `\n📊 Solo el ${estado.aPrimera} % la acierta a la primera`
+        : `\n📊 El ${estado.aPrimera} % la acierta a la primera. ¿Y tú?`;
+  const racha = estado.racha && estado.racha > 1 ? `\n🔥 Llevo ${estado.racha} días seguidos` : "";
+  const figura = p.imagenUrl ? " 📐 (con figura)" : "";
+  return [
+    `🏗️ *PREGUNTA DEL DÍA #${p.numero}* · ${p.norma}`,
+    "",
+    `*${p.pregunta}*${figura}`,
+    "",
+    ...p.opciones.map((o, i) => `${"ABCDEF"[i]}) ${corta(o)}`),
+    "",
+    `${resultado}${dato}${racha}`,
+    "",
+    "👉 ¿Cuál marcarías? Respóndela gratis, sin instalar nada:",
+    `${WEB_URL}/diaria?n=${p.numero}`,
+  ].join("\n");
 }
 
 export async function compartirPorWhatsApp(texto: string) {

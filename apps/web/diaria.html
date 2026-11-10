@@ -101,10 +101,26 @@
         pintar();
       }
 
+      // Igual que textoCompartir en apps/mobile/src/lib/diaria.ts.
       function textoCompartir() {
         const e = p.estado;
-        const marcador = e.resuelta ? `${e.intentos.length}/${p.intentosMax}` : `X/${p.intentosMax}`;
-        return `Tekluma #${p.numero} · ${p.norma} 🏗️\n${casillas(e)} ${marcador}\n¿Tú la sacas? ${location.origin}/diaria?n=${p.numero}`;
+        const corta = (t) => (t.length > 70 ? `${t.slice(0, 67).trimEnd()}…` : t);
+        const n = e.intentos.length;
+        const resultado = !e.resuelta
+          ? `${casillas(e)} Hoy me ganó la norma 😅`
+          : n === 1 ? `${casillas(e)} La saqué a la primera 💪` : `${casillas(e)} La saqué al ${n}.º intento`;
+        const dato = e.aPrimera === undefined ? ""
+          : e.aPrimera <= 50 ? `\n📊 Solo el ${e.aPrimera} % la acierta a la primera`
+          : `\n📊 El ${e.aPrimera} % la acierta a la primera. ¿Y tú?`;
+        const figura = p.imagenUrl ? " 📐 (con figura)" : "";
+        return [
+          `🏗️ *PREGUNTA DEL DÍA #${p.numero}* · ${p.norma}`, "",
+          `*${p.pregunta}*${figura}`, "",
+          ...p.opciones.map((o, i) => `${"ABCDEF"[i]}) ${corta(o)}`), "",
+          `${resultado}${dato}`, "",
+          "👉 ¿Cuál marcarías? Respóndela gratis, sin instalar nada:",
+          `${location.origin}/diaria?n=${p.numero}`,
+        ].join("\n");
       }
 
       function pintar() {
