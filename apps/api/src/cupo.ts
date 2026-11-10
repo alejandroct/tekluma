@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto";
 import { and, count, desc, eq, sql } from "drizzle-orm";
 import type { EstadoCupo, EstadoRecompensas, ReglasCupo } from "@tekluma/shared";
 import { db, type Db } from "./db/client";
+import { sumarPuntos } from "./liga";
 import { adRewards, cards, coinTransactions, dailyCardViews, dailyQuotas, users } from "./db/schema";
 
 const num = (valor: string | undefined, porDefecto: number) => (valor ? Number(valor) : porDefecto);
@@ -90,7 +91,11 @@ export async function consumirTarjeta(userId: string, cardId: string) {
       .where(and(eq(dailyCardViews.userId, userId), eq(dailyCardViews.day, day), eq(dailyCardViews.cardId, cardId)));
     const antes = await leerEstado(tx, userId, day);
     if (!yaVista && !antes.premium && antes.restantes === 0) return { permitido: false, estado: antes };
-    if (!yaVista) await tx.insert(dailyCardViews).values({ userId, day, cardId });
+    if (!yaVista) {
+      await tx.insert(dailyCardViews).values({ userId, day, cardId });
+      // 1 league point per different card studied today (capped per day).
+      await sumarPuntos(tx, userId, "review", `${userId}:${day}:${cardId}`, 1);
+    }
     return { permitido: true, estado: await leerEstado(tx, userId, day) };
   });
 }

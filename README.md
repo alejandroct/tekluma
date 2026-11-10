@@ -47,6 +47,13 @@ de los stages que no son producción, el código también se imprime en consola.
   Pasos de configuración de App Store, RevenueCat y AdMob en [docs/configurar-pagos.md](docs/configurar-pagos.md).
 - Todas las reglas se ajustan con variables `CUPO_*` (ver `apps/api/.env.example`).
 
+## Crecimiento: pregunta del día, duelos y ligas
+
+- **Pregunta del día** (`/diaria`): una pregunta de opción múltiple al día, igual para todos, 3 intentos. Con cuenta da monedas (10/5/3) y racha; sin cuenta se juega en `tekluma.app/diaria`. El resultado se comparte sin spoilers (`❌✅ 2/3`).
+- **Duelos** (`/duelos`): 5 preguntas, un intento cada una, gana quien acierta más y luego el más rápido. Se crean desde la app y el rival juega en `tekluma.app/duelo?c=CÓDIGO` sin instalar nada.
+- **Ligas** (`/liga`): puntos de obra por repasar (1 por tarjeta, máx. 20/día), pregunta del día (10/7/5) y duelos (2 por acierto, máx. 30/día), con tope de 60/día para que Premium no compre el ranking. Divisiones semanales de Adobe a Postensado (sube el 20 % de arriba, baja el 20 % de abajo, calculado al empezar la semana), rankings por universidad y región (suman sus 20 mejores) y cargos de obra por puntos acumulados.
+- Solo las tarjetas **publicadas de opción múltiple** de mazos gratuitos alimentan la pregunta del día y los duelos.
+
 ## Dominios
 
 | Stage | Web y legales | API | Panel | Remitente |

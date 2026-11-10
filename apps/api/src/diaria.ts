@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { and, desc, eq, gte, notInArray, sql } from "drizzle-orm";
 import type { ContenidoTarjeta, EstadoDiaria, PreguntaDiaria, SolucionDiaria } from "@tekluma/shared";
 import { fechaLima } from "./cupo";
+import { sumarPuntos } from "./liga";
 import { db } from "./db/client";
 import { articles, cardCitations, cards, coinTransactions, dailyAnswers, dailyQuestions, decks, standards } from "./db/schema";
 
@@ -10,6 +11,9 @@ const LANZAMIENTO = "2026-11-01";
 export const INTENTOS_MAX = 3;
 /** Coins for solving on the 1st, 2nd or 3rd try. */
 export const PREMIOS = (process.env.MONEDAS_DIARIA ?? "10,5,3").split(",").map(Number);
+/** League points: by attempt when solved; playing and failing still counts a little. */
+const PUNTOS = [10, 7, 5];
+const PUNTOS_SIN_RESOLVER = 2;
 /** A card is not repeated as the daily question within this many days. */
 const SIN_REPETIR_DIAS = 120;
 
@@ -170,6 +174,10 @@ export async function intentar(userId: string | null, numero: number, opcion: nu
         target: [dailyAnswers.userId, dailyAnswers.day],
         set: { guesses: despues.intentos, solved: despues.resuelta, finishedAt: despues.terminada ? new Date() : null },
       });
+    if (despues.terminada) {
+      const puntos = despues.resuelta ? (PUNTOS[despues.intentos.length - 1] ?? 0) : PUNTOS_SIN_RESOLVER;
+      await sumarPuntos(tx, userId, "daily_question", `${userId}:${p.day}`, puntos);
+    }
     const premio = PREMIOS[despues.intentos.length - 1] ?? 0;
     if (despues.resuelta && premio > 0) {
       await tx

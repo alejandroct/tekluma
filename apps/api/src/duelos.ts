@@ -10,6 +10,7 @@ import {
 } from "@tekluma/shared";
 import { db } from "./db/client";
 import { cards, decks, duelPlays, duels, standards, users } from "./db/schema";
+import { sumarPuntos } from "./liga";
 
 export class DueloError extends Error {
   constructor(
@@ -167,6 +168,8 @@ export async function jugarDuelo(
     .values({ duelId: duelo.id, userId, name: nombre, answers: datos.respuestas, correct, seconds: segundos })
     .onConflictDoNothing()
     .returning({ id: duelPlays.id });
+  // 2 league points per correct answer (the daily cap limits how many duels count).
+  if (jugada && userId) await sumarPuntos(db, userId, "duel", `${userId}:${duelo.id}`, correct * 2);
   return resultado(duelo, userId, jugada?.id);
 }
 

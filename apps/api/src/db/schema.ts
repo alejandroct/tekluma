@@ -19,8 +19,11 @@ import {
   DECK_ACCESS,
   DISCIPLINES,
   EDITORIAL_STATUSES,
+  DIVISIONES,
   STAFF_ROLES,
+  XP_SOURCES,
   type ContenidoTarjeta,
+  type Division,
   type PaqueteMazo,
 } from "@tekluma/shared";
 
@@ -33,6 +36,11 @@ export const editorialStatusEnum = pgEnum("editorial_status", EDITORIAL_STATUSES
 export const staffRoleEnum = pgEnum("staff_role", STAFF_ROLES);
 export const deckAccessEnum = pgEnum("deck_access", DECK_ACCESS);
 export const coinReasonEnum = pgEnum("coin_reason", COIN_REASONS);
+export const xpSourceEnum = pgEnum("xp_source", XP_SOURCES);
+export const divisionEnum = pgEnum(
+  "division",
+  DIVISIONES.map((d) => d.codigo) as [Division, ...Division[]],
+);
 
 // ───────────── Users (tables managed by Better Auth, see src/auth.ts) ─────────────
 
@@ -48,6 +56,9 @@ export const users = pgTable("users", {
   staffRole: staffRoleEnum("staff_role"),
   /** End of the current subscription according to RevenueCat (null = not premium). */
   premiumUntil: timestamp("premium_until", { withTimezone: true }),
+  /** League affiliation (codes from @tekluma/shared UNIVERSIDADES / REGIONES). */
+  university: text("university"),
+  region: text("region"),
   createdAt: createdAt(),
   updatedAt: updatedAt(),
 });
@@ -322,6 +333,39 @@ export const duelPlays = pgTable(
     createdAt: createdAt(),
   },
   (t) => [index("duel_plays_duel_idx").on(t.duelId), uniqueIndex("duel_plays_user_uq").on(t.duelId, t.userId)],
+);
+
+// ───────────── Leagues ─────────────
+
+/** "Puntos de obra" ledger; the reference makes each award idempotent. */
+export const xpEvents = pgTable(
+  "xp_events",
+  {
+    id: id(),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    day: date("day").notNull(),
+    source: xpSourceEnum("source").notNull(),
+    reference: text("reference").notNull(),
+    points: integer("points").notNull(),
+    createdAt: createdAt(),
+  },
+  (t) => [index("xp_events_user_day_idx").on(t.userId, t.day), index("xp_events_day_idx").on(t.day), uniqueIndex("xp_events_ref_uq").on(t.source, t.reference)],
+);
+
+/** Division of each user per week (Monday in Lima), decided when the week starts for them. */
+export const leagueMemberships = pgTable(
+  "league_memberships",
+  {
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    week: date("week").notNull(),
+    division: divisionEnum("division").notNull(),
+    createdAt: createdAt(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.week] }), index("league_memberships_week_idx").on(t.week, t.division)],
 );
 
 // ───────────── Progress (FSRS) ─────────────

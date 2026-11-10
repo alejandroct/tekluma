@@ -13,6 +13,10 @@ export default function TabsLayout() {
         <NativeTabs.Trigger.Label>Mazos</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="rectangle.stack.fill" md="style" />
       </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="liga">
+        <NativeTabs.Trigger.Label>Liga</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon sf="trophy.fill" md="emoji_events" />
+      </NativeTabs.Trigger>
       <NativeTabs.Trigger name="recompensas">
         <NativeTabs.Trigger.Label>Monedas</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="gift.fill" md="redeem" />

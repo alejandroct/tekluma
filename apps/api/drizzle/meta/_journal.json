@@ -22,6 +22,13 @@
       "when": 1794280025285,
       "tag": "0002_duels",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1794280548397,
+      "tag": "0003_ligas",
+      "breakpoints": true
     }
   ]
 }
