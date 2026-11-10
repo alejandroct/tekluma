@@ -52,6 +52,16 @@ export default function Hoy() {
       <Text style={[estilos.titulo, { color: t.texto }]}>Que la norma fragüe.</Text>
 
       {diaria && <TarjetaDiaria diaria={diaria} />}
+      <Animated.View entering={FadeInDown.delay(60).springify()}>
+        <BotonVivo onPress={() => router.push("/duelo/nuevo")} style={[estilos.diaria, { backgroundColor: t.superficie, borderColor: t.borde }]}>
+          <Text style={{ fontSize: 30 }}>⚔️</Text>
+          <View style={{ flex: 1, gap: 2 }}>
+            <Text style={{ color: t.ambar, fontWeight: "800", fontSize: 13 }}>DUELO</Text>
+            <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>Reta a un colega por WhatsApp</Text>
+          </View>
+          <Text style={{ color: t.ambar, fontSize: 22, fontWeight: "800" }}>›</Text>
+        </BotonVivo>
+      </Animated.View>
 
       <Animated.View entering={FadeInDown.springify()} style={[estilos.tarjeta, { backgroundColor: t.navy }]}>
         <NumeroAnimado valor={total} style={estilos.numero} />

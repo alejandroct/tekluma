@@ -47,3 +47,45 @@ table { border-collapse: collapse; width: 100%; font-size: 15px; display: block;
 th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--borde); vertical-align: top; }
 footer { border-top: 1px solid var(--borde); padding: 24px 0 40px; color: var(--suave); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
 footer a { color: var(--suave); }
+
+/* ── Juegos: pregunta del día y duelo ── */
+.juego { padding: 8px 0 40px; display: flex; flex-direction: column; gap: 14px; }
+.cab { display: flex; justify-content: space-between; align-items: center; }
+.num { color: var(--ambar); font-weight: 800; letter-spacing: 0.3px; }
+.puntos { display: flex; gap: 6px; }
+.punto { width: 12px; height: 12px; border-radius: 6px; background: var(--borde); }
+.pregunta { font-size: clamp(22px, 5.5vw, 30px); font-weight: 800; line-height: 1.25; letter-spacing: -0.3px; margin: 4px 0; }
+.ayuda { color: var(--suave); margin: 0; font-size: 15px; }
+.opcion { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; font: inherit; font-size: 17px; font-weight: 600;
+  padding: 16px; border-radius: 16px; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto); cursor: pointer;
+  transition: transform 0.12s ease, background 0.2s; }
+.opcion:active { transform: scale(0.97); }
+.opcion:disabled { cursor: default; }
+.opcion .letra { color: var(--ambar); font-weight: 800; width: 18px; }
+.opcion.mal { background: #d64545; border-color: #d64545; color: #fff; animation: sacudir 0.3s; }
+.opcion.bien { background: #1f9d55; border-color: #1f9d55; color: #fff; }
+.opcion.mal .letra, .opcion.bien .letra { color: #fff; }
+.opcion.apagada { opacity: 0.5; }
+@keyframes sacudir { 25% { transform: translateX(-8px); } 50% { transform: translateX(8px); } 75% { transform: translateX(-4px); } }
+.resultado { background: var(--navy); color: #fff; border-radius: 24px; padding: 22px; display: flex; flex-direction: column; gap: 10px; animation: aparecer 0.35s ease-out; }
+@media (prefers-color-scheme: dark) { .resultado { background: var(--superficie); border: 1px solid var(--borde); } }
+@keyframes aparecer { from { transform: scale(0.92); opacity: 0; } }
+.resultado h2 { margin: 0; font-size: 26px; }
+.marcador { font-size: 28px; letter-spacing: 3px; }
+.cita { background: rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 14px; font-size: 15px; line-height: 1.45; color: #dfe5ee; }
+.cita b { color: var(--ambar); }
+.btn { display: block; text-align: center; text-decoration: none; font-weight: 800; font-size: 17px; padding: 15px; border-radius: 14px; border: 0; cursor: pointer; font-family: inherit; }
+.wa { background: #25d366; color: #fff; }
+.app { background: var(--ambar); color: var(--navy); }
+.suave { color: #a9b7cc; text-align: center; font-size: 14px; margin: 0; }
+.aviso { background: var(--superficie); border: 1px solid var(--borde); border-radius: 16px; padding: 16px; }
+.campo { font: inherit; font-size: 17px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto); width: 100%; }
+.progreso { display: flex; gap: 6px; flex: 1; }
+.segmento { flex: 1; height: 6px; border-radius: 3px; background: var(--borde); }
+.segmento.hecho { background: var(--ambar); }
+.reloj { font-weight: 800; font-variant-numeric: tabular-nums; }
+.tabla-duelo { display: flex; flex-direction: column; gap: 8px; }
+.jugada { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 14px; background: var(--superficie); border: 1px solid var(--borde); }
+.jugada.yo { border-color: var(--ambar); background: rgba(255, 138, 31, 0.12); }
+.jugada .pos { width: 28px; font-weight: 800; color: var(--suave); }
+.revision { padding: 12px 14px; border-radius: 14px; background: var(--superficie); border: 1px solid var(--borde); font-size: 15px; display: flex; flex-direction: column; gap: 4px; }

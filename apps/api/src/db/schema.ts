@@ -292,6 +292,38 @@ export const dailyAnswers = pgTable(
   (t) => [primaryKey({ columns: [t.userId, t.day] })],
 );
 
+// ───────────── Duels ─────────────
+
+/** A 1 vs 1 challenge shared by link: fixed questions, anyone with the code can play once. */
+export const duels = pgTable("duels", {
+  id: id(),
+  code: text("code").notNull().unique(),
+  creatorId: uuid("creator_id")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  standardCode: text("standard_code").notNull(),
+  cardIds: jsonb("card_ids").$type<string[]>().notNull(),
+  createdAt: createdAt(),
+});
+
+/** One play of a duel; players from the web have no account, only a display name. */
+export const duelPlays = pgTable(
+  "duel_plays",
+  {
+    id: id(),
+    duelId: uuid("duel_id")
+      .notNull()
+      .references(() => duels.id, { onDelete: "cascade" }),
+    userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+    name: text("name").notNull(),
+    answers: jsonb("answers").$type<(number | null)[]>().notNull(),
+    correct: integer("correct").notNull(),
+    seconds: real("seconds").notNull(),
+    createdAt: createdAt(),
+  },
+  (t) => [index("duel_plays_duel_idx").on(t.duelId), uniqueIndex("duel_plays_user_uq").on(t.duelId, t.userId)],
+);
+
 // ───────────── Progress (FSRS) ─────────────
 
 /** Server copy of the FSRS state; the app is the primary source (offline-first). */

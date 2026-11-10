@@ -126,3 +126,41 @@ export const intentoDiariaSchema = z.object({
   /** Sin sesión (web): intentos previos que lleva el navegador. */
   previas: z.array(z.number().int().nonnegative()).max(5).default([]),
 });
+
+/** Duelo 1 vs 1: 5 preguntas de opción múltiple, un intento cada una; gana quien acierta más y, a igualdad, el más rápido. */
+export const PREGUNTAS_DUELO = 5;
+
+export type PreguntaDuelo = { id: string; pregunta: string; opciones: string[] };
+export type JugadaDuelo = { nombre: string; aciertos: number; segundos: number; esRetador: boolean; soyYo: boolean };
+
+export type Duelo = {
+  codigo: string;
+  norma: string;
+  retador: string;
+  /** Con sesión: el duelo es mío (juego primero y luego reto). */
+  soyRetador: boolean;
+  preguntas: PreguntaDuelo[];
+  /** Con sesión: si ya lo jugué, el resultado. */
+  resultado?: ResultadoDuelo;
+};
+
+export type ResultadoDuelo = {
+  codigo: string;
+  norma: string;
+  /** Ordenadas: primero quien acertó más, luego quien fue más rápido. */
+  jugadas: JugadaDuelo[];
+  /** Solo para quien ya jugó: la respuesta correcta y lo que respondió. */
+  solucion?: { id: string; correcta: number; elegida: number | null; explicacion?: string }[];
+};
+
+export type ResumenDuelo = { codigo: string; norma: string; creadoEn: string; misAciertos: number | null; rivales: number; mejorRival: JugadaDuelo | null };
+
+export const crearDueloSchema = z.object({ norma: z.string().max(20).optional() });
+
+export const jugarDueloSchema = z.object({
+  /** Sin sesión (web): cómo te verá el rival. */
+  nombre: z.string().trim().min(2).max(30).optional(),
+  /** Índice elegido por pregunta, en orden; null si se acabó el tiempo. */
+  respuestas: z.array(z.number().int().nonnegative().nullable()).length(PREGUNTAS_DUELO),
+  segundos: z.number().min(0).max(3600),
+});

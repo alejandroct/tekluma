@@ -6,6 +6,7 @@ import { catalogo } from "./routes/catalogo";
 import { cuenta } from "./routes/cuenta";
 import { cupo } from "./routes/cupo";
 import { diaria } from "./routes/diaria";
+import { duelos } from "./routes/duelos";
 import { editorial } from "./routes/editorial";
 import { mazosRoutes } from "./routes/mazos";
 import { repasos } from "./routes/repasos";
@@ -22,6 +23,7 @@ export const app = new Hono()
   .route("/cuenta", cuenta)
   .route("/cupo", cupo)
   .route("/diaria", diaria)
+  .route("/duelos", duelos)
   .route("/editorial", editorial)
   .route("/repasos", repasos)
   .route("/webhooks", webhooks);

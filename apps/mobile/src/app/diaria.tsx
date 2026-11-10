@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { useFocusEffect } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import * as Haptics from "expo-haptics";
 import Animated, {
   FadeInDown,
@@ -192,6 +192,9 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
       </BotonVivo>
       <Pressable onPress={() => compartirOtros(texto)} hitSlop={8}>
         <Text style={{ color: "#A9B7CC", fontWeight: "700", textAlign: "center" }}>Compartir en otra app</Text>
+      </Pressable>
+      <Pressable onPress={() => router.push("/duelo/nuevo")} hitSlop={8}>
+        <Text style={{ color: t.ambar, fontWeight: "800", textAlign: "center", marginTop: 4 }}>⚔️ ¿Quieres más? Reta a un colega a un duelo</Text>
       </Pressable>
       <Text style={[estilos.resultadoLinea, { fontSize: 13, marginTop: 4 }]}>Nueva pregunta en {falta}</Text>
     </Animated.View>

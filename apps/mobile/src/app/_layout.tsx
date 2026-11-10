@@ -67,6 +67,8 @@ export default function RootLayout() {
               ),
             }}
           />
+          <Stack.Screen name="duelo/nuevo" options={{ title: "Duelo", presentation: "modal", headerShadowVisible: false }} />
+          <Stack.Screen name="duelo/[codigo]" options={{ title: "Duelo", presentation: "modal", headerShadowVisible: false }} />
           <Stack.Screen name="diaria" options={{ title: "Pregunta del día", presentation: "modal", headerShadowVisible: false }} />
           <Stack.Screen name="premium" options={{ title: "", presentation: "modal", headerShadowVisible: false }} />
         </Stack.Protected>
