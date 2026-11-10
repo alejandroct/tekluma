@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-PE">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,21 +12,43 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#F6F5F2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F1B2D" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" />
     <link rel="stylesheet" href="/estilos.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <header class="barra">
-        <a href="/"><img src="/favicon.svg" alt="" width="34" height="34" />Tekluma</a>
-      </header>
-      <main class="juego" id="juego"><p class="ayuda">Cargando la pregunta del día…</p></main>
-      <footer>
-        <span>© 2026 Tekluma</span>
-        <a href="/terminos">Términos</a>
-        <a href="/privacidad">Privacidad</a>
-      </footer>
+    <header class="cabecera">
+      <div class="hoja">
+        <a class="marca" href="/" aria-label="Tekluma, inicio">
+          <picture><source srcset="/logo-oscuro.svg" media="(prefers-color-scheme: dark)" /><img src="/logo.svg" alt="Tekluma" width="105" height="26" /></picture>
+        </a>
+        <nav aria-label="Principal">
+          <span class="etq ref">Hoja 01 · Diaria</span>
+          <a href="/">Qué es Tekluma</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="juego-hoja">
+      <main class="juego" id="juego" aria-live="polite"><p class="cargando">Cargando la pregunta del día…</p></main>
     </div>
+
+    <footer class="pie">
+      <div class="hoja">
+        <div class="cajetin">
+          <div class="doble"><span class="etq">Proyecto</span><a class="marca-pie" href="/" aria-label="Tekluma, inicio"><picture><source srcset="/logo-oscuro.svg" media="(prefers-color-scheme: dark)" /><img src="/logo.svg" alt="Tekluma" width="81" height="20" /></picture></a></div>
+          <div><span class="etq">Lugar</span><span>Lima, Perú</span></div>
+          <div><span class="etq">Documentos</span><span class="vinculos"><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a></span></div>
+          <div><span class="etq">Contacto</span><a href="mailto:hola@tekluma.app">hola@tekluma.app</a></div>
+          <div><span class="etq">Año</span><span class="mono">© 2026</span></div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       // La API vive en api.<este dominio>; en local, en el puerto 8787.
       const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8787" : `https://api.${location.hostname}`;
@@ -41,7 +63,9 @@
         try { localStorage.setItem(`diaria:${n}`, JSON.stringify(intentos)); } catch {}
       };
       const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      // Solo para el texto que se comparte por WhatsApp (ahí sí van emojis).
       const casillas = (e) => e.intentos.map((o) => (o === e.solucion?.correcta ? "✅" : "❌")).join("");
+      const icono = (id, clase = "") => `<svg class="i ${clase}" aria-hidden="true"><use href="/iconos.svg#${id}"/></svg>`;
 
       async function api(ruta, cuerpo) {
         const r = await fetch(API + ruta, cuerpo ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(cuerpo) } : {});
@@ -85,41 +109,57 @@
         const e = p.estado;
         const restantes = p.intentosMax - e.intentos.length;
         const viejo = pedido && pedido !== p.numero
-          ? `<p class="aviso">La pregunta #${pedido} ya pasó. Esta es la de hoy 👇</p>` : "";
+          ? `<p class="aviso">La pregunta #${pedido} ya pasó. Esta es la de hoy.</p>` : "";
         const puntos = Array.from({ length: p.intentosMax }, (_, i) => {
           const o = e.intentos[i];
-          const color = o === undefined ? "" : (e.terminada && o === e.solucion?.correcta) ? "background:#1f9d55" : "background:#d64545";
-          return `<span class="punto" style="${color}"></span>`;
+          const clase = o === undefined ? "" : (e.terminada && o === e.solucion?.correcta) ? "bien" : "mal";
+          return `<span class="casilla ${clase}"></span>`;
         }).join("");
         const opciones = p.opciones.map((t, i) => {
           const fallo = e.intentos.includes(i) && !(e.terminada && i === e.solucion?.correcta);
           const bien = e.terminada && i === e.solucion?.correcta;
           const clase = bien ? "bien" : fallo ? "mal" : e.terminada ? "apagada" : "";
           return `<button class="opcion ${clase}" data-i="${i}" ${e.terminada || fallo ? "disabled" : ""}>
-            <span class="letra">${"ABCDEF"[i]}</span><span style="flex:1">${esc(t)}</span>${bien ? "✓" : fallo ? "✕" : ""}</button>`;
+            <span class="letra">${"ABCDEF"[i]}</span><span class="texto">${esc(t)}</span>${bien ? icono("i-bien") : fallo ? icono("i-mal") : ""}</button>`;
         }).join("");
         const ayuda = e.terminada ? "" : `<p class="ayuda">${restantes === p.intentosMax ? "Tienes 3 intentos. ¿La sacas a la primera?" : `Te ${restantes === 1 ? "queda 1 intento" : `quedan ${restantes} intentos`}`}</p>`;
+
+        const fecha = /^\d{4}-\d{2}-\d{2}$/.test(p.fecha || "") ? p.fecha.split("-").reverse().join(".") : "Hoy";
 
         let resultado = "";
         if (e.terminada) {
           const s = e.solucion || {};
-          const cita = s.cita ? `<div class="cita">${s.explicacion ? esc(s.explicacion) + "<br><br>" : ""}<b>${esc(p.norma)} · Art. ${esc(s.cita.articulo)}</b> ${esc(s.cita.extracto)}</div>`
-            : s.explicacion ? `<div class="cita">${esc(s.explicacion)}</div>` : "";
-          const titulo = e.resuelta ? (e.intentos.length === 1 ? "¡A la primera! 🎯" : "¡Correcto! 🎉") : "Esta vez no 😅";
+          const explicacion = s.explicacion ? `<p>${esc(s.explicacion)}</p>` : "";
+          const cita = s.cita
+            ? `<figure class="cita"><figcaption class="etq">${icono("i-cita")}${esc(p.norma)} · Art. ${esc(s.cita.articulo)}</figcaption>${explicacion}<blockquote>${esc(s.cita.extracto)}</blockquote></figure>`
+            : s.explicacion ? `<figure class="cita"><figcaption class="etq">${icono("i-cita")}${esc(p.norma)}</figcaption>${explicacion}</figure>` : "";
+          const titulo = e.resuelta ? (e.intentos.length === 1 ? "¡A la primera!" : "¡Correcto!") : "Esta vez no";
+          const marcador = e.resuelta ? `${e.intentos.length}/${p.intentosMax}` : `X/${p.intentosMax}`;
+          const grandes = e.intentos.map((o) => o === s.correcta
+            ? `<span class="casilla bien">${icono("i-bien")}</span>` : `<span class="casilla mal">${icono("i-mal")}</span>`).join("");
           resultado = `<section class="resultado">
-            <h2>${titulo}</h2>
-            <div class="marcador">${casillas(e)}</div>
+            <div class="resultado-cab"><span class="etq">Resultado · #${p.numero}</span><span class="etq"><b>${marcador}</b></span></div>
+            <h2>${icono(e.resuelta ? "i-bien" : "i-mal")}${titulo}</h2>
+            <div class="casillas grandes" aria-label="Intentos: ${marcador}">${grandes}</div>
             ${cita}
-            <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(textoCompartir())}">Retar a mi grupo de WhatsApp</a>
-            <a class="btn app" href="tekluma://diaria">Gana monedas y guarda tu racha en la app</a>
-            <p class="suave">En la app: hasta +${p.premios[0]} monedas al día, racha y repaso de todo el RNE. Muy pronto en App Store y Google Play.</p>
+            <div class="acciones">
+              <a class="btn btn-acento" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(textoCompartir())}">${icono("i-enviar")}Retar a mi grupo de WhatsApp</a>
+              <a class="btn btn-linea" href="tekluma://diaria">${icono("i-racha")}Gana monedas y guarda tu racha en la app</a>
+            </div>
+            <p class="nota">En la app: hasta +${p.premios[0]} monedas al día, racha y repaso de todo el RNE. Muy pronto en App Store y Google Play.</p>
           </section>`;
         }
 
         raiz.innerHTML = `${viejo}
-          <div class="cab"><span class="num">PREGUNTA DEL DÍA #${p.numero} · ${esc(p.norma)}</span><span class="puntos">${puntos}</span></div>
+          <h1 class="sr">Pregunta del día de Tekluma</h1>
+          <div class="rotulo-juego">
+            <div><span class="etq">Pregunta del día</span><span class="valor">${fecha}</span></div>
+            <div><span class="etq">N.º</span><span class="valor">#${p.numero}</span></div>
+            <div><span class="etq">Norma</span><span class="valor">${esc(p.norma)}</span></div>
+            <div><span class="etq">Intentos</span><span class="valor casillas" aria-label="${e.intentos.length} de ${p.intentosMax} intentos usados">${puntos}</span></div>
+          </div>
           <p class="pregunta">${esc(p.pregunta)}</p>${ayuda}
-          <div style="display:flex;flex-direction:column;gap:10px">${opciones}</div>${resultado}`;
+          <div class="opciones">${opciones}</div>${resultado}`;
         raiz.querySelectorAll(".opcion:not([disabled])").forEach((b) => b.addEventListener("click", () => elegir(Number(b.dataset.i))));
       }
 

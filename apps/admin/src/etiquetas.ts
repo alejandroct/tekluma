@@ -1,4 +1,4 @@
-import type { ContenidoTarjeta, EditorialStatus, StaffRole, TipoTarjeta } from "@tekluma/shared";
+import type { ContenidoTarjeta, Discipline, EditorialStatus, StaffRole, TipoTarjeta } from "@tekluma/shared";
 
 export const ESTADOS: Record<EditorialStatus, string> = {
   draft: "Borrador",
@@ -9,6 +9,30 @@ export const ESTADOS: Record<EditorialStatus, string> = {
 };
 
 export const ROLES: Record<StaffRole, string> = { author: "Autor", reviewer: "Revisor", admin: "Admin" };
+
+export const DESCRIPCION_ROLES: Record<StaffRole, string> = {
+  author: "Redacta tarjetas y las envía a revisión.",
+  reviewer: "Aprueba o rechaza tarjetas de otras personas y publica mazos.",
+  admin: "Además gestiona normas, mazos y el equipo.",
+};
+
+export const DISCIPLINAS: Record<Discipline, string> = {
+  urban_development: "Habilitaciones urbanas",
+  architecture: "Arquitectura",
+  structures: "Estructuras",
+  plumbing: "Instalaciones sanitarias",
+  electromechanical: "Instalaciones electromecánicas",
+  general: "Generales",
+};
+
+export const TIPOS: Record<TipoTarjeta, string> = {
+  concepto: "Concepto",
+  opcion_multiple: "Opción múltiple",
+  completar: "Completar",
+  tabla: "Tabla",
+  caso_numerico: "Caso numérico",
+  imagen: "Imagen",
+};
 
 export const PLANTILLAS: Record<TipoTarjeta, object> = {
   concepto: { tipo: "concepto", pregunta: "", respuesta: "", explicacion: "" },

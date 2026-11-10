@@ -1,32 +1,54 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-PE">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Duelo · Tekluma</title>
     <meta name="description" content="Te retaron a un duelo del RNE: 5 preguntas, un intento cada una. Juega sin instalar nada." />
-    <meta property="og:title" content="⚔️ Te retaron a un duelo del RNE" />
+    <meta property="og:title" content="Te retaron a un duelo del RNE" />
     <meta property="og:description" content="5 preguntas, un intento cada una. ¿Sabes más que tu colega? Juega sin instalar nada." />
     <meta property="og:image" content="https://tekluma.app/og-duelo.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#F6F5F2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F1B2D" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" />
     <link rel="stylesheet" href="/estilos.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <header class="barra">
-        <a href="/"><img src="/favicon.svg" alt="" width="34" height="34" />Tekluma</a>
-      </header>
-      <main class="juego" id="juego"><p class="ayuda">Cargando el duelo…</p></main>
-      <footer>
-        <span>© 2026 Tekluma</span>
-        <a href="/terminos">Términos</a>
-        <a href="/privacidad">Privacidad</a>
-      </footer>
+    <header class="cabecera">
+      <div class="hoja">
+        <a class="marca" href="/" aria-label="Tekluma, inicio">
+          <picture><source srcset="/logo-oscuro.svg" media="(prefers-color-scheme: dark)" /><img src="/logo.svg" alt="Tekluma" width="105" height="26" /></picture>
+        </a>
+        <nav aria-label="Principal">
+          <span class="etq ref">Hoja 02 · Duelo</span>
+          <a href="/">Qué es Tekluma</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="juego-hoja">
+      <main class="juego" id="juego" aria-live="polite"><p class="cargando">Cargando el duelo…</p></main>
     </div>
+
+    <footer class="pie">
+      <div class="hoja">
+        <div class="cajetin">
+          <div class="doble"><span class="etq">Proyecto</span><a class="marca-pie" href="/" aria-label="Tekluma, inicio"><picture><source srcset="/logo-oscuro.svg" media="(prefers-color-scheme: dark)" /><img src="/logo.svg" alt="Tekluma" width="81" height="20" /></picture></a></div>
+          <div><span class="etq">Lugar</span><span>Lima, Perú</span></div>
+          <div><span class="etq">Documentos</span><span class="vinculos"><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a></span></div>
+          <div><span class="etq">Contacto</span><a href="mailto:hola@tekluma.app">hola@tekluma.app</a></div>
+          <div><span class="etq">Año</span><span class="mono">© 2026</span></div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8787" : `https://api.${location.hostname}`;
       const raiz = document.getElementById("juego");
@@ -41,6 +63,8 @@
       const escribir = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
       const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
       const norma = (n) => (n === "RNE" ? "del RNE" : `de la ${n}`);
+      const icono = (id, clase = "") => `<svg class="i ${clase}" aria-hidden="true"><use href="/iconos.svg#${id}"/></svg>`;
+      const segs = () => Math.floor((Date.now() - inicio) / 1000);
 
       async function api(ruta, cuerpo) {
         const r = await fetch(API + ruta, cuerpo ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(cuerpo) } : {});
@@ -69,42 +93,63 @@
       }
 
       function aviso(texto) {
-        raiz.innerHTML = `<p class="aviso">${esc(texto)}</p><a class="btn app" href="/diaria">Juega la pregunta del día</a>`;
+        raiz.innerHTML = `<p class="aviso">${esc(texto)}</p><a class="btn btn-primario btn-bloque" href="/diaria">Juega la pregunta del día ${icono("i-flecha")}</a>`;
       }
 
       function presentacion() {
         const nombre = leer("tekluma:nombre", "");
         raiz.innerHTML = `
-          <div style="font-size:64px;text-align:center">⚔️</div>
-          <p class="pregunta" style="text-align:center">${esc(duelo.retador)} te reta a un duelo ${esc(norma(duelo.norma))}</p>
-          <p class="ayuda" style="text-align:center">5 preguntas · un intento cada una · cuenta el tiempo.<br>A igualdad de aciertos gana el más rápido.</p>
-          <input class="campo" id="nombre" maxlength="30" autocomplete="given-name" placeholder="Tu nombre (así te verá tu rival)" value="${esc(nombre)}" />
-          <button class="btn app" id="empezar">¡Acepto el reto!</button>`;
+          <div class="rotulo-juego">
+            <div><span class="etq">Duelo 1 vs 1</span><span class="valor">${esc(codigo)}</span></div>
+            <div><span class="etq">Norma</span><span class="valor">${esc(duelo.norma)}</span></div>
+          </div>
+          <section class="duelo-portada">
+            <div class="vs" aria-hidden="true">
+              <div class="lado"><span class="etq">Retador</span><strong>${esc(duelo.retador)}</strong></div>
+              <div class="centro">${icono("i-duelo", "i-l")}</div>
+              <div class="lado"><span class="etq">Rival</span><strong>Tú</strong></div>
+            </div>
+            <h1 class="pregunta">${esc(duelo.retador)} te reta a un duelo ${esc(norma(duelo.norma))}</h1>
+            <div class="reglas">
+              <div><span class="cifra">5</span><span class="etq">Preguntas</span></div>
+              <div><span class="cifra">1</span><span class="etq">Intento c/u</span></div>
+              <div><span class="cifra">${icono("i-reloj")}</span><span class="etq">Cuenta el tiempo</span></div>
+            </div>
+            <p class="ayuda">A igualdad de aciertos gana el más rápido.</p>
+            <div class="campo-grupo">
+              <label class="etq" for="nombre">Tu nombre</label>
+              <input class="campo" id="nombre" maxlength="30" autocomplete="given-name" placeholder="Así te verá tu rival" value="${esc(nombre)}" />
+            </div>
+            <button class="btn btn-acento btn-bloque" id="empezar">¡Acepto el reto! ${icono("i-flecha")}</button>
+          </section>`;
         const campo = document.getElementById("nombre");
         document.getElementById("empezar").addEventListener("click", () => {
-          if (campo.value.trim().length < 2) { campo.focus(); campo.style.borderColor = "#d64545"; return; }
+          if (campo.value.trim().length < 2) { campo.focus(); campo.classList.add("error"); return; }
           escribir("tekluma:nombre", campo.value.trim());
           respuestas = [];
           inicio = Date.now();
-          reloj = setInterval(() => { const r = document.getElementById("reloj"); if (r) r.textContent = `⏱ ${Math.floor((Date.now() - inicio) / 1000)} s`; }, 250);
+          reloj = setInterval(() => { const r = document.getElementById("reloj"); if (r) r.textContent = `${segs()} s`; }, 250);
           pregunta(0);
         });
       }
 
       function pregunta(i) {
         const p = duelo.preguntas[i];
-        const segmentos = duelo.preguntas.map((_, k) => `<span class="segmento ${k <= i ? "hecho" : ""}"></span>`).join("");
+        const segmentos = duelo.preguntas.map((_, k) => `<span class="segmento ${k < i ? "hecho" : k === i ? "actual" : ""}"></span>`).join("");
         raiz.innerHTML = `
-          <div class="cab" style="gap:14px"><span class="progreso">${segmentos}</span><span class="reloj" id="reloj">⏱ ${Math.floor((Date.now() - inicio) / 1000)} s</span></div>
-          <span class="num">PREGUNTA ${i + 1} DE ${duelo.preguntas.length}</span>
+          <div class="rotulo-juego">
+            <div><span class="etq">Duelo ${esc(duelo.norma)}</span><span class="valor">Pregunta ${i + 1} de ${duelo.preguntas.length}</span></div>
+            <div><span class="etq">Tiempo</span><span class="valor reloj">${icono("i-reloj")}<span id="reloj">${segs()} s</span></span></div>
+          </div>
+          <div class="progreso" aria-hidden="true">${segmentos}</div>
           <p class="pregunta">${esc(p.pregunta)}</p>
-          <div style="display:flex;flex-direction:column;gap:10px">${p.opciones
-            .map((t, k) => `<button class="opcion" data-k="${k}"><span class="letra">${"ABCDEF"[k]}</span><span style="flex:1">${esc(t)}</span></button>`)
+          <div class="opciones">${p.opciones
+            .map((t, k) => `<button class="opcion" data-k="${k}"><span class="letra">${"ABCDEF"[k]}</span><span class="texto">${esc(t)}</span></button>`)
             .join("")}</div>`;
         raiz.querySelectorAll(".opcion").forEach((b) =>
           b.addEventListener("click", () => {
             raiz.querySelectorAll(".opcion").forEach((x) => (x.disabled = true));
-            b.style.background = "var(--navy)"; b.style.color = "#fff"; b.style.borderColor = "var(--navy)";
+            b.classList.add("elegida");
             respuestas[i] = Number(b.dataset.k);
             setTimeout(() => (i < duelo.preguntas.length - 1 ? pregunta(i + 1) : enviar()), 300);
           }),
@@ -113,7 +158,7 @@
 
       async function enviar() {
         clearInterval(reloj);
-        raiz.innerHTML = `<p class="ayuda">Calculando el marcador…</p>`;
+        raiz.innerHTML = `<p class="cargando">Calculando el marcador…</p>`;
         const nombre = leer("tekluma:nombre", "Ingeniero");
         try {
           const r = await api(`/duelos/${codigo}/jugar`, { nombre, respuestas, segundos: (Date.now() - inicio) / 1000 });
@@ -121,7 +166,7 @@
           if (yo) escribir(`duelo:${codigo}`, { nombre: yo.nombre, aciertos: yo.aciertos, segundos: yo.segundos, solucion: r.solucion });
           marcador(r);
         } catch {
-          raiz.innerHTML = `<p class="aviso">No pudimos enviar tus respuestas. Revisa tu conexión.</p><button class="btn app" id="reintentar">Reintentar</button>`;
+          raiz.innerHTML = `<p class="aviso">No pudimos enviar tus respuestas. Revisa tu conexión.</p><button class="btn btn-primario btn-bloque" id="reintentar">Reintentar</button>`;
           document.getElementById("reintentar").addEventListener("click", enviar);
         }
       }
@@ -129,21 +174,22 @@
       function marcador(r) {
         const pos = r.jugadas.findIndex((j) => j.soyYo);
         const yo = r.jugadas[pos];
-        const titulo = !yo ? "Marcador" : pos === 0 ? "¡Ganaste! 🏆" : "Te ganaron esta vez 💪";
+        const titulo = !yo ? "Marcador" : pos === 0 ? "¡Ganaste!" : "Te ganaron esta vez";
         const filas = r.jugadas
-          .map((j, i) => `<div class="jugada ${j.soyYo ? "yo" : ""}"><span class="pos">${i === 0 ? "🏆" : i + 1 + "."}</span>
-            <span style="flex:1;font-weight:700">${j.soyYo ? "Tú" : esc(j.nombre)}${j.esRetador ? " ⚔️" : ""}</span>
-            <b>${j.aciertos}/5</b><span style="color:var(--suave);width:52px;text-align:right">${j.segundos} s</span></div>`)
+          .map((j, i) => `<tr class="${j.soyYo ? "yo" : ""}"><td class="pos">${i === 0 ? icono("i-podio") : String(i + 1).padStart(2, "0")}</td>
+            <td class="nombre">${j.soyYo ? "Tú" : esc(j.nombre)}${j.esRetador ? `<span class="marca-retador">RETADOR</span>` : ""}</td>
+            <td class="cifra der">${j.aciertos}/5</td><td class="cifra der">${j.segundos} s</td></tr>`)
           .join("");
         const revision = (r.solucion || [])
           .map((s, i) => {
             const p = duelo.preguntas.find((q) => q.id === s.id);
             if (!p) return "";
             const bien = s.elegida === s.correcta;
-            return `<div class="revision"><b>${bien ? "✅" : "❌"} ${i + 1}. ${esc(p.pregunta)}</b>
-              ${!bien && s.elegida !== null ? `<span style="color:#d64545">Tu respuesta: ${esc(p.opciones[s.elegida])}</span>` : ""}
-              <span style="color:#1f9d55;font-weight:700">Correcta: ${esc(p.opciones[s.correcta])}</span>
-              ${s.explicacion ? `<span style="color:var(--suave)">${esc(s.explicacion)}</span>` : ""}</div>`;
+            return `<li class="revision ${bien ? "ok" : "ko"}">${icono(bien ? "i-bien" : "i-mal")}<span class="q"><span class="mono">${String(i + 1).padStart(2, "0")}</span>${esc(p.pregunta)}</span>
+              <span class="det">
+              ${!bien && s.elegida !== null ? `<span class="tuya"><b>Tu respuesta</b>${esc(p.opciones[s.elegida])}</span>` : ""}
+              <span class="correcta"><b>Correcta</b>${esc(p.opciones[s.correcta])}</span>
+              ${s.explicacion ? `<span>${esc(s.explicacion)}</span>` : ""}</span></li>`;
           })
           .join("");
         const texto = yo
@@ -151,15 +197,22 @@
           : `⚔️ Duelo ${norma(r.norma)} en Tekluma. ¿Te animas?\n${location.origin}/duelo?c=${r.codigo}`;
         raiz.innerHTML = `
           <section class="resultado">
-            <span style="color:#a9b7cc;font-weight:700">Duelo ${esc(r.norma)} · ${esc(r.codigo)}</span>
-            <h2>${titulo}</h2>
-            <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(texto)}">Retar a otro con este duelo</a>
-            <a class="btn app" href="tekluma://duelo/nuevo">Pide la revancha en la app</a>
-            <p class="suave">En la app: crea tus propios duelos, pregunta del día con monedas y repaso de todo el RNE. Muy pronto en App Store y Google Play.</p>
+            <div class="resultado-cab"><span class="etq">Duelo ${esc(r.norma)} · ${esc(r.codigo)}</span>${yo ? `<span class="etq"><b>${yo.aciertos}/5 · ${yo.segundos} s</b></span>` : ""}</div>
+            <h2>${yo ? icono(pos === 0 ? "i-podio" : "i-duelo") : ""}${titulo}</h2>
+            <div class="acciones">
+              <a class="btn btn-acento" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(texto)}">${icono("i-enviar")}Retar a otro con este duelo</a>
+              <a class="btn btn-linea" href="tekluma://duelo/nuevo">${icono("i-duelo")}Pide la revancha en la app</a>
+            </div>
+            <p class="nota">En la app: crea tus propios duelos, pregunta del día con monedas y repaso de todo el RNE. Muy pronto en App Store y Google Play.</p>
           </section>
-          <span class="num">MARCADOR</span>
-          <div class="tabla-duelo">${filas}</div>
-          ${revision ? `<span class="num">TUS RESPUESTAS</span><div class="tabla-duelo">${revision}</div>` : ""}`;
+          <section class="bloque">
+            <span class="etq">Marcador</span>
+            <table class="tabla">
+              <thead><tr><th>Pos.</th><th>Nombre</th><th class="der">Aciertos</th><th class="der">Tiempo</th></tr></thead>
+              <tbody>${filas}</tbody>
+            </table>
+          </section>
+          ${revision ? `<section class="bloque"><span class="etq">Tus respuestas</span><ol class="revisiones">${revision}</ol></section>` : ""}`;
       }
 
       cargar();

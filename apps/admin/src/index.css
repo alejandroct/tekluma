@@ -1,27 +1,139 @@
+/* ───────────────────────── Tekluma · Panel editorial — tokens ───────────────────────── */
 :root {
+  /* Brand */
   --navy: #0f1b2d;
   --ambar: #ff8a1f;
   --pizarra: #3b5174;
   --niebla: #a9b7cc;
+  --papel: #f6f5f2;
+
+  /* Surfaces & lines */
   --fondo: #f6f5f2;
+  --lateral: #efede8;
   --superficie: #ffffff;
+  --superficie-2: #faf9f7;
+  --campo: #ffffff;
+  --linea: #e3e0d9;
+  --linea-fuerte: #cfcac0;
+  --hover: rgba(15, 27, 45, 0.035);
+  --seleccion: rgba(15, 27, 45, 0.06);
+
+  /* Text */
   --texto: #0f1b2d;
-  --suave: #5b6b85;
-  --borde: #e3e1dc;
-  --error: #d64545;
-  --ok: #1f9d55;
-  font-family: Manrope, Inter, system-ui, sans-serif;
+  --texto-2: #3b5174;
+  --suave: #66758d;
+  --tenue: #8a96a8;
+
+  /* Actions */
+  --primario: #0f1b2d;
+  --primario-texto: #ffffff;
+  --primario-hover: #22324b;
+  --foco: #ff8a1f;
+
+  /* Status — muted, consistent */
+  --borrador: #56657d;
+  --borrador-fondo: transparent;
+  --borrador-borde: #cfd5de;
+  --revision: #a35000;
+  --revision-fondo: #fff4e8;
+  --revision-borde: #f8cf9f;
+  --aprobada: #1a8549;
+  --aprobada-fondo: #eaf6ef;
+  --aprobada-borde: #bfe3cd;
+  --publicada: #0f1b2d;
+  --publicada-fondo: #e9edf3;
+  --publicada-borde: #9fb0c6;
+  --error: #c43d3d;
+  --error-fondo: #fcefee;
+  --error-borde: #f0c6c4;
+  --retirada: #8a96a8;
+
+  /* Type */
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --t-xs: 11px; /* mono labels, uppercase */
+  --t-sm: 12.5px; /* meta, hints */
+  --t-md: 13.5px; /* body, tables, controls */
+  --t-lg: 15px; /* panel titles */
+  --t-xl: 21px; /* page titles */
+
+  /* Space (4px base) */
+  --e1: 4px;
+  --e2: 8px;
+  --e3: 12px;
+  --e4: 16px;
+  --e5: 24px;
+  --e6: 32px;
+  --e7: 48px;
+
+  --radio: 4px;
+  --radio-sm: 2px;
+  --control: 32px;
+
+  font-family: var(--sans);
+  font-size: var(--t-md);
+  line-height: 1.5;
   color: var(--texto);
   background: var(--fondo);
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01" on;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --fondo: #0f1b2d;
-    --superficie: #18263c;
-    --texto: #f6f5f2;
-    --suave: #a9b7cc;
-    --borde: #26364f;
+    --fondo: #0b1524;
+    --lateral: #0e192a;
+    --superficie: #111f33;
+    --superficie-2: #0f1c2e;
+    --campo: #0b1524;
+    --linea: #1f2f47;
+    --linea-fuerte: #2d4060;
+    --hover: rgba(169, 183, 204, 0.05);
+    --seleccion: rgba(169, 183, 204, 0.09);
+
+    --texto: #eef0f3;
+    --texto-2: #c4cedc;
+    --suave: #93a2b8;
+    --tenue: #6d7d95;
+
+    --primario: #f6f5f2;
+    --primario-texto: #0f1b2d;
+    --primario-hover: #ffffff;
+
+    --borrador: #93a2b8;
+    --borrador-fondo: transparent;
+    --borrador-borde: #2d4060;
+    --revision: #ffad61;
+    --revision-fondo: #2a1d10;
+    --revision-borde: #6b4013;
+    --aprobada: #5fcf8c;
+    --aprobada-fondo: #0f2a1e;
+    --aprobada-borde: #1e5a39;
+    --publicada: #e3e9f2;
+    --publicada-fondo: #1c2c45;
+    --publicada-borde: #50678a;
+    --error: #f07a7a;
+    --error-fondo: #2c1519;
+    --error-borde: #6a2a2f;
+    --retirada: #6d7d95;
+
+    color-scheme: dark;
   }
 }
-* { box-sizing: border-box; }
-body { margin: 0; }
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  background: var(--fondo);
+}
+body {
+  min-height: 100vh;
+}
+::selection {
+  background: rgba(255, 138, 31, 0.28);
+}
