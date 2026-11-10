@@ -6,7 +6,8 @@ import Animated, { FadeInDown, FadeInRight, ZoomIn } from "react-native-reanimat
 import type { Duelo, ResultadoDuelo } from "@tekluma/shared";
 import { BotonVivo } from "@/components/Animaciones";
 import { Figura } from "@/components/Tarjeta";
-import { compartirOtros, compartirPorWhatsApp } from "@/lib/diaria";
+import { ImagenReto, useCompartirConImagen, type DatosImagen } from "@/components/ImagenReto";
+import { compartirPorWhatsApp } from "@/lib/diaria";
 import { crearDuelo, jugarDuelo, textoReto, verDuelo } from "@/lib/duelos";
 import { sonarMoneda } from "@/lib/sonidos";
 import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
@@ -165,6 +166,18 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
   const posicion = resultado.jugadas.findIndex((j) => j.soyYo);
   const rivales = resultado.jugadas.filter((j) => !j.soyYo);
   const texto = textoReto(resultado, duelo.preguntas[0]?.pregunta);
+  const { captura, compartir } = useCompartirConImagen();
+  const total = resultado.jugadas.length;
+  const imagen: DatosImagen = {
+    rotulo: `DUELO · ${resultado.norma === "RNE" ? "TODO EL RNE" : resultado.norma}`,
+    titulo: yo ? `${yo.aciertos}/5 en ${yo.segundos} s. ¿Me ganas?` : "¿Me ganas?",
+    casillas: (resultado.solucion ?? []).map((s) => s.elegida === s.correcta),
+    resultado: !yo ? "" : total === 1 ? "Nadie me ha ganado todavía" : posicion === 0 ? `Voy 1.º de ${total}` : `Voy ${posicion + 1}.º de ${total}`,
+    lineas: ["5 preguntas · 1 intento · gana el que acierta más y más rápido"],
+    ...(duelo.preguntas[0] ? { anzuelo: { etiqueta: "ARRANCA ASÍ", texto: duelo.preguntas[0].pregunta } } : {}),
+    llamada: "Acepta el reto gratis, sin instalar nada",
+    ruta: "duelo",
+  };
 
   const titulo = !yo
     ? "Marcador"
@@ -199,11 +212,12 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
         <Text style={[estilos.rotuloTexto, { color: "#A9B7CC", textAlign: "left" }]}>DUELO {resultado.norma} · {resultado.codigo}</Text>
         <Text style={estilos.cabeceraTitulo}>{titulo}</Text>
         {rivales.length === 0 && <Text style={{ color: "#A9B7CC", fontSize: 15 }}>Envía el reto y mira quién te gana.</Text>}
-        <BotonVivo onPress={() => compartirPorWhatsApp(texto)} style={[estilos.boton, { backgroundColor: "#F6F5F2", marginTop: 8 }]}>
-          <Text style={[estilos.botonTexto, { color: "#0F1B2D" }]}>Retar por WhatsApp</Text>
+        <ImagenReto datos={imagen} captura={captura} />
+        <BotonVivo onPress={() => compartir(texto)} style={[estilos.boton, { backgroundColor: "#F6F5F2", marginTop: 8 }]}>
+          <Text style={[estilos.botonTexto, { color: "#0F1B2D" }]}>Retar con imagen</Text>
         </BotonVivo>
-        <Pressable onPress={() => compartirOtros(texto)} hitSlop={8}>
-          <Text style={{ color: "#A9B7CC", fontWeight: "700", textAlign: "center" }}>Compartir en otra app</Text>
+        <Pressable onPress={() => compartirPorWhatsApp(texto)} hitSlop={8}>
+          <Text style={{ color: "#A9B7CC", fontWeight: "600", textAlign: "center" }}>Enviar solo el texto por WhatsApp</Text>
         </Pressable>
       </Animated.View>
 

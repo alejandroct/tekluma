@@ -13,7 +13,8 @@ import Animated, {
 import type { EstadoDiaria, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, GananciaFlotante } from "@/components/Animaciones";
 import { Figura } from "@/components/Tarjeta";
-import { compartirOtros, compartirPorWhatsApp, faltaParaLaSiguiente, intentarDiaria, obtenerDiaria, textoCompartir } from "@/lib/diaria";
+import { ImagenReto, useCompartirConImagen, type DatosImagen } from "@/components/ImagenReto";
+import { compartirPorWhatsApp, faltaParaLaSiguiente, intentarDiaria, obtenerDiaria, textoCompartir } from "@/lib/diaria";
 import { sonarMoneda } from "@/lib/sonidos";
 import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
 import { Casillas, IconoCorrecto, IconoDuelo, IconoHito, IconoIncorrecto, IconoMoneda, IconoRacha } from "@/components/Iconos";
@@ -170,6 +171,22 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
   const t = useTema();
   const { estado } = pregunta;
   const texto = textoCompartir(pregunta, estado);
+  const { captura, compartir } = useCompartirConImagen();
+  const n = estado.intentos.length;
+  const imagen: DatosImagen = {
+    rotulo: `PREGUNTA DEL DÍA #${pregunta.numero} · ${pregunta.norma}`,
+    titulo: pregunta.pregunta,
+    figura: pregunta.imagenUrl,
+    opciones: pregunta.opciones,
+    casillas: Array.from({ length: pregunta.intentosMax }, (_, i) => (estado.intentos[i] === undefined ? null : estado.intentos[i] === estado.solucion?.correcta)),
+    resultado: !estado.resuelta ? "Hoy me ganó la norma" : n === 1 ? "La saqué a la primera" : `La saqué al ${n}.º intento`,
+    lineas: [
+      ...(estado.aPrimera !== undefined ? [`Solo el ${estado.aPrimera} % la acierta a la primera`] : []),
+      ...(estado.racha && estado.racha > 1 ? [`Racha de ${estado.racha} días seguidos`] : []),
+    ],
+    llamada: "¿Cuál marcarías? Respóndela gratis",
+    ruta: "diaria",
+  };
   const [falta, setFalta] = useState(faltaParaLaSiguiente);
   useEffect(() => {
     const id = setInterval(() => setFalta(faltaParaLaSiguiente()), 30_000);
@@ -211,11 +228,12 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
         </View>
       )}
 
-      <BotonVivo onPress={() => compartirPorWhatsApp(texto)} style={[estilos.compartir, { backgroundColor: "#F6F5F2" }]}>
-        <Text style={estilos.compartirTexto}>Retar a mi grupo de WhatsApp</Text>
+      <ImagenReto datos={imagen} captura={captura} />
+      <BotonVivo onPress={() => compartir(texto)} style={[estilos.compartir, { backgroundColor: "#F6F5F2" }]}>
+        <Text style={estilos.compartirTexto}>Retar a mi grupo con imagen</Text>
       </BotonVivo>
-      <Pressable onPress={() => compartirOtros(texto)} hitSlop={8}>
-        <Text style={{ color: "#A9B7CC", fontWeight: "600", textAlign: "center" }}>Compartir en otra app</Text>
+      <Pressable onPress={() => compartirPorWhatsApp(texto)} hitSlop={8}>
+        <Text style={{ color: "#A9B7CC", fontWeight: "600", textAlign: "center" }}>Enviar solo el texto por WhatsApp</Text>
       </Pressable>
       <Pressable onPress={() => router.push("/duelo/nuevo")} hitSlop={8}>
         <View style={[estilos.filaIcono, { justifyContent: "center", marginTop: 4 }]}>
