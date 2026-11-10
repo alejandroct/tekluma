@@ -91,7 +91,8 @@ export default $config({
       runtime,
       memory: "1024 MB",
       timeout: "20 seconds",
-      url: true,
+      // CORS lo maneja Hono (orígenes del panel con cookies); el de la Lambda URL pondría "*".
+      url: { cors: false },
       link: [mazos, publicaciones, correo],
       environment,
       nodejs,

@@ -10,6 +10,10 @@ declare module "sst" {
       "type": "sst.aws.StaticSite"
       "url": string
     }
+    "AdminEmails": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "Api": {
       "name": string
       "type": "sst.aws.Function"
@@ -36,6 +40,10 @@ declare module "sst" {
       "name": string
       "type": "sst.aws.Bucket"
     }
+    "Migrador": {
+      "name": string
+      "type": "sst.aws.Function"
+    }
     "Publicaciones": {
       "type": "sst.aws.Queue"
       "url": string
@@ -47,6 +55,10 @@ declare module "sst" {
     "RevenueCatWebhookSecret": {
       "type": "sst.sst.Secret"
       "value": string
+    }
+    "Web": {
+      "type": "sst.aws.StaticSite"
+      "url": string
     }
   }
 }
