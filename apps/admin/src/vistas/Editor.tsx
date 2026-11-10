@@ -4,6 +4,7 @@ import { api, type Articulo, type Cita, type Tarjeta, type Yo } from "../api";
 import { ESTADOS, PLANTILLAS, TIPOS } from "../etiquetas";
 import { IconoCerrar, IconoCheck, IconoCruz, IconoEnviar, IconoMas } from "../iconos";
 import { Aviso, EncabezadoPagina } from "../ui";
+import { VistaPrevia } from "./VistaPrevia";
 
 type Props = {
   yo: Yo;
@@ -37,6 +38,8 @@ export function Editor({ yo, mazoId, standardId, tarjeta, migas, onCambio, onCer
   const [ocupado, setOcupado] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sucio, setSucio] = useState(false);
+  // Reviewers (read-only) land on the preview; authors on the JSON they edit.
+  const [modo, setModo] = useState<"vista" | "json">(tarjeta && tarjeta.status === "in_review" ? "vista" : "json");
 
   useEffect(() => {
     api<Articulo[]>(`/editorial/normas/${standardId}/articulos`).then(setArticulos, () => {});
@@ -165,6 +168,14 @@ export function Editor({ yo, mazoId, standardId, tarjeta, migas, onCambio, onCer
             <h2>
               <span className="rotulo">01</span>Contenido
             </h2>
+            <div className="segmentos" role="group" aria-label="Modo de contenido">
+              <button className={modo === "vista" ? "activo" : ""} aria-pressed={modo === "vista"} onClick={() => setModo("vista")}>
+                Vista previa
+              </button>
+              <button className={modo === "json" ? "activo" : ""} aria-pressed={modo === "json"} onClick={() => setModo("json")}>
+                JSON
+              </button>
+            </div>
             {editable ? (
               <label className="plantilla">
                 <span className="etiqueta">Plantilla</span>
@@ -184,6 +195,13 @@ export function Editor({ yo, mazoId, standardId, tarjeta, migas, onCambio, onCer
               <span className="etiqueta-plana">Solo lectura</span>
             )}
           </div>
+          {modo === "vista" ? (
+            validacion.success ? (
+              <VistaPrevia c={validacion.data} />
+            ) : (
+              <div className="vista-previa vp-nota">Corrige el JSON para ver la vista previa.</div>
+            )
+          ) : (
           <div className="codigo">
             <pre className="codigo-lineas" aria-hidden="true">
               {Array.from({ length: lineas }, (_, i) => i + 1).join("\n")}
@@ -199,6 +217,7 @@ export function Editor({ yo, mazoId, standardId, tarjeta, migas, onCambio, onCer
               style={{ height: `calc(${lineas + 1} * var(--lh) + 24px)` }}
             />
           </div>
+          )}
           <div className="validacion">
             {validacion.success ? (
               <div className="validacion-cab ok">
