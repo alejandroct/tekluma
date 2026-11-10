@@ -320,7 +320,7 @@ export function Puesto({ n, texto, ambar }: { n: number; texto: string; ambar: s
         borderColor: ambar,
       }}
     >
-      <Text style={{ fontSize: 15, fontWeight: "800", fontVariant: ["tabular-nums"], color: n === 1 ? "#0F1B2D" : podio ? ambar : texto }}>{n}</Text>
+      <Text style={{ fontSize: 14, fontFamily: "IBMPlexMono_600SemiBold", fontVariant: ["tabular-nums"], color: n === 1 ? "#0F1B2D" : podio ? ambar : texto }}>{n}</Text>
     </View>
   );
 }

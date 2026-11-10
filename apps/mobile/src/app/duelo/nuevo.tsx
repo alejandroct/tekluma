@@ -5,8 +5,8 @@ import Animated, { FadeInDown } from "react-native-reanimated";
 import type { ResumenDuelo } from "@tekluma/shared";
 import { BotonVivo } from "@/components/Animaciones";
 import { crearDuelo, misDuelos, normasDuelo } from "@/lib/duelos";
-import { useTema } from "@/lib/tema";
-import { IconoDuelo, IconoEspera, IconoPodio } from "@/components/Iconos";
+import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
+import { IconoChevron, IconoDuelo, IconoEspera, IconoPodio } from "@/components/Iconos";
 
 /** Elegir norma y crear un duelo; abajo, los duelos recientes con su marcador. */
 export default function NuevoDuelo() {
@@ -47,7 +47,7 @@ export default function NuevoDuelo() {
         Responde 5 preguntas, un intento cada una. Luego envía el reto por WhatsApp: tu colega lo juega sin instalar nada y ven quién sabe más.
       </Text>
 
-      <Text style={[estilos.etiqueta, { color: t.texto }]}>¿De qué norma?</Text>
+      <Text style={[estilos.etiqueta, { color: t.textoSuave }]}>NORMA</Text>
       {normas === null ? (
         <ActivityIndicator color={t.ambar} />
       ) : (
@@ -58,9 +58,9 @@ export default function NuevoDuelo() {
               <Pressable
                 key={n ?? "mixto"}
                 onPress={() => setNorma(n)}
-                style={[estilos.chip, { backgroundColor: activa ? t.ambar : t.superficie, borderColor: activa ? t.ambar : t.borde }]}
+                style={[estilos.chip, { backgroundColor: activa ? t.primario : t.superficie, borderColor: activa ? t.primario : t.borde }]}
               >
-                <Text style={{ color: activa ? t.navy : t.texto, fontWeight: activa ? "800" : "600", fontSize: 15 }}>{n ?? "Mixto (todo el RNE)"}</Text>
+                <Text style={[estilos.chipTexto, { color: activa ? t.sobrePrimario : t.texto }]}>{n ?? "TODO EL RNE"}</Text>
               </Pressable>
             );
           })}
@@ -73,7 +73,7 @@ export default function NuevoDuelo() {
 
       {recientes.length > 0 && (
         <View style={{ gap: 8, marginTop: 16 }}>
-          <Text style={[estilos.etiqueta, { color: t.texto }]}>Tus duelos</Text>
+          <Text style={[estilos.etiqueta, { color: t.textoSuave }]}>TUS DUELOS</Text>
           {recientes.map((d, i) => {
             const gano = d.misAciertos !== null && d.mejorRival && d.misAciertos > d.mejorRival.aciertos;
             const perdio = d.misAciertos !== null && d.mejorRival && d.misAciertos < d.mejorRival.aciertos;
@@ -91,8 +91,8 @@ export default function NuevoDuelo() {
                     <IconoDuelo tamano={24} color={t.texto} acento={perdio ? t.textoSuave : t.ambar} />
                   )}
                   <View style={{ flex: 1 }}>
-                    <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>
-                      {d.norma} · {d.misAciertos === null ? "sin jugar" : `${d.misAciertos}/5`}
+                    <Text style={{ color: t.texto, fontFamily: MONO_FUERTE, fontSize: 15 }}>
+                      {d.norma} · {d.misAciertos === null ? "—" : `${d.misAciertos}/5`}
                     </Text>
                     <Text style={{ color: t.textoSuave, fontSize: 14 }}>
                       {d.mejorRival
@@ -100,7 +100,7 @@ export default function NuevoDuelo() {
                         : "Aún nadie aceptó el reto"}
                     </Text>
                   </View>
-                  <Text style={{ color: t.ambar, fontSize: 20, fontWeight: "700" }}>›</Text>
+                  <IconoChevron tamano={18} color={t.textoSuave} />
                 </Pressable>
               </Animated.View>
             );
@@ -113,11 +113,12 @@ export default function NuevoDuelo() {
 
 const estilos = StyleSheet.create({
   contenido: { padding: 24, gap: 12, paddingBottom: 48 },
-  titulo: { fontSize: 30, fontWeight: "700", letterSpacing: -0.5 },
+  titulo: { fontSize: 28, fontWeight: "700", letterSpacing: -0.5 },
   texto: { fontSize: 16, lineHeight: 22 },
-  etiqueta: { fontSize: 16, fontWeight: "700", marginTop: 8 },
+  etiqueta: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.4, marginTop: 12 },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: { borderWidth: 1, borderRadius: 6, paddingHorizontal: 14, paddingVertical: 10 },
+  chip: { borderWidth: 1, borderRadius: 4, paddingHorizontal: 14, paddingVertical: 10 },
+  chipTexto: { fontFamily: MONO_FUERTE, fontSize: 14, letterSpacing: 0.4 },
   boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", marginTop: 12, minHeight: 54, justifyContent: "center" },
   botonTexto: { fontSize: 17, fontWeight: "700" },
   fila: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth },

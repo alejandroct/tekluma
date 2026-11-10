@@ -60,7 +60,7 @@ export function Arranque({ onFin }: { onFin: () => void }) {
       />
       <Animated.Text
         style={[
-          { position: "absolute", top: (height + altoLogo) / 2 + 20, width: "100%", textAlign: "center", fontSize: 34, fontWeight: "800", letterSpacing: -1, color: t.texto },
+          { position: "absolute", top: (height + altoLogo) / 2 + 20, width: "100%", textAlign: "center", fontSize: 34, fontWeight: "700", letterSpacing: -1.2, color: t.texto },
           estiloMarca,
         ]}
       >

@@ -12,11 +12,13 @@ Reglas ya aplicadas en Hoy, Mazos, Monedas, Liga, Perfil, Premium y Repaso:
 
 Pendiente:
 - [x] Repaso y tarjetas (`app/repaso/[mazoId].tsx`, `components/Tarjeta.tsx`)
-- [ ] Cupo agotado (`components/CupoAgotado.tsx`)
-- [ ] Duelo: `app/duelo/nuevo.tsx`, `app/duelo/[codigo].tsx` (chips de norma, cabecera del marcador, partida)
-- [ ] Pregunta del día (`app/diaria.tsx`): cabecera como rótulo, opciones, bloque de resultado
-- [ ] Login (`app/login.tsx`) y bienvenida (`app/bienvenida.tsx`)
-- [ ] Verificar: `cd apps/mobile && npx tsc --noEmit && npx expo lint`, revisar en el simulador y commit
+- [x] Cupo agotado (`components/CupoAgotado.tsx`)
+- [x] Duelo: `app/duelo/nuevo.tsx`, `app/duelo/[codigo].tsx` (chips de norma, cabecera del marcador, partida)
+- [x] Pregunta del día (`app/diaria.tsx`): cabecera como rótulo, opciones, bloque de resultado
+- [x] Login (`app/login.tsx`) y bienvenida (`app/bienvenida.tsx`)
+- [x] Verificar: `cd apps/mobile && npx tsc --noEmit && npx expo lint`, revisar en el simulador y commit
+
+Siguiente: login y cupo agotado solo se revisaron con tsc/lint (verlos en el simulador exige cerrar sesión o agotar el cupo).
 
 ## Notas
 - La app apunta a la API de `apps/mobile/.env` (`EXPO_PUBLIC_API_URL`); dev es `https://api.dev.tekluma.app`.

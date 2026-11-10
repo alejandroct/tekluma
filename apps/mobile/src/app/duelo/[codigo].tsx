@@ -8,7 +8,7 @@ import { BotonVivo } from "@/components/Animaciones";
 import { compartirOtros, compartirPorWhatsApp } from "@/lib/diaria";
 import { crearDuelo, jugarDuelo, textoReto, verDuelo } from "@/lib/duelos";
 import { sonarMoneda } from "@/lib/sonidos";
-import { useTema } from "@/lib/tema";
+import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
 import { IconoCorrecto, IconoCronometro, IconoDuelo, IconoIncorrecto, Puesto } from "@/components/Iconos";
 
 /** Segundos desde `desde` (fuera del componente: el React Compiler exige render puro). */
@@ -50,8 +50,10 @@ export default function DueloPantalla() {
       <Animated.Text entering={FadeInDown.delay(80)} style={[estilos.titulo, { color: t.texto, textAlign: "center" }]}>
         {duelo.soyRetador ? "Tu duelo" : `${duelo.retador} te reta`}
       </Animated.Text>
+      <Animated.Text entering={FadeInDown.delay(110)} style={[estilos.rotuloTexto, { color: t.textoSuave }]}>
+        {duelo.norma === "RNE" ? "TODO EL RNE" : duelo.norma} · 5 PREGUNTAS · 1 INTENTO
+      </Animated.Text>
       <Animated.Text entering={FadeInDown.delay(140)} style={{ color: t.textoSuave, fontSize: 16, textAlign: "center", lineHeight: 22 }}>
-        {duelo.norma === "RNE" ? "Todo el RNE" : duelo.norma} · 5 preguntas · un intento cada una.{"\n"}
         {duelo.soyRetador
           ? "Responde primero; luego envía el reto y tus colegas intentarán superarte."
           : "Cuenta el tiempo: a igualdad de aciertos gana el más rápido."}
@@ -127,12 +129,12 @@ function Partida({ duelo, onFin }: { duelo: Duelo; onFin: (r: ResultadoDuelo) =>
         </View>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
           <IconoCronometro tamano={18} color={t.texto} acento={t.ambar} />
-          <Text style={{ color: t.texto, fontWeight: "700", fontVariant: ["tabular-nums"], fontSize: 16 }}>{segundos} s</Text>
+          <Text style={{ color: t.texto, fontFamily: MONO_FUERTE, fontSize: 15, minWidth: 36 }}>{segundos}s</Text>
         </View>
       </View>
       <Animated.View key={pregunta.id} entering={FadeInRight.springify().damping(16)} style={{ gap: 14 }}>
-        <Text style={{ color: t.ambar, fontWeight: "700" }}>
-          Pregunta {indice + 1} de {duelo.preguntas.length}
+        <Text style={[estilos.rotuloTexto, { color: t.textoSuave, textAlign: "left" }]}>
+          PREGUNTA {indice + 1}/{duelo.preguntas.length}
         </Text>
         <Text style={[estilos.pregunta, { color: t.texto }]}>{pregunta.pregunta}</Text>
         {pregunta.opciones.map((texto, i) => {
@@ -142,10 +144,10 @@ function Partida({ duelo, onFin }: { duelo: Duelo; onFin: (r: ResultadoDuelo) =>
               key={i}
               disabled={elegida !== null}
               onPress={() => elegir(i)}
-              style={[estilos.opcion, { backgroundColor: activa ? t.navy : t.superficie, borderColor: activa ? t.navy : t.borde }]}
+              style={[estilos.opcion, { backgroundColor: activa ? t.primario : t.superficie, borderColor: activa ? t.primario : t.borde }]}
             >
-              <Text style={{ color: activa ? t.ambar : t.ambar, fontWeight: "700", width: 18 }}>{"ABCDEF"[i]}</Text>
-              <Text style={{ flex: 1, color: activa ? "#FFFFFF" : t.texto, fontSize: 17, fontWeight: "600" }}>{texto}</Text>
+              <Text style={[estilos.letra, { color: activa ? t.sobrePrimario : t.textoSuave, borderColor: activa ? t.sobrePrimario : t.borde }]}>{"ABCDEF"[i]}</Text>
+              <Text style={{ flex: 1, color: activa ? t.sobrePrimario : t.texto, fontSize: 16, fontWeight: "600", lineHeight: 22 }}>{texto}</Text>
             </BotonVivo>
           );
         })}
@@ -192,11 +194,11 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
   return (
     <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={{ padding: 20, gap: 14, paddingBottom: 48 }}>
       <Animated.View entering={ZoomIn.springify().damping(14)} style={[estilos.cabecera, { backgroundColor: t.navy }]}>
-        <Text style={{ color: "#A9B7CC", fontWeight: "700" }}>Duelo {resultado.norma} · {resultado.codigo}</Text>
+        <Text style={[estilos.rotuloTexto, { color: "#A9B7CC", textAlign: "left" }]}>DUELO {resultado.norma} · {resultado.codigo}</Text>
         <Text style={estilos.cabeceraTitulo}>{titulo}</Text>
         {rivales.length === 0 && <Text style={{ color: "#A9B7CC", fontSize: 15 }}>Envía el reto y mira quién te gana.</Text>}
-        <BotonVivo onPress={() => compartirPorWhatsApp(texto)} style={[estilos.boton, { backgroundColor: "#25D366", marginTop: 8 }]}>
-          <Text style={[estilos.botonTexto, { color: "#FFFFFF" }]}>Retar por WhatsApp</Text>
+        <BotonVivo onPress={() => compartirPorWhatsApp(texto)} style={[estilos.boton, { backgroundColor: "#F6F5F2", marginTop: 8 }]}>
+          <Text style={[estilos.botonTexto, { color: "#0F1B2D" }]}>Retar por WhatsApp</Text>
         </BotonVivo>
         <Pressable onPress={() => compartirOtros(texto)} hitSlop={8}>
           <Text style={{ color: "#A9B7CC", fontWeight: "700", textAlign: "center" }}>Compartir en otra app</Text>
@@ -205,20 +207,20 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
 
       {resultado.jugadas.length > 0 && (
         <View style={{ gap: 8 }}>
-          <Text style={[estilos.subtitulo, { color: t.texto }]}>Marcador</Text>
+          <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>MARCADOR</Text>
           {resultado.jugadas.map((j, i) => (
             <Animated.View
               key={`${j.nombre}-${i}`}
               entering={FadeInDown.delay(i * 60)}
-              style={[estilos.jugada, { backgroundColor: j.soyYo ? "rgba(255,138,31,0.12)" : t.superficie, borderColor: j.soyYo ? t.ambar : t.borde }]}
+              style={[estilos.jugada, { backgroundColor: t.superficie, borderColor: t.borde }, j.soyYo && { borderLeftWidth: 3, borderLeftColor: t.ambar }]}
             >
               <Puesto n={i + 1} texto={t.textoSuave} ambar={t.ambar} />
               <Text style={{ flex: 1, color: t.texto, fontWeight: "700", fontSize: 16 }}>
                 {j.soyYo ? "Tú" : j.nombre}
                 {j.esRetador && !j.soyYo ? <Text style={{ color: t.textoSuave, fontWeight: "600", fontSize: 13 }}>  · retador</Text> : null}
               </Text>
-              <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>{j.aciertos}/5</Text>
-              <Text style={{ color: t.textoSuave, width: 52, textAlign: "right", fontVariant: ["tabular-nums"] }}>{j.segundos} s</Text>
+              <Text style={{ color: t.texto, fontFamily: MONO_FUERTE, fontSize: 15 }}>{j.aciertos}/5</Text>
+              <Text style={{ color: t.textoSuave, fontFamily: MONO, width: 56, textAlign: "right", fontVariant: ["tabular-nums"] }}>{j.segundos}s</Text>
             </Animated.View>
           ))}
         </View>
@@ -226,7 +228,7 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
 
       {resultado.solucion && (
         <View style={{ gap: 8 }}>
-          <Text style={[estilos.subtitulo, { color: t.texto }]}>Tus respuestas</Text>
+          <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>TUS RESPUESTAS</Text>
           {resultado.solucion.map((s, i) => {
             const p = duelo.preguntas.find((q) => q.id === s.id);
             if (!p) return null;
@@ -240,7 +242,7 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
                   </Text>
                 </View>
                 {!bien && s.elegida !== null && <Text style={{ color: ROJO, fontSize: 14 }}>Tu respuesta: {p.opciones[s.elegida]}</Text>}
-                <Text style={{ color: VERDE, fontSize: 14, fontWeight: "700" }}>Correcta: {p.opciones[s.correcta]}</Text>
+                <Text style={{ color: VERDE, fontSize: 14, fontWeight: "600" }}>Correcta: {p.opciones[s.correcta]}</Text>
                 {!!s.explicacion && <Text style={{ color: t.textoSuave, fontSize: 14, lineHeight: 19 }}>{s.explicacion}</Text>}
               </View>
             );
@@ -262,13 +264,14 @@ const estilos = StyleSheet.create({
   botonTexto: { fontSize: 17, fontWeight: "700" },
   barraSuperior: { flexDirection: "row", alignItems: "center", gap: 14 },
   progreso: { flex: 1, flexDirection: "row", gap: 6 },
-  segmento: { flex: 1, height: 6, borderRadius: 3 },
-  pregunta: { fontSize: 22, fontWeight: "700", lineHeight: 29 },
+  segmento: { flex: 1, height: 4, borderRadius: 2 },
+  pregunta: { fontSize: 21, fontWeight: "700", lineHeight: 28, letterSpacing: -0.2 },
+  rotuloTexto: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.4, textAlign: "center" },
+  letra: { width: 26, height: 26, borderWidth: 1, borderRadius: 4, textAlign: "center", lineHeight: 24, fontFamily: MONO_FUERTE, fontSize: 13 },
   opcion: { flexDirection: "row", alignItems: "center", gap: 12, borderWidth: 1, borderRadius: 8, padding: 16, minHeight: 58 },
   cabecera: { borderRadius: 10, padding: 20, gap: 8 },
-  cabeceraTitulo: { color: "#FFFFFF", fontSize: 28, fontWeight: "700" },
-  subtitulo: { fontSize: 17, fontWeight: "700", marginTop: 4 },
+  cabeceraTitulo: { color: "#F6F5F2", fontSize: 28, fontWeight: "700" },
+  subtitulo: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.4, marginTop: 8 },
   jugada: { flexDirection: "row", alignItems: "center", gap: 10, padding: 14, borderRadius: 8, borderWidth: 1 },
-  puesto: { width: 28, fontSize: 16, fontWeight: "700" },
   revision: { padding: 14, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, gap: 4 },
 });

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { ActivityIndicator, KeyboardAvoidingView, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Image, KeyboardAvoidingView, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { authClient } from "@/lib/auth";
-import { useTema } from "@/lib/tema";
+import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
 
 export default function Login() {
   const t = useTema();
@@ -35,9 +35,11 @@ export default function Login() {
   return (
     <KeyboardAvoidingView behavior="padding" style={[estilos.pantalla, { backgroundColor: t.fondo }]}>
       <View style={estilos.contenido}>
+        <Image source={require("../../assets/splash-icon.png")} style={estilos.logo} resizeMode="contain" />
         <Text style={[estilos.marca, { color: t.texto }]}>tekluma</Text>
+        <Text style={[estilos.rotulo, { color: t.textoSuave }]}>{paso === "correo" ? "RNE · INGENIERÍA Y ARQUITECTURA" : "PASO 2/2 · VERIFICACIÓN"}</Text>
         <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>
-          {paso === "correo" ? "Repasa el RNE con tarjetas. Entra con tu correo." : `Escribe el código de 6 dígitos que enviamos a ${email.trim()}.`}
+          {paso === "correo" ? "Estudia la norma con tarjetas de repaso. Entra con tu correo, sin contraseña." : `Escribe el código de 6 dígitos que enviamos a ${email.trim()}.`}
         </Text>
 
         {paso === "correo" ? (
@@ -94,10 +96,12 @@ export default function Login() {
 const estilos = StyleSheet.create({
   pantalla: { flex: 1 },
   contenido: { flex: 1, justifyContent: "center", padding: 24, gap: 14 },
-  marca: { fontSize: 40, fontWeight: "700", letterSpacing: -1.5 },
-  subtitulo: { fontSize: 16, lineHeight: 22, marginBottom: 12 },
+  logo: { width: 52, height: 52, marginBottom: 4 },
+  marca: { fontSize: 36, fontWeight: "700", letterSpacing: -1.2 },
+  rotulo: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.4, marginTop: -6 },
+  subtitulo: { fontSize: 16, lineHeight: 22, marginBottom: 12, marginTop: 8 },
   input: { borderWidth: 1, borderRadius: 8, padding: 16, fontSize: 17, letterSpacing: 0 },
-  codigo: { fontSize: 28, letterSpacing: 10, textAlign: "center", fontVariant: ["tabular-nums"] },
+  codigo: { fontSize: 28, letterSpacing: 10, textAlign: "center", fontFamily: MONO_FUERTE, fontVariant: ["tabular-nums"] },
   error: { color: "#D64545", fontSize: 15 },
   boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", marginTop: 4 },
   botonTexto: { fontSize: 17, fontWeight: "700" },

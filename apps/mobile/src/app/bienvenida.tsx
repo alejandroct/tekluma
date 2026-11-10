@@ -3,7 +3,7 @@ import { ActivityIndicator, Alert, KeyboardAvoidingView, Pressable, ScrollView, 
 import { PROFESSIONS, type Profession } from "@tekluma/shared";
 import { authClient } from "@/lib/auth";
 import { NOMBRES_PROFESION } from "@/lib/profesiones";
-import { useTema } from "@/lib/tema";
+import { MONO, useTema } from "@/lib/tema";
 
 /** Se muestra una sola vez, tras el primer inicio de sesión, si el usuario aún no tiene nombre. */
 export default function Bienvenida() {
@@ -24,10 +24,11 @@ export default function Bienvenida() {
   return (
     <KeyboardAvoidingView behavior="padding" style={{ flex: 1, backgroundColor: t.fondo }}>
       <ScrollView contentContainerStyle={estilos.contenido} keyboardShouldPersistTaps="handled">
-        <Text style={[estilos.titulo, { color: t.texto }]}>¡Bienvenido a Tekluma!</Text>
-        <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>Cuéntanos un poco de ti para personalizar tus mazos.</Text>
+        <Text style={[estilos.rotulo, { color: t.textoSuave }]}>PERFIL · 1 MINUTO</Text>
+        <Text style={[estilos.titulo, { color: t.texto }]}>Te damos la bienvenida</Text>
+        <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>Tu nombre es el que verán tus colegas en duelos y ligas.</Text>
 
-        <Text style={[estilos.etiqueta, { color: t.texto }]}>¿Cómo te llamas?</Text>
+        <Text style={[estilos.etiqueta, { color: t.textoSuave }]}>NOMBRE</Text>
         <TextInput
           value={nombre}
           onChangeText={setNombre}
@@ -39,7 +40,7 @@ export default function Bienvenida() {
           style={[estilos.input, { color: t.texto, borderColor: t.borde, backgroundColor: t.superficie }]}
         />
 
-        <Text style={[estilos.etiqueta, { color: t.texto }]}>¿A qué te dedicas?</Text>
+        <Text style={[estilos.etiqueta, { color: t.textoSuave }]}>PROFESIÓN</Text>
         <View style={estilos.opciones}>
           {PROFESSIONS.map((p) => {
             const activa = p === profesion;
@@ -47,9 +48,9 @@ export default function Bienvenida() {
               <Pressable
                 key={p}
                 onPress={() => setProfesion(p)}
-                style={[estilos.chip, { borderColor: activa ? t.ambar : t.borde, backgroundColor: activa ? t.ambar : t.superficie }]}
+                style={[estilos.chip, { borderColor: activa ? t.primario : t.borde, backgroundColor: activa ? t.primario : t.superficie }]}
               >
-                <Text style={{ color: activa ? t.navy : t.texto, fontWeight: activa ? "800" : "500", fontSize: 15 }}>{NOMBRES_PROFESION[p]}</Text>
+                <Text style={{ color: activa ? t.sobrePrimario : t.texto, fontWeight: "600", fontSize: 15 }}>{NOMBRES_PROFESION[p]}</Text>
               </Pressable>
             );
           })}
@@ -69,12 +70,13 @@ export default function Bienvenida() {
 
 const estilos = StyleSheet.create({
   contenido: { padding: 24, paddingTop: 96, gap: 12 },
-  titulo: { fontSize: 30, fontWeight: "700", letterSpacing: -0.5 },
+  rotulo: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.4 },
+  titulo: { fontSize: 28, fontWeight: "700", letterSpacing: -0.5 },
   subtitulo: { fontSize: 16, lineHeight: 22, marginBottom: 12 },
-  etiqueta: { fontSize: 16, fontWeight: "700", marginTop: 8 },
+  etiqueta: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.4, marginTop: 12 },
   input: { borderWidth: 1, borderRadius: 8, padding: 16, fontSize: 17, letterSpacing: 0 },
   opciones: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: { borderWidth: 1, borderRadius: 6, paddingHorizontal: 14, paddingVertical: 10 },
+  chip: { borderWidth: 1, borderRadius: 4, paddingHorizontal: 14, paddingVertical: 10 },
   boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", marginTop: 20, minHeight: 54, justifyContent: "center" },
   botonTexto: { fontSize: 17, fontWeight: "700" },
 });
