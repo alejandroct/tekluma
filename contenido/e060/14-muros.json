@@ -1,0 +1,498 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "14.1",
+   "epigrafe": "Alcance",
+   "texto": "Las disposiciones de este Capítulo son aplicables a muros sometidos a los estados de carga siguientes:\n (a) Muros sometidos a carga axial con o sin flexión transversal a su plano, denominados muros de carga. (b) Muros sometidos a cargas normales a su plano. (c) Muros de contención. Los muros sometidos a cargas verticales y cargas horizontales en su plano, provenientes de las acciones sísmicas, denominados placas o muros de corte, se diseñarán de acuerdo a las disposiciones del Capítulo 21.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2",
+   "epigrafe": "Generalidades",
+   "texto": "GENERALIDADES",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.1",
+   "texto": "Los muros serán diseñados para las cargas verticales, cargas laterales y otras cargas a los que estén sometidos.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.2",
+   "texto": "Los muros de carga se diseñarán de acuerdo a 14.4 ó 14.5.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.3",
+   "texto": "Los muros de contención se diseñarán de acuerdo a 14.9.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.4",
+   "texto": "El diseño para cortante debe cumplir con lo estipulado en 11.10.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.5",
+   "texto": "La longitud horizontal del muro considerada como efectiva para cada carga vertical concentrada no deberá exceder la distancia centro a centro entre cargas ni la longitud de la superficie de contacto más dos veces el espesor del muro a cada lado, a no ser que se demuestre mediante un análisis detallado la contribución de una longitud mayor.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.6",
+   "texto": "Los elementos en compresión construidos monolíticamente con los muros cumplirán con los requisitos de 10.8.2",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.7",
+   "texto": "La cantidad de refuerzo y los límites de espesor indicados en este Capítulo podrán ser modificados cuando se demuestre por un análisis estructural detallado que se tienen adecuadas resistencia y estabilidad.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.2.8",
+   "texto": "La transferencia de las fuerzas a la cimentación en la base del muro se hará de acuerdo con 15.8.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.3",
+   "epigrafe": "Refuerzo Mínimo",
+   "texto": "REFUERZO MÍNIMO",
+   "pagina": 144
+  },
+  {
+   "numero": "14.3.1",
+   "texto": "El refuerzo mínimo vertical y horizontal debe cumplir con las disposiciones de 14.3, a menos que se requiera una cantidad mayor por cortante de acuerdo con 11.10.\n (a) La cuantía de refuerzo horizontal no será menor que 0,002. (b) La cuantía de refuerzo vertical no será menor que 0,0015.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.3.2",
+   "texto": "Los muros con un espesor mayor que 200 mm, excepto los muros de sótanos, deben tener el refuerzo en cada dirección colocado en dos capas paralelas a las caras del muro.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.3.3",
+   "texto": "El refuerzo vertical y el horizontal no debe estar espaciados a más de tres veces el espesor del muro, ni de 400 mm.",
+   "pagina": 144
+  },
+  {
+   "numero": "14.3.4",
+   "texto": "El refuerzo vertical distribuido no necesita estar confinado por estribos a menos que su cuantía exceda de 0,01 del área total de concreto o cuando el refuerzo vertical no se requiere como refuerzo de compresión.",
+   "pagina": 145
+  },
+  {
+   "numero": "14.4",
+   "epigrafe": "Muros Diseñados Como Elementos En Compresión",
+   "texto": "Los muros sometidos a carga axial o combinación de carga axial y flexión deben diseñarse de acuerdo con las disposiciones del Capítulo 10 y de 14.2 y 14.3.",
+   "pagina": 145
+  },
+  {
+   "numero": "14.5",
+   "epigrafe": "Método Empírico De Diseño Para Muros De Carga",
+   "texto": "MÉTODO EMPÍRICO DE DISEÑO PARA MUROS DE CARGA",
+   "pagina": 145
+  },
+  {
+   "numero": "14.5.1",
+   "texto": "Se permite que los muros de carga de sección transversal rectangular sólida (sin vacíos) sean diseñados mediante las disposiciones empíricas de 14.5, cuando la resultante de todas las cargas amplificadas esté localizada dentro del tercio central del espesor total del muro y se satisfagan los requisitos de 14.2 y 14.3.",
+   "pagina": 145
+  },
+  {
+   "numero": "14.5.2",
+   "texto": "La resistencia axial de diseño φPn de un muro que satisface las limitaciones de 14.5.1, debe calcularse mediante la ecuación (14-1), a menos que se diseñe de acuerdo con 14.4.\n 2 0,55 1 32\n c Pn f c Ag\n h k ′ φ = φ − [ ] ( ) ( ) [ ] (14-1)\n donde φ = 0,70 y el factor de longitud efectiva k es:\n Para muros arriostrados en la parte superior e inferior con el fin de evitar el desplazamiento lateral y:\n (a) Restringidos contra la rotación en uno o ambos extremos (superior y/o inferior) … 0,8 (b) No restringidos contra la rotación en ambos extremos … 1,0\n Para muros no arriostrados con el fin de evitar el desplazamiento lateral … 2,0",
+   "pagina": 145
+  },
+  {
+   "numero": "14.5.3",
+   "epigrafe": "Espesor mínimo de muros diseñados por el método empírico de diseño",
+   "texto": "Espesor mínimo de muros diseñados por el método empírico de diseño",
+   "pagina": 145
+  },
+  {
+   "numero": "14.5.3.1",
+   "texto": "El espesor de los muros de carga no debe ser menor de 1/25 de la altura entre elementos que le proporcionen apoyo lateral o de la longitud del muro, la que sea menor, ni tampoco debe ser menor que 100 mm.",
+   "pagina": 145
+  },
+  {
+   "numero": "14.5.3.2",
+   "texto": "El espesor de los muros exteriores de sótanos y cimentaciones no debe ser menor que 200 mm.",
+   "pagina": 145
+  },
+  {
+   "numero": "14.6",
+   "epigrafe": "Muros No Portantes",
+   "texto": "MUROS NO PORTANTES",
+   "pagina": 145
+  },
+  {
+   "numero": "14.6.1",
+   "texto": "El espesor de los muros que no sean de carga no debe ser menor de 100 mm, ni menor de 1/30 de la distancia mínima entre elementos que le proporcionen apoyo lateral.",
+   "pagina": 145
+  },
+  {
+   "numero": "14.7",
+   "epigrafe": "Muros Empleados Como Vigas De Cimentación",
+   "texto": "MUROS EMPLEADOS COMO VIGAS DE CIMENTACIÓN",
+   "pagina": 145
+  },
+  {
+   "numero": "14.7.1",
+   "texto": "Los muros diseñados como vigas de cimentación deben tener el refuerzo superior e inferior que se requiere para resistir los momentos flectores, de acuerdo con las disposiciones del Capítulo 10. El diseño por cortante debe cumplir con las disposiciones del Capítulo 11.",
+   "pagina": 145
+  },
+  {
+   "numero": "14.7.2",
+   "texto": "El refuerzo de los muros empleados como vigas de cimentación debe cumplir con los requisitos de 14.3.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.8",
+   "epigrafe": "Muros De Contención",
+   "texto": "MUROS DE CONTENCIÓN",
+   "pagina": 146
+  },
+  {
+   "numero": "14.8.1",
+   "texto": "Los muros de contención con o sin carga axial significativa se diseñarán de acuerdo a las disposiciones para diseño de elementos en flexión y carga axial del Capítulo 10.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.8.2",
+   "texto": "El refuerzo mínimo será el indicado en 14.3. Este requisito podrá exceptuarse cuando el Ingeniero Proyectista disponga juntas de contracción y señale procedimientos constructivos que controlen los efectos de contracción y temperatura.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.8.3",
+   "texto": "El acero por temperatura y contracción deberá colocarse en ambas caras para muros de espesor mayor o igual a 250 mm. Este refuerzo podrá disponerse en mayor proporción en la cara expuesta del muro.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.8.4",
+   "texto": "El refuerzo vertical y horizontal no se colocará a un espaciamiento mayor que tres veces el espesor del muro ni que 400 mm.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.9",
+   "epigrafe": "Muros Anclados",
+   "texto": "MUROS ANCLADOS",
+   "pagina": 146
+  },
+  {
+   "numero": "14.9.1",
+   "texto": "En el diseño de muros de contención con anclajes temporales o permanentes, deberá prestarse especial atención en la verificación de los esfuerzos de punzonamiento ocasionados por los dispositivos de anclaje. En el diseño deberán considerarse las solicitaciones correspondientes a cada una de las diferentes etapas de la construcción.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.10",
+   "epigrafe": "Aberturas En Muros",
+   "texto": "ABERTURAS EN MUROS",
+   "pagina": 146
+  },
+  {
+   "numero": "14.10.1",
+   "texto": "Las aberturas en los muros deberán ubicarse de modo tal de reducir lo menos posible su capacidad resistente.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.10.2",
+   "texto": "La presencia de aberturas debe considerarse en el cálculo de rigideces y resistencias.",
+   "pagina": 146
+  },
+  {
+   "numero": "14.10.3",
+   "texto": "Además del refuerzo mínimo requerido por 14.3, deben colocarse por lo menos dos barras de 5/8” alrededor de todos los vanos de ventanas y puertas. Estas barras deben prolongarse más allá de las esquinas de las aberturas una distancia igual a la longitud de anclaje en tracción pero no menos de 600 mm.\n\n ZAPATAS",
+   "pagina": 146
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c14-muros",
+   "titulo": "E.060 · Cap. 14 · Muros",
+   "descripcion": "Muros de carga, refuerzo mínimo, método empírico, espesores, muros de contención y aberturas.",
+   "acceso": "free",
+   "orden": 114,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué tipos de muros cubre el Capítulo 14 y cuáles van al Capítulo 21?",
+      "respuesta": "Muros de carga (axial con o sin flexión fuera de su plano), muros con cargas normales a su plano y muros de contención. Las placas que resisten sismo en su plano se diseñan con 21.9."
+     },
+     "citas": [
+      {
+       "articulo": "14.1",
+       "extracto": "(a) Muros sometidos a carga axial con o sin flexión transversal a su plano, denominados muros de carga. (b) Muros sometidos a cargas normales a su plano. (c) Muros de contención."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué longitud de muro se considera efectiva para una carga vertical concentrada?",
+      "respuesta": "No más que la distancia entre centros de cargas ni que el ancho de contacto más dos veces el espesor del muro a cada lado, salvo análisis detallado."
+     },
+     "citas": [
+      {
+       "articulo": "14.2.5",
+       "extracto": "La longitud horizontal del muro considerada como efectiva para cada carga vertical concentrada no deberá exceder la distancia centro a centro entre cargas ni la longitud de la superficie de contacto más dos veces el espesor del muro a cada lado…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Refuerzo mínimo en muros (Cap. 14)",
+      "columnas": [
+       "Cuantía mínima"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Horizontal",
+        "valores": [
+         "0,002"
+        ]
+       },
+       {
+        "etiqueta": "Vertical",
+        "valores": [
+         "0,0015"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "14.3.1",
+       "extracto": "(a) La cuantía de refuerzo horizontal no será menor que 0,002. (b) La cuantía de refuerzo vertical no será menor que 0,0015."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Muro de {H} mm de espesor. ¿Área mínima de refuerzo horizontal por metro de altura (mm²/m)?",
+      "variables": {
+       "H": {
+        "etiqueta": "Espesor",
+        "valores": [
+         150,
+         200,
+         250
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.002*H*1000",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm²/m"
+     },
+     "citas": [
+      {
+       "articulo": "14.3.1",
+       "extracto": "(a) La cuantía de refuerzo horizontal no será menor que 0,002."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Los muros de más de {{200 mm}} de espesor (salvo los de sótano) llevan el refuerzo en dos capas."
+     },
+     "citas": [
+      {
+       "articulo": "14.3.2",
+       "extracto": "Los muros con un espesor mayor que 200 mm, excepto los muros de sótanos, deben tener el refuerzo en cada dirección colocado en dos capas paralelas a las caras del muro."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El refuerzo de muros no se espacia a más de tres veces el espesor ni de {{400 mm}}."
+     },
+     "citas": [
+      {
+       "articulo": "14.3.3",
+       "extracto": "El refuerzo vertical y el horizontal no debe estar espaciados a más de tres veces el espesor del muro, ni de 400 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo se puede usar el método empírico para muros de carga?",
+      "respuesta": "En muros de sección rectangular sólida cuando la resultante de las cargas amplificadas cae dentro del tercio central del espesor y se cumplen 14.2 y 14.3."
+     },
+     "citas": [
+      {
+       "articulo": "14.5.1",
+       "extracto": "…cuando la resultante de todas las cargas amplificadas esté localizada dentro del tercio central del espesor total del muro y se satisfagan los requisitos de 14.2 y 14.3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la resistencia axial de diseño de un muro por el método empírico?",
+      "respuesta": "φPn = 0,55 φ f′c Ag [1 − (k ℓc / 32h)²], con φ = 0,70."
+     },
+     "citas": [
+      {
+       "articulo": "14.5.2",
+       "extracto": "φPn = 0,55 φ f’c Ag [1 − (k ℓc / 32h)²] (14-1) donde φ = 0,70"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Factor de longitud efectiva k (método empírico)",
+      "columnas": [
+       "k"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Arriostrado arriba y abajo, restringido al giro en uno o ambos extremos",
+        "valores": [
+         "0,8"
+        ]
+       },
+       {
+        "etiqueta": "Arriostrado arriba y abajo, sin restricción al giro",
+        "valores": [
+         "1,0"
+        ]
+       },
+       {
+        "etiqueta": "No arriostrado contra desplazamiento lateral",
+        "valores": [
+         "2,0"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "14.5.2",
+       "extracto": "(a) Restringidos contra la rotación en uno o ambos extremos (superior y/o inferior)….. 0,8 (b) No restringidos contra la rotación en ambos extremos … 1,0 Para muros no arriostrados con el fin de evitar el desplazamiento lateral… 2,0"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Muro de carga de h = {H} mm, f′c = 21 MPa, altura libre ℓc = {L} mm y k = 0,8. ¿φPn por metro de muro (kN/m)?",
+      "variables": {
+       "H": {
+        "etiqueta": "Espesor",
+        "valores": [
+         150,
+         200,
+         250
+        ],
+        "unidad": "mm"
+       },
+       "L": {
+        "etiqueta": "ℓc",
+        "valores": [
+         2600,
+         3000
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.55*0.7*21*H*(1-(0.8*L/(32*H))^2)",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN/m",
+      "explicacion": "Por metro, Ag = h × 1000 mm²; dividir entre 1000 para kN da h × f′c directamente."
+     },
+     "citas": [
+      {
+       "articulo": "14.5.2",
+       "extracto": "φPn = 0,55 φ f’c Ag [1 − (k ℓc / 32h)²] (14-1) donde φ = 0,70"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Espesores mínimos de muros",
+      "columnas": [
+       "Espesor mínimo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Muro de carga (método empírico)",
+        "valores": [
+         "1/25 de la altura o longitud (la menor) y 100 mm"
+        ]
+       },
+       {
+        "etiqueta": "Muro exterior de sótano o cimentación",
+        "valores": [
+         "200 mm"
+        ]
+       },
+       {
+        "etiqueta": "Muro no portante",
+        "valores": [
+         "100 mm y 1/30 de la distancia entre apoyos laterales"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "14.5.3.2",
+       "extracto": "El espesor de los muros exteriores de sótanos y cimentaciones no debe ser menor que 200 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En muros de contención de espesor mayor o igual a {{250 mm}}, el acero de temperatura se coloca en ambas caras."
+     },
+     "citas": [
+      {
+       "articulo": "14.8.3",
+       "extracto": "El acero por temperatura y contracción deberá colocarse en ambas caras para muros de espesor mayor o igual a 250 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué refuerzo mínimo exige la E.060 alrededor de puertas y ventanas en muros?",
+      "respuesta": "Al menos dos barras de 5/8″ alrededor de todos los vanos, prolongadas más allá de las esquinas la longitud de anclaje en tracción, y no menos de 600 mm."
+     },
+     "citas": [
+      {
+       "articulo": "14.10.3",
+       "extracto": "…deben colocarse por lo menos dos barras de 5/8” alrededor de todos los vanos de ventanas y puertas. Estas barras deben prolongarse más allá de las esquinas de las aberturas una distancia igual a la longitud de anclaje en tracción pero no menos de 600 mm."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,900 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "8.1",
+   "epigrafe": "Métodos De Diseño",
+   "texto": "MÉTODOS DE DISEÑO",
+   "pagina": 57
+  },
+  {
+   "numero": "8.1.1",
+   "texto": "Para el diseño de estructuras de concreto armado se utilizará el Diseño por Resistencia. Deberá proporcionarse a todas las secciones de los elementos estructurales Resistencias de Diseño (φRn) adecuadas, de acuerdo con las disposiciones de esta Norma, utilizando los factores de carga (amplificación) y los factores de reducción de resistencia, φ, especificados en el Capítulo 9.\n Se comprobará que la respuesta de las elementos estructurales en condiciones de servicio (deflexiones, agrietamiento, vibraciones, fatiga, etc.) queden limitadas a valores tales que el funcionamiento sea satisfactorio.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.2",
+   "epigrafe": "Cargas",
+   "texto": "CARGAS",
+   "pagina": 57
+  },
+  {
+   "numero": "8.2.1",
+   "texto": "Las estructuras deberán diseñarse para resistir todas las cargas que puedan obrar sobre ella durante su vida útil.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.2.2",
+   "texto": "Las cargas serán las estipuladas en la Norma Técnica de Edificación E.020 Cargas, con las reducciones de sobrecarga que en ella se permiten, y las acciones sísmicas serán las prescritas en la Norma Técnica de Edificación E.030 Diseño Sismorresistente.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.2.3",
+   "texto": "Deberá prestarse especial atención a los efectos ocasionados por el preesforzado, las cargas de montaje y construcción, cargas de puentes grúa, vibración, impacto, retracción, variaciones de temperatura, flujo plástico, expansión de concretos de retracción compensada y asentamientos diferenciales de los apoyos.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.3",
+   "epigrafe": "Métodos De Análisis",
+   "texto": "MÉTODOS DE ANÁLISIS",
+   "pagina": 57
+  },
+  {
+   "numero": "8.3.1",
+   "texto": "Todos los elementos estructurales deberán diseñarse para resistir los efectos máximos producidos por las cargas amplificadas, determinados por medio del análisis estructural, suponiendo una respuesta lineal elástica de la estructura, excepto cuando se modifiquen los momentos flectores de acuerdo con 8.4. Se permite simplificar el diseño usando las suposiciones indicadas en 8.6 a 8.9.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.3.2",
+   "texto": "Excepto para elementos de concreto preesforzado, se pueden emplear métodos aproximados de análisis estructural para edificaciones con luces, alturas de entrepisos y tipos de construcción convencional.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.3.3",
+   "texto": "En pórticos arriostrados lateralmente, para calcular los momentos debidos a cargas de gravedad en las vigas y columnas construidas monolíticamente con la estructura, se podrán considerar empotrados los extremos lejanos de las columnas de ambos entrepisos.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.3.4",
+   "texto": "Como alternativa a los métodos de análisis estructural, se permite utilizar para el análisis por cargas de gravedad de vigas continuas, losas armadas en una dirección y vigas de pórticos de poca altura, los siguientes momentos y fuerzas cortantes aproximados, siempre y cuando se cumplan las siguientes condiciones:\n (a) Haya dos o más tramos. (b) Las luces de los tramos sean aproximadamente iguales, sin que la mayor de dos luces adyacentes exceda en más de 20% a la menor. (c) Las cargas sean uniformemente distribuidas y no existan cargas concentradas. Las cargas uniformemente distribuidas en cada uno de los tramos deben tener la misma magnitud.\n\n (d) La carga viva en servicio no sea mayor a tres veces la carga muerta en servicio. (e) Los elementos sean prismáticos de sección constante. (f) Si se trata de la viga de un pórtico de poca altura, este debe estar arriostrado lateralmente para las cargas verticales.\n\n • Momento positivo\n (a) Tramos extremos El extremo discontinuo no está restringido … 2 ( ) 1/11 n u w\n\n El extremo discontinuo es monolítico con el apoyo … 2 (1/14) n u w (b) Tramos interiores … 2 (1/16) n u w\n\n • Momento negativo en la cara exterior del primer apoyo interior\n (a) Dos tramos: … 2 (1/ 9) n u w (b) Más de dos tramos: … 2 (1/10) n u w\n\n • Momento negativo en las demás caras de apoyos interiores … 2 (1/11) n u w\n\n • Momento negativo en la cara de todos los apoyos para losas con luces que no excedan de 3 m y vigas en las cuales el cociente entre la suma de las rigideces de las columnas y la rigidez de la viga exceda de 8 en cada extremo del tramo: … 2 (1/12) n u w\n\n • Momento negativo en la cara interior de los apoyos exteriores para los elementos construidos monolíticamente con sus apoyos:\n Cuando el apoyo es una viga de borde: … 2 (1/ 24) n u w\n\n Cuando el apoyo es una columna: … 2 (1/16) n u w\n\n • Fuerza Cortante\n Cara exterior del primer apoyo interior: … 2 1.15 (1/ 2) n u w\n\n Caras de todos los demás apoyos: … 2 (1/ 2) n u w\n\n El valor de n es la luz libre del tramo. Para el cálculo de los momentos negativos en las caras de los apoyos interiores, n se tomará como el promedio de las luces libres adyacentes.",
+   "pagina": 57
+  },
+  {
+   "numero": "8.4",
+   "epigrafe": "Redistribución De Momentos En Elementos Continuos Sometidos",
+   "texto": "A FLEXIÓN",
+   "pagina": 58
+  },
+  {
+   "numero": "8.4.1",
+   "texto": "Excepto cuando se empleen métodos aproximados para el cálculo de los momentos flectores, se permite disminuir los momentos amplificados (Mu) - calculados asumiendo comportamiento lineal elástico de la estructura - en las secciones de máximo momento negativo o máximo momento positivo en cualquier vano de un elemento continuo sometido a flexión, para cualquier distribución de carga supuesta, en no más de:\n\n 1000 εt (en porcentaje) (8-1)\n\n εt es la deformación unitaria neta de tracción en el acero más alejado del borde comprimido de la sección, cuando esta alcanza su resistencia nominal (Mn). La deformación neta excluye las deformaciones unitarias causadas por: el preesfuerzo efectivo, el flujo plástico, la retracción de fraguado y la variación de temperatura.",
+   "pagina": 59
+  },
+  {
+   "numero": "8.4.2",
+   "texto": "La redistribución de los momentos negativos solo podrá hacerse cuando en la sección en la cual se reduce el momento flector, la deformación εt sea mayor a igual a 0,0075.",
+   "pagina": 59
+  },
+  {
+   "numero": "8.4.3",
+   "texto": "Los momentos reducidos deberán usarse para la determinación de todas las otras fuerzas de sección a lo largo de todo el vano. El equilibrio estático debe mantenerse luego de la redistribución, para cada distribución de carga supuesta.",
+   "pagina": 59
+  },
+  {
+   "numero": "8.5",
+   "epigrafe": "Módulo De Elasticidad Y Módulo De Corte",
+   "texto": "MÓDULO DE ELASTICIDAD Y MÓDULO DE CORTE",
+   "pagina": 59
+  },
+  {
+   "numero": "8.5.1",
+   "texto": "Para concretos de peso unitario wc comprendido entre 1450 y 2500 kg/m3, el módulo de elasticidad, Ec, para el concreto puede tomarse como:\n\n 1,5 ( ) 0,043 c Ec w f c′ = (en MPa)\n (8-2)",
+   "pagina": 59
+  },
+  {
+   "numero": "8.5.2",
+   "texto": "Para concretos de peso unitario normal (wc ≈ 2300 kg/m3), Ec, puede tomarse como:\n 4700 Ec f c′ = (en MPa) (8-3)",
+   "pagina": 59
+  },
+  {
+   "numero": "8.5.3",
+   "texto": "Pueden usarse otros valores de Ec que estén suficientemente respaldados por resultados de laboratorio.",
+   "pagina": 59
+  },
+  {
+   "numero": "8.5.4",
+   "texto": "En ausencia de resultados experimentales confiables, el módulo de rigidez al esfuerzo cortante del concreto se podrá suponer igual a:\n\n 2,3\n Ec G = (8-4)",
+   "pagina": 59
+  },
+  {
+   "numero": "8.5.5",
+   "texto": "El módulo de elasticidad, Es, para el acero de refuerzo no preesforzado puede tomarse como 200 000 MPa.",
+   "pagina": 59
+  },
+  {
+   "numero": "8.5.6",
+   "texto": "El módulo de elasticidad, Ep, para el acero de preesforzado deberá determinarse mediante ensayos o será suministrado por el fabricante.\n\n Fig. 8.4.1 Deformación del acero εt para flexión positiva y negativa en una sección rectangular.",
+   "pagina": 59
+  },
+  {
+   "numero": "8.6",
+   "epigrafe": "Rigidez",
+   "texto": "RIGIDEZ",
+   "pagina": 60
+  },
+  {
+   "numero": "8.6.1",
+   "texto": "Se permite adoptar cualquier conjunto de suposiciones razonables para calcular las rigideces relativas a flexión y torsión de columnas, muros y sistemas de entrepisos y cubierta. Las suposiciones que se hagan deberán ser consistentes en todo el análisis.\n En vigas T, la sección bruta incluirá los anchos de las especificados en 8.10.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.6.2",
+   "texto": "El efecto de las cartelas deberá ser considerado en el análisis y diseño de los elementos de sección variable.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.7",
+   "epigrafe": "Longitud Del Vano",
+   "texto": "LONGITUD DEL VANO",
+   "pagina": 60
+  },
+  {
+   "numero": "8.7.1",
+   "texto": "La luz de los elementos que no estén construidos monolíticamente con sus apoyos deberá considerarse como la luz libre más el peralte del elemento, sin exceder la distancia entre los centros de los apoyos.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.7.2",
+   "texto": "En el análisis estructural de pórticos o elementos continuos para determinar los momentos flectores, la luz debe considerarse como la distancia entre los centros de los apoyos.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.7.3",
+   "texto": "Las vigas construidas monolíticamente con sus apoyos se podrán diseñar usando los momentos reducidos a la cara de los apoyos.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.7.4",
+   "texto": "Las losas macizas o nervadas construidas monolíticamente con sus apoyos, con luces libres no mayores de 3 m, podrán ser analizadas como losas continuas sobre apoyos simples con luces iguales a las luces libres.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.8",
+   "epigrafe": "Columnas",
+   "texto": "COLUMNAS",
+   "pagina": 60
+  },
+  {
+   "numero": "8.8.1",
+   "texto": "Las columnas se deben diseñar para resistir las fuerzas axiales que provienen de las cargas amplificadas de todos los pisos, y el momento máximo debido a las cargas amplificadas, considerando la carga viva actuando en solo uno de los tramos adyacentes del piso o techo bajo consideración. También debe considerarse la condición de carga que produzca la máxima relación (excentricidad) entre el momento y carga axial.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.8.2",
+   "texto": "En pórticos o en elementos continuos deberá prestarse atención al efecto de las cargas no balanceadas de los pisos, tanto en las columnas exteriores como en las interiores, y a la carga excéntrica debida a otras causas.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.9",
+   "epigrafe": "Disposición De La Carga Viva",
+   "texto": "DISPOSICIÓN DE LA CARGA VIVA",
+   "pagina": 60
+  },
+  {
+   "numero": "8.9.1",
+   "texto": "Para la determinación de los momentos flectores y fuerzas cortantes en las vigas y columnas ocasionados por las cargas de gravedad en pórticos arriostrados lateralmente, se permitirá utilizar el modelo simplificado indicado en 8.3.3.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.9.2",
+   "texto": "Se permite suponer que la disposición de las cargas está limitada a las combinaciones siguientes: (a) Carga muerta amplificada en todos los tramos con la carga viva amplificada en dos tramos adyacentes. (b) Carga muerta amplificada en todos los tramos con la carga viva amplificada en tramos alternados.",
+   "pagina": 60
+  },
+  {
+   "numero": "8.10",
+   "epigrafe": "Disposiciones Para Vigas T",
+   "texto": "DISPOSICIONES PARA VIGAS T",
+   "pagina": 61
+  },
+  {
+   "numero": "8.10.1",
+   "texto": "Para que una sección de concreto armado pueda considerarse como viga T, las alas y el alma deberán construirse monolíticamente o, de lo contrario, deben estar efectivamente unidas entre sí.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.10.2",
+   "texto": "El ancho efectivo de la losa usada como ala de las vigas T no debe exceder de la cuarta parte de la luz libre de la viga, y el ancho sobresaliente efectivo del ala a cada lado del alma no debe exceder: (a) Ocho veces el espesor de losa. (b) La mitad de la distancia libre a la siguiente alma",
+   "pagina": 61
+  },
+  {
+   "numero": "8.10.3",
+   "texto": "Para vigas que tengan losa a un solo lado, el ancho sobresaliente efectivo del ala no debe exceder: (a) La doceava parte de la luz libre de la viga. (b) Seis veces el espesor de la losa. (c) La mitad de la distancia libre a la siguiente alma.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.10.4",
+   "texto": "En vigas aisladas, en las que solamente se utilice la forma T para proporcionar con el ala una área adicional de compresión, el ala debe tener un espesor no menor de la mitad del ancho del alma y un ancho efectivo no mayor de cuatro veces el ancho del alma.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.10.5",
+   "texto": "Cuando el refuerzo principal por flexión en una losa que se considere como ala de una viga T (excluyendo las losas nervadas) sea paralelo a la viga, se debe disponer de refuerzo perpendicular a la viga en la parte superior de la losa de acuerdo con lo siguiente: (a) El refuerzo transversal se debe diseñar para resistir la carga amplificada que actúa sobre el ala suponiendo que esta trabaja en voladizo. Para vigas aisladas debe considerarse el ancho total del ala. Para otros tipos de vigas T, sólo es necesario considerar el ancho sobresaliente efectivo del ala. (b) El espaciamiento del refuerzo transversal no debe exceder de cinco veces el espesor de la losa ni de 400 mm",
+   "pagina": 61
+  },
+  {
+   "numero": "8.11",
+   "epigrafe": "Disposiciones Para Losas Nervadas",
+   "texto": "DISPOSICIONES PARA LOSAS NERVADAS",
+   "pagina": 61
+  },
+  {
+   "numero": "8.11.1",
+   "texto": "Las losas nervadas consisten en una combinación monolítica de nervios o viguetas regularmente espaciados y una losa colocada en la parte superior que actúa en una dirección o en dos direcciones ortogonales.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.11.2",
+   "texto": "El ancho de las nervaduras no debe ser menor de 100 mm y debe tener una altura no mayor de 3,5 veces su ancho mínimo.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.11.3",
+   "texto": "El espaciamiento libre entre las nervaduras no debe exceder de 750 mm.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.11.4",
+   "texto": "Las losas nervadas que no cumplan con las limitaciones de 8.11.1 a 8.11.3, deben diseñarse como losas y vigas comunes.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.11.5",
+   "texto": "El espesor de la losa no debe ser menor que 1/12 de la distancia libre entre las nervaduras, ni menor de 50 mm.",
+   "pagina": 61
+  },
+  {
+   "numero": "8.11.6",
+   "texto": "La losa debe llevar refuerzo perpendicular a los nervios diseñado para resistir la flexión, considerando las cargas concentradas si las hubiera, pero no menor que el que se estipula en 9.7.",
+   "pagina": 62
+  },
+  {
+   "numero": "8.11.7",
+   "texto": "Cuando se requiera embeber ductos o tuberías en la losa según lo permitido en 6.3, el espesor de ésta en cualquier punto deberá ser, como mínimo, 25 mm mayor que la altura total del ducto o tubería. Se deberán considerar refuerzos o ensanches de los nervios o viguetas en caso que estos ductos o tuberías afecten a la resistencia del sistema.",
+   "pagina": 62
+  },
+  {
+   "numero": "8.11.8",
+   "texto": "La resistencia a la fuerza cortante Vc proporcionada por el concreto de las nervaduras podrá ser considerada 10% mayor a la prevista según lo señalado en el Capítulo 11 de esta Norma. Adicionalmente, podrá incrementarse la resistencia al corte disponiendo armadura por corte o ensanchando los nervios o viguetas en las zonas críticas.",
+   "pagina": 62
+  },
+  {
+   "numero": "8.12",
+   "epigrafe": "Acabado De Los Pisos, Revestimientos, Espesor De Desgaste",
+   "texto": "ACABADO DE LOS PISOS, REVESTIMIENTOS, ESPESOR DE DESGASTE",
+   "pagina": 62
+  },
+  {
+   "numero": "8.12.1",
+   "texto": "Los acabados de los pisos (falso piso o sobrelosa) no deben considerarse como parte de la sección resistente del elemento estructural, a menos que se coloquen monolíticamente con la losa o que se diseñen como un elemento compuesto según lo indicado en el Capítulo 17. Si se utilizan los acabados de piso como parte de la sección resistente, estos no deberán estar expuestos a desgaste o deterioro.",
+   "pagina": 62
+  },
+  {
+   "numero": "8.12.2",
+   "texto": "En superficies expuestas a abrasión, tal como la que produce el tránsito intenso, no se tomará en cuenta como parte de la sección resistente el espesor que pueda desgastarse. A éste se le asignará una dimensión no menor de 10 mm, salvo que la superficie expuesta se endurezca mediante algún tratamiento.",
+   "pagina": 62
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c08-analisis-diseno",
+   "titulo": "E.060 · Cap. 8 · Análisis y diseño",
+   "descripcion": "Método de diseño, coeficientes aproximados, redistribución de momentos, módulos de elasticidad, luces, vigas T y losas nervadas.",
+   "acceso": "free",
+   "orden": 108,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué método de diseño exige la E.060 para el concreto armado?",
+      "respuesta": "El Diseño por Resistencia: φRn ≥ efectos de las cargas amplificadas, con los factores de carga y φ del Capítulo 9, verificando además el comportamiento en servicio (deflexiones, fisuración, vibraciones, fatiga)."
+     },
+     "citas": [
+      {
+       "articulo": "8.1.1",
+       "extracto": "Para el diseño de estructuras de concreto armado se utilizará el Diseño por Resistencia. Deberá proporcionarse a todas las secciones de los elementos estructurales Resistencias de Diseño (φRn) adecuadas…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿De qué normas salen las cargas y las acciones sísmicas para diseñar con la E.060?",
+      "opciones": [
+       "E.020 y E.030",
+       "E.050 y E.030",
+       "E.020 y E.050",
+       "Solo E.030"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "8.2.2",
+       "extracto": "Las cargas serán las estipuladas en la Norma Técnica de Edificación E.020 Cargas… y las acciones sísmicas serán las prescritas en la Norma Técnica de Edificación E.030 Diseño Sismorresistente."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "En pórticos arriostrados, ¿qué simplificación se permite para analizar cargas de gravedad?",
+      "respuesta": "Considerar empotrados los extremos lejanos de las columnas de los entrepisos de arriba y de abajo."
+     },
+     "citas": [
+      {
+       "articulo": "8.3.3",
+       "extracto": "En pórticos arriostrados lateralmente, para calcular los momentos debidos a cargas de gravedad en las vigas y columnas construidas monolíticamente con la estructura, se podrán considerar empotrados los extremos lejanos de las columnas de ambos entrepisos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué condiciones permiten usar los coeficientes aproximados de momento y cortante (8.3.4)?",
+      "respuesta": "Dos o más tramos; luces parecidas (la mayor de dos adyacentes no excede en más de 20 % a la menor); solo cargas uniformes; carga viva ≤ 3 veces la muerta; elementos prismáticos; y, en pórticos bajos, arriostrados lateralmente."
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "(a) Haya dos o más tramos. (b) Las luces de los tramos sean aproximadamente iguales, sin que la mayor de dos luces adyacentes exceda en más de 20% a la menor. (c) Las cargas sean uniformemente distribuidas… (d) La carga viva en servicio no sea mayor a tres veces la carga muerta en servicio. (e) Los elementos sean prismáticos…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Coeficientes aproximados de momento (× wu ℓn²)",
+      "columnas": [
+       "Coeficiente"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Positivo · tramo extremo, extremo no restringido",
+        "valores": [
+         "1/11"
+        ]
+       },
+       {
+        "etiqueta": "Positivo · tramo extremo monolítico con el apoyo",
+        "valores": [
+         "1/14"
+        ]
+       },
+       {
+        "etiqueta": "Positivo · tramos interiores",
+        "valores": [
+         "1/16"
+        ]
+       },
+       {
+        "etiqueta": "Negativo · cara exterior del 1.er apoyo interior, dos tramos",
+        "valores": [
+         "1/9"
+        ]
+       },
+       {
+        "etiqueta": "Negativo · cara exterior del 1.er apoyo interior, más de dos tramos",
+        "valores": [
+         "1/10"
+        ]
+       },
+       {
+        "etiqueta": "Negativo · demás caras de apoyos interiores",
+        "valores": [
+         "1/11"
+        ]
+       },
+       {
+        "etiqueta": "Negativo · apoyo exterior que es viga de borde",
+        "valores": [
+         "1/24"
+        ]
+       },
+       {
+        "etiqueta": "Negativo · apoyo exterior que es columna",
+        "valores": [
+         "1/16"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Momento positivo (a) Tramos extremos… (1/11) wu ℓn² … (1/14) wu ℓn² (b) Tramos interiores … (1/16) wu ℓn²"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga continua de varios tramos, tramo interior de ℓn = {L} m con wu = {W} kN/m. ¿Momento positivo aproximado (kN·m)?",
+      "variables": {
+       "L": {
+        "etiqueta": "ℓn",
+        "valores": [
+         4,
+         5,
+         6
+        ],
+        "unidad": "m"
+       },
+       "W": {
+        "etiqueta": "wu",
+        "valores": [
+         20,
+         30,
+         40
+        ],
+        "unidad": "kN/m"
+       }
+      },
+      "formula": "W*L^2/16",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN·m"
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "(b) Tramos interiores … (1/16) wu ℓn²"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga de tres tramos con ℓn promedio = {L} m y wu = {W} kN/m. ¿Momento negativo en la cara exterior del primer apoyo interior (kN·m)?",
+      "variables": {
+       "L": {
+        "etiqueta": "ℓn",
+        "valores": [
+         4,
+         5,
+         6
+        ],
+        "unidad": "m"
+       },
+       "W": {
+        "etiqueta": "wu",
+        "valores": [
+         20,
+         30,
+         40
+        ],
+        "unidad": "kN/m"
+       }
+      },
+      "formula": "W*L^2/10",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN·m",
+      "explicacion": "Para momentos negativos en apoyos interiores, ℓn es el promedio de las luces libres adyacentes."
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Momento negativo en la cara exterior del primer apoyo interior… (b) Más de dos tramos: … (1/10) wu ℓn²"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Con los coeficientes aproximados, el cortante en la cara exterior del primer apoyo interior es {{1,15}} (1/2) wu ℓn."
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Fuerza Cortante Cara exterior del primer apoyo interior: … 1.15 (1/2) wu ℓn Caras de todos los demás apoyos: … (1/2) wu ℓn"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Para losas de luces ≤ 3 m, el momento negativo aproximado en todos los apoyos es {{1/12}} wu ℓn²."
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Momento negativo en la cara de todos los apoyos para losas con luces que no excedan de 3 m… (1/12) wu ℓn²"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuánto se pueden redistribuir los momentos de un elemento continuo y con qué condición?",
+      "respuesta": "Hasta 1000 εt por ciento, y los negativos solo si en esa sección εt ≥ 0,0075. Los momentos reducidos se usan en todo el vano, manteniendo el equilibrio.",
+      "explicacion": "No se permite si se usaron los coeficientes aproximados de 8.3.4."
+     },
+     "citas": [
+      {
+       "articulo": "8.4.1",
+       "extracto": "…se permite disminuir los momentos amplificados (Mu)… en no más de: 1000 εt (en porcentaje) (8-1)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Sección continua con deformación neta εt = {E} (≥ 0,0075). ¿Redistribución máxima del momento negativo (%)?",
+      "variables": {
+       "E": {
+        "etiqueta": "εt",
+        "valores": [
+         0.0075,
+         0.01,
+         0.015,
+         0.02
+        ]
+       }
+      },
+      "formula": "1000*E",
+      "tolerancia": 0.01,
+      "unidadResultado": "%"
+     },
+     "citas": [
+      {
+       "articulo": "8.4.1",
+       "extracto": "…en no más de: 1000 εt (en porcentaje) (8-1)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "¿Qué deformación es εt en esta figura?",
+      "imagenUrl": "data:image/jpeg;base64,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",
+      "respuesta": "La deformación neta de tracción del acero más alejado del borde comprimido (a la profundidad dt), cuando el concreto llega a εcu = 0,003 y la sección alcanza Mn."
+     },
+     "citas": [
+      {
+       "articulo": "8.4.1",
+       "extracto": "εt es la deformación unitaria neta de tracción en el acero más alejado del borde comprimido de la sección, cuando esta alcanza su resistencia nominal (Mn)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Los momentos negativos solo se redistribuyen si en esa sección εt es mayor o igual a {{0,0075}}."
+     },
+     "citas": [
+      {
+       "articulo": "8.4.2",
+       "extracto": "La redistribución de los momentos negativos solo podrá hacerse cuando en la sección en la cual se reduce el momento flector, la deformación εt sea mayor a igual a 0,0075."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es el módulo de elasticidad del concreto de peso normal según la E.060?",
+      "respuesta": "Ec = 4700 √f′c (MPa). Para pesos entre 1450 y 2500 kg/m³: Ec = wc^1,5 · 0,043 √f′c."
+     },
+     "citas": [
+      {
+       "articulo": "8.5.2",
+       "extracto": "Para concretos de peso unitario normal (wc ≈ 2300 kg/m³), Ec, puede tomarse como: Ec = 4700 √f’c (en MPa) (8-3)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "¿Módulo de elasticidad Ec (MPa) de un concreto normal de f′c = {FC} MPa?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28,
+         35,
+         42
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "4700*sqrt(FC)",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa"
+     },
+     "citas": [
+      {
+       "articulo": "8.5.2",
+       "extracto": "Ec = 4700 √f’c (en MPa) (8-3)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Concreto de peso unitario wc = {W} kg/m³ y f′c = {FC} MPa. ¿Ec (MPa) por la ec. 8-2?",
+      "variables": {
+       "W": {
+        "etiqueta": "wc",
+        "valores": [
+         1800,
+         2000,
+         2400
+        ],
+        "unidad": "kg/m³"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "W^1.5*0.043*sqrt(FC)",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa"
+     },
+     "citas": [
+      {
+       "articulo": "8.5.1",
+       "extracto": "Ec = (wc)^1,5 0,043 √f’c (en MPa) (8-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Concreto de f′c = {FC} MPa con Ec = 4700 √f′c. ¿Módulo de corte G (MPa)?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28,
+         35
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "4700*sqrt(FC)/2.3",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa"
+     },
+     "citas": [
+      {
+       "articulo": "8.5.4",
+       "extracto": "…el módulo de rigidez al esfuerzo cortante del concreto se podrá suponer igual a: G = Ec / 2,3 (8-4)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El módulo de elasticidad del acero de refuerzo no preesforzado, Es, puede tomarse como {{200 000 MPa}}."
+     },
+     "citas": [
+      {
+       "articulo": "8.5.5",
+       "extracto": "El módulo de elasticidad, Es, para el acero de refuerzo no preesforzado puede tomarse como 200 000 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué luz se usa para un elemento que no es monolítico con sus apoyos y cuál en el análisis de pórticos?",
+      "respuesta": "No monolítico: luz libre más el peralte, sin exceder la distancia entre centros de apoyos. Pórticos y elementos continuos: distancia entre centros de apoyos."
+     },
+     "citas": [
+      {
+       "articulo": "8.7.1",
+       "extracto": "La luz de los elementos que no estén construidos monolíticamente con sus apoyos deberá considerarse como la luz libre más el peralte del elemento, sin exceder la distancia entre los centros de los apoyos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Las losas monolíticas con sus apoyos y luces libres no mayores de {{3 m}} pueden analizarse como continuas sobre apoyos simples con luces iguales a las libres."
+     },
+     "citas": [
+      {
+       "articulo": "8.7.4",
+       "extracto": "Las losas macizas o nervadas construidas monolíticamente con sus apoyos, con luces libres no mayores de 3 m, podrán ser analizadas como losas continuas sobre apoyos simples con luces iguales a las luces libres."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué disposiciones de carga viva se pueden limitar a considerar en vigas y columnas?",
+      "respuesta": "(a) Muerta amplificada en todos los tramos con viva amplificada en dos tramos adyacentes. (b) Muerta amplificada en todos los tramos con viva amplificada en tramos alternados."
+     },
+     "citas": [
+      {
+       "articulo": "8.9.2",
+       "extracto": "Se permite suponer que la disposición de las cargas está limitada a las combinaciones siguientes: (a) Carga muerta amplificada en todos los tramos con la carga viva amplificada en dos tramos adyacentes. (b) Carga muerta amplificada en todos los tramos con la carga viva amplificada en tramos alternados."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Ancho efectivo del ala de vigas T",
+      "columnas": [
+       "Límite del ala a cada lado"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Viga interior (losa a ambos lados)",
+        "valores": [
+         "8 t y la mitad de la distancia libre a la siguiente alma; ancho total ≤ ℓn/4"
+        ]
+       },
+       {
+        "etiqueta": "Viga de borde (losa a un lado)",
+        "valores": [
+         "ℓn/12, 6 t y la mitad de la distancia libre a la siguiente alma"
+        ]
+       },
+       {
+        "etiqueta": "Viga T aislada",
+        "valores": [
+         "Ala de espesor ≥ bw/2 y ancho ≤ 4 bw"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "8.10.2",
+       "extracto": "El ancho efectivo de la losa usada como ala de las vigas T no debe exceder de la cuarta parte de la luz libre de la viga, y el ancho sobresaliente efectivo del ala a cada lado del alma no debe exceder: (a) Ocho veces el espesor de losa. (b) La mitad de la distancia libre a la siguiente alma."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga T interior de bw = 300 mm, losa de t = {T} mm, luz libre ℓn = {L} mm y almas a 3 m libres. ¿Ancho efectivo del ala (mm)?",
+      "variables": {
+       "T": {
+        "etiqueta": "t",
+        "valores": [
+         100,
+         120
+        ],
+        "unidad": "mm"
+       },
+       "L": {
+        "etiqueta": "ℓn",
+        "valores": [
+         6000,
+         7000,
+         8000
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "L/4",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "Con 8t a cada lado: 300 + 16t ≥ 1900 mm, que supera ℓn/4 en estos casos; manda ℓn/4."
+     },
+     "citas": [
+      {
+       "articulo": "8.10.2",
+       "extracto": "El ancho efectivo de la losa usada como ala de las vigas T no debe exceder de la cuarta parte de la luz libre de la viga…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Losas nervadas (aligerados): límites geométricos",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Ancho mínimo de nervio",
+        "valores": [
+         "100 mm"
+        ]
+       },
+       {
+        "etiqueta": "Altura del nervio",
+        "valores": [
+         "≤ 3,5 veces su ancho mínimo"
+        ]
+       },
+       {
+        "etiqueta": "Espaciamiento libre entre nervios",
+        "valores": [
+         "≤ 750 mm"
+        ]
+       },
+       {
+        "etiqueta": "Espesor de la losa superior",
+        "valores": [
+         "≥ 1/12 de la distancia libre entre nervios y ≥ 50 mm"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "8.11.3",
+       "extracto": "El espaciamiento libre entre las nervaduras no debe exceder de 750 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En losas nervadas, Vc de las nervaduras puede considerarse {{10 %}} mayor que el del Capítulo 11."
+     },
+     "citas": [
+      {
+       "articulo": "8.11.8",
+       "extracto": "La resistencia a la fuerza cortante Vc proporcionada por el concreto de las nervaduras podrá ser considerada 10% mayor a la prevista según lo señalado en el Capítulo 11 de esta Norma."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Si se embeben tuberías en la losa de un aligerado, su espesor debe superar en al menos {{25 mm}} la altura total del ducto."
+     },
+     "citas": [
+      {
+       "articulo": "8.11.7",
+       "extracto": "…el espesor de ésta en cualquier punto deberá ser, como mínimo, 25 mm mayor que la altura total del ducto o tubería."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo un falso piso o sobrelosa puede contar como parte de la sección resistente?",
+      "respuesta": "Solo si se vacía monolíticamente con la losa o se diseña como elemento compuesto (Cap. 17), y no está expuesto a desgaste. En superficies con abrasión se descuentan al menos 10 mm."
+     },
+     "citas": [
+      {
+       "articulo": "8.12.1",
+       "extracto": "Los acabados de los pisos (falso piso o sobrelosa) no deben considerarse como parte de la sección resistente del elemento estructural, a menos que se coloquen monolíticamente con la losa o que se diseñen como un elemento compuesto según lo indicado en el Capítulo 17."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

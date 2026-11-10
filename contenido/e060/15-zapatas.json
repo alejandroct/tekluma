@@ -1,0 +1,698 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "15.1",
+   "epigrafe": "Alcance",
+   "texto": "ALCANCE",
+   "pagina": 147
+  },
+  {
+   "numero": "15.1.1",
+   "texto": "Las disposiciones del Capítulo 15 deben usarse en el diseño de zapatas aisladas y, cuando sean aplicables, a zapatas combinadas y losas de cimentación.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.1.2",
+   "texto": "En 15.10 se indican los requisitos adicionales para el diseño de zapatas combinadas y losas de cimentación.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2",
+   "epigrafe": "Cargas Y Reacciones",
+   "texto": "CARGAS Y REACCIONES",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2.1",
+   "texto": "Las zapatas deben diseñarse para resistir las cargas amplificadas (Diseño por Resistencia) y las reacciones inducidas, de acuerdo con los requisitos de diseño apropiados de esta Norma y conforme a lo dispuesto en el Capítulo 15.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2.2",
+   "texto": "El área de la base de la zapata o el número y distribución de pilotes debe determinarse a partir de las fuerzas y momentos no amplificados (en servicio) transmitidos al suelo o a los pilotes a través de la zapata. El área de la zapata debe determinarse a partir de la resistencia admisible del suelo o de la capacidad admisible de los pilotes, establecida en el estudio de mecánica de suelos.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2.3",
+   "texto": "En el cálculo de las presiones de contacto entre las zapatas y el suelo no se deberán considerar las tracciones.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2.4",
+   "texto": "Se podrá considerar un incremento del 30% en el valor de la presión admisible del suelo para los estados de cargas en los que intervengan cargas temporales, tales como sismo o viento.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2.5",
+   "texto": "Para determinar los esfuerzos en el suelo o las fuerzas en pilotes, las acciones sísmicas podrán reducirse al 80% de los valores provenientes del análisis, ya que las solicitaciones sísmicas especificadas en la NTE E.030 Diseño Sismorresistente están especificadas al nivel de resistencia de la estructura.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2.6",
+   "texto": "En terrenos de baja capacidad portante ó cimentaciones sobre pilotes, deberá analizarse la necesidad de conectar las zapatas mediante vigas, evaluándose en el diseño el comportamiento de éstas de acuerdo a su rigidez y la del conjunto suelo- cimentación.\n\n En los casos de muros de albañilería, se podrá lograr esta conexión mediante cimientos o sobrecimientos armados.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.2.7",
+   "texto": "El cálculo de los momentos y cortantes en las zapatas apoyadas sobre pilotes puede basarse en la suposición que la reacción de cualquier pilote está concentrada en el eje del mismo.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.3",
+   "epigrafe": "Zapatas Que Soportan Columnas O Pedestales De Forma",
+   "texto": "CIRCULAR O DE POLÍGONO REGULAR\n Para la localización de las secciones críticas para momentos, cortantes, y longitud de desarrollo del refuerzo en las zapatas, se permite considerar las columnas o pedestales de concreto de forma circular o de polígono regular como elementos cuadrados con la misma área.",
+   "pagina": 147
+  },
+  {
+   "numero": "15.4",
+   "epigrafe": "Momentos Flectores En Zapatas",
+   "texto": "MOMENTOS FLECTORES EN ZAPATAS",
+   "pagina": 147
+  },
+  {
+   "numero": "15.4.1",
+   "texto": "El momento flector en cualquier sección de una zapata debe determinarse pasando un plano vertical a través de la zapata, y calculando el momento de las fuerzas que actúan sobre el área total de la zapata que quede a un lado de dicho plano vertical.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.4.2",
+   "texto": "Para una zapata aislada el momento máximo amplificado, Mu, debe calcularse en la forma indicada en 15.4.1, en las secciones críticas localizadas como se indica a continuación:\n (a) Para zapatas que soporten una columna, pedestal o muro de concreto, en la cara de la columna, pedestal o muro. (b) Para zapatas que soporten muros de albañilería, en el punto medio entre el eje central y el borde del muro. (c) Para zapatas que soporten una columna con plancha de apoyo de acero, en el punto medio entre la cara de la columna y el borde de la plancha de acero",
+   "pagina": 148
+  },
+  {
+   "numero": "15.4.3",
+   "texto": "En zapatas armadas en una dirección y en zapatas cuadradas armadas en dos direcciones, el refuerzo debe distribuirse uniformemente a lo largo del ancho total de la zapata.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.4.4",
+   "texto": "En zapatas rectangulares armadas en dos direcciones, el refuerzo debe distribuirse como se indica en 15.4.4.1 y 15.4.4.2.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.4.4.1",
+   "texto": "El refuerzo en la dirección larga debe distribuirse uniformemente en el ancho total de la zapata.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.4.4.2",
+   "texto": "Para el refuerzo en la dirección corta, una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja (centrada con respecto al eje de la columna o pedestal) cuyo ancho sea igual a la longitud del lado corto de la zapata. El resto del refuerzo requerido en la dirección corta, (1 - γs) As, debe distribuirse uniformemente en las zonas que queden fuera de la franja central de la zapata.\n\n ( )\n 2 γ\n β 1 s =\n +\n (15-1)\n donde β es la relación del lado largo al lado corto de la zapata.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.5",
+   "epigrafe": "Fuerza Cortante En Zapatas",
+   "texto": "FUERZA CORTANTE EN ZAPATAS",
+   "pagina": 148
+  },
+  {
+   "numero": "15.5.1",
+   "texto": "La resistencia al cortante de zapatas apoyadas en suelo o en roca, debe cumplir con lo estipulado en 11.12. La resistencia al cortante, φVn, de las zapatas debe determinarse según 11.12.1.1 y 11.12.1.2.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.5.2",
+   "texto": "La ubicación de la sección crítica para cortante de acuerdo con el Capítulo 11 debe medirse desde la cara de la columna, pedestal o muro. Para zapatas que soporten una columna con plancha de apoyo de acero, la sección crítica debe ubicarse de acuerdo a lo indicado en 15.4.2 (c).",
+   "pagina": 148
+  },
+  {
+   "numero": "15.5.3",
+   "texto": "El cálculo del cortante en cualquier sección de una zapata apoyada sobre pilotes debe cumplir con 11.12, 15.5.3.1, 15.5.3.2 y 15.5.3.3.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.5.3.1",
+   "texto": "Se debe considerar que la reacción total de todo pilote con su centro localizado a dp/2 (dp = diámetro del pilote) o más hacia el lado de afuera de la sección produce cortante en dicha sección.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.5.3.2",
+   "texto": "Se debe considerar que la reacción de cualquier pilote con su centro localizado dp/2 o más hacia el lado interior de la sección no produce cortante en dicha sección.",
+   "pagina": 148
+  },
+  {
+   "numero": "15.5.3.3",
+   "texto": "Para posiciones intermedias del centro del pilote, la parte de la reacción del pilote que produce cortante en la sección debe basarse en una interpolación lineal entre el valor total a dp/2 hacia afuera de la sección y el valor cero correspondiente a dp/2 hacia adentro de la sección.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.6",
+   "epigrafe": "Desarrollo Del Refuerzo En Zapatas",
+   "texto": "DESARROLLO DEL REFUERZO EN ZAPATAS",
+   "pagina": 149
+  },
+  {
+   "numero": "15.6.1",
+   "texto": "El desarrollo del refuerzo en las zapatas debe hacerse de acuerdo con el Capítulo 12.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.6.2",
+   "texto": "La tracción o compresión calculadas en el refuerzo en cada sección debe desarrollarse a cada lado de dicha sección ya sea mediante una longitud embebida, ganchos (sólo en tracción) o dispositivos mecánicos, o bien mediante una combinación de los mismos.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.6.3",
+   "texto": "Las secciones críticas para el desarrollo del refuerzo deben suponerse en los mismos planos definidos en 15.4.2 para el momento máximo amplificado y en todos los demás planos verticales en los cuales se presentan cambios de sección o de refuerzo. Véase también 12.10.6.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.7",
+   "epigrafe": "Peralte Mínimo De Las Zapatas",
+   "texto": "La altura de las zapatas, medida sobre el refuerzo inferior no debe ser menor de 300 mm para zapatas apoyadas sobre el suelo, ni menor de 400 mm en el caso de zapatas apoyadas sobre pilotes. El peralte de la zapata deberá ser compatible con los requerimientos de anclaje de las armaduras de las columnas, pedestales y muros que se apoyen en la zapata.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8",
+   "epigrafe": "Transmisión De Fuerzas En La Base De  Columnas, Muros O",
+   "texto": "PEDESTALES",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8.1",
+   "texto": "Las fuerzas y los momentos en la base de columnas, muros o pedestales deben transmitirse a la zapata a través del concreto por aplastamiento y mediante refuerzo longitudinal que ancla en la zapata.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8.1.1",
+   "texto": "El esfuerzo de aplastamiento en la superficie de contacto entre el elemento de apoyo y el elemento apoyado, no debe exceder la resistencia al aplastamiento del concreto para ninguna de las superficies, de acuerdo con lo dispuesto en 10.17.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8.1.2",
+   "texto": "El refuerzo, los pasadores (dowels) o los conectores mecánicos entre elementos apoyados y de apoyo deben ser adecuados para transmitir: (a) Las fuerzas de compresión que excedan de la resistencia al aplastamiento del concreto de cualquiera de los elementos. (b) Las fuerzas de tracción calculadas a través de la interfase.\n Además, el refuerzo, los pasadores (dowels) o los conectores mecánicos deben satisfacer las disposiciones de 15.8.2 ó 15.8.3.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8.1.3",
+   "texto": "Cuando los momentos calculados se transmiten a la zapata, el refuerzo, los pasadores (dowels) o los conectores mecánicos deben tener las características necesarias para satisfacer las disposiciones de 12.17.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8.1.4",
+   "texto": "Las fuerzas laterales deben transmitirse a la zapata de acuerdo con las disposiciones de cortante por fricción de 11.7, o mediante otros medios apropiados.",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8.2",
+   "texto": "En estructuras construidas en obra, debe proporcionarse el refuerzo requerido para satisfacer 15.8.1, ya sea prolongando las barras longitudinales dentro de las zapatas, o mediante pasadores (dowels).",
+   "pagina": 149
+  },
+  {
+   "numero": "15.8.2.1",
+   "texto": "Para columnas y pedestales construidos en obra, el área de refuerzo a través de la junta no debe ser menor de 0,005 Ag, donde Ag es el área bruta del elemento soportado.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.8.2.2",
+   "texto": "Para muros construidos en obra, la cuantía del refuerzo a través de la interfase (junta) no debe ser menor que 0,0015.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.8.2.3",
+   "texto": "Cuando se utilice una conexión que permita giro (articulada) en estructuras construidas en obra, dicha conexión debe cumplir con lo especificado en 15.8.1 y 15.8.3.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.8.3",
+   "texto": "En construcciones prefabricadas, se permite usar pernos de anclaje o conectores mecánicos apropiados para satisfacer lo estipulado en 15.8.1.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.8.3.1",
+   "texto": "La conexión entre columnas prefabricadas o pedestales y los elementos de apoyo debe cumplir los requisitos de 16.5.1.3(a).",
+   "pagina": 150
+  },
+  {
+   "numero": "15.8.3.2",
+   "texto": "La conexión entre muros prefabricados y elementos de apoyo debe cumplir los requisitos de 16.5.1.3 (b) y (c).",
+   "pagina": 150
+  },
+  {
+   "numero": "15.8.3.3",
+   "texto": "Los pernos de anclaje y los conectores mecánicos deben diseñarse para alcanzar su resistencia de diseño antes de que se presente la falla de anclaje o la falla del concreto que los circunda.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.9",
+   "epigrafe": "Zapatas Inclinadas O Escalonadas",
+   "texto": "ZAPATAS INCLINADAS O ESCALONADAS",
+   "pagina": 150
+  },
+  {
+   "numero": "15.9.1",
+   "texto": "En las zapatas con pendiente o escalonadas el ángulo de la pendiente, o la altura y ubicación de los escalones deben ser tales que se satisfagan los requisitos de diseño en cada sección. (Véase también 12.10.6).",
+   "pagina": 150
+  },
+  {
+   "numero": "15.9.2",
+   "texto": "Las zapatas con pendiente o escalonadas que se diseñen como una unidad, deben construirse para asegurar su comportamiento como tal.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.10",
+   "epigrafe": "Zapatas Combinadas Y Losas De Cimentación",
+   "texto": "ZAPATAS COMBINADAS Y LOSAS DE CIMENTACIÓN",
+   "pagina": 150
+  },
+  {
+   "numero": "15.10.1",
+   "texto": "Las zapatas que soporten más de una columna, pedestal o muro (zapatas combinadas y losas de cimentación) deben diseñarse para resistir las cargas amplificadas y las reacciones inducidas, de acuerdo con los requisitos de diseño apropiados de esta Norma.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.10.2",
+   "texto": "El Método Directo de Diseño del Capítulo 13 no debe utilizarse para el diseño de zapatas combinadas y losas de cimentación.",
+   "pagina": 150
+  },
+  {
+   "numero": "15.10.3",
+   "texto": "La distribución de la presión del terreno bajo zapatas combinadas y losas de cimentación debe ser consistentes con las propiedades del suelo y la estructura y con los principios establecidos de mecánica de suelos.",
+   "pagina": 150
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c15-zapatas",
+   "titulo": "E.060 · Cap. 15 · Zapatas",
+   "descripcion": "Cargas y presiones, secciones críticas, reparto del refuerzo, pilotes, altura mínima y transmisión de fuerzas.",
+   "acceso": "free",
+   "orden": 115,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Con qué cargas se dimensiona el área de una zapata y con cuáles se diseña su concreto armado?",
+      "respuesta": "El área se obtiene con cargas de servicio (no amplificadas) y la presión admisible del estudio de suelos. El peralte y el acero se diseñan por resistencia, con cargas amplificadas."
+     },
+     "citas": [
+      {
+       "articulo": "15.2.2",
+       "extracto": "El área de la base de la zapata o el número y distribución de pilotes debe determinarse a partir de las fuerzas y momentos no amplificados (en servicio) transmitidos al suelo… a partir de la resistencia admisible del suelo…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna con carga de servicio P = {P} kN sobre un suelo con presión admisible de {Q} kPa. ¿Área mínima de la zapata (m²)?",
+      "variables": {
+       "P": {
+        "etiqueta": "P servicio",
+        "valores": [
+         600,
+         900,
+         1200
+        ],
+        "unidad": "kN"
+       },
+       "Q": {
+        "etiqueta": "q admisible",
+        "valores": [
+         150,
+         200,
+         300
+        ],
+        "unidad": "kPa"
+       }
+      },
+      "formula": "P/Q",
+      "tolerancia": 0.02,
+      "unidadResultado": "m²",
+      "explicacion": "Sin peso propio ni momentos; en la práctica se suma el peso de la zapata y del relleno."
+     },
+     "citas": [
+      {
+       "articulo": "15.2.2",
+       "extracto": "El área de la zapata debe determinarse a partir de la resistencia admisible del suelo…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En las presiones de contacto entre zapata y suelo {{no}} se consideran tracciones."
+     },
+     "citas": [
+      {
+       "articulo": "15.2.3",
+       "extracto": "En el cálculo de las presiones de contacto entre las zapatas y el suelo no se deberán considerar las tracciones."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Verificación del suelo con cargas de sismo o viento",
+      "columnas": [
+       "Valor"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Incremento de la presión admisible",
+        "valores": [
+         "30 %"
+        ]
+       },
+       {
+        "etiqueta": "Fuerzas sísmicas del análisis para el suelo",
+        "valores": [
+         "Reducir al 80 %"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      },
+      "explicacion": "15.2.5: las acciones sísmicas pueden reducirse al 80 % para verificar el suelo, porque la E.030 las da a nivel de resistencia."
+     },
+     "citas": [
+      {
+       "articulo": "15.2.4",
+       "extracto": "Se podrá considerar un incremento del 30% en el valor de la presión admisible del suelo para los estados de cargas en los que intervengan cargas temporales, tales como sismo o viento."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Suelo con presión admisible de {Q} kPa. ¿Presión admisible para combinaciones con sismo (kPa)?",
+      "variables": {
+       "Q": {
+        "etiqueta": "q admisible",
+        "valores": [
+         150,
+         200,
+         250,
+         300
+        ],
+        "unidad": "kPa"
+       }
+      },
+      "formula": "1.3*Q",
+      "tolerancia": 0.02,
+      "unidadResultado": "kPa"
+     },
+     "citas": [
+      {
+       "articulo": "15.2.4",
+       "extracto": "Se podrá considerar un incremento del 30% en el valor de la presión admisible del suelo…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se tratan las columnas circulares o poligonales para ubicar las secciones críticas de una zapata?",
+      "respuesta": "Como columnas cuadradas de la misma área."
+     },
+     "citas": [
+      {
+       "articulo": "15.3",
+       "extracto": "…se permite considerar las columnas o pedestales de concreto de forma circular o de polígono regular como elementos cuadrados con la misma área."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Sección crítica por flexión en zapatas aisladas",
+      "columnas": [
+       "Ubicación"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Columna, pedestal o muro de concreto",
+        "valores": [
+         "En la cara del elemento"
+        ]
+       },
+       {
+        "etiqueta": "Muro de albañilería",
+        "valores": [
+         "A medio camino entre el eje y el borde del muro"
+        ]
+       },
+       {
+        "etiqueta": "Columna con plancha de acero",
+        "valores": [
+         "A medio camino entre la cara de la columna y el borde de la plancha"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "15.4.2",
+       "extracto": "(a) Para zapatas que soporten una columna, pedestal o muro de concreto, en la cara de la columna, pedestal o muro. (b) Para zapatas que soporten muros de albañilería, en el punto medio entre el eje central y el borde del muro. (c) …en el punto medio entre la cara de la columna y el borde de la plancha de acero"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Zapata con presión amplificada qu = {Q} kPa y un volado de {C} m desde la cara de la columna. ¿Mu por metro de ancho (kN·m/m)?",
+      "variables": {
+       "Q": {
+        "etiqueta": "qu",
+        "valores": [
+         250,
+         300,
+         350
+        ],
+        "unidad": "kPa"
+       },
+       "C": {
+        "etiqueta": "Volado",
+        "valores": [
+         0.8,
+         1.0,
+         1.2
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "Q*C^2/2",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN·m/m"
+     },
+     "citas": [
+      {
+       "articulo": "15.4.1",
+       "extracto": "El momento flector en cualquier sección de una zapata debe determinarse pasando un plano vertical a través de la zapata, y calculando el momento de las fuerzas que actúan sobre el área total de la zapata que quede a un lado de dicho plano vertical."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se reparte el refuerzo en una zapata rectangular armada en dos direcciones?",
+      "respuesta": "El de la dirección larga, uniforme en todo el ancho. El de la corta: γs As en una franja central de ancho igual al lado corto y (1 − γs) As fuera de ella, con γs = 2/(β + 1)."
+     },
+     "citas": [
+      {
+       "articulo": "15.4.4.2",
+       "extracto": "…una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja… cuyo ancho sea igual a la longitud del lado corto de la zapata… γs = 2 / (β + 1) (15-1) donde β es la relación del lado largo al lado corto de la zapata."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Zapata de {L} × {B} m (largo × corto). ¿Qué fracción γs del acero corto va en la franja central?",
+      "variables": {
+       "L": {
+        "etiqueta": "Lado largo",
+        "valores": [
+         3.0,
+         3.6,
+         4.0
+        ],
+        "unidad": "m"
+       },
+       "B": {
+        "etiqueta": "Lado corto",
+        "valores": [
+         2.0,
+         2.4
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "2/(L/B+1)",
+      "tolerancia": 0.01
+     },
+     "citas": [
+      {
+       "articulo": "15.4.4.2",
+       "extracto": "γs = 2 / (β + 1) (15-1) donde β es la relación del lado largo al lado corto de la zapata."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En zapatas cuadradas armadas en dos direcciones, el refuerzo se distribuye {{uniformemente}} en todo el ancho."
+     },
+     "citas": [
+      {
+       "articulo": "15.4.3",
+       "extracto": "En zapatas armadas en una dirección y en zapatas cuadradas armadas en dos direcciones, el refuerzo debe distribuirse uniformemente a lo largo del ancho total de la zapata."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo produce cortante la reacción de un pilote en una sección de la zapata?",
+      "respuesta": "Si su centro está a dp/2 o más hacia afuera de la sección, toda su reacción produce cortante; si está a dp/2 o más hacia adentro, nada; entre ambos se interpola."
+     },
+     "citas": [
+      {
+       "articulo": "15.5.3.1",
+       "extracto": "Se debe considerar que la reacción total de todo pilote con su centro localizado a dp/2 (dp = diámetro del pilote) o más hacia el lado de afuera de la sección produce cortante en dicha sección."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Altura mínima de zapatas sobre el refuerzo inferior",
+      "columnas": [
+       "Mínimo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Zapata sobre suelo",
+        "valores": [
+         "300 mm"
+        ]
+       },
+       {
+        "etiqueta": "Zapata sobre pilotes",
+        "valores": [
+         "400 mm"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "15.7",
+       "extracto": "La altura de las zapatas, medida sobre el refuerzo inferior no debe ser menor de 300 mm para zapatas apoyadas sobre el suelo, ni menor de 400 mm en el caso de zapatas apoyadas sobre pilotes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se transmiten las fuerzas de una columna a la zapata?",
+      "respuesta": "Por aplastamiento del concreto (10.17) y con refuerzo longitudinal o dowels que anclan en la zapata. Las fuerzas laterales, por cortante por fricción (11.7) u otros medios."
+     },
+     "citas": [
+      {
+       "articulo": "15.8.1",
+       "extracto": "Las fuerzas y los momentos en la base de columnas, muros o pedestales deben transmitirse a la zapata a través del concreto por aplastamiento y mediante refuerzo longitudinal que ancla en la zapata."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna vaciada en obra de {B} × {H} mm. ¿Área mínima de refuerzo que cruza la junta con la zapata (mm²)?",
+      "variables": {
+       "B": {
+        "etiqueta": "b",
+        "valores": [
+         300,
+         400
+        ],
+        "unidad": "mm"
+       },
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         400,
+         500,
+         600
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.005*B*H",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm²"
+     },
+     "citas": [
+      {
+       "articulo": "15.8.2.1",
+       "extracto": "Para columnas y pedestales construidos en obra, el área de refuerzo a través de la junta no debe ser menor de 0,005 Ag, donde Ag es el área bruta del elemento soportado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En muros vaciados en obra, la cuantía de refuerzo que cruza la junta con la cimentación no debe ser menor que {{0,0015}}."
+     },
+     "citas": [
+      {
+       "articulo": "15.8.2.2",
+       "extracto": "Para muros construidos en obra, la cuantía del refuerzo a través de la interfase (junta) no debe ser menor que 0,0015."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se puede usar el Método Directo del Capítulo 13 para zapatas combinadas y losas de cimentación?",
+      "opciones": [
+       "Sí, siempre",
+       "Sí, si hay tres paños por dirección",
+       "No",
+       "Solo en losas de cimentación"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.10.2",
+       "extracto": "El Método Directo de Diseño del Capítulo 13 no debe utilizarse para el diseño de zapatas combinadas y losas de cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo se deben conectar las zapatas con vigas?",
+      "respuesta": "En terrenos de baja capacidad portante o con pilotes, se evalúa la necesidad de conectarlas con vigas según su rigidez y la del conjunto suelo-cimentación. En muros de albañilería puede hacerse con cimientos o sobrecimientos armados."
+     },
+     "citas": [
+      {
+       "articulo": "15.2.6",
+       "extracto": "En terrenos de baja capacidad portante ó cimentaciones sobre pilotes, deberá analizarse la necesidad de conectar las zapatas mediante vigas…"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

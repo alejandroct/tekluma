@@ -65,6 +65,8 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
           .returning()
       )[0]!;
       if (mazo.standardId !== norma.id) throw new ImportacionError(`El mazo «${m.slug}» ya existe y pertenece a otra norma`);
+      // Re-importing a file also fixes the deck's position in the catalog.
+      if (!creado && m.orden !== undefined && m.orden !== mazo.sortOrder) await tx.update(decks).set({ sortOrder: m.orden }).where(eq(decks.id, mazo.id));
 
       const yaEstan = new Set((await tx.select({ content: cards.content }).from(cards).where(eq(cards.deckId, mazo.id))).map((c) => canonico(c.content)));
       let nuevas = 0;

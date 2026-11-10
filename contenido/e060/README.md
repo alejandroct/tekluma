@@ -9,10 +9,14 @@ Formato: `tekluma-mazos/1` (ver `packages/shared/src/importacion.ts`). Se cargan
 | `03-materiales.json` | Cap. 3 · 19 tarjetas |
 | `04-durabilidad.json` | Cap. 4 · 17 tarjetas (Tablas 4.1 a 4.5) |
 | `07-detalles-refuerzo.json` | Cap. 7 · 31 tarjetas, con la Fig. 7.1, un estribo a 135° y la Fig. 7.2 |
+| `08-analisis-diseno.json` | Cap. 8 · 27 tarjetas (coeficientes aproximados, redistribución, Ec, vigas T, aligerados; Fig. 8.4.1) |
 | `09-resistencia-servicio.json` | Cap. 9 · 35 tarjetas (combinaciones, φ, Tabla 9.1, Tabla 9.2, Fig. 9.6.2.5, casos numéricos) |
 | `10-flexion-carga-axial.json` | Cap. 10 · 54 tarjetas (bloque equivalente, β1, φPn máx., acero mínimo, columnas, esbeltez, Fig. 10.17.1, flexión biaxial) |
 | `11-cortante-torsion.json` | Cap. 11 · 61 tarjetas (Vc, Vs, estribos, torsión, fricción, muros, punzonamiento; Figs. 11.5.8, 11.6.1, 11.6.2.1, 11.6.2.2 y 11.6.3) |
 | `12-desarrollo-empalmes.json` | Cap. 12 · 39 tarjetas (Tablas 12.1 a 12.3, ganchos, corte de barras, empalmes; Figs. 12.2.2, 12.5.2 y 12.5.3.a) |
+| `13-losas-dos-direcciones.json` | Cap. 13 · 32 tarjetas (franjas, Método Directo, γf, Método de Coeficientes; Tabla 13.1) |
+| `14-muros.json` | Cap. 14 · 13 tarjetas (refuerzo mínimo, método empírico, espesores, aberturas) |
+| `15-zapatas.json` | Cap. 15 · 18 tarjetas (presiones, secciones críticas, γs, pilotes, dowels) |
 | `21-diseno-sismico.json` | Cap. 21 · 65 tarjetas (vigas, columnas y nudos por sistema, columna fuerte, muros y elementos de borde, ductilidad limitada; 11 figuras) |
 
 Orden sugerido: primero `00` (carga toda la norma como fuente), luego los capítulos. Cada archivo de capítulo trae también sus artículos, así que se puede importar solo.
