@@ -1,0 +1,495 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "6.1",
+   "epigrafe": "Diseño De Encofrados",
+   "texto": "DISEÑO DE ENCOFRADOS",
+   "pagina": 42
+  },
+  {
+   "numero": "6.1.1",
+   "texto": "Los encofrados deberán permitir obtener una estructura que cumpla con los perfiles, niveles, alineamientos y dimensiones de los elementos según lo indicado en los planos de diseño y en las especificaciones.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.1.2",
+   "texto": "Los encofrados deberán ser suficientemente herméticos para impedir la fuga del mortero.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.1.3",
+   "texto": "Los encofrados deben estar adecuadamente arriostrados o amarrados entre si, de tal manera que conserven su posición y forma.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.1.4",
+   "texto": "Los encofrados y sus apoyos deben diseñarse de tal manera que no dañen a las estructuras previamente construidas.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.1.5",
+   "texto": "El diseño de los encofrados debe tomar en cuenta los siguientes factores:\n (a) La velocidad y los métodos de colocación del concreto; (b) Todas las cargas de construcción, incluyendo las de impacto; (c) Los requisitos de los encofrados especiales necesarios para la construcción de\n cáscaras, losas plegadas, domos, concreto arquitectónico u otros tipos de elementos;",
+   "pagina": 42
+  },
+  {
+   "numero": "6.1.6",
+   "texto": "Los encofrados para elementos de concreto preesforzado deben estar diseñados y construidos de tal manera que permitan los movimientos del elemento sin causarle daños durante la aplicación de la fuerza de preesforzado.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.2",
+   "epigrafe": "Remoción De Encofrados, Puntales Y Reapuntalamiento",
+   "texto": "REMOCIÓN DE ENCOFRADOS, PUNTALES Y REAPUNTALAMIENTO",
+   "pagina": 42
+  },
+  {
+   "numero": "6.2.1",
+   "epigrafe": "Desencofrado",
+   "texto": "Los encofrados deben retirarse de tal manera que no se afecte negativamente la seguridad o condiciones de servicio de la estructura. El concreto expuesto por el desencofrado debe tener suficiente resistencia para no ser dañado por las operaciones de desencofrado.\n Para determinar el tiempo de desencofrado deben considerarse todas las cargas de construcción y las posibles deflexiones que estas ocasionen. Debe considerarse que las cargas de construcción pueden ser tan altas como las cargas vivas de diseño y que, a edades tempranas, una estructura de concreto puede ser capaz de resistir las cargas aplicadas pero puede deformarse lo suficiente como para causar un daño permanente en la estructura.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.2.2",
+   "epigrafe": "Retiro de puntales y reapuntalamiento",
+   "texto": "Los requisitos de 6.2.2.1 a 6.2.2.3 se deben cumplir en la construcción de vigas y losas excepto cuando se construyan apoyadas sobre el terreno.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.2.2.1",
+   "texto": "Con anterioridad al inicio de la construcción, el constructor debe definir un procedimiento y una programación para la remoción de los apuntalamientos, para la instalación de los reapuntalamientos y para calcular las cargas transferidas a la estructura durante el proceso. Debe considerarse lo siguiente:\n (a) El análisis estructural y los datos sobre resistencia del concreto empleados en la\n planificación e implementación del desencofrado y retiro de apuntalamientos deben ser entregados por el constructor a la supervisión cuando ésta lo requiera;\n\n (b) Solamente cuando la estructura, en su estado de avance, en conjunto con los\n encofrados y apuntalamientos aun existentes tengan suficiente resistencia para soportar de manera segura su propio peso y las cargas colocadas sobre ella, podrán apoyarse cargas de construcción sobre ella o desencofrarse cualquier porción de la estructura. (c) La demostración de que la resistencia es adecuada debe basarse en un análisis\n estructural que tenga en cuenta las cargas propuestas, la resistencia del sistema de encofrado y la resistencia del concreto. La resistencia del concreto debe estar basada en ensayos de probetas curadas en obra o, cuando lo apruebe la supervisión, en otros procedimientos para evaluar la resistencia del concreto.",
+   "pagina": 42
+  },
+  {
+   "numero": "6.2.2.2",
+   "texto": "No se deben aplicar, a la estructura sin apuntalamiento, cargas de construcción que excedan la suma de las cargas muertas y vivas utilizadas en el diseño, a menos que por medio de un análisis estructural se demuestre que existe resistencia suficiente para soportar estas cargas adicionales.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.2.2.3",
+   "texto": "Los encofrados para elementos de concreto preesforzado no deben ser removidos hasta que se haya aplicado suficiente preesfuerzo para permitir que el elemento soporte su propio peso y las cargas de construcción previstas.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3",
+   "epigrafe": "Tuberías Y Ductos Embebidos En El Concreto",
+   "texto": "TUBERÍAS Y DUCTOS EMBEBIDOS EN EL CONCRETO",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3.1",
+   "texto": "Se permite, previa aprobación de la supervisión, embeber en el concreto tuberías, ductos e insertos de cualquier material que no sea perjudicial para el concreto y que esté dentro de las limitaciones de 6.3, siempre y cuando se considere que ellos no reemplazan estructuralmente al concreto desplazado, excepto en lo previsto en 6.3.6.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3.2",
+   "texto": "No deben dejarse embebidos en el concreto estructural, tuberías y ductos de aluminio, a menos que se recubran o se pinten adecuadamente para evitar la reacción concreto-aluminio, o la acción electrolítica entre el aluminio y el acero.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3.3",
+   "texto": "Los ductos, tuberías e insertos que pasen a través de losas, muros o vigas, no deben debilitar significativamente la resistencia de la estructura.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3.4",
+   "texto": "Los ductos y tuberías, junto con sus conexiones, embebidas en una columna, no deben ocupar más del 4% del área de la sección transversal que se empleó para calcular su resistencia, o de la requerida para la protección contra el fuego.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3.5",
+   "texto": "Excepto cuando los planos de los ductos y tuberías hayan sido aprobados por el ingeniero estructural, las tuberías y ductos embebidos en una losa, muro o viga (diferentes de los que sólo pasan a través de estos elementos) deben satisfacer lo siguiente:\n (a) No deben tener dimensiones exteriores mayores que la tercera parte del espesor\n total de la losa, muro o viga, donde estén embebidos.\n (b) No deben estar espaciados a menos de tres veces su diámetro o ancho medido\n de centro a centro.\n (c) No deben afectar significativamente la resistencia del elemento.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3.6",
+   "texto": "Se puede considerar que los ductos, tuberías e insertos sustituyen estructuralmente en compresión al concreto desplazado si cumplen con lo siguiente:\n (a) No estén expuestos a la corrosión o a otra causa de deterioro.\n (b) Sean de acero o hierro sin revestimiento o galvanizado, de espesor no menor\n que el del tubo de acero calibre estándar número 40 (Schedule 40).\n\n (c) Tengan un diámetro interior nominal no superior a 50 mm y estén separados no\n menos de tres diámetros medidos centro a centro.",
+   "pagina": 43
+  },
+  {
+   "numero": "6.3.7",
+   "texto": "Las tuberías y sus conexiones deben diseñarse para resistir los efectos del fluido, la presión y la temperatura a las cuales van a estar sometidas.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.3.8",
+   "texto": "Ningún líquido, gas o vapor (salvo el agua cuya temperatura y presión no excedan de 32º C ni de 0,35 MPa respectivamente) debe circular o colocarse en las tuberías hasta que el concreto haya alcanzado su resistencia de diseño.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.3.9",
+   "texto": "En losas macizas, las tuberías deben colocarse entre las capas de refuerzo superior e inferior, a menos que se requieran para irradiar calor o fundir nieve.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.3.10",
+   "texto": "El recubrimiento de concreto para las tuberías y sus conexiones no debe ser menor de 40 mm en superficies de concreto expuestas a la intemperie o en contacto con el suelo, ni menor de 20 mm en aquellas que no estén directamente en contacto con el suelo o expuestas a la intemperie.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.3.11",
+   "texto": "Debe colocarse refuerzo en la dirección normal a la tubería, con un área no menor de 0,002 veces el área de la sección de concreto.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.3.12",
+   "texto": "Las tuberías y ductos deben fabricarse e instalarse de tal forma que no se requiera cortar, doblar o desplazar el refuerzo de su posición apropiada.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4",
+   "epigrafe": "Juntas De Construcción",
+   "texto": "JUNTAS DE CONSTRUCCIÓN",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4.1",
+   "texto": "Es importante, para la integridad de la estructura, que todas las juntas de construcción estén cuidadosamente definidas en los documentos de construcción y que se construyan según lo especificado. Cualquier variación debe ser aprobada por la supervisión.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4.2",
+   "texto": "La superficie del concreto en las juntas de construcción debe limpiarse y debe estar libre de lechada. Inmediatamente antes de iniciar una nueva etapa de colocación del concreto, las juntas de construcción deben humedecerse y debe eliminarse el agua empozada.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4.3",
+   "texto": "Las juntas de construcción deben hacerse y ubicarse de manera que no perjudiquen la resistencia de la estructura. Deben tomarse las medidas apropiadas para la transferencia completa de cortante y de otras fuerzas a través de las juntas de construcción (véase 11.7.9).",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4.4",
+   "texto": "Las juntas de construcción en los pisos y techos deben estar localizadas dentro del tercio central del vano de las losas, vigas y vigas principales.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4.5",
+   "texto": "Las juntas de construcción en las vigas principales deben desplazarse a una distancia mínima de dos veces el ancho de las vigas que las intercepten.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4.6",
+   "texto": "Las vigas y las losas apoyadas sobre columnas o muros no deben vaciarse hasta que el concreto del apoyo vertical haya endurecido hasta el punto que haya dejado de ser plástico. La espera en la colocación del concreto de los elementos apoyados en columnas y muros es necesaria para prevenir el agrietamiento en la interfase entre el elemento de apoyo y el elemento que se apoya, causado por la exudación y asentamiento plástico del concreto en el elemento de apoyo. En los sistemas de encofrados basados en vaciados continuos de muros y losas, esta disposición podrá obviarse, si la experiencia acumulada en el uso de estos sistemas demuestra que no se suscita este problema.",
+   "pagina": 44
+  },
+  {
+   "numero": "6.4.7",
+   "texto": "Las vigas, capiteles de columnas y ábacos de losas, deben considerarse como parte del sistema de losas y deben construirse monolíticamente con las mismas, a menos que en los planos se indique otra cosa.",
+   "pagina": 45
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c06-encofrados-juntas",
+   "titulo": "E.060 · Cap. 6 · Encofrados y juntas",
+   "descripcion": "Encofrados y desencofrado, tuberías embebidas y juntas de construcción.",
+   "acceso": "free",
+   "orden": 106,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué factores se consideran en el diseño de encofrados?",
+      "respuesta": "La velocidad y el método de vaciado, todas las cargas de construcción (incluido el impacto) y los requisitos especiales de cáscaras, losas plegadas, domos o concreto arquitectónico. Deben ser herméticos y estar arriostrados."
+     },
+     "citas": [
+      {
+       "articulo": "6.1.5",
+       "extracto": "(a) La velocidad y los métodos de colocación del concreto; (b) Todas las cargas de construcción, incluyendo las de impacto; (c) Los requisitos de los encofrados especiales…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué se debe considerar para decidir cuándo desencofrar?",
+      "respuesta": "Todas las cargas de construcción y sus deflexiones. Las cargas de construcción pueden igualar a las cargas vivas de diseño, y a edad temprana el concreto puede resistir pero deformarse lo suficiente para dañarse."
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "Debe considerarse que las cargas de construcción pueden ser tan altas como las cargas vivas de diseño y que, a edades tempranas, una estructura de concreto puede ser capaz de resistir las cargas aplicadas pero puede deformarse lo suficiente como para causar un daño permanente en la estructura."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Sin análisis, a la estructura sin apuntalar no se le aplican cargas de construcción mayores que la suma de las cargas {{muertas y vivas}} de diseño."
+     },
+     "citas": [
+      {
+       "articulo": "6.2.2.2",
+       "extracto": "No se deben aplicar, a la estructura sin apuntalamiento, cargas de construcción que excedan la suma de las cargas muertas y vivas utilizadas en el diseño…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuándo se puede retirar el encofrado de un elemento preesforzado?",
+      "opciones": [
+       "A los 7 días",
+       "Cuando el preesfuerzo aplicado le permita soportar su peso y las cargas de construcción",
+       "Cuando el concreto llegue a 0,7 f′c",
+       "Al día siguiente del vaciado"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "6.2.2.3",
+       "extracto": "Los encofrados para elementos de concreto preesforzado no deben ser removidos hasta que se haya aplicado suficiente preesfuerzo para permitir que el elemento soporte su propio peso y las cargas de construcción previstas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Se pueden dejar tuberías de aluminio embebidas en el concreto estructural?",
+      "respuesta": "No, salvo que se recubran o pinten adecuadamente para evitar la reacción concreto-aluminio o la acción electrolítica con el acero."
+     },
+     "citas": [
+      {
+       "articulo": "6.3.2",
+       "extracto": "No deben dejarse embebidos en el concreto estructural, tuberías y ductos de aluminio, a menos que se recubran o se pinten adecuadamente…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Los ductos y tuberías embebidos en una columna no deben ocupar más del {{4 %}} de su sección."
+     },
+     "citas": [
+      {
+       "articulo": "6.3.4",
+       "extracto": "Los ductos y tuberías, junto con sus conexiones, embebidas en una columna, no deben ocupar más del 4% del área de la sección transversal que se empleó para calcular su resistencia…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna de {B} × {H} mm. ¿Área máxima que pueden ocupar los ductos embebidos (mm²)?",
+      "variables": {
+       "B": {
+        "etiqueta": "b",
+        "valores": [
+         300,
+         400
+        ],
+        "unidad": "mm"
+       },
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         400,
+         500,
+         600
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.04*B*H",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm²"
+     },
+     "citas": [
+      {
+       "articulo": "6.3.4",
+       "extracto": "…no deben ocupar más del 4% del área de la sección transversal que se empleó para calcular su resistencia…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tuberías embebidas en losas, muros o vigas (6.3.5)",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Dimensión exterior",
+        "valores": [
+         "≤ 1/3 del espesor del elemento"
+        ]
+       },
+       {
+        "etiqueta": "Separación entre centros",
+        "valores": [
+         "≥ 3 veces su diámetro o ancho"
+        ]
+       },
+       {
+        "etiqueta": "Efecto en la resistencia",
+        "valores": [
+         "No debe ser significativo"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "6.3.5",
+       "extracto": "(a) No deben tener dimensiones exteriores mayores que la tercera parte del espesor total de la losa, muro o viga, donde estén embebidos. (b) No deben estar espaciados a menos de tres veces su diámetro o ancho medido de centro a centro."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Losa maciza de {T} mm de espesor. ¿Diámetro exterior máximo de una tubería embebida (mm)?",
+      "variables": {
+       "T": {
+        "etiqueta": "Espesor",
+        "valores": [
+         150,
+         200,
+         250
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "T/3",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm"
+     },
+     "citas": [
+      {
+       "articulo": "6.3.5",
+       "extracto": "(a) No deben tener dimensiones exteriores mayores que la tercera parte del espesor total de la losa, muro o viga, donde estén embebidos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Por las tuberías embebidas solo puede circular agua a no más de 32 °C y {{0,35 MPa}} antes de que el concreto alcance su resistencia de diseño."
+     },
+     "citas": [
+      {
+       "articulo": "6.3.8",
+       "extracto": "Ningún líquido, gas o vapor (salvo el agua cuya temperatura y presión no excedan de 32º C ni de 0,35 MPa respectivamente) debe circular o colocarse en las tuberías hasta que el concreto haya alcanzado su resistencia de diseño."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Recubrimiento de tuberías embebidas",
+      "columnas": [
+       "Mínimo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Expuesto a la intemperie o en contacto con el suelo",
+        "valores": [
+         "40 mm"
+        ]
+       },
+       {
+        "etiqueta": "Sin contacto con suelo ni intemperie",
+        "valores": [
+         "20 mm"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "6.3.10",
+       "extracto": "El recubrimiento de concreto para las tuberías y sus conexiones no debe ser menor de 40 mm en superficies de concreto expuestas a la intemperie o en contacto con el suelo, ni menor de 20 mm en aquellas que no estén directamente en contacto con el suelo o expuestas a la intemperie."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Junto a tuberías embebidas se coloca refuerzo normal a la tubería con un área no menor de {{0,002}} veces la sección de concreto."
+     },
+     "citas": [
+      {
+       "articulo": "6.3.11",
+       "extracto": "Debe colocarse refuerzo en la dirección normal a la tubería, con un área no menor de 0,002 veces el área de la sección de concreto."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se prepara una junta de construcción antes de vaciar?",
+      "respuesta": "Se limpia la superficie y se elimina la lechada; justo antes del nuevo vaciado se humedece y se retira el agua empozada."
+     },
+     "citas": [
+      {
+       "articulo": "6.4.2",
+       "extracto": "La superficie del concreto en las juntas de construcción debe limpiarse y debe estar libre de lechada. Inmediatamente antes de iniciar una nueva etapa de colocación del concreto, las juntas de construcción deben humedecerse y debe eliminarse el agua empozada."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Dónde se ubican las juntas de construcción en losas y vigas?",
+      "opciones": [
+       "Junto a los apoyos",
+       "En el tercio central del vano",
+       "A d de la cara del apoyo",
+       "Donde lo decida el maestro de obra"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "6.4.4",
+       "extracto": "Las juntas de construcción en los pisos y techos deben estar localizadas dentro del tercio central del vano de las losas, vigas y vigas principales."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Las juntas en vigas principales se desplazan al menos {{dos veces}} el ancho de las vigas que las interceptan."
+     },
+     "citas": [
+      {
+       "articulo": "6.4.5",
+       "extracto": "Las juntas de construcción en las vigas principales deben desplazarse a una distancia mínima de dos veces el ancho de las vigas que las intercepten."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Por qué no se vacían vigas y losas inmediatamente sobre columnas o muros recién llenados?",
+      "respuesta": "Hay que esperar a que el concreto del apoyo deje de ser plástico, para evitar fisuras en la interfase por su asentamiento."
+     },
+     "citas": [
+      {
+       "articulo": "6.4.6",
+       "extracto": "Las vigas y las losas apoyadas sobre columnas o muros no deben vaciarse hasta que el concreto del apoyo vertical haya endurecido hasta el punto que haya dejado de ser plástico."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1425 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "18.1",
+   "epigrafe": "Alcance",
+   "texto": "ALCANCE",
+   "pagina": 159
+  },
+  {
+   "numero": "18.1.1",
+   "texto": "Las disposiciones del Capítulo 18 se deben aplicar a elementos preesforzados con alambre, torones o barras que cumplan con las disposiciones para aceros de preesforzado de 3.5.5.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.1.2",
+   "texto": "Todas las disposiciones de esta Norma, no excluidas específicamente y que no contradigan las disposiciones del Capítulo 18, deben considerare aplicables al concreto preesforzado.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.1.3",
+   "texto": "Las siguientes disposiciones de esta Norma no deben aplicarse al concreto preesforzado, excepto cuando esté específicamente señalado: 6.4.4, 8.10.2, 8.10.3, 8.10.4, 8.11, 9.8.1, 10.5, 10.6, 10.9.1, 10.9.2, Capítulo 13, 14.3, 14.5 y 14.6.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.2",
+   "epigrafe": "Generalidades",
+   "texto": "GENERALIDADES",
+   "pagina": 159
+  },
+  {
+   "numero": "18.2.1",
+   "texto": "Los elementos preesforzados deben cumplir con los requisitos de resistencia especificados en esta Norma.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.2.2",
+   "texto": "En el diseño de elementos preesforzados deben contemplarse la resistencia y el comportamiento en condiciones de servicio durante todas las etapas de carga durante la vida de la estructura, desde el momento en que el preesforzado se aplique por primera vez.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.2.3",
+   "texto": "En el diseño deben considerarse las concentraciones de esfuerzos debidas al preesforzado.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.2.4",
+   "texto": "Deben tomarse medidas con respecto a los efectos provocados por el preesforzado sobre las estructuras adyacentes debidos a deformaciones plásticas y elásticas, deflexiones, cambios de longitud y rotaciones. También deben considerarse los efectos por cambios de temperatura y retracción.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.2.5",
+   "texto": "Debe considerarse la posibilidad de pandeo de un elemento entre los puntos en que el concreto y el acero de preesforzado estén en contacto intermitente en un ducto de mayor tamaño que el necesario, al igual que la posibilidad de pandeo de almas y alas delgadas.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.2.6",
+   "texto": "Al calcular las propiedades de la sección antes de la adherencia del acero de preesforzado, debe considerarse el efecto de la pérdida de área debida a los ductos abiertos.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.3",
+   "epigrafe": "Suposiciones De Diseño",
+   "texto": "SUPOSICIONES DE DISEÑO",
+   "pagina": 159
+  },
+  {
+   "numero": "18.3.1",
+   "texto": "El diseño por resistencia de elementos preesforzados para cargas axiales y de flexión debe basarse en las suposiciones de 10.2, excepto que 10.2.4 se debe aplicar únicamente al refuerzo corrugado que cumpla con lo señalado en 3.5.3.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.3.2",
+   "texto": "Para el análisis de los esfuerzos en la transferencia del preesforzado, bajo cargas de servicio y cargas de fisuración, se debe emplear la teoría elástica con las suposiciones de 18.3.2.1 y 18.3.2.2.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.3.2.1",
+   "texto": "Las deformaciones unitarias varían linealmente en el peralte del elemento en todas las etapas de carga.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.3.2.2",
+   "texto": "En las secciones fisuradas, el concreto no resiste tracción.",
+   "pagina": 159
+  },
+  {
+   "numero": "18.3.3",
+   "texto": "Los elementos preesforzados sometidos a flexión deben clasificarse como Clase U o Clase T, en función del esfuerzo en la fibra extrema en tracción en la zona precomprimida en tracción, ft, calculado para cargas de servicio, de la siguiente forma:\n (a) Clase U:\n 0,62 ft f c′ ≤ (b) Clase T:\n 0,62 1,0 f c ft f c ′ ′ < ≤\n\n Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como Clase U, con 0,50 ft f c′ ≤ .",
+   "pagina": 160
+  },
+  {
+   "numero": "18.3.4",
+   "texto": "Para los elementos sometidos a flexión Clase U y Clase T, se permite calcular los esfuerzos para cargas de servicio usando la sección no fisurada.",
+   "pagina": 160
+  },
+  {
+   "numero": "18.3.5",
+   "texto": "Las deflexiones de los elementos preesforzados sometidos a flexión deben ser calculadas de acuerdo con 9.6.4.",
+   "pagina": 160
+  },
+  {
+   "numero": "18.4",
+   "epigrafe": "Requisitos De Servicio - Elementos Sometidos A Flexión",
+   "texto": "REQUISITOS DE SERVICIO - ELEMENTOS SOMETIDOS A FLEXIÓN",
+   "pagina": 160
+  },
+  {
+   "numero": "18.4.1",
+   "texto": "Los esfuerzos en el concreto inmediatamente después de la transferencia del preesforzado (antes de las pérdidas de preesfuerzo que dependen del tiempo) no deben exceder los valores siguientes:\n (a) Esfuerzo en la fibra extrema en compresión … 0,60 f ci′\n (b) Esfuerzo en la fibra extrema en tracción, salvo lo permitido en (c) … 0,25 f ci′\n (c) Esfuerzo en la fibra extrema en tracción en los extremos de elementos simplemente apoyados … 0,50 f ci′ donde los esfuerzos de tracción calculados, ft, excedan los límites señalados en (b) o (c), deberá colocarse refuerzo adicional adherido (no preesforzado o preesforzado) en la zona de tracción, para resistir la fuerza total de tracción en el concreto, calculada con la suposición de sección no fisurada. El refuerzo adicional se determinará sobre la base de un esfuerzo admisible de 0,6 fy , sin exceder de 210 MPa.",
+   "pagina": 160
+  },
+  {
+   "numero": "18.4.2",
+   "texto": "Para los elementos preesforzados sometidos a flexión Clase U y Clase T, los esfuerzos en el concreto bajo las cargas de servicio (después de haber ocurrido todas las pérdidas de preesforzado), no deben exceder los valores siguientes:\n (a) Esfuerzo en la fibra extrema en compresión debido al preesforzado y a las cargas sostenidas en el tiempo … 0,45 f’c\n (b) Esfuerzo en la fibra extrema en compresión debida al preesforzado y al total de\n las cargas … 0,60 f’c",
+   "pagina": 160
+  },
+  {
+   "numero": "18.4.3",
+   "texto": "Se pueden exceder los esfuerzos admisibles del concreto indicados en 18.4.1 y 18.4.2 si se demuestra mediante ensayos o análisis que no se perjudica el comportamiento del elemento bajo condiciones de servicio.",
+   "pagina": 160
+  },
+  {
+   "numero": "18.4.4.1",
+   "texto": "Para estructuras sometidas a fatiga o expuestas a medios corrosivos, se deberán adoptar precauciones especiales. Para condiciones de ambiente corrosivo, definido como un ambiente en que existe ataque químico (agua marina, ambiente industrial corrosivo, gases de alcantarillas, aguas servidas, etc.), se debe usar un recubrimiento mayor que el indicado en 7.7.2 y se deben reducir los esfuerzos de tracción en el concreto para controlar la fisuración bajo cargas de servicio.",
+   "pagina": 160
+  },
+  {
+   "numero": "18.5",
+   "epigrafe": "Esfuerzos Admisibles En El Acero De Preesforzado",
+   "texto": "ESFUERZOS ADMISIBLES EN EL ACERO DE PREESFORZADO",
+   "pagina": 161
+  },
+  {
+   "numero": "18.5.1",
+   "texto": "Los esfuerzos de tracción en el acero de preesforzado no deben exceder:\n (a) Debido a la fuerza del gato de preesforzado … 0,94 fpy pero no mayor que el mínimo entre 0,80 fpu y el máximo valor recomendado por el fabricante del acero de preesforzado o de los dispositivos de anclaje.\n (b) Inmediatamente después de la transferencia del preesfuerzo … 0,82 fpy pero no mayor que 0,74 fpu\n (c) Tendones de postensado, en anclajes y acoples, inmediatamente después de la\n transferencia … 0,70 fpu",
+   "pagina": 161
+  },
+  {
+   "numero": "18.6",
+   "epigrafe": "Pérdidas De Preesfuerzo",
+   "texto": "PÉRDIDAS DE PREESFUERZO",
+   "pagina": 161
+  },
+  {
+   "numero": "18.6.1",
+   "texto": "Para determinar el esfuerzo efectivo en el acero de preesforzado, fse, deben considerarse las siguientes fuentes de pérdidas de preesforzado.\n (a) Asentamiento del anclaje durante la transferencia. (b) Acortamiento elástico del concreto. (c) Flujo plástico del concreto. (d) Retracción del concreto. (e) Relajación del esfuerzo en el acero de preesforzado. (f) Pérdidas por fricción debidas a la curvatura intencional o accidental de los tendones de postensado.",
+   "pagina": 161
+  },
+  {
+   "numero": "18.6.2",
+   "epigrafe": "Pérdidas por fricción en los tendones de postensado",
+   "texto": "Pérdidas por fricción en los tendones de postensado",
+   "pagina": 161
+  },
+  {
+   "numero": "18.6.2.1",
+   "texto": "Ppx, que es la fuerza en los tendones de postensado a una distancia px\n\n , del extremo donde se aplica la fuerza del gato, debe calcularse mediante:\n\n ( ) μ α K px p px Ppx Ppj e− + = (18-1)\n Cuando ( ) K px p px +μα no es mayor que 0,3; Ppx puede calcularse mediante:\n\n 1 (1 μ α ) Ppx Ppj K px p px − = + + (18-2) px debe estar expresado en metros.",
+   "pagina": 161
+  },
+  {
+   "numero": "18.6.2.2",
+   "texto": "Las pérdidas por fricción deben basarse en coeficientes de fricción por curvatura p μ y por desviación accidental K determinados experimentalmente y deben ser verificados durante las operaciones de tensado del tendón. En la Tabla 18.1 se muestran rangos de valores comunes para estos coeficientes.\n\n TABLA 18.1\n\n RANGOS DE VALORES DE LOS COEFICIENTES DE FRICCIÓN EN TENDONES\n POSTENSADOSE EN LAS ECUACIONES (18-1) Y (18-2)\n\n Los coeficientes incluidos en la Tabla 18.1 dan el rango de valores que normalmente puede esperarse. Debido a la gran variedad de ductos de acero de preesforzado y recubrimientos disponibles, estos valores sólo pueden servir como guía. Los valores de los coeficientes que se deben utilizar para aceros de preesforzado y ductos de tipo especial deben obtenerse de los fabricantes de tendones y ser verificados experimentalmente.",
+   "pagina": 161
+  },
+  {
+   "numero": "18.6.2.3",
+   "texto": "En los planos de diseño se deben colocar los valores de K y p μ empleados en el diseño.",
+   "pagina": 162
+  },
+  {
+   "numero": "18.6.3",
+   "texto": "Cuando exista pérdida de presfuerzo en un elemento debido a la conexión del mismo con otro elemento adyacente, dicha pérdida de preesforzado debe tenerse en cuenta en el diseño.",
+   "pagina": 162
+  },
+  {
+   "numero": "18.7",
+   "epigrafe": "Resistencia A Flexión",
+   "texto": "RESISTENCIA A FLEXIÓN",
+   "pagina": 162
+  },
+  {
+   "numero": "18.7.1",
+   "texto": "La resistencia de diseño para elementos sometidos a flexión se debe calcular con los métodos de diseño por resistencia de esta Norma. Para el acero de preesforzado, fps debe sustituir a fy en los cálculos de resistencia.",
+   "pagina": 162
+  },
+  {
+   "numero": "18.7.2",
+   "texto": "Como alternativa a una determinación más precisa de fps basada en la compatibilidad de deformaciones, se pueden utilizar los siguientes valores aproximados de fps, siempre que fse no sea menor que 0,5 fpu\n (a) Para elementos con tendones adheridos.\n\n ( ) γ 1 ρ ω ω' β1\n p p fpu d fps fpu\n f c dp = − + − ′\n ( ) [ ]\n\n [ ] ( ) (18-3) donde p Aps bd ρ= ; fy f c′ ω=ρ ; ' ρ' fy f c′ ω= y γp es 0,55 para\n fpy fpu entre 0,80 y 0,85; 0,40 para fpy fpu entre 0,85 y 0,90 y 0,28 para\n fpy fpu mayor que 0,90.\n Cuando se tiene en cuenta cualquier refuerzo de compresión al calcular fps mediante la ecuación (18-3), el término:\n\n Coeficiente por\n desviación accidental, K\n\n Coeficiente\n de curvatura,\n μp\n Tendones inyectados en ducto metálico\n Tendones de alambre Barras de alta resistencia\n Torones de 7 alambres\n 0,0033–0,0049 0,0003–0,0020 0,0016–0,0066\n\n 0,15 - 0,25 0,08 - 0,30 0,15 - 0,25\n Tendones no\n adheridos\n con mástique\n Tendones de alambre y\n torones de 7 alambres\n\n 0,0033–0,0066\n\n 0,05 - 0,15\n pre engrasados\n Tendones de alambre y\n torones de 7 alambres 0,0010–0,0066 0,05 - 0,15 ( ) ρ ' p fpu d f c dp [ ] + ω−ω\n\n ′ [ ] no debe tomarse menor de 0,17 y d’ no debe ser mayor de 0,15 dp.\n (b) Para elementos con tendones no adheridos y con una relación luz a peralte de 35 ó menos:\n 70 100 ρp\n f c fps fse ′ = + + (18-4)\n pero fps en la ecuación (18-4) no debe tomarse mayor que fpy ni que (fse + 420).\n (c) Para elementos con tendones no adheridos y con una relación luz a peralte mayor de 35:\n 70 300 ρ\n f c fps fse\n p\n ′ = + + (18-5)\n pero fps en la ecuación (18-5) no debe tomarse mayor que fpy ni que (fse + 210).",
+   "pagina": 162
+  },
+  {
+   "numero": "18.7.3",
+   "texto": "Se puede considerar que el refuerzo no preesforzado que cumple con 3.5.3, en caso de utilizarse simultáneamente con acero de preesforzado, contribuye a la fuerza de tracción y se permite incluirlo en los cálculos de resistencia a la flexión con un esfuerzo igual a fy. Se permite incluir otros refuerzos no preesforzados en los cálculos de resistencia únicamente si se efectúa un análisis de compatibilidad de deformaciones con el fin de determinar los esfuerzos en dicho refuerzo.",
+   "pagina": 163
+  },
+  {
+   "numero": "18.8",
+   "epigrafe": "Límites Del Refuerzo En Elementos Sometidos A Flexión",
+   "texto": "LÍMITES DEL REFUERZO EN ELEMENTOS SOMETIDOS A FLEXIÓN",
+   "pagina": 163
+  },
+  {
+   "numero": "18.8.1",
+   "texto": "La cuantía de armadura pretensada y no pretensada empleada para calcular la resistencia a flexión de una sección, excepto por lo dispuesto en 18.8.2, debe ser tal que:\n\n ωp , [ωp + (d /dp) ( ω - ω’)] ó [ωpw + (d /dp) (ωw - ω’w)] no sea mayor de 0,36 β1.\n La cuantía ωp se calcula como ρp fps f c′. Las cuantías ωw y ωpw se utilizan en secciones T y se calculan como ω y ωp, respectivamente, excepto que cuando se calculan ρ y ρp, debe usarse el ancho del alma bw y el área de refuerzo o acero de presforzado requerida para desarrollar la resistencia a la compresión del alma sola debe usarse en lugar de As o Aps. La cuantía ω’w se calcula como ω’, excepto que al calcular ρ' , debe usarse el ancho del alma bw en lugar de b.",
+   "pagina": 163
+  },
+  {
+   "numero": "18.8.2",
+   "texto": "Cuando la cuantía de acero sea tal que se exceda lo indicado en 18.8.1, la resistencia de diseño en flexión no debe exceder de la resistencia a flexión que se obtiene a partir del momento de las fuerzas de compresión.",
+   "pagina": 163
+  },
+  {
+   "numero": "18.8.3",
+   "texto": "La cantidad total de refuerzo preesforzado y no preesforzado, debe ser la necesaria para desarrollar una carga amplificada de por lo menos 1,2 veces la carga de fisuración, calculada en base al módulo de rotura fr indicado en 9.6.2.3. Se permite omitir esta disposición para los casos siguientes: (a) Losas en dos direcciones con postensado no adherido.\n (b) Elementos a flexión con una resistencia a cortante y a flexión al menos del doble de la requerida en 9.2.",
+   "pagina": 163
+  },
+  {
+   "numero": "18.8.4",
+   "texto": "Parte o todo el refuerzo adherido consistente en barras o tendones debe colocarse lo más cerca posible de la cara en tracción en los elementos preesforzados sometidos a flexión. En elementos preesforzados con tendones no adheridos, el refuerzo mínimo adherido consistente en barras o tendones debe cumplir con los requisitos de 18.9.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9",
+   "epigrafe": "Refuerzo Mínimo Adherido",
+   "texto": "REFUERZO MÍNIMO ADHERIDO",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.1",
+   "texto": "En todos los elementos sometidos a flexión con tendones no adheridos, debe proporcionarse un área mínima de refuerzo adherido, tal como se requiere en 18.9.2 y 18.9.3.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.2",
+   "texto": "Con excepción de lo dispuesto en 18.9.3, el área mínima del refuerzo adherido debe calcularse mediante\n\n 0,004 As Act = (18-6) donde Act es el área de la porción de la sección transversal entre el borde en tracción por flexión y el centro de gravedad de la sección bruta.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.2.1",
+   "texto": "El refuerzo adherido requerido por la ecuación (18-6) debe estar distribuido de manera uniforme sobre la zona de tracción precomprimida y tan cerca como sea posible de la fibra extrema en tracción.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.2.2",
+   "texto": "El refuerzo adherido se requiere independientemente de las condiciones de esfuerzos bajo carga de servicio.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.3",
+   "texto": "En sistemas de losas planas en dos direcciones, el área mínima y la distribución del refuerzo adherido deben cumplir con lo requerido en 18.9.3.1, 18.9.3.2 y 18.9.3.3.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.3.1",
+   "texto": "No se requiere refuerzo adherido en las zonas de momento positivo donde el esfuerzo de tracción en la fibra extrema en tracción de la zona de tracción precomprimida al nivel de cargas de servicio, ft (después de considerar todas la pérdidas de preesforzado), no excede 0,17 f c′.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.3.2",
+   "texto": "En las zonas de momento positivo donde el esfuerzo de tracción calculado en el concreto bajo carga de servicio excede 0,17 f c′, el área mínima del refuerzo adherido debe calcularse mediante:\n\n 0,5\n Nc As\n fy = (18-7) donde el valor de fy usado en el ecuación (18-7) no debe exceder de 420 MPa. El refuerzo adherido debe distribuirse de manera uniforme sobre la zona de tracción precomprimida, tan cerca como sea posible de la fibra extrema en tracción.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.3.3",
+   "texto": "En las zonas de momento negativo sobre las columnas de apoyo, el área mínima del refuerzo adherido, As, en la parte superior de la losa en cada dirección, debe calcularse mediante:\n\n 0,00075 As Acf = (18-8)\n donde cf A es la mayor área de la sección transversal bruta de las franjas viga - losa en los dos pórticos equivalentes ortogonales que se intersectan en la columna en una losa en dos direcciones.\n\n El refuerzo adherido requerido por la ecuación (18-8) debe distribuirse entre líneas que están 1,5h fuera de las caras opuestas de la columna de apoyo. Deben colocarse por lo menos 4 barras o alambres en cada dirección. El espaciamiento del refuerzo adherido no debe exceder de 300 mm.",
+   "pagina": 164
+  },
+  {
+   "numero": "18.9.4",
+   "texto": "La longitud mínima del refuerzo adherido requerido en 18.9.2 y 18.9.3 debe ser la indicada en 18.9.4.1, 18.9.4.2 y 18.9.4.3.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.9.4.1",
+   "texto": "En zonas de momento positivo, la longitud del refuerzo adherido debe ser como mínimo un tercio de la luz libre, n\n\n /3 , y estar centrada en la zona de momento positivo.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.9.4.2",
+   "texto": "En zonas de momento negativo, el refuerzo adherido debe prolongarse como mínimo un sexto de la luz libre, n\n\n /6 , a cada lado del apoyo.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.9.4.3",
+   "texto": "Cuando se dispone refuerzo adherido para contribuir a la resistencia de diseño, φMn , de acuerdo con 18.7.3 o para las condiciones de esfuerzo de tracción de acuerdo con 18.9.3.2, la longitud mínima deberá cumplir también con las disposiciones del Capítulo 12.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.10",
+   "epigrafe": "Estructuras Estáticamente Indeterminadas",
+   "texto": "ESTRUCTURAS ESTÁTICAMENTE INDETERMINADAS",
+   "pagina": 165
+  },
+  {
+   "numero": "18.10.1",
+   "texto": "Los pórticos y elementos continuos de concreto preesforzado deben diseñarse para un comportamiento satisfactorio en condiciones de cargas de servicio y para ofrecer una resistencia adecuada.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.10.2",
+   "texto": "El comportamiento en condiciones de carga de servicio debe determinarse mediante un análisis elástico, considerando las reacciones, momentos, cortantes y fuerzas axiales producidas por el preesforzado, flujo plástico, retracción, variaciones de temperatura, deformación axial, restricción de los elementos estructurales adyacentes y asentamientos de la cimentación.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.10.3",
+   "texto": "Los momentos flectores que se utilizan para calcular la resistencia requerida, deben ser la suma de los momentos debidos a las reacciones inducidas por el preesforzado (con un factor de amplificación de 1,0) y los momentos debidos a las cargas de diseño amplificadas. Se permite ajustar la suma de estos momentos tal como lo indica 18.10.4.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.10.4",
+   "epigrafe": "Redistribución",
+   "texto": "de momentos en elementos preesforzados continuos sometidos a flexión",
+   "pagina": 165
+  },
+  {
+   "numero": "18.10.4.1",
+   "texto": "Cuando se provee refuerzo adherido en los apoyos de acuerdo con 18.9, se permite reducir los momentos negativos o positivos, calculados por medio de la teoría elástica para cualquier distribución de carga supuesta, de acuerdo a lo indicado en 8.4.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.10.4.2",
+   "texto": "Los momentos reducidos deberán usarse para la determinación de todas las otras fuerzas de sección a lo largo de todo el vano. El equilibrio estático debe mantenerse luego de la redistribución, para cada distribución de carga supuesta.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.11",
+   "epigrafe": "Elementos A Compresión – Carga Axial Y Flexión Combinadas",
+   "texto": "ELEMENTOS A COMPRESIÓN – CARGA AXIAL Y FLEXIÓN COMBINADAS",
+   "pagina": 165
+  },
+  {
+   "numero": "18.11.1",
+   "texto": "Los elementos de concreto preesforzado sometidos a carga axial y flexión combinadas, con o sin refuerzo no preesforzado, deben diseñarse de acuerdo con los métodos de diseño por resistencia de esta Norma para elementos no preesforzados. Deben incluirse los efectos de preesforzado, retracción, flujo plástico y cambios de temperatura.",
+   "pagina": 165
+  },
+  {
+   "numero": "18.11.2",
+   "epigrafe": "Límites del refuerzo en elementos preesforzados sometidos a compresión",
+   "texto": "Límites del refuerzo en elementos preesforzados sometidos a compresión",
+   "pagina": 166
+  },
+  {
+   "numero": "18.11.2.1",
+   "texto": "Los elementos con un esfuerzo promedio de compresión en el concreto debido solamente a la fuerza de preesforzado, fpc, menor de 1,6 MPa deben contar con un refuerzo mínimo de acuerdo con 7.10, 10.9.1 y 10.9.2 para columnas, o con 14.3 cuando se trata de muros.",
+   "pagina": 166
+  },
+  {
+   "numero": "18.11.2.2",
+   "texto": "Excepto en el caso de muros, los elementos con un esfuerzo promedio de compresión en el concreto, debido únicamente a la fuerza efectiva de preesforzado, igual o superior a 1,6 MPa deben tener todos los tendones rodeados por espirales o estribos laterales, de acuerdo con (a) a (d): (a) Las espirales deben cumplir con lo indicado en 7.10.4.\n (b) Los estribos laterales deben ser por lo menos de 3/8” o formarse con refuerzo electrosoldado de alambre de área equivalente y tener un espaciamiento vertical que no exceda de 48 veces el diámetro de la barra o del alambre ni la menor dimensión del elemento a compresión.\n (c) Los estribos deben localizarse verticalmente, por encima del borde superior de la zapata o de la losa de cualquier piso, a una distancia no mayor de la mitad del espaciamiento requerido y deben distribuirse hasta una distancia no mayor de la mitad del espaciamiento por debajo del refuerzo horizontal inferior de los elementos apoyados en la parte superior.\n (d) Cuando existan vigas o ménsulas que enmarquen por todos los lados a la columna, se permite terminar los estribos a no más de 75 mm por debajo del refuerzo inferior de dichas vigas o ménsulas.",
+   "pagina": 166
+  },
+  {
+   "numero": "18.11.2.3",
+   "texto": "Para muros con un esfuerzo promedio de compresión en el concreto, debido únicamente a la fuerza efectiva de preesforzado, igual o mayor que 1,6 MPa, los requisitos mínimos de refuerzo de 14.3 pueden obviarse cuando el análisis estructural demuestre que se tienen resistencia y estabilidad adecuadas.",
+   "pagina": 166
+  },
+  {
+   "numero": "18.12",
+   "epigrafe": "Sistemas De Losas",
+   "texto": "SISTEMAS DE LOSAS",
+   "pagina": 166
+  },
+  {
+   "numero": "18.12.1",
+   "texto": "Los momentos y cortantes amplificados en sistemas de losas preesforzadas, reforzadas a flexión en más de una dirección, podrán determinarse mediante el Método del Pórtico Equivalente o mediante procedimientos de diseño más elaborados.",
+   "pagina": 166
+  },
+  {
+   "numero": "18.12.2",
+   "texto": "La resistencia a flexión de diseño, φMn, en losas preesforzadas exigida por 9.3 para cada sección debe ser mayor o igual a Mu teniendo en cuenta 9.2, 18.10.3 y 18.10.4. La resistencia a cortante de diseño, φVn, de losas preesforzadas exigida por 9.3 en la zona aledaña a las columnas debe ser mayor o igual a Vu, teniendo en cuenta 9.2, 11.1, 11.12.2 y 11.12.6.2.",
+   "pagina": 166
+  },
+  {
+   "numero": "18.12.3",
+   "texto": "En condiciones de carga de servicio, todas las limitaciones de servicio, incluyendo los límites especificados para las deflexiones, deben cumplirse considerando adecuadamente los factores señalados en 18.10.2.",
+   "pagina": 166
+  },
+  {
+   "numero": "18.12.4",
+   "texto": "Para cargas uniformemente distribuidas, el espaciamiento de los tendones o grupos de tendones en una dirección no debe exceder el menor de 8 veces el espesor de la losa ni 1,5 m. El espaciamiento de los tendones debe proveer un presfuerzo promedio mínimo efectivo de 0,9 MPa sobre la sección de losa tributaria al tendón o grupo de tendones. Debe proporcionarse un mínimo de dos tendones en cada dirección a través de la sección crítica de cortante sobre las columnas. En losas con cargas concentradas debe considerarse especialmente el espaciamiento de los tendones.",
+   "pagina": 166
+  },
+  {
+   "numero": "18.12.5",
+   "texto": "En losas con tendones no adheridos debe proporcionarse refuerzo adherido de acuerdo con 18.9.3 y 18.9.4.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13",
+   "epigrafe": "Zona De Anclaje De Tendones Postensados",
+   "texto": "ZONA DE ANCLAJE DE TENDONES POSTENSADOS",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.1",
+   "epigrafe": "Zona de anclaje",
+   "texto": "Se debe considerar que la zona de anclaje se compone de dos sectores:\n La zona general es la zona de anclaje tal como se define en 2.2 e incluye la zona local. La zona local consiste en un prisma rectangular (o rectangular equivalente para anclajes circulares u ovalados) que circunda al dispositivo de anclaje y al refuerzo de confinamiento.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.2",
+   "epigrafe": "Zona local",
+   "texto": "Zona local",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.2.1",
+   "texto": "El diseño de las zonas locales debe basarse en la fuerza amplificada de preesforzado, Ppu, y en los requisitos de 9.2.11 y 9.3.2.5.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.2.2",
+   "texto": "Debe proporcionarse refuerzo a la zona local en donde se requiera para un funcionamiento adecuado del dispositivo de anclaje.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.2.3",
+   "texto": "Los requisitos para la zona local de 18.13.2.2 se satisfacen con lo indicado en 18.14.1 ó 18.15.1 y 18.15.2.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.3",
+   "epigrafe": "Zona general",
+   "texto": "Zona general",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.3.1",
+   "texto": "El diseño de las zonas generales debe basarse en la fuerza amplificada de preesforzado, Ppu, y en los requisitos de 9.2.11 y 9.3.2.5.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.3.2",
+   "texto": "Se debe proporcionar refuerzo en la zona general donde se requiera para resistir las fuerzas longitudinales de tracción en el borde inducidas por los dispositivos de anclaje. Deben considerarse los efectos de cambios abruptos en la sección.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.3.3",
+   "texto": "Los requisitos para la zona general establecidos en 18.13.3.2 se consideran satisfechos si se cumple con 18.13.4, 18.13.5, 18.13.6 y cada vez que sea aplicable con lo indicado en 18.14.2, 18.14.3, ó 18.15.3.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4",
+   "epigrafe": "Resistencia nominal de los materiales",
+   "texto": "Resistencia nominal de los materiales",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4.1",
+   "texto": "El esfuerzo nominal a tracción del refuerzo adherido esta limitada a fy para el refuerzo no preesforzado y a fpy para el refuerzo preesforzado. El esfuerzo nominal de tracción del refuerzo no adherido preesforzado para resistir las fuerzas de tracción en las zonas de anclaje debe estar limitado a 70 fps fse = + en MPa.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4.2",
+   "texto": "Salvo el caso de concreto confinado dentro de espirales o estribos cerrados que proporcionen confinamiento equivalente al indicado por la ecuación (10-5), la resistencia nominal a compresión del concreto en la zona general debe limitarse a\n 0,7λ f ci′.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4.3",
+   "texto": "La resistencia a compresión del concreto en el momento de postensar, f ci′, debe especificarse en los planos de diseño. A menos que se usen dispositivos de anclaje sobredimensionados para compensar la menor resistencia a compresión o que el acero esté esforzado a no más del 50% de la fuerza final del preesforzado, el acero de preesforzado no debe tensarse sino hasta que la resistencia a la compresión del concreto medida en ensayos consistentes con el curado del elemento, sea al menos 28 MPa para torones de varios alambres o de a lo menos 17 MPa para los tendones de un cable o para barras.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.5",
+   "epigrafe": "Métodos de diseño",
+   "texto": "Métodos de diseño",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.1",
+   "texto": "Para el diseño de zonas generales se permiten utilizar los métodos indicados a continuación, siempre que los procedimientos den como resultado predicciones de resistencia que concuerden sustancialmente con los resultados de ensayos.\n (a) Modelos de plasticidad basados en equilibrio (modelos “puntal - tensor”).\n (b) Análisis lineal de esfuerzos (incluyendo análisis por elementos finitos o equivalente).\n (c) Ecuaciones simplificadas, cuando sean aplicables.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.2",
+   "texto": "No deben utilizarse las ecuaciones simplificadas en los casos en que la sección transversal del elemento no sea rectangular, en donde las discontinuidades en o cerca de la zona general causen desviaciones en la trayectoria de las fuerzas, en donde la distancia mínima al borde sea menor que 1,5 veces la dimensión lateral del dispositivo de anclaje en esa dirección o en donde se usen dispositivos múltiples de anclaje que no queden dispuestos como un solo grupo compacto.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.3",
+   "texto": "La secuencia de tensados debe especificarse en los planos y considerarse en el diseño.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.4",
+   "texto": "Deben considerarse los efectos tridimensionales en el diseño. Los análisis se deben realizar usando procedimientos tridimensionales o considerando la suma de los efectos en dos planos ortogonales.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.5",
+   "texto": "Para los dispositivos de anclaje ubicados lejos del extremo del elemento, debe proporcionarse refuerzo adherido para transferir, al menos, 0,35Ppu a la sección de concreto que queda detrás del anclaje. Tal refuerzo debe colocarse simétricamente alrededor de los dispositivos de anclaje y debe estar completamente anclado tanto por detrás como por delante de los dispositivos de anclaje.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.6",
+   "texto": "Cuando los tendones son curvados en la zona general, excepto para tendones de un cable en losas o donde el análisis demuestre que no se requiere refuerzo, se debe proporcionar refuerzo adherido con el objeto de resistir las fuerzas radiales y de hendimiento.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.7",
+   "texto": "Excepto para tendones de un cable o donde el análisis demuestre que no se requiere refuerzo, se debe proporcionar un refuerzo mínimo en direcciones ortogonales paralelas a la superficie posterior de todas las zonas de anclaje, con una resistencia nominal a la tracción igual al 2% de cada fuerza de preesforzado amplificada, con el objeto de evitar el descascaramiento.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.8",
+   "texto": "No se debe considerar la resistencia a la tracción del concreto al calcular el refuerzo requerido.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.6",
+   "epigrafe": "Requisitos de detallado",
+   "texto": "La elección de los tamaños de refuerzo, espaciamientos, recubrimiento y otros detalles para las zonas de anclaje, debe contemplar las tolerancias en el doblado, fabricación e instalación del refuerzo, el tamaño del agregado y la correcta colocación y consolidación del concreto.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.14",
+   "epigrafe": "Diseño De Las Zonas De Anclaje Para Cables De Un Alambre O",
+   "texto": "BARRAS DE HASTA 16 mm DE DIÁMETRO",
+   "pagina": 168
+  },
+  {
+   "numero": "18.14.1",
+   "epigrafe": "Diseño de la zona local",
+   "texto": "Los dispositivos de anclaje de un solo cable o barra de 16 mm o menos de diámetro y el refuerzo de una zona local deben cumplir con lo indicado en la publicación ACI 423.6 “Specification for Unbonded Single-Strand Tendons” o con los requisitos para dispositivos especiales de anclaje señalados en 18.15.2.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.14.2",
+   "epigrafe": "Diseño de la zona general para tendones en losas",
+   "texto": "Diseño de la zona general para tendones en losas",
+   "pagina": 169
+  },
+  {
+   "numero": "18.14.2.1",
+   "texto": "Para los dispositivos de anclaje para cables de 13 mm de diámetro o menores en losas de concreto de peso normal, se debe proporcionar refuerzo mínimo que cumpla con los requisitos de 18.14.2.2 y 18.14.2.3, a menos que un análisis detallado que cumpla con lo indicado en 18.13.5 demuestre que tal refuerzo no es necesario.",
+   "pagina": 169
+  },
+  {
+   "numero": "18.14.2.2",
+   "texto": "Se deben disponer dos barras horizontales de diámetro no menor a 1/2”, paralelas al borde de la losa. Se permite que dichas barras estén en contacto con la cara frontal del dispositivo de anclaje y deben estar dentro de una distancia 2 h delante de cada dispositivo. Dichas barras deben extenderse, por lo menos, 150 mm a cada lado de los bordes exteriores de cada dispositivo.",
+   "pagina": 169
+  },
+  {
+   "numero": "18.14.2.3",
+   "texto": "Si el espaciamiento, medido centro a centro, de los dispositivos de anclaje es de 300 mm o menos, los dispositivos de anclaje se deben considerar como agrupados. Por cada grupo de seis o más dispositivos de anclaje, se deben proporcionar n + 1 barras en horquilla o estribos cerrados al menos de diámetro 3/8”, donde n es la cantidad de dispositivos de anclaje. Debe colocarse una barra en horquilla o estribo entre cada dispositivo de anclaje y uno a cada lado del grupo. Las barras en horquilla o estribos deben colocarse con los extremos extendiéndose dentro de la losa, perpendicularmente al borde. La parte central de las barras en horquilla o estribos debe colocarse perpendicularmente al plano de la losa desde 3 8 h hasta\n 2 h delante de los dispositivos de anclaje.",
+   "pagina": 169
+  },
+  {
+   "numero": "18.14.2.4",
+   "texto": "Para dispositivos de anclaje que no se ajusten a lo indicado en 18.14.2.1, el refuerzo mínimo debe basarse en un análisis detallado que cumpla con los requisitos de 18.13.5.",
+   "pagina": 169
+  },
+  {
+   "numero": "18.14.3",
+   "texto": "Diseño de la zona general para grupos de cables de un alambre en vigas principales y secundarias\n El diseño de la zona general para los grupos de cables de un alambre en vigas principales y secundarias debe cumplir con los requisitos de 18.13.3 a 18.13.5.",
+   "pagina": 169
+  },
+  {
+   "numero": "18.15",
+   "epigrafe": "Diseño De Las Zonas De Anclaje Para Cables De Varios Alambres",
+   "texto": "DISEÑO DE LAS ZONAS DE ANCLAJE PARA CABLES DE VARIOS ALAMBRES",
+   "pagina": 169
+  },
+  {
+   "numero": "18.15.1",
+   "epigrafe": "Diseño de la zona local",
+   "texto": "Los dispositivos básicos de anclaje para varios cables y el refuerzo de la zona local deben cumplir con los requisitos establecidos por AASHTO en “Standard Specification for Highway Bridges”, división I, artículos 9.21.7.2.2 a 9.21.7.2.4.\n Los dispositivos especiales de anclaje deben cumplir con los ensayos requeridos en AASHTO “Standard Specification for Highway Bridges”, división I, artículo 9.21.7.3 y descrito en AASHTO “Standard Specification for Highway Bridges”, división II, artículo 10.3.2.3.",
+   "pagina": 169
+  },
+  {
+   "numero": "18.15.2",
+   "epigrafe": "Uso de dispositivos especiales de anclaje",
+   "texto": "Cuando se vayan a usar dispositivos especiales de anclaje, se debe proporcionar refuerzo de superficie suplementario en las regiones correspondientes a las zonas de anclaje, además del refuerzo de confinamiento especificada para el dispositivo de anclaje. Este refuerzo suplementario debe ser igual en configuración y por lo menos equivalente en cuantía volumétrica al refuerzo de superficie suplementario usado en los ensayos para calificar la aceptación del dispositivo de anclaje.",
+   "pagina": 169
+  },
+  {
+   "numero": "18.15.3",
+   "epigrafe": "Diseño de la zona general",
+   "texto": "El diseño de la zona general para los cables de varios alambres debe cumplir con los requisitos establecidos en 18.13.3 a 18.13.5.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.16",
+   "epigrafe": "Protección Contra La Corrosión De Tendones De Preesforzado",
+   "texto": "NO ADHERIDOS",
+   "pagina": 170
+  },
+  {
+   "numero": "18.16.1",
+   "texto": "Los tendones de preesforzado no adheridos deben estar encapsulados en ductos de postensado. Los cables de preesforzado deben quedar completamente recubiertos y los ductos deben llenarse con un material adecuado que asegure la protección contra la corrosión.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.16.2",
+   "texto": "Los ductos de postensado deben ser impermeables y continuos en toda la longitud no adherida.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.16.3",
+   "texto": "Para aplicaciones en ambientes corrosivos, los ductos de postensado deben estar conectados a todos los anclajes, ya sean de tensado, intermedios o fijos, de manera impermeable.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.16.4",
+   "texto": "Los tendones no adheridos de un solo cable deben protegerse de la corrosión de acuerdo con lo indicado en la publicación del ACI 423.6 “Specification for Unbonded Single-Strand Tendons”.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.17",
+   "epigrafe": "Ductos Para Postensado",
+   "texto": "DUCTOS PARA POSTENSADO",
+   "pagina": 170
+  },
+  {
+   "numero": "18.17.1",
+   "texto": "Los ductos para cables que se inyectan con mortero de inyección deben ser impermeables y no reactivos con el concreto, acero de preesforzado, mortero de inyección e inhibidores de la corrosión.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.17.2",
+   "texto": "Los ductos inyectados para un solo alambre, un torón o una barra deben tener un diámetro interior al menos 6 mm mayor que el diámetro del acero de preesforzado.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.17.3",
+   "texto": "Los ductos inyectados para alambres, torones o barras agrupados deben tener un área transversal interior al menos igual a dos veces el área transversal del acero de preesforzado.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.17.4",
+   "texto": "Los ductos deben mantenerse libres de agua empozada si los elementos que van a inyectarse con mortero de inyección pudieran estar expuestos a temperaturas bajo el punto de congelamiento antes de la inyección del mortero.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.18",
+   "epigrafe": "Mortero De Inyección Para Tendones Adheridos",
+   "texto": "MORTERO DE INYECCIÓN PARA TENDONES ADHERIDOS",
+   "pagina": 170
+  },
+  {
+   "numero": "18.18.1",
+   "texto": "El mortero de inyección debe consistir en una mezcla de cemento Portland y agua o de cemento Portland, arena y agua.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.18.2",
+   "texto": "Los materiales para el mortero de inyección deben cumplir con lo especificado en 18.18.2.1 a 18.18.2.4.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.18.2.1",
+   "texto": "El cemento Portland debe cumplir con los requisitos de 3.2.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.18.2.2",
+   "texto": "El agua debe cumplir con los requisitos de 3.4.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.18.2.3",
+   "texto": "Si se usa arena, esta debe cumplir con los requisitos de ASTM C 144 “Standard Specification for Aggregate for Masonry Mortar“, excepto que se permite modificar la granulometría conforme sea necesario para lograr una trabajabilidad satisfactoria.",
+   "pagina": 170
+  },
+  {
+   "numero": "18.18.2.4",
+   "texto": "Se permite el uso de aditivos que cumplan con lo establecido en 3.6 siempre que se sepa que no producen efectos perjudiciales en el mortero de inyección, acero o concreto. No debe emplearse cloruro de calcio.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.3",
+   "epigrafe": "Dosificación del mortero de inyección",
+   "texto": "Dosificación del mortero de inyección",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.3.1",
+   "texto": "La dosificación del mortero de inyección debe basarse en una de las siguientes condiciones: (a) Resultados de ensayos de mortero de inyección fresco y endurecido, efectuados antes de iniciar las operaciones de inyección. (b) Experiencia documentada previa con materiales y equipo similares y bajo condiciones de obra comparables.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.3.2",
+   "texto": "El cemento utilizado en la obra debe corresponder a aquél en el cual se basó la selección de la dosificación del mortero de inyección.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.3.3",
+   "texto": "El contenido de agua debe ser el mínimo necesario para el bombeo adecuado del mortero de inyección. La relación agua cemento no debe exceder de 0,45 en peso.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.3.4",
+   "texto": "No debe añadirse agua con el objeto de aumentar la fluidez cuando esta haya disminuido por demora en el uso del mortero de inyección.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.4",
+   "epigrafe": "Mezclado y bombeo del mortero de inyección",
+   "texto": "Mezclado y bombeo del mortero de inyección",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.4.1",
+   "texto": "El mortero de inyección debe mezclarse en un equipo capaz de efectuar un mezclado y agitación mecánica continua que produzca una distribución uniforme de los materiales. El mortero debe tamizarse y bombearse de tal manera que se llenen por completo los ductos.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.4.2",
+   "texto": "La temperatura de los elementos en el momento de inyección del mortero debe estar por encima de 2ºC y debe mantenerse por encima de esta temperatura hasta que los cubos de 50 mm fabricados con el mismo mortero de inyección y curados en la obra logren una resistencia mínima a la compresión de 5,5 MPa.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.18.4.3",
+   "texto": "La temperatura del mortero de inyección no debe ser superior a 32 ºC durante el mezclado y el bombeo.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.19",
+   "epigrafe": "Protección Del Acero De Preesforzado",
+   "texto": "Las operaciones de soldadura o calentamiento en las proximidades de tendones de preesforzado deben realizarse de manera tal que el acero de preesforzado no quede expuesto a temperaturas excesivas, chispas de soldadura o descargas eléctricas.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.20",
+   "epigrafe": "Aplicación Y Medición De La Fuerza De Preesforzado",
+   "texto": "APLICACIÓN Y MEDICIÓN DE LA FUERZA DE PREESFORZADO",
+   "pagina": 171
+  },
+  {
+   "numero": "18.20.1",
+   "texto": "La fuerza de preesforzado debe determinarse por medio de los dos métodos siguientes: (a) Medición de la elongación del acero. La elongación requerida debe determinarse a partir de las curvas promedio carga – elongación para el acero de preesforzado usado. (b) Medición de la fuerza del gato en un manómetro calibrado o celda de carga o por medio del uso de un dinamómetro calibrado.\n\n Debe investigarse y corregirse la causa de cualquier diferencia en las mediciones de la fuerza que se obtengan al aplicar los métodos (a) y (b) que exceda del 5% en los elementos pretensados o de un 7% para las construcciones postensadas.",
+   "pagina": 171
+  },
+  {
+   "numero": "18.20.2",
+   "texto": "Cuando la transferencia de fuerza desde los extremos del banco de pretensado se efectúe cortando el acero de preesforzado con soplete, los puntos de corte y la secuencia de cortado deben establecerse previamente con el objeto de evitar esfuerzos temporales no deseados.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.20.3",
+   "texto": "Los tramos largos de cables pretensados expuestos deben cortarse lo más cerca posible del elemento para reducir al mínimo los impactos en el concreto.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.20.4",
+   "texto": "La pérdida total de presfuerzo debida al acero de preesforzado roto que no es reemplazado no debe exceder del 2% del presfuerzo total.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.21",
+   "epigrafe": "Anclajes Y Conectores Para Postensado",
+   "texto": "ANCLAJES Y CONECTORES PARA POSTENSADO",
+   "pagina": 172
+  },
+  {
+   "numero": "18.21.1",
+   "texto": "Los anclajes y conectores para tendones adheridos y no adheridos deben desarrollar al menos el 95% de la resistencia a la rotura especificada para el acero de preesforzado, cuando se prueben bajo condiciones de no adherencia, sin que excedan la deformación prevista. Para los tendones adheridos, los anclajes y conectores deben ser colocados de manera que la resistencia a la rotura especificada para el acero de preesforzado se desarrolle al 100% en las secciones críticas, después que el acero de preesforzado esté adherido al elemento.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.21.2",
+   "texto": "Los conectores deben colocarse en las zonas aprobadas por el ingeniero y ser alojados en cajas que tengan dimensiones suficientes para permitir los movimientos necesarios.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.21.3",
+   "texto": "En el caso de elementos no adheridos sometidos a cargas repetitivas, debe prestarse atención especial a la posibilidad de fatiga en los anclajes y conectores.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.21.4",
+   "texto": "Los anclajes, conectores y dispositivos auxiliares de anclaje deben estar protegidos permanentemente contra la corrosión.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.22",
+   "epigrafe": "Postensado Externo",
+   "texto": "POSTENSADO EXTERNO",
+   "pagina": 172
+  },
+  {
+   "numero": "18.22.1",
+   "texto": "Se permite que los tendones de postensado sean externos a cualquier sección de un elemento. Para evaluar los efectos de las fuerzas de los tendones externos en la estructura de concreto, se deben usar los métodos de diseño por resistencia y condiciones de servicio indicados en esta Norma.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.22.2",
+   "texto": "Al calcular la resistencia a flexión, se deben considerar los tendones externos como tendones no adheridos, a menos que se tomen las precauciones para adherir efectivamente los tendones externos a la sección de concreto en toda su longitud.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.22.3",
+   "texto": "Los tendones externos deben acoplarse al elemento de concreto de manera tal que se mantenga la excentricidad deseada entre los tendones y el centroide del concreto para todo el rango de deflexiones previstas del elemento.",
+   "pagina": 172
+  },
+  {
+   "numero": "18.22.4",
+   "texto": "Los tendones externos y las regiones de anclaje deben estar protegidos contra la corrosión y los detalles del sistema de protección deben estar indicados en los planos o en las especificaciones del proyecto.",
+   "pagina": 172
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c18-preesforzado",
+   "titulo": "E.060 · Cap. 18 · Concreto preesforzado",
+   "descripcion": "Clases U y T, esfuerzos admisibles, pérdidas y fricción, fps, refuerzo adherido, zonas de anclaje, ductos y mortero de inyección.",
+   "acceso": "free",
+   "orden": 118,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Clases de elementos preesforzados a flexión (servicio)",
+      "columnas": [
+       "Esfuerzo en la fibra traccionada ft"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Clase U",
+        "valores": [
+         "ft ≤ 0,62 √f′c"
+        ]
+       },
+       {
+        "etiqueta": "Clase T",
+        "valores": [
+         "0,62 √f′c < ft ≤ 1,0 √f′c"
+        ]
+       },
+       {
+        "etiqueta": "Losas preesforzadas en dos direcciones",
+        "valores": [
+         "Clase U con ft ≤ 0,50 √f′c"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "18.3.3",
+       "extracto": "(a) Clase U: ft ≤ 0,62 √f’c (b) Clase T: 0,62 √f’c < ft ≤ 1,0 √f’c Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como Clase U, con ft ≤ 0,50 √f’c."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Elemento preesforzado de f′c = {FC} MPa. ¿Esfuerzo de tracción máximo en servicio para ser Clase U (MPa)?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         28,
+         35,
+         42
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.62*sqrt(FC)",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa"
+     },
+     "citas": [
+      {
+       "articulo": "18.3.3",
+       "extracto": "(a) Clase U: ft ≤ 0,62 √f’c"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Esfuerzos admisibles en el concreto inmediatamente después de la transferencia",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Compresión en la fibra extrema",
+        "valores": [
+         "0,60 f′ci"
+        ]
+       },
+       {
+        "etiqueta": "Tracción en la fibra extrema (general)",
+        "valores": [
+         "0,25 √f′ci"
+        ]
+       },
+       {
+        "etiqueta": "Tracción en extremos de elementos simplemente apoyados",
+        "valores": [
+         "0,50 √f′ci"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "18.4.1",
+       "extracto": "(a) Esfuerzo en la fibra extrema en compresión… 0,60 f’ci (b) Esfuerzo en la fibra extrema en tracción, salvo lo permitido en (c)… 0,25 √f’ci (c) …en los extremos de elementos simplemente apoyados… 0,50 √f’ci"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Concreto con f′ci = {F} MPa al transferir. ¿Compresión admisible en la fibra extrema (MPa)?",
+      "variables": {
+       "F": {
+        "etiqueta": "f′ci",
+        "valores": [
+         25,
+         28,
+         30,
+         35
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.6*F",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa"
+     },
+     "citas": [
+      {
+       "articulo": "18.4.1",
+       "extracto": "(a) Esfuerzo en la fibra extrema en compresión… 0,60 f’ci"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué se hace si la tracción en la transferencia excede los límites de 18.4.1?",
+      "respuesta": "Se coloca refuerzo adherido adicional en la zona traccionada para la fuerza total de tracción (sección no fisurada), con un esfuerzo admisible de 0,6 fy sin pasar de 210 MPa."
+     },
+     "citas": [
+      {
+       "articulo": "18.4.1",
+       "extracto": "…deberá colocarse refuerzo adicional adherido (no preesforzado o preesforzado) en la zona de tracción, para resistir la fuerza total de tracción en el concreto… El refuerzo adicional se determinará sobre la base de un esfuerzo admisible de 0,6 fy, sin exceder de 210 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Compresión admisible en servicio (después de pérdidas)",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Preesfuerzo + cargas sostenidas",
+        "valores": [
+         "0,45 f′c"
+        ]
+       },
+       {
+        "etiqueta": "Preesfuerzo + carga total",
+        "valores": [
+         "0,60 f′c"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "18.4.2",
+       "extracto": "(a) Esfuerzo en la fibra extrema en compresión debido al preesforzado y a las cargas sostenidas en el tiempo… 0,45 f’c (b) …debida al preesforzado y al total de las cargas… 0,60 f’c"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Esfuerzos admisibles en el acero de preesforzado",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Fuerza del gato",
+        "valores": [
+         "0,94 fpy, sin pasar de 0,80 fpu"
+        ]
+       },
+       {
+        "etiqueta": "Inmediatamente después de la transferencia",
+        "valores": [
+         "0,82 fpy, sin pasar de 0,74 fpu"
+        ]
+       },
+       {
+        "etiqueta": "Postensado, en anclajes y acoples tras la transferencia",
+        "valores": [
+         "0,70 fpu"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "18.5.1",
+       "extracto": "(a) Debido a la fuerza del gato de preesforzado… 0,94 fpy pero no mayor que el mínimo entre 0,80 fpu… (b) Inmediatamente después de la transferencia del preesfuerzo… 0,82 fpy pero no mayor que 0,74 fpu (c) Tendones de postensado, en anclajes y acoples… 0,70 fpu"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Torón de baja relajación con fpu = 1860 MPa y fpy = 0,90 fpu. ¿Esfuerzo máximo por la fuerza del gato (MPa)?",
+      "variables": {
+       "K": {
+        "etiqueta": "fpu",
+        "valores": [
+         1860
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.8*K",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa",
+      "explicacion": "0,94 × 0,90 × 1860 = 1574 MPa > 0,80 × 1860 = 1488 MPa: manda 0,80 fpu."
+     },
+     "citas": [
+      {
+       "articulo": "18.5.1",
+       "extracto": "(a) Debido a la fuerza del gato de preesforzado… 0,94 fpy pero no mayor que el mínimo entre 0,80 fpu…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué pérdidas de preesfuerzo deben considerarse para obtener fse?",
+      "respuesta": "Asentamiento del anclaje, acortamiento elástico, flujo plástico, retracción, relajación del acero y, en postensado, fricción por curvatura intencional o accidental."
+     },
+     "citas": [
+      {
+       "articulo": "18.6.1",
+       "extracto": "(a) Asentamiento del anclaje durante la transferencia. (b) Acortamiento elástico del concreto. (c) Flujo plástico del concreto. (d) Retracción del concreto. (e) Relajación del esfuerzo en el acero de preesforzado. (f) Pérdidas por fricción…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se calcula la fuerza en un tendón postensado a una distancia ℓpx del gato?",
+      "respuesta": "Ppx = Ppj e^−(K ℓpx + μp αpx). Si K ℓpx + μp αpx ≤ 0,3, se puede usar Ppx = Ppj / (1 + K ℓpx + μp αpx), con ℓpx en metros."
+     },
+     "citas": [
+      {
+       "articulo": "18.6.2.1",
+       "extracto": "Ppx = Ppj e^−(K ℓpx + μp αpx) (18-1) Cuando (K ℓpx + μp αpx) no es mayor que 0,3; Ppx puede calcularse mediante: Ppx = Ppj (1 + K ℓpx + μp αpx)^−1 (18-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Tendón con Ppj = {P} kN, K = 0,002 /m, μp = 0,20, ℓpx = {L} m y αpx = {A} rad. ¿Fuerza Ppx por la ec. 18-2 (kN)?",
+      "variables": {
+       "P": {
+        "etiqueta": "Ppj",
+        "valores": [
+         1000,
+         1500
+        ],
+        "unidad": "kN"
+       },
+       "L": {
+        "etiqueta": "ℓpx",
+        "valores": [
+         10,
+         20
+        ],
+        "unidad": "m"
+       },
+       "A": {
+        "etiqueta": "αpx",
+        "valores": [
+         0.1,
+         0.2
+        ],
+        "unidad": "rad"
+       }
+      },
+      "formula": "P/(1+0.002*L+0.2*A)",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN",
+      "explicacion": "K ℓpx + μp αpx ≤ 0,3 en todos estos casos, así que vale la ecuación aproximada."
+     },
+     "citas": [
+      {
+       "articulo": "18.6.2.1",
+       "extracto": "Ppx = Ppj (1 + K ℓpx + μp αpx)^−1 (18-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 18.1 · Coeficientes de fricción usuales",
+      "columnas": [
+       "K (1/m)",
+       "μp"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Torones de 7 alambres en ducto metálico inyectado",
+        "valores": [
+         "0,0016–0,0066",
+         "0,15–0,25"
+        ]
+       },
+       {
+        "etiqueta": "Barras de alta resistencia en ducto metálico",
+        "valores": [
+         "0,0003–0,0020",
+         "0,08–0,30"
+        ]
+       },
+       {
+        "etiqueta": "No adheridos preengrasados",
+        "valores": [
+         "0,0010–0,0066",
+         "0,05–0,15"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 1
+      },
+      "explicacion": "Son solo una guía: los valores de K y μp usados deben anotarse en los planos (18.6.2.3)."
+     },
+     "citas": [
+      {
+       "articulo": "18.6.2.2",
+       "extracto": "En la Tabla 18.1 se muestran rangos de valores comunes para estos coeficientes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué valor aproximado de fps se usa con tendones adheridos?",
+      "respuesta": "fps = fpu {1 − (γp/β1)[ρp fpu/f′c + (d/dp)(ω − ω′)]}, válido si fse ≥ 0,5 fpu. γp = 0,55, 0,40 o 0,28 según fpy/fpu sea 0,80–0,85, 0,85–0,90 o mayor que 0,90."
+     },
+     "citas": [
+      {
+       "articulo": "18.7.2",
+       "extracto": "fps = fpu (1 − γp/β1 [ρp fpu/f’c + d/dp (ω − ω’)]) (18-3) donde… γp es 0,55 para fpy/fpu entre 0,80 y 0,85; 0,40 para fpy/fpu entre 0,85 y 0,90 y 0,28 para fpy/fpu mayor que 0,90."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga con torones de baja relajación (fpu = 1860 MPa, γp = 0,28), f′c = 28 MPa, sin acero ordinario y ρp = {R}. ¿fps (MPa)?",
+      "variables": {
+       "R": {
+        "etiqueta": "ρp",
+        "valores": [
+         0.002,
+         0.003,
+         0.004,
+         0.005
+        ]
+       }
+      },
+      "formula": "1860*(1-0.28/0.85*R*1860/28)",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa",
+      "explicacion": "Con f′c = 28 MPa, β1 = 0,85."
+     },
+     "citas": [
+      {
+       "articulo": "18.7.2",
+       "extracto": "fps = fpu (1 − γp/β1 [ρp fpu/f’c + d/dp (ω − ω’)]) (18-3)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El refuerzo total de un elemento preesforzado debe desarrollar al menos {{1,2}} veces la carga de fisuración."
+     },
+     "citas": [
+      {
+       "articulo": "18.8.3",
+       "extracto": "La cantidad total de refuerzo preesforzado y no preesforzado, debe ser la necesaria para desarrollar una carga amplificada de por lo menos 1,2 veces la carga de fisuración…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué refuerzo adherido mínimo exigen los elementos con tendones no adheridos?",
+      "respuesta": "As = 0,004 Act, donde Act es el área entre la cara traccionada y el centroide de la sección, repartido cerca de la fibra traccionada e independiente de los esfuerzos de servicio."
+     },
+     "citas": [
+      {
+       "articulo": "18.9.2",
+       "extracto": "…el área mínima del refuerzo adherido debe calcularse mediante As = 0,004 Act (18-6)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga con tendones no adheridos y Act = {A} mm². ¿Refuerzo adherido mínimo (mm²)?",
+      "variables": {
+       "A": {
+        "etiqueta": "Act",
+        "valores": [
+         60000,
+         90000,
+         120000
+        ],
+        "unidad": "mm²"
+       }
+      },
+      "formula": "0.004*A",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm²"
+     },
+     "citas": [
+      {
+       "articulo": "18.9.2",
+       "extracto": "As = 0,004 Act (18-6)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué refuerzo adherido llevan las losas postensadas sobre las columnas?",
+      "respuesta": "As = 0,00075 Acf en la parte superior, en cada dirección, prolongado al menos ℓn/6 a cada lado del apoyo."
+     },
+     "citas": [
+      {
+       "articulo": "18.9.3.3",
+       "extracto": "En las zonas de momento negativo sobre las columnas de apoyo, el área mínima del refuerzo adherido, As, en la parte superior de la losa en cada dirección, debe calcularse mediante: As = 0,00075 Acf"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En losas preesforzadas, los tendones con carga uniforme no se separan más de 8 veces el espesor ni de {{1,5 m}}."
+     },
+     "citas": [
+      {
+       "articulo": "18.12.4",
+       "extracto": "…el espaciamiento de los tendones o grupos de tendones en una dirección no debe exceder el menor de 8 veces el espesor de la losa ni 1,5 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Un elemento preesforzado con fpc menor de {{1,6 MPa}} debe llevar el refuerzo mínimo de columnas (7.10 y 10.9.1)."
+     },
+     "citas": [
+      {
+       "articulo": "18.11.2.1",
+       "extracto": "Los elementos con un esfuerzo promedio de compresión en el concreto debido solamente a la fuerza de preesforzado, fpc, menor de 1,6 MPa deben contar con un refuerzo mínimo de acuerdo con 7.10, 10.9.1…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿En qué dos sectores se divide la zona de anclaje de un tendón postensado?",
+      "respuesta": "La zona local, el prisma de concreto que rodea directamente al dispositivo de anclaje, y la zona general, que la incluye. Ambas se diseñan con la fuerza amplificada Ppu."
+     },
+     "citas": [
+      {
+       "articulo": "18.13.1",
+       "extracto": "Se debe considerar que la zona de anclaje se compone de dos sectores: La zona general es la zona de anclaje tal como se define en 2.2 e incluye la zona local."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Ductos para tendones inyectados",
+      "columnas": [
+       "Requisito"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Un alambre, torón o barra",
+        "valores": [
+         "Diámetro interior ≥ diámetro del acero + 6 mm"
+        ]
+       },
+       {
+        "etiqueta": "Tendones agrupados",
+        "valores": [
+         "Área interior ≥ 2 veces el área del acero"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "18.17.3",
+       "extracto": "Los ductos inyectados para alambres, torones o barras agrupados deben tener un área transversal interior al menos igual a dos veces el área transversal del acero de preesforzado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Mortero de inyección",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Relación agua/cemento",
+        "valores": [
+         "≤ 0,45"
+        ]
+       },
+       {
+        "etiqueta": "Temperatura del mortero al mezclar y bombear",
+        "valores": [
+         "≤ 32 °C"
+        ]
+       },
+       {
+        "etiqueta": "Temperatura del elemento al inyectar",
+        "valores": [
+         "> 2 °C"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "18.18.3.3",
+       "extracto": "La relación agua cemento no debe exceder de 0,45 en peso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "La pérdida total de preesfuerzo por acero roto no reemplazado no debe exceder el {{2 %}}."
+     },
+     "citas": [
+      {
+       "articulo": "18.20.4",
+       "extracto": "La pérdida total de presfuerzo debida al acero de preesforzado roto que no es reemplazado no debe exceder del 2% del presfuerzo total."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Los anclajes y conectores de postensado deben desarrollar al menos el {{95 %}} de la resistencia a la rotura del acero."
+     },
+     "citas": [
+      {
+       "articulo": "18.21.1",
+       "extracto": "Los anclajes y conectores para tendones adheridos y no adheridos deben desarrollar al menos el 95% de la resistencia a la rotura especificada para el acero de preesforzado…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se considera un tendón de postensado externo al calcular la resistencia a flexión?",
+      "respuesta": "Como no adherido, salvo que se tomen precauciones para adherirlo efectivamente al concreto en toda su longitud."
+     },
+     "citas": [
+      {
+       "articulo": "18.22.2",
+       "extracto": "Al calcular la resistencia a flexión, se deben considerar los tendones externos como tendones no adheridos, a menos que se tomen las precauciones para adherir efectivamente los tendones externos…"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

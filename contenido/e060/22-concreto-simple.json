@@ -1,0 +1,789 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "22.1",
+   "epigrafe": "Alcance",
+   "texto": "ALCANCE",
+   "pagina": 211
+  },
+  {
+   "numero": "22.1.1",
+   "texto": "Este Capítulo proporciona los requisitos mínimos para el diseño y construcción de elementos de concreto simple estructural, vaciados en sitio o prefabricados.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.1.2",
+   "texto": "El diseño y construcción de losas apoyadas en el terreno, como aceras o losas sobre el terreno, no está controlado por esta Norma, a menos que ellas transmitan cargas verticales o fuerzas laterales desde otras partes de la estructura al suelo.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.1.3",
+   "texto": "En estructuras especiales, como arcos, estructuras subterráneas para servicios públicos, muros de gravedad, y muros de protección, las disposiciones de este capítulo deben controlar cuando sean aplicables.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.2",
+   "epigrafe": "Limitaciones",
+   "texto": "LIMITACIONES",
+   "pagina": 211
+  },
+  {
+   "numero": "22.2.1",
+   "texto": "Las disposiciones de este capítulo deben aplicarse al diseño de elementos de concreto estructural simple, es decir aquellos sin armadura de refuerzo o con menos refuerzo que el mínimo especificado para concreto reforzado.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.2.2",
+   "texto": "El uso del concreto simple estructural debe limitarse a (a), (b) o (c): (a) Elementos que están apoyados de manera continua sobre el suelo o que están apoyados sobre otros elementos estructurales capaces de proporcionarles un apoyo vertical continuo;\n (b) Elementos en los cuales el efecto de arco genera compresión bajo todas las condiciones de carga;\n (c) Muros y pedestales. Véanse 22.6 y 22.8\n No está permitido el uso de columnas de concreto estructural simple.\n No está permitido el empleo de concreto simple en elementos estructurales sometidos a solicitaciones sísmicas que hayan sido determinadas en base a la capacidad de la estructura de disipar energía.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.2.3",
+   "texto": "Este capítulo no controla el diseño e instalación de pilas y pilotes embebidos en el terreno que se han construido contra el suelo.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.2.4",
+   "epigrafe": "Resistencia mínima",
+   "texto": "La resistencia especificada del concreto simple para ser usado con fines estructurales medida a los 28 días no debe ser menor de 14 MPa. Todos los materiales que se empleen para la fabricación del concreto simple (cemento, agregados, agua, aditivos, etc.) deberán cumplir los mismos requisitos que para concreto armado. Esta exigencia también será aplicable a la dosificación, ensayo de probetas cilíndricas, encofrados, colocación, curado, evaluación y aceptación del concreto.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.3",
+   "epigrafe": "Juntas",
+   "texto": "JUNTAS",
+   "pagina": 211
+  },
+  {
+   "numero": "22.3.1",
+   "texto": "Deben proporcionarse juntas de contracción o aislamiento para dividir los elementos de concreto simple estructural en elementos discontinuos en flexión. El tamaño de cada elemento debe limitarse para controlar el desarrollo de esfuerzos internos excesivos dentro de cada elemento, causados por la restricción de los movimientos debidos a los efectos de flujo plástico, retracción y cambios de temperatura.",
+   "pagina": 211
+  },
+  {
+   "numero": "22.3.2",
+   "texto": "En la determinación del número y ubicación de las juntas de contracción o aislamiento debe prestarse atención a: influencia de las condiciones climáticas; selección y dosificación de materiales; mezclado, colocación y curado del concreto; grado de restricción al movimiento; esfuerzos debidos a las cargas a las cuales está sometido el elemento; y técnicas de construcción.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4",
+   "epigrafe": "Método De Diseño",
+   "texto": "MÉTODO DE DISEÑO",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.1",
+   "texto": "Los elementos de concreto simple estructural deben diseñarse para tener una adecuada resistencia, de acuerdo con las disposiciones de esta Norma, usando los factores de amplificación de las cargas y las resistencias de diseño.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.2",
+   "texto": "Las resistencias requeridas se determinarán de acuerdo con lo especificado en 9.2. El factor de reducción de resistencia será de 0,65 como se indica en 9.3.2.9.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.3",
+   "texto": "Cuando la resistencia requerida excede a la resistencia de diseño, debe proporcionarse refuerzo y el elemento debe diseñarse como uno de concreto armado de acuerdo con los requisitos pertinentes de esta Norma.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.4",
+   "texto": "El diseño por resistencia de elementos de concreto simple estructural para flexión y cargas axiales debe basarse en relaciones esfuerzo-deformación lineales, tanto en tracción como en compresión.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.5",
+   "texto": "En el diseño de elementos de concreto estructural simple, se puede considerar la resistencia a tracción del concreto cuando se han seguido las disposiciones de 22.3.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.6",
+   "texto": "No se debe asignar resistencia al refuerzo de acero que pudiera estar presente.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.7",
+   "texto": "La tracción no debe transmitirse a través de los bordes exteriores, juntas de construcción, juntas de contracción, o juntas de aislamiento de un elemento individual de concreto simple. No se debe suponer continuidad a la flexión debida a tracción entre elementos adyacentes de concreto simple estructural.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.4.8",
+   "texto": "Al calcular la resistencia a flexión, flexión y carga axial combinada, y cortante, debe considerarse en el diseño la sección completa de un elemento, excepto para el concreto vaciado contra el suelo en donde la altura o peralte del elemento deberá tomarse 50 mm menor que la dimensión real.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.5",
+   "epigrafe": "Diseño Por Resistencia",
+   "texto": "DISEÑO POR RESISTENCIA",
+   "pagina": 212
+  },
+  {
+   "numero": "22.5.1",
+   "texto": "El diseño de secciones transversales sometidas a flexión debe basarse en la siguiente ecuación:\n φ Mn ≥ Mu (22-1)\n donde:\n 0,42 Mn f c Sm ′ = (22-2)\n si controla la tracción, y\n 0,85 Mn f cSm ′ = (22-3)\n si controla la compresión, donde Sm es el módulo de sección correspondiente.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.5.2",
+   "texto": "El diseño de secciones transversales sometidas a compresión debe basarse en la siguiente ecuación:\n Pn Pu φ ≥ (22-4)\n donde Pn se calcula como:\n\n 1\n 2\n 0,60 1 32\n c Pn f c A h ′ = −\n [ ]\n\n [ ]\n ( ) ( ) (22-5)\n donde A1 es el área cargada.",
+   "pagina": 212
+  },
+  {
+   "numero": "22.5.3",
+   "texto": "Los elementos sometidos a una combinación de flexión y carga axial de compresión deben diseñarse de manera que en la cara de compresión:\n 1 Pu Mu\n Pn Mn + ≤ φ φ (22-6)\n y en la cara de tracción:\n 0,42 Mu Pu f c Sm Ag\n ′ − ≤ φ (22-7)",
+   "pagina": 213
+  },
+  {
+   "numero": "22.5.4",
+   "texto": "El diseño de secciones transversales rectangulares sometidas a cortante debe basarse en:\n Vn Vu φ ≥ (22-8)\n donde Vn se calcula como:\n 0,11 w Vn f c b h ′ = (22-9)\n para la acción como viga, y como:\n 2 0,11 1 o Vn f c b h ′ = +\n β ( ) ( ) (22-10)\n para la acción en dos direcciones, pero no mayor que 0,22 o b h f c′ . En la ecuación\n (22-10), β corresponde a la relación de lado largo a lado corto de la carga concentrada o del área de la reacción.",
+   "pagina": 213
+  },
+  {
+   "numero": "22.5.5",
+   "texto": "El diseño de superficies de apoyo sometidas a compresión debe basarse en:\n Bn Bu φ ≥ (22-11) donde Bu es la carga de aplastamiento amplificada y Bn es la resistencia nominal al aplastamiento del área cargada A1 , calculada como:\n 1 0.85 Bn f c A ′ = (22-12)\n excepto cuando la superficie de apoyo es más ancha en todos los lados que el área\n cargada, caso en el cual Bn debe multiplicarse por 2\n 1 A\n A\n , pero no por más de 2.",
+   "pagina": 213
+  },
+  {
+   "numero": "22.6",
+   "epigrafe": "Muros",
+   "texto": "MUROS",
+   "pagina": 213
+  },
+  {
+   "numero": "22.6.1",
+   "texto": "Los muros de concreto simple estructural deben estar apoyados de manera continua en el terreno, en zapatas, en muros de cimentación, en vigas de cimentación, o en otros elementos estructurales capaces de proporcionar un apoyo vertical continuo.",
+   "pagina": 213
+  },
+  {
+   "numero": "22.6.2",
+   "texto": "Los muros de concreto simple estructural deben diseñarse para las cargas verticales, laterales o de otro tipo a las cuales estén sometidos.",
+   "pagina": 213
+  },
+  {
+   "numero": "22.6.3",
+   "texto": "Los muros de concreto simple estructural deben diseñarse para una excentricidad correspondiente al momento máximo que puede acompañar a la carga axial, pero no menor de 0,10 h. Si la resultante de todas las cargas amplificadas se ubica dentro del tercio central del espesor total del muro, el diseño debe realizarse de acuerdo con 22.5.3 ó 22.6.5. En caso contrario, los muros deben diseñarse de acuerdo con 22.5.3.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.4",
+   "texto": "El diseño por cortante debe realizarse de acuerdo con 22.5.4.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.5",
+   "epigrafe": "Método empírico de diseño de muros",
+   "texto": "Método empírico de diseño de muros",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.5.1",
+   "texto": "Los muros de concreto simple estructural de sección rectangular sólida se pueden diseñar por medio de la ecuación (22-13), siempre que la resultante de todas las cargas amplificadas se ubique dentro del tercio central del espesor total del muro.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.5.2",
+   "texto": "El diseño de muros sometidos a cargas axiales de compresión debe basarse en:\n Pn Pu φ ≥ (22-13)\n donde Pn se calcula como:\n 2 0,45 1 32\n c Pn f c Ag\n h ′ = − [ ] ( ) ( ) [ ] (22-14)",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.6",
+   "epigrafe": "Limitaciones",
+   "texto": "Limitaciones",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.6.1",
+   "texto": "A menos que se demuestre mediante un análisis detallado, la longitud horizontal de un muro considerada como efectiva para cada carga vertical concentrada no debe exceder la distancia entre los ejes de las cargas, ni el ancho de la zona de aplastamiento más dos veces el espesor del muro a cada lado.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.6.2",
+   "texto": "Excepto en lo establecido en 22.6.6.3, el espesor de muros de carga no debe ser menor que un 1/24 de la longitud o altura no apoyada, la que sea menor, ni que 150 mm.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.6.3",
+   "texto": "El espesor de muros exteriores de sótano y de cimentación no debe ser menor que 200 mm.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.6.4",
+   "texto": "Los muros deben estar arriostrados contra el desplazamiento lateral. Véanse 22.3 y 22.4.7.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.6.6.5",
+   "texto": "Se deben proporcionar no menos de dos barras de diámetro 5/8” alrededor de todas las aberturas de ventanas y puertas. Dichas barras deben extenderse al menos 600 mm más allá de las esquinas de las aberturas.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.7",
+   "epigrafe": "Zapatas",
+   "texto": "ZAPATAS",
+   "pagina": 214
+  },
+  {
+   "numero": "22.7.1",
+   "texto": "Las zapatas de concreto simple estructural deben diseñarse para las cargas amplificadas y las reacciones inducidas, de acuerdo con los requisitos de diseño apropiados de esta Norma y según lo indicado en 22.7.2 a la 22.7.8.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.7.2",
+   "texto": "El área de la base de la zapata debe determinarse a partir de las fuerzas y momentos en servicio transmitidos por la zapata al suelo y de las presiones admisibles del suelo determinadas de acuerdo con los principios de la mecánica de suelos.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.7.3",
+   "texto": "No se permite el uso del concreto simple para zapatas sobre pilotes.",
+   "pagina": 214
+  },
+  {
+   "numero": "22.7.4",
+   "texto": "El espesor de las zapatas de concreto simple estructural no debe ser menor que 300 mm. Véase 22.4.8.",
+   "pagina": 215
+  },
+  {
+   "numero": "22.7.5",
+   "texto": "Los momentos amplificados máximos deben calcularse en:\n (a) En la cara de la columna, pedestal o muro, en zapatas que soporten a estos elementos. (b) A media distancia entre el eje y el borde del muro, en zapatas que soporten un muro de albañilería. (c) A la mitad de la distancia entre el borde de la columna y el borde de la plancha de acero en zapatas que soportan columnas con una plancha base de acero.",
+   "pagina": 215
+  },
+  {
+   "numero": "22.7.6",
+   "epigrafe": "Cortante en zapatas de concreto simple",
+   "texto": "Cortante en zapatas de concreto simple",
+   "pagina": 215
+  },
+  {
+   "numero": "22.7.6.1",
+   "texto": "La fuerza cortante Vu debe calcularse de acuerdo con 22.7.6.2, con la sección crítica ubicada en la cara de la columna, pedestal o muro en zapatas que soporten estos elementos. En zapatas que soporten columnas con una plancha base de acero, la sección crítica debe ubicarse de acuerdo con lo definido en 22.7.5(c).",
+   "pagina": 215
+  },
+  {
+   "numero": "22.7.6.2",
+   "texto": "La resistencia de diseño, φVn, de zapatas de concreto simple estructural, en las cercanías de cargas concentradas o reacciones, está controlada por la más restrictiva de las dos condiciones siguientes:\n\n (a) Acción como viga de la zapata, con la sección crítica extendiéndose a través de todo el ancho de la zapata y ubicada a una distancia h del borde de la carga concentrada o área de reacción. Para esta condición, la zapata debe diseñarse de acuerdo con la ecuación (22-9).\n (b) Acción en dos direcciones de la zapata, con la sección crítica perpendicular al plano de la zapata y ubicada de manera que su perímetro bo sea mínimo, pero no necesita estar más cerca que 0,5h del perímetro de la carga concentrada o área de carga. Para esta condición, la zapata debe diseñarse de acuerdo con la ecuación (22-10).",
+   "pagina": 215
+  },
+  {
+   "numero": "22.7.7",
+   "texto": "Para la ubicación de las secciones críticas de momento y cortante, se pueden tratar a las columnas con forma circular o de polígono regular, como elementos cuadrados con la misma área.",
+   "pagina": 215
+  },
+  {
+   "numero": "22.7.8",
+   "texto": "Las cargas de aplastamiento amplificadas, Bu, en el concreto en la superficie de contacto entre elementos soportantes y soportados no debe exceder, a la resistencia de diseño al aplastamiento, Bn, en ninguna de las dos superficies según lo indicado en 22.5.5.",
+   "pagina": 215
+  },
+  {
+   "numero": "22.8",
+   "epigrafe": "Pedestales",
+   "texto": "PEDESTALES",
+   "pagina": 215
+  },
+  {
+   "numero": "22.8.1",
+   "texto": "Los pedestales de concreto simple deben diseñarse para las cargas verticales, laterales o de otro tipo a las cuales estén sometidos.",
+   "pagina": 215
+  },
+  {
+   "numero": "22.8.2",
+   "texto": "La relación entre la altura no apoyada y la menor dimensión lateral de pedestales de concreto simple no debe exceder de 3. Si en alguna de las caras la dimensión es variable se tomará el promedio.",
+   "pagina": 215
+  },
+  {
+   "numero": "22.8.3",
+   "texto": "La carga axial Pu, aplicada a pedestales de concreto simple no debe exceder la resistencia de diseño al aplastamiento, φBn, dada en 22.5.5.",
+   "pagina": 215
+  },
+  {
+   "numero": "22.9",
+   "epigrafe": "Elementos Prefabricados",
+   "texto": "ELEMENTOS PREFABRICADOS",
+   "pagina": 216
+  },
+  {
+   "numero": "22.9.1",
+   "texto": "El diseño de elementos prefabricados de concreto simple debe considerar todas las condiciones de carga desde la fabricación inicial hasta completar la estructura, incluyendo el desencofrado, almacenamiento, transporte y montaje.",
+   "pagina": 216
+  },
+  {
+   "numero": "22.9.2",
+   "texto": "Las limitaciones de 22.2 se aplican a los elementos prefabricados de concreto simple no sólo en su condición final sino también durante la fabricación, transporte y montaje.",
+   "pagina": 216
+  },
+  {
+   "numero": "22.9.3",
+   "texto": "Los elementos prefabricados deben ser conectados de manera segura para que transfieran todas las fuerzas laterales a un sistema estructural capaz de resistir dichas fuerzas.",
+   "pagina": 216
+  },
+  {
+   "numero": "22.9.4",
+   "texto": "Los elementos prefabricados deben estar adecuadamente arriostrados y apoyados durante el montaje para asegurar el adecuado alineamiento y la integridad estructural hasta que se completen las conexiones definitivas.",
+   "pagina": 216
+  },
+  {
+   "numero": "22.10",
+   "epigrafe": "Concreto Ciclopeo",
+   "texto": "CONCRETO CICLOPEO",
+   "pagina": 216
+  },
+  {
+   "numero": "22.10.1",
+   "epigrafe": "Definición",
+   "texto": "Se denomina concreto ciclópeo a aquel concreto simple que es colocado conjuntamente con piedra desplazadora y que tiene las siguientes características:\n (a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa.\n (b) La piedra desplazadora no excederá del 30% del volumen total de concreto ciclópeo y será colocada de manera homogénea, debiendo quedar todos sus bordes embebidos en el concreto.\n (c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm.",
+   "pagina": 216
+  },
+  {
+   "numero": "22.10.2",
+   "epigrafe": "Limitaciones",
+   "texto": "Limitaciones",
+   "pagina": 216
+  },
+  {
+   "numero": "22.10.2.1",
+   "texto": "El uso de este concreto estará limitado a cimientos corridos, sobrecimientos, muros de contención de gravedad y falsas zapatas.",
+   "pagina": 216
+  },
+  {
+   "numero": "22.10.2.2",
+   "texto": "En elementos en voladizo con una longitud mayor a la mitad de su peralte, será necesario verificar las resistencias en flexión y corte.",
+   "pagina": 216
+  },
+  {
+   "numero": "22.10.2.3",
+   "texto": "En el calculo de las resistencias según 22.5 se utilizará un factor φ = 0,5 y se utilizará, para el diseño, un valor de f’c no mayor a 10 MPa.\n\n ANEXO I\n NORMAS CITADAS\n • NORMAS TÉCNICAS DE EDIFICACIÓN\n\n NTE E.020 – 2006 Cargas\n NTE E.030 – 2006 Diseño Sismorresistente.\n NTE E.070 – 2006 Albañilería\n\n • NORMAS TÉCNICAS PERUANAS (INDECOPI)\n\n NTP 334.009:2005 CEMENTOS. Cemento Portland. Requisitos.\n NTP 334.051:2006 CEMENTOS. Método de ensayo para determinar la resistencia a la compresión de morteros de Cemento Portland usando especímenes cúbicos de 50mm de lado. 4a ed.\n NTP 334.082:2001 CEMENTOS. Cementos Portland adicionados. Especificación de la performance.\n NTP 334.087:2008 CEMENTOS. Adicionales minerales en pastas, morteros y concretos; microsílice. Especificaciones.\n NTP 334.088:2006 CEMENTOS. Aditivos químicos en pastas, morteros y hormigón (concreto). Especificaciones.\n NTP 334.089:1999 CEMENTOS. Aditivos incorporados de aire en pastas, morteros y hormigón (concreto). Especificaciones.\n NTP 334.090:2007 CEMENTOS. Cementos Portland adicionados. Requisitos.\n NTP 334.104:2001 CEMENTOS. Adiciones minerales del hormigón (concreto) puzolana natural cruda o calcinada y ceniza. Especificaciones.\n NTP 334.148:2004 CEMENTOS. Método de ensayo normalizado para la determinación de cloruro de soluble en agua en mortero y concreto.\n NTP 334.156:2006 CEMENTOS. Cemento Portland expansiva. Requisitos.\n NTP 339.186:2008 HORMIGÓN (CONCRETO). Barras con resaltes y lisas de acero de baja aleación para hormigón (concreto) armado. Especificaciones. 2a. ed.\n NTP 341.031:2008 HORMIGÓN (CONCRETO). Barras de acero al carbono con resaltes y lisas para hormigón (concreto) armado. Especificaciones. 3a. ed.\n NTP 341.068:2008 HORMIGÓN (CONCRETO). Alambre de acero con resaltes para refuerzo del hormigón (concreto). Especificaciones. 2a. ed.\n NTP 350.002:2008 HORMIGÓN (CONCRETO). Alambre soldado liso de acero para refuerzo del hormigón (concreto) Especificaciones. 2ª. ed.\n\n NTP 400.037:2002 AGREGADOS. Especificaciones normalizadas para agregados en hormigón (concreto).\n\n • AMERICAN SOCIETY FOR TESTING AND MATERIALS (ASTM)\n\n ASTM A 36M\n “Standard Specification for Carbon Structural Steel”\n ASTM A 53M “Standard Specification for Pipe, Steel, Black and Hot-Dipped, Zinc- Coated Welded and Seamless”\n ASTM A 82 “Standard Specification for Steel Wire, Plain, for concrete Reinforcement\n ASTM A 184M “Standard Specification for Fabricated Welded Deformed Steel Bar Mats\n for Concrete Reinforcement”\n\n ASTM A 242M “Standard Specification for High-Strength Low- Alloy Structural Steel”\n ASTM A 416M “Standard Specification for Steel Strand, Uncoated Seven-Wire for\n Prestressed Concrete”\n ASTM A 421M “Standard Specification for Uncoated Stress-Relieved Steel Wire for\n Prestressed Concrete”\n ASTM A 497M “Standard Specification for Steel Welded Wire Reinforcement Deformed,\n for Concrete”\n ASTM A 500 “Standard Specification for Cold-Formed Welded and Seamless Carbon Steel Structural Tubing in Rounds and Shapes”\n ASTM A 501 “Standard Specification for Hot-Formed Welded and Seamless Carbon Steel Structural Tubing”\n ASTM A 572M “Standard Specification for High-Strength Low- Alloy Columbium-\n Vanadium Structural Steel”\n ASTM A 588M “Standard Specification for High-Strength Structural Steel with 50 ksi [345\n MPa] Minimum Yield Point to 4 in. [100 mm.] Thick”\n ASTM A 706M “Standard Specification for Low-Alloy Steel Deformed and Plain Bars for\n Concrete Reinforcement”\n ASTM A 767M “Standard Specification for Zinc-Coated (Galvanized) Steel Bars for\n Concrete Reinforcement”\n ASTM A 722M “Standard Specification for Uncoated High-Strength Steel Bar for\n Prestressed Concrete”\n ASTM A 775M “Standard Specification for Epoxy-Coated Steel Reinforcing Bars”\n ASTM A 884M “Standard Specification for Epoxy-Coated Steel Wire and Welded Wire\n Reinforcement”\n\n ASTM A 934M “Standard Specification for Epoxy- Coated Prefabricated Steel Reinforcing\n Bars”\n ASTM A 992M “Standard Specification for Structural Steel Shapes”\n ASTM C 31M “Standard Practice for Making and Curing Concrete Test Specimens in the Field”\n ASTM C 33 ”Standard Specification for Concrete Aggregates”\n ASTM C 39M “Test Method for Compressive Strength of Cylindrical Concrete Specimens”,\n ASTM C 42M “Standard Test Method for Obtaining and Testing Drilled Cores and Sawed Beams of Concrete”\n ASTM C 94M\n “Standard Specification for Ready-Mixed Concrete”\n ASTM C 144 “Standard Specification for Aggregate for Masonry Mortar”\n ASTM C 172 “Standard Practice for Sampling Freshly Mixed Concrete”\n ASTM C 192M “Standard Practice for Making and Curing Concrete Test Specimens in\n the Laboratory”\n ASTM C 330 “Standard Specification for Lightweight Aggregates for Structural Concrete”\n ASTM C 496M “Strength of Cylindrical Concrete Specimens”\n ASTM C 567 “Test Method for Determining Density of Structural Lightweight Concrete”\n ASTM C 685M “Standard Specification of Concrete Made by Volumetric Batching and\n Continuous Mixing”\n ASTM C 989 “Standard Specification for Ground Granulated Blast-Furnace Slag for Use in Concrete and Mortars”\n ASTM C 1017M “Standard Specification for Chemical Admixtures for Use in Producing\n Flowing Concrete”\n • AMERICAN WELDING SOCIETY (AWS)\n\n ANSI/AWS D1.4 “Structural Welding Code – Reinforcing Steel”\n\n ANEXO II\n EQUIVALENCIA DE FÓRMULAS EN EL SISTEMA MKS (kgf, cm, kgf/cm2)\n\n 1 KN (kilonewton) ≈ 10 Kgf\n 1 MPa (megapascal) ≈ 10 Kgf/cm2\n f c′ en MPa ≈ 3.19 f c′ Kgf/cm2\n 1 KN/mm ≈ 1000 kgf/cm\n (5-2) f’cr = f’c + 2,33 Ss - 35 (8-2)\n\n 1,5 ( ) 0,136 Ec wc f c′ = (8-3)\n\n 15000 Ec f c′ = (9-12)\n 2 fr f c′ = (9-16)\n ( )\n 14000 0,8\n 36 5β α 0,2\n n\n fm\n fy\n h\n ( ) + ( ) = + − (9-17)\n\n 0,8 14000 36 9β\n n fy\n h\n ( ) + ( ) = + (9-20)\n 2500 38 2,5 s Cc fs ≤ − ( ) ( ) (9-21)\n 2500 30 s\n fs ≤ ( ) ( ) (num. 10-5-1) 2 fr f c′ = (10-3)\n min 0,7 w f c As b d fy\n ′ = (num. 11.1.2) los valores de cf ′ usados en este Capítulo no deben exceder\n de 26,4 Kg/cm2, excepto en lo permitido en 11.1.2.1.\n (11-3) 0,53 w Vc f c b d ′ = (11-4) 0,53 1 140 w Nu Vc f c b d Ag ( ) ′ = + ( ) (11-5) (0,50 176 ) w Vu d Vc f c b d w Mu ′ = + ρ pero no mayor que 0,93 w f c b d ′ (11-7) 0,93 1 35 w Nu Vc f c b d\n Ag ′ = + (11-8) 0,53 1 35 w Nu Vc f c b d Ag ′ = − ( ) ( ) (11-9) 0,16 49 w Vu dp Vc f c b d Mu ′ = + ( ) ( ) (11-10)\n max 0,16 cre w Vi M Vci f c b dp Vd\n M ′ = + + (11-11) ( ) 1,6 cre I M f c fpe fd Yt\n ′ = + − ( ) ( )\n\n No hay necesidad de tomar Vci menor que 0,45 w f c b d ′ (11-12) ( ) 0,93 0,3 w Vcw f c fpc b dp Vp ′ = + +\n\n …que produce un esfuerzo principal de tracción de 1,1 f c′ en el eje central del elemento…\n (num. 11.5.5.3) Donde Vs sobrepasa 1,1 w f c b d ′ , las separaciones máximas dadas en 11.5.5.1 y 11.5.5.2 se deben reducir a la mitad.\n\n (11-13) min 0,2 w b s Av f c\n fyt ′ = pero no debe ser menor que 3,5 w b s\n fyt (11-17) sen Vs Av fyt = α pero no mayor que 0,80 w f c b d ′ (num. 11.5.7.9) En ningún caso se debe considerar Vs mayor que 2,1 w f c b d ′ (num. 11.6.1) (a)\n 2 0,27 cp\n Acp f c\n P ′ φ\n ( ) ( ) (b)\n 2 0,27 1 cp\n cp\n A fpc f c\n P f c ′ φ +\n ′\n ( ) ( ) (c)\n 2 0,27 1 cp\n A Nu cp f c\n P Ag f c ′ φ +\n ′\n ( ) ( ) (num. 11.6.2.2) (a)\n 2 1,1 cp\n cp\n A fc P ′ φ\n ( ) ( ) (b) (c) (11-18)\n 2 2\n 2 2,1 1,7 w w oh\n Vu Tu Ph Vc f c b d A b d\n ′ + ≤φ + ( ) ( ) ( ) ( ) ( ) ( ) (11-19) 2 2,1 1,7\n h\n w w oh\n Vu Tu P Vc f c b d A b d\n ′ + ≤φ + ( ) ( ) ( ) ( ) ( ) ( ) (11-23) ( ) 2 0,2 w b s Av At f c\n fyt ′ + = pero no debe ser menor de 3,5 w b s\n fyt (11-24) min 1,33 , cp h f c A At fyt A P fy s fy\n ′ = −( ) ( ) donde s\n At no debe tomarse menor que 1,75 w b\n fyt (num. 11.7.5) Vn no debe tomarse mayor que el menor de 0,2 f c Ac ′ y 55Ac\n (11-27) 2,6 Vn f c bw d ′ ≤ (11-28) 0,53 Vc f c bw d ′ = (num. 11.9.3.2.1) Para concreto de densidad normal, Vn no debe tomarse mayor que el menor de 0,2 w f c b d ′ ó 55 w b d\n (num. 11.9.3.2.2) Para concreto liviano en todos sus componentes o concreto liviano con arena de peso normal, Vn no debe tomarse mayor\n 2 1,1 1 cp\n cp\n A fpc fc P fc ′ φ +\n ′\n ( ) ( )\n 2 1,1 1 cp\n cp\n A Nu fc P Ag fc ′ φ +\n ′\n ( ) ( ) que el menor de ( ) 0,2 0,07 / w v d f c b d a ′ − ó ( ) 55 19 / w v d b d a − (num. 11.10.4) 2,6 Vn f c Acw ′ ≤ (num. 11.10.5) donde el coeficiente αc es 0,80 para [ ] / 1,5 m m h ≤\n\n ; 0,53 para [ ] / 2,0 m m h ≥ y varia linealmente entre 0,80 y 0,53 para [ ] / m m h entre 1,5 y 2,0.\n (num..10.6) …el valor de Vc obtenido de la ecuación (11-30) se multiplicará\n por el factor (1 ) 0 35 Nu\n Ag − ≥ , donde Nu\n Ag\n debe expresarse en\n Kg/cm2.\n (num. 11.10.7) Donde Vu sea menor que 0,27 f c Acw ′ …\n (num. 11.10.8) Donde Vu sea menor que 0,27 f c Acw ′ … (11-33) 2 0,53 1 o Vc f c b d ′ = +\n β ( ) ( ) (11-34) 0,27 2 s o o\n d Vc f c b d b\n α ′ = + ( ) ( ) (11-35) 1,06 o Vc f c b d ′ = (11-36) ( ) 3,19 0,3 p o Vc f c fpc b d Vp ′ = β + + (num. 11.12.2.2) (b) el valor de f c′utilizado en la ecuación (11-36) no debe tomarse mayor que 5 Kg/cm2.\n (num. 11.12.3.1) Vn debe calcularse con la ecuación (11-2), donde Vc no debe\n tomarse mayor que 0,53 o f c b d ′ …\n (num. 11.12.3.2) Vn no debe considerarse mayor que 1,6 o f c b d ′ (num. 11.12.6.2) … El esfuerzo cortante debido a la fuerza cortante y momento amplificados no debe exceder de 0,53 f c′ en la sección ……\n (num. 12.1.2) los valores de f c′ usados en este Capítulo no deben exceder de 26,4 Kg/cm2.\n\n TABLA 12.1 LONGITUD DE DESARROLLO DE BARRAS EN TRACCIÓN\n\n Condiciones\n Alambres corrugados o barras de 3/4” y\n menores\n Barras de 7/8” y\n mayores\n Espaciamiento libre entre barras o alambres que están siendo empalmados o desarrolladas no menor … ψ ψ λ\n 8,2\n t e fy db f c′\n ( ) ( )\n\n ψ ψ λ\n 6,6\n t e fy db f c′\n ( ) ( ) (12-1)\n λ\n 3,5\n t e s fy db cb Ktr f c\n db\n ΨΨΨ\n + ′\n ( ) ( ) ( ) ( ) (12-2) 105\n Atr fyt Ktr\n s n = (num. 12.3.2) Para las barras corrugadas y alambres corrugados, dc ℓ debe\n tomarse como el mayor entre (0,075 / ) fy f c db ′ y ( ) 0,0044 fy db , donde la constante 0,0044 tiene la unidad de\n cm2/Kg.\n (num. 12.5.2) Para las barras corrugadas, dg ℓ\n debe ser ( ) 0,075 λ / e fy f c db ′ Ψ … (num. 12.7.2) … el factor para refuerzo electrosoldado de alambre debe tomarse como el mayor de:\n\n ( ) 2400 fy\n fy\n − ó 5 db\n s ( ) ( ) (12-3) λ b A fy d\n s f c =\n ′\n ( ) ( ) ( )( ) (12-4)\n 210 70\n fse fps fse d db db − = + ( ) ( ) ( ) ( ) (num. 12.13.1.2) Para estribos de 3/4”, 7/8” y 1” con fyt mayor que 2800 Kg/cm2, un gancho de estribo estándar abrazando una barra longitudinal mas una longitud embebida entre el punto medio de la altura del elemento y el extremo exterior del gancho igual o mayor que\n 0,053 / db fyt f c′\n (num. 12.16.1) La longitud de un empalme por traslape en compresión, dc ℓ , debe ser de 0,071 fy db, para fy igual a 4200 Kg/cm2 o menor, ó (0,013 fy -24) db para fy mayor que 4200 Kg/cm2 , pero no debe ser menor que 300 mm.\n (num. 17.5.3.2) … Vnh no debe tomarse mayor a 5,5 bvd .\n (num..17.5.3.3) … Vnh debe tomarse igual a (18 0,6 ) λ ρv fy bvd + , pero no mayor que 35 bv d …\n (num.17.5.3.4) Donde Vu en la sección bajo consideración excede de φ (3,5 bv d), el diseño por cortante horizontal debe hacerse de acuerdo con 11.7.4.\n (num. 18.3.3) (a) Clase U: 2 ft f c′ ≤ (b) Clase T: 2 3,2 f c ft f c ′ ′ < ≤\n\n Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como clase U, con 1,6 ft fc′ ≤ (num. 18.4.1) (a) Esfuerzo en la fibra extrema\n en compresión … 0,60 f ci′ (b) Esfuerzo en la fibra extrema en tracción,\n salvo lo permitido a (c) … 0,8 f ci′ (c) Esfuerzo en la fibra extrema en tracción en los extremos de elementos simplemente apoyados…1,6 f ci′ (18-4)\n 700 100 fps fse\n p\n f c\n ρ = + + ′ pero fps en la ecuación (18-4) no debe tomarse mayor que fpy ni que fse + 4200\n (18-5)\n 700 300ρ\n f c fps fse\n p\n ′ = + +\n\n Pero fps en la ecuación (18-5) no debe tomarse mayor que fpy ni que fse + 2100.\n\n (num. 18.9.3.1) No se requiere refuerzo adherido en las zonas de momento positivo donde el esfuerzo de tracción es la fibra extrema en tracción de la zona de tracción precomprimida al nivel de cargas de servicio, ft, (después de considerar todas las perdidas de preesforzado), no excede 0,53 f c′.\n (num. 18.9.3.2) En las zonas de momento positivo donde el esfuerzo de tracción calculado en el concreto bajo carga de servicio excede 0,53 f c′ ….\n (num. 18.13.4.1) … El esfuerzo nominal de tracción del refuerzo no adherido presforzado para resistir las fuerzas de tracción en las zonas de anclaje debe estar limitado a 700 fps fse = + en Kg/cm2.\n (num. 19.4.10) … Cuando el esfuerzo membranal principal de tracción sobre el área total de concreto, debido a cargas amplificadas, excede de\n 1,06 f c φ ′, el refuerzo no debe espaciarse a más de tres veces el espesor de la cáscara.\n (num. 21.7.4.1) Para nudos confinados en las cuatro caras: … 5,3 Aj f c′\n\n Para nudos confinados en tres caras o en dos caras opuestas : … 4,0 Aj f c′\n\n Para otros casos: … 3,2 Aj f c′ (num. 21.9.4.3)\n b) O cuando la fuerza cortante Vu excede 0,53Acv f c′\n (num. 21.9.6.5) … Esta disposición podrá limitarse a las secciones de muro en las cuales el esfuerzo en la fibra extrema en tracción, ocasionado por la acción conjunta de Pu y Mu, exceda de\n 2,0 f c′.\n\n (num. 21.9.9.3) Las vigas de acople con una relación de aspecto 2 n h ( )< ( ) con\n una fuerza cortante Vu que exceda de 1,04 Acw f c′…\n (num.. 21.9.9.4) Para cualquier relación de aspecto, Vn no debe suponerse mayor que 2,6 Acw f c′…\n (21-8)\n 2 α 2,6 Vn Av d fy sen Acw f c = ≤ ′ (21-9)\n ( ) 0,53 ρ Vn Acv fy t f c = + ′ (num.. 21.11.7.3) La resistencia nominal al cortante no debe exceder de\n 2,1Acv f c′…\n (22-2) 1,33 Mn f c Sm ′ = (22-7) 1,33 Mu Pu\n Sm Ag f c φ − ≤ ′ (22-9) 0,35 Vn bwh f c = ′ (22-10) 2 0,35 1 0,70 β Vn boh boh f c f c = + ≤ ( ) ′ ′ ( )",
+   "pagina": 216
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c22-concreto-simple",
+   "titulo": "E.060 · Cap. 22 · Concreto simple",
+   "descripcion": "Límites de uso, φ, flexión, compresión y cortante, muros, zapatas, pedestales y concreto ciclópeo.",
+   "acceso": "free",
+   "orden": 122,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿En qué elementos se permite el concreto estructural simple?",
+      "respuesta": "En elementos apoyados de forma continua sobre el suelo u otros elementos, en elementos donde el efecto de arco produce compresión siempre, y en muros y pedestales. No se permiten columnas de concreto simple ni elementos que disipen energía sísmica."
+     },
+     "citas": [
+      {
+       "articulo": "22.2.2",
+       "extracto": "(a) Elementos que están apoyados de manera continua sobre el suelo… (b) Elementos en los cuales el efecto de arco genera compresión bajo todas las condiciones de carga; (c) Muros y pedestales… No está permitido el uso de columnas de concreto estructural simple."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El concreto simple de uso estructural debe tener f′c a los 28 días no menor de {{14 MPa}}."
+     },
+     "citas": [
+      {
+       "articulo": "22.2.4",
+       "extracto": "La resistencia especificada del concreto simple para ser usado con fines estructurales medida a los 28 días no debe ser menor de 14 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El factor de reducción φ para concreto estructural simple es {{0,65}}."
+     },
+     "citas": [
+      {
+       "articulo": "22.4.2",
+       "extracto": "El factor de reducción de resistencia será de 0,65 como se indica en 9.3.2.9."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Por qué el concreto simple necesita juntas de contracción o aislamiento?",
+      "respuesta": "Para dividirlo en elementos discontinuos a flexión y limitar los esfuerzos por la restricción de la retracción, el flujo plástico y la temperatura. Solo así se puede contar con su resistencia a tracción."
+     },
+     "citas": [
+      {
+       "articulo": "22.3.1",
+       "extracto": "Deben proporcionarse juntas de contracción o aislamiento para dividir los elementos de concreto simple estructural en elementos discontinuos en flexión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "En el diseño de concreto simple, ¿qué ocurre con el acero que pudiera tener?",
+      "respuesta": "No se le asigna resistencia, y la tracción no se transmite a través de bordes ni juntas."
+     },
+     "citas": [
+      {
+       "articulo": "22.4.6",
+       "extracto": "No se debe asignar resistencia al refuerzo de acero que pudiera estar presente."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En concreto simple vaciado contra el suelo, el peralte de cálculo se toma {{50 mm}} menor que el real."
+     },
+     "citas": [
+      {
+       "articulo": "22.4.8",
+       "extracto": "…excepto para el concreto vaciado contra el suelo en donde la altura o peralte del elemento deberá tomarse 50 mm menor que la dimensión real."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Resistencia nominal a flexión del concreto simple",
+      "columnas": [
+       "Mn"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Controla la tracción",
+        "valores": [
+         "0,42 √f′c Sm"
+        ]
+       },
+       {
+        "etiqueta": "Controla la compresión",
+        "valores": [
+         "0,85 f′c Sm"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "22.5.1",
+       "extracto": "Mn = 0,42 √f’c Sm (22-2) si controla la tracción, y Mn = 0,85 f’c Sm (22-3) si controla la compresión, donde Sm es el módulo de sección correspondiente."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Cimiento corrido de concreto simple, f′c = {FC} MPa, ancho 1000 mm y peralte de cálculo h = {H} mm. ¿φMn por tracción (kN·m/m)?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         14,
+         17.5,
+         21
+        ],
+        "unidad": "MPa"
+       },
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         400,
+         500,
+         600
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.65*0.42*sqrt(FC)*1000*H^2/6/1000000",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN·m/m",
+      "explicacion": "Sm = b h²/6 y φ = 0,65. Recuerda restar 50 mm si se vacía contra el suelo."
+     },
+     "citas": [
+      {
+       "articulo": "22.5.1",
+       "extracto": "Mn = 0,42 √f’c Sm (22-2) si controla la tracción"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se calcula la resistencia a compresión de un elemento de concreto simple?",
+      "respuesta": "Pn = 0,60 f′c [1 − (ℓc / 32h)²] A1, donde A1 es el área cargada."
+     },
+     "citas": [
+      {
+       "articulo": "22.5.2",
+       "extracto": "Pn = 0,60 f’c [1 − (ℓc / 32h)²] A1 (22-5) donde A1 es el área cargada."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Resistencia nominal a cortante del concreto simple",
+      "columnas": [
+       "Vn"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Acción como viga",
+        "valores": [
+         "0,11 √f′c bw h"
+        ]
+       },
+       {
+        "etiqueta": "Acción en dos direcciones",
+        "valores": [
+         "0,11 (1 + 2/β) √f′c bo h ≤ 0,22 √f′c bo h"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "22.5.4",
+       "extracto": "Vn = 0,11 √f’c bw h (22-9) para la acción como viga, y… para la acción en dos direcciones, pero no mayor que 0,22 √f’c bo h."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Zapata de concreto simple, f′c = {FC} MPa, sección de 1000 mm de ancho y h = {H} mm. ¿φVn como viga (kN)?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         14,
+         17.5,
+         21
+        ],
+        "unidad": "MPa"
+       },
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         300,
+         400,
+         500
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.65*0.11*sqrt(FC)*1000*H/1000",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN",
+      "explicacion": "φ = 0,65."
+     },
+     "citas": [
+      {
+       "articulo": "22.5.4",
+       "extracto": "Vn = 0,11 √f’c bw h (22-9) para la acción como viga"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la resistencia de un muro de concreto simple por el método empírico?",
+      "respuesta": "Pn = 0,45 f′c Ag [1 − (ℓc / 32h)²], con la resultante de cargas dentro del tercio central del espesor y φ = 0,65."
+     },
+     "citas": [
+      {
+       "articulo": "22.6.5.2",
+       "extracto": "Pn = 0,45 f’c Ag [1 − (ℓc / 32h)²] (22-14)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Muro de concreto simple de h = {H} mm, f′c = 14 MPa y altura no apoyada ℓc = {L} mm. ¿φPn por metro (kN/m)?",
+      "variables": {
+       "H": {
+        "etiqueta": "Espesor",
+        "valores": [
+         150,
+         200,
+         250
+        ],
+        "unidad": "mm"
+       },
+       "L": {
+        "etiqueta": "ℓc",
+        "valores": [
+         2400,
+         3000
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.65*0.45*14*H*(1-(L/(32*H))^2)",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN/m",
+      "explicacion": "Por metro, Ag = h × 1000 mm²."
+     },
+     "citas": [
+      {
+       "articulo": "22.6.5.2",
+       "extracto": "Pn = 0,45 f’c Ag [1 − (ℓc / 32h)²] (22-14)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Los muros de concreto simple se diseñan para una excentricidad no menor de {{0,10 h}}."
+     },
+     "citas": [
+      {
+       "articulo": "22.6.3",
+       "extracto": "Los muros de concreto simple estructural deben diseñarse para una excentricidad correspondiente al momento máximo que puede acompañar a la carga axial, pero no menor de 0,10 h."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Espesores mínimos en concreto simple",
+      "columnas": [
+       "Mínimo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Muro de carga",
+        "valores": [
+         "1/24 de la longitud o altura no apoyada (la menor) y 150 mm"
+        ]
+       },
+       {
+        "etiqueta": "Muro exterior de sótano o de cimentación",
+        "valores": [
+         "200 mm"
+        ]
+       },
+       {
+        "etiqueta": "Zapata",
+        "valores": [
+         "300 mm"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "22.7.4",
+       "extracto": "El espesor de las zapatas de concreto simple estructural no debe ser menor que 300 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se permite una zapata de concreto simple sobre pilotes?",
+      "opciones": [
+       "Sí, con φ = 0,65",
+       "Sí, si su espesor es al menos 400 mm",
+       "No",
+       "Solo con pilotes cortos"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "22.7.3",
+       "extracto": "No se permite el uso del concreto simple para zapatas sobre pilotes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En un pedestal de concreto simple, la relación altura no apoyada / menor dimensión lateral no debe exceder {{3}}."
+     },
+     "citas": [
+      {
+       "articulo": "22.8.2",
+       "extracto": "La relación entre la altura no apoyada y la menor dimensión lateral de pedestales de concreto simple no debe exceder de 3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Concreto ciclópeo",
+      "columnas": [
+       "Requisito"
+      ],
+      "filas": [
+       {
+        "etiqueta": "f′c mínimo de la matriz",
+        "valores": [
+         "10 MPa"
+        ]
+       },
+       {
+        "etiqueta": "Piedra desplazadora",
+        "valores": [
+         "≤ 30 % del volumen total"
+        ]
+       },
+       {
+        "etiqueta": "Tamaño máximo de piedra",
+        "valores": [
+         "≤ mitad de la menor dimensión del elemento y ≤ 250 mm"
+        ]
+       },
+       {
+        "etiqueta": "φ de diseño",
+        "valores": [
+         "0,5, con f′c ≤ 10 MPa"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "22.10.1",
+       "extracto": "(a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa. (b) La piedra desplazadora no excederá del 30% del volumen total de concreto ciclópeo… (c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿En qué elementos se permite el concreto ciclópeo?",
+      "respuesta": "Solo en cimientos corridos, sobrecimientos, muros de contención de gravedad y falsas zapatas. En voladizos más largos que la mitad de su peralte se verifican flexión y corte."
+     },
+     "citas": [
+      {
+       "articulo": "22.10.2.1",
+       "extracto": "El uso de este concreto estará limitado a cimientos corridos, sobrecimientos, muros de contención de gravedad y falsas zapatas."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

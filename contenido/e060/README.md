@@ -8,6 +8,8 @@ Formato: `tekluma-mazos/1` (ver `packages/shared/src/importacion.ts`). Se cargan
 | `00-e060-articulos.json` | Los 1 621 artículos de los 22 capítulos, con texto literal y página del PDF. Sin mazos. |
 | `03-materiales.json` | Cap. 3 · 19 tarjetas |
 | `04-durabilidad.json` | Cap. 4 · 17 tarjetas (Tablas 4.1 a 4.5) |
+| `05-calidad-concreto.json` | Cap. 5 · 23 tarjetas (f′cr y Tablas 5.1 a 5.3, muestreo, aceptación, núcleos, curado) |
+| `06-encofrados-juntas.json` | Cap. 6 · 16 tarjetas (desencofrado, tuberías embebidas, juntas de construcción) |
 | `07-detalles-refuerzo.json` | Cap. 7 · 31 tarjetas, con la Fig. 7.1, un estribo a 135° y la Fig. 7.2 |
 | `08-analisis-diseno.json` | Cap. 8 · 27 tarjetas (coeficientes aproximados, redistribución, Ec, vigas T, aligerados; Fig. 8.4.1) |
 | `09-resistencia-servicio.json` | Cap. 9 · 35 tarjetas (combinaciones, φ, Tabla 9.1, Tabla 9.2, Fig. 9.6.2.5, casos numéricos) |
@@ -17,7 +19,9 @@ Formato: `tekluma-mazos/1` (ver `packages/shared/src/importacion.ts`). Se cargan
 | `13-losas-dos-direcciones.json` | Cap. 13 · 32 tarjetas (franjas, Método Directo, γf, Método de Coeficientes; Tabla 13.1) |
 | `14-muros.json` | Cap. 14 · 13 tarjetas (refuerzo mínimo, método empírico, espesores, aberturas) |
 | `15-zapatas.json` | Cap. 15 · 18 tarjetas (presiones, secciones críticas, γs, pilotes, dowels) |
+| `18-preesforzado.json` | Cap. 18 · 26 tarjetas (Clases U y T, esfuerzos admisibles, fricción, fps, refuerzo adherido, ductos) |
 | `21-diseno-sismico.json` | Cap. 21 · 65 tarjetas (vigas, columnas y nudos por sistema, columna fuerte, muros y elementos de borde, ductilidad limitada; 11 figuras) |
+| `22-concreto-simple.json` | Cap. 22 · 19 tarjetas (límites de uso, Mn, Pn, Vn, muros, zapatas, concreto ciclópeo) |
 
 Orden sugerido: primero `00` (carga toda la norma como fuente), luego los capítulos. Cada archivo de capítulo trae también sus artículos, así que se puede importar solo.
 
