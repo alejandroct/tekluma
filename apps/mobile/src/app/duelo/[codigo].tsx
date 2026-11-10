@@ -164,7 +164,7 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
   const yo = resultado.jugadas.find((j) => j.soyYo);
   const posicion = resultado.jugadas.findIndex((j) => j.soyYo);
   const rivales = resultado.jugadas.filter((j) => !j.soyYo);
-  const texto = textoReto(resultado);
+  const texto = textoReto(resultado, duelo.preguntas[0]?.pregunta);
 
   const titulo = !yo
     ? "Marcador"

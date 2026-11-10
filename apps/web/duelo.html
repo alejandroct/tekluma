@@ -194,9 +194,22 @@
               ${s.explicacion ? `<span>${esc(s.explicacion)}</span>` : ""}</span></li>`;
           })
           .join("");
-        const texto = yo
-          ? `⚔️ Acepté un duelo ${norma(r.norma)} en Tekluma y saqué ${yo.aciertos}/5 en ${yo.segundos} s. ¿Me ganas?\n${location.origin}/duelo?c=${r.codigo}`
-          : `⚔️ Duelo ${norma(r.norma)} en Tekluma. ¿Te animas?\n${location.origin}/duelo?c=${r.codigo}`;
+        // Igual que textoReto en apps/mobile/src/lib/duelos.ts.
+        const total = r.jugadas.length;
+        const casillasDuelo = (r.solucion || []).map((s) => (s.elegida === s.correcta ? "✅" : "❌")).join("");
+        const ranking = !yo ? ""
+          : total === 1 ? "Nadie me ha ganado todavía. ¿Serás el primero?"
+          : pos === 0 ? `🏆 Voy 1.º de ${total}. A ver quién me baja.`
+          : `Voy ${pos + 1}.º de ${total}. ¿Llegas al podio?`;
+        const primera = duelo && duelo.preguntas[0] ? duelo.preguntas[0].pregunta : "";
+        const texto = [
+          `⚔️ *DUELO TEKLUMA* · ${r.norma === "RNE" ? "Todo el RNE" : r.norma}`,
+          "5 preguntas · 1 intento · gana quien acierta más y más rápido",
+          ...(yo ? ["", `Mi marcador: *${yo.aciertos}/5 en ${yo.segundos} s*`, casillasDuelo, ranking] : []),
+          ...(primera ? ["", "Arranca así:", `*${primera}*`] : []),
+          "", "👉 ¿Me ganas? Juega gratis, sin instalar nada:",
+          `${location.origin}/duelo?c=${r.codigo}`,
+        ].filter((l, i, a) => l !== "" || a[i - 1] !== "").join("\n");
         raiz.innerHTML = `
           <section class="resultado">
             <div class="resultado-cab"><span class="etq">Duelo ${esc(r.norma)} · ${esc(r.codigo)}</span>${yo ? `<span class="etq"><b>${yo.aciertos}/5 · ${yo.segundos} s</b></span>` : ""}</div>
