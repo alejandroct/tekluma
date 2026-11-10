@@ -4,6 +4,7 @@ import { router } from "expo-router";
 import { comprar, comprasDisponibles, obtenerPlanes, restaurar, type IdPlan, type PlanTienda } from "@/lib/compras";
 import { obtenerCupo } from "@/lib/cupo";
 import { useTema } from "@/lib/tema";
+import { IconoCorrecto } from "@/components/Iconos";
 
 type Plan = { id: IdPlan; nombre: string; precio: string; detalle: string; destacado?: string };
 
@@ -88,10 +89,10 @@ export default function Premium() {
 
       <View style={{ gap: 10, marginVertical: 8 }}>
         {BENEFICIOS.map((b) => (
-          <Text key={b} style={{ color: t.texto, fontSize: 16 }}>
-            <Text style={{ color: t.ambar, fontWeight: "800" }}>✓ </Text>
-            {b}
-          </Text>
+          <View key={b} style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+            <IconoCorrecto tamano={18} color={t.ambar} />
+            <Text style={{ color: t.texto, fontSize: 16, flex: 1 }}>{b}</Text>
+          </View>
         ))}
       </View>
 

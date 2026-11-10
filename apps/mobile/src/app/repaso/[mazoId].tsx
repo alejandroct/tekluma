@@ -12,6 +12,7 @@ import { consumirTarjeta, cupoEnCache } from "@/lib/cupo";
 import { descargarPaquete, paqueteLocal } from "@/lib/mazos";
 import { calificar, pendientes, Rating, sincronizar } from "@/lib/repaso";
 import { useTema } from "@/lib/tema";
+import { IconoHito } from "@/components/Iconos";
 
 const NOTAS: { nota: Grade; texto: string; color: string }[] = [
   { nota: Rating.Again, texto: "Otra vez", color: "#D64545" },
@@ -90,9 +91,9 @@ export default function Repaso() {
   if (!actual) {
     return (
       <View style={[estilos.fin, { backgroundColor: t.fondo }]}>
-        <Animated.Text entering={ZoomIn.springify()} style={{ fontSize: 56 }}>
-          🎉
-        </Animated.Text>
+        <Animated.View entering={ZoomIn.springify()}>
+          <IconoHito tamano={64} color={t.texto} acento={t.ambar} />
+        </Animated.View>
         <Animated.Text entering={FadeInDown.delay(120)} style={[estilos.finTitulo, { color: t.texto }]}>
           ¡Sesión completa!
         </Animated.Text>

@@ -58,7 +58,7 @@ export function Rebote({ disparo, children, style }: { disparo: unknown; childre
   return <Animated.View style={[style, animado]}>{children}</Animated.View>;
 }
 
-/** "+5 🪙" que sube y se desvanece. Montarlo con una `key` nueva en cada ganancia. */
+/** "+5" que sube y se desvanece. Montarlo con una `key` nueva en cada ganancia. */
 export function GananciaFlotante({ texto, color }: { texto: string; color: string }) {
   const y = useSharedValue(0);
   const opacidad = useSharedValue(0);

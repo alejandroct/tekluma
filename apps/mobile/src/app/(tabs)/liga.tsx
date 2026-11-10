@@ -7,6 +7,7 @@ import { BotonVivo, NumeroAnimado } from "@/components/Animaciones";
 import { TarjetaCompartible } from "@/components/TarjetaCompartible";
 import { obtenerLiga, rankingRegiones, rankingUniversidades } from "@/lib/liga";
 import { useTema } from "@/lib/tema";
+import { IconoCasco, IconoDivision, IconoRegion, IconoUniversidad, Puesto } from "@/components/Iconos";
 
 type Vista = "liga" | "universidades" | "regiones";
 const VERDE = "#1F9D55";
@@ -67,7 +68,7 @@ export default function Liga() {
       {estado.cambioDivision === "subio" && (
         <Animated.View entering={ZoomIn.springify()} style={[estilos.aviso, { backgroundColor: "rgba(31,157,85,0.12)", borderColor: VERDE }]}>
           <Text style={{ color: t.texto, fontWeight: "800", fontSize: 16 }}>
-            🎉 ¡Subiste a {division.nombre}! Así se construye.
+            ¡Subiste a {division.nombre}! Así se construye.
           </Text>
         </Animated.View>
       )}
@@ -75,7 +76,7 @@ export default function Liga() {
       <Animated.View entering={FadeInDown.springify()} style={[estilos.heroe, { backgroundColor: t.navy }]}>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 14 }}>
           <View style={[estilos.insignia, { backgroundColor: division.color }]}>
-            <Text style={{ fontSize: 34 }}>{division.emoji}</Text>
+            <IconoDivision division={division.codigo} tamano={36} color="#FFFFFF" acento="#FFFFFF" />
           </View>
           <View style={{ flex: 1 }}>
             <Text style={{ color: "#A9B7CC", fontWeight: "700" }}>Liga semanal · cierra en {estado.cierraEn}</Text>
@@ -99,9 +100,13 @@ export default function Liga() {
           </View>
         </View>
         <Text style={{ color: "#A9B7CC", fontSize: 14 }}>
-          {siguiente
-            ? `Los ${estado.suben === 1 ? "primeros" : `${estado.suben} primeros`} suben a ${siguiente.nombre} ${siguiente.emoji}`
-            : "Estás en la división más alta. ¡Defiéndela!"}
+          {!siguiente
+            ? "Estás en la división más alta. ¡Defiéndela!"
+            : estado.suben === 0
+              ? `Cuando se sumen más colegas a tu liga, los primeros subirán a ${siguiente.nombre}`
+              : estado.suben === 1
+                ? `El primero sube a ${siguiente.nombre}`
+                : `Los ${estado.suben} primeros suben a ${siguiente.nombre}`}
           {estado.bajan > 0 ? ` · los ${estado.bajan} últimos bajan` : ""}
         </Text>
         <BotonVivo onPress={() => setCompartir(true)} style={[estilos.boton, { backgroundColor: t.ambar }]}>
@@ -111,7 +116,10 @@ export default function Liga() {
 
       <Animated.View entering={FadeInDown.delay(80).springify()} style={[estilos.carrera, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={{ color: t.ambar, fontWeight: "800", fontSize: 13 }}>TU CARGO EN OBRA</Text>
-        <Text style={{ color: t.texto, fontWeight: "800", fontSize: 20 }}>👷 {estado.titulo}</Text>
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+          <IconoCasco tamano={26} color={t.texto} acento={t.ambar} />
+          <Text style={{ color: t.texto, fontWeight: "800", fontSize: 20 }}>{estado.titulo}</Text>
+        </View>
         <View style={[estilos.barra, { backgroundColor: t.borde }]}>
           <View style={[estilos.barraLlena, { backgroundColor: t.ambar, width: `${progresoTitulo * 100}%` }]} />
         </View>
@@ -145,7 +153,7 @@ export default function Liga() {
 
       {vista !== "liga" && falta && (
         <BotonVivo onPress={() => router.push("/afiliacion")} style={[estilos.invitacion, { backgroundColor: t.superficie, borderColor: t.ambar }]}>
-          <Text style={{ fontSize: 28 }}>{vista === "universidades" ? "🎓" : "📍"}</Text>
+          {vista === "universidades" ? <IconoUniversidad tamano={28} color={t.texto} acento={t.ambar} /> : <IconoRegion tamano={28} color={t.texto} acento={t.ambar} />}
           <Text style={{ flex: 1, color: t.texto, fontWeight: "700", fontSize: 16 }}>
             {vista === "universidades" ? "Elige tu universidad y suma puntos por ella" : "Elige tu región y súmale puntos"}
           </Text>
@@ -194,9 +202,7 @@ function Fila({ fila, resaltar, marca }: { fila: FilaRanking; resaltar: boolean;
         marca && { borderLeftColor: marca, borderLeftWidth: 4 },
       ]}
     >
-      <Text style={[estilos.puesto, { color: fila.posicion <= 3 ? t.ambar : t.textoSuave }]}>
-        {fila.posicion === 1 ? "🥇" : fila.posicion === 2 ? "🥈" : fila.posicion === 3 ? "🥉" : fila.posicion}
-      </Text>
+      <Puesto n={fila.posicion} texto={t.textoSuave} ambar={t.ambar} />
       <Text style={{ flex: 1, color: t.texto, fontWeight: "700", fontSize: 16 }} numberOfLines={1}>
         {fila.soyYo ? "Tú" : fila.nombre}
       </Text>

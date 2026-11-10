@@ -5,6 +5,7 @@ import { REGIONES, UNIVERSIDADES, type Region, type Universidad } from "@tekluma
 import { BotonVivo } from "@/components/Animaciones";
 import { guardarAfiliacion, obtenerLiga } from "@/lib/liga";
 import { useTema } from "@/lib/tema";
+import { IconoCorrecto } from "@/components/Iconos";
 
 const sinTildes = (t: string) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
@@ -85,7 +86,7 @@ export default function Afiliacion() {
               style={[estilos.opcion, { backgroundColor: activa ? "rgba(255,138,31,0.12)" : t.superficie, borderColor: activa ? t.ambar : t.borde }]}
             >
               <Text style={{ flex: 1, color: t.texto, fontWeight: activa ? "800" : "500", fontSize: 15 }}>{nombre}</Text>
-              {activa && <Text style={{ color: t.ambar, fontWeight: "800" }}>✓</Text>}
+              {activa && <IconoCorrecto tamano={18} color={t.ambar} />}
             </Pressable>
           );
         })}

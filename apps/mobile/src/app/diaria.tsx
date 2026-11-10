@@ -15,6 +15,7 @@ import { BotonVivo, GananciaFlotante } from "@/components/Animaciones";
 import { compartirOtros, compartirPorWhatsApp, faltaParaLaSiguiente, intentarDiaria, obtenerDiaria, textoCompartir } from "@/lib/diaria";
 import { sonarMoneda } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
+import { Casillas, IconoCorrecto, IconoDuelo, IconoHito, IconoIncorrecto, IconoMoneda, IconoRacha } from "@/components/Iconos";
 
 const VERDE = "#1F9D55";
 const ROJO = "#D64545";
@@ -146,7 +147,7 @@ function Opcion(props: {
       >
         <Text style={[estilos.letra, { color: correcta || fallo ? "#FFFFFF" : t.ambar }]}>{"ABCDEF"[indice]}</Text>
         <Text style={{ flex: 1, color, fontSize: 17, fontWeight: "600" }}>{texto}</Text>
-        {cargando ? <ActivityIndicator color={t.ambar} /> : correcta ? <Text style={estilos.icono}>✓</Text> : fallo ? <Text style={estilos.icono}>✕</Text> : null}
+        {cargando ? <ActivityIndicator color={t.ambar} /> : correcta ? <IconoCorrecto tamano={20} color="#FFFFFF" /> : fallo ? <IconoIncorrecto tamano={20} color="#FFFFFF" /> : null}
       </BotonVivo>
     </Animated.View>
   );
@@ -164,12 +165,23 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
 
   return (
     <Animated.View entering={ZoomIn.springify().damping(14)} style={[estilos.resultado, { backgroundColor: t.navy }]}>
-      <Text style={estilos.resultadoTitulo}>{estado.resuelta ? (estado.intentos.length === 1 ? "¡A la primera! 🎯" : "¡Correcto! 🎉") : "Esta vez no 😅"}</Text>
-      <Text style={estilos.resultadoMarcador}>
-        {estado.intentos.map((o) => (o === estado.solucion?.correcta ? "✅" : "❌")).join(" ")}
-      </Text>
-      {!!estado.monedas && <Text style={[estilos.resultadoLinea, { color: t.ambar }]}>+{estado.monedas} monedas 🪙</Text>}
-      {!!estado.racha && <Text style={estilos.resultadoLinea}>🔥 Racha de {estado.racha} {estado.racha === 1 ? "día" : "días"}</Text>}
+      <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
+        {estado.resuelta && <IconoHito tamano={30} color="#FFFFFF" acento={t.ambar} />}
+        <Text style={estilos.resultadoTitulo}>{estado.resuelta ? (estado.intentos.length === 1 ? "¡A la primera!" : "¡Correcto!") : "Esta vez no"}</Text>
+      </View>
+      <Casillas intentos={estado.intentos} correcta={estado.solucion?.correcta} maximo={pregunta.intentosMax} vacio="#3B5174" />
+      {!!estado.monedas && (
+        <View style={estilos.filaIcono}>
+          <IconoMoneda tamano={18} color={t.ambar} acento={t.ambar} />
+          <Text style={[estilos.resultadoLinea, { color: t.ambar }]}>+{estado.monedas} monedas</Text>
+        </View>
+      )}
+      {!!estado.racha && (
+        <View style={estilos.filaIcono}>
+          <IconoRacha tamano={18} color="#FFFFFF" acento={t.ambar} />
+          <Text style={estilos.resultadoLinea}>Racha de {estado.racha} {estado.racha === 1 ? "día" : "días"}</Text>
+        </View>
+      )}
       {celebracion && <GananciaFlotante key={celebracion} texto={`+${estado.monedas}`} color={t.ambar} />}
 
       {(estado.solucion?.explicacion || estado.solucion?.cita) && (
@@ -194,7 +206,10 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
         <Text style={{ color: "#A9B7CC", fontWeight: "700", textAlign: "center" }}>Compartir en otra app</Text>
       </Pressable>
       <Pressable onPress={() => router.push("/duelo/nuevo")} hitSlop={8}>
-        <Text style={{ color: t.ambar, fontWeight: "800", textAlign: "center", marginTop: 4 }}>⚔️ ¿Quieres más? Reta a un colega a un duelo</Text>
+        <View style={[estilos.filaIcono, { justifyContent: "center", marginTop: 4 }]}>
+          <IconoDuelo tamano={18} color={t.ambar} />
+          <Text style={{ color: t.ambar, fontWeight: "800" }}>¿Quieres más? Reta a un colega a un duelo</Text>
+        </View>
       </Pressable>
       <Text style={[estilos.resultadoLinea, { fontSize: 13, marginTop: 4 }]}>Nueva pregunta en {falta}</Text>
     </Animated.View>
@@ -211,10 +226,9 @@ const estilos = StyleSheet.create({
   pregunta: { fontSize: 24, fontWeight: "800", lineHeight: 31, letterSpacing: -0.3 },
   opcion: { flexDirection: "row", alignItems: "center", gap: 12, borderWidth: 1, borderRadius: 16, paddingVertical: 16, paddingHorizontal: 16, minHeight: 60 },
   letra: { fontSize: 15, fontWeight: "800", width: 18 },
-  icono: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
+  filaIcono: { flexDirection: "row", alignItems: "center", gap: 8 },
   resultado: { borderRadius: 24, padding: 20, gap: 10, marginTop: 8 },
   resultadoTitulo: { color: "#FFFFFF", fontSize: 24, fontWeight: "800" },
-  resultadoMarcador: { fontSize: 26, letterSpacing: 2 },
   resultadoLinea: { color: "#FFFFFF", fontSize: 15, fontWeight: "700" },
   solucion: { borderRadius: 14, padding: 14, gap: 8 },
   solucionTexto: { color: "#FFFFFF", fontSize: 14, lineHeight: 20 },

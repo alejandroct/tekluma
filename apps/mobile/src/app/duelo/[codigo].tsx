@@ -9,6 +9,7 @@ import { compartirOtros, compartirPorWhatsApp } from "@/lib/diaria";
 import { crearDuelo, jugarDuelo, textoReto, verDuelo } from "@/lib/duelos";
 import { sonarMoneda } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
+import { IconoCorrecto, IconoCronometro, IconoDuelo, IconoIncorrecto, Puesto } from "@/components/Iconos";
 
 /** Segundos desde `desde` (fuera del componente: el React Compiler exige render puro). */
 const transcurrido = (desde: number) => (Date.now() - desde) / 1000;
@@ -43,9 +44,9 @@ export default function DueloPantalla() {
 
   return (
     <View style={[estilos.centro, { backgroundColor: t.fondo, padding: 24, gap: 14 }]}>
-      <Animated.Text entering={ZoomIn.springify()} style={{ fontSize: 64 }}>
-        ⚔️
-      </Animated.Text>
+      <Animated.View entering={ZoomIn.springify()}>
+        <IconoDuelo tamano={64} color={t.texto} acento={t.ambar} />
+      </Animated.View>
       <Animated.Text entering={FadeInDown.delay(80)} style={[estilos.titulo, { color: t.texto, textAlign: "center" }]}>
         {duelo.soyRetador ? "Tu duelo" : `${duelo.retador} te reta`}
       </Animated.Text>
@@ -124,7 +125,10 @@ function Partida({ duelo, onFin }: { duelo: Duelo; onFin: (r: ResultadoDuelo) =>
             <View key={p.id} style={[estilos.segmento, { backgroundColor: i <= indice ? t.ambar : t.borde }]} />
           ))}
         </View>
-        <Text style={{ color: t.texto, fontWeight: "800", fontVariant: ["tabular-nums"], fontSize: 16 }}>⏱ {segundos} s</Text>
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+          <IconoCronometro tamano={18} color={t.texto} acento={t.ambar} />
+          <Text style={{ color: t.texto, fontWeight: "800", fontVariant: ["tabular-nums"], fontSize: 16 }}>{segundos} s</Text>
+        </View>
       </View>
       <Animated.View key={pregunta.id} entering={FadeInRight.springify().damping(16)} style={{ gap: 14 }}>
         <Text style={{ color: t.ambar, fontWeight: "800" }}>
@@ -163,8 +167,8 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
     : rivales.length === 0
       ? `${yo.aciertos}/5 en ${yo.segundos} s`
       : posicion === 0
-        ? "¡Ganaste! 🏆"
-        : "Te ganaron esta vez 💪";
+        ? "¡Ganaste!"
+        : "Te ganaron esta vez";
 
   useEffect(() => {
     if (yo && rivales.length > 0 && posicion === 0) {
@@ -208,10 +212,10 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
               entering={FadeInDown.delay(i * 60)}
               style={[estilos.jugada, { backgroundColor: j.soyYo ? "rgba(255,138,31,0.12)" : t.superficie, borderColor: j.soyYo ? t.ambar : t.borde }]}
             >
-              <Text style={[estilos.puesto, { color: i === 0 ? t.ambar : t.textoSuave }]}>{i === 0 ? "🏆" : `${i + 1}.`}</Text>
+              <Puesto n={i + 1} texto={t.textoSuave} ambar={t.ambar} />
               <Text style={{ flex: 1, color: t.texto, fontWeight: "700", fontSize: 16 }}>
                 {j.soyYo ? "Tú" : j.nombre}
-                {j.esRetador && !j.soyYo ? "  ⚔️" : ""}
+                {j.esRetador && !j.soyYo ? <Text style={{ color: t.textoSuave, fontWeight: "600", fontSize: 13 }}>  · retador</Text> : null}
               </Text>
               <Text style={{ color: t.texto, fontWeight: "800", fontSize: 16 }}>{j.aciertos}/5</Text>
               <Text style={{ color: t.textoSuave, width: 52, textAlign: "right", fontVariant: ["tabular-nums"] }}>{j.segundos} s</Text>
@@ -229,9 +233,12 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
             const bien = s.elegida === s.correcta;
             return (
               <View key={s.id} style={[estilos.revision, { backgroundColor: t.superficie, borderColor: t.borde }]}>
-                <Text style={{ color: t.texto, fontWeight: "700", fontSize: 15 }}>
-                  {bien ? "✅" : "❌"} {i + 1}. {p.pregunta}
-                </Text>
+                <View style={{ flexDirection: "row", gap: 8 }}>
+                  {bien ? <IconoCorrecto tamano={18} color={VERDE} /> : <IconoIncorrecto tamano={18} color={ROJO} />}
+                  <Text style={{ flex: 1, color: t.texto, fontWeight: "700", fontSize: 15 }}>
+                    {i + 1}. {p.pregunta}
+                  </Text>
+                </View>
                 {!bien && s.elegida !== null && <Text style={{ color: ROJO, fontSize: 14 }}>Tu respuesta: {p.opciones[s.elegida]}</Text>}
                 <Text style={{ color: VERDE, fontSize: 14, fontWeight: "700" }}>Correcta: {p.opciones[s.correcta]}</Text>
                 {!!s.explicacion && <Text style={{ color: t.textoSuave, fontSize: 14, lineHeight: 19 }}>{s.explicacion}</Text>}

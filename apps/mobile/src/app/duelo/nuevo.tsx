@@ -6,6 +6,7 @@ import type { ResumenDuelo } from "@tekluma/shared";
 import { BotonVivo } from "@/components/Animaciones";
 import { crearDuelo, misDuelos, normasDuelo } from "@/lib/duelos";
 import { useTema } from "@/lib/tema";
+import { IconoDuelo, IconoEspera, IconoPodio } from "@/components/Iconos";
 
 /** Elegir norma y crear un duelo; abajo, los duelos recientes con su marcador. */
 export default function NuevoDuelo() {
@@ -40,7 +41,7 @@ export default function NuevoDuelo() {
 
   return (
     <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={estilos.contenido}>
-      <Text style={{ fontSize: 44 }}>⚔️</Text>
+      <IconoDuelo tamano={48} color={t.texto} acento={t.ambar} />
       <Text style={[estilos.titulo, { color: t.texto }]}>Reta a un colega</Text>
       <Text style={[estilos.texto, { color: t.textoSuave }]}>
         Responde 5 preguntas, un intento cada una. Luego envía el reto por WhatsApp: tu colega lo juega sin instalar nada y ven quién sabe más.
@@ -82,7 +83,13 @@ export default function NuevoDuelo() {
                   onPress={() => router.push(`/duelo/${d.codigo}`)}
                   style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}
                 >
-                  <Text style={{ fontSize: 22 }}>{d.misAciertos === null ? "⏳" : gano ? "🏆" : perdio ? "💪" : "⚔️"}</Text>
+                  {d.misAciertos === null ? (
+                    <IconoEspera tamano={24} color={t.textoSuave} acento={t.ambar} />
+                  ) : gano ? (
+                    <IconoPodio tamano={24} color={t.texto} acento={t.ambar} />
+                  ) : (
+                    <IconoDuelo tamano={24} color={t.texto} acento={perdio ? t.textoSuave : t.ambar} />
+                  )}
                   <View style={{ flex: 1 }}>
                     <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>
                       {d.norma} · {d.misAciertos === null ? "sin jugar" : `${d.misAciertos}/5`}

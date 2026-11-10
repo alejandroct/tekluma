@@ -5,6 +5,7 @@ import { captureRef } from "react-native-view-shot";
 import Animated, { ZoomIn } from "react-native-reanimated";
 import { DIVISIONES, REGIONES, siglaUniversidad, type EstadoLiga } from "@tekluma/shared";
 import { BotonVivo } from "@/components/Animaciones";
+import { IconoCasco, IconoDivision, IconoRegion, IconoUniversidad } from "@/components/Iconos";
 import { compartirPorWhatsApp, WEB_URL } from "@/lib/diaria";
 
 const NAVY = "#0F1B2D";
@@ -49,7 +50,7 @@ export function TarjetaCompartible({ estado, onCerrar }: { estado: EstadoLiga; o
               <Text style={estilos.marca}>tekluma</Text>
               <View style={{ alignItems: "center", gap: 6 }}>
                 <View style={[estilos.insignia, { backgroundColor: division.color }]}>
-                  <Text style={{ fontSize: 64 }}>{division.emoji}</Text>
+                  <IconoDivision division={division.codigo} tamano={64} color="#FFFFFF" acento="#FFFFFF" />
                 </View>
                 <Text style={estilos.etiqueta}>LIGA</Text>
                 <Text style={estilos.division}>{division.nombre}</Text>
@@ -65,11 +66,22 @@ export function TarjetaCompartible({ estado, onCerrar }: { estado: EstadoLiga; o
                 </View>
               </View>
               <View style={{ alignItems: "center", gap: 4 }}>
-                <Text style={estilos.cargo}>👷 {estado.titulo}</Text>
+                <View style={estilos.filaIcono}>
+                  <IconoCasco tamano={20} color="#FFFFFF" acento={AMBAR} />
+                  <Text style={estilos.cargo}>{estado.titulo}</Text>
+                </View>
                 {estado.universidad && estado.universidad !== "otra" && (
-                  <Text style={estilos.detalle}>🎓 Sumando por la {siglaUniversidad(estado.universidad)}</Text>
+                  <View style={estilos.filaIcono}>
+                    <IconoUniversidad tamano={16} color={NIEBLA} acento={NIEBLA} />
+                    <Text style={estilos.detalle}>Sumando por la {siglaUniversidad(estado.universidad)}</Text>
+                  </View>
                 )}
-                {estado.region && <Text style={estilos.detalle}>📍 {REGIONES[estado.region]}</Text>}
+                {estado.region && (
+                  <View style={estilos.filaIcono}>
+                    <IconoRegion tamano={16} color={NIEBLA} acento={NIEBLA} />
+                    <Text style={estilos.detalle}>{REGIONES[estado.region]}</Text>
+                  </View>
+                )}
               </View>
               <Text style={estilos.pie}>¿Me superas? Repasa el RNE en tekluma.app</Text>
             </View>
@@ -112,6 +124,7 @@ const estilos = StyleSheet.create({
   cifra: { flex: 1, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 14, padding: 10, alignItems: "center" },
   cifraNumero: { color: "#FFFFFF", fontSize: 26, fontWeight: "800" },
   cifraEtiqueta: { color: NIEBLA, fontSize: 12 },
+  filaIcono: { flexDirection: "row", alignItems: "center", gap: 6 },
   cargo: { color: "#FFFFFF", fontSize: 17, fontWeight: "800" },
   detalle: { color: NIEBLA, fontSize: 14, fontWeight: "600" },
   pie: { color: AMBAR, fontSize: 13, fontWeight: "700", textAlign: "center" },

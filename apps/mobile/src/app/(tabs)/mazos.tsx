@@ -71,10 +71,10 @@ export default function Mazos() {
 }
 
 function etiqueta(m: MazoConAcceso) {
-  if (!m.abierto) return "★ Premium";
+  if (!m.abierto) return "Premium";
   if (m.desactualizado) return "Nueva versión disponible";
-  if (m.descargado) return "✓ Descargado";
-  return m.acceso === "premium" ? "★ Premium" : "Incluido en tu cupo diario";
+  if (m.descargado) return "Descargado";
+  return m.acceso === "premium" ? "Premium" : "Incluido en tu cupo diario";
 }
 
 const estilos = StyleSheet.create({

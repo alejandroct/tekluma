@@ -128,7 +128,7 @@ function CasoNumerico({ contenido, revelada, onRevelar }: Props & { contenido: E
       />
       {revelada ? (
         <Respuesta>
-          {acierto ? "✓ " : "✗ "}
+          {acierto ? "Correcto: " : "Resultado: "}
           {caso.resultado.toFixed(2)} {contenido.unidadResultado}
         </Respuesta>
       ) : (

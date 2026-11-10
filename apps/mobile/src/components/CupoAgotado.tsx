@@ -6,6 +6,7 @@ import { verAnuncioConRecompensa } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { ampliarConMonedas, obtenerCupo } from "@/lib/cupo";
 import { useTema } from "@/lib/tema";
+import { IconoEspera, IconoMoneda, IconoPremium, IconoReproducir } from "@/components/Iconos";
 
 type Props = { estado: EstadoCupo; onAmpliado: (estado: EstadoCupo) => void };
 
@@ -42,7 +43,7 @@ export function CupoAgotado({ estado, onAmpliado }: Props) {
 
   return (
     <View style={estilos.contenedor}>
-      <Text style={estilos.emoji}>⏳</Text>
+      <IconoEspera tamano={48} color={t.texto} acento={t.ambar} />
       <Text style={[estilos.titulo, { color: t.texto }]}>Llegaste a tu cupo de hoy</Text>
       <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>
         Repasaste {estado.usadas} tarjetas. Vuelve mañana o sigue ahora:
@@ -57,7 +58,10 @@ export function CupoAgotado({ estado, onAmpliado }: Props) {
           <ActivityIndicator color="#FFFFFF" />
         ) : (
           <>
-            <Text style={estilos.opcionTitulo}>▶︎ Ver un anuncio · +{reglas.tarjetasPorAnuncio} tarjetas</Text>
+            <View style={estilos.filaIcono}>
+              <IconoReproducir tamano={20} color="#FFFFFF" />
+              <Text style={estilos.opcionTitulo}>Ver un anuncio · +{reglas.tarjetasPorAnuncio} tarjetas</Text>
+            </View>
             <Text style={estilos.opcionDetalle}>
               {anunciosRestantes > 0 ? `Te quedan ${anunciosRestantes} anuncios hoy` : "Ya viste todos los anuncios de hoy"}
             </Text>
@@ -77,14 +81,20 @@ export function CupoAgotado({ estado, onAmpliado }: Props) {
           <ActivityIndicator color={t.ambar} />
         ) : (
           <>
-            <Text style={[estilos.opcionTitulo, { color: t.texto }]}>🪙 Usar {reglas.tarjetasPorCompraMonedas} monedas · +{reglas.tarjetasPorCompraMonedas} tarjetas</Text>
+            <View style={estilos.filaIcono}>
+              <IconoMoneda tamano={20} color={t.texto} acento={t.ambar} />
+              <Text style={[estilos.opcionTitulo, { color: t.texto }]}>Usar {reglas.tarjetasPorCompraMonedas} monedas · +{reglas.tarjetasPorCompraMonedas} tarjetas</Text>
+            </View>
             <Text style={[estilos.opcionDetalle, { color: t.textoSuave }]}>Tienes {estado.monedas} monedas</Text>
           </>
         )}
       </Pressable>
 
       <Pressable onPress={() => router.push("/premium")} style={({ pressed }) => [estilos.opcion, { backgroundColor: t.ambar, opacity: pressed ? 0.85 : 1 }]}>
-        <Text style={[estilos.opcionTitulo, { color: t.navy }]}>★ Tekluma Premium · sin límites</Text>
+        <View style={estilos.filaIcono}>
+          <IconoPremium tamano={20} color={t.navy} acento={t.navy} />
+          <Text style={[estilos.opcionTitulo, { color: t.navy }]}>Tekluma Premium · sin límites</Text>
+        </View>
         <Text style={[estilos.opcionDetalle, { color: t.navy }]}>Prueba 7 días gratis</Text>
       </Pressable>
     </View>
@@ -93,7 +103,7 @@ export function CupoAgotado({ estado, onAmpliado }: Props) {
 
 const estilos = StyleSheet.create({
   contenedor: { gap: 12, paddingTop: 12 },
-  emoji: { fontSize: 44 },
+  filaIcono: { flexDirection: "row", alignItems: "center", gap: 10 },
   titulo: { fontSize: 24, fontWeight: "800", letterSpacing: -0.3 },
   subtitulo: { fontSize: 16, lineHeight: 22, marginBottom: 8 },
   opcion: { borderRadius: 16, paddingVertical: 16, paddingHorizontal: 18, gap: 4, minHeight: 72, justifyContent: "center" },

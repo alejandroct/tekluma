@@ -7,6 +7,7 @@ import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { NOMBRES_PROFESION } from "@/lib/profesiones";
 import type { EstadoCupo, Profession } from "@tekluma/shared";
 import { useTema } from "@/lib/tema";
+import { IconoPremium } from "@/components/Iconos";
 
 export default function Perfil() {
   const t = useTema();
@@ -63,12 +64,15 @@ export default function Perfil() {
       <View style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={{ color: t.texto, fontSize: 16 }}>Plan</Text>
         <Text style={{ color: cupo?.premium ? t.ambar : t.textoSuave, fontSize: 16, fontWeight: cupo?.premium ? "800" : "400" }}>
-          {cupo?.premium ? "★ Premium" : "Gratis"}
+          {cupo?.premium ? "Premium" : "Gratis"}
         </Text>
       </View>
       {!cupo?.premium && (
         <Pressable onPress={() => router.push("/premium")} style={({ pressed }) => [estilos.premium, { backgroundColor: t.ambar, opacity: pressed ? 0.85 : 1 }]}>
-          <Text style={{ color: t.navy, fontSize: 16, fontWeight: "800" }}>★ Hazte Premium · 7 días gratis</Text>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+            <IconoPremium tamano={20} color={t.navy} acento={t.navy} />
+            <Text style={{ color: t.navy, fontSize: 16, fontWeight: "800" }}>Hazte Premium · 7 días gratis</Text>
+          </View>
         </Pressable>
       )}
       <Pressable onPress={() =>

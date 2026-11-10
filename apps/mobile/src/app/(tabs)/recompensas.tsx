@@ -10,6 +10,7 @@ import { authClient } from "@/lib/auth";
 import { ampliarConMonedas, hacerCheckIn, obtenerRecompensas } from "@/lib/cupo";
 import { sonarMoneda } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
+import { IconoCorrecto, IconoMoneda, IconoRacha, IconoReproducir } from "@/components/Iconos";
 
 /** Monedas: check-in diario con racha, anuncios para ganar monedas y canje por tarjetas extra. */
 export default function Recompensas() {
@@ -94,16 +95,22 @@ export default function Recompensas() {
 
       <Rebote disparo={ganancia?.id} style={[estilos.saldo, { backgroundColor: t.navy }]}>
         <Text style={estilos.saldoEtiqueta}>Tus monedas</Text>
-        <NumeroAnimado valor={estado.monedas} prefijo="🪙 " style={estilos.saldoNumero} />
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
+          <IconoMoneda tamano={40} color="#FFFFFF" acento={t.ambar} />
+          <NumeroAnimado valor={estado.monedas} style={estilos.saldoNumero} />
+        </View>
         <Text style={estilos.saldoAyuda}>1 moneda = 1 tarjeta extra para hoy</Text>
         {ganancia && <GananciaFlotante key={ganancia.id} texto={`+${ganancia.monedas}`} color={t.ambar} />}
       </Rebote>
 
       <Animated.View entering={FadeInDown.delay(70).springify()} style={[estilos.tarjeta, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={[estilos.seccion, { color: t.texto }]}>Check-in diario</Text>
-        <Text style={{ color: t.textoSuave, fontSize: 14 }}>
-          {checkIn.racha > 0 ? `Racha de ${checkIn.racha} ${checkIn.racha === 1 ? "día" : "días"} 🔥` : "Entra cada día para subir tu premio"}
-        </Text>
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+          {checkIn.racha > 0 && <IconoRacha tamano={18} color={t.textoSuave} acento={t.ambar} />}
+          <Text style={{ color: t.textoSuave, fontSize: 14 }}>
+            {checkIn.racha > 0 ? `Racha de ${checkIn.racha} ${checkIn.racha === 1 ? "día" : "días"}` : "Entra cada día para subir tu premio"}
+          </Text>
+        </View>
         <View style={estilos.dias}>
           {reglas.checkIn.map((monedas, i) => {
             const ganado = i < enCiclo;
@@ -118,9 +125,9 @@ export default function Recompensas() {
               >
                 <Text style={{ fontSize: 11, color: ganado ? t.navy : t.textoSuave }}>Día {i + 1}</Text>
                 {ganado ? (
-                  <Animated.Text entering={ZoomIn.springify()} style={{ fontSize: 15, fontWeight: "800", color: t.navy }}>
-                    ✓
-                  </Animated.Text>
+                  <Animated.View entering={ZoomIn.springify()}>
+                    <IconoCorrecto tamano={18} color={t.navy} />
+                  </Animated.View>
                 ) : (
                   <Text style={{ fontSize: 15, fontWeight: "800", color: t.texto }}>+{monedas}</Text>
                 )}
@@ -156,7 +163,10 @@ export default function Recompensas() {
           {ocupado === "anuncio" ? (
             <ActivityIndicator color="#FFFFFF" />
           ) : (
-            <Text style={[estilos.botonTexto, { color: "#FFFFFF" }]}>▶︎ Ver anuncio · +{reglas.monedasPorAnuncio} monedas</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+              <IconoReproducir tamano={20} color="#FFFFFF" />
+              <Text style={[estilos.botonTexto, { color: "#FFFFFF" }]}>Ver anuncio · +{reglas.monedasPorAnuncio} monedas</Text>
+            </View>
           )}
         </BotonVivo>
       </Animated.View>

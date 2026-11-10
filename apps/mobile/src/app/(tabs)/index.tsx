@@ -4,7 +4,7 @@ import { router, useFocusEffect } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import type { EstadoCupo, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, NumeroAnimado } from "@/components/Animaciones";
-import { Casillas, IconoChevron, IconoDuelo, IconoPreguntaDia, MarcoIcono } from "@/components/Iconos";
+import { Casillas, IconoChevron, IconoDuelo, IconoPreguntaDia, IconoPremium, MarcoIcono } from "@/components/Iconos";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { obtenerDiaria } from "@/lib/diaria";
 import { paquetesLocales } from "@/lib/mazos";
@@ -77,9 +77,12 @@ export default function Hoy() {
           style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}
         >
           <View style={{ flex: 1, gap: 6 }}>
-            <Text style={{ color: t.texto, fontSize: 15, fontWeight: "700" }}>
-              {cupo.premium ? "★ Premium · tarjetas ilimitadas" : `Cupo de hoy: ${cupo.restantes} de ${cupo.limite} tarjetas`}
-            </Text>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+              {cupo.premium && <IconoPremium tamano={18} color={t.texto} acento={t.ambar} />}
+              <Text style={{ color: t.texto, fontSize: 15, fontWeight: "700" }}>
+                {cupo.premium ? "Premium · tarjetas ilimitadas" : `Cupo de hoy: ${cupo.restantes} de ${cupo.limite} tarjetas`}
+              </Text>
+            </View>
             {!cupo.premium && (
               <View style={[estilos.barra, { backgroundColor: t.borde }]}>
                 <View style={[estilos.barraLlena, { backgroundColor: t.ambar, width: `${Math.min(100, (cupo.usadas / Math.max(1, cupo.limite)) * 100)}%` }]} />
