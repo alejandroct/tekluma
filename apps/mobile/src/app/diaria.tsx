@@ -55,7 +55,7 @@ export default function Diaria() {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
         if (nuevo.monedas) {
           sonarMoneda();
-          setCelebracion(Date.now());
+          setCelebracion((n) => (n ?? 0) + 1);
         }
       } else {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pregunta del día · Tekluma</title>
+    <meta name="description" content="Una pregunta del RNE al día. Tres intentos. ¿La sacas a la primera?" />
+    <meta property="og:title" content="¿Tú la sacas? · Pregunta del día de Tekluma" />
+    <meta property="og:description" content="Una pregunta del RNE al día, tres intentos. Juega sin instalar nada." />
+    <meta property="og:image" content="https://tekluma.app/og-diaria.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/estilos.css" />
+    <style>
+      .juego { padding: 8px 0 40px; display: flex; flex-direction: column; gap: 14px; }
+      .cab { display: flex; justify-content: space-between; align-items: center; }
+      .num { color: var(--ambar); font-weight: 800; letter-spacing: 0.3px; }
+      .puntos { display: flex; gap: 6px; }
+      .punto { width: 12px; height: 12px; border-radius: 6px; background: var(--borde); }
+      .pregunta { font-size: clamp(22px, 5.5vw, 30px); font-weight: 800; line-height: 1.25; letter-spacing: -0.3px; margin: 4px 0; }
+      .ayuda { color: var(--suave); margin: 0; font-size: 15px; }
+      .opcion { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; font: inherit; font-size: 17px; font-weight: 600;
+        padding: 16px; border-radius: 16px; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto); cursor: pointer;
+        transition: transform 0.12s ease, background 0.2s; }
+      .opcion:active { transform: scale(0.97); }
+      .opcion:disabled { cursor: default; }
+      .opcion .letra { color: var(--ambar); font-weight: 800; width: 18px; }
+      .opcion.mal { background: #d64545; border-color: #d64545; color: #fff; animation: sacudir 0.3s; }
+      .opcion.bien { background: #1f9d55; border-color: #1f9d55; color: #fff; }
+      .opcion.mal .letra, .opcion.bien .letra { color: #fff; }
+      .opcion.apagada { opacity: 0.5; }
+      @keyframes sacudir { 25% { transform: translateX(-8px); } 50% { transform: translateX(8px); } 75% { transform: translateX(-4px); } }
+      .resultado { background: var(--navy); color: #fff; border-radius: 24px; padding: 22px; display: flex; flex-direction: column; gap: 10px; animation: aparecer 0.35s ease-out; }
+      @media (prefers-color-scheme: dark) { .resultado { background: var(--superficie); border: 1px solid var(--borde); } }
+      @keyframes aparecer { from { transform: scale(0.92); opacity: 0; } }
+      .resultado h2 { margin: 0; font-size: 26px; }
+      .marcador { font-size: 28px; letter-spacing: 3px; }
+      .cita { background: rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 14px; font-size: 15px; line-height: 1.45; color: #dfe5ee; }
+      .cita b { color: var(--ambar); }
+      .btn { display: block; text-align: center; text-decoration: none; font-weight: 800; font-size: 17px; padding: 15px; border-radius: 14px; border: 0; cursor: pointer; font-family: inherit; }
+      .wa { background: #25d366; color: #fff; }
+      .app { background: var(--ambar); color: var(--navy); }
+      .suave { color: #a9b7cc; text-align: center; font-size: 14px; margin: 0; }
+      .aviso { background: var(--superficie); border: 1px solid var(--borde); border-radius: 16px; padding: 16px; }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <header class="barra">
+        <a href="/"><img src="/favicon.svg" alt="" width="34" height="34" />Tekluma</a>
+      </header>
+      <main class="juego" id="juego"><p class="ayuda">Cargando la pregunta del día…</p></main>
+      <footer>
+        <span>© 2026 Tekluma</span>
+        <a href="/terminos">Términos</a>
+        <a href="/privacidad">Privacidad</a>
+      </footer>
+    </div>
+    <script>
+      // La API vive en api.<este dominio>; en local, en el puerto 8787.
+      const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8787" : `https://api.${location.hostname}`;
+      const raiz = document.getElementById("juego");
+      const pedido = Number(new URLSearchParams(location.search).get("n")) || null;
+      let p = null;
+
+      const guardadas = (n) => {
+        try { return JSON.parse(localStorage.getItem(`diaria:${n}`) || "[]"); } catch { return []; }
+      };
+      const guardar = (n, intentos) => {
+        try { localStorage.setItem(`diaria:${n}`, JSON.stringify(intentos)); } catch {}
+      };
+      const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      const casillas = (e) => e.intentos.map((o) => (o === e.solucion?.correcta ? "✅" : "❌")).join("");
+
+      async function api(ruta, cuerpo) {
+        const r = await fetch(API + ruta, cuerpo ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(cuerpo) } : {});
+        if (!r.ok) throw new Error(await r.text());
+        return r.json();
+      }
+
+      async function cargar() {
+        try {
+          p = await api("/diaria");
+        } catch {
+          raiz.innerHTML = `<p class="aviso">Hoy no pudimos cargar la pregunta. Inténtalo en un rato.</p>`;
+          return;
+        }
+        const previas = guardadas(p.numero);
+        // Rehace el estado guardado en este navegador (la API valida y devuelve la solución si ya terminó).
+        if (previas.length) {
+          try { p.estado = await api("/diaria/intento", { numero: p.numero, opcion: previas[previas.length - 1], previas: previas.slice(0, -1) }); } catch {}
+        }
+        pintar();
+      }
+
+      async function elegir(opcion) {
+        raiz.querySelectorAll(".opcion").forEach((b) => (b.disabled = true));
+        try {
+          p.estado = await api("/diaria/intento", { numero: p.numero, opcion, previas: p.estado.intentos });
+          guardar(p.numero, p.estado.intentos);
+        } catch {
+          return cargar();
+        }
+        pintar();
+      }
+
+      function textoCompartir() {
+        const e = p.estado;
+        const marcador = e.resuelta ? `${e.intentos.length}/${p.intentosMax}` : `X/${p.intentosMax}`;
+        return `Tekluma #${p.numero} · ${p.norma} 🏗️\n${casillas(e)} ${marcador}\n¿Tú la sacas? ${location.origin}/diaria?n=${p.numero}`;
+      }
+
+      function pintar() {
+        const e = p.estado;
+        const restantes = p.intentosMax - e.intentos.length;
+        const viejo = pedido && pedido !== p.numero
+          ? `<p class="aviso">La pregunta #${pedido} ya pasó. Esta es la de hoy 👇</p>` : "";
+        const puntos = Array.from({ length: p.intentosMax }, (_, i) => {
+          const o = e.intentos[i];
+          const color = o === undefined ? "" : (e.terminada && o === e.solucion?.correcta) ? "background:#1f9d55" : "background:#d64545";
+          return `<span class="punto" style="${color}"></span>`;
+        }).join("");
+        const opciones = p.opciones.map((t, i) => {
+          const fallo = e.intentos.includes(i) && !(e.terminada && i === e.solucion?.correcta);
+          const bien = e.terminada && i === e.solucion?.correcta;
+          const clase = bien ? "bien" : fallo ? "mal" : e.terminada ? "apagada" : "";
+          return `<button class="opcion ${clase}" data-i="${i}" ${e.terminada || fallo ? "disabled" : ""}>
+            <span class="letra">${"ABCDEF"[i]}</span><span style="flex:1">${esc(t)}</span>${bien ? "✓" : fallo ? "✕" : ""}</button>`;
+        }).join("");
+        const ayuda = e.terminada ? "" : `<p class="ayuda">${restantes === p.intentosMax ? "Tienes 3 intentos. ¿La sacas a la primera?" : `Te ${restantes === 1 ? "queda 1 intento" : `quedan ${restantes} intentos`}`}</p>`;
+
+        let resultado = "";
+        if (e.terminada) {
+          const s = e.solucion || {};
+          const cita = s.cita ? `<div class="cita">${s.explicacion ? esc(s.explicacion) + "<br><br>" : ""}<b>${esc(p.norma)} · Art. ${esc(s.cita.articulo)}</b> ${esc(s.cita.extracto)}</div>`
+            : s.explicacion ? `<div class="cita">${esc(s.explicacion)}</div>` : "";
+          const titulo = e.resuelta ? (e.intentos.length === 1 ? "¡A la primera! 🎯" : "¡Correcto! 🎉") : "Esta vez no 😅";
+          resultado = `<section class="resultado">
+            <h2>${titulo}</h2>
+            <div class="marcador">${casillas(e)}</div>
+            ${cita}
+            <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(textoCompartir())}">Retar a mi grupo de WhatsApp</a>
+            <a class="btn app" href="tekluma://diaria">Gana monedas y guarda tu racha en la app</a>
+            <p class="suave">En la app: hasta +${p.premios[0]} monedas al día, racha y repaso de todo el RNE. Muy pronto en App Store y Google Play.</p>
+          </section>`;
+        }
+
+        raiz.innerHTML = `${viejo}
+          <div class="cab"><span class="num">PREGUNTA DEL DÍA #${p.numero} · ${esc(p.norma)}</span><span class="puntos">${puntos}</span></div>
+          <p class="pregunta">${esc(p.pregunta)}</p>${ayuda}
+          <div style="display:flex;flex-direction:column;gap:10px">${opciones}</div>${resultado}`;
+        raiz.querySelectorAll(".opcion:not([disabled])").forEach((b) => b.addEventListener("click", () => elegir(Number(b.dataset.i))));
+      }
+
+      cargar();
+    </script>
+  </body>
+</html>

@@ -2,9 +2,10 @@ import { useCallback, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
-import type { EstadoCupo } from "@tekluma/shared";
+import type { EstadoCupo, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, NumeroAnimado } from "@/components/Animaciones";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
+import { obtenerDiaria } from "@/lib/diaria";
 import { paquetesLocales } from "@/lib/mazos";
 import { pendientes, sincronizar } from "@/lib/repaso";
 import { useTema } from "@/lib/tema";
@@ -15,6 +16,7 @@ export default function Hoy() {
   const t = useTema();
   const [resumen, setResumen] = useState<Resumen[] | null>(null);
   const [cupo, setCupo] = useState<EstadoCupo | null>(cupoEnCache);
+  const [diaria, setDiaria] = useState<PreguntaDiaria | null>(null);
 
   useFocusEffect(
     useCallback(() => {
@@ -32,6 +34,9 @@ export default function Hoy() {
       obtenerCupo()
         .then(setCupo)
         .catch(() => {});
+      obtenerDiaria()
+        .then(setDiaria)
+        .catch(() => {});
       // Sube el progreso en segundo plano; si no hay conexión se reintenta luego.
       sincronizar().catch(() => {});
     }, []),
@@ -45,6 +50,8 @@ export default function Hoy() {
     <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={estilos.contenedor} contentInsetAdjustmentBehavior="automatic">
       <Text style={[estilos.saludo, { color: t.textoSuave }]}>Hoy</Text>
       <Text style={[estilos.titulo, { color: t.texto }]}>Que la norma fragüe.</Text>
+
+      {diaria && <TarjetaDiaria diaria={diaria} />}
 
       <Animated.View entering={FadeInDown.springify()} style={[estilos.tarjeta, { backgroundColor: t.navy }]}>
         <NumeroAnimado valor={total} style={estilos.numero} />
@@ -102,7 +109,31 @@ export default function Hoy() {
   );
 }
 
+/** Acceso a la pregunta del día: invita a jugar o, si ya jugó, a compartir. */
+function TarjetaDiaria({ diaria }: { diaria: PreguntaDiaria }) {
+  const t = useTema();
+  const { estado } = diaria;
+  const marcador = estado.intentos.map((o) => (o === estado.solucion?.correcta ? "✅" : "❌")).join("");
+  return (
+    <Animated.View entering={FadeInDown.springify()}>
+      <BotonVivo onPress={() => router.push("/diaria")} style={[estilos.diaria, { backgroundColor: t.superficie, borderColor: estado.terminada ? t.borde : t.ambar }]}>
+        <Text style={{ fontSize: 30 }}>{estado.terminada ? (estado.resuelta ? "🎯" : "🧱") : "❓"}</Text>
+        <View style={{ flex: 1, gap: 2 }}>
+          <Text style={{ color: t.ambar, fontWeight: "800", fontSize: 13 }}>
+            PREGUNTA DEL DÍA #{diaria.numero} · {diaria.norma}
+          </Text>
+          <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>
+            {estado.terminada ? `${marcador}  ·  Reta a tu grupo` : `Juega y gana hasta +${diaria.premios[0]} monedas`}
+          </Text>
+        </View>
+        <Text style={{ color: t.ambar, fontSize: 22, fontWeight: "800" }}>›</Text>
+      </BotonVivo>
+    </Animated.View>
+  );
+}
+
 const estilos = StyleSheet.create({
+  diaria: { flexDirection: "row", alignItems: "center", gap: 14, padding: 16, borderRadius: 18, borderWidth: 1.5, marginBottom: 8 },
   contenedor: { padding: 20, gap: 8 },
   saludo: { fontSize: 15, fontWeight: "600" },
   titulo: { fontSize: 28, fontWeight: "800", letterSpacing: -0.5, marginBottom: 16 },
