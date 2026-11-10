@@ -38,7 +38,7 @@ export function guardarAjuste(clave: string, valor: unknown) {
   );
 }
 
-/** Borra el progreso y los ajustes del usuario; los paquetes (contenido público) se conservan. */
-export function borrarDatosDeUsuario() {
-  db.execSync("delete from estados; delete from ajustes;");
+/** Deja el dispositivo limpio: progreso, ajustes y los mazos descargados (contenido exclusivo de Tekluma). */
+export function borrarDatosLocales() {
+  db.execSync("delete from estados; delete from ajustes; delete from paquetes;");
 }

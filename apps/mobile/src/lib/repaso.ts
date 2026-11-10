@@ -1,4 +1,4 @@
-import { createEmptyCard, fsrs, Rating, type Card, type Grade } from "ts-fsrs";
+import { createEmptyCard, fsrs, Rating, type Card, type Grade, type State } from "ts-fsrs";
 import type { EstadoRepaso } from "@tekluma/shared";
 import { api } from "./auth";
 import { db } from "./db";
@@ -67,4 +67,38 @@ export async function sincronizar() {
     db.runSync("update estados set sincronizado = 1 where tarjeta_id = ? and tarjeta = ?", f.tarjeta_id, f.tarjeta);
   }
   return filas.length;
+}
+
+const DIA = 24 * 60 * 60 * 1000;
+
+/**
+ * Trae del servidor el progreso del mazo (tras iniciar sesión o volver a descargarlo).
+ * No pisa repasos locales aún sin subir.
+ */
+export async function restaurarProgreso(mazoId: string) {
+  const estados = await api<EstadoRepaso[]>(`/repasos?mazo=${mazoId}`);
+  for (const e of estados) {
+    const ultimo = e.ultimoRepaso ? new Date(e.ultimoRepaso) : undefined;
+    const due = new Date(e.vence);
+    const card: Card = {
+      ...createEmptyCard(due),
+      due,
+      stability: e.estabilidad,
+      difficulty: e.dificultad,
+      reps: e.repeticiones,
+      lapses: e.fallos,
+      state: e.estado as State,
+      last_review: ultimo,
+      scheduled_days: ultimo ? Math.max(0, Math.round((due.getTime() - ultimo.getTime()) / DIA)) : 0,
+    };
+    db.runSync(
+      `insert into estados (tarjeta_id, mazo_id, vence, tarjeta, sincronizado) values (?, ?, ?, ?, 1)
+       on conflict (tarjeta_id) do update set vence = excluded.vence, tarjeta = excluded.tarjeta
+       where estados.sincronizado = 1`,
+      e.tarjetaId,
+      mazoId,
+      due.getTime(),
+      JSON.stringify(card),
+    );
+  }
 }

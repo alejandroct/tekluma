@@ -2,6 +2,7 @@ import type { MazoCatalogo, PaqueteMazo } from "@tekluma/shared";
 import { api } from "./auth";
 import { obtenerCupo } from "./cupo";
 import { db } from "./db";
+import { restaurarProgreso } from "./repaso";
 
 export type MazoConAcceso = MazoCatalogo & { abierto: boolean; descargado: boolean; desactualizado: boolean };
 
@@ -15,6 +16,10 @@ export async function obtenerCatalogo(): Promise<MazoConAcceso[]> {
       db.runSync("delete from paquetes where mazo_id = ?", mazo_id);
       db.runSync("delete from estados where mazo_id = ?", mazo_id);
     }
+  }
+  // Mazos Premium sin suscripción vigente (p. ej. venció) tampoco quedan en el dispositivo.
+  if (!cupo.premium) {
+    for (const m of catalogo) if (m.acceso === "premium") db.runSync("delete from paquetes where mazo_id = ?", m.id);
   }
   const locales = new Map(
     db.getAllSync<{ mazo_id: string; version: number }>("select mazo_id, version from paquetes").map((p) => [p.mazo_id, p.version]),
@@ -36,6 +41,8 @@ export async function descargarPaquete(mazoId: string): Promise<PaqueteMazo> {
     paquete.version,
     JSON.stringify(paquete),
   );
+  // Si no hay conexión el mazo igual queda listo; el progreso se restaura en la próxima descarga.
+  await restaurarProgreso(mazoId).catch(() => {});
   return paquete;
 }
 
