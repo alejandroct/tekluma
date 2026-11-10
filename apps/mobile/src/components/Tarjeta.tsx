@@ -56,7 +56,7 @@ export function Tarjeta({ contenido, revelada, onRevelar }: Props) {
           {revelada ? (
             <View style={[estilos.tabla, { borderColor: t.borde }]}>
               {contenido.filas.map((r, i) => (
-                <View key={r.etiqueta} style={[estilos.filaTabla, i === fila && { backgroundColor: t.ambar }]}>
+                <View key={r.etiqueta} style={[estilos.filaTabla, i === fila && { backgroundColor: "rgba(255,138,31,0.14)", borderLeftWidth: 3, borderLeftColor: t.ambar }]}>
                   <Text style={{ color: i === fila ? t.navy : t.texto, fontWeight: i === fila ? "800" : "400" }}>{r.etiqueta}</Text>
                   <Text style={{ color: i === fila ? t.navy : t.texto, fontWeight: "700" }}>{r.valores[columna]}</Text>
                 </View>
@@ -141,7 +141,7 @@ function CasoNumerico({ contenido, revelada, onRevelar }: Props & { contenido: E
 function Respuesta({ children }: { children: React.ReactNode }) {
   const t = useTema();
   return (
-    <View style={[estilos.respuesta, { borderColor: t.ambar }]}>
+    <View style={[estilos.respuesta, { borderColor: t.ambar, backgroundColor: t.superficie }]}>
       <Text style={[estilos.texto, { color: t.texto, fontWeight: "700" }]}>{children}</Text>
     </View>
   );
@@ -150,8 +150,8 @@ function Respuesta({ children }: { children: React.ReactNode }) {
 function BotonRevelar({ onPress, texto = "Mostrar respuesta" }: { onPress: () => void; texto?: string }) {
   const t = useTema();
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [estilos.revelar, { backgroundColor: t.navy, opacity: pressed ? 0.8 : 1 }]}>
-      <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: "700" }}>{texto}</Text>
+    <Pressable onPress={onPress} style={({ pressed }) => [estilos.revelar, { backgroundColor: t.primario, opacity: pressed ? 0.85 : 1 }]}>
+      <Text style={{ color: t.sobrePrimario, fontSize: 16, fontWeight: "700" }}>{texto}</Text>
     </Pressable>
   );
 }
@@ -160,7 +160,7 @@ const estilos = StyleSheet.create({
   cuerpo: { gap: 14 },
   texto: { fontSize: 20, lineHeight: 28 },
   suave: { fontSize: 15, lineHeight: 21 },
-  respuesta: { borderLeftWidth: 4, paddingLeft: 14, paddingVertical: 4 },
+  respuesta: { borderLeftWidth: 3, paddingLeft: 14, paddingRight: 14, paddingVertical: 12, borderRadius: 4 },
   revelar: { borderRadius: 8, paddingVertical: 14, alignItems: "center", marginTop: 8 },
   opcion: { borderWidth: 1, borderRadius: 8, padding: 14 },
   tabla: { borderWidth: 1, borderRadius: 8, overflow: "hidden" },

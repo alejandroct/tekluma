@@ -11,7 +11,7 @@ import { intersticialAlTerminar } from "@/lib/anuncios";
 import { consumirTarjeta, cupoEnCache } from "@/lib/cupo";
 import { descargarPaquete, paqueteLocal } from "@/lib/mazos";
 import { calificar, pendientes, Rating, sincronizar } from "@/lib/repaso";
-import { useTema } from "@/lib/tema";
+import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
 import { IconoHito } from "@/components/Iconos";
 
 const NOTAS: { nota: Grade; texto: string; color: string }[] = [
@@ -137,10 +137,23 @@ export default function Repaso() {
   return (
     <View style={{ flex: 1, backgroundColor: t.fondo }}>
       <ScrollView contentContainerStyle={{ padding: 20, gap: 16 }}>
-        <Text style={{ color: t.textoSuave, fontWeight: "600" }}>
-          {mazo.norma.codigo} · quedan {cola.length}
-          {cupo && !cupo.premium ? ` · cupo de hoy: ${cupo.restantes}` : ""}
-        </Text>
+        {/* Rótulo de la sesión: norma, pendientes y cupo, como en una hoja de plano. */}
+        <View style={[estilos.rotulo, { borderColor: t.borde }]}>
+          <View style={estilos.celda}>
+            <Text style={[estilos.celdaEtiqueta, { color: t.textoSuave }]}>NORMA</Text>
+            <Text style={[estilos.celdaValor, { color: t.texto }]}>{mazo.norma.codigo}</Text>
+          </View>
+          <View style={[estilos.celda, { borderLeftWidth: StyleSheet.hairlineWidth, borderColor: t.borde }]}>
+            <Text style={[estilos.celdaEtiqueta, { color: t.textoSuave }]}>QUEDAN</Text>
+            <Text style={[estilos.celdaValor, { color: t.texto }]}>{cola.length}</Text>
+          </View>
+          {cupo && !cupo.premium && (
+            <View style={[estilos.celda, { borderLeftWidth: StyleSheet.hairlineWidth, borderColor: t.borde }]}>
+              <Text style={[estilos.celdaEtiqueta, { color: t.textoSuave }]}>CUPO HOY</Text>
+              <Text style={[estilos.celdaValor, { color: t.texto }]}>{cupo.restantes}</Text>
+            </View>
+          )}
+        </View>
         <Animated.View key={`${actual.id}-${cola.length}`} entering={FadeInRight.springify().damping(16)}>
           <Tarjeta contenido={actual.contenido} revelada={revelada} onRevelar={() => setRevelada(true)} />
         </Animated.View>
@@ -152,7 +165,7 @@ export default function Repaso() {
               style={[estilos.cita, { backgroundColor: t.superficie, borderColor: t.borde }]}
             >
               <Text style={[estilos.citaArticulo, { color: t.ambar }]}>
-                {mazo.norma.codigo} · Art. {c.articulo}
+                {mazo.norma.codigo} · ART. {c.articulo}
               </Text>
               <Text style={{ color: t.textoSuave, fontSize: 14, lineHeight: 20 }}>{c.extracto}</Text>
             </Animated.View>
@@ -161,8 +174,12 @@ export default function Repaso() {
       {revelada && (
         <Animated.View entering={FadeInUp.springify().damping(18)} style={[estilos.notas, { borderColor: t.borde, backgroundColor: t.superficie }]}>
           {NOTAS.map((n) => (
-            <Pressable key={n.texto} onPress={() => responder(n.nota)} style={({ pressed }) => [estilos.nota, { backgroundColor: n.color, opacity: pressed ? 0.8 : 1 }]}>
-              <Text style={estilos.notaTexto}>{n.texto}</Text>
+            <Pressable
+              key={n.texto}
+              onPress={() => responder(n.nota)}
+              style={({ pressed }) => [estilos.nota, { borderColor: t.borde, backgroundColor: pressed ? t.fondo : t.superficie, borderTopColor: n.color }]}
+            >
+              <Text style={[estilos.notaTexto, { color: t.texto }]}>{n.texto}</Text>
             </Pressable>
           ))}
         </Animated.View>
@@ -173,10 +190,14 @@ export default function Repaso() {
 
 const estilos = StyleSheet.create({
   notas: { flexDirection: "row", gap: 8, padding: 16, paddingBottom: 36, borderTopWidth: StyleSheet.hairlineWidth },
-  nota: { flex: 1, borderRadius: 8, paddingVertical: 14, alignItems: "center" },
-  notaTexto: { color: "#FFFFFF", fontWeight: "700" },
+  nota: { flex: 1, borderRadius: 6, paddingVertical: 14, alignItems: "center", borderWidth: 1, borderTopWidth: 3 },
+  notaTexto: { fontWeight: "700", fontSize: 15 },
   cita: { borderWidth: StyleSheet.hairlineWidth, borderRadius: 8, padding: 14, gap: 4 },
-  citaArticulo: { fontSize: 13, fontWeight: "700", letterSpacing: 0.3 },
+  citaArticulo: { fontSize: 12, fontFamily: MONO_FUERTE, letterSpacing: 0.6 },
+  rotulo: { flexDirection: "row", borderWidth: StyleSheet.hairlineWidth, borderRadius: 6 },
+  celda: { flex: 1, paddingHorizontal: 12, paddingVertical: 8, gap: 2 },
+  celdaEtiqueta: { fontSize: 10, fontFamily: MONO, letterSpacing: 1.2 },
+  celdaValor: { fontSize: 16, fontFamily: MONO_FUERTE },
   fin: { flex: 1, alignItems: "center", justifyContent: "center", gap: 20 },
   finTitulo: { fontSize: 26, fontWeight: "700" },
   finBoton: { borderRadius: 8, paddingVertical: 14, paddingHorizontal: 40 },
