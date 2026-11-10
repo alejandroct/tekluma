@@ -32,8 +32,13 @@ export default function NuevoDuelo() {
     try {
       const duelo = await crearDuelo(norma);
       router.replace(`/duelo/${duelo.codigo}`);
-    } catch {
-      Alert.alert("No pudimos crear el duelo", "Revisa tu conexión e inténtalo de nuevo.");
+    } catch (e) {
+      // 409: there are not yet 5 published multiple-choice questions for that standard.
+      if (String((e as Error).message).endsWith("409")) {
+        Alert.alert("Aún no hay preguntas suficientes", "Un duelo necesita 5 preguntas de opción múltiple publicadas. Prueba con otra norma o vuelve pronto.");
+      } else {
+        Alert.alert("No pudimos crear el duelo", "Revisa tu conexión e inténtalo de nuevo.");
+      }
     } finally {
       setCreando(false);
     }
@@ -50,6 +55,10 @@ export default function NuevoDuelo() {
       <Text style={[estilos.etiqueta, { color: t.textoSuave }]}>NORMA</Text>
       {normas === null ? (
         <ActivityIndicator color={t.ambar} />
+      ) : normas.length === 0 ? (
+        <Text style={[estilos.texto, { color: t.textoSuave }]}>
+          Todavía no hay suficientes preguntas publicadas para armar un duelo. Vuelve cuando haya más mazos disponibles.
+        </Text>
       ) : (
         <View style={estilos.chips}>
           {[undefined, ...normas].map((n) => {
@@ -67,7 +76,7 @@ export default function NuevoDuelo() {
         </View>
       )}
 
-      <BotonVivo disabled={creando} onPress={crear} style={[estilos.boton, { backgroundColor: t.primario }]}>
+      <BotonVivo disabled={creando || normas?.length === 0} onPress={crear} style={[estilos.boton, { backgroundColor: t.primario, opacity: normas?.length === 0 ? 0.4 : 1 }]}>
         {creando ? <ActivityIndicator color={t.sobrePrimario} /> : <Text style={[estilos.botonTexto, { color: t.sobrePrimario }]}>Empezar duelo</Text>}
       </BotonVivo>
 
