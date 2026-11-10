@@ -7,10 +7,13 @@ import { db } from "./db/client";
 import * as schema from "./db/schema";
 import { enviarCorreo } from "./correo";
 
-const { APPLE_CLIENT_ID, APPLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_URL, COOKIE_DOMAIN } = process.env;
+const { APPLE_CLIENT_ID, APPLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_URL, WEB_URL, COOKIE_DOMAIN } = process.env;
 
 /** Origins allowed to use cookie-based sessions (the editorial panel). */
 export const origenesPanel = ADMIN_URL ? [ADMIN_URL] : ["http://localhost:5173"];
+
+/** Browser origins allowed by CORS: the panel plus the public site (daily question, duels). */
+export const origenesWeb = [...origenesPanel, ...(WEB_URL ? [WEB_URL] : ["http://localhost:5180"])];
 
 export const auth = betterAuth({
   basePath: "/auth",

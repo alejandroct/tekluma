@@ -24,6 +24,7 @@ export const COIN_REASONS = [
   "ad", // rewarded ad
   "purchase", // IAP coin pack
   "extra_cards", // spent to extend today's quota
+  "daily_question", // solving the daily question
   "check_in", // daily check-in reward
   "bonus", // referrals, welcome, promotions
   "adjustment", // manual support correction

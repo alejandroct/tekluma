@@ -41,6 +41,7 @@ export default $config({
       BETTER_AUTH_URL: `https://api.${dominio}`,
       CORREO_PROVEEDOR: "ses",
       ADMIN_URL: `https://admin.${dominio}`,
+      WEB_URL: `https://${dominio}`,
       COOKIE_DOMAIN: dominio,
       CORREO_REMITENTE: `Tekluma <hola@${dominio}>`,
       ...Object.fromEntries(Object.entries(secretos).map(([clave, secreto]) => [clave, secreto.value])),

@@ -265,6 +265,33 @@ export const adRewards = pgTable("ad_rewards", {
   createdAt: createdAt(),
 });
 
+// ───────────── Daily question ─────────────
+
+/** One multiple-choice card per Lima day, the same for everyone. */
+export const dailyQuestions = pgTable("daily_questions", {
+  day: date("day").primaryKey(),
+  number: integer("number").notNull().unique(),
+  cardId: uuid("card_id")
+    .notNull()
+    .references(() => cards.id),
+  createdAt: createdAt(),
+});
+
+/** A user's guesses, stored one by one so a wrong answer cannot be retried. */
+export const dailyAnswers = pgTable(
+  "daily_answers",
+  {
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    day: date("day").notNull(),
+    guesses: jsonb("guesses").$type<number[]>().notNull().default([]),
+    solved: boolean("solved").notNull().default(false),
+    finishedAt: timestamp("finished_at", { withTimezone: true }),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.day] })],
+);
+
 // ───────────── Progress (FSRS) ─────────────
 
 /** Server copy of the FSRS state; the app is the primary source (offline-first). */

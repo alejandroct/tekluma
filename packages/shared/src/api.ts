@@ -84,3 +84,45 @@ export const estadoRecompensasSchema = z.object({
 export type EstadoRecompensas = z.infer<typeof estadoRecompensasSchema>;
 
 export const consumirTarjetaSchema = z.object({ tarjetaId: z.uuid() });
+
+/** Pregunta del día: la misma para todos, numerada como el Wordle (#1 = 1 nov 2026). */
+export const solucionDiariaSchema = z.object({
+  correcta: z.number().int(),
+  explicacion: z.string().optional(),
+  cita: z.object({ articulo: z.string(), extracto: z.string() }).optional(),
+});
+export type SolucionDiaria = z.infer<typeof solucionDiariaSchema>;
+
+export const estadoDiariaSchema = z.object({
+  /** Opciones elegidas en orden (índices). */
+  intentos: z.array(z.number().int()),
+  resuelta: z.boolean(),
+  terminada: z.boolean(),
+  /** Solo cuando terminó (acertó o agotó intentos). */
+  solucion: solucionDiariaSchema.optional(),
+  /** Días seguidos jugando; solo con sesión. */
+  racha: z.number().int().optional(),
+  /** Monedas ganadas al resolverla; solo con sesión. */
+  monedas: z.number().int().optional(),
+});
+export type EstadoDiaria = z.infer<typeof estadoDiariaSchema>;
+
+export const preguntaDiariaSchema = z.object({
+  numero: z.number().int().positive(),
+  fecha: z.iso.date(),
+  norma: z.string(),
+  pregunta: z.string(),
+  opciones: z.array(z.string()),
+  intentosMax: z.number().int().positive(),
+  /** Monedas por acertar al 1.er, 2.º y 3.er intento. */
+  premios: z.array(z.number().int()),
+  estado: estadoDiariaSchema,
+});
+export type PreguntaDiaria = z.infer<typeof preguntaDiariaSchema>;
+
+export const intentoDiariaSchema = z.object({
+  numero: z.number().int().positive(),
+  opcion: z.number().int().nonnegative(),
+  /** Sin sesión (web): intentos previos que lleva el navegador. */
+  previas: z.array(z.number().int().nonnegative()).max(5).default([]),
+});

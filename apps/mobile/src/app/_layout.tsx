@@ -67,6 +67,7 @@ export default function RootLayout() {
               ),
             }}
           />
+          <Stack.Screen name="diaria" options={{ title: "Pregunta del día", presentation: "modal", headerShadowVisible: false }} />
           <Stack.Screen name="premium" options={{ title: "", presentation: "modal", headerShadowVisible: false }} />
         </Stack.Protected>
       </Stack>
