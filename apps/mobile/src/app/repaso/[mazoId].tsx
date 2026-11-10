@@ -166,6 +166,7 @@ export default function Repaso() {
             >
               <Text style={[estilos.citaArticulo, { color: t.ambar }]}>
                 {mazo.norma.codigo} · ART. {c.articulo}
+                {c.pagina ? ` · PÁG. ${c.pagina}` : ""}
               </Text>
               <Text style={{ color: t.textoSuave, fontSize: 14, lineHeight: 20 }}>{c.extracto}</Text>
             </Animated.View>

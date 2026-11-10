@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import type { ContenidoTarjeta } from "@tekluma/shared";
 import { generarCaso } from "@/lib/caso";
 import { useTema } from "@/lib/tema";
@@ -10,8 +10,41 @@ type Props = {
   onRevelar: () => void;
 };
 
+/**
+ * Figura de la norma (gráfico o tabla extraída del PDF). Va embebida en el paquete, así que se
+ * cifra con él; se muestra sobre blanco para que se lea igual en modo oscuro.
+ */
+function Figura({ uri }: { uri: string }) {
+  const t = useTema();
+  const [proporcion, setProporcion] = useState(4 / 3);
+  return (
+    <View style={[estilos.figura, { borderColor: t.borde }]}>
+      <Image
+        source={{ uri }}
+        style={{ width: "100%", aspectRatio: proporcion }}
+        resizeMode="contain"
+        onLoad={(e) => {
+          const { width, height } = e.nativeEvent.source;
+          if (width && height) setProporcion(width / height);
+        }}
+      />
+    </View>
+  );
+}
+
 /** Muestra el anverso según el tipo de tarjeta y, al revelarse, la respuesta. */
-export function Tarjeta({ contenido, revelada, onRevelar }: Props) {
+export function Tarjeta(props: Props) {
+  const { imagenUrl } = props.contenido;
+  if (!imagenUrl) return <Anverso {...props} />;
+  return (
+    <View style={estilos.cuerpo}>
+      <Figura uri={imagenUrl} />
+      <Anverso {...props} />
+    </View>
+  );
+}
+
+function Anverso({ contenido, revelada, onRevelar }: Props) {
   const t = useTema();
   const texto = [estilos.texto, { color: t.texto }];
   const suave = [estilos.suave, { color: t.textoSuave }];
@@ -166,5 +199,6 @@ const estilos = StyleSheet.create({
   tabla: { borderWidth: 1, borderRadius: 8, overflow: "hidden" },
   filaTabla: { flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 14, paddingVertical: 10 },
   // letterSpacing explícito: iOS reutiliza vistas nativas de TextInput y puede heredar el de otra pantalla.
+  figura: { backgroundColor: "#FFFFFF", borderWidth: StyleSheet.hairlineWidth, borderRadius: 4, padding: 8 },
   input: { borderWidth: 1, borderRadius: 8, padding: 14, fontSize: 18, letterSpacing: 0 },
 });

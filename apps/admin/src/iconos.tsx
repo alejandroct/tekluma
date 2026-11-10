@@ -153,3 +153,12 @@ export const IconoCandado = (p: Props) => (
     <path d="M10 11.75V14.25" />
   </Icono>
 );
+
+/** Bulk import: arrow down into an open tray. */
+export const IconoImportar = (p: Props) => (
+  <Icono {...p}>
+    <path d="M10 2.75V12.25" />
+    <path d="M6.25 8.5L10 12.25L13.75 8.5" />
+    <path d="M2.75 12.75V17.25H17.25V12.75" />
+  </Icono>
+);

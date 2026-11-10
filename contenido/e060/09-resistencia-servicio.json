@@ -1,0 +1,1323 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "9.1",
+   "epigrafe": "Generalidades",
+   "texto": "GENERALIDADES",
+   "pagina": 63
+  },
+  {
+   "numero": "9.1.1",
+   "texto": "Las estructuras y los elementos estructurales deberán diseñarse para obtener en todas sus secciones resistencias de diseño (φRn) por lo menos iguales a las resistencias requeridas (Ru), calculadas para las cargas y fuerzas amplificadas en las combinaciones que se estipulan en esta Norma. En todas las secciones de los elementos estructurales deberá cumplirse:\n φ Rn ≥ Ru",
+   "pagina": 63
+  },
+  {
+   "numero": "9.1.2",
+   "texto": "Las estructuras y los elementos estructurales deberán cumplir además con todos los demás requisitos de esta Norma, para garantizar un comportamiento adecuado bajo cargas de servicio.\n PARTE 1 - REQUISITOS GENERALES DE RESISTENCIA",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2",
+   "epigrafe": "Resistencia Requerida",
+   "texto": "RESISTENCIA REQUERIDA",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2.1",
+   "texto": "La resistencia requerida para cargas muertas (CM) y cargas vivas (CV) será como mínimo:\n U = 1,4 CM + 1,7 CV (9-1)",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2.2",
+   "texto": "Si en el diseño se tuvieran que considerar cargas de viento (CVi), además de lo indicado en 9.2.1, la resistencia requerida será como mínimo:\n U = 1,25 ( CM + CV ± CVi ) (9-2)\n U = 0,9 CM ± 1,25 CVi (9-3)",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2.3",
+   "texto": "Si en el diseño se tuvieran que considerar cargas de sismo (CS), además de lo indicado en 9.2.1, la resistencia requerida será como mínimo:\n U = 1,25 (CM + CV) ± CS\n (9-4)\n U = 0,9 CM ± CS (9-5)",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2.4",
+   "texto": "No será necesario considerar acciones de sismo y de viento simultáneamente.",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2.5",
+   "texto": "Si fuera necesario incluir en el diseño el efecto del peso y empuje lateral de los suelos (CE), la presión ejercida por el agua contenida en el suelo o la presión y peso ejercidos por otros materiales, además de lo indicado en 9.2.1, la resistencia requerida será como mínimo:\n U = 1,4 CM + 1,7 CV + 1,7 CE (9-6)\n En el caso en que la carga muerta o la carga viva reduzcan el efecto del empuje lateral, se usará:\n U = 0,9 CM + 1,7 CE (9-7)",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2.6",
+   "texto": "Si fuera necesario incluir en el diseño el efecto de cargas debidas a peso y presión de líquidos (CL) con densidades bien definidas y alturas máximas controladas, además de los indicado en 9.2.1, la resistencia requerida será como mínimo:\n\n U = 1,4 CM + 1,7 CV + 1,4 CL (9-8)",
+   "pagina": 63
+  },
+  {
+   "numero": "9.2.7",
+   "texto": "Si fuera necesario incluir en el diseño el efecto de cargas de impacto, éstas deberán incluirse en la carga viva (CV).",
+   "pagina": 64
+  },
+  {
+   "numero": "9.2.8",
+   "texto": "Si fuera necesario incluir en el diseño el efecto de las cargas de nieve o granizo, éstas deberán considerarse como cargas vivas (CV).",
+   "pagina": 64
+  },
+  {
+   "numero": "9.2.9",
+   "texto": "Si fuera necesario incluir los efectos (CT) de los asentamientos diferenciales, flujo plástico del concreto, retracción restringida del concreto, expansión de concretos con retracción compensada o cambios de temperatura, la resistencia requerida, además de lo indicado en 9.2.1, deberá será como mínimo:\n U = 1,05 CM + 1,25 CV + 1,05 CT (9-9)\n U = 1,4 CM + 1,4 CT (9-10)",
+   "pagina": 64
+  },
+  {
+   "numero": "9.2.10",
+   "texto": "Las estimaciones de los asentamientos diferenciales, flujo plástico del concreto, retracción restringida, la expansión de concretos de retracción compensada o cambios de temperatura deben basarse en una determinación realista de tales efectos durante la vida útil de la estructura.",
+   "pagina": 64
+  },
+  {
+   "numero": "9.2.11",
+   "texto": "Para el diseño de zonas de anclaje de tendones de postensado, se aplicará un factor de carga de 1,2 a la fuerza máxima aplicada por el gato.",
+   "pagina": 64
+  },
+  {
+   "numero": "9.3",
+   "epigrafe": "Resistencia De Diseño",
+   "texto": "RESISTENCIA DE DISEÑO",
+   "pagina": 64
+  },
+  {
+   "numero": "9.3.1",
+   "texto": "Las resistencias de diseño (φRn) proporcionada por un elemento, sus conexiones con otros elementos, así como sus secciones transversales, en términos de flexión, carga axial, cortante y torsión, deben tomarse como la resistencia nominal calculada de acuerdo con los requisitos y suposiciones de esta Norma, multiplicada por los factores φ de reducción de resistencia especificados a continuación.",
+   "pagina": 64
+  },
+  {
+   "numero": "9.3.2",
+   "texto": "El factor de reducción de resistencia,\n\n φ, debe ser el especificado en 9.3.2.1 a 9.3.2.8:",
+   "pagina": 64
+  },
+  {
+   "numero": "9.3.2.1",
+   "texto": "Flexión sin carga axial … 0,90",
+   "pagina": 64
+  },
+  {
+   "numero": "9.3.2.2",
+   "texto": "Carga axial y carga axial con flexión:\n (a) Carga axial de tracción con o sin flexión … 0,90 (b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70\n Para elementos en flexocompresión puede incrementarse linealmente hasta 0,90 en la medida que\n\n φPn disminuye desde 0,1 f’c Ag ó\n\n φPb, el que sea menor, hasta cero.",
+   "pagina": 64
+  },
+  {
+   "numero": "9.3.2.3",
+   "texto": "Cortante y torsión … 0,85",
+   "pagina": 64
+  },
+  {
+   "numero": "9.3.2.4",
+   "texto": "Aplastamiento en el concreto (excepto para las zonas de anclajes de postensado)…. 0,70",
+   "pagina": 65
+  },
+  {
+   "numero": "9.3.2.5",
+   "texto": "Zonas de anclaje de postensado … 0,85",
+   "pagina": 65
+  },
+  {
+   "numero": "9.3.2.6",
+   "texto": "Las secciones en flexión en los elementos pretensados donde la longitud embebida del torón (strand) es menor que la longitud de desarrollo, como se establece en 12.9.1.1:\n (a) Desde el extremo del elemento hasta el extremo de la longitud de transferencia … 0,75 (b) Desde el extremo de la longitud de transferencia hasta el extremo de la longitud de desarrollo,\n\n φ puede incrementarse linealmente desde 0,75 hasta 0,9.\n Donde la adherencia del torón no se extiende hasta el extremo del elemento, se debe asumir que el embebido del torón se inicia en el extremo de la longitud no adherida (véase también 12.9.3).",
+   "pagina": 65
+  },
+  {
+   "numero": "9.3.2.7",
+   "texto": "Las longitudes de desarrollo especificadas en el capítulo 12 no requieren de un factor\n\n φ.",
+   "pagina": 65
+  },
+  {
+   "numero": "9.3.2.8",
+   "texto": "En el Capítulo 22, concreto estructural simple,\n\n φ debe ser 0,65 para flexión, compresión, cortante y aplastamiento.",
+   "pagina": 65
+  },
+  {
+   "numero": "9.4",
+   "epigrafe": "Resistencia Mínima Del Concreto Estructural",
+   "texto": "RESISTENCIA MÍNIMA DEL CONCRETO ESTRUCTURAL",
+   "pagina": 65
+  },
+  {
+   "numero": "9.4.1",
+   "texto": "Para el concreto estructural, f’c no debe ser inferior a 17 MPa, salvo para concreto estructural simple (véase 22.2.4). No se establece un valor máximo para f’c salvo que se encuentre restringido por alguna disposición específica de esta Norma (véase 21.3.2).",
+   "pagina": 65
+  },
+  {
+   "numero": "9.5",
+   "epigrafe": "Resistencia De Diseño Para El Refuerzo",
+   "texto": "RESISTENCIA DE DISEÑO PARA EL REFUERZO",
+   "pagina": 65
+  },
+  {
+   "numero": "9.5.1",
+   "texto": "Los valores de fy y fyt usados en los cálculos de diseño no deben exceder de 550 MPa, excepto para los aceros de preesforzado, para los refuerzos transversales en espiral en 10.9.3, el refuerzo por cortante y torsión (véase 11.5.2 y 11.6.3.4). Para los elementos con responsabilidad sísmica, véase 21.3.3.\n\n PARTE 2 - REQUISITOS GENERALES DE SERVICIO\n Para estimar los esfuerzos en el acero y el concreto producidos por las acciones exteriores en condiciones de servicio, pueden utilizarse las hipótesis usuales de la teoría elástica de vigas. Si el momento actuante en servicio es menor que el momento asociado con el agrietamiento por flexión de la sección, se considerará la sección completa del concreto sin tener en cuenta el acero de refuerzo. Si el momento actuante es mayor que el momento de agrietamiento se utilizarán las propiedades de la sección agrietada transformada, despreciando el aporte del concreto en la zona de tracción.",
+   "pagina": 65
+  },
+  {
+   "numero": "9.6",
+   "epigrafe": "Control De Deflexiones",
+   "texto": "CONTROL DE DEFLEXIONES",
+   "pagina": 65
+  },
+  {
+   "numero": "9.6.1",
+   "texto": "Los elementos de concreto reforzado sometidos a flexión deben diseñarse para que tengan una rigidez adecuada con el fin de limitar cualquier deformación que pudiese afectar adversamente la resistencia o el funcionamiento de la estructura bajo condiciones de servicio.",
+   "pagina": 65
+  },
+  {
+   "numero": "9.6.2",
+   "epigrafe": "Elementos reforzados en una dirección (no preesforzados)",
+   "texto": "Elementos reforzados en una dirección (no preesforzados)",
+   "pagina": 66
+  },
+  {
+   "numero": "9.6.2.1",
+   "texto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas) que no soporten o estén ligados a elementos no estructurales susceptibles de dañarse por deflexiones excesivas del elemento estructural. Estos límites pueden obviarse si el cálculo de las deflexiones demuestra que es posible utilizar un espesor menor sin provocar efectos adversos.\n\n TABLA 9.1 PERALTES O ESPESORES MÍNIMOS DE VIGAS NO PREESFORZADAS O LOSAS REFORZADAS EN UNA DIRECCIÓN A MENOS QUE SE CALCULEN\n LAS DEFLEXIONES\n\n Espesor o peralte mínimo, h\n\n Simplemente\n apoyados\n Con un extremo continuo\n Ambos extremos continuos\n En voladizo\n Elementos\n Elementos que no soporten o estén ligados a divisiones u otro tipo de elementos no estructurales susceptibles de dañarse debido a deflexiones grandes. Losas macizas en una dirección 20 ℓ 24 ℓ 28 ℓ 10 ℓ\n Vigas o losas nervadas en una dirección 16 ℓ 5, 18 ℓ\n\n 21 ℓ 8 ℓ\n\n Notas: Los valores dados en esta tabla se deben usar directamente en elementos de concreto de peso normal (alrededor de 2300 Kg/m3) y refuerzo con fy igual a 420 MPa. Para otras condiciones, los valores deben modificarse como sigue:\n (a) Para concreto liviano estructural con densidad dentro del rango de 1450 a 1900 Kg/m3, los valores de la tabla deben multiplicarse por (1,65 – 0,0003 wc), pero no menos de 1,09 (b) Para fy distinto de 420 MPa, los valores de la Tabla deben multiplicarse por (0,4 + fy / 700).",
+   "pagina": 66
+  },
+  {
+   "numero": "9.6.2.2",
+   "texto": "Cuando se calculen las deflexiones, aquéllas que ocurran inmediatamente con la aplicación de la carga, deben calcularse mediante los métodos o fórmulas usuales para deflexiones elásticas, tomando en consideración los efectos de la fisuración y del refuerzo en la rigidez del elemento.",
+   "pagina": 66
+  },
+  {
+   "numero": "9.6.2.3",
+   "texto": "A menos que se haga un análisis más completo o que se disponga de datos experimentales confiables para evaluar la rigidez a flexión del elemento (Ec Ie), la deflexión inmediata para elementos de concreto de peso normal podrá calcularse con el módulo de elasticidad del concreto especificado en 8.5 y con el momento de inercia efectivo de la sección transformada agrietada (Ie). Cuando el momento flector para condiciones de servicio en cualquier sección del elemento no exceda el momento de agrietamiento (Mcr), podrá usarse el momento de inercia de la sección no agrietada (Ig).\n El momento de agrietamiento de la sección se calculará mediante:\n\n fr Ig Mcr\n Yt = (9-11) donde fr es la resistencia del concreto a tracción por flexión (Módulo de Rotura) que a falta de información experimental confiable podrá considerarse, para concretos de peso normal, como:\n\n 0,62 fr f c′ =\n (9-12)\n Cuando se use concreto con agregado liviano, debe aplicarse alguna de las modificaciones siguientes:\n (a) Cuando el valor de fct (split test) esté especificado y la dosificación del concreto esté de acuerdo con 5.2, fr debe modificarse sustituyendo f c′ por 1,8 fct, pero el valor de 1,8 fct utilizado no debe exceder de f c′. (b) Cuando no se especifique fct, fr debe multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85 para concreto liviano con arena de peso normal. Se permite interpolar linealmente si se usa una sustitución parcial de la arena.\n Para el cálculo del momento de inercia de la sección transformada agrietada (Ie), cuando exista acero en compresión, se podrá utilizar una relación modular de 2n (n = Es / Ec) para la transformación del acero en compresión a concreto equivalente.",
+   "pagina": 66
+  },
+  {
+   "numero": "9.6.2.4",
+   "texto": "El cálculo de las deflexiones se hará suponiendo que la rigidez en flexión del elemento (Ec Ie) es constante a lo largo del tramo y el momento de inercia efectivo será un promedio ponderado calculado e acuerdo a:\n (a) En elementos continuos en ambos extremos:\n Ie promedio = ( Ie1 + Ie2 + 2 Ie3 ) / 4 (9-13)\n donde Ie1 y Ie2 son los momentos de inercia en las secciones extremas del tramo y Ie3 es el momento de inercia de la sección central del tramo.\n (b) Si el tramo sólo es continuo en un extremo:\n Ie promedio = ( Ie2 + 2 Ie3 ) / 3 (9-14)\n donde Ie2 es el momento de inercia en la sección en el extremo continuo y Ie3 es el momento de inercia en la sección central del tramo.\n (c) Para elementos simplemente apoyados en ambos extremos, se usará el momento de inercia calculado para la sección central. (d) Para elementos en voladizo se usará el momento de inercia calculado para la sección en el apoyo del voladizo.",
+   "pagina": 67
+  },
+  {
+   "numero": "9.6.2.5",
+   "texto": "A menos que se haga un análisis más completo, la deflexión diferida o adicional en el tiempo, resultante del flujo plástico del concreto y de la retracción de los elementos en flexión, podrá estimarse multiplicando la deflexión inmediata causada por las cargas sostenidas (carga muerta y la porción de carga viva que se prevé actuará permanentemente) por el factor λΔ.\n 1 50 ' ξ λΔ= + ρ (9-15) donde ρ′ es la cuantía del acero en compresión calculado en la mitad de la luz para tramos simples y continuos y en el punto de apoyo para voladizos. Puede tomarse ξ, el factor dependiente del tiempo para cargas sostenidas, igual a:\n 5 años o más … 2,0 12 meses … 1,4 6 meses … 1,2 3 meses … 1,0\n Para otras duraciones de las cargas sostenidas, se podrá usar el gráfico a que se presenta a continuación.",
+   "pagina": 67
+  },
+  {
+   "numero": "9.6.2.6",
+   "texto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2\n\n Fig. 9.6.2.5 Factor dependiente del tiempo para cargas sostenidas.\n\n Duración de la carga (meses)\n ξ\n\n TABLA 9.2 DEFLEXIÓNES MÁXIMAS ADMISIBLES\n Tipo de elemento Deflexión considerada Límite de\n deflexión Techos planos que no soporten ni estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes.\n Deflexión inmediata debida a la carga viva 180 / *\n\n Pisos que no soporten ni estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes.\n Deflexión inmediata debida a la carga viva 360 /\n\n Pisos o techos que soporten o estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes.\n La parte de la deflexión total que ocurre después de la unión de los elementos no estructurales (la suma de la deflexión a largo plazo debida a todas las cargas permanentes, y la deflexión inmediata debida a cualquier carga viva adicional)†\n 480 /\n\n ‡\n Pisos o techos que soporten o estén ligados a elementos no estructurales no susceptibles de sufrir daños debido a deflexiones grandes.\n 240 /\n\n §\n * Este límite no tiene por objeto constituirse en un resguardo contra el estancamiento de aguas. Este último se debe verificar mediante cálculos de deflexiones adecuados, incluyendo las deflexiones debidas al agua estancada, y considerando los efectos a largo plazo de todas las cargas permanentes, la contraflecha, las tolerancias de construcción y la confiabilidad en las medidas tomadas para el drenaje de las aguas. † Las deflexiones a largo plazo se pueden reducir en la cantidad de deflexión\n calculada que ocurra antes de unir los elementos no estructurales. Esta cantidad se determina basándose en datos de ingeniería aceptables correspondiente a las características tiempo-deflexión de elementos similares a los que se están considerando. ‡ Este límite se puede exceder si se toman medidas adecuadas para prevenir\n daños en elementos apoyados o unidos. § Pero no mayor que la tolerancia establecida para los elementos no estructurales.\n Este límite se puede exceder si se proporciona una contraflecha de modo que la deflexión total menos la contraflecha no exceda dicho límite.",
+   "pagina": 68
+  },
+  {
+   "numero": "9.6.3",
+   "epigrafe": "Elementos reforzados en dos direcciones (no preesforzados)",
+   "texto": "Elementos reforzados en dos direcciones (no preesforzados)",
+   "pagina": 69
+  },
+  {
+   "numero": "9.6.3.1",
+   "texto": "El numeral 9.6.3 tiene prioridad con relación al espesor mínimo de losas u otros elementos reforzados en dos direcciones diseñados de acuerdo con las disposiciones del Capítulo 13 y que se ajusten a los requisitos de 13.6.1.2. El espesor de las losas sin vigas interiores que se extiendan entre los apoyos en todos sentidos debe satisfacer los requisitos de 9.6.3.2 ó 9.6.3.4. El espesor de las losas con vigas que se extiendan entre los apoyos en todos sentidos debe satisfacer los requisitos de una de 9.6.3.3 ó 9.6.3.4.",
+   "pagina": 69
+  },
+  {
+   "numero": "9.6.3.2",
+   "texto": "El espesor mínimo de las losas sin vigas interiores que se extiendan entre los apoyos y que tienen una relación entre lados no mayor que 2, debe estar de acuerdo con lo requerido en la Tabla 9.3 y no debe ser inferior que los siguientes valores:\n (a) Losas sin ábacos como se definen en 13.2.6 … 125 mm (b) Losas con ábacos como se definen en 13.2.6 … 100 mm\n\n TABLA 9.3 ESPESORES MÍNIMOS DE LOSAS SIN VIGAS INTERIORES*\n fy MPa †\n Sin ábacos ‡ Con ábacos ‡\n Paneles exteriores Paneles interiores Paneles exteriores Paneles interiores Sin vigas de\n borde\n Con vigas de\n borde §\n\n Sin vigas de\n borde\n Con vigas de\n borde §\n\n 280 33\n n\n\n 36\n n\n\n 36\n n\n\n 36\n n\n\n 40\n n\n\n 40\n n\n\n 420 30\n n\n\n 33\n n\n\n 33\n n\n\n 33\n n\n\n 36\n n\n\n 36\n n\n\n 520 28\n n\n\n 31\n n\n\n 31\n n\n\n 31\n n\n\n 34\n n\n\n 34\n n\n\n * Para construcción en dos direcciones, n\n\n , es la luz libre en la dirección larga, medida entre caras de los apoyos en losas sin vigas y entre caras de las vigas, para losas con vigas u otros apoyos en otros casos. † Para fy entre los valores dados en la tabla, el espesor mínimo debe obtenerse por interpolación lineal. ‡ Ábaco, como se define en 13.2.6. § Losas con vigas entre las columnas a lo largo de los bordes exteriores. El valor\n de αf para la viga de borde no debe ser menor que 0,8.",
+   "pagina": 69
+  },
+  {
+   "numero": "9.6.3.3",
+   "texto": "El espesor mínimo h para losas con vigas que se extienden entre los apoyos en todos los lados debe ser: (a) Para 0,2 αfm ≤ ; se aplican las disposiciones de 9.6.3.2.\n (b) Para 0,2 2,0 αfm < < ; h no debe ser menor que:\n ( ) 1400 0,8\n 36 5β α 0,2\n n\n fm\n fy\n h\n ( ) + ( ) = + − (9-16)\n pero no menor que 125 mm.\n (c) Para 2,0 αfm > ; h no debe ser menor que:\n 0,8 1400 36 9β\n n fy\n h\n ( ) + ( ) = + (9-17)\n pero no menor que 90 mm.\n (d) En los bordes discontinuos debe disponerse una viga de borde que tenga una relación de rigidez αf no menor de 0,80, o bien aumentar el espesor mínimo requerido por las ecuaciones (9-16) ó (9-17), por lo menos un 10% en el panel que tenga un borde discontinuo.\n El término n en (b) y (c) corresponde a la luz libre en la dirección larga medida cara a cara de las vigas. El término β en (b) y (c) corresponde a la relación de la luz libre en la dirección larga a la luz libre en la dirección corta del paño.",
+   "pagina": 71
+  },
+  {
+   "numero": "9.6.3.4",
+   "texto": "Pueden utilizarse espesores de losas menores que los mínimos requeridos en 9.6.3.1, 9.6.3.2 y 9.6.3.3 cuando las deflexiones calculadas no exceden los límites de la Tabla 9.2. Las deflexiones deben calcularse tomando en cuenta el tamaño y la forma del panel, las condiciones de apoyo y la naturaleza de las restricciones en los bordes de la losa. El módulo de elasticidad del concreto, Ec, debe ser el especificado en 8.5. El momento de inercia efectivo, Ie, debe ser el obtenido como se indica en 9.6.2.4. Se permite emplear otros valores si los resultados del cálculo de la deflexión concuerdan razonablemente con los resultados de ensayos de alcance apropiado. La deflexión adicional a largo plazo debe calcularse de acuerdo con 9.6.2.5.",
+   "pagina": 71
+  },
+  {
+   "numero": "9.6.4",
+   "epigrafe": "Elementos de concreto preesforzado",
+   "texto": "Elementos de concreto preesforzado",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.4.1",
+   "texto": "Para elementos a flexión diseñados de acuerdo con el Capítulo 18, las deflexiones inmediatas deben ser calculadas por los métodos o fórmulas usuales para deflexiones elásticas, y se permite utilizar el momento de inercia de la sección total de concreto, Ig, para los elementos a flexión Clase U, como se define en 18.3.3.",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.4.2",
+   "texto": "Como se define en 18.3.3, para los elementos en flexión Clase T, los cálculos de las deflexiones deben basarse en un análisis de la sección agrietada transformada. Se permite que los cálculos se basen en una relación momento-deflexión bilineal o en un momento efectivo de inercia, Ie, como se define en 9.6.2.4.",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.4.3",
+   "texto": "La deflexión adicional a largo plazo en elementos de concreto preesforzado debe calcularse teniendo en cuenta los esfuerzos en el concreto y en el acero bajo carga permanente, e incluyendo los efectos del flujo plástico y la retracción del concreto, así como la relajación del acero.",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.4.4",
+   "texto": "La deflexión calculada de acuerdo con 9.6.4.1 ó 9.6.4.2, y 9.6.4.3 no debe exceder los límites establecidos en la Tabla 9.2.",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.5",
+   "epigrafe": "Elementos compuestos",
+   "texto": "Elementos compuestos",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.5.1",
+   "epigrafe": "Elementos apuntalados",
+   "texto": "Si los elementos compuestos sometidos a flexión se apoyan durante su construcción de tal forma que después de retirar los apoyos temporales la carga muerta es soportada por la sección compuesta total, el elemento compuesto se puede considerar equivalente a un elemento construido monolíticamente para el cálculo de la deflexión. En elementos no preesforzados, la parte en compresión del elemento determina si se usan los valores de la Tabla 9.1 para concreto de peso normal o liviano.\n Si se calcula la deflexión, debe tenerse en cuenta la curvatura que resulta de la retracción diferencial de los componentes prefabricados y construidos en obra, y los efectos del flujo plástico a lo largo el eje del elemento de concreto preesforzado.",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.5.2",
+   "epigrafe": "Elementos sin apuntalar",
+   "texto": "Si el espesor de un elemento prefabricado no preesforzado sujeto a flexión cumple con los requisitos de la Tabla 9.1, no se requiere calcular la deflexión. Si el espesor de un elemento compuesto no preesforzado cumple con los requisitos de la Tabla 9.1, no se necesita calcular la deflexión que ocurre después de que el elemento se vuelve compuesto; sin embargo, la deflexión a largo plazo del elemento prefabricado debe investigarse en función de la magnitud y duración de la carga antes del inicio efectivo de la acción compuesta.",
+   "pagina": 72
+  },
+  {
+   "numero": "9.6.5.3",
+   "texto": "La deflexión calculada de acuerdo con los requisitos de 9.6.5.1 ó 9.6.5.2 no debe exceder de los límites establecidos en la Tabla 9.2.",
+   "pagina": 72
+  },
+  {
+   "numero": "9.7",
+   "epigrafe": "Refuerzo Por Cambios Volumétricos",
+   "texto": "REFUERZO POR CAMBIOS VOLUMÉTRICOS",
+   "pagina": 72
+  },
+  {
+   "numero": "9.7.1",
+   "texto": "En losas estructurales donde el refuerzo por flexión se extienda en una dirección, se deberá proporcionar refuerzo perpendicular a éste para resistir los esfuerzos por retracción del concreto y cambios de temperatura.",
+   "pagina": 73
+  },
+  {
+   "numero": "9.7.2",
+   "texto": "La armadura por retracción y temperatura en losas, deberá proporcionar las siguientes relaciones mínimas de área de la armadura a área de la sección total de concreto, según el tipo de acero de refuerzo que se use.\n\n - Barras lisas\n\n 0,0025\n - Barras corrugadas con fy < 420 Mpa 0,0020 - Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 Mpa\n 0,0018",
+   "pagina": 73
+  },
+  {
+   "numero": "9.7.3",
+   "texto": "El refuerzo por contracción y temperatura deberá colocarse con un espaciamiento entre ejes menor o igual a tres veces el espesor de la losa, sin exceder de 400 mm. En losas nervadas en una dirección (aligerados) donde se usen bloques de relleno (ladrillos de techo) permanentes de arcilla o concreto, el espaciamiento máximo del refuerzo perpendicular a los nervios podrá extenderse a cinco veces el espesor de la losa sin exceder de 400 mm.",
+   "pagina": 73
+  },
+  {
+   "numero": "9.7.4",
+   "texto": "El refuerzo por contracción y temperatura podrá colocarse en una o en las dos caras del elemento, dependiendo del espesor de éste. En ningún caso el espaciamiento máximo del refuerzo excederá del indicado en 9.7.3.",
+   "pagina": 73
+  },
+  {
+   "numero": "9.7.5",
+   "texto": "Cuando los movimientos por contracción y temperatura se encuentren restringidos de manera significativa, deberá considerarse los requisitos de 8.2.3 y 9.2.10.",
+   "pagina": 73
+  },
+  {
+   "numero": "9.7.6",
+   "texto": "En todas las secciones donde se requiera la armadura por retracción y temperatura, ésta debe poder desarrollar su esfuerzo de fluencia especificado en tracción de acuerdo a las disposiciones del Capítulo 12.",
+   "pagina": 73
+  },
+  {
+   "numero": "9.7.7",
+   "texto": "El acero de preesfuerzo, que cumpla con 3.5.5, empleado como refuerzo de retracción y temperatura debe suministrarse de acuerdo a lo siguiente:\n (a) El acero debe dimensionarse para que, descontadas las pérdidas de acuerdo a 18.6, produzca un esfuerzo promedio de compresión mínimo de 0,7 MPa sobre el área bruta de concreto. (b) El espaciamiento entre los tendones no debe exceder de 1,8 m. (c) Si el espaciamiento entre los tendones excede de 1,4 m se debe colocar armadura adherida adicional de contracción y temperatura, de acuerdo con 9.7.2, entre los tendones en los bordes de la losa. La armadura adicional se extenderá desde los bordes de la losa hasta una distancia igual al espaciamiento entre los tendones.\n\n Fig. 9.7.7 Acero de preesfuerzo utilizado como refuerzo de retracción y temperatura en una\n losa.",
+   "pagina": 73
+  },
+  {
+   "numero": "9.8",
+   "epigrafe": "Espaciamiento Máximo Del Refuerzo",
+   "texto": "ESPACIAMIENTO MÁXIMO DEL REFUERZO",
+   "pagina": 74
+  },
+  {
+   "numero": "9.8.1",
+   "texto": "En muros y losas, exceptuando las losas nervadas, el espaciamiento entre ejes del refuerzo principal por flexión será menor o igual a tres veces el espesor del elemento estructural, sin exceder de 400 mm.",
+   "pagina": 74
+  },
+  {
+   "numero": "9.9",
+   "epigrafe": "Distribución Del Refuerzo Por Flexión En Vigas Y Losas Armadas",
+   "texto": "EN UNA DIRECCIÓN. CONTROL DE LA FISURACIÓN",
+   "pagina": 74
+  },
+  {
+   "numero": "9.9.1",
+   "texto": "Esta Sección establece los requisitos para la distribución del refuerzo de flexión, con el fin de limitar el agrietamiento por flexión en vigas y losas armadas en una dirección.",
+   "pagina": 74
+  },
+  {
+   "numero": "9.9.2",
+   "texto": "La distribución de la armadura por flexión en losas armadas en dos direcciones se hará de acuerdo a lo señalado en 13.3.",
+   "pagina": 74
+  },
+  {
+   "numero": "9.9.3",
+   "texto": "El refuerzo de tracción por flexión deberá distribuirse adecuadamente en las zonas en tracción máxima del elemento para controlar el ancho de las grietas por flexión. Su distribución y esfuerzo bajo condiciones de servicio deberá ser tal que permita obtener un valor del parámetro Z menor o igual que 26 KN/mm. El parámetro Z se calculará mediante:\n\n 3 Z fs dc Act = (9-18)\n donde fs es el esfuerzo en el acero, en MPa, el cual puede estimarse sobre la base del momento flector en condiciones de servicio Ms, mediante:\n ( ) 0,9\n Ms fs\n d As = (9-19)\n dc: espesor del recubrimiento (mm) de concreto medido desde la fibra extrema en\n tracción al centro de la barra de refuerzo más cercana a esa fibra.\n Act: área efectiva del concreto en tracción (mm2) que rodea al refuerzo principal de\n tracción y cuyo centroide coincide con el de dicho refuerzo, dividida entre el número de barras. Cuando el refuerzo principal de tracción está compuesto por barras de varios diámetros, el número de barras equivalente se calculará dividiendo el área total de acero entre al área de la barra de mayor diámetro.\n\n Fig. 9.9.3 Area efectiva de concreto en tracción.",
+   "pagina": 74
+  },
+  {
+   "numero": "9.9.4",
+   "texto": "Las disposiciones del 9.9.3 no son suficientes para elementos expuestos a ambientes agresivos ni para obtener elementos impermeables. En tales casos, deberán tomarse precauciones especiales para controlar la fisuración.",
+   "pagina": 75
+  },
+  {
+   "numero": "9.9.5",
+   "texto": "Cuando las alas de las vigas T estén sujetas a tracción, una parte del refuerzo de tracción por flexión debe distribuirse en el ancho efectivo del ala (véase 8.10) o en un ancho igual a 1/10 de la luz del tramo, el que sea menor. Si el ancho efectivo del ala excede de 1/10 de la luz, se debe colocar refuerzo longitudinal en las zonas más externas del ala.",
+   "pagina": 75
+  },
+  {
+   "numero": "9.9.6",
+   "texto": "Si el peralte h de una viga o nervadura excede de 900 mm, se deberá colocar armadura (superficial) longitudinal uniformemente distribuida en ambas caras laterales del alma, en una distancia 0,5 h cercana de la armadura principal de tracción por flexión. El espaciamiento de la armadura superficial no excederá del menor de los siguientes valores:\n\n s ≤ 300 mm, s ≤ 380 (250 / fs) – 2,5 Cc (9-20) s ≤ 300 (250 / fs) (9-21)\n donde Cc es la menor distancia medida desde la superficie del refuerzo, o acero de preesfuerzo, superficial a la cara lateral del elemento y fs es el esfuerzo en el acero principal de flexión calculado con 9-19.\n\n El refuerzo superficial se puede incluir en el cálculo de la resistencia a flexión de la sección únicamente si se hace un análisis de compatibilidad de deformaciones para determinar los esfuerzos de las barras o alambres individuales.\n\n Act = 2 ys b ys = Centroide del refuerzo principal\n de tracción por flexión\n\n Fig. 9.9.6 Refuerzo superficial en vigas con peralte mayor a 900 mm.",
+   "pagina": 75
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c09-resistencia-servicio",
+   "titulo": "E.060 · Cap. 9 · Resistencia y servicio",
+   "descripcion": "Combinaciones de carga, factores φ, deflexiones y refuerzo por temperatura.",
+   "acceso": "free",
+   "orden": 14,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la condición básica de diseño por resistencia de la E.060?",
+      "respuesta": "Que en todas las secciones la resistencia de diseño φRn sea por lo menos igual a la resistencia requerida Ru calculada con las cargas amplificadas."
+     },
+     "citas": [
+      {
+       "articulo": "9.1.1",
+       "extracto": "Las estructuras y los elementos estructurales deberán diseñarse para obtener en todas sus secciones resistencias de diseño (φRn) por lo menos iguales a las resistencias requeridas (Ru)…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Combinación básica de la E.060: U = {{1,4}} CM + 1,7 CV."
+     },
+     "citas": [
+      {
+       "articulo": "9.2.1",
+       "extracto": "U = 1,4 CM + 1,7 CV (9-1)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Combinación básica de la E.060: U = 1,4 CM + {{1,7}} CV."
+     },
+     "citas": [
+      {
+       "articulo": "9.2.1",
+       "extracto": "U = 1,4 CM + 1,7 CV (9-1)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Una viga soporta un momento por carga muerta de {CM} kN·m y por carga viva de {CV} kN·m. ¿Cuál es el momento último con U = 1,4 CM + 1,7 CV?",
+      "variables": {
+       "CM": {
+        "etiqueta": "Momento por carga muerta",
+        "valores": [
+         40,
+         55,
+         72,
+         90
+        ],
+        "unidad": "kN·m"
+       },
+       "CV": {
+        "etiqueta": "Momento por carga viva",
+        "valores": [
+         18,
+         25,
+         32,
+         40
+        ],
+        "unidad": "kN·m"
+       }
+      },
+      "formula": "1.4*CM+1.7*CV",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN·m"
+     },
+     "citas": [
+      {
+       "articulo": "9.2.1",
+       "extracto": "U = 1,4 CM + 1,7 CV (9-1)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Con sismo, una columna tiene carga axial muerta de {CM} kN, viva de {CV} kN y por sismo de {CS} kN. ¿Cuál es Pu con U = 1,25 (CM + CV) + CS?",
+      "variables": {
+       "CM": {
+        "etiqueta": "Carga muerta",
+        "valores": [
+         600,
+         850,
+         1100
+        ],
+        "unidad": "kN"
+       },
+       "CV": {
+        "etiqueta": "Carga viva",
+        "valores": [
+         200,
+         300,
+         400
+        ],
+        "unidad": "kN"
+       },
+       "CS": {
+        "etiqueta": "Carga de sismo",
+        "valores": [
+         150,
+         250,
+         350
+        ],
+        "unidad": "kN"
+       }
+      },
+      "formula": "1.25*(CM+CV)+CS",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN"
+     },
+     "citas": [
+      {
+       "articulo": "9.2.3",
+       "extracto": "U = 1,25 (CM + CV) ± CS (9-4)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Para verificar levantamiento, una columna tiene carga muerta de {CM} kN y carga de sismo de {CS} kN en tracción. ¿Cuál es U = 0,9 CM − CS?",
+      "variables": {
+       "CM": {
+        "etiqueta": "Carga muerta",
+        "valores": [
+         400,
+         550,
+         700
+        ],
+        "unidad": "kN"
+       },
+       "CS": {
+        "etiqueta": "Carga de sismo",
+        "valores": [
+         150,
+         250,
+         350
+        ],
+        "unidad": "kN"
+       }
+      },
+      "formula": "0.9*CM-CS",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN",
+      "explicacion": "Si el resultado es negativo, la columna queda en tracción y la cimentación debe resistirla."
+     },
+     "citas": [
+      {
+       "articulo": "9.2.3",
+       "extracto": "U = 0,9 CM ± CS (9-5)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué combinación aplica la E.060 con cargas de viento, además de U = 1,4 CM + 1,7 CV?",
+      "opciones": [
+       "U = 1,25 (CM + CV ± CVi)",
+       "U = 1,2 CM + 1,6 CVi",
+       "U = 1,4 (CM + CVi)",
+       "U = CM + CV + CVi"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "9.2.2",
+       "extracto": "U = 1,25 ( CM + CV ± CVi ) (9-2) U = 0,9 CM ± 1,25 CVi (9-3)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Se consideran sismo y viento actuando a la vez?",
+      "respuesta": "No: no es necesario considerar acciones de sismo y de viento simultáneamente."
+     },
+     "citas": [
+      {
+       "articulo": "9.2.4",
+       "extracto": "No será necesario considerar acciones de sismo y de viento simultáneamente."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la E.060, las cargas de nieve o granizo se consideran como:",
+      "opciones": [
+       "Carga muerta",
+       "Carga viva",
+       "Carga de impacto",
+       "Carga ambiental aparte"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "9.2.8",
+       "extracto": "Si fuera necesario incluir en el diseño el efecto de las cargas de nieve o granizo, éstas deberán considerarse como cargas vivas (CV)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Para diseñar zonas de anclaje de postensado se aplica un factor de carga de {{1,2}} a la fuerza máxima del gato."
+     },
+     "citas": [
+      {
+       "articulo": "9.2.11",
+       "extracto": "Para el diseño de zonas de anclaje de tendones de postensado, se aplicará un factor de carga de 1,2 a la fuerza máxima aplicada por el gato."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Factores de reducción de resistencia φ (9.3.2)",
+      "columnas": [
+       "φ"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Flexión sin carga axial",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Tracción axial con o sin flexión",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Compresión con o sin flexión · espiral (10.9.3)",
+        "valores": [
+         "0,75"
+        ]
+       },
+       {
+        "etiqueta": "Compresión con o sin flexión · otros elementos",
+        "valores": [
+         "0,70"
+        ]
+       },
+       {
+        "etiqueta": "Cortante y torsión",
+        "valores": [
+         "0,85"
+        ]
+       },
+       {
+        "etiqueta": "Aplastamiento del concreto",
+        "valores": [
+         "0,70"
+        ]
+       },
+       {
+        "etiqueta": "Zonas de anclaje de postensado",
+        "valores": [
+         "0,85"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.3.2.2",
+       "extracto": "(b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Factores de reducción de resistencia φ (9.3.2)",
+      "columnas": [
+       "φ"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Flexión sin carga axial",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Tracción axial con o sin flexión",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Compresión con o sin flexión · espiral (10.9.3)",
+        "valores": [
+         "0,75"
+        ]
+       },
+       {
+        "etiqueta": "Compresión con o sin flexión · otros elementos",
+        "valores": [
+         "0,70"
+        ]
+       },
+       {
+        "etiqueta": "Cortante y torsión",
+        "valores": [
+         "0,85"
+        ]
+       },
+       {
+        "etiqueta": "Aplastamiento del concreto",
+        "valores": [
+         "0,70"
+        ]
+       },
+       {
+        "etiqueta": "Zonas de anclaje de postensado",
+        "valores": [
+         "0,85"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 3,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.3.2.2",
+       "extracto": "(b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Factores de reducción de resistencia φ (9.3.2)",
+      "columnas": [
+       "φ"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Flexión sin carga axial",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Tracción axial con o sin flexión",
+        "valores": [
+         "0,90"
+        ]
+       },
+       {
+        "etiqueta": "Compresión con o sin flexión · espiral (10.9.3)",
+        "valores": [
+         "0,75"
+        ]
+       },
+       {
+        "etiqueta": "Compresión con o sin flexión · otros elementos",
+        "valores": [
+         "0,70"
+        ]
+       },
+       {
+        "etiqueta": "Cortante y torsión",
+        "valores": [
+         "0,85"
+        ]
+       },
+       {
+        "etiqueta": "Aplastamiento del concreto",
+        "valores": [
+         "0,70"
+        ]
+       },
+       {
+        "etiqueta": "Zonas de anclaje de postensado",
+        "valores": [
+         "0,85"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 5,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.3.2.4",
+       "extracto": "Aplastamiento en el concreto (excepto para las zonas de anclajes de postensado) … 0,70"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué φ se usa en concreto estructural simple (Capítulo 22)?",
+      "opciones": [
+       "0,55",
+       "0,65",
+       "0,70",
+       "0,90"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "9.3.2.8",
+       "extracto": "En el Capítulo 22, concreto estructural simple, φ debe ser 0,65 para flexión, compresión, cortante y aplastamiento."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "En flexocompresión, ¿cuándo puede incrementarse φ desde 0,70 (o 0,75) hacia 0,90?",
+      "respuesta": "Linealmente, a medida que φPn disminuye desde 0,1 f′c Ag o φPb (el que sea menor) hasta cero."
+     },
+     "citas": [
+      {
+       "articulo": "9.3.2.2",
+       "extracto": "Para elementos en flexocompresión φ puede incrementarse linealmente hasta 0,90 en la medida que φPn disminuye desde 0,1 f’c Ag ó φPb, el que sea menor, hasta cero."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Para concreto estructural, f′c no debe ser inferior a {{17 MPa}}, salvo concreto estructural simple."
+     },
+     "citas": [
+      {
+       "articulo": "9.4.1",
+       "extracto": "Para el concreto estructural, f’c no debe ser inferior a 17 MPa, salvo para concreto estructural simple (véase 22.2.4)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es el valor máximo de fy que se puede usar en los cálculos de diseño (salvo excepciones como preesfuerzo)?",
+      "opciones": [
+       "420 MPa",
+       "500 MPa",
+       "550 MPa",
+       "620 MPa"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "9.5.1",
+       "extracto": "Los valores de fy y fyt usados en los cálculos de diseño no deben exceder de 550 MPa…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 9.1 · Peralte mínimo h sin verificar deflexiones (fy = 420 MPa)",
+      "columnas": [
+       "Simplemente apoyados",
+       "Un extremo continuo",
+       "Ambos extremos continuos",
+       "En voladizo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Losas macizas en una dirección",
+        "valores": [
+         "ℓ/20",
+         "ℓ/24",
+         "ℓ/28",
+         "ℓ/10"
+        ]
+       },
+       {
+        "etiqueta": "Vigas o losas nervadas en una dirección",
+        "valores": [
+         "ℓ/16",
+         "ℓ/18,5",
+         "ℓ/21",
+         "ℓ/8"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 2
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.1",
+       "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 9.1 · Peralte mínimo h sin verificar deflexiones (fy = 420 MPa)",
+      "columnas": [
+       "Simplemente apoyados",
+       "Un extremo continuo",
+       "Ambos extremos continuos",
+       "En voladizo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Losas macizas en una dirección",
+        "valores": [
+         "ℓ/20",
+         "ℓ/24",
+         "ℓ/28",
+         "ℓ/10"
+        ]
+       },
+       {
+        "etiqueta": "Vigas o losas nervadas en una dirección",
+        "valores": [
+         "ℓ/16",
+         "ℓ/18,5",
+         "ℓ/21",
+         "ℓ/8"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 3
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.1",
+       "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga simplemente apoyada de {L} m de luz (fy = 420 MPa, concreto normal). ¿Peralte mínimo para no verificar deflexiones, según la Tabla 9.1?",
+      "variables": {
+       "L": {
+        "etiqueta": "Luz",
+        "valores": [
+         4.8,
+         5.6,
+         6.4,
+         7.2
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "L/16",
+      "tolerancia": 0.02,
+      "unidadResultado": "m"
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.1",
+       "extracto": "Tabla 9.1: vigas o losas nervadas en una dirección, simplemente apoyadas, h = ℓ/16."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Aligerado (losa nervada) con un extremo continuo y luz de {L} m (fy = 420 MPa). ¿Espesor mínimo según la Tabla 9.1?",
+      "variables": {
+       "L": {
+        "etiqueta": "Luz",
+        "valores": [
+         3.7,
+         4.2,
+         4.6,
+         5.0
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "L/18.5",
+      "tolerancia": 0.02,
+      "unidadResultado": "m"
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.1",
+       "extracto": "Tabla 9.1: vigas o losas nervadas en una dirección, con un extremo continuo, h = ℓ/18,5."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Si fy es distinto de 420 MPa, los valores de la Tabla 9.1 se multiplican por (0,4 + fy / {{700}})."
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.1",
+       "extracto": "(b) Para fy distinto de 420 MPa, los valores de la Tabla deben multiplicarse por (0,4 + fy / 700)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Concreto de peso normal con f′c = {FC} MPa. ¿Cuál es el módulo de rotura fr = 0,62 √f′c?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         24,
+         28,
+         35
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.62*sqrt(FC)",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa",
+      "explicacion": "Se usa para el momento de agrietamiento: Mcr = fr Ig / Yt (9-11)."
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.3",
+       "extracto": "fr = 0,62 √f’c (9-12)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El momento de agrietamiento se calcula como Mcr = fr Ig / {{Yt}}."
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.3",
+       "extracto": "Mcr = fr Ig / Yt (9-11)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En elementos continuos en ambos extremos: Ie promedio = (Ie1 + Ie2 + {{2}} Ie3) / 4."
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.4",
+       "extracto": "(a) En elementos continuos en ambos extremos: Ie promedio = ( Ie1 + Ie2 + 2 Ie3 ) / 4 (9-13)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Factor ξ por duración de cargas sostenidas",
+      "columnas": [
+       "ξ"
+      ],
+      "filas": [
+       {
+        "etiqueta": "5 años o más",
+        "valores": [
+         "2,0"
+        ]
+       },
+       {
+        "etiqueta": "12 meses",
+        "valores": [
+         "1,4"
+        ]
+       },
+       {
+        "etiqueta": "6 meses",
+        "valores": [
+         "1,2"
+        ]
+       },
+       {
+        "etiqueta": "3 meses",
+        "valores": [
+         "1,0"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.5",
+       "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: 5 años o más … 2,0; 12 meses … 1,4; 6 meses … 1,2; 3 meses … 1,0"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "Según la curva de la Fig. 9.6.2.5, ¿hacia qué valor tiende ξ para cargas sostenidas de 5 años o más?",
+      "imagenUrl": "data:image/jpeg;base64,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AAEAEgAEAAAgEkAAAAgAAAAkkkkkgEggggEkEAEgAEgEgAAEEgAAAAgAAAAAkkkkkEgkAEkkgAAAEAAAAAEggAgAAAAAAAAAgkkkkgEAkEgkEEEkAgkgEAEAEAEgAAAAgAAAAEkkkkAgAAEkgAgAkAAgAggAkAEEAAAEAAAAAgkkkkkkAAAgAEkAEgAEAAEAEgAggAAAgAAAAEkkkkgAAAAEgEkgAAAAAAggAAgEEAAAEgAAAAkkkkkAAAAAkEkAAAAAkAEkAEkAkgAAAAAAAAEEkkkgAAAAEAkEgAAAEgAAAAEgEAAAAAAAAAAEkkkkAAgkggAgEkAkkAkggkggkEEkkkgkkkkAEkkkgAAAEEEEkEkgkgkkgEgAkEgEkkgkkgEgkkkkkAAkgAAggEEkAAEAEkEEkEgEAAAgAAkEgEkkkgAEkggEAEAAEAAAAggAEgAkAAAEAAAAAkkkkkAAkgggkggAEAAEAEEAAgAkgAAAkAAAAEkkkkgAAAAEkEkgAEAEgAAgAAAEAAAAEgAAAAgkkkkAAAAAgggAAEgAkgAEAEEAEgAAAkAAAAEEkkkgAAEggEAEAAEAEkAEgAkggkAAAEAAAAAkkkkkAAAgkEEkEAAgAggkEEEAAEgAAAEAAAAAkkkkgAAEkEEEAggEAAAgkEEAgkgAAEgEEAAEgkkkkAAAEEAgAEAAkgEgkkAEgAkEkAAAkkEgEAkkkgAAEkAAEkEkkAkAgAEAggEEAEggkAgAAkkkkkAAAAkEkEEAggAEgEEAgAEggAAAgAAAAEAkkkgAAEAEEAgEAAkEgAEgEgEAAAAAEEAAAgkAkkkAAAAEEEAAgEAEggkkEgkEgAAAAkEAAAkAEkkgAAAAgAAAgAkkAAkkkkgEEgAAAAAAAAkkEkkkAAAAEAgAEkAAAkgAkkkgAAAAAAggAAEkkEkkgAAAAAAAAAEAAAgEgkAgAggAkAAEAAAAEgkkkkkkkkkkkkkAEAEAggkAAEAAgAAgkkkkkkkkkkkkkkkkkkkgEEEEAgkEAkgggkkEkkkkkkkkkkkkkkkkkkkkgkEEEkgkgkkAkkkkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkkgEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkn/xAAU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",
+      "respuesta": "ξ = 2,0"
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.5",
+       "extracto": "5 años o más … 2,0"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Deflexión diferida: con ξ = {X} y cuantía de acero en compresión ρ′ = {R}, ¿cuánto vale λΔ = ξ / (1 + 50 ρ′)?",
+      "variables": {
+       "X": {
+        "etiqueta": "ξ",
+        "valores": [
+         1.0,
+         1.2,
+         1.4,
+         2.0
+        ]
+       },
+       "R": {
+        "etiqueta": "ρ′",
+        "valores": [
+         0,
+         0.004,
+         0.006,
+         0.01
+        ]
+       }
+      },
+      "formula": "X/(1+50*R)",
+      "tolerancia": 0.02,
+      "explicacion": "La deflexión diferida es λΔ por la deflexión inmediata de las cargas sostenidas."
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.5",
+       "extracto": "λΔ = ξ / (1 + 50 ρ’) (9-15)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 9.2 · Deflexiones máximas admisibles",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Techos planos sin elementos no estructurales frágiles · inmediata por carga viva",
+        "valores": [
+         "ℓ/180"
+        ]
+       },
+       {
+        "etiqueta": "Pisos sin elementos no estructurales frágiles · inmediata por carga viva",
+        "valores": [
+         "ℓ/360"
+        ]
+       },
+       {
+        "etiqueta": "Pisos o techos con elementos no estructurales susceptibles de daño",
+        "valores": [
+         "ℓ/480"
+        ]
+       },
+       {
+        "etiqueta": "Pisos o techos con elementos no estructurales no susceptibles de daño",
+        "valores": [
+         "ℓ/240"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.6",
+       "extracto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Piso que soporta tabiques de albañilería susceptibles de dañarse: ¿qué límite de deflexión (posterior a la unión de los tabiques) aplica la Tabla 9.2?",
+      "opciones": [
+       "ℓ/180",
+       "ℓ/240",
+       "ℓ/360",
+       "ℓ/480"
+      ],
+      "correcta": 3,
+      "explicacion": "ℓ/480 para pisos o techos que soportan elementos no estructurales susceptibles de daño; ℓ/240 si no son susceptibles."
+     },
+     "citas": [
+      {
+       "articulo": "9.6.2.6",
+       "extracto": "La deflexión calculada… no debe exceder los límites establecidos en la Tabla 9.2"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Cuantía mínima de retracción y temperatura en losas (9.7.2)",
+      "columnas": [
+       "As / Ag"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Barras lisas",
+        "valores": [
+         "0,0025"
+        ]
+       },
+       {
+        "etiqueta": "Corrugadas con fy < 420 MPa",
+        "valores": [
+         "0,0020"
+        ]
+       },
+       {
+        "etiqueta": "Corrugadas o malla electrosoldada con fy ≥ 420 MPa",
+        "valores": [
+         "0,0018"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "9.7.2",
+       "extracto": "- Barras lisas 0,0025 - Barras corrugadas con fy < 420 Mpa 0,0020 - Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 Mpa 0,0018"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Losa maciza de {H} cm de espesor con barras corrugadas fy = 420 MPa. ¿Área mínima de acero por retracción y temperatura por metro de ancho (cm²/m)?",
+      "variables": {
+       "H": {
+        "etiqueta": "Espesor",
+        "valores": [
+         12,
+         15,
+         17,
+         20,
+         25
+        ],
+        "unidad": "cm"
+       }
+      },
+      "formula": "0.0018*100*H",
+      "tolerancia": 0.02,
+      "unidadResultado": "cm²/m",
+      "explicacion": "As = 0,0018 × b × h, con b = 100 cm."
+     },
+     "citas": [
+      {
+       "articulo": "9.7.2",
+       "extracto": "Barras corrugadas o malla de alambre… con fy ≥ 420 Mpa 0,0018"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El refuerzo por retracción y temperatura se coloca a no más de tres veces el espesor de la losa, sin exceder {{400 mm}}."
+     },
+     "citas": [
+      {
+       "articulo": "9.7.3",
+       "extracto": "…deberá colocarse con un espaciamiento entre ejes menor o igual a tres veces el espesor de la losa, sin exceder de 400 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En aligerados con ladrillos de techo, el refuerzo de temperatura perpendicular a los nervios puede espaciarse hasta {{cinco}} veces el espesor de la losa, sin exceder 400 mm."
+     },
+     "citas": [
+      {
+       "articulo": "9.7.3",
+       "extracto": "En losas nervadas en una dirección (aligerados) donde se usen bloques de relleno (ladrillos de techo) permanentes… el espaciamiento máximo del refuerzo perpendicular a los nervios podrá extenderse a cinco veces el espesor de la losa sin exceder de 400 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Si el peralte de una viga excede {{900 mm}}, se coloca armadura superficial longitudinal en ambas caras laterales del alma."
+     },
+     "citas": [
+      {
+       "articulo": "9.9.6",
+       "extracto": "Si el peralte h de una viga o nervadura excede de 900 mm, se deberá colocar armadura (superficial) longitudinal uniformemente distribuida en ambas caras laterales del alma…"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

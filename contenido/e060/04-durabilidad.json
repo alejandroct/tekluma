@@ -1,0 +1,655 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "4.0",
+   "epigrafe": "Alcance",
+   "texto": "Esta Norma no incluye disposiciones para las condiciones de exposición especialmente severas, tales como la exposición a ácidos o a altas temperaturas, ni cubre condiciones estéticas tales como el acabado de las superficies del concreto. Estas condiciones, que están fuera del alcance de esta Norma, deberán estar cubiertas de manera particular en las especificaciones del proyecto. Los componentes del concreto y sus proporciones deben ser seleccionados de manera que se pueda cumplir con los requisitos mínimos establecidos en esta Norma y con los requisitos adicionales de los documentos del proyecto.",
+   "pagina": 27
+  },
+  {
+   "numero": "4.1",
+   "epigrafe": "Relación Agua - Material Cementante",
+   "texto": "RELACIÓN AGUA - MATERIAL CEMENTANTE",
+   "pagina": 27
+  },
+  {
+   "numero": "4.1.1",
+   "texto": "Las relaciones agua-material cementante especificadas en las Tablas 4.2 y 4.4 se calculan usando el peso del cemento que cumpla con la NTP 334.009, 334.082, 334.090 ó 334.156, más el peso de las cenizas volantes y otras puzolanas que cumplan con la NTP 334.104, el peso de la escoria que cumpla con la Norma ASTM C 989 y la microsílice que cumpla con la NTP 334.087, si las hay. Cuando el concreto esté expuesto a productos químicos descongelantes, en 4.2.3 se limita adicionalmente la cantidad de ceniza volante, puzolana, microsílice, escoria o la combinación de estos materiales.",
+   "pagina": 27
+  },
+  {
+   "numero": "4.2",
+   "epigrafe": "Exposición A Ciclos De Congelamiento Y Deshielo",
+   "texto": "EXPOSICIÓN A CICLOS DE CONGELAMIENTO Y DESHIELO",
+   "pagina": 27
+  },
+  {
+   "numero": "4.2.1",
+   "texto": "Los concretos de peso normal y los de pesos livianos expuestos a condiciones de congelamiento y deshielo o a productos químicos descongelantes deben tener aire incorporado, con el contenido total de aire indicado en la Tabla 4.1. La tolerancia en el contenido total de aire incorporado debe ser de ±1,5%. Para concretos con f’c mayor de 35 MPa, se puede reducir el aire incorporado indicado en la Tabla 4.1 en 1%.\n\n TABLA 4.1 CONTENIDO TOTAL DE AIRE PARA CONCRETO RESISTENTE AL\n CONGELAMIENTO\n Tamaño máximo nominal\n del agregado* (mm)\n Contenido de aire (en porcentaje) Exposición severa Exposición moderada 9,5 7,5 6,0 12,5 7,0 5,5 19,0 6,0 5,0 25,0 6,0 4,5 37,5 5,5 4,5 50,0** 5,0 4,0 75,0** 4,5 3,5\n * Véase la Norma ASTM C 33 para las tolerancias en agregados de mayor tamaño\n para diversos tamaños nominales máximos. ** Estos contenidos de aire se aplican a la mezcla total, al igual que para los tamaños precedentes de agregado. Sin embargo, al ensayar estos concretos, se retira el agregado mayor de 37,5 mm sacándolo con la mano o mediante cribado y se determina el contenido de aire en la fracción de la mezcla de menos de 37,5 mm (la tolerancia en el contenido de aire incorporado se aplica a este valor). El contenido de aire de la mezcla total se calcula a partir del valor determinado en la fracción de menos de 37,5 mm.\n\n En la Tabla 4.1, una exposición severa es cuando, en un clima frío, el concreto puede estar en contacto casi constante con la humedad antes de congelarse o cuando se emplean sales descongelantes. Ejemplos de esto son pavimentos, tableros de puentes, aceras, estacionamientos, y tanques para agua. Una exposición moderada es cuando, en clima frío, el concreto esté expuesto ocasionalmente a humedad antes de congelarse y cuando no se usen sales descongelantes. Ejemplos de esto son algunos muros exteriores, vigas y losas que no están en contacto directo con el suelo.",
+   "pagina": 27
+  },
+  {
+   "numero": "4.2.2",
+   "texto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta. Además, el concreto que va estar expuesto a productos químicos descongelantes debe cumplir con las limitaciones indicadas en 4.2.3.\n\n TABLA 4.2 REQUISITOS PARA CONDICIONES ESPECIALES DE EXPOSICIÓN\n Condición de la\n exposición\n Relación máxima agua - material cementante (en peso)\n para concretos de peso\n normal *\n f’c mínimo (MPa) para concretos de peso normal o con agregados ligeros* Concreto que se pretende tenga baja permeabilidad en exposición al agua.\n 0,50 28\n Concreto expuesto a ciclos de congelamiento y deshielo en condición húmeda o a productos químicos descongelantes.\n 0,45 31\n Para proteger de la corrosión el refuerzo de acero cuando el concreto está expuesto a cloruros provenientes de productos descongelantes, sal, agua salobre, agua de mar o a salpicaduras del mismo origen.\n 0,40 35\n * Cuando se utilicen las Tablas 4.2 y 4.4 simultáneamente, se debe utilizar la menor relación máxima agua-material cementante aplicable y el mayor f’c mínimo.",
+   "pagina": 28
+  },
+  {
+   "numero": "4.2.3",
+   "texto": "Para concretos que van a estar expuestos a productos químicos descongelantes, el peso máximo de las cenizas volantes, otras puzolanas, microsílice o las escorias incluidas en el concreto, no debe exceder los porcentajes respecto al peso total de materiales cementantes dados en la Tabla 4.3.\n\n TABLA 4.3 REQUISITOS PARA CONCRETO EXPUESTO A PRODUCTOS QUÍMICOS\n DESCONGELANTES\n\n Materiales cementantes\n Porcentaje Máximo del total de\n materiales cementantes en\n peso* Cenizas volantes u otras puzolanas que cumplen la NTP 334.104 25\n Escoria que cumple ASTM C 989 50 Microsílice que cumple la NTP 334.087 10 Total de cenizas volantes u otras puzolanas, escoria y microsílice. 50**\n Total de cenizas volantes u otras puzolanas y microsílice 35**\n * El total de materiales cementantes también incluye cementos de acuerdo a las NTP 334.009, 334.082, 334.090 y 334.156.\n Los porcentajes máximos indicados incluyen: (a) Las cenizas volantes u otras puzolanas presentes en cementos adicionados tipo IP o I(PM), según las NTP 334.082 ó 334.090. (b) La escoria usada en la fabricación de cementos adicionados tipo IS o I(SM), según las NTP 334.082 ó 334.090. (c) El humo de sílice, según la NTP 334.087, presente en cementos adicionados\n ** Las cenizas volantes u otras puzolanas y la microsílice no deben constituir más del 25% y 10%, respectivamente, del peso total de materiales cementantes.",
+   "pagina": 28
+  },
+  {
+   "numero": "4.3",
+   "epigrafe": "Exposición A Sulfatos",
+   "texto": "EXPOSICIÓN A SULFATOS",
+   "pagina": 29
+  },
+  {
+   "numero": "4.3.1",
+   "texto": "El concreto que va a estar expuesto a soluciones o suelos que contengan sulfatos debe cumplir con los requisitos de la Tabla 4.4. El concreto debe estar hecho con un cemento que proporcione resistencia a los sulfatos y que tenga una relación agua-material cementante máxima y un f’c mínimo según la Tabla 4.4.\n Además de la selección apropiada del cemento, son esenciales otros requisitos para lograr concretos durables expuestos a concentraciones de sulfatos, tales como: baja relación agua - material cementante, resistencia, adecuado contenido de aire, bajo asentamiento, adecuada compactación, uniformidad, recubrimiento adecuado del refuerzo y suficiente curado húmedo para desarrollar las propiedades potenciales del concreto.\n\n TABLA 4.4 REQUISITOS PARA CONCRETO EXPUESTO A SOLUCIONES DE SULFATOS\n Exposición\n a sulfatos\n Sulfato soluble\n en agua (SO4) presente en el\n suelo, porcentaje en\n peso\n Sulfato (SO4) en el\n agua, ppm\n Tipo de Cemento\n Relación máxima agua\n - material cementante\n (en peso)\n para concretos de peso normal*\n f’c mínimo\n (MPa)\n para concreto\n s de peso normal y\n ligero* Insignificant\n e\n 0,0 ≤ SO4 < 0,1 0 ≤ SO4< 150 — — —\n Moderada** 0,1 ≤ SO4 < 0,2 150 ≤ SO4 < 1500\n II, IP(MS),\n IS(MS),\n P(MS), I(PM)(MS),\n I(SM)(MS)\n 0,50\n\n 28\n\n Severa 0,2 ≤ SO4 < 2,0 1500 ≤ SO4 < 10000 V 0,45 31\n\n Muy severa 2,0 < SO4 10000 < SO4\n Tipo V\n más puzolana**\n *\n 0,45 31\n\n * Cuando se utilicen las Tablas 4.2 y 4.4 simultáneamente, se debe utilizar la menor relación máxima agua-material cementante aplicable y el mayor f’c mínimo. ** Se considera el caso del agua de mar como exposición moderada.\n *** Puzolana que se ha comprobado por medio de ensayos, o por experiencia, que mejora la resistencia a sulfatos cuando se usa en concretos que contienen cemento tipo V.",
+   "pagina": 29
+  },
+  {
+   "numero": "4.3.2",
+   "texto": "El cloruro de calcio no debe emplearse como aditivo en concretos sometidos a exposición a sulfatos severa o muy severa, tal como se definen en la Tabla 4.4.",
+   "pagina": 30
+  },
+  {
+   "numero": "4.4",
+   "epigrafe": "Protección Del Refuerzo Contra La Corrosión",
+   "texto": "PROTECCIÓN DEL REFUERZO CONTRA LA CORROSIÓN",
+   "pagina": 30
+  },
+  {
+   "numero": "4.4.1",
+   "texto": "Para la protección contra la corrosión del refuerzo de acero en el concreto, las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días, provenientes de los ingredientes (incluyendo agua, agregados, materiales cementantes y aditivos) no deben exceder los límites de la Tabla 4.5. Cuando se lleven a cabo ensayos para determinar el contenido de iones cloruro solubles en agua, los procedimientos de ensayo deben cumplir los requisitos establecidos en la NTP 334.148.\n\n TABLA 4.5 CONTENIDO MÁXIMO DE IONES CLORURO PARA LA PROTECCIÓN CONTRA\n LA CORROSIÓN DEL REFUERZO\n Tipo de elemento\n Contenido máximo de iones de cloruro\n solubles en agua en el concreto (porcentaje en peso del cemento)\n Concreto preesforzado 0,06\n Concreto armado que en servicio estará expuesto a cloruros 0,15\n Concreto armado que en servicio estará seco o protegido contra la humedad\n 1,00\n Otras construcciones de concreto armado 0,30",
+   "pagina": 30
+  },
+  {
+   "numero": "4.4.2",
+   "texto": "Cuando el concreto con refuerzo vaya a estar expuesto a cloruros de químicos descongelantes, sal, agua salobre, agua de mar o salpicaduras de las mismas, deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua- material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7. Para tendones preesforzados sin adherencia, véase 18.16.\n\n CALIDAD DEL CONCRETO, MEZCLADO Y COLOCACIÓN",
+   "pagina": 30
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c04-durabilidad",
+   "titulo": "E.060 · Cap. 4 · Durabilidad",
+   "descripcion": "Aire incorporado, exposición especial, sulfatos y cloruros (Tablas 4.1 a 4.5).",
+   "acceso": "free",
+   "orden": 12,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué condiciones de exposición quedan fuera del alcance del Capítulo 4 de la E.060?",
+      "respuesta": "Las especialmente severas, como ácidos o altas temperaturas, y las condiciones estéticas como el acabado de superficies; deben cubrirse en las especificaciones del proyecto."
+     },
+     "citas": [
+      {
+       "articulo": "4.0",
+       "extracto": "Esta Norma no incluye disposiciones para las condiciones de exposición especialmente severas, tales como la exposición a ácidos o a altas temperaturas, ni cubre condiciones estéticas tales como el acabado de las superficies del concreto."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.1 · Aire total para concreto resistente al congelamiento (%)",
+      "columnas": [
+       "Exposición severa",
+       "Exposición moderada"
+      ],
+      "filas": [
+       {
+        "etiqueta": "9,5 mm",
+        "valores": [
+         "7,5",
+         "6,0"
+        ]
+       },
+       {
+        "etiqueta": "12,5 mm",
+        "valores": [
+         "7,0",
+         "5,5"
+        ]
+       },
+       {
+        "etiqueta": "19,0 mm",
+        "valores": [
+         "6,0",
+         "5,0"
+        ]
+       },
+       {
+        "etiqueta": "25,0 mm",
+        "valores": [
+         "6,0",
+         "4,5"
+        ]
+       },
+       {
+        "etiqueta": "37,5 mm",
+        "valores": [
+         "5,5",
+         "4,5"
+        ]
+       },
+       {
+        "etiqueta": "50,0 mm",
+        "valores": [
+         "5,0",
+         "4,0"
+        ]
+       },
+       {
+        "etiqueta": "75,0 mm",
+        "valores": [
+         "4,5",
+         "3,5"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 1
+      },
+      "explicacion": "Para TMN 19 mm: 6,0 % (severa) y 5,0 % (moderada)."
+     },
+     "citas": [
+      {
+       "articulo": "4.2.1",
+       "extracto": "…deben tener aire incorporado, con el contenido total de aire indicado en la Tabla 4.1."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.1 · Aire total para concreto resistente al congelamiento (%)",
+      "columnas": [
+       "Exposición severa",
+       "Exposición moderada"
+      ],
+      "filas": [
+       {
+        "etiqueta": "9,5 mm",
+        "valores": [
+         "7,5",
+         "6,0"
+        ]
+       },
+       {
+        "etiqueta": "12,5 mm",
+        "valores": [
+         "7,0",
+         "5,5"
+        ]
+       },
+       {
+        "etiqueta": "19,0 mm",
+        "valores": [
+         "6,0",
+         "5,0"
+        ]
+       },
+       {
+        "etiqueta": "25,0 mm",
+        "valores": [
+         "6,0",
+         "4,5"
+        ]
+       },
+       {
+        "etiqueta": "37,5 mm",
+        "valores": [
+         "5,5",
+         "4,5"
+        ]
+       },
+       {
+        "etiqueta": "50,0 mm",
+        "valores": [
+         "5,0",
+         "4,0"
+        ]
+       },
+       {
+        "etiqueta": "75,0 mm",
+        "valores": [
+         "4,5",
+         "3,5"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 4,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "4.2.1",
+       "extracto": "…deben tener aire incorporado, con el contenido total de aire indicado en la Tabla 4.1."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "La tolerancia en el contenido total de aire incorporado debe ser de {{±1,5 %}}."
+     },
+     "citas": [
+      {
+       "articulo": "4.2.1",
+       "extracto": "La tolerancia en el contenido total de aire incorporado debe ser de ±1,5%."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Para concretos con f′c mayor de 35 MPa, el aire incorporado de la Tabla 4.1 se puede reducir en {{1 %}}."
+     },
+     "citas": [
+      {
+       "articulo": "4.2.1",
+       "extracto": "Para concretos con f’c mayor de 35 MPa, se puede reducir el aire incorporado indicado en la Tabla 4.1 en 1%."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.2 · Condiciones especiales de exposición",
+      "columnas": [
+       "a/mc máx.",
+       "f′c mín. (MPa)"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Baja permeabilidad en exposición al agua",
+        "valores": [
+         "0,50",
+         "28"
+        ]
+       },
+       {
+        "etiqueta": "Congelamiento y deshielo en condición húmeda o con descongelantes",
+        "valores": [
+         "0,45",
+         "31"
+        ]
+       },
+       {
+        "etiqueta": "Protección del refuerzo frente a cloruros (sal, agua salobre, agua de mar)",
+        "valores": [
+         "0,40",
+         "35"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "4.2.2",
+       "extracto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.2 · Condiciones especiales de exposición",
+      "columnas": [
+       "a/mc máx.",
+       "f′c mín. (MPa)"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Baja permeabilidad en exposición al agua",
+        "valores": [
+         "0,50",
+         "28"
+        ]
+       },
+       {
+        "etiqueta": "Congelamiento y deshielo en condición húmeda o con descongelantes",
+        "valores": [
+         "0,45",
+         "31"
+        ]
+       },
+       {
+        "etiqueta": "Protección del refuerzo frente a cloruros (sal, agua salobre, agua de mar)",
+        "valores": [
+         "0,40",
+         "35"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 1
+      }
+     },
+     "citas": [
+      {
+       "articulo": "4.2.2",
+       "extracto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para proteger el refuerzo de un muelle expuesto a salpicaduras de agua de mar, ¿qué relación agua-material cementante máxima exige la E.060?",
+      "opciones": [
+       "0,50",
+       "0,45",
+       "0,40",
+       "0,35"
+      ],
+      "correcta": 2,
+      "explicacion": "Tabla 4.2: 0,40 y f′c mínimo de 35 MPa, además del recubrimiento mínimo de 7.7."
+     },
+     "citas": [
+      {
+       "articulo": "4.4.2",
+       "extracto": "Cuando el concreto con refuerzo vaya a estar expuesto a cloruros de químicos descongelantes, sal, agua salobre, agua de mar o salpicaduras de las mismas, deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua-material cementante y valor mínimo de f’c…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "Si se aplican simultáneamente las Tablas 4.2 y 4.4, ¿qué valores se usan?",
+      "respuesta": "La menor relación máxima agua-material cementante aplicable y el mayor f′c mínimo."
+     },
+     "citas": [
+      {
+       "articulo": "4.2.2",
+       "extracto": "Cuando se utilicen las Tablas 4.2 y 4.4 simultáneamente, se debe utilizar la menor relación máxima agua-material cementante aplicable y el mayor f’c mínimo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En concretos expuestos a productos químicos descongelantes, ¿cuál es el máximo de microsílice respecto al total de materiales cementantes?",
+      "opciones": [
+       "5 %",
+       "10 %",
+       "25 %",
+       "50 %"
+      ],
+      "correcta": 1,
+      "explicacion": "Tabla 4.3: cenizas volantes u otras puzolanas 25 %, escoria 50 %, microsílice 10 %."
+     },
+     "citas": [
+      {
+       "articulo": "4.2.3",
+       "extracto": "…el peso máximo de las cenizas volantes, otras puzolanas, microsílice o las escorias incluidas en el concreto, no debe exceder los porcentajes… dados en la Tabla 4.3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.4 · Concreto expuesto a sulfatos",
+      "columnas": [
+       "SO₄ en agua (ppm)",
+       "Tipo de cemento",
+       "a/mc máx.",
+       "f′c mín. (MPa)"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Moderada (incluye agua de mar)",
+        "valores": [
+         "150 ≤ SO₄ < 1500",
+         "II, IP(MS), IS(MS), P(MS), I(PM)(MS), I(SM)(MS)",
+         "0,50",
+         "28"
+        ]
+       },
+       {
+        "etiqueta": "Severa",
+        "valores": [
+         "1500 ≤ SO₄ < 10000",
+         "V",
+         "0,45",
+         "31"
+        ]
+       },
+       {
+        "etiqueta": "Muy severa",
+        "valores": [
+         "SO₄ > 10000",
+         "V más puzolana",
+         "0,45",
+         "31"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 1
+      }
+     },
+     "citas": [
+      {
+       "articulo": "4.3.1",
+       "extracto": "El concreto que va a estar expuesto a soluciones o suelos que contengan sulfatos debe cumplir con los requisitos de la Tabla 4.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.4 · Concreto expuesto a sulfatos",
+      "columnas": [
+       "SO₄ en agua (ppm)",
+       "Tipo de cemento",
+       "a/mc máx.",
+       "f′c mín. (MPa)"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Moderada (incluye agua de mar)",
+        "valores": [
+         "150 ≤ SO₄ < 1500",
+         "II, IP(MS), IS(MS), P(MS), I(PM)(MS), I(SM)(MS)",
+         "0,50",
+         "28"
+        ]
+       },
+       {
+        "etiqueta": "Severa",
+        "valores": [
+         "1500 ≤ SO₄ < 10000",
+         "V",
+         "0,45",
+         "31"
+        ]
+       },
+       {
+        "etiqueta": "Muy severa",
+        "valores": [
+         "SO₄ > 10000",
+         "V más puzolana",
+         "0,45",
+         "31"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 2
+      }
+     },
+     "citas": [
+      {
+       "articulo": "4.3.1",
+       "extracto": "El concreto que va a estar expuesto a soluciones o suelos que contengan sulfatos debe cumplir con los requisitos de la Tabla 4.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo clasifica la Tabla 4.4 al agua de mar en cuanto a exposición a sulfatos?",
+      "opciones": [
+       "Insignificante",
+       "Moderada",
+       "Severa",
+       "Muy severa"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "4.3.1",
+       "extracto": "Tabla 4.4, nota **: Se considera el caso del agua de mar como exposición moderada."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El cloruro de calcio no debe emplearse como aditivo en concretos con exposición a sulfatos severa o {{muy severa}}."
+     },
+     "citas": [
+      {
+       "articulo": "4.3.2",
+       "extracto": "El cloruro de calcio no debe emplearse como aditivo en concretos sometidos a exposición a sulfatos severa o muy severa, tal como se definen en la Tabla 4.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.5 · Ion cloruro máximo (% del peso del cemento)",
+      "columnas": [
+       "Cl⁻ máx."
+      ],
+      "filas": [
+       {
+        "etiqueta": "Concreto preesforzado",
+        "valores": [
+         "0,06"
+        ]
+       },
+       {
+        "etiqueta": "Concreto armado expuesto a cloruros en servicio",
+        "valores": [
+         "0,15"
+        ]
+       },
+       {
+        "etiqueta": "Concreto armado seco o protegido de la humedad en servicio",
+        "valores": [
+         "1,00"
+        ]
+       },
+       {
+        "etiqueta": "Otras construcciones de concreto armado",
+        "valores": [
+         "0,30"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "4.4.1",
+       "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días… no deben exceder los límites de la Tabla 4.5."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4.5 · Ion cloruro máximo (% del peso del cemento)",
+      "columnas": [
+       "Cl⁻ máx."
+      ],
+      "filas": [
+       {
+        "etiqueta": "Concreto preesforzado",
+        "valores": [
+         "0,06"
+        ]
+       },
+       {
+        "etiqueta": "Concreto armado expuesto a cloruros en servicio",
+        "valores": [
+         "0,15"
+        ]
+       },
+       {
+        "etiqueta": "Concreto armado seco o protegido de la humedad en servicio",
+        "valores": [
+         "1,00"
+        ]
+       },
+       {
+        "etiqueta": "Otras construcciones de concreto armado",
+        "valores": [
+         "0,30"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "4.4.1",
+       "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días… no deben exceder los límites de la Tabla 4.5."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A qué edad del concreto endurecido se controla el contenido máximo de iones cloruro de la Tabla 4.5?",
+      "opciones": [
+       "7 a 14 días",
+       "14 a 28 días",
+       "28 a 42 días",
+       "90 días"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "4.4.1",
+       "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días…"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

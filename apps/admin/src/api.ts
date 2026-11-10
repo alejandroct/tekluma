@@ -48,7 +48,7 @@ export type Norma = {
   decree: string | null;
   articleCount: number;
 };
-export type Articulo = { id: string; number: string; heading: string | null; body: string };
+export type Articulo = { id: string; number: string; heading: string | null; body: string; sourcePage?: number | null };
 export type Mazo = {
   id: string;
   slug: string;

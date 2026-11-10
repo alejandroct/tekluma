@@ -1492,3 +1492,13 @@ td.derecha {
 @media (max-width: 1180px) {
   .opcional { display: none; }
 }
+
+/* Importar */
+.opciones-estado { display: flex; flex-direction: column; gap: 8px; }
+.opcion-estado { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border: 1px solid var(--linea); border-radius: 4px; cursor: pointer; }
+.opcion-estado.activa { border-color: var(--ambar); }
+.opcion-estado > span { display: flex; flex-direction: column; gap: 2px; }
+.opcion-estado input { margin-top: 3px; accent-color: var(--primario); width: auto; height: auto; flex: none; padding: 0; }
+.opciones-estado .boton { align-self: flex-start; margin-top: 6px; }
+.lista-errores { margin: 0; padding-left: 16px; color: var(--error); font-size: 12px; }
+.estado-rechazada { color: var(--error); border: 1px solid var(--error-borde); background: var(--error-fondo); }

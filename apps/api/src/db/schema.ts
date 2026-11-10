@@ -148,6 +148,8 @@ export const articles = pgTable(
     number: text("number").notNull(),
     heading: text("heading"),
     body: text("body").notNull(),
+    /** Page in the official document (PDF) where the article appears, so users can check the source. */
+    sourcePage: integer("source_page"),
     createdAt: createdAt(),
   },
   (t) => [uniqueIndex("articles_version_number_uq").on(t.standardVersionId, t.number)],

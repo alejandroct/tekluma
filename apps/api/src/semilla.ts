@@ -8,6 +8,7 @@ import type { ContenidoTarjeta } from "@tekluma/shared";
 import { db } from "./db/client";
 import { articles, cardCitations, cards, decks, standards, standardVersions, users } from "./db/schema";
 import { publicarMazo } from "./publicacion";
+import { canonico } from "./util";
 
 type TarjetaSemilla = { contenido: ContenidoTarjeta; articulo: string; extracto: string };
 
@@ -21,17 +22,6 @@ type NormaSemilla = {
   mazo: Pick<typeof decks.$inferInsert, "slug" | "title" | "description" | "access" | "sortOrder">;
   tarjetas: TarjetaSemilla[];
 };
-
-/** JSON with sorted keys: jsonb does not keep key order, so plain stringify would not match. */
-const canonico = (v: unknown): string =>
-  Array.isArray(v)
-    ? `[${v.map(canonico).join(",")}]`
-    : v && typeof v === "object"
-      ? `{${Object.keys(v)
-          .sort()
-          .map((k) => `${JSON.stringify(k)}:${canonico((v as Record<string, unknown>)[k])}`)
-          .join(",")}}`
-      : JSON.stringify(v);
 
 const PENDIENTE = "Resumen editorial; pendiente de transcribir el texto oficial.";
 

@@ -4,11 +4,12 @@ import { HTTPException } from "hono/http-exception";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
 import { and, count, desc, eq, inArray, sql } from "drizzle-orm";
-import { contenidoTarjetaSchema, DECK_ACCESS, DISCIPLINES, STAFF_ROLES, type StaffRole } from "@tekluma/shared";
+import { contenidoTarjetaSchema, DECK_ACCESS, DISCIPLINES, importacionSchema, STAFF_ROLES, type StaffRole } from "@tekluma/shared";
 import { auth } from "../auth";
 import { db } from "../db/client";
 import { articles, cardCitations, cards, deckReleases, decks, editorialReviews, standards, standardVersions, users } from "../db/schema";
 import { publicarMazo } from "../publicacion";
+import { importar, ImportacionError } from "../importacion";
 
 type StaffVars = { Variables: { usuarioId: string; rol: StaffRole } };
 
@@ -94,7 +95,7 @@ export const editorial = new Hono<StaffVars>()
 
   .get("/normas/:id/articulos", async (c) => {
     const filas = await db
-      .select({ id: articles.id, number: articles.number, heading: articles.heading, body: articles.body })
+      .select({ id: articles.id, number: articles.number, heading: articles.heading, body: articles.body, sourcePage: articles.sourcePage })
       .from(articles)
       .innerJoin(standardVersions, eq(standardVersions.id, articles.standardVersionId))
       .where(and(eq(standardVersions.standardId, c.req.param("id")), eq(standardVersions.isCurrent, true)))
@@ -255,6 +256,27 @@ export const editorial = new Hono<StaffVars>()
         .set({ status: approved ? "approved" : "draft", reviewerId: c.get("usuarioId"), updatedAt: new Date() })
         .where(eq(cards.id, tarjeta.id));
       return c.json({ ok: true });
+    },
+  )
+
+  // ───────── Bulk import ─────────
+
+  /**
+   * One file per chapter. Cards enter "in review" by default; an admin may approve them on import
+   * (recorded as a signed review), e.g. when the content was already checked outside the panel.
+   */
+  .post(
+    "/importar",
+    requiereStaff("admin"),
+    zValidator("json", z.object({ archivo: importacionSchema, estado: z.enum(["in_review", "draft", "approved"]).default("in_review") })),
+    async (c) => {
+      const { archivo, estado } = c.req.valid("json");
+      try {
+        return c.json(await importar(archivo, c.get("usuarioId"), estado));
+      } catch (e) {
+        if (e instanceof ImportacionError) throw new HTTPException(400, { message: e.message });
+        throw e;
+      }
     },
   )
 

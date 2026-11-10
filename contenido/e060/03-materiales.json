@@ -1,0 +1,649 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "3.1",
+   "epigrafe": "Ensayos De Materiales",
+   "texto": "ENSAYOS DE MATERIALES",
+   "pagina": 20
+  },
+  {
+   "numero": "3.1.1",
+   "texto": "La Supervisión o la autoridad competente podrá ordenar, en cualquier etapa de ejecución del proyecto, el ensayo de cualquier material empleado en las obras de concreto, con el fin de determinar si corresponde a la calidad especificada.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.1.2",
+   "texto": "El muestreo y los ensayos de materiales y del concreto deben hacerse de acuerdo con las Normas Técnicas Peruanas - NTP correspondientes.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.2",
+   "epigrafe": "Cementos",
+   "texto": "CEMENTOS",
+   "pagina": 20
+  },
+  {
+   "numero": "3.2.1",
+   "texto": "El cemento debe cumplir con los requisitos de las NTP correspondientes.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.2.2",
+   "texto": "El cemento empleado en la obra debe corresponder al que se ha tomado como base para la selección de la dosificación del concreto.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.3",
+   "epigrafe": "Agregados",
+   "texto": "AGREGADOS",
+   "pagina": 20
+  },
+  {
+   "numero": "3.3.1",
+   "texto": "Los agregados para concreto deben cumplir con las NTP correspondientes.\n Los agregados que no cumplan con los requisitos indicados en las NTP, podrán ser utilizados siempre que el Constructor demuestre, a través de ensayos y por experiencias de obra, que producen concretos con la resistencia y durabilidad requeridas.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.3.2",
+   "texto": "El tamaño máximo nominal del agregado grueso no debe ser superior a ninguna de:\n (a) 1/5 de la menor separación entre los lados del encofrado. (b) 1/3 de la altura de la losa, de ser el caso. (c) 3/4 del espaciamiento mínimo libre entre las barras o alambres individuales de refuerzo, paquetes de barras, tendones individuales, paquetes de tendones o ductos. Estas limitaciones se pueden omitir si se demuestra que la trabajabilidad y los métodos de compactación son tales que el concreto se puede colocar sin la formación de vacíos o “cangrejeras”.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.3.3",
+   "texto": "Los agregados que no cuenten con un registro o aquellos provenientes de canteras explotadas directamente por el Contratista, podrán ser aprobados por la Supervisión si cumplen con los ensayos normalizados que considere convenientes. Este procedimiento no invalida los ensayos de control de lotes de agregados en obra.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.3.4",
+   "texto": "Los agregados fino y grueso deberán ser manejados como materiales independientes. Cada una de ellos deberá ser procesado, transportado, manipulado, almacenado y pesado de manera tal que la pérdida de finos sea mínima, que mantengan su uniformidad, que no se produzca contaminación por sustancias extrañas y que no se presente rotura o segregación importante en ellos.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.3.5",
+   "texto": "Los agregados a ser empleados en concretos que vayan a estar sometidos a procesos de congelación y deshielo y no cumplan con el acápite 5.2.2 de la NTP 400.037 podrán ser utilizados si un concreto de propiedades comparables, preparado con agregado del mismo origen, ha demostrado un comportamiento satisfactorio cuando estuvo sometido a condiciones de intemperismo similares a las que se esperan.",
+   "pagina": 20
+  },
+  {
+   "numero": "3.3.6",
+   "texto": "El agregado fino podrá consistir de arena natural o manufacturada, o una combinación de ambas. Sus partículas serán limpias, de perfiles preferentemente angulares, duros, compactos y resistentes. Deberá estar libre de partículas escamosas, materia orgánica u otras sustancias dañinas.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.3.7",
+   "texto": "El agregado grueso podrá consistir de grava natural o triturada. Sus partículas serán limpias, de perfil preferentemente angular o semi-angular, duras, compactas, resistentes y de textura preferentemente rugosa; deberá estar libre de partículas escamosas, materia orgánica u otras sustancias dañinas.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.3.8",
+   "texto": "La granulometría seleccionada para el agregado deberá permitir obtener la máxima densidad del concreto con una adecuada trabajabilidad en función de las condiciones de colocación de la mezcla.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.3.9",
+   "texto": "El lavado de los agregados se deberá hacer con agua potable o agua libre de materia orgánica, sales y sólidos en suspensión.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.3.10",
+   "texto": "El agregado denominado \"hormigón\" corresponde a una mezcla natural de grava y arena. El “hormigón” sólo podrá emplearse en la elaboración de concretos con resistencia en compresión no mayor de 10 MPa a los 28 días. El contenido mínimo de cemento será de 255 Kg/m3. El hormigón deberá estar libre de cantidades perjudiciales de polvo, terrones, partículas blandas o escamosas, sales, álcalis, materia orgánica y otras sustancias dañinas para el concreto. En lo que sea aplicable, se seguirán para el hormigón las recomendaciones indicadas para los agregados fino y grueso.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.4",
+   "epigrafe": "Agua",
+   "texto": "AGUA",
+   "pagina": 21
+  },
+  {
+   "numero": "3.4.1",
+   "texto": "El agua empleada en la preparación y curado del concreto deberá ser, de preferencia, potable.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.4.2",
+   "texto": "Se podrán utilizar aguas no potables sólo si:\n (a) Están limpias y libres de cantidades perjudiciales de aceites, ácidos, álcalis, sales, materia orgánica y otras sustancias que puedan ser dañinas al concreto, acero de refuerzo o elementos embebidos. (b) La selección de las proporciones de la mezcla de concreto se basa en ensayos en los que se ha utilizado agua de la fuente elegida. (c) Los cubos de mortero para ensayos, hechos con agua no potable, deben tener resistencias a los 7 y 28 días, de por lo menos 90% de la resistencia de muestras similares hechas con agua potable. La comparación de los ensayos de resistencia debe hacerse en morteros idénticos, excepto por el agua de mezclado, preparados y ensayados de acuerdo con la NTP 334.051.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.4.3",
+   "texto": "Las sales u otras sustancias nocivas presentes en los agregados y/o aditivos deberán sumarse a las que pueda aportar el agua de mezclado para evaluar el contenido total de sustancias inconvenientes.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.4.4",
+   "texto": "La suma de los contenidos de ión cloruro presentes en el agua y en los demás componentes de la mezcla (agregados y aditivos) no deberán exceder los valores indicados en la Tabla 4.5 del Capítulo 4.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.4.5",
+   "texto": "El agua de mar sólo podrá emplearse en la preparación del concreto si se cuenta con la autorización del Ingeniero Proyectista y de la Supervisión. No se utilizará en los siguientes casos: - Concreto armado y preesforzado. - Concretos con resistencias mayores de 17 MPa a los 28 días.\n\n - Concretos con elementos embebidos de fierro galvanizado o aluminio. - Concretos con un acabado superficial de importancia.",
+   "pagina": 21
+  },
+  {
+   "numero": "3.4.6",
+   "texto": "No se utilizará en el curado del concreto ni en el lavado del equipo, aquellas aguas que no cumplan con los requisitos anteriores.",
+   "pagina": 22
+  },
+  {
+   "numero": "3.4.7",
+   "texto": "El agua de mezclado para concreto preesforzado o para concreto que contenga elementos de aluminio embebidos, incluyendo la parte del agua de mezclado con la que contribuye la humedad libre de los agregados, no debe contener cantidades perjudiciales de iones de cloruros. Véase 4.4.1.",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5",
+   "epigrafe": "Acero De Refuerzo",
+   "texto": "ACERO DE REFUERZO",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.1",
+   "texto": "El refuerzo debe ser corrugado, excepto en los casos indicados en 3.5.4. Se puede utilizar refuerzo consistente en perfiles de acero estructural o en tubos y elementos tubulares de acero de acuerdo con las limitaciones de esta Norma.",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.2",
+   "texto": "El refuerzo que va a ser soldado así como el procedimiento de soldadura, el cual deberá ser compatible con los requisitos de soldabilidad del acero que se empleará, deberán estar indicados en los planos y especificaciones del proyecto, así como la ubicación y tipo de los empalmes soldados y otras soldaduras requeridas en las barras de refuerzo. La soldadura de barras de refuerzo debe realizarse de acuerdo con “Structural Welding Code – Reinforcing Steel”, ANSI/AWS D1.4 de la American Welding Society. Las normas ASTM para barras de refuerzo, excepto la ASTM A 706M (NTP 339.186:2008) deben ser complementadas con un informe de las propiedades necesarias del material para cumplir con los requisitos de ANSI/AWS D1.4.",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.3",
+   "epigrafe": "Refuerzo corrugado",
+   "texto": "Refuerzo corrugado",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.3.1",
+   "texto": "Las barras de refuerzo corrugado deben cumplir con los requisitos para barras corrugadas de una de las siguientes normas: (a) “HORMIGON (CONCRETO) barras de acero al carbono con resaltes y lisas para hormigón (concreto) armado. Especificaciones” (NTP 341.031);\n (b) “HORMIGON (CONCRETO) barras con resaltes y lisas de acero de baja aleación para hormigón (concreto) armado. Especificaciones” (NTP 339.186)",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.3.2",
+   "texto": "Las barras corrugadas deben cumplir con una de las NTP enumeradas en 3.5.3.1, excepto que para barras con fy mayor que 420 MPa, la resistencia a la fluencia debe tomarse como el esfuerzo correspondiente a una deformación unitaria de 0,35%. Véase 9.5. La resistencia a la fluencia debe corresponder a la determinada por las pruebas de barras de sección transversal completa.",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.3.3",
+   "texto": "Las mallas electrosoldadas de barras corrugadas deben ajustarse a “Standard Specification for Fabricated Welded Deformed Steel Bar Mats for Concrete Reinforcement” (ASTM A 184M). Las barras utilizadas deben cumplir con NTP 341.031 ó NTP 339.186",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.3.4",
+   "texto": "El alambre corrugado para refuerzo del concreto debe cumplir con la NTP 341.068 excepto que el diámetro del alambre no debe ser menor que 5,5 mm y para el alambre con fy mayor de 420 MPa, la resistencia a la fluencia debe tomarse como el esfuerzo correspondiente a una deformación unitaria de 0,35%.",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.3.5",
+   "texto": "Las mallas electrosoldadas de alambre liso deben cumplir con la NTP 350.002 excepto que para alambre con un fy mayor que 420 MPa, la resistencia a la fluencia debe tomarse como el esfuerzo correspondiente a una deformación unitaria de 0,35%. Las intersecciones soldadas no deben estar espaciadas en más de 300 mm en el sentido del esfuerzo calculado, excepto para refuerzo de alambre electrosoldado utilizado como estribos de acuerdo con 12.13.2.",
+   "pagina": 22
+  },
+  {
+   "numero": "3.5.3.6",
+   "texto": "Las mallas electrosoldadas de alambre corrugado deben cumplir con “Standard Specification for Steel Welded Wire Reinforcement Deformed, for Concrete” (ASTM A 497M), excepto que para alambres con fy mayor que 420 MPa, la resistencia a la fluencia debe tomarse como el esfuerzo correspondiente a una deformación unitaria de 0,35%. Las intersecciones soldadas no deben estar espaciadas a más de 400 mm, en el sentido del esfuerzo calculado, excepto para refuerzos de alambre electrosoldado utilizados como estribos de acuerdo con 12.13.2.",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.3.7",
+   "texto": "Las barras de refuerzo galvanizadas deben cumplir con “Standard Specification for Zinc-Coated (Galvanized) Steel Bars for Concrete Reinforcement” (ASTM A 767M). Las barras de refuerzo con recubrimiento epóxico deben cumplir con “Standard Specification for Epoxy-Coated Steel Reinforcing Bars” (ASTM A 775M) o con “Standard Specification for Epoxy-Coated Prefabricated Steel Reinforcing Bars” (ASTM A 934M). Las barras que se vayan a galvanizar o a recubrir con epóxico deben cumplir con una de las normas citadas en 3.5.3.1.",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.3.8",
+   "texto": "Los alambres y el refuerzo electrosoldado de alambre recubiertos con epóxico deben cumplir con “Standard Specification for Epoxy-Coated Steel Wire and Welded Wire Reinforcement” (ASTM A 884M). Los alambres que se vayan a recubrir con epóxico deben cumplir con 3.5.3.4 y el refuerzo electrosoldado de alambre que se vaya a recubrir con epóxico debe cumplir con 3.5.3.5 ó 3.5.3.6.",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.4",
+   "epigrafe": "Refuerzo liso",
+   "texto": "Refuerzo liso",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.4.1",
+   "texto": "El refuerzo liso debe cumplir con una de las normas citadas en 3.5.3.1. Las barras y alambres lisos sólo se permiten en los siguientes casos:\n (a) Espirales: como refuerzo transversal para elementos en compresión o en torsión y como refuerzo de confinamiento en empalmes;\n (b) Acero de preesfuerzo;\n (c) Refuerzo por cambios volumétricos en losas nervadas que cumplan con 8.11. El diámetro de este refuerzo no deberá ser mayor de 1/4”.",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.4.2",
+   "texto": "Los alambres lisos para refuerzo en espiral deben cumplir con “Standard Specification for Steel Wire, Plain, for Concrete Reinforcement” (ASTM A 82), excepto que para alambres con fy superior a 420 MPa, la resistencia a la fluencia debe tomarse como el esfuerzo correspondiente a una deformación unitaria de 0,35%.",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.5",
+   "epigrafe": "Acero de preesfuerzo",
+   "texto": "Acero de preesfuerzo",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.5.1",
+   "texto": "El acero preesforzado debe cumplir con una de las normas siguientes:\n (a) Alambre que cumpla con “Standard Specification for Uncoated Stress- Relieved Steel Wire for Prestressed Concrete” (ASTM A 421M).\n (b) Alambre de baja relajación que cumpla con “Standard Specification for Uncoated Stress-Relieved Steel Wire for Prestressed Concrete”, incluyendo el suplemento “Low-Relaxation Wire” (ASTM A 421M). (c) Torón que cumpla con “Standard Specification for Steel Strand, Uncoated Seven-Wire for Prestressed Concrete” (ASTM A 416M). (d) Barra que cumpla con “Standard Specification for Uncoated High-Strength Steel Bar for Prestressed Concrete” (ASTM A 722M).",
+   "pagina": 23
+  },
+  {
+   "numero": "3.5.5.2",
+   "texto": "Los alambres, los torones y las barras que no figuran específicamente en las normas ASTM A 421M, A 416M, ó A 722M, se pueden usar, siempre que se demuestre que cumplen con los requisitos mínimos de estas normas, y que no tienen propiedades que los hagan menos satisfactorios que estos.",
+   "pagina": 24
+  },
+  {
+   "numero": "3.5.6",
+   "epigrafe": "Acero estructural",
+   "texto": "Acero estructural",
+   "pagina": 24
+  },
+  {
+   "numero": "3.5.6.1",
+   "texto": "El acero estructural utilizado junto con barras de refuerzo en elementos compuestos sometidos a compresión que cumpla con los requisitos de 10.16.7 ó 10.16.8, debe ajustarse a una de las siguientes normas:\n (a) “Standard Specification for Carbon Structural Steel” (ASTM A 36M).\n (b) “Standard Specification for High-Strength Low-Alloy Structural Steel” (ASTM A 242M).\n (c) “Standard Specification for High-Strength Low-Alloy Columbium-Vanadium Structural Steel” (ASTM A 572M).\n (d) “Standard Specification for High-Strength Low-Alloy Structural Steel with 50 ksi, (345 MPa) Minimum Yield Point to 4 in. (100 mm) Thick” (ASTM A 588M).\n (e) “Standard Specification for Structural Steel Shapes” (ASTM A 992M).",
+   "pagina": 24
+  },
+  {
+   "numero": "3.5.6.2",
+   "texto": "Para elementos compuestos sometidos a compresión, que estén formados por un tubo de acero relleno de concreto, que cumpla con los requisitos de 10.16.6, el tubo debe cumplir con una de las siguientes normas: (a) Grado B de “Standard Specification for Pipe, Steel, Black and Hot-Dipped, Zinc-Coated Welded and Seamless” (ASTM A 53M).\n (b) “Standard Specification for Cold-Formed Welded and Seamless Carbon Steel Structural Tubing in Rounds and Shapes” (ASTM A 500).\n (c) “Standard Specification for Hot-Formed Welded and Seamless Carbon Steel Structural Tubing” (ASTM A 501).",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6",
+   "epigrafe": "Aditivos",
+   "texto": "ADITIVOS",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6.1",
+   "texto": "Los aditivos que se usen en el concreto deben someterse a la aprobación de la Supervisión.",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6.2",
+   "texto": "Debe demostrarse que el aditivo utilizado en obra es capaz de mantener esencialmente la misma composición y comportamiento que el producto usado para establecer la dosificación del concreto de acuerdo con lo especificado en 5.2.",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6.3",
+   "texto": "El cloruro de calcio o los aditivos que contengan cloruros que no provengan de impurezas de los componentes del aditivo, no deben emplearse en concreto preesforzado, en concreto que contenga aluminio embebido o en concreto construido en encofrados permanentes de acero galvanizado. Véanse 4.3.2 y 4.4.1.",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6.4",
+   "texto": "Los aditivos incorporadores de aire deben cumplir con la NTP 334.089.",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6.5",
+   "texto": "Los aditivos reductores de agua, retardantes, acelerantes, reductores de agua y retardantes, y reductores de agua y acelerantes, deben cumplir con la NTP 334.088 ó con “Standard Specification for Chemical Admixtures for Use in Producing Flowing Concrete” (ASTM C 1017M).",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6.6",
+   "texto": "Las cenizas volantes u otras puzolanas que se empleen como aditivos deben cumplir con la NTP 334.104.",
+   "pagina": 24
+  },
+  {
+   "numero": "3.6.7",
+   "texto": "La escoria molida granulada de alto horno utilizada como aditivo debe cumplir con “Standard Specification for Ground Granulated Blast-Furnace Slag for Use in Concrete and Mortars” (ASTM C 989).",
+   "pagina": 25
+  },
+  {
+   "numero": "3.6.8",
+   "texto": "Los aditivos usados en la fabricación de concreto que contenga cemento expansivo de acuerdo a la NTP 334.156, deben ser compatibles con este cemento y no producir efectos nocivos.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.6.9",
+   "texto": "La microsílice usada como aditivo debe cumplir con la NTP 334.087.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.7",
+   "epigrafe": "Almacenamiento De Materiales",
+   "texto": "ALMACENAMIENTO DE MATERIALES",
+   "pagina": 25
+  },
+  {
+   "numero": "3.7.1",
+   "texto": "El material cementante y los agregados deben almacenarse de tal manera que se prevenga su deterioro o la introducción de materias extrañas.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.7.2",
+   "texto": "Ningún material que se haya deteriorado o contaminado debe utilizarse en la elaboración del concreto.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.7.3",
+   "texto": "Para el almacenamiento del cemento se adoptarán las siguientes precauciones:\n (a) No se aceptarán en obra bolsas de cemento cuyas envolturas estén deterioradas o perforadas.\n (b) El cemento en bolsas se almacenará en obra en un lugar techado, fresco, libre de humedad, sin contacto con el suelo. Se almacenará en pilas de hasta 10 bolsas y se cubrirá con material plástico u otros medios de protección.\n (c) El cemento a granel se almacenará en silos metálicos cuyas características deberán impedir el ingreso de humedad o elementos contaminantes.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.7.4",
+   "texto": "Los agregados se almacenarán o apilarán de manera de impedir la segregación de los mismos, su contaminación con otros materiales o su mezcla con agregados de características diferentes.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.7.5",
+   "texto": "Las barras de acero de refuerzo, alambre, tendones y ductos metálicos se almacenarán en un lugar seco, aislado del suelo y protegido de la humedad, tierra, sales, aceite y grasas.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.7.6",
+   "texto": "Los aditivos serán almacenados siguiendo las recomendaciones del fabricante. Se impedirá la contaminación, evaporación o deterioro de los mismos. Los aditivos líquidos serán protegidos de temperaturas de congelación y de cambios de temperatura que puedan afectar sus características. Los aditivos no deberán ser almacenados en obra por un período mayor de seis meses desde la fecha del último ensayo. En caso contrario, deberán reensayarse para evaluar su calidad antes de su empleo. Los aditivos cuya fecha de vencimiento se haya cumplido no serán utilizados.",
+   "pagina": 25
+  },
+  {
+   "numero": "3.8",
+   "epigrafe": "Normas Citadas",
+   "texto": "Las Normas Técnicas Peruanas (NTP), las normas de la American Society for Testing and Materials – ASTM y las normas de la American Welding Society - AWS citadas se consideran parte de esta Norma.",
+   "pagina": 25
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c03-materiales",
+   "titulo": "E.060 · Cap. 3 · Materiales",
+   "descripcion": "Agregados, agua, acero de refuerzo, aditivos y almacenamiento.",
+   "acceso": "free",
+   "orden": 11,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El tamaño máximo nominal del agregado grueso no debe superar {{1/5}} de la menor separación entre los lados del encofrado."
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(a) 1/5 de la menor separación entre los lados del encofrado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El tamaño máximo nominal del agregado grueso no debe superar {{1/3}} de la altura de la losa."
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(b) 1/3 de la altura de la losa, de ser el caso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El tamaño máximo nominal del agregado grueso no debe superar {{3/4}} del espaciamiento mínimo libre entre barras de refuerzo."
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(c) 3/4 del espaciamiento mínimo libre entre las barras o alambres individuales de refuerzo, paquetes de barras, tendones individuales, paquetes de tendones o ductos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una losa maciza de 15 cm de espesor, ¿cuál es el tamaño máximo nominal del agregado grueso que permite el criterio de la altura de la losa?",
+      "opciones": [
+       "30 mm",
+       "50 mm",
+       "75 mm",
+       "100 mm"
+      ],
+      "correcta": 1,
+      "explicacion": "1/3 × 150 mm = 50 mm. Además debe cumplir los criterios (a) y (c): manda el menor."
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(b) 1/3 de la altura de la losa, de ser el caso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Si el espaciamiento mínimo libre entre barras es {S} mm, ¿cuál es el tamaño máximo nominal del agregado grueso según el criterio de las barras?",
+      "variables": {
+       "S": {
+        "etiqueta": "Espaciamiento libre",
+        "valores": [
+         25,
+         32,
+         40,
+         50
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.75*S",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm"
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(c) 3/4 del espaciamiento mínimo libre entre las barras o alambres individuales de refuerzo…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo se pueden omitir los límites de tamaño máximo nominal del agregado grueso?",
+      "respuesta": "Cuando se demuestra que la trabajabilidad y los métodos de compactación permiten colocar el concreto sin vacíos ni «cangrejeras»."
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "Estas limitaciones se pueden omitir si se demuestra que la trabajabilidad y los métodos de compactación son tales que el concreto se puede colocar sin la formación de vacíos o “cangrejeras”."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿En qué concretos se permite usar «hormigón» (mezcla natural de grava y arena)?",
+      "respuesta": "Solo en concretos con resistencia en compresión no mayor de 10 MPa a los 28 días, con un contenido mínimo de cemento de 255 kg/m³."
+     },
+     "citas": [
+      {
+       "articulo": "3.3.10",
+       "extracto": "El “hormigón” sólo podrá emplearse en la elaboración de concretos con resistencia en compresión no mayor de 10 MPa a los 28 días. El contenido mínimo de cemento será de 255 Kg/m3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es el contenido mínimo de cemento en un concreto hecho con «hormigón»?",
+      "opciones": [
+       "210 kg/m³",
+       "255 kg/m³",
+       "300 kg/m³",
+       "350 kg/m³"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.3.10",
+       "extracto": "El contenido mínimo de cemento será de 255 Kg/m3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿En qué casos no se puede usar agua de mar para preparar concreto?",
+      "respuesta": "En concreto armado y preesforzado; en concretos de más de 17 MPa a los 28 días; con elementos embebidos de fierro galvanizado o aluminio; y en concretos con acabado superficial de importancia.",
+      "explicacion": "Aun en los casos permitidos, requiere autorización del Ingeniero Proyectista y de la Supervisión."
+     },
+     "citas": [
+      {
+       "articulo": "3.4.5",
+       "extracto": "No se utilizará en los siguientes casos: - Concreto armado y preesforzado. - Concretos con resistencias mayores de 17 MPa a los 28 días. - Concretos con elementos embebidos de fierro galvanizado o aluminio. - Concretos con un acabado superficial de importancia."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién debe autorizar el uso de agua de mar en la preparación del concreto?",
+      "opciones": [
+       "Solo el Constructor",
+       "El Ingeniero Proyectista y la Supervisión",
+       "El proveedor de concreto",
+       "No se requiere autorización"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.4.5",
+       "extracto": "El agua de mar sólo podrá emplearse en la preparación del concreto si se cuenta con la autorización del Ingeniero Proyectista y de la Supervisión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Como regla general, ¿qué tipo de refuerzo exige la E.060?",
+      "opciones": [
+       "Liso",
+       "Corrugado",
+       "Galvanizado",
+       "Con recubrimiento epóxico"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.5.1",
+       "extracto": "El refuerzo debe ser corrugado, excepto en los casos indicados en 3.5.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿En qué casos se permiten barras y alambres lisos?",
+      "respuesta": "En espirales (refuerzo transversal o de confinamiento), en acero de preesfuerzo y como refuerzo por cambios volumétricos en losas nervadas, con diámetro no mayor de 1/4”."
+     },
+     "citas": [
+      {
+       "articulo": "3.5.4.1",
+       "extracto": "Las barras y alambres lisos sólo se permiten en los siguientes casos: (a) Espirales… (b) Acero de preesfuerzo; (c) Refuerzo por cambios volumétricos en losas nervadas que cumplan con 8.11. El diámetro de este refuerzo no deberá ser mayor de 1/4”."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Para barras con fy mayor que 420 MPa, la resistencia a la fluencia se toma como el esfuerzo correspondiente a una deformación unitaria de {{0,35 %}}."
+     },
+     "citas": [
+      {
+       "articulo": "3.5.3.2",
+       "extracto": "…para barras con fy mayor que 420 MPa, la resistencia a la fluencia debe tomarse como el esfuerzo correspondiente a una deformación unitaria de 0,35%."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El alambre corrugado para refuerzo no debe tener un diámetro menor que {{5,5 mm}}."
+     },
+     "citas": [
+      {
+       "articulo": "3.5.3.4",
+       "extracto": "…el diámetro del alambre no debe ser menor que 5,5 mm…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En mallas electrosoldadas de alambre liso, las intersecciones soldadas no deben estar espaciadas más de {{300 mm}} en el sentido del esfuerzo calculado."
+     },
+     "citas": [
+      {
+       "articulo": "3.5.3.5",
+       "extracto": "Las intersecciones soldadas no deben estar espaciadas en más de 300 mm en el sentido del esfuerzo calculado…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En cuál de estos concretos no debe emplearse cloruro de calcio como aditivo?",
+      "opciones": [
+       "Zapatas de concreto armado",
+       "Concreto preesforzado",
+       "Cimientos de concreto simple",
+       "Solados"
+      ],
+      "correcta": 1,
+      "explicacion": "Tampoco en concreto con aluminio embebido ni en encofrados permanentes de acero galvanizado."
+     },
+     "citas": [
+      {
+       "articulo": "3.6.3",
+       "extracto": "El cloruro de calcio o los aditivos que contengan cloruros… no deben emplearse en concreto preesforzado, en concreto que contenga aluminio embebido o en concreto construido en encofrados permanentes de acero galvanizado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién debe aprobar los aditivos que se usen en el concreto?",
+      "opciones": [
+       "El fabricante del aditivo",
+       "La Supervisión",
+       "El maestro de obra",
+       "El Colegio de Ingenieros"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.6.1",
+       "extracto": "Los aditivos que se usen en el concreto deben someterse a la aprobación de la Supervisión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En obra, el cemento en bolsas se almacena en pilas de hasta {{10}} bolsas, en un lugar techado y sin contacto con el suelo."
+     },
+     "citas": [
+      {
+       "articulo": "3.7.3",
+       "extracto": "(b) El cemento en bolsas se almacenará en obra en un lugar techado, fresco, libre de humedad, sin contacto con el suelo. Se almacenará en pilas de hasta 10 bolsas…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo deben almacenarse las barras de acero de refuerzo en obra?",
+      "respuesta": "En un lugar seco, aislado del suelo y protegido de la humedad, tierra, sales, aceite y grasas."
+     },
+     "citas": [
+      {
+       "articulo": "3.7.5",
+       "extracto": "Las barras de acero de refuerzo, alambre, tendones y ductos metálicos se almacenarán en un lugar seco, aislado del suelo y protegido de la humedad, tierra, sales, aceite y grasas."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -29,7 +29,7 @@ export async function publicarMazo(deckId: string, publishedBy: string) {
     if (filas.length === 0) throw new Error("El mazo no tiene tarjetas aprobadas");
 
     const citas = await tx
-      .select({ cardId: cardCitations.cardId, articleId: cardCitations.articleId, excerpt: cardCitations.excerpt, number: articles.number })
+      .select({ cardId: cardCitations.cardId, articleId: cardCitations.articleId, excerpt: cardCitations.excerpt, number: articles.number, page: articles.sourcePage })
       .from(cardCitations)
       .innerJoin(articles, eq(articles.id, cardCitations.articleId))
       .where(inArray(cardCitations.cardId, filas.map((t) => t.id)));
@@ -54,7 +54,12 @@ export async function publicarMazo(deckId: string, publishedBy: string) {
         contenido: t.content,
         citas: citas
           .filter((c) => c.cardId === t.id)
-          .map(({ articleId, excerpt, number }) => ({ articuloId: articleId, extracto: excerpt, articulo: number })),
+          .map(({ articleId, excerpt, number, page }) => ({
+            articuloId: articleId,
+            extracto: excerpt,
+            articulo: number,
+            ...(page ? { pagina: page } : {}),
+          })),
       })),
     });
 

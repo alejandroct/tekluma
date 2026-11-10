@@ -15,7 +15,8 @@ export const paqueteMazoSchema = z.object({
       id: z.uuid(),
       revision: z.number().int().positive(),
       contenido: contenidoTarjetaSchema,
-      citas: z.array(citaSchema.extend({ articulo: z.string() })),
+      /** `pagina`: página del documento oficial donde está el artículo, para consultarlo en la fuente. */
+      citas: z.array(citaSchema.extend({ articulo: z.string(), pagina: z.number().int().positive().optional() })),
     }),
   ),
 });

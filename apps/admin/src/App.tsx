@@ -1,16 +1,17 @@
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { api, auth, ErrorApi, type Yo } from "./api";
 import { ROLES } from "./etiquetas";
-import { IconoCandado, IconoEquipo, IconoMazo, IconoNorma, IconoSalir } from "./iconos";
+import { IconoCandado, IconoEquipo, IconoImportar, IconoMazo, IconoNorma, IconoSalir } from "./iconos";
 import { Logo } from "./ui";
 import { Equipo } from "./vistas/Equipo";
+import { Importar } from "./vistas/Importar";
 import { Login } from "./vistas/Login";
 import { Mazos } from "./vistas/Mazos";
 import { Normas } from "./vistas/Normas";
 import "./App.css";
 
 type Sesion = { tipo: "cargando" } | { tipo: "anonimo" } | { tipo: "sin-acceso"; mensaje: string } | { tipo: "staff"; yo: Yo };
-type Vista = "mazos" | "normas" | "equipo";
+type Vista = "mazos" | "normas" | "equipo" | "importar";
 
 const NAV: { vista: Vista; etiqueta: string; icono: ReactNode }[] = [
   { vista: "mazos", etiqueta: "Mazos", icono: <IconoMazo /> },
@@ -75,7 +76,11 @@ export default function App() {
     );
 
   const { yo } = sesion;
-  const enlaces = yo.rol === "admin" ? [...NAV, { vista: "equipo" as const, etiqueta: "Equipo", icono: <IconoEquipo /> }] : NAV;
+  const admin: { vista: Vista; etiqueta: string; icono: ReactNode }[] = [
+    { vista: "importar", etiqueta: "Importar", icono: <IconoImportar /> },
+    { vista: "equipo", etiqueta: "Equipo", icono: <IconoEquipo /> },
+  ];
+  const enlaces = yo.rol === "admin" ? [...NAV, ...admin] : NAV;
 
   const item = (n: (typeof enlaces)[number]) => (
     <button
@@ -98,11 +103,11 @@ export default function App() {
         </div>
         <nav className="nav" aria-label="Secciones">
           <span className="rotulo nav-grupo">Contenido</span>
-          {enlaces.filter((n) => n.vista !== "equipo").map(item)}
+          {NAV.map(item)}
           {yo.rol === "admin" && (
             <>
               <span className="rotulo nav-grupo">Administración</span>
-              {enlaces.filter((n) => n.vista === "equipo").map(item)}
+              {admin.map(item)}
             </>
           )}
         </nav>
@@ -120,6 +125,7 @@ export default function App() {
           {vista === "mazos" && <Mazos yo={yo} />}
           {vista === "normas" && <Normas yo={yo} />}
           {vista === "equipo" && <Equipo />}
+          {vista === "importar" && <Importar />}
         </div>
       </div>
     </div>
