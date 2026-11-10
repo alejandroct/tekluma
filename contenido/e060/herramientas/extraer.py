@@ -23,7 +23,7 @@ def mapear(ch,fuente):
 doc=pymupdf.open(F)
 for i,p in enumerate(doc):
     lineas=[]
-    for b in p.get_text("rawdict")["blocks"]:
+    for b in p.get_text("rawdict", flags=pymupdf.TEXTFLAGS_RAWDICT | pymupdf.TEXT_ACCURATE_SIDE_BEARINGS)["blocks"]:
         for l in b.get("lines",[]):
             lineas.append("".join(mapear(c["c"],s["font"]) for s in l["spans"] for c in s["chars"]))
         lineas.append("")

@@ -2106,7 +2106,7 @@
   },
   {
    "numero": "9.3.2.2",
-   "texto": "Carga axial y carga axial con flexión:\n (a) Carga axial de tracción con o sin flexión … 0,90 (b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70\n Para elementos en flexocompresión puede incrementarse linealmente hasta 0,90 en la medida que\n\n φPn disminuye desde 0,1 f’c Ag ó\n\n φPb, el que sea menor, hasta cero.",
+   "texto": "Carga axial y carga axial con flexión:\n (a) Carga axial de tracción con o sin flexión … 0,90 (b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70\n Para elementos en flexocompresión\n\n φ puede incrementarse linealmente hasta 0,90 en la medida que\n\n φPn disminuye desde 0,1 f’c Ag ó\n\n φPb, el que sea menor, hasta cero.",
    "pagina": 64
   },
   {
@@ -2395,7 +2395,7 @@
   },
   {
    "numero": "10.2.3",
-   "texto": "sometida a compresión, se asumirá igual a 0,003.",
+   "texto": "La máxima deformación unitaria utilizable del concreto, εcu, en la fibra extrema sometida a compresión, se asumirá igual a 0,003.",
    "pagina": 77
   },
   {
@@ -2446,7 +2446,7 @@
   },
   {
    "numero": "10.3.2",
-   "texto": "La condición de falla balanceada se produce en una sección transversal cuando el refuerzo en tracción alcanza la deformación unitaria correspondiente a fy al mismo tiempo que el concreto en compresión alcanza su deformación unitaria máxima forma sin acero de compresión o con él.",
+   "texto": "La condición de falla balanceada se produce en una sección transversal cuando el refuerzo en tracción alcanza la deformación unitaria correspondiente a fy al mismo tiempo que el concreto en compresión alcanza su deformación unitaria máxima utilizable εcu de 0,003. Este criterio es general y se aplica a secciones de cualquier forma sin acero de compresión o con él.",
    "pagina": 78
   },
   {
@@ -2461,7 +2461,7 @@
   },
   {
    "numero": "10.3.5",
-   "texto": "En elementos no preesforzados sujetos a flexión o flexocompresión en los cuales φPn sea menor que 0,1 f’c Ag, puede considerarse alternativamente que el requisito de 10.3.4, relativo a la cantidad máxima de acero en tracción, se cumple cuando la deformación unitaria neta,\n\n 8.4.1). Este criterio es aplicable a secciones de cualquier forma, sin acero de compresión o con él y/o con acero repartido en el alma.",
+   "texto": "En elementos no preesforzados sujetos a flexión o flexocompresión en los cuales φPn sea menor que 0,1 f’c Ag, puede considerarse alternativamente que el requisito de 10.3.4, relativo a la cantidad máxima de acero en tracción, se cumple cuando la deformación unitaria neta,\n\n εt, del acero en tracción más alejado del borde comprimido es mayor o igual a 0.004 (véase la definición de εt en 8.4.1 y la figura 8.4.1). Este criterio es aplicable a secciones de cualquier forma, sin acero de compresión o con él y/o con acero repartido en el alma.",
    "pagina": 78
   },
   {
@@ -4107,12 +4107,48 @@
   },
   {
    "numero": "12.10.2",
-   "texto": "Las secciones críticas para el desarrollo del refuerzo en elementos sometidos a flexión son los puntos donde se presentan los esfuerzos máximos y los puntos dentro de la luz libre donde se corta o se dobla el refuerzo. Las disposiciones de",
+   "texto": "Las secciones críticas para el desarrollo del refuerzo en elementos sometidos a flexión son los puntos donde se presentan los esfuerzos máximos y los puntos dentro de la luz libre donde se corta o se dobla el refuerzo. Las disposiciones de 12.11.3 deben cumplirse.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.3",
+   "texto": "El refuerzo se debe extender, más allá del punto en el que ya no es necesario para resistir flexión, una distancia igual a d ó 12 db , la que sea mayor, excepto en los apoyos de vigas simplemente apoyadas y en el extremo libre de los voladizos.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.4",
+   "texto": "Cuando existan dos o más bastones, el refuerzo que continúa deberá tener una longitud de anclaje mayor o igual a la longitud de desarrollo d ℓ más allá del punto donde el refuerzo que se ha cortado o doblado no es necesario por cálculo.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.5",
+   "texto": "El refuerzo por flexión no debe terminarse en una zona de tracción, a menos que se satisfaga alguno de los siguientes requisitos:\n (a) Vu en el punto terminal no excede (2/3) φVn. (b) Para barras 1 3/8\" y menores, en las que el refuerzo que continúa proporciona el doble del área requerida por la flexión en el punto terminal y Vu no excede (3/4) φVn.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.6",
+   "texto": "En elementos sometidos a flexión, se debe proporcionar un anclaje adecuado para el refuerzo en tracción cuando el esfuerzo en el refuerzo no es directamente proporcional al momento, como ocurre en las zapatas inclinadas, escalonadas o de sección variable; en ménsulas; en elementos de gran peralte sometidos a flexión; o en elementos en los cuales el refuerzo de tracción no es paralelo a la cara de compresión. Ver 12.11.4 y 12.12.4 sobre elementos de gran peralte sometidos a flexión.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11",
+   "epigrafe": "Desarrollo Del Refuerzo Para Momento Positivo",
+   "texto": "DESARROLLO DEL REFUERZO PARA MOMENTO POSITIVO",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11.1",
+   "texto": "Por lo menos 1/3 del refuerzo para momento positivo se debe prolongar a lo largo de la misma cara del elemento hasta el apoyo. En las vigas, dicho refuerzo se debe prolongar por lo menos 150 mm dentro del apoyo.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11.2",
+   "texto": "Cuando un elemento sometido a flexión sea parte de un sistema que resiste cargas laterales, el refuerzo para momento positivo que prolonga en el apoyo, se debe anclar para que sea capaz de desarrollar fy en tracción en la cara de apoyo.",
    "pagina": 121
   },
   {
    "numero": "12.11.3",
-   "texto": "deben cumplirse.\n 12.10.3 El refuerzo se debe extender, más allá del punto en el que ya no es necesario para resistir flexión, una distancia igual a d ó 12 db , la que sea mayor, excepto en los apoyos de vigas simplemente apoyadas y en el extremo libre de los voladizos.\n 12.10.4 Cuando existan dos o más bastones, el refuerzo que continúa deberá tener una longitud de anclaje mayor o igual a la longitud de desarrollo d ℓ más allá del punto donde el refuerzo que se ha cortado o doblado no es necesario por cálculo.\n 12.10.5 El refuerzo por flexión no debe terminarse en una zona de tracción, a menos que se satisfaga alguno de los siguientes requisitos:\n (a) Vu en el punto terminal no excede (2/3) φVn. (b) Para barras 1 3/8\" y menores, en las que el refuerzo que continúa proporciona el doble del área requerida por la flexión en el punto terminal y Vu no excede (3/4) φVn.\n 12.10.6 En elementos sometidos a flexión, se debe proporcionar un anclaje adecuado para el refuerzo en tracción cuando el esfuerzo en el refuerzo no es directamente proporcional al momento, como ocurre en las zapatas inclinadas, escalonadas o de sección variable; en ménsulas; en elementos de gran peralte sometidos a flexión; o en elementos en los cuales el refuerzo de tracción no es paralelo a la cara de compresión. Ver 12.11.4 y 12.12.4 sobre elementos de gran peralte sometidos a flexión.\n 12.11 DESARROLLO DEL REFUERZO PARA MOMENTO POSITIVO\n 12.11.1 Por lo menos 1/3 del refuerzo para momento positivo se debe prolongar a lo largo de la misma cara del elemento hasta el apoyo. En las vigas, dicho refuerzo se debe prolongar por lo menos 150 mm dentro del apoyo.\n 12.11.2 Cuando un elemento sometido a flexión sea parte de un sistema que resiste cargas laterales, el refuerzo para momento positivo que prolonga en el apoyo, se debe anclar para que sea capaz de desarrollar fy en tracción en la cara de apoyo.\n 12.11.3 En los apoyos simples y en los puntos de inflexión, el refuerzo de tracción para momento positivo debe limitarse a un diámetro tal que d ℓ calculado para fy de acuerdo con 12.2 satisfaga la ecuación (12-5), excepto que no es necesario satisfacer dicha ecuación para los refuerzos que terminan más allá del eje central de los apoyos simples mediante un gancho estándar o un anclaje mecánico equivalente, como mínimo, a un gancho estándar.\n\n Mn d a Vu ≤ + (12-\n 5)\n donde Mn se calcula suponiendo que todo el refuerzo de la sección está sometido a fy, Vu se calcula en la sección y a ℓ en el apoyo debe ser la longitud embebida más allá del centro del apoyo.\n a ℓ en el punto de inflexión debe limitarse a d ó 12 db , el que sea mayor.\n Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión.",
+   "texto": "En los apoyos simples y en los puntos de inflexión, el refuerzo de tracción para momento positivo debe limitarse a un diámetro tal que d ℓ calculado para fy de acuerdo con 12.2 satisfaga la ecuación (12-5), excepto que no es necesario satisfacer dicha ecuación para los refuerzos que terminan más allá del eje central de los apoyos simples mediante un gancho estándar o un anclaje mecánico equivalente, como mínimo, a un gancho estándar.\n\n Mn d a Vu ≤ + (12-\n 5)\n donde Mn se calcula suponiendo que todo el refuerzo de la sección está sometido a fy, Vu se calcula en la sección y a ℓ en el apoyo debe ser la longitud embebida más allá del centro del apoyo.\n a ℓ en el punto de inflexión debe limitarse a d ó 12 db , el que sea mayor.\n Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión.",
    "pagina": 121
   },
   {
@@ -5618,13 +5654,12 @@
   },
   {
    "numero": "16.6.2",
-   "epigrafe": "Los apoyos simples de elementos prefabricados de piso o techo deben satisfacer",
-   "texto": "Los apoyos simples de elementos prefabricados de piso o techo deben satisfacer",
+   "texto": "Los apoyos simples de elementos prefabricados de piso o techo deben satisfacer 16.6.2.1 y 16.6.2.2.",
    "pagina": 154
   },
   {
    "numero": "16.6.2.1",
-   "texto": "y 16.6.2.2.\n 16.6.2.1 El esfuerzo de aplastamiento en la superficie de contacto entre el elemento de apoyo y el apoyado y entre cualquier elemento de apoyo intermedio, no debe exceder la resistencia al aplastamiento de ninguna de las superficies ni del elemento de apoyo. La resistencia al aplastamiento del concreto será la especificada en 10.17.",
+   "texto": "El esfuerzo de aplastamiento en la superficie de contacto entre el elemento de apoyo y el apoyado y entre cualquier elemento de apoyo intermedio, no debe exceder la resistencia al aplastamiento de ninguna de las superficies ni del elemento de apoyo. La resistencia al aplastamiento del concreto será la especificada en 10.17.",
    "pagina": 154
   },
   {
@@ -5823,12 +5858,12 @@
   },
   {
    "numero": "17.5.3",
-   "texto": "A menos que se calcule de acuerdo con 17.5.4, el diseño de las secciones transversales sometidas a cortante horizontal debe basarse en:\n Vu ≤ φ Vnh (17-1)\n donde Vnh es la resistencia nominal al cortante horizontal calculada de acuerdo con",
+   "texto": "A menos que se calcule de acuerdo con 17.5.4, el diseño de las secciones transversales sometidas a cortante horizontal debe basarse en:\n Vu ≤ φ Vnh (17-1)\n donde Vnh es la resistencia nominal al cortante horizontal calculada de acuerdo con 17.5.3.1 a 17.5.3.4.",
    "pagina": 157
   },
   {
    "numero": "17.5.3.1",
-   "texto": "a 17.5.3.4.\n 17.5.3.1 Donde las superficies de contacto estén limpias, libres de lechada y se hayan hecho rugosas intencionalmente, la resistencia al cortante Vnh no debe tomarse mayor a 0,55 bv d.",
+   "texto": "Donde las superficies de contacto estén limpias, libres de lechada y se hayan hecho rugosas intencionalmente, la resistencia al cortante Vnh no debe tomarse mayor a 0,55 bv d.",
    "pagina": 157
   },
   {
@@ -6297,14 +6332,114 @@
   },
   {
    "numero": "18.13.2.3",
-   "epigrafe": "Los requisitos para la zona local de 18.13.2.2 se satisfacen con lo indicado en",
-   "texto": "Los requisitos para la zona local de 18.13.2.2 se satisfacen con lo indicado en",
+   "texto": "Los requisitos para la zona local de 18.13.2.2 se satisfacen con lo indicado en 18.14.1 ó 18.15.1 y 18.15.2.",
    "pagina": 167
   },
   {
-   "numero": "18.14.1",
-   "texto": "ó 18.15.1 y 18.15.2.\n 18.13.3 Zona general\n 18.13.3.1 El diseño de las zonas generales debe basarse en la fuerza amplificada de preesforzado, Ppu, y en los requisitos de 9.2.11 y 9.3.2.5.\n 18.13.3.2 Se debe proporcionar refuerzo en la zona general donde se requiera para resistir las fuerzas longitudinales de tracción en el borde inducidas por los dispositivos de anclaje. Deben considerarse los efectos de cambios abruptos en la sección.\n 18.13.3.3 Los requisitos para la zona general establecidos en 18.13.3.2 se consideran satisfechos si se cumple con 18.13.4, 18.13.5, 18.13.6 y cada vez que sea aplicable con lo indicado en 18.14.2, 18.14.3, ó 18.15.3.\n 18.13.4 Resistencia nominal de los materiales\n 18.13.4.1 El esfuerzo nominal a tracción del refuerzo adherido esta limitada a fy para el refuerzo no preesforzado y a fpy para el refuerzo preesforzado. El esfuerzo nominal de tracción del refuerzo no adherido preesforzado para resistir las fuerzas de tracción en las zonas de anclaje debe estar limitado a 70 fps fse = + en MPa.\n 18.13.4.2 Salvo el caso de concreto confinado dentro de espirales o estribos cerrados que proporcionen confinamiento equivalente al indicado por la ecuación (10-5), la resistencia nominal a compresión del concreto en la zona general debe limitarse a\n 0,7λ f ci′. 18.13.4.3 La resistencia a compresión del concreto en el momento de postensar, f ci′, debe especificarse en los planos de diseño. A menos que se usen dispositivos de anclaje sobredimensionados para compensar la menor resistencia a compresión o que el acero esté esforzado a no más del 50% de la fuerza final del preesforzado, el acero de preesforzado no debe tensarse sino hasta que la resistencia a la compresión del concreto medida en ensayos consistentes con el curado del elemento, sea al menos 28 MPa para torones de varios alambres o de a lo menos 17 MPa para los tendones de un cable o para barras.\n\n 18.13.5 Métodos de diseño\n 18.13.5.1 Para el diseño de zonas generales se permiten utilizar los métodos indicados a continuación, siempre que los procedimientos den como resultado predicciones de resistencia que concuerden sustancialmente con los resultados de ensayos.\n (a) Modelos de plasticidad basados en equilibrio (modelos “puntal - tensor”).\n (b) Análisis lineal de esfuerzos (incluyendo análisis por elementos finitos o equivalente).\n (c) Ecuaciones simplificadas, cuando sean aplicables.\n 18.13.5.2 No deben utilizarse las ecuaciones simplificadas en los casos en que la sección transversal del elemento no sea rectangular, en donde las discontinuidades en o cerca de la zona general causen desviaciones en la trayectoria de las fuerzas, en donde la distancia mínima al borde sea menor que 1,5 veces la dimensión lateral del dispositivo de anclaje en esa dirección o en donde se usen dispositivos múltiples de anclaje que no queden dispuestos como un solo grupo compacto.\n 18.13.5.3 La secuencia de tensados debe especificarse en los planos y considerarse en el diseño.\n 18.13.5.4 Deben considerarse los efectos tridimensionales en el diseño. Los análisis se deben realizar usando procedimientos tridimensionales o considerando la suma de los efectos en dos planos ortogonales.\n 18.13.5.5 Para los dispositivos de anclaje ubicados lejos del extremo del elemento, debe proporcionarse refuerzo adherido para transferir, al menos, 0,35Ppu a la sección de concreto que queda detrás del anclaje. Tal refuerzo debe colocarse simétricamente alrededor de los dispositivos de anclaje y debe estar completamente anclado tanto por detrás como por delante de los dispositivos de anclaje.\n 18.13.5.6 Cuando los tendones son curvados en la zona general, excepto para tendones de un cable en losas o donde el análisis demuestre que no se requiere refuerzo, se debe proporcionar refuerzo adherido con el objeto de resistir las fuerzas radiales y de hendimiento.\n 18.13.5.7 Excepto para tendones de un cable o donde el análisis demuestre que no se requiere refuerzo, se debe proporcionar un refuerzo mínimo en direcciones ortogonales paralelas a la superficie posterior de todas las zonas de anclaje, con una resistencia nominal a la tracción igual al 2% de cada fuerza de preesforzado amplificada, con el objeto de evitar el descascaramiento.\n 18.13.5.8 No se debe considerar la resistencia a la tracción del concreto al calcular el refuerzo requerido.\n 18.13.6 Requisitos de detallado\n La elección de los tamaños de refuerzo, espaciamientos, recubrimiento y otros detalles para las zonas de anclaje, debe contemplar las tolerancias en el doblado, fabricación e instalación del refuerzo, el tamaño del agregado y la correcta colocación y consolidación del concreto.\n 18.14 DISEÑO DE LAS ZONAS DE ANCLAJE PARA CABLES DE UN ALAMBRE O BARRAS DE HASTA 16 mm DE DIÁMETRO\n 18.14.1 Diseño de la zona local\n\n Los dispositivos de anclaje de un solo cable o barra de 16 mm o menos de diámetro y el refuerzo de una zona local deben cumplir con lo indicado en la publicación ACI 423.6 “Specification for Unbonded Single-Strand Tendons” o con los requisitos para dispositivos especiales de anclaje señalados en 18.15.2.",
+   "numero": "18.13.3",
+   "epigrafe": "Zona general",
+   "texto": "Zona general",
    "pagina": 167
+  },
+  {
+   "numero": "18.13.3.1",
+   "texto": "El diseño de las zonas generales debe basarse en la fuerza amplificada de preesforzado, Ppu, y en los requisitos de 9.2.11 y 9.3.2.5.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.3.2",
+   "texto": "Se debe proporcionar refuerzo en la zona general donde se requiera para resistir las fuerzas longitudinales de tracción en el borde inducidas por los dispositivos de anclaje. Deben considerarse los efectos de cambios abruptos en la sección.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.3.3",
+   "texto": "Los requisitos para la zona general establecidos en 18.13.3.2 se consideran satisfechos si se cumple con 18.13.4, 18.13.5, 18.13.6 y cada vez que sea aplicable con lo indicado en 18.14.2, 18.14.3, ó 18.15.3.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4",
+   "epigrafe": "Resistencia nominal de los materiales",
+   "texto": "Resistencia nominal de los materiales",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4.1",
+   "texto": "El esfuerzo nominal a tracción del refuerzo adherido esta limitada a fy para el refuerzo no preesforzado y a fpy para el refuerzo preesforzado. El esfuerzo nominal de tracción del refuerzo no adherido preesforzado para resistir las fuerzas de tracción en las zonas de anclaje debe estar limitado a 70 fps fse = + en MPa.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4.2",
+   "texto": "Salvo el caso de concreto confinado dentro de espirales o estribos cerrados que proporcionen confinamiento equivalente al indicado por la ecuación (10-5), la resistencia nominal a compresión del concreto en la zona general debe limitarse a\n 0,7λ f ci′.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.4.3",
+   "texto": "La resistencia a compresión del concreto en el momento de postensar, f ci′, debe especificarse en los planos de diseño. A menos que se usen dispositivos de anclaje sobredimensionados para compensar la menor resistencia a compresión o que el acero esté esforzado a no más del 50% de la fuerza final del preesforzado, el acero de preesforzado no debe tensarse sino hasta que la resistencia a la compresión del concreto medida en ensayos consistentes con el curado del elemento, sea al menos 28 MPa para torones de varios alambres o de a lo menos 17 MPa para los tendones de un cable o para barras.",
+   "pagina": 167
+  },
+  {
+   "numero": "18.13.5",
+   "epigrafe": "Métodos de diseño",
+   "texto": "Métodos de diseño",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.1",
+   "texto": "Para el diseño de zonas generales se permiten utilizar los métodos indicados a continuación, siempre que los procedimientos den como resultado predicciones de resistencia que concuerden sustancialmente con los resultados de ensayos.\n (a) Modelos de plasticidad basados en equilibrio (modelos “puntal - tensor”).\n (b) Análisis lineal de esfuerzos (incluyendo análisis por elementos finitos o equivalente).\n (c) Ecuaciones simplificadas, cuando sean aplicables.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.2",
+   "texto": "No deben utilizarse las ecuaciones simplificadas en los casos en que la sección transversal del elemento no sea rectangular, en donde las discontinuidades en o cerca de la zona general causen desviaciones en la trayectoria de las fuerzas, en donde la distancia mínima al borde sea menor que 1,5 veces la dimensión lateral del dispositivo de anclaje en esa dirección o en donde se usen dispositivos múltiples de anclaje que no queden dispuestos como un solo grupo compacto.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.3",
+   "texto": "La secuencia de tensados debe especificarse en los planos y considerarse en el diseño.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.4",
+   "texto": "Deben considerarse los efectos tridimensionales en el diseño. Los análisis se deben realizar usando procedimientos tridimensionales o considerando la suma de los efectos en dos planos ortogonales.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.5",
+   "texto": "Para los dispositivos de anclaje ubicados lejos del extremo del elemento, debe proporcionarse refuerzo adherido para transferir, al menos, 0,35Ppu a la sección de concreto que queda detrás del anclaje. Tal refuerzo debe colocarse simétricamente alrededor de los dispositivos de anclaje y debe estar completamente anclado tanto por detrás como por delante de los dispositivos de anclaje.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.6",
+   "texto": "Cuando los tendones son curvados en la zona general, excepto para tendones de un cable en losas o donde el análisis demuestre que no se requiere refuerzo, se debe proporcionar refuerzo adherido con el objeto de resistir las fuerzas radiales y de hendimiento.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.7",
+   "texto": "Excepto para tendones de un cable o donde el análisis demuestre que no se requiere refuerzo, se debe proporcionar un refuerzo mínimo en direcciones ortogonales paralelas a la superficie posterior de todas las zonas de anclaje, con una resistencia nominal a la tracción igual al 2% de cada fuerza de preesforzado amplificada, con el objeto de evitar el descascaramiento.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.5.8",
+   "texto": "No se debe considerar la resistencia a la tracción del concreto al calcular el refuerzo requerido.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.13.6",
+   "epigrafe": "Requisitos de detallado",
+   "texto": "La elección de los tamaños de refuerzo, espaciamientos, recubrimiento y otros detalles para las zonas de anclaje, debe contemplar las tolerancias en el doblado, fabricación e instalación del refuerzo, el tamaño del agregado y la correcta colocación y consolidación del concreto.",
+   "pagina": 168
+  },
+  {
+   "numero": "18.14",
+   "epigrafe": "Diseño De Las Zonas De Anclaje Para Cables De Un Alambre O",
+   "texto": "BARRAS DE HASTA 16 mm DE DIÁMETRO",
+   "pagina": 168
+  },
+  {
+   "numero": "18.14.1",
+   "epigrafe": "Diseño de la zona local",
+   "texto": "Los dispositivos de anclaje de un solo cable o barra de 16 mm o menos de diámetro y el refuerzo de una zona local deben cumplir con lo indicado en la publicación ACI 423.6 “Specification for Unbonded Single-Strand Tendons” o con los requisitos para dispositivos especiales de anclaje señalados en 18.15.2.",
+   "pagina": 168
   },
   {
    "numero": "18.14.2",
@@ -6426,13 +6561,12 @@
   },
   {
    "numero": "18.18.2",
-   "epigrafe": "Los materiales para el mortero de inyección deben cumplir con lo especificado en",
-   "texto": "Los materiales para el mortero de inyección deben cumplir con lo especificado en",
+   "texto": "Los materiales para el mortero de inyección deben cumplir con lo especificado en 18.18.2.1 a 18.18.2.4.",
    "pagina": 170
   },
   {
    "numero": "18.18.2.1",
-   "texto": "a 18.18.2.4.\n 18.18.2.1 El cemento Portland debe cumplir con los requisitos de 3.2.",
+   "texto": "El cemento Portland debe cumplir con los requisitos de 3.2.",
    "pagina": 170
   },
   {

@@ -109,7 +109,7 @@
   },
   {
    "numero": "9.3.2.2",
-   "texto": "Carga axial y carga axial con flexión:\n (a) Carga axial de tracción con o sin flexión … 0,90 (b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70\n Para elementos en flexocompresión puede incrementarse linealmente hasta 0,90 en la medida que\n\n φPn disminuye desde 0,1 f’c Ag ó\n\n φPb, el que sea menor, hasta cero.",
+   "texto": "Carga axial y carga axial con flexión:\n (a) Carga axial de tracción con o sin flexión … 0,90 (b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70\n Para elementos en flexocompresión\n\n φ puede incrementarse linealmente hasta 0,90 en la medida que\n\n φPn disminuye desde 0,1 f’c Ag ó\n\n φPb, el que sea menor, hasta cero.",
    "pagina": 64
   },
   {

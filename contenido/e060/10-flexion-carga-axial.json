@@ -1,0 +1,1787 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "10.1",
+   "epigrafe": "Alcance",
+   "texto": "Las disposiciones del Capítulo 10 se deben aplicar al diseño de elementos sometidos a esfuerzos originados por la flexión o la carga axial, o la combinación de estas.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2",
+   "epigrafe": "Hipótesis De Diseño",
+   "texto": "HIPÓTESIS DE DISEÑO",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.1",
+   "texto": "El diseño por resistencia de elementos sometidos a flexión y carga axial debe basarse en las hipótesis dadas en 10.2.2 a 10.2.7, y debe satisfacer las condiciones de equilibrio y de compatibilidad de deformaciones.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.2",
+   "texto": "Las deformaciones unitarias en el refuerzo y en el concreto deben suponerse directamente proporcionales a la distancia desde el eje neutro, excepto que, para las vigas de gran peralte definidas en 10.7.1, debe emplearse un análisis que considere la distribución no lineal de las deformaciones unitarias.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.3",
+   "texto": "La máxima deformación unitaria utilizable del concreto, εcu, en la fibra extrema sometida a compresión, se asumirá igual a 0,003.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.4",
+   "texto": "El esfuerzo en el refuerzo deberá tomarse como Es veces la deformación unitaria del acero. Para deformaciones unitarias en el refuerzo mayores que las correspondientes a fy, el esfuerzo se considerará independiente de la deformación unitaria e igual a fy.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.5",
+   "texto": "La resistencia a la tracción del concreto no debe considerarse en los cálculos de elementos de concreto reforzado sometidos a flexión y a carga axial, excepto cuando se cumplan los requisitos de 18.4.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.6",
+   "texto": "La relación entre la distribución de los esfuerzos de compresión en el concreto y la deformación unitaria del concreto se debe suponer rectangular, trapezoidal, parabólica o de cualquier otra forma que permita una predicción de la resistencia que coincida con los resultados de ensayos de laboratorio representativos.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.7",
+   "texto": "El requisito de 10.2.6 se satisface si se asume una distribución rectangular equivalente de esfuerzos en el concreto, definida como sigue:",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.7.1",
+   "texto": "Un esfuerzo en el concreto de 0,85 f’c uniformemente distribuido en una zona de compresión equivalente, limitada por los bordes de la sección transversal del elemento y por una línea recta paralela al eje neutro, a una distancia a = β1 c de la fibra de deformación unitaria máxima en compresión.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.7.2",
+   "texto": "La distancia desde la fibra de deformación unitaria máxima en compresión al eje neutro, c, se debe medir en dirección perpendicular al eje neutro.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.2.7.3",
+   "texto": "Para f’c entre 17 y 28 MPa, el factor β1 se debe tomar como 0,85. Para f’c mayor o igual a 56 MPa, β1 se debe tomar como 0,65. Para f’c entre 28 y 56 MPa se debe interpolar linealmente entre 0,85 y 0,65.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.3",
+   "epigrafe": "Principios Y Requisitos Generales",
+   "texto": "PRINCIPIOS Y REQUISITOS GENERALES",
+   "pagina": 77
+  },
+  {
+   "numero": "10.3.1",
+   "texto": "El diseño de las secciones transversales sometidas a flexión, carga axial, o a la combinación de ambas (flexo-compresión) debe basarse en el equilibrio y la compatibilidad de deformaciones, utilizando las hipótesis de 10.2.",
+   "pagina": 77
+  },
+  {
+   "numero": "10.3.2",
+   "texto": "La condición de falla balanceada se produce en una sección transversal cuando el refuerzo en tracción alcanza la deformación unitaria correspondiente a fy al mismo tiempo que el concreto en compresión alcanza su deformación unitaria máxima utilizable εcu de 0,003. Este criterio es general y se aplica a secciones de cualquier forma sin acero de compresión o con él.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.3",
+   "texto": "Se permite el uso de refuerzo de compresión en conjunto con refuerzo adicional de tracción para incrementar la resistencia de elementos sometidos a flexión.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.4",
+   "texto": "En elementos no preesforzados sujetos a flexión o flexocompresión en los cuales φPn sea menor que 0,1 f’c Ag, el refuerzo de acero en tracción no deberá exceder de 0,75 Asb, donde Asb es la cantidad de acero en tracción que produce la falla balanceada en la sección, definida en 10.3.2.\n En elementos con refuerzo en compresión, la porción de Asb equilibrada por el refuerzo en compresión no deberá reducirse mediante el factor 0,75 estipulado en el párrafo anterior.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.5",
+   "texto": "En elementos no preesforzados sujetos a flexión o flexocompresión en los cuales φPn sea menor que 0,1 f’c Ag, puede considerarse alternativamente que el requisito de 10.3.4, relativo a la cantidad máxima de acero en tracción, se cumple cuando la deformación unitaria neta,\n\n εt, del acero en tracción más alejado del borde comprimido es mayor o igual a 0.004 (véase la definición de εt en 8.4.1 y la figura 8.4.1). Este criterio es aplicable a secciones de cualquier forma, sin acero de compresión o con él y/o con acero repartido en el alma.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.6",
+   "texto": "La resistencia de diseño φPn de elementos en compresión no debe exceder del valor calculado usando la ecuación (10-1) ó (10-2).",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.6.1",
+   "texto": "Para elementos no preesforzados con refuerzo en espiral que cumplan con 7.10.4 o para elementos compuestos que cumplan con 10.16:\n φPn max = 0,85 φ Pon = 0,85 φ[0,85 ( ) ] f c Ag Ast fy Ast ′ − + (10-1)",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.6.2",
+   "texto": "Para elementos no preesforzados con estribos que cumplan con 7.10.5:\n φPn max = 0,80 φ Pon = 0,80 φ[0,85 ( ) ] f c Ag Ast fy Ast ′ − + (10-2)",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.6.3",
+   "texto": "Para elementos preesforzados, la resistencia de diseño, φPn, no debe exceder de 0,85 φPon para elementos con refuerzo en espiral y para elementos con estribos no debe exceder de 0,80 φPon.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.3.7",
+   "texto": "Los elementos sometidos a carga axial de compresión deben diseñarse para el momento máximo que puede acompañar a la carga axial. La fuerza axial amplificada Pu, a una excentricidad dada, no debe exceder de la resistencia de diseño especificada en 10.3.6. El momento máximo amplificado Mu debe incrementarse por los efectos de esbeltez de acuerdo con 10.10.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.4",
+   "epigrafe": "Distancia Entre Los Apoyos Laterales De Elementos Sometidos",
+   "texto": "A FLEXIÓN",
+   "pagina": 78
+  },
+  {
+   "numero": "10.4.1",
+   "texto": "La separación entre los apoyos laterales de una viga no debe exceder de 50 veces el menor ancho b del ala o cara en compresión.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.4.2",
+   "texto": "Deben tomarse en cuenta los efectos de la excentricidad lateral de la carga al determinar la separación entre los apoyos laterales.",
+   "pagina": 78
+  },
+  {
+   "numero": "10.5",
+   "epigrafe": "Refuerzo Mínimo En Elementos Sometidos A Flexión",
+   "texto": "REFUERZO MÍNIMO EN ELEMENTOS SOMETIDOS A FLEXIÓN",
+   "pagina": 78
+  },
+  {
+   "numero": "10.5.1",
+   "texto": "En cualquier sección de un elemento estructural - excepto en zapatas y losas macizas - sometido a flexión, donde por el análisis se requiera refuerzo de acero en tracción, el área de acero que se proporcione será la necesaria para que la resistencia de diseño de la sección sea por lo menos 1,2 veces el momento de agrietamiento de la sección bruta Mcr (φMn ≥ 1,2 Mcr), donde:\n fr Ig Mcr\n Yt =\n 0,62 fr f c′ =",
+   "pagina": 79
+  },
+  {
+   "numero": "10.5.2",
+   "texto": "El área mínima de refuerzo por tracción de las secciones rectangulares y de las secciones T con el ala en compresión, no será menor de:\n\n min 0,22 w f c As b d fy\n ′ = (10-\n 3)",
+   "pagina": 79
+  },
+  {
+   "numero": "10.5.3",
+   "texto": "No es necesario satisfacer los requisitos de 10.5.1 y 10.5.2, si en cada sección del elemento el área de acero en tracción proporcionada es al menos un tercio superior a la requerida por análisis.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.5.4",
+   "texto": "Para losas estructurales y zapatas de espesor uniforme, el acero mínimo en la dirección de la luz debe ser el requerido por 9.7. Cuando el acero mínimo se distribuya en las dos caras de la losa, deberá cumplirse que la cuantía de refuerzo en la cara en tracción por flexión no sea menor de 0,0012. El espaciamiento máximo del refuerzo no debe exceder tres veces el espesor ni de 400 mm.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.6",
+   "epigrafe": "Distribución Del Refuerzo De Flexión En Vigas Y Losas En Una",
+   "texto": "DIRECCIÓN",
+   "pagina": 79
+  },
+  {
+   "numero": "10.6.1",
+   "texto": "El refuerzo de tracción por flexión debe distribuirse adecuadamente en las zonas de tracción máxima de la sección transversal de un elemento, según los requisitos de 9.7, 9.8 y 9.9.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7",
+   "epigrafe": "Vigas De Gran Peralte",
+   "texto": "VIGAS DE GRAN PERALTE",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7.1",
+   "texto": "Las vigas de gran peralte son elementos cargados en una cara y apoyados en la cara opuesta, de manera que se pueden desarrollar puntales de compresión entre las cargas y los apoyos y tienen:\n (a) luz libre, n\n\n , igual o menor a cuatro veces el peralte total del elemento, o (b) regiones con cargas concentradas a una distancia del apoyo menor a dos veces el peralte de la viga.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7.2",
+   "texto": "Las vigas de gran peralte deben ser diseñadas tomando en cuenta la distribución no lineal de las deformaciones.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7.3",
+   "texto": "El área mínima de refuerzo en tracción, debe cumplir con las disposiciones de 10.5.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7.4",
+   "texto": "Para el anclaje de refuerzo deberá tomarse en cuenta lo especificado en 12.10.6.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7.5",
+   "texto": "Si alguna cara en compresión no tuviera arriostre lateral, deberá revisarse la estabilidad lateral de la viga. La separación máxima entre los apoyos laterales no excederá de lo indicado en 10.4.1.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7.6",
+   "texto": "La resistencia al corte Vn para vigas de gran peralte debe estar de acuerdo con 11.8.",
+   "pagina": 79
+  },
+  {
+   "numero": "10.7.7",
+   "texto": "El refuerzo mínimo horizontal y vertical en las caras laterales de vigas de gran peralte debe cumplir con 11.8.8 y 11.8.9.",
+   "pagina": 80
+  },
+  {
+   "numero": "10.8",
+   "epigrafe": "Dimensiones De Diseño Para Elementos A Compresión",
+   "texto": "DIMENSIONES DE DISEÑO PARA ELEMENTOS A COMPRESIÓN",
+   "pagina": 80
+  },
+  {
+   "numero": "10.8.1",
+   "epigrafe": "Elementos en compresión aislados con espirales múltiples",
+   "texto": "Los límites exteriores de la sección transversal efectiva de un elemento en compresión, con dos o más espirales entrelazadas, deben tomarse a una distancia fuera de los límites extremos de los espirales, igual al recubrimiento mínimo del concreto establecido en 7.7.",
+   "pagina": 80
+  },
+  {
+   "numero": "10.8.2",
+   "texto": "Elementos en compresión construidos monolíticamente con muros. Los límites exteriores de la sección transversal efectiva de un elemento en compresión con espirales o estribos, construido monolíticamente con un muro o pilar de concreto, no deben tomarse a más de 40 mm fuera de la espiral o estribos de dicho elemento.",
+   "pagina": 80
+  },
+  {
+   "numero": "10.8.3",
+   "texto": "Límites de la sección. Para un elemento en compresión que tenga una sección transversal mayor que la requerida por las consideraciones de resistencia, se permite emplear un área efectiva reducida Ag, no menor que la mitad del área total, con el fin de determinar el refuerzo mínimo y la resistencia.",
+   "pagina": 80
+  },
+  {
+   "numero": "10.9",
+   "epigrafe": "Límites Del Refuerzo De Elementos A Compresión",
+   "texto": "LÍMITES DEL REFUERZO DE ELEMENTOS A COMPRESIÓN",
+   "pagina": 80
+  },
+  {
+   "numero": "10.9.1",
+   "texto": "El área de refuerzo longitudinal total, Ast, para elementos en compresión no compuestos no debe ser menor que 0,01 ni mayor que 0,06 veces el área total, Ag, de la sección transversal.",
+   "pagina": 80
+  },
+  {
+   "numero": "10.9.2",
+   "texto": "El número mínimo de barras longitudinales en elementos sometidos a compresión debe ser de cuatro para barras dentro de estribos circulares o rectangulares, tres para barras dentro de estribos triangulares y seis para barras rodeadas por espirales que cumplan con 10.9.3.",
+   "pagina": 80
+  },
+  {
+   "numero": "10.9.3",
+   "texto": "La cuantía volumétrica del refuerzo en espiral, ρs, no debe ser menor que el valor dado por:\n s 0,45 1 ρ Ag f c\n Ach fyt\n ′ = − ( ) ( )\n (10-\n 5)\n el valor de fyt (esfuerzo de fluencia del acero de la espiral) a usar en la ecuación (10-5) no debe ser mayor de 700 MPa. Para fyt mayor de 420 MPa, no deben usarse empalmes traslapados de acuerdo con 7.10.4.5(a).",
+   "pagina": 80
+  },
+  {
+   "numero": "10.10",
+   "epigrafe": "Efectos De Esbeltez En Elementos A Compresión",
+   "texto": "EFECTOS DE ESBELTEZ EN ELEMENTOS A COMPRESIÓN",
+   "pagina": 80
+  },
+  {
+   "numero": "10.10.1",
+   "texto": "Excepto en lo permitido en 10.10.2, el diseño de elementos a compresión, vigas de arriostramiento y otros elementos de apoyo, debe estar basado en las fuerzas y momentos amplificados obtenidos a partir de un análisis de segundo orden considerando la no linealidad del material y el agrietamiento, así como también los efectos de la curvatura del elemento y del desplazamiento lateral, la duración de las cargas, la retracción, el flujo plástico y la interacción con la cimentación. Las dimensiones de la sección transversal de cada elemento no deben diferir en más del 10% de las utilizadas para el análisis, de lo contrario debe repetirse el análisis. El procedimiento de análisis debe demostrar que genera predicciones de la resistencia que están de acuerdo de manera sustancial con ensayos representativos de columnas en estructuras estáticamente indeterminadas de concreto reforzado.",
+   "pagina": 80
+  },
+  {
+   "numero": "10.10.2",
+   "texto": "Como alternativa al procedimiento indicado en 10.10.1, se permite basar el diseño de elementos a compresión, vigas de arriostramiento y otros elementos de apoyo en las fuerzas axiales y momentos obtenidos a partir de los análisis aproximados descritos en 10.11.",
+   "pagina": 81
+  },
+  {
+   "numero": "10.11",
+   "epigrafe": "Momentos Magnificados — Generalidades",
+   "texto": "MOMENTOS MAGNIFICADOS — GENERALIDADES",
+   "pagina": 81
+  },
+  {
+   "numero": "10.11.1",
+   "texto": "Las fuerzas axiales amplificadas Pu, los momentos amplificados M1 y M2 en los extremos de columna y, cuando se requiera, la deriva (desplazamiento lateral relativo) del entrepiso, Δo, deben ser calculadas a través de un análisis estructural elástico de primer orden tomando en cuenta el efecto en las propiedades de la sección de las cargas axiales, la presencia de regiones agrietadas a lo largo del elemento y los efectos de la duración de las cargas. Alternativamente, se permite usar las siguientes propiedades para los elementos estructurales. (a) Módulo de elasticidad … Ec de 8.5.1\n (b) Momentos de inercia, I Vigas … 0,35 Ig Columnas … 0,70 Ig Muros no agrietados … 0,70 Ig Muros agrietados … 0,35 Ig Losas planas sin vigas … 0,25 Ig\n (c) Área … Ag\n\n Los momentos de inercia, I, deben dividirse por ( 1 + βd ) cuando actúen cargas laterales sostenidas o para las verificaciones de estabilidad hechas de acuerdo con 10.13.6. Para pórticos arriostrados, βd es la relación entre la máxima fuerza axial sostenida amplificada y la máxima fuerza axial amplificada asociada con la misma combinación de carga. Para pórticos no arriostrados excepto lo especificado en 10.13.6, βd es la relación entre el máximo cortante sostenido amplificado del entrepiso y el máximo cortante amplificado en ese mismo entrepiso.",
+   "pagina": 81
+  },
+  {
+   "numero": "10.11.2",
+   "texto": "Se puede tomar el radio de giro, r, igual a 0,3 veces la dimensión total de la sección en la dirección en la cual se está considerando la estabilidad para el caso de elementos rectangulares y 0,25 veces el diámetro para elementos circulares en compresión. Para otras formas, se permite calcular el radio de giro para la sección bruta de concreto.",
+   "pagina": 81
+  },
+  {
+   "numero": "10.11.3",
+   "epigrafe": "Longitud no arriostrada de un elemento en compresión",
+   "texto": "Longitud no arriostrada de un elemento en compresión",
+   "pagina": 81
+  },
+  {
+   "numero": "10.11.3.1",
+   "epigrafe": "La longitud no arriostrada de un elemento en compresión, u",
+   "texto": ", debe tomarse como la distancia libre entre las losas de piso, vigas u otros elementos capaces de proporcionar apoyo lateral en la dirección que se está considerando.",
+   "pagina": 81
+  },
+  {
+   "numero": "10.11.3.2",
+   "texto": "Cuando existan capiteles o cartelas en las columnas, u debe medirse hasta el extremo inferior del capitel o cartela en el plano considerado.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.11.4",
+   "texto": "Las columnas y entrepisos en una estructura deben ser diseñados como columnas y entrepisos con desplazamiento lateral (no arriostrados) o sin desplazamiento lateral (arriostrados). El diseño de columnas en estructuras o entrepisos arriostrados debe basarse en 10.12. El diseño de columnas en estructuras o entrepisos no arriostrados debe basarse en 10.13.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.11.4.1",
+   "texto": "Se permite suponer como arriostrada (sin desplazamiento lateral) una columna dentro de una estructura, si el incremento en los momentos en los extremos de la columna debido a los efectos de segundo orden no excede de un 5% de los mismos momentos calculados con un análisis de primer orden.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.11.4.2",
+   "texto": "También se permite suponer como arriostrado (sin desplazamiento lateral) a un entrepiso en la estructura si el índice de estabilidad del entrepiso, Q :\n\n ( ) o Pu Q\n Vus he\n Σ Δ = (10-6)\n es menor o igual a 0,06. En la ecuación 10-6:\n Pu Σ : Suma de las cargas amplificadas, muertas y vivas, acumuladas desde el extremo superior del edificio hasta el entrepiso considerado. Para el caso de solicitaciones sísmicas Pu Σ debe basarse en la misma fracción de la sobrecarga utilizada para el cálculo de las fuerzas sísmicas laterales. o Δ: Deformación relativa entre el nivel superior y el inferior del entrepiso considerado, debido a las fuerzas laterales amplificadas y calculada de acuerdo a un análisis elástico de Primer Orden. Para el caso de fuerzas laterales de sismo, o Δ deberá multiplicarse por 0,75 veces el factor de reducción (R) considerado en la determinación de estas fuerzas tal como se estipula en la NTE E.030 Diseño Sismorresistente. Vus: Fuerza cortante amplificada en el entrepiso, debida a las cargas laterales. he: Altura del entrepiso medida piso a piso.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.11.5",
+   "epigrafe": "Ningún elemento en compresión dentro de una estructura tendrá una esbeltez",
+   "texto": "/ k u r mayor a 100.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.11.6",
+   "texto": "Para elementos a compresión sometidos a flexión respecto a ambos ejes principales, el momento respecto a cada eje debe ser magnificado separadamente sobre la base de las condiciones de restricción correspondientes a dicho eje.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.12",
+   "epigrafe": "Momentos Magnificados En Estructuras Sin Desplazamiento",
+   "texto": "LATERAL",
+   "pagina": 82
+  },
+  {
+   "numero": "10.12.1",
+   "texto": "Para elementos a compresión en estructuras sin desplazamiento lateral, el factor de longitud efectiva, k, debe tomarse igual a 1,0, a menos que se demuestre por análisis que se justifica utilizar un valor más bajo. El cálculo de k debe basarse en los valores de Ec e I dados en 10.11.1.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.12.2",
+   "texto": "En estructuras sin desplazamiento lateral se permite ignorar los efectos de esbeltez en elementos a compresión que satisfacen:\n\n 1\n 2 34 12 k u M\n r M ≤ − ( ) ( ) (10-7)\n\n En la ecuación 10-7, el término ( ) 1 2 34 12 / M M − [ ] [ ] no debe tomarse mayor que 40. El término 1 2 / M M es positivo si el elemento se flexiona en curvatura simple y negativo si el elemento se flexiona en curvatura doble.",
+   "pagina": 82
+  },
+  {
+   "numero": "10.12.3",
+   "texto": "Los elementos a compresión deben diseñarse para la fuerza axial amplificada Pu y el momento amplificado Mu, magnificado por los efectos de curvatura (efectos de segundo orden) del elemento, Mc, como sigue:\n\n 2 Mc ns M =δ (10-8) donde:\n δ 1,0 1 0,75\n Cm ns Pu\n Pc\n = ≥ −\n (10-\n 9)\n ( )\n 2\n 2 π EI Pc\n k u = (10-\n 10)\n EI debe tomarse como:\n ( ) 0,2 1 Ec Ig Es Ise EI d + = +β (10-\n 11)\n Alternativamente:\n 0,4\n 1 β\n Ec Ig EI\n d =\n +\n (10-\n 12)",
+   "pagina": 83
+  },
+  {
+   "numero": "10.12.3.1",
+   "texto": "Para elementos sin cargas transversales entre sus apoyos, Cm debe tomarse como:\n 1\n 2 0,6 0,4 0,4 M Cm M ( ) = + ≥ ( )\n (10-\n 13)\n donde 1/ 2 M M es positivo si la columna se flexiona en curvatura simple. Para elementos con cargas transversales entre sus apoyos, Cm debe tomarse como 1,0.",
+   "pagina": 83
+  },
+  {
+   "numero": "10.12.3.2",
+   "epigrafe": "El momento amplificado, M 2, en la ecuación (10-8) no debe tomarse menor que",
+   "texto": "( ) 2 min , 15 0,03 M Pu h = + (10-14)\n alrededor de cada eje separadamente, donde 15 y h están en mm. Para elementos en los que M 2,min supera a M 2 , el valor de Cm en la ecuación (10-13) debe ser tomado como 1,0 o estar basado en la relación de los momentos calculados para los extremos, dividiendo M 1 por M 2 .",
+   "pagina": 83
+  },
+  {
+   "numero": "10.13",
+   "epigrafe": "Momentos Magnificados En Estructuras Con Desplazamiento",
+   "texto": "LATERAL",
+   "pagina": 83
+  },
+  {
+   "numero": "10.13.1",
+   "texto": "Para elementos a compresión no arriostrados contra desplazamientos laterales, el factor de longitud efectiva k debe determinarse usando los valores de Ec e I dados en 10.11.1 y no debe ser menor que 1,0.",
+   "pagina": 83
+  },
+  {
+   "numero": "10.13.2",
+   "texto": "Para elementos en compresión no arriostrados contra desplazamientos laterales, pueden despreciarse los efectos de la esbeltez cuando / u k r es menor que 22.",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.3",
+   "texto": "Los momentos M 1 y M 2 en los extremos de un elemento individual a compresión deben tomarse como:\n 1 1 1 δ ns s M M s M = + (10- 15)\n 2 2 2 δ ns s M M s M = + (10-16)\n donde 1 δ s s M y 2 δ s s M deben calcularse de acuerdo con 10.13.4",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.4",
+   "epigrafe": "Cálculo de δs Ms",
+   "texto": "Cálculo de δs Ms",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.4.1",
+   "texto": "Los momentos magnificados por desplazamiento lateral, δs Ms , son los momentos en los extremos de la columna calculados a través de un análisis elástico de segundo orden basado en las rigideces del elemento dadas en 10.11.1",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.4.2",
+   "epigrafe": "Alternativamente, se permite calcular δs Ms como",
+   "texto": "1 δ\n 1 s Ms Ms Ms Q = ≥ −\n (10-17)\n Si δs calculado de esta manera es mayor que 1,5 entonces δs Ms debe calcularse usando 10.13.4.1 (análisis de segundo orden) ó 10.13.4.3.",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.4.3",
+   "texto": "Alternativamente, se puede calcular el momento magnificado, δs Ms , como:\n δ\n 1 0,75\n Ms s Ms Ms Pu\n Pc\n = ≥ Σ −\n Σ\n (10-18)\n donde Pu Σ es la sumatoria de todas las cargas verticales amplificadas en el entrepiso considerado y Pc Σ es la sumatoria para todas las columnas que resisten el desplazamiento lateral en un piso. Pc se calcula usando la ecuación (10-10) con el valor k de 10.13.1 y el valor para EI obtenido de la ecuación (10-11) o la ecuación (10-12).",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.5",
+   "texto": "Si un elemento individual en compresión cumple con:\n\n 35 u\n r Pu f c Ag\n >\n ′ (10-\n 19)\n éste debe ser diseñado para la fuerza amplificada Pu y el momento Mc calculado usando 10.12.3 en donde M 1 y M 2 se calculan de acuerdo con 10.13.3, βd según se definió para la combinación de cargas considerada, y k según lo definido en 10.12.1",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.6",
+   "texto": "Adicionalmente a las combinaciones de carga que incluyen cargas laterales, debe considerarse la resistencia y estabilidad de la estructura como un todo frente a la acción de las cargas gravitacionales amplificadas.\n\n (a) Cuando δs Ms se calcula a partir de 10.13.4.1, la relación entre la deflexión lateral de segundo orden y la deflexión lateral de primer orden, para carga muerta y carga viva amplificadas más la carga lateral amplificada aplicada a la estructura, no debe exceder de 2,5.\n (b) Cuando δs Ms se calcula a partir de 10.13.4.2, el valor de Q calculado usando\n Pu Σ para carga muerta y viva amplificadas (1,4 CM + 1,7 CV ) no debe exceder 0,60.\n (c) Cuandoδs Ms se calcula a partir de 10.13.4.3, δs calculado usando Pu Σ y Pc Σ correspondientes a carga muerta y viva amplificadas debe ser positivo y no exceder de 2,5\n En (a), (b) y (c) anteriores, βd debe tomarse como la relación entre la máxima carga axial amplificada que actúa en forma permanente y la máxima carga axial amplificada total.",
+   "pagina": 84
+  },
+  {
+   "numero": "10.13.7",
+   "texto": "En estructuras con desplazamiento lateral, los elementos a flexión deben diseñarse para los momentos magnificados totales provenientes de los elementos a compresión que concurren al nudo.",
+   "pagina": 85
+  },
+  {
+   "numero": "10.14",
+   "epigrafe": "Elementos Cargados Axialmente Que Soportan Sistemas De",
+   "texto": "LOSAS\n Los elementos cargados axialmente que soportan un sistema de losas incluido dentro del alcance de 13.1, deben diseñarse como se dispone en el Capítulo 10 y de acuerdo con los requisitos adicionales del Capítulo 13.",
+   "pagina": 85
+  },
+  {
+   "numero": "10.15",
+   "epigrafe": "Transmisión De Cargas De Las Columnas A Través De Losas De",
+   "texto": "PISO\n Si la resistencia especificada en compresión del concreto, f’c, de una columna es 1,4 veces mayor que la del sistema de piso, la transmisión de la carga a través de la losa de piso debe lograrse de acuerdo con alguna de las alternativas especificadas en 10.15.1, 10.15.2 ó 10.15.3.",
+   "pagina": 85
+  },
+  {
+   "numero": "10.15.1",
+   "texto": "El concreto de resistencia especificada para la columna deberá vaciarse en el piso en la ubicación de la columna y en un área formada por 600 mm adicionales a cada lado de la cara de la columna. El concreto de la columna debe ser monolítico con el concreto del piso y debe colocarse de acuerdo con 6.4.6 y 6.4.7.",
+   "pagina": 85
+  },
+  {
+   "numero": "10.15.2",
+   "texto": "La resistencia de una columna a través de la losa de piso debe basarse en el menor valor de la resistencia del concreto con pasadores verticales (dowels) y con espirales, según se requiera.",
+   "pagina": 85
+  },
+  {
+   "numero": "10.15.3",
+   "texto": "Para columnas confinadas lateralmente por los cuatro lados con vigas de peralte aproximadamente igual o por losas macizas, se permite basar la resistencia de la columna en una resistencia equivalente del concreto en la conexión de la columna, igual al 75% de la resistencia del concreto de la columna más el 35% de la resistencia del concreto del piso. Al aplicar 10.15.3, la relación entre la resistencia del concreto de la columna y la resistencia del concreto de la losa no debe ser mayor que 2,5 para el diseño.",
+   "pagina": 85
+  },
+  {
+   "numero": "10.16",
+   "epigrafe": "Elementos Compuestos Sometidos A Compresión",
+   "texto": "ELEMENTOS COMPUESTOS SOMETIDOS A COMPRESIÓN",
+   "pagina": 85
+  },
+  {
+   "numero": "10.16.1",
+   "texto": "Los elementos compuestos sometidos a compresión deben incluir a todos aquellos elementos que estén reforzados longitudinalmente con perfiles de acero estructural, tuberías o tubos, con o sin barras longitudinales.",
+   "pagina": 85
+  },
+  {
+   "numero": "10.16.2",
+   "texto": "La resistencia de elementos compuestos debe calcularse para las mismas condiciones limitantes que se aplican a los elementos comunes de concreto reforzado.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.3",
+   "texto": "Toda resistencia a la carga axial asignada al concreto de un elemento compuesto debe transmitirse a este mediante ménsulas u otros elementos que se apoyen directamente en el concreto del elemento compuesto.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.4",
+   "texto": "Toda resistencia a carga axial no asignada al concreto en un elemento compuesto debe ser desarrollada por conexión directa al perfil estructural, tubería o tubo de acero estructural.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.5",
+   "texto": "Para la evaluación de los efectos de esbeltez, el radio de giro, r, de la sección compuesta no debe ser mayor que el valor dado por ( ) ( )\n /5\n /5\n Ec Ig Es Isx r\n Ec Ag Es Asx\n + =\n +\n (10-20) y como alternativa a un cálculo más preciso, EI en la ecuación (10-10) debe tomarse ya sea como lo indica la ecuación (10-11) o por medio de ( ) /5\n 1 βd\n Ec Ig EI Es Isx = + +\n (10-21)",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.6",
+   "epigrafe": "Núcleo de concreto confinado en acero estructural",
+   "texto": "Núcleo de concreto confinado en acero estructural",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.6.1",
+   "texto": "Para un elemento compuesto con el núcleo de concreto confinado (enfundado) en acero estructural, el espesor del acero de confinamiento no debe ser menor que:\n 3\n fy b\n Es\n , para cada cara de ancho b\n ni que:\n 8\n fy D\n Es\n , para secciones circulares de diámetro D",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.6.2",
+   "texto": "Se permite que las barras longitudinales localizadas dentro del núcleo de concreto confinado se utilicen en el cálculo de Asx e Isx.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.7",
+   "epigrafe": "Refuerzo en espiral alrededor de un núcleo de acero estructural",
+   "texto": "Un elemento compuesto, hecho de concreto reforzado con espiral alrededor de un núcleo de acero estructural debe satisfacer 10.16.7.1 a 10.16.7.5.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.7.1",
+   "texto": "La resistencia especificada a la compresión, f’c, no debe ser menor que la mencionada en 9.4.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.7.2",
+   "texto": "La resistencia de diseño a la fluencia del núcleo de acero estructural debe ser la resistencia mínima a la fluencia especificada para el grado del acero estructural usado, pero sin exceder de 350 MPa.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.7.3",
+   "texto": "El refuerzo en espiral debe cumplir con lo especificado en 10.9.3.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.7.4",
+   "texto": "La cuantía de las barras longitudinales localizadas dentro de la espiral no deben ser menor de 0,01 ni mayor de 0,06 veces el área neta de la sección de concreto.",
+   "pagina": 86
+  },
+  {
+   "numero": "10.16.7.5",
+   "texto": "Se permite que las barras longitudinales localizadas dentro de la espiral se consideren en el cálculo de Asx e Isx.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8",
+   "epigrafe": "Estribos de refuerzo alrededor de un núcleo de acero estructural",
+   "texto": "Un elemento compuesto, hecho de concreto confinado lateralmente por estribos alrededor de un núcleo de acero estructural, debe cumplir con 10.16.8.1 a 10.16.8.8.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.1",
+   "texto": "La resistencia especificada a la compresión, f’c, no debe ser menor que la mencionada en 9.4.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.2",
+   "texto": "La resistencia de diseño a la fluencia del núcleo de acero estructural debe ser la resistencia mínima a la fluencia especificada para el grado de acero estructural usado, pero no debe exceder de 350 MPa.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.3",
+   "texto": "Los estribos transversales deben extenderse por completo alrededor del núcleo de acero estructural.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.4",
+   "texto": "Los estribos transversales deben tener un diámetro no menor que 0,02 veces la mayor dimensión lateral del elemento compuesto, excepto que los estribos no deben ser menores de 3/8” y no necesitan ser mayores que 5/8”. Puede emplearse refuerzo electrosoldado de alambre de un área equivalente.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.5",
+   "texto": "El espaciamiento vertical entre los estribos transversales no debe exceder de la mitad de la menor dimensión lateral del elemento compuesto, de 48 veces el diámetro de los estribos ni de 16 veces el diámetro de las barras longitudinales.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.6",
+   "texto": "La cuantía de las barras longitudinales colocadas dentro de los estribos no debe ser menor de 0,01 ni mayor de 0,06 veces al área neta del concreto.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.7",
+   "texto": "Debe colocarse una barra longitudinal en cada esquina de una sección rectangular y adicionalmente barras longitudinales espaciadas a no más de la mitad de la menor dimensión lateral del elemento compuesto.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.16.8.8",
+   "texto": "Se permite que las barras longitudinales colocadas dentro de los estribos se consideren para calcular Asx para resistencia pero no para calcular Isx al evaluar los efectos de esbeltez.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.17",
+   "epigrafe": "Resistencia Al Aplastamiento",
+   "texto": "RESISTENCIA AL APLASTAMIENTO",
+   "pagina": 87
+  },
+  {
+   "numero": "10.17.1",
+   "texto": "La resistencia de diseño al aplastamiento del concreto no debe exceder φ(0,85 f’c A1) excepto cuando la superficie de soporte sea más ancha en todos los lados que el área cargada. En este caso se permite que la resistencia de diseño al aplastamiento en el área cargada se multiplique por 2 1 / A A , pero no más que 2 (figura 10.17.1).\n\n Fig. 10.17.1 Áreas de aplastamiento A1 y A2.",
+   "pagina": 87
+  },
+  {
+   "numero": "10.17.2",
+   "texto": "El numeral 10.17 no es aplicable a anclajes de postensado.",
+   "pagina": 88
+  },
+  {
+   "numero": "10.18",
+   "epigrafe": "Flexión Biaxial",
+   "texto": "Cuando las columnas están sujetas simultáneamente a momentos flectores en sus dos ejes principales, el diseño deberá hacerse a partir de las hipótesis y principios dados en 10.2 y 10.3. Alternativamente se podrá usar la siguiente ecuación aproximada, aplicable a columnas cuadradas o rectangulares con armadura longitudinal simétrica.\n\n 1 1 1 1\n Pn Pnx Pny Pon = + − (10-22)\n donde :\n Pn es la resistencia nominal a carga axial en flexión biaxial. Pnx es la resistencia nominal bajo la acción de momento únicamente en X (ey = 0). Pny es la resistencia nominal bajo la acción de momento únicamente en Y (ex = 0). Pon es la resistencia nominal bajo la acción de carga axial únicamente (ex = ey = 0)\n que se calcula mediante: 0,85 ( ) f c Ag Ast fy Ast ′ − +\n\n Deberá verificarse que la resistencia de diseño no exceda de lo especificado en 10.3.6.\n La ecuación 10-22 es válida para valores de Pu ≥ 0,1 φ Pon; para valores menores de la carga axial Pu, se usará la siguiente ecuación:\n\n 1.0 Mux Muy\n Mnx Mny + ≤ φ φ\n (10-23)\n donde φMnx y φMny son las resistencias de diseño de la sección con respecto a los ejes X e Y respectivamente. La ecuación 10-23 es aplicable también a vigas sometidas a flexión biaxial.",
+   "pagina": 88
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c10-flexion-carga-axial",
+   "titulo": "E.060 · Cap. 10 · Flexión y carga axial",
+   "descripcion": "Hipótesis de diseño, acero mínimo y máximo, columnas, esbeltez, aplastamiento y flexión biaxial.",
+   "acceso": "free",
+   "orden": 15,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "La máxima deformación unitaria utilizable del concreto en la fibra extrema en compresión, εcu, se asume igual a {{0,003}}."
+     },
+     "citas": [
+      {
+       "articulo": "10.2.3",
+       "extracto": "La máxima deformación unitaria utilizable del concreto, εcu, en la fibra extrema sometida a compresión, se asumirá igual a 0,003."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para deformaciones del acero mayores que la de fluencia, ¿qué esfuerzo se asume en el refuerzo?",
+      "opciones": [
+       "Es × εs, sin límite",
+       "fy, independiente de la deformación",
+       "1,25 fy",
+       "0,85 fy"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "10.2.4",
+       "extracto": "Para deformaciones unitarias en el refuerzo mayores que las correspondientes a fy, el esfuerzo se considerará independiente de la deformación unitaria e igual a fy."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Se considera la resistencia a tracción del concreto en el diseño a flexión y carga axial?",
+      "respuesta": "No. Solo se considera cuando se cumplen los requisitos de 18.4 (concreto preesforzado)."
+     },
+     "citas": [
+      {
+       "articulo": "10.2.5",
+       "extracto": "La resistencia a la tracción del concreto no debe considerarse en los cálculos de elementos de concreto reforzado sometidos a flexión y a carga axial, excepto cuando se cumplan los requisitos de 18.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se define el bloque rectangular equivalente de esfuerzos del concreto?",
+      "respuesta": "Un esfuerzo uniforme de 0,85 f′c en una zona de profundidad a = β1·c, medida desde la fibra de máxima deformación en compresión."
+     },
+     "citas": [
+      {
+       "articulo": "10.2.7.1",
+       "extracto": "Un esfuerzo en el concreto de 0,85 f’c uniformemente distribuido en una zona de compresión equivalente… a una distancia a = β1 c de la fibra de deformación unitaria máxima en compresión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Factor β1 del bloque equivalente",
+      "columnas": [
+       "β1"
+      ],
+      "filas": [
+       {
+        "etiqueta": "f′c de 17 a 28 MPa",
+        "valores": [
+         "0,85"
+        ]
+       },
+       {
+        "etiqueta": "f′c entre 28 y 56 MPa",
+        "valores": [
+         "Interpolar de 0,85 a 0,65"
+        ]
+       },
+       {
+        "etiqueta": "f′c ≥ 56 MPa",
+        "valores": [
+         "0,65"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "10.2.7.3",
+       "extracto": "Para f’c entre 17 y 28 MPa, el factor β1 se debe tomar como 0,85. Para f’c mayor o igual a 56 MPa, β1 se debe tomar como 0,65. Para f’c entre 28 y 56 MPa se debe interpolar linealmente entre 0,85 y 0,65."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Para un concreto de f′c = {FC} MPa, ¿cuánto vale β1?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         35,
+         42,
+         49
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.85-0.2*(FC-28)/28",
+      "tolerancia": 0.01,
+      "explicacion": "β1 = 0,85 − 0,20 × (f′c − 28) / 28: baja 0,05 por cada 7 MPa."
+     },
+     "citas": [
+      {
+       "articulo": "10.2.7.3",
+       "extracto": "Para f’c entre 28 y 56 MPa se debe interpolar linealmente entre 0,85 y 0,65."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga de f′c = 21 MPa con eje neutro a c = {C} mm. ¿Profundidad a del bloque equivalente (mm)?",
+      "variables": {
+       "C": {
+        "etiqueta": "c",
+        "valores": [
+         80,
+         100,
+         120,
+         150
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.85*C",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "Con f′c = 21 MPa, β1 = 0,85 (10.2.7.3)."
+     },
+     "citas": [
+      {
+       "articulo": "10.2.7.1",
+       "extracto": "…a una distancia a = β1 c de la fibra de deformación unitaria máxima en compresión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo se produce la falla balanceada de una sección?",
+      "respuesta": "Cuando el acero en tracción alcanza la deformación de fluencia (fy) al mismo tiempo que el concreto en compresión llega a εcu = 0,003."
+     },
+     "citas": [
+      {
+       "articulo": "10.3.2",
+       "extracto": "La condición de falla balanceada se produce en una sección transversal cuando el refuerzo en tracción alcanza la deformación unitaria correspondiente a fy al mismo tiempo que el concreto en compresión alcanza su deformación unitaria máxima utilizable εcu de 0,003."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En elementos no preesforzados a flexión con φPn < 0,1 f′c Ag, el acero en tracción no debe exceder {{0,75}} Asb."
+     },
+     "citas": [
+      {
+       "articulo": "10.3.4",
+       "extracto": "…el refuerzo de acero en tracción no deberá exceder de 0,75 Asb, donde Asb es la cantidad de acero en tracción que produce la falla balanceada en la sección…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Como alternativa al límite de 0,75 Asb, ¿qué deformación neta mínima debe alcanzar el acero en tracción más alejado?",
+      "opciones": [
+       "εt ≥ 0,002",
+       "εt ≥ 0,003",
+       "εt ≥ 0,004",
+       "εt ≥ 0,005"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "10.3.5",
+       "extracto": "…se cumple cuando la deformación unitaria neta, εt, del acero en tracción más alejado del borde comprimido es mayor o igual a 0.004…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la resistencia máxima de diseño a compresión de una columna con estribos (ec. 10-2)?",
+      "respuesta": "φPn max = 0,80 φ [0,85 f′c (Ag − Ast) + fy Ast], con φ = 0,70.",
+      "explicacion": "Con espiral (ec. 10-1) el factor es 0,85 y φ = 0,75 (9.3.2.2)."
+     },
+     "citas": [
+      {
+       "articulo": "10.3.6.2",
+       "extracto": "Para elementos no preesforzados con estribos que cumplan con 7.10.5: φPn max = 0,80 φ Pon = 0,80 φ [0,85 f’c (Ag − Ast) + fy Ast] (10-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué factor limita φPon en una columna con refuerzo en espiral?",
+      "opciones": [
+       "0,70",
+       "0,75",
+       "0,80",
+       "0,85"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "10.3.6.1",
+       "extracto": "φPn max = 0,85 φ Pon = 0,85 φ [0,85 f’c (Ag − Ast) + fy Ast] (10-1)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna con estribos de {B} × {B} mm, f′c = {FC} MPa, fy = 420 MPa y Ast = {AST} mm². ¿φPn max (kN)?",
+      "variables": {
+       "B": {
+        "etiqueta": "Lado",
+        "valores": [
+         300,
+         400,
+         500
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       },
+       "AST": {
+        "etiqueta": "Ast",
+        "valores": [
+         2040,
+         3060
+        ],
+        "unidad": "mm²"
+       }
+      },
+      "formula": "0.8*0.7*(0.85*FC*(B*B-AST)+420*AST)/1000",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN",
+      "explicacion": "φ = 0,70 para elementos con estribos (9.3.2.2). Divide entre 1000 para pasar de N a kN."
+     },
+     "citas": [
+      {
+       "articulo": "10.3.6.2",
+       "extracto": "φPn max = 0,80 φ Pon = 0,80 φ [0,85 f’c (Ag − Ast) + fy Ast] (10-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "La separación entre apoyos laterales de una viga no debe exceder {{50}} veces el menor ancho b del ala o cara en compresión."
+     },
+     "citas": [
+      {
+       "articulo": "10.4.1",
+       "extracto": "La separación entre los apoyos laterales de una viga no debe exceder de 50 veces el menor ancho b del ala o cara en compresión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué condición de acero mínimo exige 10.5.1 en elementos a flexión (salvo zapatas y losas macizas)?",
+      "respuesta": "Que la resistencia de diseño sea al menos 1,2 veces el momento de agrietamiento de la sección bruta: φMn ≥ 1,2 Mcr, con Mcr = fr Ig / Yt y fr = 0,62 √f′c."
+     },
+     "citas": [
+      {
+       "articulo": "10.5.1",
+       "extracto": "…la resistencia de diseño de la sección sea por lo menos 1,2 veces el momento de agrietamiento de la sección bruta Mcr (φMn ≥ 1,2 Mcr), donde: Mcr = fr Ig / Yt   fr = 0,62 √f’c"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "¿Módulo de rotura fr (MPa) de un concreto de f′c = {FC} MPa?",
+      "variables": {
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28,
+         35
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.62*sqrt(FC)",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa"
+     },
+     "citas": [
+      {
+       "articulo": "10.5.1",
+       "extracto": "fr = 0,62 √f’c"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga rectangular de bw = {B} mm y d = {D} mm, f′c = {FC} MPa, fy = 420 MPa. ¿As mín (mm²) según la ec. 10-3?",
+      "variables": {
+       "B": {
+        "etiqueta": "bw",
+        "valores": [
+         250,
+         300
+        ],
+        "unidad": "mm"
+       },
+       "D": {
+        "etiqueta": "d",
+        "valores": [
+         440,
+         540,
+         640
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.22*sqrt(FC)/420*B*D",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm²"
+     },
+     "citas": [
+      {
+       "articulo": "10.5.2",
+       "extracto": "As min = 0,22 √f’c bw d / fy (10-3)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "No es necesario cumplir el acero mínimo de 10.5.1 y 10.5.2 si el acero colocado es al menos {{un tercio}} superior al requerido por análisis."
+     },
+     "citas": [
+      {
+       "articulo": "10.5.3",
+       "extracto": "No es necesario satisfacer los requisitos de 10.5.1 y 10.5.2, si en cada sección del elemento el área de acero en tracción proporcionada es al menos un tercio superior a la requerida por análisis."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si el acero mínimo de una losa se reparte en ambas caras, ¿qué cuantía mínima debe tener la cara en tracción por flexión?",
+      "opciones": [
+       "0,0010",
+       "0,0012",
+       "0,0018",
+       "0,0020"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "10.5.4",
+       "extracto": "Cuando el acero mínimo se distribuya en las dos caras de la losa, deberá cumplirse que la cuantía de refuerzo en la cara en tracción por flexión no sea menor de 0,0012."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es una viga de gran peralte según la E.060?",
+      "respuesta": "Un elemento cargado en una cara y apoyado en la opuesta, donde se forman puntales de compresión, con luz libre ℓn ≤ 4 veces el peralte total, o con cargas concentradas a menos de 2 peraltes del apoyo."
+     },
+     "citas": [
+      {
+       "articulo": "10.7.1",
+       "extracto": "(a) luz libre, ℓn, igual o menor a cuatro veces el peralte total del elemento, o (b) regiones con cargas concentradas a una distancia del apoyo menor a dos veces el peralte de la viga."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Una viga de 1,20 m de peralte total y 4,20 m de luz libre, cargada arriba y apoyada abajo, ¿es de gran peralte?",
+      "opciones": [
+       "Sí, porque ℓn ≤ 4h",
+       "No, porque ℓn > 3h",
+       "Solo si tiene cargas concentradas",
+       "Solo si h > 900 mm"
+      ],
+      "correcta": 0,
+      "explicacion": "4 × 1,20 = 4,80 m ≥ 4,20 m."
+     },
+     "citas": [
+      {
+       "articulo": "10.7.1",
+       "extracto": "(a) luz libre, ℓn, igual o menor a cuatro veces el peralte total del elemento…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En una columna construida monolíticamente con un muro, la sección efectiva no se toma a más de {{40 mm}} fuera de la espiral o estribos."
+     },
+     "citas": [
+      {
+       "articulo": "10.8.2",
+       "extracto": "…no deben tomarse a más de 40 mm fuera de la espiral o estribos de dicho elemento."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "Si una columna es más grande de lo que exige la resistencia, ¿qué área efectiva se permite usar para el refuerzo mínimo?",
+      "respuesta": "Un área reducida Ag no menor que la mitad del área total."
+     },
+     "citas": [
+      {
+       "articulo": "10.8.3",
+       "extracto": "…se permite emplear un área efectiva reducida Ag, no menor que la mitad del área total, con el fin de determinar el refuerzo mínimo y la resistencia."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Cuantía de refuerzo longitudinal en columnas",
+      "columnas": [
+       "Ast / Ag"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Mínima",
+        "valores": [
+         "0,01"
+        ]
+       },
+       {
+        "etiqueta": "Máxima",
+        "valores": [
+         "0,06"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "10.9.1",
+       "extracto": "El área de refuerzo longitudinal total, Ast, para elementos en compresión no compuestos no debe ser menor que 0,01 ni mayor que 0,06 veces el área total, Ag, de la sección transversal."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna de {B} × {H} mm. ¿Área mínima de refuerzo longitudinal (mm²)?",
+      "variables": {
+       "B": {
+        "etiqueta": "b",
+        "valores": [
+         250,
+         300,
+         350
+        ],
+        "unidad": "mm"
+       },
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         400,
+         500,
+         600
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.01*B*H",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm²"
+     },
+     "citas": [
+      {
+       "articulo": "10.9.1",
+       "extracto": "…no debe ser menor que 0,01 ni mayor que 0,06 veces el área total, Ag…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Número mínimo de barras longitudinales",
+      "columnas": [
+       "Barras"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Estribos circulares o rectangulares",
+        "valores": [
+         "4"
+        ]
+       },
+       {
+        "etiqueta": "Estribos triangulares",
+        "valores": [
+         "3"
+        ]
+       },
+       {
+        "etiqueta": "Espirales",
+        "valores": [
+         "6"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "10.9.2",
+       "extracto": "…debe ser de cuatro para barras dentro de estribos circulares o rectangulares, tres para barras dentro de estribos triangulares y seis para barras rodeadas por espirales…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna circular de {D} mm de diámetro, núcleo de (D − 80) mm, f′c = {FC} MPa y fyt = 420 MPa. ¿Cuantía volumétrica mínima de espiral ρs?",
+      "variables": {
+       "D": {
+        "etiqueta": "Diámetro",
+        "valores": [
+         500,
+         600,
+         700
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.45*((D/(D-80))^2-1)*FC/420",
+      "tolerancia": 0.02,
+      "explicacion": "En secciones circulares Ag/Ach = (D/Dc)²."
+     },
+     "citas": [
+      {
+       "articulo": "10.9.3",
+       "extracto": "ρs = 0,45 (Ag / Ach − 1) f’c / fyt (10-5)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En la ecuación de la espiral, fyt no debe tomarse mayor de {{700 MPa}}."
+     },
+     "citas": [
+      {
+       "articulo": "10.9.3",
+       "extracto": "…el valor de fyt (esfuerzo de fluencia del acero de la espiral) a usar en la ecuación (10-5) no debe ser mayor de 700 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Momentos de inercia para el análisis de primer orden",
+      "columnas": [
+       "I"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Vigas",
+        "valores": [
+         "0,35 Ig"
+        ]
+       },
+       {
+        "etiqueta": "Columnas",
+        "valores": [
+         "0,70 Ig"
+        ]
+       },
+       {
+        "etiqueta": "Muros no agrietados",
+        "valores": [
+         "0,70 Ig"
+        ]
+       },
+       {
+        "etiqueta": "Muros agrietados",
+        "valores": [
+         "0,35 Ig"
+        ]
+       },
+       {
+        "etiqueta": "Losas planas sin vigas",
+        "valores": [
+         "0,25 Ig"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "10.11.1",
+       "extracto": "(b) Momentos de inercia, I Vigas … 0,35 Ig Columnas … 0,70 Ig Muros no agrietados … 0,70 Ig Muros agrietados … 0,35 Ig Losas planas sin vigas … 0,25 Ig"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué inercia se usa para las vigas en el análisis de esbeltez?",
+      "opciones": [
+       "0,25 Ig",
+       "0,35 Ig",
+       "0,50 Ig",
+       "0,70 Ig"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "10.11.1",
+       "extracto": "(b) Momentos de inercia, I Vigas … 0,35 Ig"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué radio de giro r se permite usar en columnas rectangulares y circulares?",
+      "respuesta": "0,3 veces la dimensión total en la dirección analizada (rectangulares) y 0,25 veces el diámetro (circulares)."
+     },
+     "citas": [
+      {
+       "articulo": "10.11.2",
+       "extracto": "Se puede tomar el radio de giro, r, igual a 0,3 veces la dimensión total de la sección en la dirección en la cual se está considerando la estabilidad para el caso de elementos rectangulares y 0,25 veces el diámetro para elementos circulares en compresión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Una columna se puede suponer arriostrada si los efectos de segundo orden no aumentan sus momentos extremos en más de un {{5 %}}."
+     },
+     "citas": [
+      {
+       "articulo": "10.11.4.1",
+       "extracto": "…si el incremento en los momentos en los extremos de la columna debido a los efectos de segundo orden no excede de un 5% de los mismos momentos calculados con un análisis de primer orden."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo se permite suponer arriostrado un entrepiso según el índice de estabilidad Q?",
+      "respuesta": "Cuando Q = ΣPu·Δo / (Vus·he) ≤ 0,06.",
+      "explicacion": "Con fuerzas de sismo, Δo se multiplica por 0,75 R (NTE E.030)."
+     },
+     "citas": [
+      {
+       "articulo": "10.11.4.2",
+       "extracto": "…si el índice de estabilidad del entrepiso, Q = ΣPu Δo / (Vus he) (10-6) es menor o igual a 0,06."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Entrepiso con ΣPu = {P} kN, Δo = {D} mm, Vus = {V} kN y he = 3000 mm. ¿Índice de estabilidad Q?",
+      "variables": {
+       "P": {
+        "etiqueta": "ΣPu",
+        "valores": [
+         20000,
+         30000,
+         40000
+        ],
+        "unidad": "kN"
+       },
+       "D": {
+        "etiqueta": "Δo",
+        "valores": [
+         6,
+         9,
+         12
+        ],
+        "unidad": "mm"
+       },
+       "V": {
+        "etiqueta": "Vus",
+        "valores": [
+         1500,
+         2000,
+         2500
+        ],
+        "unidad": "kN"
+       }
+      },
+      "formula": "P*D/(V*3000)",
+      "tolerancia": 0.02,
+      "explicacion": "Si Q ≤ 0,06, el entrepiso puede tratarse como arriostrado."
+     },
+     "citas": [
+      {
+       "articulo": "10.11.4.2",
+       "extracto": "Q = ΣPu Δo / (Vus he) (10-6) … es menor o igual a 0,06."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En estructuras sin desplazamiento lateral, el factor de longitud efectiva k se toma igual a {{1,0}}, salvo que el análisis justifique uno menor."
+     },
+     "citas": [
+      {
+       "articulo": "10.12.1",
+       "extracto": "Para elementos a compresión en estructuras sin desplazamiento lateral, el factor de longitud efectiva, k, debe tomarse igual a 1,0, a menos que se demuestre por análisis que se justifica utilizar un valor más bajo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna arriostrada con M1/M2 = {R}. ¿Valor límite de k ℓu / r para ignorar la esbeltez (ec. 10-7)?",
+      "variables": {
+       "R": {
+        "etiqueta": "M1/M2",
+        "valores": [
+         -0.5,
+         0,
+         0.25,
+         0.5,
+         0.75
+        ]
+       }
+      },
+      "formula": "34-12*R",
+      "tolerancia": 0.01,
+      "explicacion": "M1/M2 es positivo en curvatura simple y negativo en curvatura doble. El límite no pasa de 40."
+     },
+     "citas": [
+      {
+       "articulo": "10.12.2",
+       "extracto": "k ℓu / r ≤ 34 − 12 (M1/M2) (10-7) En la ecuación 10-7, el término [34 − 12(M1/M2)] no debe tomarse mayor que 40."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se magnifica el momento en una columna arriostrada?",
+      "respuesta": "Mc = δns · M2, con δns = Cm / (1 − Pu / 0,75 Pc) ≥ 1,0 y Pc = π² EI / (k ℓu)²."
+     },
+     "citas": [
+      {
+       "articulo": "10.12.3",
+       "extracto": "Mc = δns M2 (10-8) donde: δns = Cm / (1 − Pu / 0,75 Pc) ≥ 1,0 (10-9) Pc = π² EI / (k ℓu)² (10-10)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna arriostrada con Cm = 1,0, Pu = {PU} kN y Pc = {PC} kN. ¿Factor δns?",
+      "variables": {
+       "PU": {
+        "etiqueta": "Pu",
+        "valores": [
+         800,
+         1000,
+         1200
+        ],
+        "unidad": "kN"
+       },
+       "PC": {
+        "etiqueta": "Pc",
+        "valores": [
+         6000,
+         8000,
+         10000
+        ],
+        "unidad": "kN"
+       }
+      },
+      "formula": "1/(1-PU/(0.75*PC))",
+      "tolerancia": 0.01
+     },
+     "citas": [
+      {
+       "articulo": "10.12.3",
+       "extracto": "δns = Cm / (1 − Pu / 0,75 Pc) ≥ 1,0 (10-9)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna sin cargas transversales entre apoyos, con M1/M2 = {R}. ¿Cuánto vale Cm?",
+      "variables": {
+       "R": {
+        "etiqueta": "M1/M2",
+        "valores": [
+         -0.5,
+         0,
+         0.5,
+         1
+        ]
+       }
+      },
+      "formula": "0.6+0.4*R",
+      "tolerancia": 0.01,
+      "explicacion": "Con cargas transversales entre apoyos, Cm = 1,0."
+     },
+     "citas": [
+      {
+       "articulo": "10.12.3.1",
+       "extracto": "Cm = 0,6 + 0,4 (M1/M2) ≥ 0,4 (10-13)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna de h = {H} mm con Pu = {PU} kN. ¿Momento mínimo M2,min (kN·m)?",
+      "variables": {
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         300,
+         400,
+         500,
+         600
+        ],
+        "unidad": "mm"
+       },
+       "PU": {
+        "etiqueta": "Pu",
+        "valores": [
+         600,
+         900,
+         1200
+        ],
+        "unidad": "kN"
+       }
+      },
+      "formula": "PU*(15+0.03*H)/1000",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN·m"
+     },
+     "citas": [
+      {
+       "articulo": "10.12.3.2",
+       "extracto": "M2,min = Pu (15 + 0,03h) (10-14) … donde 15 y h están en mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En columnas no arriostradas, ¿por debajo de qué esbeltez k ℓu / r se pueden despreciar sus efectos?",
+      "opciones": [
+       "22",
+       "34",
+       "40",
+       "100"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "10.13.2",
+       "extracto": "Para elementos en compresión no arriostrados contra desplazamientos laterales, pueden despreciarse los efectos de la esbeltez cuando k ℓu / r es menor que 22."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué valor mínimo tiene k en columnas no arriostradas?",
+      "respuesta": "k no debe ser menor que 1,0, y se calcula con los Ec e I de 10.11.1."
+     },
+     "citas": [
+      {
+       "articulo": "10.13.1",
+       "extracto": "…el factor de longitud efectiva k debe determinarse usando los valores de Ec e I dados en 10.11.1 y no debe ser menor que 1,0."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Si δs calculado con δs = 1/(1 − Q) supera {{1,5}}, el momento debe obtenerse con un análisis de segundo orden o con 10.13.4.3."
+     },
+     "citas": [
+      {
+       "articulo": "10.13.4.2",
+       "extracto": "Si δs calculado de esta manera es mayor que 1,5 entonces δs Ms debe calcularse usando 10.13.4.1 (análisis de segundo orden) ó 10.13.4.3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué se exige si el f′c de una columna es 1,4 veces mayor que el del sistema de piso?",
+      "respuesta": "Transmitir la carga a través de la losa con una de tres alternativas: vaciar el concreto de la columna en el piso 600 mm a cada lado, usar la resistencia menor con dowels/espirales, o usar una resistencia equivalente si la columna está confinada."
+     },
+     "citas": [
+      {
+       "articulo": "10.15",
+       "extracto": "Si la resistencia especificada en compresión del concreto, f’c, de una columna es 1,4 veces mayor que la del sistema de piso, la transmisión de la carga a través de la losa de piso debe lograrse de acuerdo con alguna de las alternativas especificadas en 10.15.1, 10.15.2 ó 10.15.3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El concreto de la columna se vacía en el piso en un área de {{600 mm}} adicionales a cada lado de la cara de la columna."
+     },
+     "citas": [
+      {
+       "articulo": "10.15.1",
+       "extracto": "…en un área formada por 600 mm adicionales a cada lado de la cara de la columna."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna confinada por los cuatro lados, con f′c columna = {C} MPa y f′c losa = {L} MPa. ¿Resistencia equivalente en la conexión (MPa)?",
+      "variables": {
+       "C": {
+        "etiqueta": "f′c columna",
+        "valores": [
+         35,
+         42
+        ],
+        "unidad": "MPa"
+       },
+       "L": {
+        "etiqueta": "f′c losa",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.75*C+0.35*L",
+      "tolerancia": 0.02,
+      "unidadResultado": "MPa",
+      "explicacion": "La relación f′c columna / f′c losa no debe pasar de 2,5 para el diseño."
+     },
+     "citas": [
+      {
+       "articulo": "10.15.3",
+       "extracto": "…igual al 75% de la resistencia del concreto de la columna más el 35% de la resistencia del concreto del piso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En elementos compuestos, ¿qué fluencia máxima se usa para el núcleo de acero estructural?",
+      "opciones": [
+       "250 MPa",
+       "350 MPa",
+       "420 MPa",
+       "Sin límite"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "10.16.7.2",
+       "extracto": "…la resistencia mínima a la fluencia especificada para el grado del acero estructural usado, pero sin exceder de 350 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué diámetro deben tener los estribos de un elemento compuesto con núcleo de acero estructural?",
+      "respuesta": "No menos de 0,02 veces la mayor dimensión lateral del elemento, con un mínimo de 3/8″; no necesitan ser mayores de 5/8″."
+     },
+     "citas": [
+      {
+       "articulo": "10.16.8.4",
+       "extracto": "Los estribos transversales deben tener un diámetro no menor que 0,02 veces la mayor dimensión lateral del elemento compuesto, excepto que los estribos no deben ser menores de 3/8” y no necesitan ser mayores que 5/8”."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la resistencia de diseño al aplastamiento del concreto?",
+      "respuesta": "φ (0,85 f′c A1), con φ = 0,70. Si la superficie de soporte es más ancha por todos los lados, se multiplica por √(A2/A1), sin pasar de 2.",
+      "explicacion": "φ = 0,70 para aplastamiento (9.3.2.4)."
+     },
+     "citas": [
+      {
+       "articulo": "10.17.1",
+       "extracto": "La resistencia de diseño al aplastamiento del concreto no debe exceder φ(0,85 f’c A1)… se permite que la resistencia de diseño al aplastamiento en el área cargada se multiplique por √(A2/A1), pero no más que 2 (figura 10.17.1)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "¿Qué representan A1 y A2 en esta figura y cuánto puede aumentar la resistencia al aplastamiento?",
+      "imagenUrl": "data:image/jpeg;base64,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BJJIIJJJBBJJIJJJJJBJJJJJJJJJJJJJJJJJJJJJJBBBJJJJJJJJJJJJJJJJIIJAJAIJBJJIJBJJBJJJJIJJJJJJJJJJJJJJJJJJJJJJIABJJJJJJJJJJJJJJJJAAJIJJIJJJBAJBBJIJJJJJBJJJJJJJJJJJJJJJJJJJIJJJJJJIJJJJJJJJJJJJJJIIABIBIJJJIBIAJJBJJJJIJJJJJJJJJJJJJJJJJJJJBIJBBIJBJJJJJJJJJJJJJBAJAIAJIJIJJIBBJIJJJJJBJJJJJJJJJJJJJJJJJJJIJBIIJBIJJJJJJJJJJJJJIIJJJJJJIBJIJBIJJBJJJJIJJJJJJJJJJJJJJJJJJJJBIAIBIJBJJJJJJJJJJJJJJBAJIJIJJJJJJJBJIJJJJJBJJJJJJJJJJJJJJJJJJJJJIIBBJIJJJJJJJJJJJJJIIBABJIJBJBJJBIJJBJJJJIJJJJJJJJJJJJJJJJJJJJJIJBBIJBJJJJJJJJJJJJJBBBIBJJAJIIIJJBJIJJJJJBJJIJJJJJJJJJJJJJJJJJJBIIJBIJJJJJJJJJJJJJJAAIIBJBJBIJJBIJJBJJJJIJJJIAAJIJAABJJJJJJJJAIIJJIIJJJJJJJJJJJJJJBJJJBJJJBIIBJBBJIJJJJJBJIJAJJJIJBJJJJJJJJJIBBJIBJAJJJJJJJJJJJJJJIBBIJJJJJJBAJBJJBJJIAJJJJJJJJJJJJJJJJJJJJJBIJBBIJBJJBJJJJJJJJJJJBJIBBJAJBJAIBBJIJAABJBJJJJJJJJJJJJJJJJBJAJJJJJJJJAJBBJJJJJJIJJIIJAIAJAJBIAJBIJAIBJJJIJJJJJJJJJJJJJJJJIJBJJJJJJJJJJABBJJJJJJBJJJJAAIJJIBIIJBIJBIJJJJJBJJJJJJJJJJJJJJJJJABBAAAIAABBAAJJJJJJJIJJJIBJJIJIBJJJJJIJJBJJJJIJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJIJJJJJJJBJJJBJBABJBJJBIIJBJIJJJJJBJJJJJJJJJJJJJJJJJJJJJIBBIJJJJJBJJJJJJIJJJAIBJBJJJBJBIJBJJBJJJJIJJJAJIJJJJJJJJJJIJJJJJAABBJJJJIJJJJJJJBJJIBBAJJJIBJIIJJBJIJJJJJBJAJAIAJJBBBBBJJJBJJJJJJJJJJJJJJJJJJJJIJJJIJJIIJIBBJJJBIJJBJJJJIBJBIBAAAIIJIAJJJIJJJJJJJJJJJJJJJJJJJJJBJJJBIJABJJAJAIIJJJIJJJJJIJJJJJJJJJJJJJJJJBJJJJJJJJJJJJJJJJJJJJIJJJJJBJBBJAJBBIJAJJBJJJJIJJJJJJJJJJJJJJJJIJJJJJJJJJJJJJJJJJJJJJBJJIAJIJBJIJJIIBABJIJJJJJBJJJJJJJJJJJJJJJJBJJJJJJJJJJJJJJJJJJJJIJJIIJJIAJIJIJJJBIIJJJJJJIJJJJJJJJJJJJJJJJIJJJJJJJJJJJJJJJJJJJJJBJJIBJIIJAJAJIJJIBBIJJJJJBJJJJJJJJJJJJJJJJBJJJJJJJJJJJJJJJJJJJJIJJJIIIJJJJAJBBBJJJJBJJJJIJJJJJJJJJJJJJJJJIJJJJJJJJJJJJJJJJJJJJJBJJBBJIBJJIIBJJJJBJIJJJJJBJJJJJJJJJJJJJJJJBJJJJJJJJJJIJJJJJJJJJIJJJIBBIBJJIBIBIBIJJBJJJJIJJJJJJJJJJJJJJJJIJJJJJJJJJJJBJJJJJJJJJBJJABBJIIJJBIIBJBJJIJJJJJBJJJJJJJJJJJJJJJJBJJJJJJJJJIJJJJJJJJJJJJJIIBJAJJJJIBJJJAJJBJJJJIJJJJJJJJJJJJJJJJJJJJJJJJJJJAJJJJJJJJJJJJJAAJJBJJJJBAJAAJJIJJJJJBJJJJJJJJJJJJJJJJJJJJJJJJJJIJJJJJJJJJJJJJIIAIJJJBBIJBJJJJJBJJJJIJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJBBIIJBJIJJJJBIBJIJJJJJBJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJIJIBJIJIIABBBIJJBJJJJIJJJJJJJJJJJJJJJJJJJJJJJJJABJBBJJJJJJJJJJJBBAJBAJBIJIIBJBJIJJJJJBJJJJJJJJJJJJJJJJJJJJJJJJJAIABBJJJJJJJJJJIABAJIJIJJIIBIBJJBJJJJIJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJAAIJJIBAIJJBJIJJJJJBJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJIJJJJJJJJJJJJJJJJBJJJJIJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ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",
+      "respuesta": "A1 es el área cargada; A2 es la base del tronco de pirámide con pendiente 1:2 (45° en planta) dentro del soporte. La resistencia se multiplica por √(A2/A1) ≤ 2."
+     },
+     "citas": [
+      {
+       "articulo": "10.17.1",
+       "extracto": "…se permite que la resistencia de diseño al aplastamiento en el área cargada se multiplique por √(A2/A1), pero no más que 2 (figura 10.17.1)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Placa de {A} × {A} mm sobre una zapata mucho más ancha (A2/A1 ≥ 4), f′c = {FC} MPa. ¿Resistencia de diseño al aplastamiento (kN)?",
+      "variables": {
+       "A": {
+        "etiqueta": "Lado de la placa",
+        "valores": [
+         250,
+         300,
+         400
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.7*0.85*FC*A*A*2/1000",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN",
+      "explicacion": "φ = 0,70 (9.3.2.4) y el factor √(A2/A1) se limita a 2."
+     },
+     "citas": [
+      {
+       "articulo": "10.17.1",
+       "extracto": "…se multiplique por √(A2/A1), pero no más que 2…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la ecuación aproximada para columnas con flexión biaxial cuando Pu ≥ 0,1 φPon?",
+      "respuesta": "1/Pn = 1/Pnx + 1/Pny − 1/Pon (ec. 10-22, de Bresler), para columnas rectangulares con armadura simétrica."
+     },
+     "citas": [
+      {
+       "articulo": "10.18",
+       "extracto": "1/Pn = 1/Pnx + 1/Pny − 1/Pon (10-22)… La ecuación 10-22 es válida para valores de Pu ≥ 0,1 φ Pon"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Columna con Pnx = {PX} kN, Pny = {PY} kN y Pon = {PO} kN. ¿Resistencia nominal biaxial Pn (kN)?",
+      "variables": {
+       "PX": {
+        "etiqueta": "Pnx",
+        "valores": [
+         1500,
+         1800
+        ],
+        "unidad": "kN"
+       },
+       "PY": {
+        "etiqueta": "Pny",
+        "valores": [
+         1400,
+         1600
+        ],
+        "unidad": "kN"
+       },
+       "PO": {
+        "etiqueta": "Pon",
+        "valores": [
+         3000,
+         3500
+        ],
+        "unidad": "kN"
+       }
+      },
+      "formula": "1/(1/PX+1/PY-1/PO)",
+      "tolerancia": 0.02,
+      "unidadResultado": "kN"
+     },
+     "citas": [
+      {
+       "articulo": "10.18",
+       "extracto": "1/Pn = 1/Pnx + 1/Pny − 1/Pon (10-22)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Para Pu < 0,1 φPon, la flexión biaxial se verifica con Mux/φMnx + Muy/φMny ≤ {{1,0}}."
+     },
+     "citas": [
+      {
+       "articulo": "10.18",
+       "extracto": "…para valores menores de la carga axial Pu, se usará la siguiente ecuación: Mux/φMnx + Muy/φMny ≤ 1.0 (10-23)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1393 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.060",
+  "titulo": "Concreto Armado",
+  "disciplina": "structures",
+  "dispositivo": "DS N° 010-2009-VIVIENDA",
+  "publicadaEn": "2009-05-09"
+ },
+ "fuente": "Norma E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF oficial de 227 páginas",
+ "articulos": [
+  {
+   "numero": "12.1",
+   "epigrafe": "Longitud De Desarrollo Del Refuerzo — Generalidades",
+   "texto": "LONGITUD DE DESARROLLO DEL REFUERZO — GENERALIDADES",
+   "pagina": 114
+  },
+  {
+   "numero": "12.1.1",
+   "texto": "La tracción o compresión calculada en el refuerzo en cada sección de los elementos de concreto estructural, debe ser desarrollada hacia cada lado de dicha sección mediante una longitud embebida en el concreto (longitud de anclaje), gancho, dispositivo mecánico o una combinación de ellos. Los ganchos no se deben emplear para el anclaje de barras en compresión.",
+   "pagina": 114
+  },
+  {
+   "numero": "12.1.2",
+   "epigrafe": "Los valores de",
+   "texto": "fc′ usados en este capítulo no deben exceder de 8,3 MPa.",
+   "pagina": 114
+  },
+  {
+   "numero": "12.2",
+   "epigrafe": "Longitud De Desarrollo De Barras Corrugadas Y De Alambres",
+   "texto": "CORRUGADOS A TRACCIÓN",
+   "pagina": 114
+  },
+  {
+   "numero": "12.2.1",
+   "texto": "La longitud de desarrollo para barras corrugadas y alambre corrugado en tracción, d ℓ,debe determinarse a partir de 12.2.2 ó 12.2.3, pero no debe ser menor que 300 mm.",
+   "pagina": 114
+  },
+  {
+   "numero": "12.2.2",
+   "texto": "Para barras corrugadas o alambres corrugados, d ℓ se calculará de acuerdo a la Tabla 12.1.\n TABLA 12.1 LONGITUD DE DESARROLLO DE BARRAS EN TRACCIÓN\n Condiciones\n Alambres corrugados o barras\n de 3/4” y menores\n Barras mayores de\n 3/4”\n Espaciamiento libre entre barras o alambres que están siendo empalmados o desarrolladas no menor que db, con recubrimiento libre no menor que db, y estribos a lo largo de d ℓ por lo menos iguales al mínimo indicado en 11.5.6.\n Aplicable también cuando el espaciamiento libre entre barras o alambres que están siendo desarrolladas o empalmadas no sea menor que 2 db y el recubrimiento libre no menor que db (ver Fig.12.1).\n ψ ψ λ\n 2,6\n t e fy db f c′\n ( ) ( )\n\n ψ ψ λ\n 2,1\n t e fy db f c′\n ( ) ( )\n\n Otros casos Ver 12.2.3 Ver 12.2.3\n\n Fig. 12.2.2 Condiciones para la longitud de desarrollo (Tabla 12.1) de barras en tracción",
+   "pagina": 114
+  },
+  {
+   "numero": "12.2.3",
+   "epigrafe": "Para barras corrugadas y alambres corrugados, d",
+   "texto": "ℓ debe ser:\n\n λ\n 1,1\n t e s fy db cb Ktr f c\n db\n ΨΨΨ\n + ′\n ( ) ( ) ( ) ( )\n (12-1)\n\n El término cb Ktr\n db\n + ( ) ( )\n no debe tomarse mayor a 2,5 y\n 10\n Atr fyt Ktr\n s n = (12-2) en donde: n es el número de barras o alambres que se empalman o desarrollan dentro del plano de hendimiento (splitting). cb es la menor distancia entre:\n (a) La distancia del centro de una barra o alambre a la superficie más cercana del concreto. (b) La mitad de la separación centro a centro de las barras o alambres que se desarrollan. Se permite usar Ktr = 0, como una simplificación de diseño, aún si hay refuerzo transversal presente.",
+   "pagina": 115
+  },
+  {
+   "numero": "12.2.4",
+   "texto": "Los factores indicados en la Tabla 12.1, que afectan la longitud de desarrollo o empalmes de barras y alambres corrugados en tracción, se indican en la Tabla 12.2\n\n TABLA 12.2 FACTOR DE MODIFICACIÓN DE LAS LONGITUDES DE DESARROLLO\n Factor Condiciones Valor\n Ψt\n Barras superiores.*\n Otras barras.\n 1,3\n 1,0\n\n Ψe\n Barras o alambres con tratamiento superficial epóxico y recubrimiento menor que 3db o espaciamiento libre menor que 6 db.\n Otras barras o alambres con tratamiento superficial epóxico.\n Barras sin tratamiento superficial\n\n 1,5\n\n 1,2\n 1,0\n Ψs\n Barras de 3/4” y menores.\n Barras mayores de 3/4”.\n 0,8\n 1,0\n λ\n Concreto liviano.\n Concreto de peso normal.\n 1,3\n 1,0\n El producto: Ψt Ψs no necesita considerarse mayor que 1,7 * Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas.",
+   "pagina": 115
+  },
+  {
+   "numero": "12.2.5",
+   "epigrafe": "Refuerzo en exceso",
+   "texto": "Se permite reducir d ℓ cuando el refuerzo en un elemento sometido a flexión excede el requerido por análisis, mediante el factor de modificación (As requerido)÷(As proporcionado), excepto en los casos en los cuales se requiere específicamente el anclaje para desarrollar fy o cuando se trate de elementos con responsabilidad sísmica.",
+   "pagina": 116
+  },
+  {
+   "numero": "12.3",
+   "epigrafe": "Longitud De Desarrollo De Barras Corrugadas Y Alambres",
+   "texto": "CORRUGADOS A COMPRESIÓN",
+   "pagina": 116
+  },
+  {
+   "numero": "12.3.1",
+   "texto": "La longitud de desarrollo para barras corrugadas y alambre a compresión, dc ℓ , se debe calcular a partir de 12.3.2 y de los factores de modificación de 12.3.3, pero no debe ser menor de 200 mm.",
+   "pagina": 117
+  },
+  {
+   "numero": "12.3.2",
+   "texto": "Para las barras corrugadas y alambres corrugados, dc ℓ debe tomarse como el\n mayor entre (0,24 / ) fy f c db ′ y ( ) 0,043fy db, donde la constante 0,043 tiene la\n unidad de mm2/N.",
+   "pagina": 117
+  },
+  {
+   "numero": "12.3.3",
+   "epigrafe": "Se permite multiplicar la longitud dc",
+   "texto": "ℓ por los siguientes factores de modificación:\n (a) El refuerzo excede lo requerido por el análisis, salvo en elementos con responsabilidad sísmica … (As requerido) ÷ (As proporcionado)\n (b) El refuerzo está confinado con una espiral cuya barra tiene un diámetro no menor de 1/4” y no más que 100 mm de paso o dentro de estribos 1/2” de acuerdo con 7.10.5, y espaciados a distancias no mayores que 100 mm medidos entre centros … 0,75",
+   "pagina": 117
+  },
+  {
+   "numero": "12.4",
+   "epigrafe": "Desarrollo De Paquetes De Barras",
+   "texto": "DESARROLLO DE PAQUETES DE BARRAS",
+   "pagina": 117
+  },
+  {
+   "numero": "12.4.1",
+   "texto": "La longitud de desarrollo de cada barra individual dentro de un paquete de barras sometido a tracción o a compresión, debe ser aquella de la barra individual incrementada en 20% para un paquete de tres barras y en 33% para un paquete de cuatro barras.",
+   "pagina": 117
+  },
+  {
+   "numero": "12.4.2",
+   "texto": "Para determinar los factores indicados 12.2, un paquete de barras debe ser tratado como una barra de un diámetro que reproduzca el área total del paquete.",
+   "pagina": 117
+  },
+  {
+   "numero": "12.5",
+   "epigrafe": "Desarrollo De Ganchos Estándar En Tracción",
+   "texto": "DESARROLLO DE GANCHOS ESTÁNDAR EN TRACCIÓN",
+   "pagina": 117
+  },
+  {
+   "numero": "12.5.1",
+   "texto": "La longitud de desarrollo para barras corrugadas en tracción que terminen en un gancho estándar (véase 7.1), dg ℓ se debe calcular según 12.5.2 y los factores de modificación de 12.5.3, pero no debe ser menor que el menor valor entre 8 db y 150 mm.",
+   "pagina": 117
+  },
+  {
+   "numero": "12.5.2",
+   "texto": "Para las barras corrugadas, dg ℓ debe ser ( ) 0,24 λ / e fy f c db ′ Ψ con Ψe igual a 1,2 para refuerzo con recubrimiento epóxico y λ igual a 1,3 para concretos livianos. Para otros casos, Ψe y λ deben tomarse igual a 1,0.\n\n Fig. 12.5.2 Longitud de anclaje con gancho estándar en tracción.",
+   "pagina": 117
+  },
+  {
+   "numero": "12.5.3",
+   "epigrafe": "La longitud",
+   "texto": "dg ℓ de 12.5.2 se puede multiplicar por los siguientes factores cuando corresponda:\n (a) Para barras de 1 3/8” y menores, ganchos con recubrimiento lateral (normal al\n plano del gancho) no menor de 65 mm y para ganchos de 90º adicionalmente con recubrimiento en la extensión de la barra más allá del gancho no menor de 50 mm … 0,7\n\n Fig. 12.5.3.a Casos en los que se puede multiplicar dg ℓ por 0,7\n (b) Para ganchos de 90º de barras 1 3/8” y menores que se encuentran confinados\n por estribos perpendiculares a la barra que se está desarrollando, espaciados a lo largo de dg ℓ a no más de 3 db; o rodeado con estribos paralelos a la barra que se está desarrollando y espaciados a no más de 3 db a lo largo de la longitud de desarrollo del extremo del gancho más el doblez … 0,8\n\n Fig. 12.5.3.b Casos con gancho estándar a 90º en los que se puede multiplicar dg ℓ\n por 0,8 (c) Ganchos de 180º en barras de 1 3/8” y menores que se encuentran confinados\n con estribos perpendiculares a la barra que se está desarrollando, espaciados a no más de 3 db\n a lo largo de dg ℓ … 0.8\n\n Fig. 12.5.3.c Caso con gancho estándar a 180º en el que se puede multiplicar ldg por\n 0,8 (d) Para elementos sin responsabilidad sísmica en los cuales no se requiera específicamente anclaje o longitud de desarrollo para lograr fy y se dispone de una cuantía de refuerzo mayor a la requerida por análisis … As requerido\n As proporcionado\n\n En 12.5.3 b) y 12.5.3 c), db es el diámetro de la barra con gancho. El primer estribo debe envolver la parte doblada del gancho a una distancia no mayor que 2 db, medida desde el borde exterior del gancho.",
+   "pagina": 118
+  },
+  {
+   "numero": "12.5.4",
+   "texto": "Los ganchos no deben considerarse efectivos para el desarrollo de barras en compresión.",
+   "pagina": 119
+  },
+  {
+   "numero": "12.6",
+   "epigrafe": "Anclaje Mecánico",
+   "texto": "ANCLAJE MECÁNICO",
+   "pagina": 119
+  },
+  {
+   "numero": "12.6.1",
+   "texto": "Puede usarse como anclaje cualquier dispositivo mecánico capaz de desarrollar la resistencia del refuerzo sin dañar al concreto.",
+   "pagina": 119
+  },
+  {
+   "numero": "12.6.2",
+   "texto": "La efectividad de los anclajes mecánicos debe comprobarse con resultados de ensayos o certificados del fabricante que muestren que tales dispositivos mecánicos son adecuados.",
+   "pagina": 119
+  },
+  {
+   "numero": "12.6.3",
+   "texto": "Se permite que el desarrollo del refuerzo consista en una combinación de anclaje mecánico más una longitud adicional de refuerzo embebido en el concreto entre el punto de esfuerzo máximo de la barra y el anclaje mecánico.",
+   "pagina": 119
+  },
+  {
+   "numero": "12.7",
+   "epigrafe": "Longitud De Desarrollo De Refuerzo Electrosoldado De",
+   "texto": "ALAMBRE CORRUGADO A TRACCIÓN",
+   "pagina": 119
+  },
+  {
+   "numero": "12.7.1",
+   "texto": "La longitud de desarrollo en tracción del refuerzo electrosoldado de alambre corrugado, d ℓ, medida desde la sección crítica hasta el extremo del alambre, debe calcularse como el producto de d ℓ, de 12.2.2 ó 12.2.3 multiplicado por el factor para refuerzo electrosoldado de alambre obtenido de 12.7.2 ó 12.7.3.\n Se permite reducir d ℓ de acuerdo con 12.2.5 cuando sea aplicable, pero d ℓ no debe ser menor a 200 mm, excepto para el cálculo de los empalmes por traslape de acuerdo con 12.18. Cuando se utilice el factor para refuerzo electrosoldado de alambre de 12.7.2, se permite usar un factor de tratamiento superficial de la barra Ψe igual a 1,0 para refuerzo electrosoldado de alambre revestido con epóxico en 12.2.2 y 12.2.3.",
+   "pagina": 119
+  },
+  {
+   "numero": "12.7.2",
+   "texto": "Para el refuerzo electrosoldado de alambre corrugado con al menos un alambre transversal dentro de d ℓ y a no menos de 50 mm de la sección crítica, el factor para refuerzo electrosoldado de alambre debe tomarse como el mayor de:\n\n ( ) 240 fy\n fy\n − ó 5 db\n s ( ) ( ) pero no mayor que 1,0, donde s es la separación entre los alambres que se desarrollan.",
+   "pagina": 120
+  },
+  {
+   "numero": "12.7.3",
+   "texto": "Para el refuerzo electrosoldado de alambre corrugado sin alambres transversales dentro de d ℓ o con un alambre único a menos de 50 mm de la sección crítica, el factor para refuerzo electrosoldado de alambre debe tomarse como 1,0, y d ℓ debe determinarse igual que para alambre corrugado.",
+   "pagina": 120
+  },
+  {
+   "numero": "12.7.4",
+   "texto": "Cuando se presente algún alambre liso en el refuerzo electrosoldado de alambre corrugado en la dirección de la longitud de desarrollo, el refuerzo electrosoldado de alambre debe ser desarrollado de acuerdo con 12.8.",
+   "pagina": 120
+  },
+  {
+   "numero": "12.8",
+   "epigrafe": "Desarrollo De Refuerzo Electrosoldado De Alambre Liso A",
+   "texto": "TRACCIÓN\n Se debe considerar que la resistencia a la fluencia del refuerzo electrosoldado de alambre liso se desarrolla mediante el embebido en el concreto de 2 alambres transversales, con el alambre transversal más próximo a no menos de 50 mm de la sección crítica. Sin embargo, d ℓ no debe ser menor que:\n 3,3 λ b A fy d\n s f c =\n ′ ( ) ( ) ( )( ) (12-3) donde d ℓ se mide desde la sección crítica hasta el alambre transversal más alejado y s es el espaciamiento entre alambres a desarrollarse. Cuando el refuerzo proporcionado excede del requerido, d ℓ, puede reducirse de acuerdo con 12.2.5. La longitud d ℓ no debe ser menor a 150 mm, excepto para el cálculo de empalmes por traslape de acuerdo con 12.19.",
+   "pagina": 120
+  },
+  {
+   "numero": "12.9",
+   "epigrafe": "Desarrollo De Torones De Preesforzado",
+   "texto": "DESARROLLO DE TORONES DE PREESFORZADO",
+   "pagina": 120
+  },
+  {
+   "numero": "12.9.1",
+   "texto": "Salvo como se dispone en 12.9.2, los torones de preesforzado de siete alambres deben adherirse más allá de la sección crítica en una distancia no menor que:\n\n 21 7\n fse fps fse d db db − = + ( ) ( ) ( ) ( ) (12-4)\n En esta fórmula, fse y fps se expresan en MPa.",
+   "pagina": 120
+  },
+  {
+   "numero": "12.9.2",
+   "epigrafe": "Se permite un embebido menor que d",
+   "texto": "ℓ en una sección de un elemento siempre que el esfuerzo de diseño del torón para esa sección no exceda los valores obtenidos a partir de la ecuación (12-4).",
+   "pagina": 120
+  },
+  {
+   "numero": "12.9.3",
+   "texto": "Se permite limitar el estudio a aquellas secciones transversales más cercanas a cada extremo del elemento que requieran desarrollar su resistencia total de diseño bajo las cargas amplificadas, salvo donde la adherencia de uno o más torones no se extiende hasta el extremo del elemento o donde se aplican cargas concentradas dentro de la longitud de desarrollo del torón.",
+   "pagina": 120
+  },
+  {
+   "numero": "12.9.4",
+   "texto": "Cuando la adherencia del torón no se extienda hasta el extremo del elemento, y el diseño incluya tracciones para la carga de servicio en la zona precomprimida de tracción, como lo permite 18.4, se debe duplicar d ℓ especificada en 12.9.1.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10",
+   "epigrafe": "Desarrollo Del Refuerzo Para Flexión — Generalidades",
+   "texto": "DESARROLLO DEL REFUERZO PARA FLEXIÓN — GENERALIDADES",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.1",
+   "texto": "Se permite desarrollar el refuerzo en tracción doblándolo dentro del alma para anclarlo o hacerlo continuo con el refuerzo de la cara opuesta del elemento.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.2",
+   "texto": "Las secciones críticas para el desarrollo del refuerzo en elementos sometidos a flexión son los puntos donde se presentan los esfuerzos máximos y los puntos dentro de la luz libre donde se corta o se dobla el refuerzo. Las disposiciones de 12.11.3 deben cumplirse.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.3",
+   "texto": "El refuerzo se debe extender, más allá del punto en el que ya no es necesario para resistir flexión, una distancia igual a d ó 12 db , la que sea mayor, excepto en los apoyos de vigas simplemente apoyadas y en el extremo libre de los voladizos.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.4",
+   "texto": "Cuando existan dos o más bastones, el refuerzo que continúa deberá tener una longitud de anclaje mayor o igual a la longitud de desarrollo d ℓ más allá del punto donde el refuerzo que se ha cortado o doblado no es necesario por cálculo.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.5",
+   "texto": "El refuerzo por flexión no debe terminarse en una zona de tracción, a menos que se satisfaga alguno de los siguientes requisitos:\n (a) Vu en el punto terminal no excede (2/3) φVn. (b) Para barras 1 3/8\" y menores, en las que el refuerzo que continúa proporciona el doble del área requerida por la flexión en el punto terminal y Vu no excede (3/4) φVn.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.10.6",
+   "texto": "En elementos sometidos a flexión, se debe proporcionar un anclaje adecuado para el refuerzo en tracción cuando el esfuerzo en el refuerzo no es directamente proporcional al momento, como ocurre en las zapatas inclinadas, escalonadas o de sección variable; en ménsulas; en elementos de gran peralte sometidos a flexión; o en elementos en los cuales el refuerzo de tracción no es paralelo a la cara de compresión. Ver 12.11.4 y 12.12.4 sobre elementos de gran peralte sometidos a flexión.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11",
+   "epigrafe": "Desarrollo Del Refuerzo Para Momento Positivo",
+   "texto": "DESARROLLO DEL REFUERZO PARA MOMENTO POSITIVO",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11.1",
+   "texto": "Por lo menos 1/3 del refuerzo para momento positivo se debe prolongar a lo largo de la misma cara del elemento hasta el apoyo. En las vigas, dicho refuerzo se debe prolongar por lo menos 150 mm dentro del apoyo.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11.2",
+   "texto": "Cuando un elemento sometido a flexión sea parte de un sistema que resiste cargas laterales, el refuerzo para momento positivo que prolonga en el apoyo, se debe anclar para que sea capaz de desarrollar fy en tracción en la cara de apoyo.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11.3",
+   "texto": "En los apoyos simples y en los puntos de inflexión, el refuerzo de tracción para momento positivo debe limitarse a un diámetro tal que d ℓ calculado para fy de acuerdo con 12.2 satisfaga la ecuación (12-5), excepto que no es necesario satisfacer dicha ecuación para los refuerzos que terminan más allá del eje central de los apoyos simples mediante un gancho estándar o un anclaje mecánico equivalente, como mínimo, a un gancho estándar.\n\n Mn d a Vu ≤ + (12-\n 5)\n donde Mn se calcula suponiendo que todo el refuerzo de la sección está sometido a fy, Vu se calcula en la sección y a ℓ en el apoyo debe ser la longitud embebida más allá del centro del apoyo.\n a ℓ en el punto de inflexión debe limitarse a d ó 12 db , el que sea mayor.\n Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión.",
+   "pagina": 121
+  },
+  {
+   "numero": "12.11.4",
+   "texto": "En apoyos simples de elementos de gran peralte sometidos a flexión, el refuerzo de tracción por momento positivo debe anclarse para desarrollar fy en tracción en la cara del apoyo. En apoyos interiores de elementos de gran peralte sometidos a flexión, el refuerzo de tracción por momento positivo debe ser continuo o estar empalmado con el del vano adyacente.",
+   "pagina": 122
+  },
+  {
+   "numero": "12.12",
+   "epigrafe": "Desarrollo Del Refuerzo Para Momento Negativo",
+   "texto": "DESARROLLO DEL REFUERZO PARA MOMENTO NEGATIVO",
+   "pagina": 122
+  },
+  {
+   "numero": "12.12.1",
+   "texto": "El refuerzo para momento negativo en un elemento continuo, restringido, o en voladizo, o en cualquier elemento de un pórtico rígido, debe anclarse en o a través de los elementos de apoyo mediante una longitud embebida, ganchos o anclajes mecánicos.",
+   "pagina": 122
+  },
+  {
+   "numero": "12.12.2",
+   "texto": "El refuerzo para momento negativo debe tener una longitud embebida en el tramo según lo requerido en 12.1 y 12.10.3.",
+   "pagina": 122
+  },
+  {
+   "numero": "12.12.3",
+   "texto": "Por lo menos 1/3 del refuerzo total por tracción en el apoyo proporcionado para resistir momento negativo debe tener una longitud embebida más allá del punto de inflexión, no menor que d, 12 db ó /16 n\n\n , la que sea mayor.",
+   "pagina": 122
+  },
+  {
+   "numero": "12.12.4",
+   "texto": "En los apoyos interiores de vigas de gran peralte sometidas a flexión, el refuerzo de tracción por momento negativo debe ser continuo con el de los tramos adyacentes.",
+   "pagina": 122
+  },
+  {
+   "numero": "12.13",
+   "epigrafe": "Desarrollo Del Refuerzo Del Alma",
+   "texto": "DESARROLLO DEL REFUERZO DEL ALMA",
+   "pagina": 122
+  },
+  {
+   "numero": "12.13.1",
+   "texto": "El refuerzo del alma debe colocarse tan cerca de las superficies de tracción y compresión del elemento como lo permitan los requisitos de recubrimiento y la proximidad de otros refuerzos.",
+   "pagina": 122
+  },
+  {
+   "numero": "12.13.2",
+   "texto": "Los extremos de las ramas individuales de los estribos en U, simples o múltiples, deben anclarse de acuerdo a lo indicado en 12.13.2.1 y 12.3.2.2.\n 12.13.1.1 Para barras y alambres de 5/8” y menores y para barras de 3/4” a 1” con fyt igual a 280 MPa o menos, un gancho estándar alrededor del refuerzo longitudinal.\n 12.13.1.2 Para estribos de 3/4”, 7/8” y 1” con fyt mayor que 280 MPa, un gancho de estribo estándar abrazando una barra longitudinal más una longitud embebida entre el punto medio de la altura del elemento y el extremo exterior del gancho igual o mayor que 0,17 / db fyt f c′.\n 12.13.2 Entre los extremos anclados, cada doblez en la parte continua de los estribos en U, sencillos o múltiples, debe abrazar una barra longitudinal.",
+   "pagina": 122
+  },
+  {
+   "numero": "12.13.3",
+   "texto": "Las barras longitudinales dobladas para trabajar como refuerzo de cortante, si se extienden dentro de una zona de tracción, deben ser continuas con el refuerzo longitudinal, y si se extienden dentro de una zona de compresión, deben anclarse más allá de la mitad del peralte efectivo (0,5 d) como se especifica para la longitud de desarrollo en 12.2 para la fracción de fyt que se necesita para satisfacer la ecuación (11-17).",
+   "pagina": 122
+  },
+  {
+   "numero": "12.13.4",
+   "texto": "Las parejas de estribos en U colocados para que formen una unidad cerrada deben considerarse adecuadamente empalmados cuando la longitud del empalme por traslape sea de 1,3 d ℓ. En elementos con un peralte efectivo de al menos 450 mm, los empalmes con Ab fyt no mayor que 40 kN por rama se pueden considerar adecuados si las ramas de los estribos se prolongan a lo largo de la altura total disponible del elemento.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14",
+   "epigrafe": "Empalmes Del Refuerzo — Generalidades",
+   "texto": "EMPALMES DEL REFUERZO — GENERALIDADES",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.1",
+   "texto": "En el refuerzo sólo se permite hacer empalmes cuando lo requieran o permitan los planos de diseño, las especificaciones, o si lo autoriza el ingeniero proyectista.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.2",
+   "epigrafe": "Empalmes por traslape",
+   "texto": "Empalmes por traslape",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.2.1",
+   "texto": "Para las barras mayores de 1 3/8” no se deben utilizar empalmes por traslape, excepto para los casos indicados en 12.16.2.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.2.2",
+   "texto": "Los empalmes por traslape en paquetes de barras deben basarse en la longitud de empalme por traslape requerida para las barras individuales del paquete, incrementada de acuerdo con 12.4. Los empalmes por traslape de las barras individuales del paquete no deben sobreponerse. No deben empalmarse por traslape paquetes enteros.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.2.3",
+   "texto": "En elementos sometidos a flexión, las barras empalmadas por traslape que no quedan en contacto entre si, no deben espaciarse transversalmente más de 1/5 de la longitud de empalme por traslape requerida ni de 150 mm.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.3",
+   "epigrafe": "Empalmes soldados y mecánicos",
+   "texto": "Empalmes soldados y mecánicos",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.3.1",
+   "texto": "Se permite el uso de empalmes soldados o mecánicos.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.3.2",
+   "texto": "Un empalme mecánico debe desarrollar en tracción o compresión, según sea requerido, al menos 1,25 fy de la barra.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.3.3",
+   "texto": "Excepto en lo dispuesto por esta Norma, toda soldadura debe estar de acuerdo con “Structural Welding Code—Reinforcing Steel” (ANSI/AWS D1.4).",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.3.4",
+   "texto": "Un empalme soldado debe desarrollar, por lo menos, 1,25 fy de la barra.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.14.3.5",
+   "texto": "Los empalmes soldados o mecánicos que no cumplan con los requisitos de 12.14.3.2 ó 12.14.3.4 se permiten sólo para barras 5/8” y menores y de acuerdo con 12.15.4.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.15",
+   "epigrafe": "Empalmes De Alambres Y Barras Corrugadas A Tracción",
+   "texto": "EMPALMES DE ALAMBRES Y BARRAS CORRUGADAS A TRACCIÓN",
+   "pagina": 123
+  },
+  {
+   "numero": "12.15.1",
+   "texto": "La longitud mínima del empalme por traslape en tracción debe ser la requerida para empalmes por traslape Clases A o B, pero no menor que 300 mm, donde:\n Empalme por traslape Clase A … 1,0 d ℓ\n Empalme por traslape Clase B … 1,3 d ℓ\n donde d ℓ se calcula de acuerdo con 12.2 para desarrollar fy sin el factor de modificación de 12.2.5.",
+   "pagina": 123
+  },
+  {
+   "numero": "12.15.2",
+   "texto": "Los empalmes por traslape de alambres y barras corrugadas sometidas a tracción deben ser empalmes por traslape Clase A o Clase B de acuerdo con la Tabla 12.3\n\n Tabla 12.3 EMPLAMES POR TRASLAPE EN TRACCIÓN (*) Relación entre el área de refuerzo proporcionada y la requerida por cálculo en la zona de empalme.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.15.3",
+   "texto": "Los empalmes soldados o mecánicos utilizados donde el área de refuerzo proporcionada es menor del doble de la requerida por el análisis, deben cumplir con los requisitos de 12.14.3.2 o de 12.14.3.4.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.15.4",
+   "texto": "Los empalmes soldados o mecánicos que no cumplen con los requisitos de 12.14.3.2 ó 12.14.3.4 se permiten para barras de 5/8” y menores solo si cumplen con 12.15.4.1 a 12.15.4.3.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.15.4.1",
+   "texto": "Los empalmes deben estar escalonados a distancias no menores de 600 mm.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.15.4.2",
+   "texto": "Al calcular las fuerzas de tracción que pueden ser desarrolladas en cada sección, el esfuerzo en el refuerzo empalmado debe tomarse como la resistencia especificada del empalme, pero no mayor que fy. El esfuerzo en el refuerzo no empalmado debe tomarse como fy veces la relación entre la menor longitud anclada más allá de la sección y d ℓ, pero no mayor que fy.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.15.4.3",
+   "texto": "La fuerza de tracción total que puede ser desarrollada en cada sección debe ser al menos el doble que la requerida por el análisis y por lo menos 140 MPa veces el área total del refuerzo proporcionado.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.15.5",
+   "texto": "Los empalmes en elementos en tracción se deben hacer con un empalme soldado o mecánico completo, de acuerdo con 12.14.3.2 ó 12.14.3.4, y los empalmes en las barras adyacentes deben estar escalonados a distancias no menores de 750 mm.\n Los tanques circulares y silos sometidos a tracción anular, con muchas barras y empalmes bien escalonados y espaciados no requieren cumplir con este requisito. En estos casos deberá considerarse para la armadura anular, empalmes por traslape en tracción Clase B.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.16",
+   "epigrafe": "Empalmes De Barras Corrugadas A Compresión",
+   "texto": "EMPALMES DE BARRAS CORRUGADAS A COMPRESIÓN",
+   "pagina": 124
+  },
+  {
+   "numero": "12.16.1",
+   "texto": "La longitud de un empalme por traslape en compresión, dc ℓ , debe ser de 0,071 fy db, para fy igual a 420 MPa o menor, ó (0,13 fy -24) db para fy mayor que 420 MPa, pero no debe ser menor que 300 mm.\n As proporcionado\n As requerido\n (*)\n Porcentaje máximo de As empalmado\n en la longitud requerida para dicho\n empalme\n 50 100\n Igual o mayor que 2 Clase A Clase B\n Menor que 2 Clase B Clase B\n\n Para f’c menor que 21 MPa, la longitud del empalme por traslape debe multiplicarse por 1,3.",
+   "pagina": 124
+  },
+  {
+   "numero": "12.16.2",
+   "texto": "Cuando se empalman por traslape barras de diferente diámetro en compresión, la longitud del empalme por traslape debe ser la mayor de dc ℓ de la barra de mayor diámetro o la longitud del empalme por traslape de la barra de diámetro menor. Se permite empalmar barras de 1 3/4” y 2 1/4” con barras de diámetro 1 3/8” y menores.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.16.3",
+   "texto": "Los empalmes soldados o mecánicos usados en compresión deben cumplir con los requisitos de 12.14.3.2 ó 12.14.3.4.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.16.4",
+   "epigrafe": "Empalmes a tope",
+   "texto": "Empalmes a tope",
+   "pagina": 125
+  },
+  {
+   "numero": "12.16.4.1",
+   "texto": "En las barras que se requieren sólo para compresión, se permite transmitir el esfuerzo de compresión por apoyo directo a través de cortes a escuadra, mantenidos en contacto concéntrico por medio de un dispositivo adecuado.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.16.4.2",
+   "texto": "Los extremos de las barras deben terminar en superficies planas que formen un ángulo recto con el eje de la barra, con una tolerancia de 1,5º y deben ser unidas con una tolerancia de 3º respecto al apoyo completo después del ensamble.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.16.4.3",
+   "texto": "Los empalmes a tope se deben usar únicamente en elementos que tengan estribos cerrados o espirales.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17",
+   "epigrafe": "Requisitos Especiales De Empalmes Para Columnas",
+   "texto": "REQUISITOS ESPECIALES DE EMPALMES PARA COLUMNAS",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17.1",
+   "texto": "Los empalmes por traslape, mecánicos, soldados a tope, conexiones mecánicas o empalmes a tope deben usarse con las limitaciones de 12.17.2 a la 12.17.4. Los empalmes deben satisfacer los requisitos para todas las combinaciones de carga de la columna.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17.2",
+   "epigrafe": "Empalmes por traslape en columnas",
+   "texto": "Empalmes por traslape en columnas",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17.2.1",
+   "texto": "Cuando el esfuerzo en las barras debido a las cargas amplificadas es de compresión, los empalmes por traslape deben cumplir con 12.16.1, 12.16.2 y, cuando sea aplicable, 12.17.2.4 ó 12.17.2.5.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17.2.2",
+   "texto": "Cuando el esfuerzo en las barras debido a las cargas amplificadas es de tracción y no excede 0,5 fy, los empalmes por traslape por tracción deben ser Clase B si más de la mitad de las barras se empalman en alguna sección, o de Clase A si no más de la mitad de las barras están empalmadas por traslape en ninguna sección y los empalmes están escalonados como mínimo una distancia d ℓ.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17.2.3",
+   "texto": "Cuando el esfuerzo en las barras debido a las cargas amplificadas es mayor que 0,5 fy en tracción, los empalmes por traslape por tracción deben ser Clase B.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17.2.4",
+   "texto": "En elementos sometidos a compresión en que los estribos a lo largo de toda la longitud del empalme por traslape tengan un área efectiva no menor que 0,0015 h s, se permite multiplicar la longitud del empalme por traslape por 0,83, pero la longitud del empalme por traslape no debe ser menor que 300 mm. Las ramas de los estribos perpendiculares a la dimensión h deben usarse para determinar el área efectiva.",
+   "pagina": 125
+  },
+  {
+   "numero": "12.17.2.5",
+   "texto": "En elementos sometidos a compresión con espirales, se permite multiplicar la longitud del empalme por traslape de las barras dentro de la espiral por 0,75 pero dicha longitud no debe ser menor de 300 mm.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.17.3",
+   "epigrafe": "Empalmes soldados o mecánicos en columnas",
+   "texto": "Los empalmes soldados o mecánicos en columnas deben cumplir con los requisitos de 12.14.3.2 ó 12.14.3.4.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.17.4",
+   "epigrafe": "Empalmes a tope en columnas",
+   "texto": "Se permite usar empalmes a tope que cumplan con 12.16.4 para barras de columnas sometidas a esfuerzos de compresión con la condición de que los empalmes estén escalonados o que se especifiquen barras adicionales en las zonas de empalme. Las barras continuas en cada cara de la columna deben tener una resistencia a la tracción, basada en fy, no menor que 0,25 fy veces el área del refuerzo vertical en esa cara.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.18",
+   "epigrafe": "Empalmes De Refuerzo Electrosoldado De Alambre Corrugado",
+   "texto": "A TRACCIÓN",
+   "pagina": 126
+  },
+  {
+   "numero": "12.18.1",
+   "texto": "La longitud mínima del empalme por traslape del refuerzo electrosoldado de alambre corrugado, medida entre los extremos de cada refuerzo electrosoldado individual, no debe ser menor que la mayor de 1,3 d ℓ y 200 mm. La longitud de traslape medida entre los alambres transversales más alejados de cada refuerzo electrosoldado individual no debe ser menor que 50 mm, donde d ℓ se calcula para desarrollar fy de acuerdo con 12.7.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.18.2",
+   "texto": "Los empalmes por traslape del refuerzo electrosoldado de alambre corrugado sin un alambre transversal dentro de la longitud del empalme por traslape, se deben determinar de manera similar a los del alambre corrugado.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.18.3",
+   "texto": "Cuando se presenta un alambre liso en el refuerzo electrosoldado de alambre corrugado en la dirección del empalme por traslape o cuando se está empalmando por traslape un refuerzo electrosoldado de alambre corrugado con un refuerzo electrosoldado de alambre liso, el refuerzo electrosoldado debe ser empalmado por traslape de acuerdo con 12.19.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.19",
+   "epigrafe": "Empalmes De Refuerzo Electrosoldado De Alambre Liso A",
+   "texto": "TRACCIÓN\n La longitud mínima de empalmes por traslape de refuerzo electrosoldado de alambre liso debe cumplir con 12.19.1 y 12.19.2.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.19.1",
+   "texto": "Cuando As suministrada es menor que dos veces la requerida por el análisis en la zona del empalme, la longitud del traslape, medida entre los alambres transversales más alejados de cada hoja de refuerzo electrosoldado, no debe ser menor que el mayor de un espaciamiento de los alambres transversales más 50 mm, 1,5 d ℓ, y 150 mm, donde d ℓ se debe calcular de acuerdo con 12.8 para desarrollar fy.",
+   "pagina": 126
+  },
+  {
+   "numero": "12.19.2",
+   "texto": "Cuando As suministrada es por lo menos el doble de la requerida por análisis en la ubicación del empalme, la longitud del traslape, medida entre los alambres transversales más alejados de cada hoja de refuerzo electrosoldado, no debe ser menor que la mayor de 1,5 d ℓ y 50 mm, d ℓ, se debe calcular de acuerdo con 12.8 para desarrollar fy.",
+   "pagina": 126
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e060-c12-desarrollo-empalmes",
+   "titulo": "E.060 · Cap. 12 · Desarrollo y empalmes",
+   "descripcion": "Longitudes de desarrollo en tracción y compresión, ganchos, paquetes, corte de barras y empalmes por traslape.",
+   "acceso": "free",
+   "orden": 17,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Por qué medios se desarrolla la fuerza de una barra a cada lado de una sección?",
+      "respuesta": "Con longitud embebida (anclaje), gancho, dispositivo mecánico o una combinación. Los ganchos no sirven para anclar barras en compresión."
+     },
+     "citas": [
+      {
+       "articulo": "12.1.1",
+       "extracto": "…debe ser desarrollada hacia cada lado de dicha sección mediante una longitud embebida en el concreto (longitud de anclaje), gancho, dispositivo mecánico o una combinación de ellos. Los ganchos no se deben emplear para el anclaje de barras en compresión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "La longitud de desarrollo en tracción ℓd de barras corrugadas no debe ser menor que {{300 mm}}."
+     },
+     "citas": [
+      {
+       "articulo": "12.2.1",
+       "extracto": "La longitud de desarrollo para barras corrugadas y alambre corrugado en tracción, ℓd, debe determinarse a partir de 12.2.2 ó 12.2.3, pero no debe ser menor que 300 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 12.1 · ℓd de barras en tracción (espaciamiento y recubrimiento adecuados)",
+      "columnas": [
+       "Barras ≤ 3/4″",
+       "Barras > 3/4″"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Espaciamiento libre ≥ db, recubrimiento ≥ db y estribos mínimos (o espaciamiento ≥ 2 db)",
+        "valores": [
+         "fy ψt ψe λ db / (2,6 √f′c)",
+         "fy ψt ψe λ db / (2,1 √f′c)"
+        ]
+       },
+       {
+        "etiqueta": "Otros casos",
+        "valores": [
+         "Ver 12.2.3",
+         "Ver 12.2.3"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      },
+      "imagenUrl": "data:image/jpeg;base64,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kgEgEgEgEkEkkkkkkkkkkkkkkkkkgkEgkkkkEEkkkkkkkkkkkkkkEkgkkEEkAAEAgkkkkAkkkkkkkkkkkkkkkkkkAkgkggkkEAkkkkkkkkkkkkkEEgEEAAkkkEkgEkkkgkkkkkkkkkkkkkkkkkkkgkkkAkkAkkkkkkkkkkkkkgkEAkkkEgkkEgEkgkkkgkkkkkkkkkkkkkkkkkkkggkAkkkkkkkAkkkkkkkkkEEAkgAEkkgAgAkgkkkgkkkkkkkkkkkkkkkkkkkkAkkkkkkkkkkkkkkkkkkkkEkkkkkkggEAkkkkkkkEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkgEkkkkkkkkkkkkgAgkAkAkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEkkkkkkkEkkkkkkkkkAEkkkEEkkkkEkkgEkkkkkkkkkkkkkkkkkkkkkkkkkEkkkAkgkEkkkkkkkkkkkkkkkkkkkkEgkkAkgkEkkkkkkkkkkkkkkkkkkkkkEgkkkkkkEkkkkkkkkkkkkkkkkkkkkEAgkkkgkEkkkkkkkkkkkkkkkkkkkkkEggkkkkgEkkkkkkkkkkkkkkkkkkkkEEgkkkkkEkkkkkkkkkkkkkkkkkkkkkEAEkkkkAEkkkkkkkkkkkkkkkkkkkkEAkEkkkAEkkkkkkkkkkkkkkkkkkkkkEAkkkkkAEkkkkkkkkkkkkkkkkkkkkEEEkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkkgkkgkEAkgEkgEkkEEkkkkkAEkkkkkgAgkkgkgkAAkkkkEEkkkkkAEkkkkkkgAEAEkkkAAAkEkkEEkkkkkAEkkkkkkkkgkAkgkkkEkkkEEkkkkkAEkkkkkkkkkkkkkkkkkkkkkEEkkkkkAEkkkkkgkkkkkkEkkkkkkkEEkkkkkAEkkkkkkkkkgEEEAAkEkkgkEEkkkkkAEkkkkkkkkgEggAgEkkkgkEEkkAkkAEkkkkkkkkkgEAAgkgkkkgkEEkkkkkAEkkkkkkkkgEgAEEgkkkgkEEkgAkkAEkkkkkkkkkkkEkgkkkkkgEEEkkkkkAEkkkkkkkkkkEAAEkkkkkkEEkkkEkAEkkkkkkkkkkkAAAgEkkkgEEAkkgkkAEkkkkkkkkkkEgkgkkkkgkEEkkkkgAEkkkkkkkkkkkkkkkkkkkkkkAkkgkkkkkkkkkkkkkkkkkkkkkgkkkAkkgkgAkgkgkkkkkkkkkkkkkkkkkkEgAAAAEkEkgAAkkkkkkkkkkkkkkkkEEAAgAEkEgggEkkkkkkkkkkkkkkkkkEkkkkkkkEkkkEkkkkkkkkkkkkkkkkEkkkkkkkkgEkkkkkkkkkkkkkkkkkkkkgEkEkkEEkEkkkkkkkkkkkkkkkkkkkgkkEkkEEkkkkkkkkkkkkkkkkkkkkkkgEkEkkEEkkkkkkkkkkkkkkkkkkkkkgkkEkkEEkkkkkkkkkkkkkkkkkkkkkkkEkkkkEgkkkkkkkkkkkkkkkkkkkkkkEkgkkEkkkkkkkkkkkkkkkkkkkkkkkgEAEkgAkEkkkkkkkkkkkkkkkkkkkkEkEEkgEkkkkkkkkkkkkkkkkkkkkkkkkkgEkgkkkkkkkkkkkkkkkkkkkkkkkAkkEkgAEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk/8QAFBEBAAAAAAAA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7RqFgDmV7SBE6hViNgMs4mSs4wI0mkqhHG0d8Yez3poTAkCBzLeK4PyVwfkrg/JXB+SuD8lcH5K4PyUDR+Gzim2YCsXbFpkSmeUDIklMQRvui4iSXK8n9qNlZezPDEk2gbLgX+FA6Y08GhITYE6ZLpU5MO83DvawaAmAgmZbCuD8lcH5K4PyVwfkrg/JXB+SuD8lHzhScUgAXAARqzaEQw1BSEGcaZKZn0rYWf2xsLLsUriZwiMdYVkwsMbvRbR6uyKVKZDEfk+anJAAYAz3Nm372VGLbySSJgpccc4al4UnMmQcJIlVwtEtWgYAbgUK8n9qNlZew1CIYRr1BfFCU6SEL2i2bxBvk7alCyalmbsyoMC1LcpwTlx/dCioiWIRGykSWbLlMklBggrBqXi6uKwQ1KlSq62rYWf2xsLLsFKQkWMLqnJRg7x8hmbKAQRJE17KKBKWDFz/AAbKy1jbd1eT+1GysvYIGEDE6quAag29Wnph2AgAmYD8Hk6NhZVsLP7Y2Fl22veogXQuGI0rrBliew79Ti/h2VlrG27q8n9qNlZe3gPlVqmyBzKngwJhweS1Hx4Pw+To2FlWws/tjYWXba978mystY23dXk/tRsrL28B8vyeTo2FlWws/tjYWXba978mystY23dXk/tRsrL28B8vyeTo2FlWws/tjYWXba978mystY23dXk/tRsrL28B8vyeTo2FlWws/tjYWXba978mystY23dXk/tRsrL28B8vyeTo2FlWws/tjYWXba978mystY23dXk/tRsrL28B8vyeTo2FlWws/tjYWXba978mystY23dXk/tRsrL28B8vyeTo2FlWws/tjYWXba978mystY23dXk/tRsrL28B8vyeTo2FlWws/wA50UIDkxSLlMQA8usUUMRKDApCdErlTMxEY40HEYAl204HxjSBlDAiV6FI0CShp64VElms2Z8+/ZkkBKuhTK8dGgk9PRhoUGTE/wBehegBJEkc+ycASBYTThWK2LDDFtrhTbuoQCR3p1oEDFQ+0/WkrrErCVRiIoWQZKGnxQFkZIQO7a1DnBOJlh6O0lCBryT+vQmgBBEkTX9thZdtr3vybKy1jbd1eT/KXIi5OVKYegji3N6EGTE/16EtLVWrRZkktTmC0JV6TlQQFhWrypWIxIiF/fBwoELXCY8usdkbwN00NGXAMYbp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"
+     },
+     "citas": [
+      {
+       "articulo": "12.2.2",
+       "extracto": "TABLA 12.1 LONGITUD DE DESARROLLO DE BARRAS EN TRACCIÓN … (fy ψt ψe λ / 2,6 √f’c) db … (fy ψt ψe λ / 2,1 √f’c) db"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Barra inferior de {DB} mm, fy = 420 MPa, f′c = {FC} MPa, sin epóxico, con separación y recubrimiento según la Tabla 12.1. ¿ℓd (mm)?",
+      "variables": {
+       "DB": {
+        "etiqueta": "db",
+        "valores": [
+         12.7,
+         15.9,
+         19.1
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "420/(2.6*sqrt(FC))*DB",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "Barras de 3/4″ o menos, ψt = ψe = λ = 1. 12,7 mm = 1/2″; 15,9 mm = 5/8″; 19,1 mm = 3/4″."
+     },
+     "citas": [
+      {
+       "articulo": "12.2.2",
+       "extracto": "(fy ψt ψe λ / 2,6 √f’c) db"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Barra superior (más de 300 mm de concreto debajo) de {DB} mm, fy = 420 MPa, f′c = {FC} MPa. ¿ℓd (mm)?",
+      "variables": {
+       "DB": {
+        "etiqueta": "db",
+        "valores": [
+         12.7,
+         15.9,
+         19.1
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "1.3*420/(2.6*sqrt(FC))*DB",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "ψt = 1,3 por ser barra superior (Tabla 12.2)."
+     },
+     "citas": [
+      {
+       "articulo": "12.2.4",
+       "extracto": "Ψt Barras superiores.* 1,3 … * Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Barra de {DB} mm (mayor de 3/4″), fy = 420 MPa, f′c = {FC} MPa, barra inferior sin epóxico. ¿ℓd (mm)?",
+      "variables": {
+       "DB": {
+        "etiqueta": "db",
+        "valores": [
+         22.2,
+         25.4
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "420/(2.1*sqrt(FC))*DB",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm"
+     },
+     "citas": [
+      {
+       "articulo": "12.2.2",
+       "extracto": "Barras mayores de 3/4” … (fy ψt ψe λ / 2,1 √f’c) db"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué límite tiene el término (cb + Ktr)/db en la ecuación general de ℓd (12-1)?",
+      "respuesta": "No se toma mayor que 2,5. Ktr = Atr fyt / (10 s n), y se permite usar Ktr = 0 como simplificación."
+     },
+     "citas": [
+      {
+       "articulo": "12.2.3",
+       "extracto": "El término (cb + Ktr)/db no debe tomarse mayor a 2,5 y Ktr = Atr fyt / 10 s n (12-2)… Se permite usar Ktr = 0, como una simplificación de diseño, aún si hay refuerzo transversal presente."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 12.2 · Factores de modificación de ℓd",
+      "columnas": [
+       "Valor"
+      ],
+      "filas": [
+       {
+        "etiqueta": "ψt · barras superiores",
+        "valores": [
+         "1,3"
+        ]
+       },
+       {
+        "etiqueta": "ψe · epóxico con recubrimiento < 3db o espaciamiento < 6db",
+        "valores": [
+         "1,5"
+        ]
+       },
+       {
+        "etiqueta": "ψe · otras barras con epóxico",
+        "valores": [
+         "1,2"
+        ]
+       },
+       {
+        "etiqueta": "ψs · barras de 3/4″ y menores",
+        "valores": [
+         "0,8"
+        ]
+       },
+       {
+        "etiqueta": "λ · concreto liviano",
+        "valores": [
+         "1,3"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "12.2.4",
+       "extracto": "Ψt Barras superiores.* 1,3 … Ψe … 1,5 … 1,2 … Ψs Barras de 3/4” y menores. 0,8 … λ Concreto liviano. 1,3"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El producto ψt ψe no necesita considerarse mayor que {{1,7}}."
+     },
+     "citas": [
+      {
+       "articulo": "12.2.4",
+       "extracto": "El producto: Ψt Ψe no necesita considerarse mayor que 1,7"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo se permite reducir ℓd por refuerzo en exceso, y cuándo no?",
+      "respuesta": "Se multiplica por As requerido / As proporcionado. No se permite si se exige específicamente desarrollar fy ni en elementos con responsabilidad sísmica."
+     },
+     "citas": [
+      {
+       "articulo": "12.2.5",
+       "extracto": "Se permite reducir ℓd cuando el refuerzo en un elemento sometido a flexión excede el requerido por análisis, mediante el factor de modificación (As requerido)÷(As proporcionado), excepto en los casos en los cuales se requiere específicamente el anclaje para desarrollar fy o cuando se trate de elementos con responsabilidad sísmica."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se calcula la longitud de desarrollo en compresión ℓdc?",
+      "respuesta": "El mayor entre 0,24 fy db / √f′c y 0,043 fy db, y no menos de 200 mm."
+     },
+     "citas": [
+      {
+       "articulo": "12.3.2",
+       "extracto": "…ℓdc debe tomarse como el mayor entre (0,24 fy / √f’c) db y (0,043 fy) db, donde la constante 0,043 tiene la unidad de mm²/N."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Barra en compresión de {DB} mm, fy = 420 MPa, f′c = {FC} MPa. ¿ℓdc (mm)?",
+      "variables": {
+       "DB": {
+        "etiqueta": "db",
+        "valores": [
+         15.9,
+         19.1,
+         25.4
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.24*420/sqrt(FC)*DB",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "Para f′c ≤ 28 MPa, 0,24 fy/√f′c es mayor que 0,043 fy, así que manda la primera."
+     },
+     "citas": [
+      {
+       "articulo": "12.3.2",
+       "extracto": "…el mayor entre (0,24 fy / √f’c) db y (0,043 fy) db…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Barras en compresión confinadas por espiral o estribos de 1/2″ a no más de 100 mm: ¿por cuánto se puede multiplicar ℓdc?",
+      "opciones": [
+       "0,70",
+       "0,75",
+       "0,80",
+       "0,83"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "12.3.3",
+       "extracto": "(b) El refuerzo está confinado con una espiral… o dentro de estribos 1/2” de acuerdo con 7.10.5, y espaciados a distancias no mayores que 100 mm medidos entre centros … 0,75"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Aumento de ℓd en paquetes de barras",
+      "columnas": [
+       "Incremento"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Paquete de 2 barras",
+        "valores": [
+         "Ninguno"
+        ]
+       },
+       {
+        "etiqueta": "Paquete de 3 barras",
+        "valores": [
+         "20 %"
+        ]
+       },
+       {
+        "etiqueta": "Paquete de 4 barras",
+        "valores": [
+         "33 %"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "12.4.1",
+       "extracto": "…debe ser aquella de la barra individual incrementada en 20% para un paquete de tres barras y en 33% para un paquete de cuatro barras."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la longitud de desarrollo de una barra en tracción con gancho estándar, ℓdg?",
+      "respuesta": "ℓdg = 0,24 ψe λ fy db / √f′c, y no menos que el menor de 8 db y 150 mm.",
+      "explicacion": "Mínimo de 12.5.1: no menor que el menor valor entre 8 db y 150 mm."
+     },
+     "citas": [
+      {
+       "articulo": "12.5.2",
+       "extracto": "Para las barras corrugadas, ℓdg debe ser (0,24 Ψe λ fy / √f’c) db con Ψe igual a 1,2 para refuerzo con recubrimiento epóxico y λ igual a 1,3 para concretos livianos. Para otros casos, Ψe y λ deben tomarse igual a 1,0."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "¿Desde dónde se mide la longitud ℓdg de una barra con gancho?",
+      "imagenUrl": "data:image/jpeg;base64,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",
+      "respuesta": "Desde la sección crítica (la cara de la columna o apoyo) hasta el borde exterior del gancho, sea de 180° o de 90°."
+     },
+     "citas": [
+      {
+       "articulo": "12.5.2",
+       "extracto": "Fig. 12.5.2 Longitud de anclaje con gancho estándar en tracción."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Barra de {DB} mm con gancho estándar, fy = 420 MPa, f′c = {FC} MPa, sin epóxico. ¿ℓdg (mm)?",
+      "variables": {
+       "DB": {
+        "etiqueta": "db",
+        "valores": [
+         12.7,
+         15.9,
+         19.1,
+         25.4
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "0.24*420/sqrt(FC)*DB",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm"
+     },
+     "citas": [
+      {
+       "articulo": "12.5.2",
+       "extracto": "ℓdg debe ser (0,24 Ψe λ fy / √f’c) db"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "¿Qué condiciones de recubrimiento permiten multiplicar ℓdg por 0,7?",
+      "imagenUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAqgCqAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQkKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wgARCAFyA2YDAREAAhEBAxEB/8QAGgABAQEBAQEBAAAAAAAAAAAAAAIBAwUEBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAf3AAAABxOwAAAAAAAAAAAAAAAAAAABzLNAAAAAAAAAAAAAAAAAAAAAAAAAAAAABzNAMNAAMOgAAAAAAAAAAAAAABzNAAAAJOoAAAAAAAAAAAAAAAAAAAAAAAAAAAILABBYAILAAAAAAAAAAAAAAAILABBYAILAAAAAAAAAAAAAAAAAAAAAAAAAAABBYAAABBYAAAAAAAAAAAAAABBYAAABBYAAAAAAAAAAAAAAAAAAAAAAAAAAAILAAAAILAAAAAAAAAAAAAAMBB0AAAAILAAAAAAAAAAAAAAAAAAAAAAAAAAABBYAAABBYAAAAAAAAAAAAAOZphJZJRJ1AAILAAAAAAAAAAAAAAAAAAAAAAAAAAAByOoAAABBYAAAAAAAAAAAABhzLMOB1LNMKAAILAAAAAAAAAAAAAAAAAAAAAAAAAAABxOwBhJhppRBYAAAAAAAAAAAAAABBpQBzBppRBYAAAAAAAAAAAAAAAAAAAAAAAAAAAORpoMJNOZ2BzO4AAAAAAAAAAAAAABBBYMMBJZpzO4AAAAAAAAAAAAAAAAAAAAAAAAAAAIBYABJQOJ2AAAAAAAAAAAAAAAOJp1AAJKBxOwAAAAAAAAAAAAAAAAAJMMMLMNMLAAAAABBpQABJppxOwAAAAAAAAAAAAAABxKOgABIKOJ2AAAAAAAAAAAAAAAAABwLNMKILMKNAAAAAINKAAOJ0KOZ0AAAAAAAAAAAAAAAORRYABxOhRzOgAAAAAAAAAAAAAAAAAAMJMLNAAAAAABBpQAMANILAAAAAAAAAAAAAAAINKAAMBpBYAAAAAAAAAAAAAAAAAABIKAAAAAAAINKAAABJgAAAAAAAANKAAAAABBpQAAAJMAAAAAAAABpQAAAAAMJAAAJNOgAAAAAABBpAAAAAAAAAAAAABp0AAAAABBRzAAAAAAAAAAAAANOgAAAAAJKAAAJBQAAAAAABBB2AAAAAAAAAAAAAJKAAAAABBJ1AAAAAAAAAAAAAJKAAAAABJR+NPePUAPwx+uPpKAAAAAAAIIOhQAAAAAAAAAAAAJKAAAAABBJ1AAAAAAAAAAAAAJKAAAAABJQAAAJKAAAAAAAIKIMBZQAAAAAAAAAABJQAAAAAIJB1AAAAAAAAAAAABJQAAAAAJKAAABJQAAAAAABBYAAAAAAAAAAAAByNOgAAAAAIJB1AAAAAAAAAAAAORp0AAAAABJQAAAJKAAAAAAAILAAAAAAAAAAAAABALAAAAAIJB1AAAAAAAAAAAABALAAAAAJKAAABJQAAAAAABAJALKAAAAAAAAAAAJKAAAAABAJOoAAAAAAAAAAAAJKAAAAABJQAAAJKAAAAAAAIIOwAAAAAAAAAAAABJQAAAAAILOR1AAAAAAAAAAAABJQAAAAAJKPIPuPpAPGPULKAAAAAAAIJKAAAAAAAAAAAAABYAAAAAILORQAAAAAAAAAAAABYAAAAAJKPGPQPpAPDPXLKAAAAAAAILIAAAAMAAAAAAAABpYAAAAAILBAAAAMAAAAAAAAAOgAAAAAJAAAAJOgAAAAAABBYAAMNBBQAAAAAAAANAAAAAAILAABhoIKAAAAAAAABoAAAAAAMAAABoAAAAAAAILAAMOR0KILAAAAAAAAAAAAAAAILAABwOpRBYAAAAAAAAAAAAAAAAAAAAAAAAAAAILAABJhZBYAAAAAAAAAAAAAABBYAAJMLILAAAAAAAAAAAAAAAAAAAAAAAAAAABBYAAABBYAAAAAAAAAAAAAABBYAAABBYAAAAAAAAAAAAAAAAAAAAAAAAAAAILAAAAILAAAAAAAAAAAAAAAILAAAAILAAAAAAAAAAAAAAAABhhQBBYJKAAAAAAILAAAAILAAAAAAAAAAAAAAAILAAAAILAAAAAAAAAAAAAAOJhpZBRhpRpxOoOZ2AAAAAAILAAAAILAAAAAAAAAAAAAAAILAAAAILAAAAAAAAAAAAAAAAAAAAAAAAAAABBYAAABBYAAAAAAAAAAAAAABBYAAABBYAAAAAAAAAAAAAAAAAAAAAAAAAAAILAAAAILAAAAAAAAAAAAAAAILAAAAILAA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kkkkkkkkEkkkkkgkkkkkkkkkkkkkkgkkkkkgkkkkEkkkkkkkAAAkkkkkkkkkkkgkkkkkkEkkkkkkkkkkkkkgkkkkkkEkkkgkkkkkkkgkkkkkkkkkkkkkkEkkkkkgkkkkkkkkkkkkkkEkkkkkgkkkEEkkkkkkkAkkkkkkkkkkkkkkkkkkkkEEkkkkkkkkkkkkgkkkkkkEkkkAkkkkkkkgkkkkgAAAAAAAAAEkkkkkggkkkkAAAAAAAAAkkkkkkgkkkkkkkkkkkkEkkkkEkkkkkkkkgkkkkkkEkkkkEkkkkkkkkgkkkkkkkkkkgkkkkkkkgkkkEgkkkkkkkkkkkkkkkgkkgkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkkkkkkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkAgEAkkgkkkkkkgkkkkgkkkkkkkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkgAAAkkAkkkkkkEkkkkEkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkEgEEkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkkkkkkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkgkkkkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkkEkkkkEkkkkkkkkkkkkkkkkkkkkkkkkkkkgkkEkgkkkkkkkkkkkkkkkgkkgkgkkkkkkkkkkkkkkkkkkkkkkkkkkkkEkgkkkkkkkkkkkkkkkkkkEkAkkEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkgkgkkkkkkkkkkkkkkkkkkkkgkkkkkkkkkkkkkkkkkkkkkkkkkEEEAkAgkAkgEEkkkkkkkkEgkAEgAAAkgkEkkkkkkkkkkkkkkkkkkkkEgggkAg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AhHF3e9/y+h+qY3c+z0ep/gGf6/mFo4IVJ8rDzqySqUQJ7W+vVM5q+CyXf8AKGwjbK7k41CJZjYsAwtp6uN3Ps9Hqf4Bn+v5qVOFlaV97fdLKBxNfLD1DOavgsl3/LVnQkpK2HfT87yHBbsW6epjdz7PR6n+AZ/rS5eIShINdroUGkNssvLeKy/01l/pp4KVTigaS/kY+/8AR6pnNWuB+4Jsxmsl3/L6H6pjdz7PR6n+AZ/rTDLBFHUWOh5PzMff+j1TOavgoS8Y9sTP2fl9D9Uxu59ng+3xJJCBEDeNZaUoSq6AURNREtJayl/4tJamCqCoYqsaUsJAJDBJO29dT/AM/wBaI5ATY3F2IQ/7aWDbSl9r9KyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26iITC8RHA4Pqmc1fAGsXrYPEtL/RXCQ2IPmb6yturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqyturK26srbqytuo2gGoPc9XG7n2eAKzXCVFkJYiFyFN8KNouWQKpXVVbQXsB/CNWhINQhLMqHo0biWgSgiWOLi7a6n+AZ/r4IvdyZd4rK2+srb6ytvrK2+srb6ytvrK2+hpEav7Ky1vrLW+stb6y1vrLW+stb6y1vrLW+stb6y1vrLW+stb6y1vrLW+stb6y1vrLW+stb6IxIw3acfVM5q+AAgI2R41HgHRx7DWVt9ZW31lbfWVt9ZW31lbfSSRBxf2VlrfWWt9Za31lrfWWt9Za31lrfWWt9Za31lrfWWt9Za31lrfWWt9Za31lrfWWt9Za30SzBxK8w+qgSsAn2Vy9XL1cvVy9XL1cvVy9XL1Camdh/AM/1/twtbN1418SJpJOrllcsrllcsrllcsrllcsrllcsrllcsrllcsrllcsrllcsoAICD1TOav9pFgBQm7GP34iQchrllcsrllcsrllcsrllcsrllcsrllcsrllcsrllcsrllcsoAwA7erjjXLK5ZXLK5ZXLK5ZXLK5ZQDIB7fgZ/r/QVmg4GLsKAvl1G8wMDgU1kcDHs8Or/AAEZzV/oGSASrwKEhgi6bAJHvfGkxzbC8/BlWn5nP9f7JAJqMH3amb2oIwgODs8Or/ARnNX+4gD1W81GYoEi93RdfDKtPzOf6+k6v8BGc1fSyrT8zn+vpOr/AAEZzV9LKtP5yCBQnCeNKAqgHFoZJMKBKEYYYqGITExSZACJDK+XClSImrf2/d9lIIlCWCePjwTC0sW0/fu2eLA4ScXHT2F5+tn+vpOr/ARnNX0sq0/nEszggcO/A8njTgiyYTBZHEvjQBKkMgBJZfvhtpMT+j4THTz21alafZ2/5spcaQRxYcNtTdoW1vdMcN8U+iwGE2wKZwqRXixRTyQsbKl9KwjxneaYkPQbxSSFRoB7BUhgQER2HtBROJCR2ern+vpOr/ARnNX0sq0/nIOJSTZ8ADAqCZi+vhAYGP4uf6+k6v8AARnNX0sq0/M5/r6Tq/wEZzV9LKtPzOf6+k6v8BGc1fSyrT8zn+vpOr/ARnNX0sq0/M5/r/JwQgA4hAzrZMah/PV/gIzmr/NlbwAxMCx2kDzoCSUSP8ZVp+ZZU6EQi06m2uT/AKVyf9K5P+lMxjJFwY4GlEZZkZ1uvRKGBGEGLdXJ/wBK5P8ApXJ/0od9OQbJhOBt+AwiaGy55jXJ/wBK5P8ApXJ/0o6WQsCE7bUeFid9oigSOGAQNmFcn/SuT/pXJ/0pIBgIJdDJw2fPIiC4I0LHQPimeonkDGPden/MpzJkY/uwfHftSIUsIsHdy7PGIRM+4Q3/AJ85kyMf2xg4pntH7pAUvIO7l8YhEz7hDf8AJngAEcF4Ds3xQCANGEYFvasOQboJlxaRiIABIaBUVMgEuLFh2b41qH6D4AY0pbCJjxXMXjQwN0vkk0tedZpJpyEzj4OnygVKV5T3KtFMQxW63txiOLR0WRkZGI87NLRAIklmPvPSgCqoUlJtaUxCSwIJH/a2qi2UMj1tspiyQgSbXvPSiQ53yUytmtnABB4OOukttjPSPKk8yCBIQx956VE9IIRxhC+kRTYUVBBMv4QgdmkcGyB60FhVRgmw1wqH03Re1xePnQqrIBkLMChLwu9gIHr7FLMXZMCjTA1pRCiEYpJu8blBxJk4gm0PC0NqSSUxcReKwqMLDhNSElDhtNxZxsicPKpcCYLW049eGONSyUVwmyHfHrV2xCBmIFzzm+zZQCQd5MIxPGr6yCBA8goMDYuMhM6/5spOswgZiBc85v8AqgYSuSugn2o0IMAIPDFupPvSccbR5VF0EQMxAv7zfZsplFLicCE62jvQ1JqCCZf0fETeOPhJMTfSjIQpIjA7KVJLAMMCf20EySxBd8FEgUQiWrZ5AIKsw46VgYwUmPBQJUDbSwxhdhMd6GYa5ZFTyYhDF9LUABiCBe8VBp4Xtxxhd86AgU4Cag08AEoTUa+gq/vQAQuEJigBE4KioJBMAXwEcEbxbwEVBFGHZ6gySYUsEuFTFw7DQqJmDggvHVfOlASxQu+CACrIlqhQ0Agq0mtAGhgpc8XwJsBfNqNPJM+VRElbkF42VEWTCExUGngEyDxhdqIsmEJioNKAShJiR8PpKv70YFkNmNnzqINXgF8BGYRizs8GwpiAU+EQUCkAsS1AbKwhOPBLTLNshFlqmekUzJ42hePBamcC3mGK+krToiprE8NiVDhszIt9VazdwItwkXwZNYi4y97daMViwQAEtscT3qELOCUPk+CgJRJe1XwJwAJlGQ6U1MYJsmMFQjBtHCojDjnG6X8iPKh6XEF0/wBffwSDjBkg1gzepHXYjicCL8YpQKNHvDj0oIEoAyDjPD2qYQKC2YjE4400bY3BMx+6KXcjcIhNt8fHYr2Lj5s+UUkiM30YokMA4PI8DNgvxmfTpiiRADcY34Xtg1Z4IzcABPfEq7IxmwRGO2DUxTpDBJOHG+nCnFCiAm6iYd6iOhTApha/fpUOskGQe+b+CEEYw4Tj9DUJsrAJx4L0eUkReg8Zw25nwRgMQuokk9poYDlocQi5e4e1EUBRS4wp9FNGFmMm4KE62n3fAamZYWUGsF2ht2JG7BMRLf8AdOdI0thi3XHCOFabyBmEzebYbakHIUTjEWdS9QBs0FpgMUFGxIAboXGb2HTx2XOlj1+qSSKMGA3VFhoQxREInIGix3Z9vL4Q1SmCJiJUYZCEAvF8W9qURgscSNBnDyqamARIQT+6DMUoaxE/QUMqsCQXXEvQUEKbrzQneibg1g3vgMkMJlfCS9utE3wQQmbRepJlNCA7HgKpgajIQMo4NIxkAgvEXu0giVKlyTjD1vNEQQEB4AFsZuSPeiKEEFERGEbdtDCIMAhPfJTgmVYm7gbPK1/IqoExBGNppQALBa6kfqksm4J7x+vCJFIiTEoAAAEAcKAj8ZETRqDimrwZKlog0oiHjNlg3emlc5KXI7NOtTHDAKTJt9iloLIAiDZ70tIrkCEurr0pYMEEjFARHsUKAsgID7a4yzKkK9/CIJQZDEaj5QQIAmO97Va1wjFGk6eXgVAScE4VHHQsgDbi3pKDZKModmnWsEAA7HhgDGRiTzovAciEIvt2tHFswCC9/wDIoI/IS4ln7bGiCgS5IjH6KLwEpOEkW9qJh4TbZN/gFQMKWdKI1AQGyoA7lZSLTY3UKRxT0DdTFEcQjg60OWTGHL5zj/5p/9k=",
+      "respuesta": "En barras de 1 3/8″ y menores: recubrimiento lateral (normal al plano del gancho) ≥ 65 mm y, en ganchos de 90°, recubrimiento ≥ 50 mm en la extensión más allá del gancho."
+     },
+     "citas": [
+      {
+       "articulo": "12.5.3",
+       "extracto": "(a) Para barras de 1 3/8” y menores, ganchos con recubrimiento lateral (normal al plano del gancho) no menor de 65 mm y para ganchos de 90º adicionalmente con recubrimiento en la extensión de la barra más allá del gancho no menor de 50 mm … 0,7"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Gancho de 90° confinado por estribos perpendiculares a no más de 3 db a lo largo de ℓdg: ¿qué factor se aplica?",
+      "opciones": [
+       "0,7",
+       "0,75",
+       "0,8",
+       "1,0"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "12.5.3",
+       "extracto": "(b) Para ganchos de 90º de barras 1 3/8” y menores que se encuentran confinados por estribos perpendiculares a la barra que se está desarrollando, espaciados a lo largo de ℓdg a no más de 3 db… 0,8"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Los ganchos {{no}} se consideran efectivos para el desarrollo de barras en compresión."
+     },
+     "citas": [
+      {
+       "articulo": "12.5.4",
+       "extracto": "Los ganchos no deben considerarse efectivos para el desarrollo de barras en compresión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuánto se extiende una barra más allá del punto donde ya no se necesita por flexión?",
+      "respuesta": "Una distancia igual a d o 12 db, la mayor, salvo en apoyos de vigas simplemente apoyadas y en el extremo libre de voladizos."
+     },
+     "citas": [
+      {
+       "articulo": "12.10.3",
+       "extracto": "El refuerzo se debe extender, más allá del punto en el que ya no es necesario para resistir flexión, una distancia igual a d ó 12 db, la que sea mayor, excepto en los apoyos de vigas simplemente apoyadas y en el extremo libre de los voladizos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuándo se permite cortar refuerzo de flexión en una zona de tracción?",
+      "respuesta": "Si Vu en el punto de corte no excede (2/3) φVn, o, en barras de 1 3/8″ y menores, si el refuerzo que continúa da el doble del área requerida y Vu no excede (3/4) φVn."
+     },
+     "citas": [
+      {
+       "articulo": "12.10.5",
+       "extracto": "El refuerzo por flexión no debe terminarse en una zona de tracción, a menos que se satisfaga alguno de los siguientes requisitos: (a) Vu en el punto terminal no excede (2/3) φVn. (b) Para barras 1 3/8\" y menores, en las que el refuerzo que continúa proporciona el doble del área requerida por la flexión en el punto terminal y Vu no excede (3/4) φVn."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Al menos {{1/3}} del refuerzo de momento positivo se prolonga por la misma cara hasta el apoyo; en vigas, al menos 150 mm dentro del apoyo."
+     },
+     "citas": [
+      {
+       "articulo": "12.11.1",
+       "extracto": "Por lo menos 1/3 del refuerzo para momento positivo se debe prolongar a lo largo de la misma cara del elemento hasta el apoyo. En las vigas, dicho refuerzo se debe prolongar por lo menos 150 mm dentro del apoyo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "Si una viga forma parte del sistema que resiste cargas laterales, ¿cómo se ancla su refuerzo positivo en el apoyo?",
+      "respuesta": "Debe anclarse para desarrollar fy en tracción en la cara del apoyo."
+     },
+     "citas": [
+      {
+       "articulo": "12.11.2",
+       "extracto": "Cuando un elemento sometido a flexión sea parte de un sistema que resiste cargas laterales, el refuerzo para momento positivo que prolonga en el apoyo, se debe anclar para que sea capaz de desarrollar fy en tracción en la cara de apoyo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué limita el diámetro del refuerzo positivo en apoyos simples y puntos de inflexión?",
+      "respuesta": "Que ℓd ≤ Mn/Vu + ℓa (ec. 12-5). Mn/Vu puede aumentarse 30 % si el extremo está confinado por una reacción de compresión."
+     },
+     "citas": [
+      {
+       "articulo": "12.11.3",
+       "extracto": "ℓd ≤ Mn / Vu + ℓa (12-5) … Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuánto se prolonga el refuerzo negativo más allá del punto de inflexión?",
+      "respuesta": "Al menos 1/3 del refuerzo negativo del apoyo se prolonga más allá del punto de inflexión el mayor de d, 12 db y ℓn/16."
+     },
+     "citas": [
+      {
+       "articulo": "12.12.3",
+       "extracto": "Por lo menos 1/3 del refuerzo total por tracción en el apoyo proporcionado para resistir momento negativo debe tener una longitud embebida más allá del punto de inflexión, no menor que d, 12 db ó ℓn/16, la que sea mayor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Viga con d = {D} mm, luz libre ℓn = {L} mm y barras negativas de 19,1 mm. ¿Prolongación mínima más allá del punto de inflexión (mm)?",
+      "variables": {
+       "D": {
+        "etiqueta": "d",
+        "valores": [
+         440,
+         540,
+         640
+        ],
+        "unidad": "mm"
+       },
+       "L": {
+        "etiqueta": "ℓn",
+        "valores": [
+         5000,
+         6000
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "D",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "12 db = 229 mm y ℓn/16 = 313 a 375 mm: con estos peraltes manda d."
+     },
+     "citas": [
+      {
+       "articulo": "12.12.3",
+       "extracto": "…no menor que d, 12 db ó ℓn/16, la que sea mayor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Las parejas de estribos en U que forman una unidad cerrada se consideran bien empalmadas si el traslape es de {{1,3 ℓd}}."
+     },
+     "citas": [
+      {
+       "articulo": "12.13.4",
+       "extracto": "Las parejas de estribos en U colocados para que formen una unidad cerrada deben considerarse adecuadamente empalmados cuando la longitud del empalme por traslape sea de 1,3 ℓd."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A partir de qué diámetro no se permiten empalmes por traslape (salvo 12.16.2)?",
+      "opciones": [
+       "Mayores de 1″",
+       "Mayores de 1 3/8″",
+       "Mayores de 3/4″",
+       "No hay límite"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "12.14.2.1",
+       "extracto": "Para las barras mayores de 1 3/8” no se deben utilizar empalmes por traslape, excepto para los casos indicados en 12.16.2."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En flexión, las barras traslapadas sin contacto no se separan transversalmente más de 1/5 del traslape ni de {{150 mm}}."
+     },
+     "citas": [
+      {
+       "articulo": "12.14.2.3",
+       "extracto": "…no deben espaciarse transversalmente más de 1/5 de la longitud de empalme por traslape requerida ni de 150 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Un empalme mecánico o soldado debe desarrollar al menos {{1,25}} fy de la barra."
+     },
+     "citas": [
+      {
+       "articulo": "12.14.3.2",
+       "extracto": "Un empalme mecánico debe desarrollar en tracción o compresión, según sea requerido, al menos 1,25 fy de la barra."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Empalmes por traslape en tracción",
+      "columnas": [
+       "Longitud"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Clase A",
+        "valores": [
+         "1,0 ℓd"
+        ]
+       },
+       {
+        "etiqueta": "Clase B",
+        "valores": [
+         "1,3 ℓd"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      },
+      "explicacion": "En ambos casos, no menos de 300 mm."
+     },
+     "citas": [
+      {
+       "articulo": "12.15.1",
+       "extracto": "Empalme por traslape Clase A … 1,0 ℓd Empalme por traslape Clase B … 1,3 ℓd donde ℓd se calcula de acuerdo con 12.2 para desarrollar fy sin el factor de modificación de 12.2.5."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 12.3 · Clase de empalme en tracción",
+      "columnas": [
+       "≤ 50 % empalmado",
+       "100 % empalmado"
+      ],
+      "filas": [
+       {
+        "etiqueta": "As prop. / As req. ≥ 2",
+        "valores": [
+         "Clase A",
+         "Clase B"
+        ]
+       },
+       {
+        "etiqueta": "As prop. / As req. < 2",
+        "valores": [
+         "Clase B",
+         "Clase B"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "12.15.2",
+       "extracto": "Tabla 12.3 EMPLAMES POR TRASLAPE EN TRACCIÓN … Igual o mayor que 2 Clase A Clase B Menor que 2 Clase B Clase B"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Empalme Clase B de barras inferiores de {DB} mm, fy = 420 MPa, f′c = {FC} MPa (condiciones de la Tabla 12.1). ¿Longitud de traslape (mm)?",
+      "variables": {
+       "DB": {
+        "etiqueta": "db",
+        "valores": [
+         12.7,
+         15.9,
+         19.1
+        ],
+        "unidad": "mm"
+       },
+       "FC": {
+        "etiqueta": "f′c",
+        "valores": [
+         21,
+         28
+        ],
+        "unidad": "MPa"
+       }
+      },
+      "formula": "1.3*420/(2.6*sqrt(FC))*DB",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm",
+      "explicacion": "ℓd según la Tabla 12.1 sin reducir por refuerzo en exceso."
+     },
+     "citas": [
+      {
+       "articulo": "12.15.1",
+       "extracto": "Empalme por traslape Clase B … 1,3 ℓd"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cuál es la longitud de un traslape en compresión?",
+      "respuesta": "0,071 fy db si fy ≤ 420 MPa (o (0,13 fy − 24) db si fy > 420 MPa), no menos de 300 mm. Si f′c < 21 MPa se multiplica por 1,3."
+     },
+     "citas": [
+      {
+       "articulo": "12.16.1",
+       "extracto": "La longitud de un empalme por traslape en compresión, ℓdc, debe ser de 0,071 fy db, para fy igual a 420 MPa o menor, ó (0,13 fy -24) db para fy mayor que 420 MPa, pero no debe ser menor que 300 mm. Para f’c menor que 21 MPa, la longitud del empalme por traslape debe multiplicarse por 1,3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Traslape en compresión de barras de {DB} mm con fy = 420 MPa y f′c ≥ 21 MPa. ¿Longitud (mm)?",
+      "variables": {
+       "DB": {
+        "etiqueta": "db",
+        "valores": [
+         15.9,
+         19.1,
+         22.2,
+         25.4
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.071*420*DB",
+      "tolerancia": 0.02,
+      "unidadResultado": "mm"
+     },
+     "citas": [
+      {
+       "articulo": "12.16.1",
+       "extracto": "…debe ser de 0,071 fy db, para fy igual a 420 MPa o menor… pero no debe ser menor que 300 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "En columnas, ¿qué clase de traslape se usa si las barras están en tracción?",
+      "respuesta": "Si la tracción no pasa de 0,5 fy: Clase B si se empalma más de la mitad de las barras en una sección; Clase A si no y están escalonados al menos ℓd. Si pasa de 0,5 fy: siempre Clase B."
+     },
+     "citas": [
+      {
+       "articulo": "12.17.2.2",
+       "extracto": "Cuando el esfuerzo en las barras debido a las cargas amplificadas es de tracción y no excede 0,5 fy, los empalmes por traslape por tracción deben ser Clase B si más de la mitad de las barras se empalman en alguna sección, o de Clase A si no más de la mitad… y los empalmes están escalonados como mínimo una distancia ℓd."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En columnas a compresión con estribos de área efectiva ≥ 0,0015 h s en todo el traslape, la longitud se puede multiplicar por {{0,83}}, sin bajar de 300 mm."
+     },
+     "citas": [
+      {
+       "articulo": "12.17.2.4",
+       "extracto": "…se permite multiplicar la longitud del empalme por traslape por 0,83, pero la longitud del empalme por traslape no debe ser menor que 300 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué condiciones exige un empalme a tope en compresión?",
+      "respuesta": "Solo en barras que trabajan a compresión, con extremos cortados a escuadra (tolerancia 1,5°, ajuste dentro de 3°) y en elementos con estribos cerrados o espirales."
+     },
+     "citas": [
+      {
+       "articulo": "12.16.4.3",
+       "extracto": "Los empalmes a tope se deben usar únicamente en elementos que tengan estribos cerrados o espirales."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

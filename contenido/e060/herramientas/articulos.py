@@ -31,6 +31,8 @@ for ruta in paginas:
     for linea in open(ruta).read().split("\n"):
         if linea.strip().startswith("CAPÍTULO"): continue
         m=num_re.match(linea) or linea_re.match(linea)
+        # «12.11.3 deben cumplirse.» es una referencia partida por el salto de línea, no un artículo.
+        if m and m.lastindex==2 and m.group(2)[:1].islower(): m=None
         if m:
             n=m.group(1); cap=int(n.split(".")[0])
             # Solo es un artículo nuevo si va después del actual (evita confundir referencias "véase 8.5").
