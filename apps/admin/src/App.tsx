@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { api, auth, ErrorApi, type Yo } from "./api";
 import { ROLES } from "./etiquetas";
-import { IconoCandado, IconoEquipo, IconoImportar, IconoMazo, IconoNorma, IconoSalir } from "./iconos";
-import { Logo } from "./ui";
+import { IconoCandado, IconoEditar, IconoEquipo, IconoImportar, IconoMazo, IconoNorma, IconoSalir } from "./iconos";
+import { Dialogo, Logo, pedir } from "./ui";
 import { Equipo } from "./vistas/Equipo";
 import { Importar } from "./vistas/Importar";
 import { Login } from "./vistas/Login";
@@ -76,6 +76,18 @@ export default function App() {
     );
 
   const { yo } = sesion;
+
+  const renombrarme = async () => {
+    const nombre = await pedir({
+      titulo: "Tu nombre",
+      mensaje: "Así te verán en el equipo y como autor o revisor de las tarjetas.",
+      accion: "Guardar",
+      campo: { etiqueta: "Nombre y apellido", valor: yo.name ?? "", placeholder: "Nombre y apellido" },
+    });
+    if (typeof nombre !== "string") return;
+    await api("/editorial/yo", { method: "PUT", body: { name: nombre } }).catch(() => {});
+    cargar();
+  };
   const admin: { vista: Vista; etiqueta: string; icono: ReactNode }[] = [
     { vista: "importar", etiqueta: "Importar", icono: <IconoImportar /> },
     { vista: "equipo", etiqueta: "Equipo", icono: <IconoEquipo /> },
@@ -112,7 +124,10 @@ export default function App() {
           )}
         </nav>
         <div className="usuario">
-          <span className="usuario-nombre">{yo.name || yo.email}</span>
+          <button className="usuario-nombre enlace-nombre" onClick={renombrarme} title="Editar tu nombre">
+            <span>{yo.name || yo.email}</span>
+            <IconoEditar tamano={14} />
+          </button>
           {yo.name && <span className="usuario-correo">{yo.email}</span>}
           <span className="rol">{ROLES[yo.rol]}</span>
           <button className="boton fantasma boton-icono salir" onClick={salir} title="Salir" aria-label="Salir">
@@ -120,6 +135,7 @@ export default function App() {
           </button>
         </div>
       </aside>
+      <Dialogo />
       <div className="contenido">
         <div className="contenido-interior">
           {vista === "mazos" && <Mazos yo={yo} />}

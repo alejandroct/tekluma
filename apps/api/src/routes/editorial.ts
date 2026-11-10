@@ -39,6 +39,8 @@ const requiereStaff = (...roles: StaffRole[]) =>
     return next();
   });
 
+const nombreSchema = z.string().trim().min(2, "Escribe al menos 2 caracteres").max(80, "Máximo 80 caracteres");
+
 const citasSchema = z.array(z.object({ articleId: z.uuid(), excerpt: z.string().min(1) })).min(1, "Cita al menos un artículo");
 const tarjetaSchema = z.object({ content: contenidoTarjetaSchema, citations: citasSchema });
 
@@ -59,6 +61,12 @@ export const editorial = new Hono<StaffVars>()
   .get("/yo", async (c) => {
     const [yo] = await db.select({ id: users.id, email: users.email, name: users.name }).from(users).where(eq(users.id, c.get("usuarioId")));
     return c.json({ ...yo, rol: c.get("rol") });
+  })
+
+  /** Any team member can change their own display name. */
+  .put("/yo", zValidator("json", z.object({ name: nombreSchema })), async (c) => {
+    await db.update(users).set({ name: c.req.valid("json").name }).where(eq(users.id, c.get("usuarioId")));
+    return c.json({ ok: true });
   })
 
   // ───────── Standards and articles ─────────
@@ -312,6 +320,17 @@ export const editorial = new Hono<StaffVars>()
         .orderBy(users.email),
     ),
   )
+
+  /** An admin can fix a member's display name (e.g. someone who signed in only on the panel). */
+  .put("/equipo/:id", requiereStaff("admin"), zValidator("json", z.object({ name: nombreSchema })), async (c) => {
+    const [actualizado] = await db
+      .update(users)
+      .set({ name: c.req.valid("json").name })
+      .where(and(eq(users.id, c.req.param("id")), sql`${users.staffRole} is not null`))
+      .returning({ id: users.id });
+    if (!actualizado) throw new HTTPException(404, { message: "Esa persona no pertenece al equipo" });
+    return c.json({ ok: true });
+  })
 
   /** The person must have signed in at least once (app or panel). */
   .post(

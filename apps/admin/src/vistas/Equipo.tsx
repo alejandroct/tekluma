@@ -2,7 +2,8 @@ import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { STAFF_ROLES } from "@tekluma/shared";
 import { api, type Miembro } from "../api";
 import { DESCRIPCION_ROLES, ROLES } from "../etiquetas";
-import { Aviso, EncabezadoPagina, Vacio } from "../ui";
+import { IconoEditar } from "../iconos";
+import { Aviso, confirmar, EncabezadoPagina, pedir, Vacio } from "../ui";
 
 export function Equipo() {
   const [miembros, setMiembros] = useState<Miembro[]>([]);
@@ -14,6 +15,33 @@ export function Equipo() {
     setError(null);
     try {
       await api("/editorial/equipo", { body: { email, staffRole } });
+      cargar();
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  };
+
+  const quitar = async (m: Miembro) => {
+    const ok = await confirmar({
+      titulo: "Quitar acceso",
+      mensaje: `${m.name || m.email} dejará de entrar al panel editorial. Su cuenta en la app no cambia.`,
+      accion: "Quitar acceso",
+      peligro: true,
+    });
+    if (ok) asignar(m.email, null);
+  };
+
+  const renombrar = async (m: Miembro) => {
+    const nombre = await pedir({
+      titulo: "Editar nombre",
+      mensaje: m.email,
+      accion: "Guardar",
+      campo: { etiqueta: "Nombre y apellido", valor: m.name ?? "", placeholder: "Nombre y apellido" },
+    });
+    if (typeof nombre !== "string") return;
+    setError(null);
+    try {
+      await api(`/editorial/equipo/${m.id}`, { method: "PUT", body: { name: nombre } });
       cargar();
     } catch (e) {
       setError((e as Error).message);
@@ -87,7 +115,12 @@ export function Equipo() {
                 <tbody>
                   {miembros.map((m) => (
                     <tr key={m.id}>
-                      <td className="celda-titulo nowrap">{m.name || "—"}</td>
+                      <td className="celda-titulo nowrap">
+                        <button className="enlace-nombre" onClick={() => renombrar(m)} title="Editar nombre">
+                          {m.name || <span className="sin-nombre">Sin nombre</span>}
+                          <IconoEditar tamano={14} />
+                        </button>
+                      </td>
                       <td className="secundario-celda">{m.email}</td>
                       <td>
                         <select
@@ -104,7 +137,7 @@ export function Equipo() {
                         </select>
                       </td>
                       <td className="derecha">
-                        <button className="enlace peligro-texto" onClick={() => confirm(`¿Quitar acceso a ${m.email}?`) && asignar(m.email, null)}>
+                        <button className="enlace peligro-texto" onClick={() => quitar(m)}>
                           Quitar acceso
                         </button>
                       </td>

@@ -3,7 +3,7 @@ import { DISCIPLINES } from "@tekluma/shared";
 import { api, type Articulo, type Norma, type Yo } from "../api";
 import { DISCIPLINAS } from "../etiquetas";
 import { IconoBuscar, IconoEliminar, IconoMas } from "../iconos";
-import { Aviso, EncabezadoPagina, Vacio } from "../ui";
+import { Aviso, EncabezadoPagina, pedir, Vacio } from "../ui";
 
 export function Normas({ yo }: { yo: Yo }) {
   const [normas, setNormas] = useState<Norma[]>([]);
@@ -39,10 +39,14 @@ export function Normas({ yo }: { yo: Yo }) {
 
   const eliminar = async () => {
     if (!norma) return;
-    const escrito = prompt(
-      `Vas a eliminar ${norma.code} con sus ${norma.articleCount} artículos. Solo se puede si ya no tiene mazos, y no se puede deshacer.\n\nPara confirmar, escribe: ${norma.code}`,
-    );
-    if (escrito === null) return;
+    const escrito = await pedir({
+      titulo: "Eliminar norma",
+      mensaje: `${norma.code} se elimina con sus ${norma.articleCount} artículos. Solo se puede si ya no tiene mazos, y no se puede deshacer.`,
+      accion: "Eliminar norma",
+      peligro: true,
+      campo: { etiqueta: "Para confirmar, escribe", esperado: norma.code, mono: true },
+    });
+    if (typeof escrito !== "string") return;
     setError(null);
     try {
       await api(`/editorial/normas/${norma.id}`, { method: "DELETE", body: { confirmar: escrito.trim() } });

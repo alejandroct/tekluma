@@ -3,7 +3,7 @@ import type { EditorialStatus } from "@tekluma/shared";
 import { api, type Mazo, type Norma, type Tarjeta, type Yo } from "../api";
 import { ESTADOS, TIPOS, resumen } from "../etiquetas";
 import { IconoBuscar, IconoChevron, IconoEliminar, IconoMas, IconoPublicar } from "../iconos";
-import { Aviso, EncabezadoPagina, Estado, Vacio } from "../ui";
+import { Aviso, confirmar, EncabezadoPagina, Estado, pedir, Vacio } from "../ui";
 import { Editor } from "./Editor";
 
 const FILTROS = ["todas", "draft", "in_review", "approved", "published"] as const;
@@ -55,7 +55,13 @@ export function Mazos({ yo }: { yo: Yo }) {
   const tarjetaAbierta = abierta && abierta !== "nueva" ? (tarjetas.find((t) => t.id === abierta.id) ?? abierta) : null;
 
   const publicar = async () => {
-    if (!mazo || !confirm(`¿Publicar la versión ${(mazo.version ?? 0) + 1} de "${mazo.title}"? Los usuarios la descargarán.`)) return;
+    if (!mazo) return;
+    const ok = await confirmar({
+      titulo: `Publicar la versión ${(mazo.version ?? 0) + 1}`,
+      mensaje: `«${mazo.title}» con sus tarjetas aprobadas. Los usuarios la descargarán en la app.`,
+      accion: "Publicar",
+    });
+    if (!ok) return;
     try {
       await api(`/editorial/mazos/${mazo.id}/publicar`, { body: {} });
       setMensaje(`Versión ${(mazo.version ?? 0) + 1} publicada.`);
@@ -68,14 +74,14 @@ export function Mazos({ yo }: { yo: Yo }) {
 
   const eliminar = async () => {
     if (!mazo) return;
-    const escrito = prompt(
-      `Vas a eliminar "${mazo.title}" con sus ${tarjetas.length} tarjetas y todas sus versiones. Desaparece de la app y no se puede deshacer.\n\nPara confirmar, escribe: ${mazo.slug}`,
-    );
-    if (escrito === null) return;
-    if (escrito.trim() !== mazo.slug) {
-      setMensaje("No se eliminó: el texto no coincide con el identificador del mazo.");
-      return;
-    }
+    const escrito = await pedir({
+      titulo: "Eliminar mazo",
+      mensaje: `«${mazo.title}» se elimina con sus ${tarjetas.length} tarjetas y todas sus versiones. Desaparece de la app y no se puede deshacer.`,
+      accion: "Eliminar mazo",
+      peligro: true,
+      campo: { etiqueta: "Para confirmar, escribe", esperado: mazo.slug, mono: true },
+    });
+    if (typeof escrito !== "string") return;
     try {
       await api(`/editorial/mazos/${mazo.id}`, { method: "DELETE", body: { confirmar: escrito.trim() } });
       elegir(null);
