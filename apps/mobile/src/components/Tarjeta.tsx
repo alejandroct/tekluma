@@ -33,7 +33,7 @@ export function Tarjeta({ contenido, revelada, onRevelar }: Props) {
         <View style={estilos.cuerpo}>
           <Text style={texto}>
             {antes}
-            <Text style={{ color: t.ambar, fontWeight: "800" }}>{revelada ? oculto : " ____ "}</Text>
+            <Text style={{ color: t.ambar, fontWeight: "700" }}>{revelada ? oculto : " ____ "}</Text>
             {despues}
           </Text>
           {!revelada && <BotonRevelar onPress={onRevelar} />}
@@ -161,10 +161,10 @@ const estilos = StyleSheet.create({
   texto: { fontSize: 20, lineHeight: 28 },
   suave: { fontSize: 15, lineHeight: 21 },
   respuesta: { borderLeftWidth: 4, paddingLeft: 14, paddingVertical: 4 },
-  revelar: { borderRadius: 14, paddingVertical: 14, alignItems: "center", marginTop: 8 },
-  opcion: { borderWidth: 1, borderRadius: 14, padding: 14 },
-  tabla: { borderWidth: 1, borderRadius: 12, overflow: "hidden" },
+  revelar: { borderRadius: 8, paddingVertical: 14, alignItems: "center", marginTop: 8 },
+  opcion: { borderWidth: 1, borderRadius: 8, padding: 14 },
+  tabla: { borderWidth: 1, borderRadius: 8, overflow: "hidden" },
   filaTabla: { flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 14, paddingVertical: 10 },
   // letterSpacing explícito: iOS reutiliza vistas nativas de TextInput y puede heredar el de otra pantalla.
-  input: { borderWidth: 1, borderRadius: 14, padding: 14, fontSize: 18, letterSpacing: 0 },
+  input: { borderWidth: 1, borderRadius: 8, padding: 14, fontSize: 18, letterSpacing: 0 },
 });

@@ -1,5 +1,6 @@
 import { Pressable, Text, View } from "react-native";
 import { router, Stack } from "expo-router";
+import { IBMPlexMono_500Medium, IBMPlexMono_600SemiBold, useFonts } from "@expo-google-fonts/ibm-plex-mono";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useCallback, useEffect, useState } from "react";
@@ -16,6 +17,7 @@ SplashScreen.preventAutoHideAsync().catch(() => {});
 export default function RootLayout() {
   const t = useTema();
   const { data: sesion, isPending } = authClient.useSession();
+  const [fuentesListas] = useFonts({ IBMPlexMono_500Medium, IBMPlexMono_600SemiBold });
   const [intro, setIntro] = useState(true);
   const terminarIntro = useCallback(() => setIntro(false), []);
 
@@ -25,8 +27,8 @@ export default function RootLayout() {
   }, []);
 
   useEffect(() => {
-    if (!isPending) SplashScreen.hideAsync().catch(() => {});
-  }, [isPending]);
+    if (!isPending && fuentesListas) SplashScreen.hideAsync().catch(() => {});
+  }, [isPending, fuentesListas]);
 
   // Las compras quedan a nombre del usuario de Tekluma (mismo id en RevenueCat y en la API).
   const usuarioId = sesion?.user.id;
@@ -34,7 +36,7 @@ export default function RootLayout() {
     if (usuarioId) iniciarCompras(usuarioId).catch(() => {});
   }, [usuarioId]);
 
-  if (isPending) return <View style={{ flex: 1, backgroundColor: t.fondo }} />;
+  if (isPending || !fuentesListas) return <View style={{ flex: 1, backgroundColor: t.fondo }} />;
 
   return (
     <>

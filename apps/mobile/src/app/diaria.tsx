@@ -14,7 +14,7 @@ import type { EstadoDiaria, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, GananciaFlotante } from "@/components/Animaciones";
 import { compartirOtros, compartirPorWhatsApp, faltaParaLaSiguiente, intentarDiaria, obtenerDiaria, textoCompartir } from "@/lib/diaria";
 import { sonarMoneda } from "@/lib/sonidos";
-import { useTema } from "@/lib/tema";
+import { MONO, useTema } from "@/lib/tema";
 import { Casillas, IconoCorrecto, IconoDuelo, IconoHito, IconoIncorrecto, IconoMoneda, IconoRacha } from "@/components/Iconos";
 
 const VERDE = "#1F9D55";
@@ -189,7 +189,7 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
           {!!estado.solucion.explicacion && <Text style={estilos.solucionTexto}>{estado.solucion.explicacion}</Text>}
           {estado.solucion.cita && (
             <Text style={[estilos.solucionTexto, { color: "#A9B7CC" }]}>
-              <Text style={{ color: t.ambar, fontWeight: "800" }}>
+              <Text style={{ color: t.ambar, fontWeight: "700" }}>
                 {pregunta.norma} · Art. {estado.solucion.cita.articulo}
                 {"  "}
               </Text>
@@ -208,7 +208,7 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
       <Pressable onPress={() => router.push("/duelo/nuevo")} hitSlop={8}>
         <View style={[estilos.filaIcono, { justifyContent: "center", marginTop: 4 }]}>
           <IconoDuelo tamano={18} color={t.ambar} />
-          <Text style={{ color: t.ambar, fontWeight: "800" }}>¿Quieres más? Reta a un colega a un duelo</Text>
+          <Text style={{ color: t.ambar, fontWeight: "700" }}>¿Quieres más? Reta a un colega a un duelo</Text>
         </View>
       </Pressable>
       <Text style={[estilos.resultadoLinea, { fontSize: 13, marginTop: 4 }]}>Nueva pregunta en {falta}</Text>
@@ -220,18 +220,18 @@ const estilos = StyleSheet.create({
   centro: { flex: 1, alignItems: "center", justifyContent: "center" },
   contenido: { padding: 20, gap: 16, paddingBottom: 48 },
   cabecera: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
-  numero: { fontSize: 15, fontWeight: "800", letterSpacing: 0.3 },
+  numero: { fontSize: 13, fontFamily: MONO, letterSpacing: 1 },
   puntos: { flexDirection: "row", gap: 6 },
   punto: { width: 12, height: 12, borderRadius: 6 },
-  pregunta: { fontSize: 24, fontWeight: "800", lineHeight: 31, letterSpacing: -0.3 },
-  opcion: { flexDirection: "row", alignItems: "center", gap: 12, borderWidth: 1, borderRadius: 16, paddingVertical: 16, paddingHorizontal: 16, minHeight: 60 },
-  letra: { fontSize: 15, fontWeight: "800", width: 18 },
+  pregunta: { fontSize: 24, fontWeight: "700", lineHeight: 31, letterSpacing: -0.3 },
+  opcion: { flexDirection: "row", alignItems: "center", gap: 12, borderWidth: 1, borderRadius: 8, paddingVertical: 16, paddingHorizontal: 16, minHeight: 60 },
+  letra: { fontSize: 15, fontWeight: "700", width: 18 },
   filaIcono: { flexDirection: "row", alignItems: "center", gap: 8 },
-  resultado: { borderRadius: 24, padding: 20, gap: 10, marginTop: 8 },
-  resultadoTitulo: { color: "#FFFFFF", fontSize: 24, fontWeight: "800" },
+  resultado: { borderRadius: 10, padding: 20, gap: 10, marginTop: 8 },
+  resultadoTitulo: { color: "#FFFFFF", fontSize: 24, fontWeight: "700" },
   resultadoLinea: { color: "#FFFFFF", fontSize: 15, fontWeight: "700" },
-  solucion: { borderRadius: 14, padding: 14, gap: 8 },
+  solucion: { borderRadius: 8, padding: 14, gap: 8 },
   solucionTexto: { color: "#FFFFFF", fontSize: 14, lineHeight: 20 },
-  compartir: { borderRadius: 14, paddingVertical: 15, alignItems: "center", marginTop: 6 },
-  compartirTexto: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
+  compartir: { borderRadius: 8, paddingVertical: 15, alignItems: "center", marginTop: 6 },
+  compartirTexto: { color: "#FFFFFF", fontSize: 16, fontWeight: "700" },
 });

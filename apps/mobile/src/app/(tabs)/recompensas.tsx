@@ -9,7 +9,7 @@ import { verAnuncioConRecompensa } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { ampliarConMonedas, hacerCheckIn, obtenerRecompensas } from "@/lib/cupo";
 import { sonarMoneda } from "@/lib/sonidos";
-import { useTema } from "@/lib/tema";
+import { MONO_FUERTE, useTema } from "@/lib/tema";
 import { IconoCorrecto, IconoMoneda, IconoRacha, IconoReproducir } from "@/components/Iconos";
 
 /** Monedas: check-in diario con racha, anuncios para ganar monedas y canje por tarjetas extra. */
@@ -91,7 +91,7 @@ export default function Recompensas() {
       contentInsetAdjustmentBehavior="automatic"
       refreshControl={<RefreshControl refreshing={false} onRefresh={cargar} />}
     >
-      <Text style={[estilos.titulo, { color: t.texto }]}>Recompensas</Text>
+      <Text style={[estilos.titulo, { color: t.texto }]}>Monedas</Text>
 
       <Rebote disparo={ganancia?.id} style={[estilos.saldo, { backgroundColor: t.navy }]}>
         <Text style={estilos.saldoEtiqueta}>Tus monedas</Text>
@@ -129,7 +129,7 @@ export default function Recompensas() {
                     <IconoCorrecto tamano={18} color={t.navy} />
                   </Animated.View>
                 ) : (
-                  <Text style={{ fontSize: 15, fontWeight: "800", color: t.texto }}>+{monedas}</Text>
+                  <Text style={{ fontSize: 15, fontWeight: "700", color: t.texto }}>+{monedas}</Text>
                 )}
               </View>
             );
@@ -138,12 +138,12 @@ export default function Recompensas() {
         <BotonVivo
           disabled={checkIn.hechoHoy || ocupado !== null}
           onPress={reclamar}
-          style={[estilos.boton, { backgroundColor: t.ambar, opacity: checkIn.hechoHoy ? 0.45 : 1 }]}
+          style={[estilos.boton, { backgroundColor: checkIn.hechoHoy ? "transparent" : t.primario, borderWidth: 1, borderColor: checkIn.hechoHoy ? t.borde : t.primario }]}
         >
           {ocupado === "check-in" ? (
-            <ActivityIndicator color={t.navy} />
+            <ActivityIndicator color={t.sobrePrimario} />
           ) : (
-            <Text style={[estilos.botonTexto, { color: t.navy }]}>
+            <Text style={[estilos.botonTexto, { color: checkIn.hechoHoy ? t.textoSuave : t.sobrePrimario }]}>
               {checkIn.hechoHoy ? `Vuelve mañana por +${checkIn.proxima}` : `Reclamar +${checkIn.proxima} monedas`}
             </Text>
           )}
@@ -195,16 +195,16 @@ export default function Recompensas() {
 
 const estilos = StyleSheet.create({
   centro: { flex: 1, alignItems: "center", justifyContent: "center" },
-  contenedor: { padding: 20, gap: 14 },
-  titulo: { fontSize: 28, fontWeight: "800", letterSpacing: -0.5 },
-  saldo: { borderRadius: 24, padding: 24, gap: 4 },
+  contenedor: { padding: 20, gap: 14, paddingBottom: 120 },
+  titulo: { fontSize: 28, fontWeight: "700", letterSpacing: -0.5 },
+  saldo: { borderRadius: 10, padding: 24, gap: 4 },
   saldoEtiqueta: { color: "#A9B7CC", fontSize: 15 },
-  saldoNumero: { color: "#FFFFFF", fontSize: 44, fontWeight: "800", fontVariant: ["tabular-nums"] },
+  saldoNumero: { color: "#FFFFFF", fontSize: 46, fontFamily: MONO_FUERTE, letterSpacing: -1.5 },
   saldoAyuda: { color: "#A9B7CC", fontSize: 13 },
-  tarjeta: { borderRadius: 18, borderWidth: StyleSheet.hairlineWidth, padding: 16, gap: 10 },
-  seccion: { fontSize: 17, fontWeight: "800" },
+  tarjeta: { borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, padding: 16, gap: 10 },
+  seccion: { fontSize: 17, fontWeight: "700" },
   dias: { flexDirection: "row", gap: 6, marginVertical: 4 },
   dia: { flex: 1, borderRadius: 10, paddingVertical: 8, alignItems: "center", gap: 2 },
-  boton: { borderRadius: 14, paddingVertical: 14, alignItems: "center", minHeight: 50, justifyContent: "center" },
-  botonTexto: { fontSize: 16, fontWeight: "800" },
+  boton: { borderRadius: 8, paddingVertical: 14, alignItems: "center", minHeight: 50, justifyContent: "center" },
+  botonTexto: { fontSize: 16, fontWeight: "700" },
 });

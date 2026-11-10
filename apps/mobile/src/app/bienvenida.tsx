@@ -58,9 +58,9 @@ export default function Bienvenida() {
         <Pressable
           disabled={!listo || guardando}
           onPress={guardar}
-          style={({ pressed }) => [estilos.boton, { backgroundColor: t.ambar, opacity: !listo ? 0.5 : pressed ? 0.85 : 1 }]}
+          style={({ pressed }) => [estilos.boton, { backgroundColor: t.primario, opacity: !listo ? 0.4 : pressed ? 0.85 : 1 }]}
         >
-          {guardando ? <ActivityIndicator color={t.navy} /> : <Text style={[estilos.botonTexto, { color: t.navy }]}>Empezar</Text>}
+          {guardando ? <ActivityIndicator color={t.sobrePrimario} /> : <Text style={[estilos.botonTexto, { color: t.sobrePrimario }]}>Empezar</Text>}
         </Pressable>
       </ScrollView>
     </KeyboardAvoidingView>
@@ -69,12 +69,12 @@ export default function Bienvenida() {
 
 const estilos = StyleSheet.create({
   contenido: { padding: 24, paddingTop: 96, gap: 12 },
-  titulo: { fontSize: 30, fontWeight: "800", letterSpacing: -0.5 },
+  titulo: { fontSize: 30, fontWeight: "700", letterSpacing: -0.5 },
   subtitulo: { fontSize: 16, lineHeight: 22, marginBottom: 12 },
   etiqueta: { fontSize: 16, fontWeight: "700", marginTop: 8 },
-  input: { borderWidth: 1, borderRadius: 14, padding: 16, fontSize: 17, letterSpacing: 0 },
+  input: { borderWidth: 1, borderRadius: 8, padding: 16, fontSize: 17, letterSpacing: 0 },
   opciones: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: { borderWidth: 1, borderRadius: 999, paddingHorizontal: 14, paddingVertical: 10 },
-  boton: { borderRadius: 14, paddingVertical: 16, alignItems: "center", marginTop: 20, minHeight: 54, justifyContent: "center" },
-  botonTexto: { fontSize: 17, fontWeight: "800" },
+  chip: { borderWidth: 1, borderRadius: 6, paddingHorizontal: 14, paddingVertical: 10 },
+  boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", marginTop: 20, minHeight: 54, justifyContent: "center" },
+  botonTexto: { fontSize: 17, fontWeight: "700" },
 });

@@ -92,8 +92,8 @@ export default function Afiliacion() {
         })}
       </ScrollView>
       <View style={[estilos.pie, { borderColor: t.borde, backgroundColor: t.fondo }]}>
-        <BotonVivo disabled={guardando} onPress={guardar} style={[estilos.boton, { backgroundColor: t.ambar }]}>
-          {guardando ? <ActivityIndicator color={t.navy} /> : <Text style={{ color: t.navy, fontWeight: "800", fontSize: 17 }}>Guardar</Text>}
+        <BotonVivo disabled={guardando} onPress={guardar} style={[estilos.boton, { backgroundColor: t.primario }]}>
+          {guardando ? <ActivityIndicator color={t.sobrePrimario} /> : <Text style={{ color: t.sobrePrimario, fontWeight: "700", fontSize: 17 }}>Guardar</Text>}
         </BotonVivo>
       </View>
     </View>
@@ -103,11 +103,11 @@ export default function Afiliacion() {
 const estilos = StyleSheet.create({
   centro: { flex: 1, alignItems: "center", justifyContent: "center" },
   contenido: { padding: 20, gap: 10, paddingBottom: 24 },
-  etiqueta: { fontSize: 17, fontWeight: "800", marginTop: 6 },
+  etiqueta: { fontSize: 17, fontWeight: "700", marginTop: 6 },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: { borderWidth: 1, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 8 },
-  buscador: { borderWidth: 1, borderRadius: 14, padding: 14, fontSize: 16, letterSpacing: 0 },
-  opcion: { flexDirection: "row", alignItems: "center", gap: 10, padding: 14, borderRadius: 14, borderWidth: 1 },
+  chip: { borderWidth: 1, borderRadius: 6, paddingHorizontal: 12, paddingVertical: 8 },
+  buscador: { borderWidth: 1, borderRadius: 8, padding: 14, fontSize: 16, letterSpacing: 0 },
+  opcion: { flexDirection: "row", alignItems: "center", gap: 10, padding: 14, borderRadius: 8, borderWidth: 1 },
   pie: { padding: 16, paddingBottom: 34, borderTopWidth: StyleSheet.hairlineWidth },
-  boton: { borderRadius: 14, paddingVertical: 16, alignItems: "center", minHeight: 54, justifyContent: "center" },
+  boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", minHeight: 54, justifyContent: "center" },
 });

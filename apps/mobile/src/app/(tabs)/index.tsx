@@ -9,7 +9,7 @@ import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { obtenerDiaria } from "@/lib/diaria";
 import { paquetesLocales } from "@/lib/mazos";
 import { pendientes, sincronizar } from "@/lib/repaso";
-import { useTema } from "@/lib/tema";
+import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
 
 type Resumen = { mazoId: string; codigo: string; pendientes: number };
 
@@ -49,11 +49,8 @@ export default function Hoy() {
 
   return (
     <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={estilos.contenedor} contentInsetAdjustmentBehavior="automatic">
-      <Text style={[estilos.saludo, { color: t.textoSuave }]}>Hoy</Text>
+      <Text style={[estilos.saludo, { color: t.textoSuave }]}>{fechaRotulo()}</Text>
       <Text style={[estilos.titulo, { color: t.texto }]}>Que la norma fragüe.</Text>
-
-      {diaria && <TarjetaDiaria diaria={diaria} />}
-      <AccesoDuelo />
 
       <Animated.View entering={FadeInDown.springify()} style={[estilos.tarjeta, { backgroundColor: t.navy }]}>
         <NumeroAnimado valor={total} style={estilos.numero} />
@@ -61,7 +58,7 @@ export default function Hoy() {
         <BotonVivo
           disabled={!sinMazos && !siguiente}
           onPress={() => (sinMazos ? router.push("/mazos") : siguiente && router.push(`/repaso/${siguiente.mazoId}`))}
-          style={[estilos.boton, { backgroundColor: t.ambar }, !sinMazos && !siguiente && estilos.botonInactivo]}
+          style={[estilos.boton, { backgroundColor: "#F6F5F2" }, !sinMazos && !siguiente && estilos.botonInactivo]}
         >
           <Text style={[estilos.botonTexto, !sinMazos && !siguiente && { color: t.niebla }]}>
             {sinMazos ? "Elegir un mazo" : siguiente ? `Repasar ${siguiente.codigo}` : "¡Al día!"}
@@ -89,10 +86,14 @@ export default function Hoy() {
               </View>
             )}
           </View>
-          {!cupo.premium && <Text style={{ color: t.ambar, fontWeight: "800", marginLeft: 12 }}>Ilimitado ›</Text>}
+          {!cupo.premium && <Text style={{ color: t.ambar, fontWeight: "700", marginLeft: 12 }}>Ilimitado ›</Text>}
         </Pressable>
         </Animated.View>
       )}
+
+      <Text style={[estilos.seccion, { color: t.textoSuave }]}>RETOS</Text>
+      {diaria && <TarjetaDiaria diaria={diaria} />}
+      <AccesoDuelo />
 
       {resumen && resumen.length > 1 && (
         <View style={{ gap: 8, marginTop: 8 }}>
@@ -161,20 +162,28 @@ function AccesoDuelo() {
   );
 }
 
+/** "LUN 09 NOV" en hora de Lima: rótulo de la hoja del día. */
+function fechaRotulo() {
+  const partes = new Intl.DateTimeFormat("es-PE", { weekday: "short", day: "2-digit", month: "short", timeZone: "America/Lima" }).formatToParts(new Date());
+  const v = (tipo: string) => partes.find((p) => p.type === tipo)?.value.replace(".", "") ?? "";
+  return `${v("weekday")} ${v("day")} ${v("month")}`.toUpperCase();
+}
+
 const estilos = StyleSheet.create({
   acceso: { flexDirection: "row", alignItems: "center", gap: 14, paddingVertical: 14, paddingHorizontal: 14, borderRadius: 10, borderWidth: 1, marginBottom: 8 },
-  accesoEtiqueta: { fontSize: 11, fontWeight: "800", letterSpacing: 1.2 },
+  accesoEtiqueta: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.2 },
   accesoTitulo: { fontSize: 16, fontWeight: "700" },
-  contenedor: { padding: 20, gap: 8 },
-  saludo: { fontSize: 15, fontWeight: "600" },
-  titulo: { fontSize: 28, fontWeight: "800", letterSpacing: -0.5, marginBottom: 16 },
-  tarjeta: { borderRadius: 24, padding: 24, gap: 4 },
-  numero: { color: "#FFFFFF", fontSize: 56, fontWeight: "800", fontVariant: ["tabular-nums"] },
-  etiqueta: { color: "#A9B7CC", fontSize: 16, marginBottom: 20 },
-  boton: { borderRadius: 14, paddingVertical: 14, alignItems: "center" },
+  contenedor: { padding: 20, gap: 8, paddingBottom: 120 },
+  saludo: { fontSize: 12, fontFamily: MONO, letterSpacing: 1.2 },
+  seccion: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.4, marginTop: 20, marginBottom: 4 },
+  titulo: { fontSize: 28, fontWeight: "700", letterSpacing: -0.5, marginBottom: 16 },
+  tarjeta: { borderRadius: 10, padding: 24, gap: 4 },
+  numero: { color: "#FFFFFF", fontSize: 60, fontFamily: MONO_FUERTE, letterSpacing: -2 },
+  etiqueta: { color: "#A9B7CC", fontSize: 12, fontFamily: MONO, letterSpacing: 1.2, marginBottom: 20, textTransform: "uppercase" },
+  boton: { borderRadius: 8, paddingVertical: 14, alignItems: "center" },
   botonInactivo: { backgroundColor: "#26364F" },
   botonTexto: { color: "#0F1B2D", fontSize: 17, fontWeight: "700" },
   barra: { height: 6, borderRadius: 3, overflow: "hidden" },
   barraLlena: { height: 6, borderRadius: 3 },
-  fila: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 16, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth },
+  fila: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 16, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth },
 });

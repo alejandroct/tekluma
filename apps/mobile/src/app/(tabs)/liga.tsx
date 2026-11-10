@@ -6,7 +6,7 @@ import { DIVISIONES, REGIONES, siglaUniversidad, type EstadoLiga, type FilaRanki
 import { BotonVivo, NumeroAnimado } from "@/components/Animaciones";
 import { TarjetaCompartible } from "@/components/TarjetaCompartible";
 import { obtenerLiga, rankingRegiones, rankingUniversidades } from "@/lib/liga";
-import { useTema } from "@/lib/tema";
+import { MONO_FUERTE, useTema } from "@/lib/tema";
 import { IconoCasco, IconoDivision, IconoRegion, IconoUniversidad, Puesto } from "@/components/Iconos";
 
 type Vista = "liga" | "universidades" | "regiones";
@@ -67,7 +67,7 @@ export default function Liga() {
 
       {estado.cambioDivision === "subio" && (
         <Animated.View entering={ZoomIn.springify()} style={[estilos.aviso, { backgroundColor: "rgba(31,157,85,0.12)", borderColor: VERDE }]}>
-          <Text style={{ color: t.texto, fontWeight: "800", fontSize: 16 }}>
+          <Text style={{ color: t.texto, fontWeight: "700", fontSize: 16 }}>
             ¡Subiste a {division.nombre}! Así se construye.
           </Text>
         </Animated.View>
@@ -109,16 +109,16 @@ export default function Liga() {
                 : `Los ${estado.suben} primeros suben a ${siguiente.nombre}`}
           {estado.bajan > 0 ? ` · los ${estado.bajan} últimos bajan` : ""}
         </Text>
-        <BotonVivo onPress={() => setCompartir(true)} style={[estilos.boton, { backgroundColor: t.ambar }]}>
-          <Text style={[estilos.botonTexto, { color: t.navy }]}>Compartir mi liga</Text>
+        <BotonVivo onPress={() => setCompartir(true)} style={[estilos.boton, { backgroundColor: "transparent", borderWidth: 1, borderColor: "rgba(246,245,242,0.35)" }]}>
+          <Text style={[estilos.botonTexto, { color: "#F6F5F2" }]}>Compartir mi liga</Text>
         </BotonVivo>
       </Animated.View>
 
       <Animated.View entering={FadeInDown.delay(80).springify()} style={[estilos.carrera, { backgroundColor: t.superficie, borderColor: t.borde }]}>
-        <Text style={{ color: t.ambar, fontWeight: "800", fontSize: 13 }}>TU CARGO EN OBRA</Text>
+        <Text style={{ color: t.ambar, fontWeight: "700", fontSize: 13 }}>TU CARGO EN OBRA</Text>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
           <IconoCasco tamano={26} color={t.texto} acento={t.ambar} />
-          <Text style={{ color: t.texto, fontWeight: "800", fontSize: 20 }}>{estado.titulo}</Text>
+          <Text style={{ color: t.texto, fontWeight: "700", fontSize: 20 }}>{estado.titulo}</Text>
         </View>
         <View style={[estilos.barra, { backgroundColor: t.borde }]}>
           <View style={[estilos.barraLlena, { backgroundColor: t.ambar, width: `${progresoTitulo * 100}%` }]} />
@@ -133,7 +133,7 @@ export default function Liga() {
       <View style={[estilos.segmentos, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         {(["liga", "universidades", "regiones"] as const).map((v) => (
           <Pressable key={v} onPress={() => cambiarVista(v)} style={[estilos.segmento, vista === v && { backgroundColor: t.navy }]}>
-            <Text style={{ color: vista === v ? "#FFFFFF" : t.textoSuave, fontWeight: "800", fontSize: 14 }}>
+            <Text style={{ color: vista === v ? "#FFFFFF" : t.textoSuave, fontWeight: "700", fontSize: 14 }}>
               {v === "liga" ? "Mi liga" : v === "universidades" ? "Universidades" : "Regiones"}
             </Text>
           </Pressable>
@@ -157,7 +157,7 @@ export default function Liga() {
           <Text style={{ flex: 1, color: t.texto, fontWeight: "700", fontSize: 16 }}>
             {vista === "universidades" ? "Elige tu universidad y suma puntos por ella" : "Elige tu región y súmale puntos"}
           </Text>
-          <Text style={{ color: t.ambar, fontSize: 22, fontWeight: "800" }}>›</Text>
+          <Text style={{ color: t.ambar, fontSize: 22, fontWeight: "700" }}>›</Text>
         </BotonVivo>
       )}
 
@@ -181,7 +181,7 @@ export default function Liga() {
       )}
 
       <View style={[estilos.reglas, { borderColor: t.borde }]}>
-        <Text style={{ color: t.texto, fontWeight: "800" }}>Cómo sumar puntos de obra</Text>
+        <Text style={{ color: t.texto, fontWeight: "700" }}>Cómo sumar puntos de obra</Text>
         <Text style={{ color: t.textoSuave, fontSize: 14, lineHeight: 21 }}>
           • 1 por cada tarjeta distinta que repasas (hasta 20 al día){"\n"}• Pregunta del día: 10, 7 o 5 según el intento{"\n"}• Duelos: 2 por acierto (hasta 30 al día){"\n"}• Tope: {estado.topeDiario} puntos al día. Gana quien sabe y vuelve cada día.{"\n"}• Universidades y regiones suman a sus 20 mejores.
         </Text>
@@ -206,32 +206,32 @@ function Fila({ fila, resaltar, marca }: { fila: FilaRanking; resaltar: boolean;
       <Text style={{ flex: 1, color: t.texto, fontWeight: "700", fontSize: 16 }} numberOfLines={1}>
         {fila.soyYo ? "Tú" : fila.nombre}
       </Text>
-      <Text style={{ color: t.texto, fontWeight: "800", fontSize: 16, fontVariant: ["tabular-nums"] }}>{fila.puntos}</Text>
+      <Text style={{ color: t.texto, fontSize: 16, fontFamily: MONO_FUERTE }}>{fila.puntos}</Text>
     </View>
   );
 }
 
 const estilos = StyleSheet.create({
   centro: { flex: 1, alignItems: "center", justifyContent: "center" },
-  contenido: { padding: 20, gap: 12, paddingBottom: 40 },
-  titulo: { fontSize: 28, fontWeight: "800", letterSpacing: -0.5 },
-  aviso: { borderRadius: 16, borderWidth: 1, padding: 14 },
-  heroe: { borderRadius: 24, padding: 20, gap: 14 },
-  insignia: { width: 64, height: 64, borderRadius: 20, alignItems: "center", justifyContent: "center" },
-  heroeTitulo: { color: "#FFFFFF", fontSize: 28, fontWeight: "800", letterSpacing: -0.5 },
+  contenido: { padding: 20, gap: 12, paddingBottom: 120 },
+  titulo: { fontSize: 28, fontWeight: "700", letterSpacing: -0.5 },
+  aviso: { borderRadius: 8, borderWidth: 1, padding: 14 },
+  heroe: { borderRadius: 10, padding: 20, gap: 14 },
+  insignia: { width: 64, height: 64, borderRadius: 10, alignItems: "center", justifyContent: "center" },
+  heroeTitulo: { color: "#FFFFFF", fontSize: 28, fontWeight: "700", letterSpacing: -0.5 },
   cifras: { flexDirection: "row", gap: 8 },
-  cifra: { flex: 1, backgroundColor: "rgba(255,255,255,0.07)", borderRadius: 14, padding: 12, gap: 2 },
-  cifraNumero: { color: "#FFFFFF", fontSize: 22, fontWeight: "800", fontVariant: ["tabular-nums"] },
+  cifra: { flex: 1, backgroundColor: "rgba(255,255,255,0.07)", borderRadius: 8, padding: 12, gap: 2 },
+  cifraNumero: { color: "#FFFFFF", fontSize: 22, fontFamily: MONO_FUERTE, letterSpacing: -0.5 },
   cifraEtiqueta: { color: "#A9B7CC", fontSize: 12 },
-  boton: { borderRadius: 14, paddingVertical: 14, alignItems: "center" },
-  botonTexto: { fontSize: 16, fontWeight: "800" },
-  carrera: { borderRadius: 18, borderWidth: StyleSheet.hairlineWidth, padding: 16, gap: 8 },
+  boton: { borderRadius: 8, paddingVertical: 14, alignItems: "center" },
+  botonTexto: { fontSize: 16, fontWeight: "700" },
+  carrera: { borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, padding: 16, gap: 8 },
   barra: { height: 8, borderRadius: 4, overflow: "hidden" },
   barraLlena: { height: 8, borderRadius: 4 },
-  segmentos: { flexDirection: "row", borderRadius: 14, borderWidth: StyleSheet.hairlineWidth, padding: 4, gap: 4, marginTop: 4 },
+  segmentos: { flexDirection: "row", borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, padding: 4, gap: 4, marginTop: 4 },
   segmento: { flex: 1, borderRadius: 10, paddingVertical: 10, alignItems: "center" },
-  fila: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 14, borderWidth: 1 },
-  puesto: { width: 30, fontSize: 16, fontWeight: "800", textAlign: "center" },
-  invitacion: { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, borderRadius: 16, borderWidth: 1.5 },
+  fila: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 8, borderWidth: 1 },
+  puesto: { width: 30, fontSize: 16, fontWeight: "700", textAlign: "center" },
+  invitacion: { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, borderRadius: 8, borderWidth: 1.5 },
   reglas: { borderTopWidth: StyleSheet.hairlineWidth, paddingTop: 16, marginTop: 8, gap: 6 },
 });

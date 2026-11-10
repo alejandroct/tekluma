@@ -75,7 +75,7 @@ export function GananciaFlotante({ texto, color }: { texto: string; color: strin
   return (
     <Animated.Text
       pointerEvents="none"
-      style={[{ position: "absolute", right: 24, top: 28, fontSize: 30, fontWeight: "800", color }, animado]}
+      style={[{ position: "absolute", right: 24, top: 28, fontSize: 30, fontWeight: "700", color }, animado]}
     >
       {texto}
     </Animated.Text>

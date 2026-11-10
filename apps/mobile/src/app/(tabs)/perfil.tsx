@@ -6,7 +6,7 @@ import { cerrarSesion, eliminarCuenta } from "@/lib/cuenta";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { NOMBRES_PROFESION } from "@/lib/profesiones";
 import type { EstadoCupo, Profession } from "@tekluma/shared";
-import { useTema } from "@/lib/tema";
+import { MONO_FUERTE, useTema } from "@/lib/tema";
 import { IconoPremium } from "@/components/Iconos";
 
 export default function Perfil() {
@@ -49,7 +49,7 @@ export default function Perfil() {
   };
 
   return (
-    <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={{ padding: 20, gap: 12 }} contentInsetAdjustmentBehavior="automatic">
+    <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={{ padding: 20, gap: 12, paddingBottom: 120 }} contentInsetAdjustmentBehavior="automatic">
       <Text style={[estilos.titulo, { color: t.texto }]}>Perfil</Text>
       <View style={{ gap: 2, marginBottom: 4 }}>
         <Text style={{ color: t.texto, fontSize: 18, fontWeight: "700" }}>{sesion?.user.name}</Text>
@@ -59,7 +59,7 @@ export default function Perfil() {
       </View>
       <View style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={{ color: t.texto, fontSize: 16 }}>Monedas</Text>
-        <Text style={{ color: t.ambar, fontSize: 16, fontWeight: "800" }}>{cupo?.monedas ?? "—"}</Text>
+        <Text style={{ color: t.texto, fontSize: 16, fontFamily: MONO_FUERTE }}>{cupo?.monedas ?? "—"}</Text>
       </View>
       <View style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={{ color: t.texto, fontSize: 16 }}>Plan</Text>
@@ -71,7 +71,7 @@ export default function Perfil() {
         <Pressable onPress={() => router.push("/premium")} style={({ pressed }) => [estilos.premium, { backgroundColor: t.ambar, opacity: pressed ? 0.85 : 1 }]}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
             <IconoPremium tamano={20} color={t.navy} acento={t.navy} />
-            <Text style={{ color: t.navy, fontSize: 16, fontWeight: "800" }}>Hazte Premium · 7 días gratis</Text>
+            <Text style={{ color: t.navy, fontSize: 16, fontWeight: "700" }}>Hazte Premium · 7 días gratis</Text>
           </View>
         </Pressable>
       )}
@@ -90,8 +90,8 @@ export default function Perfil() {
 }
 
 const estilos = StyleSheet.create({
-  titulo: { fontSize: 28, fontWeight: "800", letterSpacing: -0.5 },
-  fila: { flexDirection: "row", justifyContent: "space-between", padding: 16, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth },
-  premium: { padding: 16, borderRadius: 16, alignItems: "center" },
-  salir: { marginTop: 12, padding: 16, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth, alignItems: "center" },
+  titulo: { fontSize: 28, fontWeight: "700", letterSpacing: -0.5 },
+  fila: { flexDirection: "row", justifyContent: "space-between", padding: 16, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth },
+  premium: { padding: 16, borderRadius: 8, alignItems: "center" },
+  salir: { marginTop: 12, padding: 16, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth, alignItems: "center" },
 });

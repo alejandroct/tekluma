@@ -97,8 +97,8 @@ export default function Repaso() {
         <Animated.Text entering={FadeInDown.delay(120)} style={[estilos.finTitulo, { color: t.texto }]}>
           ¡Sesión completa!
         </Animated.Text>
-        <Pressable onPress={() => router.back()} style={[estilos.finBoton, { backgroundColor: t.ambar }]}>
-          <Text style={{ color: t.navy, fontWeight: "800", fontSize: 16 }}>Volver</Text>
+        <Pressable onPress={() => router.back()} style={[estilos.finBoton, { backgroundColor: t.primario }]}>
+          <Text style={{ color: t.sobrePrimario, fontWeight: "700", fontSize: 16 }}>Volver</Text>
         </Pressable>
       </View>
     );
@@ -173,11 +173,11 @@ export default function Repaso() {
 
 const estilos = StyleSheet.create({
   notas: { flexDirection: "row", gap: 8, padding: 16, paddingBottom: 36, borderTopWidth: StyleSheet.hairlineWidth },
-  nota: { flex: 1, borderRadius: 12, paddingVertical: 14, alignItems: "center" },
+  nota: { flex: 1, borderRadius: 8, paddingVertical: 14, alignItems: "center" },
   notaTexto: { color: "#FFFFFF", fontWeight: "700" },
-  cita: { borderWidth: StyleSheet.hairlineWidth, borderRadius: 14, padding: 14, gap: 4 },
-  citaArticulo: { fontSize: 13, fontWeight: "800", letterSpacing: 0.3 },
+  cita: { borderWidth: StyleSheet.hairlineWidth, borderRadius: 8, padding: 14, gap: 4 },
+  citaArticulo: { fontSize: 13, fontWeight: "700", letterSpacing: 0.3 },
   fin: { flex: 1, alignItems: "center", justifyContent: "center", gap: 20 },
-  finTitulo: { fontSize: 26, fontWeight: "800" },
-  finBoton: { borderRadius: 14, paddingVertical: 14, paddingHorizontal: 40 },
+  finTitulo: { fontSize: 26, fontWeight: "700" },
+  finBoton: { borderRadius: 8, paddingVertical: 14, paddingHorizontal: 40 },
 });

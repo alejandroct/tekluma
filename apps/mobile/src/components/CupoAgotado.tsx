@@ -104,9 +104,9 @@ export function CupoAgotado({ estado, onAmpliado }: Props) {
 const estilos = StyleSheet.create({
   contenedor: { gap: 12, paddingTop: 12 },
   filaIcono: { flexDirection: "row", alignItems: "center", gap: 10 },
-  titulo: { fontSize: 24, fontWeight: "800", letterSpacing: -0.3 },
+  titulo: { fontSize: 24, fontWeight: "700", letterSpacing: -0.3 },
   subtitulo: { fontSize: 16, lineHeight: 22, marginBottom: 8 },
-  opcion: { borderRadius: 16, paddingVertical: 16, paddingHorizontal: 18, gap: 4, minHeight: 72, justifyContent: "center" },
-  opcionTitulo: { color: "#FFFFFF", fontSize: 16, fontWeight: "800" },
+  opcion: { borderRadius: 8, paddingVertical: 16, paddingHorizontal: 18, gap: 4, minHeight: 72, justifyContent: "center" },
+  opcionTitulo: { color: "#FFFFFF", fontSize: 16, fontWeight: "700" },
   opcionDetalle: { color: "#A9B7CC", fontSize: 14 },
 });

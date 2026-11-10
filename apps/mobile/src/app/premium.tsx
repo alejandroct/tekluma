@@ -3,7 +3,7 @@ import { ActivityIndicator, Alert, Linking, Pressable, ScrollView, StyleSheet, T
 import { router } from "expo-router";
 import { comprar, comprasDisponibles, obtenerPlanes, restaurar, type IdPlan, type PlanTienda } from "@/lib/compras";
 import { obtenerCupo } from "@/lib/cupo";
-import { useTema } from "@/lib/tema";
+import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
 import { IconoCorrecto } from "@/components/Iconos";
 
 type Plan = { id: IdPlan; nombre: string; precio: string; detalle: string; destacado?: string };
@@ -15,11 +15,10 @@ const PLANES: Plan[] = [
   { id: "anual", nombre: "Anual", precio: "S/ 149", detalle: "Equivale a S/ 12.40 al mes", destacado: "Ahorra 37%" },
 ];
 
+/** Solo lo que la app ya hace: nada de funciones futuras en lo que se cobra. */
 const BENEFICIOS = [
-  "Tarjetas ilimitadas cada día",
+  "Repaso ilimitado, sin cupo diario",
   "Sin anuncios",
-  "Simulacros tipo examen con tiempo",
-  "Estadísticas por norma y artículo",
   "Todos los mazos, incluidos los Premium",
 ];
 
@@ -85,7 +84,7 @@ export default function Premium() {
   return (
     <ScrollView style={{ backgroundColor: t.fondo }} contentContainerStyle={estilos.contenedor}>
       <Text style={[estilos.titulo, { color: t.texto }]}>Tekluma Premium</Text>
-      <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>Estudia sin límites y llega listo a tu examen.</Text>
+      <Text style={[estilos.subtitulo, { color: t.textoSuave }]}>Repasa todo el RNE sin límites, a tu ritmo.</Text>
 
       <View style={{ gap: 10, marginVertical: 8 }}>
         {BENEFICIOS.map((b) => (
@@ -108,12 +107,12 @@ export default function Premium() {
               style={[estilos.plan, { backgroundColor: t.superficie, borderColor: activo ? t.ambar : t.borde, borderWidth: activo ? 2 : 1 }]}
             >
               <View style={{ flex: 1, gap: 2 }}>
-                <Text style={{ color: t.texto, fontSize: 17, fontWeight: "800" }}>{p.nombre}</Text>
+                <Text style={{ color: t.texto, fontSize: 17, fontWeight: "700" }}>{p.nombre}</Text>
                 <Text style={{ color: t.textoSuave, fontSize: 14 }}>{p.detalle}</Text>
               </View>
               <View style={{ alignItems: "flex-end", gap: 4 }}>
-                {p.destacado && <Text style={[estilos.etiqueta, { backgroundColor: t.ambar, color: t.navy }]}>{p.destacado}</Text>}
-                <Text style={{ color: t.texto, fontSize: 18, fontWeight: "800" }}>{p.precio}</Text>
+                {p.destacado && <Text style={[estilos.etiqueta, { borderColor: t.ambar, color: t.ambar }]}>{p.destacado.toUpperCase()}</Text>}
+                <Text style={{ color: t.texto, fontSize: 18, fontFamily: MONO_FUERTE }}>{p.precio}</Text>
               </View>
             </Pressable>
           );
@@ -158,12 +157,12 @@ export default function Premium() {
 
 const estilos = StyleSheet.create({
   contenedor: { padding: 24, gap: 12, paddingBottom: 48 },
-  titulo: { fontSize: 30, fontWeight: "800", letterSpacing: -0.5 },
+  titulo: { fontSize: 30, fontWeight: "700", letterSpacing: -0.5 },
   subtitulo: { fontSize: 16, lineHeight: 22 },
-  plan: { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, borderRadius: 16 },
-  etiqueta: { fontSize: 12, fontWeight: "800", paddingHorizontal: 8, paddingVertical: 2, borderRadius: 8, overflow: "hidden" },
-  boton: { borderRadius: 14, paddingVertical: 16, alignItems: "center", marginTop: 8, minHeight: 54, justifyContent: "center" },
-  botonTexto: { fontSize: 17, fontWeight: "800" },
+  plan: { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, borderRadius: 8 },
+  etiqueta: { fontSize: 10, fontFamily: MONO, letterSpacing: 1, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 3, borderWidth: 1, overflow: "hidden" },
+  boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", marginTop: 8, minHeight: 54, justifyContent: "center" },
+  botonTexto: { fontSize: 17, fontWeight: "700" },
   enlace: { textAlign: "center", fontSize: 15, fontWeight: "600" },
   legal: { fontSize: 12, textAlign: "center", lineHeight: 17 },
   legales: { flexDirection: "row", justifyContent: "center", gap: 20 },

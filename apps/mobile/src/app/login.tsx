@@ -74,11 +74,11 @@ export default function Login() {
           onPress={paso === "correo" ? enviarCodigo : verificar}
           style={({ pressed }) => [
             estilos.boton,
-            { backgroundColor: t.ambar, opacity: pressed ? 0.8 : 1 },
+            { backgroundColor: t.primario, opacity: pressed ? 0.8 : 1 },
             (paso === "correo" ? !correoValido : codigo.length !== 6) && { opacity: 0.5 },
           ]}
         >
-          {cargando ? <ActivityIndicator color={t.navy} /> : <Text style={[estilos.botonTexto, { color: t.navy }]}>{paso === "correo" ? "Enviar código" : "Entrar"}</Text>}
+          {cargando ? <ActivityIndicator color={t.sobrePrimario} /> : <Text style={[estilos.botonTexto, { color: t.sobrePrimario }]}>{paso === "correo" ? "Enviar código" : "Entrar"}</Text>}
         </Pressable>
 
         {paso === "codigo" && (
@@ -94,12 +94,12 @@ export default function Login() {
 const estilos = StyleSheet.create({
   pantalla: { flex: 1 },
   contenido: { flex: 1, justifyContent: "center", padding: 24, gap: 14 },
-  marca: { fontSize: 40, fontWeight: "800", letterSpacing: -1.5 },
+  marca: { fontSize: 40, fontWeight: "700", letterSpacing: -1.5 },
   subtitulo: { fontSize: 16, lineHeight: 22, marginBottom: 12 },
-  input: { borderWidth: 1, borderRadius: 14, padding: 16, fontSize: 17, letterSpacing: 0 },
+  input: { borderWidth: 1, borderRadius: 8, padding: 16, fontSize: 17, letterSpacing: 0 },
   codigo: { fontSize: 28, letterSpacing: 10, textAlign: "center", fontVariant: ["tabular-nums"] },
   error: { color: "#D64545", fontSize: 15 },
-  boton: { borderRadius: 14, paddingVertical: 16, alignItems: "center", marginTop: 4 },
-  botonTexto: { fontSize: 17, fontWeight: "800" },
+  boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", marginTop: 4 },
+  botonTexto: { fontSize: 17, fontWeight: "700" },
   enlace: { textAlign: "center", fontSize: 15, marginTop: 6 },
 });

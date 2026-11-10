@@ -67,8 +67,8 @@ export default function NuevoDuelo() {
         </View>
       )}
 
-      <BotonVivo disabled={creando} onPress={crear} style={[estilos.boton, { backgroundColor: t.ambar }]}>
-        {creando ? <ActivityIndicator color={t.navy} /> : <Text style={[estilos.botonTexto, { color: t.navy }]}>Empezar duelo</Text>}
+      <BotonVivo disabled={creando} onPress={crear} style={[estilos.boton, { backgroundColor: t.primario }]}>
+        {creando ? <ActivityIndicator color={t.sobrePrimario} /> : <Text style={[estilos.botonTexto, { color: t.sobrePrimario }]}>Empezar duelo</Text>}
       </BotonVivo>
 
       {recientes.length > 0 && (
@@ -100,7 +100,7 @@ export default function NuevoDuelo() {
                         : "Aún nadie aceptó el reto"}
                     </Text>
                   </View>
-                  <Text style={{ color: t.ambar, fontSize: 20, fontWeight: "800" }}>›</Text>
+                  <Text style={{ color: t.ambar, fontSize: 20, fontWeight: "700" }}>›</Text>
                 </Pressable>
               </Animated.View>
             );
@@ -113,12 +113,12 @@ export default function NuevoDuelo() {
 
 const estilos = StyleSheet.create({
   contenido: { padding: 24, gap: 12, paddingBottom: 48 },
-  titulo: { fontSize: 30, fontWeight: "800", letterSpacing: -0.5 },
+  titulo: { fontSize: 30, fontWeight: "700", letterSpacing: -0.5 },
   texto: { fontSize: 16, lineHeight: 22 },
-  etiqueta: { fontSize: 16, fontWeight: "800", marginTop: 8 },
+  etiqueta: { fontSize: 16, fontWeight: "700", marginTop: 8 },
   chips: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: { borderWidth: 1, borderRadius: 999, paddingHorizontal: 14, paddingVertical: 10 },
-  boton: { borderRadius: 14, paddingVertical: 16, alignItems: "center", marginTop: 12, minHeight: 54, justifyContent: "center" },
-  botonTexto: { fontSize: 17, fontWeight: "800" },
-  fila: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 16, borderWidth: StyleSheet.hairlineWidth },
+  chip: { borderWidth: 1, borderRadius: 6, paddingHorizontal: 14, paddingVertical: 10 },
+  boton: { borderRadius: 8, paddingVertical: 16, alignItems: "center", marginTop: 12, minHeight: 54, justifyContent: "center" },
+  botonTexto: { fontSize: 17, fontWeight: "700" },
+  fila: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth },
 });

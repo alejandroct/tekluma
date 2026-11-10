@@ -3,7 +3,7 @@ import { ActivityIndicator, FlatList, Pressable, RefreshControl, StyleSheet, Tex
 import { router, useFocusEffect } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import { obtenerCatalogo, type MazoConAcceso } from "@/lib/mazos";
-import { useTema } from "@/lib/tema";
+import { MONO_FUERTE, useTema } from "@/lib/tema";
 
 export default function Mazos() {
   const t = useTema();
@@ -34,7 +34,7 @@ export default function Mazos() {
   return (
     <FlatList
       style={{ backgroundColor: t.fondo }}
-      contentContainerStyle={{ padding: 20, gap: 12 }}
+      contentContainerStyle={{ padding: 20, gap: 12, paddingBottom: 120 }}
       contentInsetAdjustmentBehavior="automatic"
       data={mazos ?? []}
       keyExtractor={(m) => m.id}
@@ -53,8 +53,8 @@ export default function Mazos() {
           onPress={() => abrir(item)}
           style={({ pressed }) => [estilos.item, { backgroundColor: t.superficie, borderColor: t.borde, opacity: pressed ? 0.8 : 1 }]}
         >
-          <View style={[estilos.codigo, { backgroundColor: item.abierto ? t.ambar : t.niebla }]}>
-            <Text style={estilos.codigoTexto}>{item.normaCodigo}</Text>
+          <View style={[estilos.codigo, { borderColor: item.abierto ? t.texto : t.borde }]}>
+            <Text style={[estilos.codigoTexto, { color: item.abierto ? t.texto : t.textoSuave }]}>{item.normaCodigo}</Text>
           </View>
           <View style={{ flex: 1, gap: 2 }}>
             <Text style={[estilos.nombre, { color: t.texto }]}>{item.titulo}</Text>
@@ -78,10 +78,10 @@ function etiqueta(m: MazoConAcceso) {
 }
 
 const estilos = StyleSheet.create({
-  titulo: { fontSize: 28, fontWeight: "800", letterSpacing: -0.5, marginBottom: 8 },
-  item: { flexDirection: "row", alignItems: "center", gap: 14, padding: 16, borderRadius: 18, borderWidth: StyleSheet.hairlineWidth },
-  codigo: { borderRadius: 10, paddingHorizontal: 10, paddingVertical: 8 },
-  codigoTexto: { color: "#0F1B2D", fontWeight: "800" },
+  titulo: { fontSize: 28, fontWeight: "700", letterSpacing: -0.5, marginBottom: 8 },
+  item: { flexDirection: "row", alignItems: "center", gap: 14, padding: 16, borderRadius: 8, borderWidth: StyleSheet.hairlineWidth },
+  codigo: { borderRadius: 4, borderWidth: 1, paddingHorizontal: 8, paddingVertical: 6, minWidth: 64, alignItems: "center" },
+  codigoTexto: { fontFamily: MONO_FUERTE, fontSize: 14 },
   nombre: { fontSize: 16, fontWeight: "700" },
   estado: { fontSize: 13, fontWeight: "600", marginTop: 2 },
 });
