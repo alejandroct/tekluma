@@ -1,19 +1,32 @@
-import { ActivityIndicator, Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { router, Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { Arranque } from "@/components/Arranque";
 import { iniciarAnuncios } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { iniciarCompras } from "@/lib/compras";
+import { iniciarSonidos } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
+
+// El splash nativo se queda hasta saber si hay sesión; luego lo continúa <Arranque />.
+SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function RootLayout() {
   const t = useTema();
   const { data: sesion, isPending } = authClient.useSession();
+  const [intro, setIntro] = useState(true);
+  const terminarIntro = useCallback(() => setIntro(false), []);
 
   useEffect(() => {
     iniciarAnuncios().catch(() => {});
+    iniciarSonidos();
   }, []);
+
+  useEffect(() => {
+    if (!isPending) SplashScreen.hideAsync().catch(() => {});
+  }, [isPending]);
 
   // Las compras quedan a nombre del usuario de Tekluma (mismo id en RevenueCat y en la API).
   const usuarioId = sesion?.user.id;
@@ -21,13 +34,7 @@ export default function RootLayout() {
     if (usuarioId) iniciarCompras(usuarioId).catch(() => {});
   }, [usuarioId]);
 
-  if (isPending) {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: t.fondo }}>
-        <ActivityIndicator color={t.ambar} />
-      </View>
-    );
-  }
+  if (isPending) return <View style={{ flex: 1, backgroundColor: t.fondo }} />;
 
   return (
     <>
@@ -63,6 +70,7 @@ export default function RootLayout() {
           <Stack.Screen name="premium" options={{ title: "", presentation: "modal", headerShadowVisible: false }} />
         </Stack.Protected>
       </Stack>
+      {intro && <Arranque onFin={terminarIntro} />}
     </>
   );
 }

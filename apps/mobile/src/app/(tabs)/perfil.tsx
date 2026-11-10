@@ -1,12 +1,11 @@
 import { useCallback, useState } from "react";
 import { Alert, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
-import type { EstadoCupo } from "@tekluma/shared";
 import { authClient } from "@/lib/auth";
 import { cerrarSesion, eliminarCuenta } from "@/lib/cuenta";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { NOMBRES_PROFESION } from "@/lib/profesiones";
-import type { Profession } from "@tekluma/shared";
+import type { EstadoCupo, Profession } from "@tekluma/shared";
 import { useTema } from "@/lib/tema";
 
 export default function Perfil() {

@@ -1,7 +1,9 @@
 import { useCallback, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
+import Animated, { FadeInDown } from "react-native-reanimated";
 import type { EstadoCupo } from "@tekluma/shared";
+import { BotonVivo, NumeroAnimado } from "@/components/Animaciones";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { paquetesLocales } from "@/lib/mazos";
 import { pendientes, sincronizar } from "@/lib/repaso";
@@ -44,21 +46,22 @@ export default function Hoy() {
       <Text style={[estilos.saludo, { color: t.textoSuave }]}>Hoy</Text>
       <Text style={[estilos.titulo, { color: t.texto }]}>Que la norma fragüe.</Text>
 
-      <View style={[estilos.tarjeta, { backgroundColor: t.navy }]}>
-        <Text style={estilos.numero}>{total}</Text>
+      <Animated.View entering={FadeInDown.springify()} style={[estilos.tarjeta, { backgroundColor: t.navy }]}>
+        <NumeroAnimado valor={total} style={estilos.numero} />
         <Text style={estilos.etiqueta}>{sinMazos ? "Aún no tienes mazos descargados" : "tarjetas por repasar"}</Text>
-        <Pressable
+        <BotonVivo
           disabled={!sinMazos && !siguiente}
           onPress={() => (sinMazos ? router.push("/mazos") : siguiente && router.push(`/repaso/${siguiente.mazoId}`))}
-          style={({ pressed }) => [estilos.boton, { backgroundColor: t.ambar, opacity: pressed ? 0.8 : 1 }, !sinMazos && !siguiente && estilos.botonInactivo]}
+          style={[estilos.boton, { backgroundColor: t.ambar }, !sinMazos && !siguiente && estilos.botonInactivo]}
         >
           <Text style={[estilos.botonTexto, !sinMazos && !siguiente && { color: t.niebla }]}>
             {sinMazos ? "Elegir un mazo" : siguiente ? `Repasar ${siguiente.codigo}` : "¡Al día!"}
           </Text>
-        </Pressable>
-      </View>
+        </BotonVivo>
+      </Animated.View>
 
       {cupo && (
+        <Animated.View entering={FadeInDown.delay(90).springify()}>
         <Pressable
           disabled={cupo.premium}
           onPress={() => router.push("/premium")}
@@ -76,13 +79,14 @@ export default function Hoy() {
           </View>
           {!cupo.premium && <Text style={{ color: t.ambar, fontWeight: "800", marginLeft: 12 }}>Ilimitado ›</Text>}
         </Pressable>
+        </Animated.View>
       )}
 
       {resumen && resumen.length > 1 && (
         <View style={{ gap: 8, marginTop: 8 }}>
-          {resumen.map((r) => (
+          {resumen.map((r, i) => (
+            <Animated.View key={r.mazoId} entering={FadeInDown.delay(150 + i * 60).springify()}>
             <Pressable
-              key={r.mazoId}
               disabled={r.pendientes === 0}
               onPress={() => router.push(`/repaso/${r.mazoId}`)}
               style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde }]}
@@ -90,6 +94,7 @@ export default function Hoy() {
               <Text style={{ color: t.texto, fontSize: 16, fontWeight: "700" }}>{r.codigo}</Text>
               <Text style={{ color: r.pendientes ? t.ambar : t.textoSuave, fontSize: 16, fontWeight: "700" }}>{r.pendientes}</Text>
             </Pressable>
+            </Animated.View>
           ))}
         </View>
       )}

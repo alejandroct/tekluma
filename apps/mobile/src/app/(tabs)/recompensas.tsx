@@ -2,10 +2,13 @@ import { useCallback, useState } from "react";
 import { ActivityIndicator, Alert, Pressable, RefreshControl, ScrollView, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
 import * as Haptics from "expo-haptics";
+import Animated, { FadeInDown, ZoomIn } from "react-native-reanimated";
 import type { EstadoRecompensas } from "@tekluma/shared";
+import { BotonVivo, GananciaFlotante, NumeroAnimado, Rebote } from "@/components/Animaciones";
 import { verAnuncioConRecompensa } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { ampliarConMonedas, hacerCheckIn, obtenerRecompensas } from "@/lib/cupo";
+import { sonarMoneda } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
 
 /** Monedas: check-in diario con racha, anuncios para ganar monedas y canje por tarjetas extra. */
@@ -14,6 +17,13 @@ export default function Recompensas() {
   const { data: sesion } = authClient.useSession();
   const [estado, setEstado] = useState<EstadoRecompensas | null>(null);
   const [ocupado, setOcupado] = useState<"check-in" | "anuncio" | "canje" | null>(null);
+  const [ganancia, setGanancia] = useState<{ id: number; monedas: number } | null>(null);
+
+  const celebrar = (monedas: number) => {
+    sonarMoneda();
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    setGanancia({ id: Date.now(), monedas });
+  };
 
   const cargar = useCallback(() => {
     obtenerRecompensas()
@@ -41,7 +51,7 @@ export default function Recompensas() {
     try {
       const { otorgadas, estado: nuevo } = await hacerCheckIn();
       setEstado(nuevo);
-      if (otorgadas > 0) Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      if (otorgadas > 0) celebrar(otorgadas);
     } finally {
       setOcupado(null);
     }
@@ -52,7 +62,7 @@ export default function Recompensas() {
     setOcupado("anuncio");
     try {
       if (await verAnuncioConRecompensa(sesion.user.id, "monedas")) {
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        celebrar(reglas.monedasPorAnuncio);
         cargar();
       }
     } catch {
@@ -82,13 +92,14 @@ export default function Recompensas() {
     >
       <Text style={[estilos.titulo, { color: t.texto }]}>Recompensas</Text>
 
-      <View style={[estilos.saldo, { backgroundColor: t.navy }]}>
+      <Rebote disparo={ganancia?.id} style={[estilos.saldo, { backgroundColor: t.navy }]}>
         <Text style={estilos.saldoEtiqueta}>Tus monedas</Text>
-        <Text style={estilos.saldoNumero}>🪙 {estado.monedas}</Text>
+        <NumeroAnimado valor={estado.monedas} prefijo="🪙 " style={estilos.saldoNumero} />
         <Text style={estilos.saldoAyuda}>1 moneda = 1 tarjeta extra para hoy</Text>
-      </View>
+        {ganancia && <GananciaFlotante key={ganancia.id} texto={`+${ganancia.monedas}`} color={t.ambar} />}
+      </Rebote>
 
-      <View style={[estilos.tarjeta, { backgroundColor: t.superficie, borderColor: t.borde }]}>
+      <Animated.View entering={FadeInDown.delay(70).springify()} style={[estilos.tarjeta, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={[estilos.seccion, { color: t.texto }]}>Check-in diario</Text>
         <Text style={{ color: t.textoSuave, fontSize: 14 }}>
           {checkIn.racha > 0 ? `Racha de ${checkIn.racha} ${checkIn.racha === 1 ? "día" : "días"} 🔥` : "Entra cada día para subir tu premio"}
@@ -106,15 +117,21 @@ export default function Recompensas() {
                 ]}
               >
                 <Text style={{ fontSize: 11, color: ganado ? t.navy : t.textoSuave }}>Día {i + 1}</Text>
-                <Text style={{ fontSize: 15, fontWeight: "800", color: ganado ? t.navy : t.texto }}>{ganado ? "✓" : `+${monedas}`}</Text>
+                {ganado ? (
+                  <Animated.Text entering={ZoomIn.springify()} style={{ fontSize: 15, fontWeight: "800", color: t.navy }}>
+                    ✓
+                  </Animated.Text>
+                ) : (
+                  <Text style={{ fontSize: 15, fontWeight: "800", color: t.texto }}>+{monedas}</Text>
+                )}
               </View>
             );
           })}
         </View>
-        <Pressable
+        <BotonVivo
           disabled={checkIn.hechoHoy || ocupado !== null}
           onPress={reclamar}
-          style={({ pressed }) => [estilos.boton, { backgroundColor: t.ambar, opacity: checkIn.hechoHoy ? 0.45 : pressed ? 0.85 : 1 }]}
+          style={[estilos.boton, { backgroundColor: t.ambar, opacity: checkIn.hechoHoy ? 0.45 : 1 }]}
         >
           {ocupado === "check-in" ? (
             <ActivityIndicator color={t.navy} />
@@ -123,28 +140,28 @@ export default function Recompensas() {
               {checkIn.hechoHoy ? `Vuelve mañana por +${checkIn.proxima}` : `Reclamar +${checkIn.proxima} monedas`}
             </Text>
           )}
-        </Pressable>
-      </View>
+        </BotonVivo>
+      </Animated.View>
 
-      <View style={[estilos.tarjeta, { backgroundColor: t.superficie, borderColor: t.borde }]}>
+      <Animated.View entering={FadeInDown.delay(140).springify()} style={[estilos.tarjeta, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={[estilos.seccion, { color: t.texto }]}>Gana monedas viendo anuncios</Text>
         <Text style={{ color: t.textoSuave, fontSize: 14 }}>
           {anunciosRestantes > 0 ? `Te quedan ${anunciosRestantes} de ${reglas.maxAnunciosMonedasDia} anuncios hoy` : "Ya viste todos los anuncios de hoy"}
         </Text>
-        <Pressable
+        <BotonVivo
           disabled={anunciosRestantes === 0 || ocupado !== null}
           onPress={verAnuncio}
-          style={({ pressed }) => [estilos.boton, { backgroundColor: t.navy, opacity: anunciosRestantes === 0 ? 0.45 : pressed ? 0.85 : 1 }]}
+          style={[estilos.boton, { backgroundColor: t.navy, opacity: anunciosRestantes === 0 ? 0.45 : 1 }]}
         >
           {ocupado === "anuncio" ? (
             <ActivityIndicator color="#FFFFFF" />
           ) : (
             <Text style={[estilos.botonTexto, { color: "#FFFFFF" }]}>▶︎ Ver anuncio · +{reglas.monedasPorAnuncio} monedas</Text>
           )}
-        </Pressable>
-      </View>
+        </BotonVivo>
+      </Animated.View>
 
-      <View style={[estilos.tarjeta, { backgroundColor: t.superficie, borderColor: t.borde }]}>
+      <Animated.View entering={FadeInDown.delay(210).springify()} style={[estilos.tarjeta, { backgroundColor: t.superficie, borderColor: t.borde }]}>
         <Text style={[estilos.seccion, { color: t.texto }]}>Canjear</Text>
         <Pressable
           disabled={estado.monedas < reglas.tarjetasPorCompraMonedas || ocupado !== null}
@@ -161,7 +178,7 @@ export default function Recompensas() {
         <Pressable onPress={() => router.push("/premium")} hitSlop={8}>
           <Text style={{ color: t.ambar, fontWeight: "700", textAlign: "center", marginTop: 4 }}>¿Prefieres sin límites? Hazte Premium ›</Text>
         </Pressable>
-      </View>
+      </Animated.View>
     </ScrollView>
   );
 }

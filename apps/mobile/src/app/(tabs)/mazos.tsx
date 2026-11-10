@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { ActivityIndicator, FlatList, Pressable, RefreshControl, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
+import Animated, { FadeInDown } from "react-native-reanimated";
 import { obtenerCatalogo, type MazoConAcceso } from "@/lib/mazos";
 import { useTema } from "@/lib/tema";
 
@@ -46,7 +47,8 @@ export default function Mazos() {
           <Text style={{ color: t.textoSuave, fontSize: 16 }}>{error ?? "Aún no hay mazos publicados."}</Text>
         )
       }
-      renderItem={({ item }) => (
+      renderItem={({ item, index }) => (
+        <Animated.View entering={FadeInDown.delay(index * 60).springify()}>
         <Pressable
           onPress={() => abrir(item)}
           style={({ pressed }) => [estilos.item, { backgroundColor: t.superficie, borderColor: t.borde, opacity: pressed ? 0.8 : 1 }]}
@@ -62,6 +64,7 @@ export default function Mazos() {
             <Text style={[estilos.estado, { color: item.abierto ? t.textoSuave : t.ambar }]}>{etiqueta(item)}</Text>
           </View>
         </Pressable>
+        </Animated.View>
       )}
     />
   );

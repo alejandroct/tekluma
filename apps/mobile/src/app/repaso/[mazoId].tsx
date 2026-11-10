@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import type { EstadoCupo, PaqueteMazo } from "@tekluma/shared";
 import { router, useLocalSearchParams } from "expo-router";
+import Animated, { FadeInDown, FadeInRight, FadeInUp, ZoomIn } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
 import type { Grade } from "ts-fsrs";
 import { CupoAgotado } from "@/components/CupoAgotado";
@@ -89,7 +90,12 @@ export default function Repaso() {
   if (!actual) {
     return (
       <View style={[estilos.fin, { backgroundColor: t.fondo }]}>
-        <Text style={[estilos.finTitulo, { color: t.texto }]}>¡Sesión completa!</Text>
+        <Animated.Text entering={ZoomIn.springify()} style={{ fontSize: 56 }}>
+          🎉
+        </Animated.Text>
+        <Animated.Text entering={FadeInDown.delay(120)} style={[estilos.finTitulo, { color: t.texto }]}>
+          ¡Sesión completa!
+        </Animated.Text>
         <Pressable onPress={() => router.back()} style={[estilos.finBoton, { backgroundColor: t.ambar }]}>
           <Text style={{ color: t.navy, fontWeight: "800", fontSize: 16 }}>Volver</Text>
         </Pressable>
@@ -134,25 +140,31 @@ export default function Repaso() {
           {mazo.norma.codigo} · quedan {cola.length}
           {cupo && !cupo.premium ? ` · cupo de hoy: ${cupo.restantes}` : ""}
         </Text>
-        <Tarjeta key={`${actual.id}-${cola.length}`} contenido={actual.contenido} revelada={revelada} onRevelar={() => setRevelada(true)} />
+        <Animated.View key={`${actual.id}-${cola.length}`} entering={FadeInRight.springify().damping(16)}>
+          <Tarjeta contenido={actual.contenido} revelada={revelada} onRevelar={() => setRevelada(true)} />
+        </Animated.View>
         {revelada &&
-          actual.citas.map((c) => (
-            <View key={c.articuloId} style={[estilos.cita, { backgroundColor: t.superficie, borderColor: t.borde }]}>
+          actual.citas.map((c, i) => (
+            <Animated.View
+              key={c.articuloId}
+              entering={FadeInDown.delay(120 + i * 80)}
+              style={[estilos.cita, { backgroundColor: t.superficie, borderColor: t.borde }]}
+            >
               <Text style={[estilos.citaArticulo, { color: t.ambar }]}>
                 {mazo.norma.codigo} · Art. {c.articulo}
               </Text>
               <Text style={{ color: t.textoSuave, fontSize: 14, lineHeight: 20 }}>{c.extracto}</Text>
-            </View>
+            </Animated.View>
           ))}
       </ScrollView>
       {revelada && (
-        <View style={[estilos.notas, { borderColor: t.borde, backgroundColor: t.superficie }]}>
+        <Animated.View entering={FadeInUp.springify().damping(18)} style={[estilos.notas, { borderColor: t.borde, backgroundColor: t.superficie }]}>
           {NOTAS.map((n) => (
             <Pressable key={n.texto} onPress={() => responder(n.nota)} style={({ pressed }) => [estilos.nota, { backgroundColor: n.color, opacity: pressed ? 0.8 : 1 }]}>
               <Text style={estilos.notaTexto}>{n.texto}</Text>
             </Pressable>
           ))}
-        </View>
+        </Animated.View>
       )}
     </View>
   );
