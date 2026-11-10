@@ -1,10 +1,14 @@
 import { authClient, solicitar } from "./auth";
+import { borrarClave } from "./cifrado";
 import { cerrarSesionCompras } from "./compras";
 import { borrarDatosLocales } from "./db";
+import { olvidarPaquetes } from "./mazos";
 import { sincronizar } from "./repaso";
 
 async function salir() {
   borrarDatosLocales();
+  olvidarPaquetes();
+  await borrarClave().catch(() => {});
   await cerrarSesionCompras().catch(() => {});
   await authClient.signOut().catch(() => {});
 }

@@ -22,9 +22,9 @@ const NOTAS: { nota: Grade; texto: string; color: string }[] = [
 export default function Repaso() {
   const t = useTema();
   const { mazoId } = useLocalSearchParams<{ mazoId: string }>();
-  const [mazo, setMazo] = useState<PaqueteMazo | null>(() => paqueteLocal(mazoId));
+  const [mazo, setMazo] = useState<PaqueteMazo | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [cola, setCola] = useState<string[]>(() => (mazo ? pendientes(mazoId, mazo.tarjetas.map((c) => c.id)) : []));
+  const [cola, setCola] = useState<string[]>([]);
   const [revelada, setRevelada] = useState(false);
   const [cupo, setCupo] = useState<EstadoCupo | null>(cupoEnCache);
   /** Tarjeta para la que el servidor ya dio permiso (consumió cupo o ya se había visto hoy). */
@@ -33,16 +33,21 @@ export default function Repaso() {
   const vistasEnSesion = useRef(0);
   const actualId = mazo ? cola[0] : undefined;
 
-  // Primera vez que se abre el mazo: se descarga y queda disponible sin conexión.
+  // Abre la copia cifrada del dispositivo; la primera vez se descarga y queda disponible sin conexión.
   useEffect(() => {
-    if (mazo) return;
-    descargarPaquete(mazoId)
+    let vigente = true;
+    paqueteLocal(mazoId)
+      .then((local) => local ?? descargarPaquete(mazoId))
       .then((p) => {
+        if (!vigente) return;
         setMazo(p);
         setCola(pendientes(mazoId, p.tarjetas.map((c) => c.id)));
       })
-      .catch(() => setError("No pudimos descargar el mazo. Revisa tu conexión."));
-  }, [mazo, mazoId]);
+      .catch(() => vigente && setError("No pudimos descargar el mazo. Revisa tu conexión."));
+    return () => {
+      vigente = false;
+    };
+  }, [mazoId]);
 
   // Antes de mostrar cada tarjeta se descuenta del cupo diario.
   useEffect(() => {

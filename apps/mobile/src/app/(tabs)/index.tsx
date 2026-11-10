@@ -16,13 +16,17 @@ export default function Hoy() {
 
   useFocusEffect(
     useCallback(() => {
-      setResumen(
-        paquetesLocales().map((p) => ({
-          mazoId: p.mazoId,
-          codigo: p.norma.codigo,
-          pendientes: pendientes(p.mazoId, p.tarjetas.map((c) => c.id)).length,
-        })),
-      );
+      paquetesLocales()
+        .then((paquetes) =>
+          setResumen(
+            paquetes.map((p) => ({
+              mazoId: p.mazoId,
+              codigo: p.norma.codigo,
+              pendientes: pendientes(p.mazoId, p.tarjetas.map((c) => c.id)).length,
+            })),
+          ),
+        )
+        .catch(() => setResumen([]));
       obtenerCupo()
         .then(setCupo)
         .catch(() => {});

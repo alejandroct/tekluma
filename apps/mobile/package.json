@@ -8,6 +8,7 @@
     "better-auth": "1.7.18",
     "expo": "~58.0.23",
     "expo-constants": "~58.0.15",
+    "expo-crypto": "~58.0.7",
     "expo-haptics": "~58.0.7",
     "expo-linking": "~58.0.16",
     "expo-router": "~58.0.30",
