@@ -28,6 +28,9 @@ PARCHES = [
     ("18.10.4", "de momentos en elementos", "Redistribución de momentos en elementos"),
     ("18.13.4.1", "limitado a 70 fps fse = + en MPa.", "limitado a fps = fse + 70 en MPa."),
     ("18.9.3.3", "0,00075 As Acf = (18-8)\n donde cf A es", "As = 0,00075 Acf (18-8)\n donde Acf es"),
+    ("19.4.10", "exceda de 0,33 f c′ φ ,", "exceda de 0,33 φ √f’c,"),
+    ("19.4.11", "debe ser 1,2 d\n\n , pero", "debe ser 1,2 ℓd, pero"),
+    ("19.4.12", "no menores a d\n\n , con", "no menores a ℓd, con"),
     ("12.1.2", "fc′ usados", "Los valores de √f’c usados"),
     ("12.2.3", "ℓ debe ser:", "Para barras corrugadas y alambres corrugados, ℓd debe ser:"),
     ("12.3.3", "ℓ por los siguientes", "Se permite multiplicar la longitud ℓdc por los siguientes"),
@@ -3366,6 +3369,41 @@ CAP18 += [
        "18.21.1", "se desarrolle al 100% en las secciones críticas, después que el acero de preesforzado esté adherido al elemento."),
     om("Tendones externos: ¿qué debe mantener su acople al elemento?", ["La fuerza de tensado", "La excentricidad deseada para todo el rango de deflexiones", "La temperatura", "Nada"], 1,
        "18.22.3", "se mantenga la excentricidad deseada entre los tendones y el centroide del concreto para todo el rango de deflexiones previstas del elemento."),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 19 (págs. 173–176) ══════════
+CAP19 += [
+    om("¿Qué es una lámina plegada según la E.060?", ["Una losa nervada", "Una cáscara formada por losas delgadas planas unidas por sus bordes", "Una losa curva gruesa", "Un muro doblado"], 1,
+       "19.1.4", "Son un tipo especial de cáscaras formadas por la unión, a lo largo de sus bordes, de losas delgadas planas, de manera de crear una estructura espacial."),
+    om("¿Qué son los elementos auxiliares de una cáscara?", ["Los andamios", "Vigas de borde o nervios que la rigidizan o apoyan", "Las juntas", "Los anclajes"], 1,
+       "19.1.6", "Son las vigas de borde o nervios que sirven para rigidizar, hacer más resistente o servir de apoyo a la cáscara."),
+    om("En el análisis elástico de cáscaras, ¿qué módulo de Poisson se puede asumir?", ["0,15", "0,20", "0,30", "Cero"], 3,
+       "19.2.1", "El módulo de Poisson del concreto puede asumirse igual a cero."),
+    om("¿Qué tipo de falla debe evitarse expresamente en el diseño de cáscaras?", ["Por fatiga", "Por inestabilidad general o local", "Por punzonamiento", "Por adherencia"], 1,
+       "19.2.8", "El diseño de las cáscaras deberá considerar y evitar la posibilidad de una falla por inestabilidad general o local."),
+    om("¿Qué porción de la cáscara puede trabajar junto con una viga de borde?", ["Nada", "El ancho de ala de 8.10", "4 veces el espesor", "La mitad de la luz"], 1,
+       "19.2.9", "Se puede suponer que una porción de la cáscara igual al ancho del ala especificado en 8.10 actúa conjuntamente con el elemento auxiliar."),
+    om("¿Qué fy máximo se permite en el refuerzo de cáscaras?", ["280 MPa", "420 MPa", "550 MPa", "Sin límite"], 1,
+       "19.3.2", "El esfuerzo de fluencia especificado del acero fy no será mayor de 420 MPa."),
+    om("Refuerzo de membrana por cortante por fricción en concreto normal: ¿μ máximo?", ["0,6", "0,75", "1,0", "1,4"], 2,
+       "19.4.2", "El coeficiente de fricción, μ, no debe exceder de 1,0 para concreto de peso normal"),
+    om("¿Cómo se limita el área de refuerzo en tracción de una cáscara?", ["No se limita", "Para que fluya antes del aplastamiento o pandeo de la cáscara", "Al 2 %", "A 0,75 ρb"], 1,
+       "19.4.5", "El área de refuerzo por tracción en la cáscara debe estar limitada de manera tal que el refuerzo fluya antes de que tenga lugar el aplastamiento del concreto en compresión o el pandeo de la cáscara."),
+    om("Si se concentra el refuerzo en zonas de máxima tracción, ¿qué cuantía mínima queda en las demás zonas traccionadas?", ["0,0018", "0,0025", "0,0035", "0,005"], 2,
+       "19.4.8", "la cuantía de refuerzo en todas las zonas de tracción de la cáscara no será menor de 0,0035, calculado sobre la base del espesor total de la cáscara."),
+    om("Si el análisis pide refuerzo de flexión en una sola cara de la cáscara, ¿qué se coloca?", ["Solo en esa cara", "Cantidades iguales cerca de ambas superficies", "Nada en la otra", "El doble en esa cara"], 1,
+       "19.4.9", "se deben colocar cantidades iguales cerca de ambas superficies de la cáscara, aún cuando el análisis no indique reversión de los momentos de flexión en esa zona."),
+    om("Cáscara de 80 mm con tracción membranal mayor que 0,33 φ √f′c: ¿espaciamiento máximo del refuerzo?", ["240 mm", "400 mm", "450 mm", "160 mm"], 0,
+       "19.4.10", "el refuerzo no debe espaciarse a más de tres veces el espesor de la cáscara.", "3 × 80 = 240 mm."),
+    om("Refuerzo de cáscara que llega a una viga de borde: ¿longitud de desarrollo mínima?", ["ℓd", "1,2 ℓd y no menos de 450 mm", "1,3 ℓd", "300 mm"], 1,
+       "19.4.11", "pero no menor de 450 mm."),
+    om("Empalmes en el refuerzo principal de una cáscara: ¿cuánto refuerzo puede empalmarse en una misma sección?", ["Todo", "La mitad", "No más de un tercio", "Un cuarto"], 2,
+       "19.4.12", "con no más de un tercio del refuerzo empalmado en cualquier sección."),
+    om("Si el desencofrado depende de Ec, ¿cómo se obtiene?", ["Con 4700 √f′c", "Con ensayos de flexión en vigas curadas en obra", "Con el certificado del concreto", "Se asume"], 1,
+       "19.5.1", "se determinará a partir de ensayos de flexión en probetas de vigas curadas en condiciones de obra."),
+    om("Si la forma construida se sale de las tolerancias especificadas, ¿qué se hace?", ["Nada", "Analizar el efecto de las desviaciones y tomar medidas correctivas", "Demoler", "Solo reforzar bordes"], 1,
+       "19.5.2", "se debe hacer un análisis del efecto de las desviaciones y se deben tomar las medidas correctivas necesarias para garantizar un comportamiento seguro."),
 ]
 
 CAPITULOS = [

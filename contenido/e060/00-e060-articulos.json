@@ -6896,17 +6896,17 @@
   },
   {
    "numero": "19.4.10",
-   "texto": "El refuerzo de la cáscara en cualquier dirección no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara. Cuando el esfuerzo membranal principal de tracción sobre el área total de concreto, debido a cargas amplificadas, exceda de 0,33 f c′ φ , el refuerzo no debe espaciarse a más de tres veces el espesor de la cáscara.",
+   "texto": "El refuerzo de la cáscara en cualquier dirección no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara. Cuando el esfuerzo membranal principal de tracción sobre el área total de concreto, debido a cargas amplificadas, exceda de 0,33 φ √f’c, el refuerzo no debe espaciarse a más de tres veces el espesor de la cáscara.",
    "pagina": 175
   },
   {
    "numero": "19.4.11",
-   "texto": "El refuerzo de la cáscara en la unión de esta con los elementos de apoyo o los elementos de borde se debe anclar o extender a través de dichos elementos de acuerdo con los requisitos del Capítulo 12, excepto que la longitud de desarrollo mínima debe ser 1,2 d\n\n , pero no menor de 450 mm.",
+   "texto": "El refuerzo de la cáscara en la unión de esta con los elementos de apoyo o los elementos de borde se debe anclar o extender a través de dichos elementos de acuerdo con los requisitos del Capítulo 12, excepto que la longitud de desarrollo mínima debe ser 1,2 ℓd, pero no menor de 450 mm.",
    "pagina": 175
   },
   {
    "numero": "19.4.12",
-   "texto": "Las longitudes de empalme del refuerzo de la cáscara deben regirse por las disposiciones del Capítulo 12, excepto que la longitud mínima de empalme por traslape de barras en tracción debe ser 1,2 veces el valor requerido en el Capítulo 12, pero no menor de 450 mm. El número de empalmes en el refuerzo principal de tracción debe mantenerse en un mínimo práctico. Donde los empalmes sean necesarios, se deben escalonar a distancias libres no menores a d\n\n , con no más de un tercio del refuerzo empalmado en cualquier sección.",
+   "texto": "Las longitudes de empalme del refuerzo de la cáscara deben regirse por las disposiciones del Capítulo 12, excepto que la longitud mínima de empalme por traslape de barras en tracción debe ser 1,2 veces el valor requerido en el Capítulo 12, pero no menor de 450 mm. El número de empalmes en el refuerzo principal de tracción debe mantenerse en un mínimo práctico. Donde los empalmes sean necesarios, se deben escalonar a distancias libres no menores a ℓd, con no más de un tercio del refuerzo empalmado en cualquier sección.",
    "pagina": 176
   },
   {
