@@ -2420,9 +2420,8 @@ CAP15 += [
     om("Zapata con columna de concreto: ¿dónde está la sección crítica por flexión?", ["En el eje", "En la cara de la columna", "A d de la cara", "A d/2 de la cara"], 1, "15.4.2", de(CAP15, "15.4.2")),
     om("Zapata de 3,0 × 2,0 m: ¿qué fracción γs del acero corto va en la franja central?", ["0,60", "0,67", "0,80", "1,00"], 2, "15.4.4.2", de(CAP15, "15.4.4.2"), "β = 1,5 → γs = 2 / 2,5 = 0,80."),
     om("¿Cuál es la altura mínima de una zapata sobre el suelo, sobre el refuerzo inferior?", ["200 mm", "250 mm", "300 mm", "400 mm"], 2, "15.7", de(CAP15, "15.7")),
-    om("¿Y de una zapata sobre pilotes?", ["300 mm", "400 mm", "500 mm", "600 mm"], 1, "15.7", de(CAP15, "15.7")),
+    om("¿Cuál es la altura mínima de una zapata sobre pilotes, medida sobre el refuerzo inferior?", ["300 mm", "400 mm", "500 mm", "600 mm"], 1, "15.7", de(CAP15, "15.7")),
     om("¿Qué refuerzo mínimo cruza la junta columna–zapata en columnas vaciadas en obra?", ["0,0015 Ag", "0,005 Ag", "0,01 Ag", "4 barras"], 1, "15.8.2.1", de(CAP15, "15.8.2.1")),
-    om("¿Se puede usar el Método Directo para losas de cimentación?", ["Sí", "No", "Solo con vigas", "Solo si son rectangulares"], 1, "15.10.2", de(CAP15, "15.10.2")),
 ]
 
 CAP16 += [
@@ -3178,6 +3177,41 @@ CAP14 += [
        "14.9.1", "deberá prestarse especial atención en la verificación de los esfuerzos de punzonamiento ocasionados por los dispositivos de anclaje."),
     om("¿Se consideran las aberturas al calcular la rigidez de un muro?", ["No", "Sí, en rigideces y resistencias", "Solo en resistencia", "Solo si son mayores de 1 m"], 1,
        "14.10.2", "La presencia de aberturas debe considerarse en el cálculo de rigideces y resistencias."),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 15 (págs. 147–150) ══════════
+CAP15 += [
+    om("Si la carga de una zapata es excéntrica y sale tracción en un borde, ¿se cuenta esa tracción con el suelo?", ["Sí", "No: no se consideran tracciones suelo–zapata", "Solo con sismo", "Solo en roca"], 1,
+       "15.2.3", "En el cálculo de las presiones de contacto entre las zapatas y el suelo no se deberán considerar las tracciones."),
+    om("Zapata sobre pilotes: ¿dónde se supone concentrada la reacción de cada pilote?", ["En su borde", "En el eje del pilote", "Repartida en la zapata", "En la cara de la columna"], 1,
+       "15.2.7", "puede basarse en la suposición que la reacción de cualquier pilote está concentrada en el eje del mismo."),
+    om("Columna con plancha de acero: ¿dónde está la sección crítica por flexión de la zapata?", ["En la cara de la columna", "A medio camino entre la cara de la columna y el borde de la plancha", "En el borde de la plancha", "En el eje"], 1,
+       "15.4.2", "(c) Para zapatas que soporten una columna con plancha de apoyo de acero, en el punto medio entre la cara de la columna y el borde de la plancha de acero"),
+    om("Zapata rectangular en dos direcciones: ¿cómo se reparte el acero de la dirección larga?", ["Concentrado bajo la columna", "Uniforme en todo el ancho", "Con γs", "En dos franjas"], 1,
+       "15.4.4.1", "El refuerzo en la dirección larga debe distribuirse uniformemente en el ancho total de la zapata."),
+    om("Zapata de 3,0 × 2,0 m: ¿qué ancho tiene la franja central para el acero corto?", ["1,0 m", "1,5 m", "2,0 m (el lado corto)", "3,0 m"], 2,
+       "15.4.4.2", "una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja (centrada con respecto al eje de la columna o pedestal) cuyo ancho sea igual a la longitud del lado corto de la zapata."),
+    om("¿Desde dónde se mide la sección crítica por cortante en una zapata con columna de concreto?", ["Desde el eje de la columna", "Desde la cara de la columna, pedestal o muro", "Desde el borde de la zapata", "Desde el centro del pilote"], 1,
+       "15.5.2", "La ubicación de la sección crítica para cortante de acuerdo con el Capítulo 11 debe medirse desde la cara de la columna, pedestal o muro."),
+    om("Pilote con su centro a dp/2 o más hacia el interior de la sección: ¿cuánto cortante produce en ella?", ["Todo", "La mitad", "Nada", "Depende de d"], 2,
+       "15.5.3.2", "Se debe considerar que la reacción de cualquier pilote con su centro localizado dp/2 o más hacia el lado interior de la sección no produce cortante en dicha sección."),
+    om("Pilote con su centro justo sobre la sección crítica: ¿qué parte de su reacción produce cortante?", ["0 %", "50 %", "100 %", "dp/2"], 1,
+       "15.5.3.3", "debe basarse en una interpolación lineal entre el valor total a dp/2 hacia afuera de la sección y el valor cero correspondiente a dp/2 hacia adentro de la sección.", "A medio camino entre 100 % y 0 %."),
+    om("En zapatas, ¿para qué esfuerzos pueden usarse ganchos de anclaje?", ["Tracción y compresión", "Solo en tracción", "Solo en compresión", "No se permiten"], 1,
+       "15.6.2", "ganchos (sólo en tracción)"),
+    om("Además de 300 mm, ¿qué otro requisito condiciona el peralte de una zapata?", ["El ancho de la columna", "El anclaje de las armaduras de columnas, pedestales y muros", "La presión admisible", "Nada"], 1,
+       "15.7", "El peralte de la zapata deberá ser compatible con los requerimientos de anclaje de las armaduras de las columnas, pedestales y muros que se apoyen en la zapata."),
+    om("¿Cómo se transmiten las fuerzas laterales de la columna a la zapata?", ["Por aplastamiento", "Por cortante por fricción (11.7) u otros medios apropiados", "Solo por los estribos", "No se transmiten"], 1,
+       "15.8.1.4", "Las fuerzas laterales deben transmitirse a la zapata de acuerdo con las disposiciones de cortante por fricción de 11.7, o mediante otros medios apropiados."),
+    om("Columna de 400 × 400 mm vaciada en obra: ¿área mínima de refuerzo que cruza la junta con la zapata?", ["240 mm²", "800 mm²", "1600 mm²", "4 barras de 5/8″"], 1,
+       "15.8.2.1", "el área de refuerzo a través de la junta no debe ser menor de 0,005 Ag", "0,005 × 160 000 = 800 mm²."),
+    om("Pernos de anclaje en elementos prefabricados: ¿qué deben alcanzar antes de fallar el anclaje?", ["0,5 fy", "Su resistencia de diseño", "1,25 fy", "La carga de servicio"], 1,
+       "15.8.3.3", "Los pernos de anclaje y los conectores mecánicos deben diseñarse para alcanzar su resistencia de diseño antes de que se presente la falla de anclaje o la falla del concreto que los circunda."),
+    om("Zapata escalonada diseñada como unidad: ¿qué exige la norma?", ["Nada", "Construirla para asegurar que trabaje como tal", "Vaciar cada escalón por separado", "Que no tenga más de dos escalones"], 1,
+       "15.9.2", "Las zapatas con pendiente o escalonadas que se diseñen como una unidad, deben construirse para asegurar su comportamiento como tal."),
+    om("Zapatas combinadas y losas de cimentación: ¿cómo se define la presión del terreno?", ["Siempre uniforme", "Consistente con las propiedades del suelo, de la estructura y la mecánica de suelos", "Triangular", "Con el Método Directo"], 1,
+       "15.10.3", "debe ser consistentes con las propiedades del suelo y la estructura y con los principios establecidos de mecánica de suelos."),
 ]
 
 CAPITULOS = [
