@@ -744,10 +744,10 @@
       "tipo": "opcion_multiple",
       "pregunta": "¿Qué deformación unitaria define fy en barras de más de 420 MPa?",
       "opciones": [
-       "0,002",
-       "0,0035",
-       "0,005",
-       "0,01"
+       "0,20 %",
+       "0,35 %",
+       "0,50 %",
+       "1,0 %"
       ],
       "correcta": 1
      },
@@ -831,6 +831,293 @@
       {
        "articulo": "3.7.5",
        "extracto": "Las barras de acero de refuerzo, alambre, tendones y ductos metálicos se almacenarán en un lugar seco, aislado del suelo y protegido de la humedad, tierra, sales, aceite y grasas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién puede ordenar el ensayo de cualquier material de la obra, en cualquier etapa?",
+      "opciones": [
+       "Solo el proyectista",
+       "La Supervisión o la autoridad competente",
+       "El proveedor",
+       "El Ingeniero Residente"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.1.1",
+       "extracto": "La Supervisión o la autoridad competente podrá ordenar, en cualquier etapa de ejecución del proyecto, el ensayo de cualquier material empleado en las obras de concreto…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué cemento debe usarse en obra?",
+      "opciones": [
+       "Cualquiera que cumpla la NTP",
+       "El mismo que se tomó como base para la dosificación",
+       "El más barato disponible",
+       "Siempre tipo V"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.2.2",
+       "extracto": "El cemento empleado en la obra debe corresponder al que se ha tomado como base para la selección de la dosificación del concreto."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un agregado que no cumple la NTP, ¿puede usarse?",
+      "opciones": [
+       "Nunca",
+       "Sí, si el Constructor demuestra con ensayos y experiencia que da la resistencia y durabilidad requeridas",
+       "Sí, solo en concreto simple",
+       "Sí, si lo aprueba el proveedor"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.3.1",
+       "extracto": "Los agregados que no cumplan con los requisitos indicados en las NTP, podrán ser utilizados siempre que el Constructor demuestre, a través de ensayos y por experiencias de obra, que producen concretos con la resistencia y durabilidad requeridas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Columna con caras de encofrado separadas 25 cm: ¿tamaño máximo nominal del agregado grueso por el criterio del encofrado?",
+      "opciones": [
+       "25 mm",
+       "50 mm",
+       "62 mm",
+       "83 mm"
+      ],
+      "correcta": 1,
+      "explicacion": "250 / 5 = 50 mm. Además debe cumplir el criterio de 3/4 del espaciamiento libre entre barras."
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(a) 1/5 de la menor separación entre los lados del encofrado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo deben manejarse el agregado fino y el grueso?",
+      "opciones": [
+       "Mezclados desde la cantera",
+       "Como materiales independientes",
+       "Siempre lavados juntos",
+       "En la misma pila"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.3.4",
+       "extracto": "Los agregados fino y grueso deberán ser manejados como materiales independientes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué perfil se prefiere para el agregado grueso?",
+      "opciones": [
+       "Redondeado y liso",
+       "Angular o semi-angular, de textura rugosa",
+       "Escamoso",
+       "Laminar"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.3.7",
+       "extracto": "Sus partículas serán limpias, de perfil preferentemente angular o semi-angular, duras, compactas, resistentes y de textura preferentemente rugosa…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Con agua no potable, ¿qué resistencia mínima deben alcanzar los cubos de mortero frente a los hechos con agua potable?",
+      "opciones": [
+       "75 %",
+       "85 %",
+       "90 %",
+       "100 %"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "3.4.2",
+       "extracto": "(c) Los cubos de mortero para ensayos, hechos con agua no potable, deben tener resistencias a los 7 y 28 días, de por lo menos 90% de la resistencia de muestras similares hechas con agua potable."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿De dónde se suma el ion cloruro para compararlo con la Tabla 4.5?",
+      "opciones": [
+       "Solo del agua",
+       "Solo de los aditivos",
+       "Del agua, los agregados y los aditivos",
+       "Solo del cemento"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "3.4.4",
+       "extracto": "La suma de los contenidos de ión cloruro presentes en el agua y en los demás componentes de la mezcla (agregados y aditivos) no deberán exceder los valores indicados en la Tabla 4.5 del Capítulo 4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un agua que no cumple los requisitos de mezclado, ¿puede usarse para curar o lavar el equipo?",
+      "opciones": [
+       "Sí, para ambas",
+       "Solo para lavar el equipo",
+       "Solo para curar",
+       "No, para ninguna"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "3.4.6",
+       "extracto": "No se utilizará en el curado del concreto ni en el lavado del equipo, aquellas aguas que no cumplan con los requisitos anteriores."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué acero de refuerzo no necesita un informe adicional para soldarse según AWS D1.4?",
+      "opciones": [
+       "NTP 341.031",
+       "ASTM A 706M (NTP 339.186)",
+       "Cualquier acero grado 60",
+       "Ninguno"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.5.2",
+       "extracto": "Las normas ASTM para barras de refuerzo, excepto la ASTM A 706M (NTP 339.186:2008) deben ser complementadas con un informe de las propiedades necesarias del material para cumplir con los requisitos de ANSI/AWS D1.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Malla electrosoldada de alambre corrugado: ¿separación máxima de las intersecciones soldadas?",
+      "opciones": [
+       "200 mm",
+       "300 mm",
+       "400 mm",
+       "450 mm"
+      ],
+      "correcta": 2,
+      "explicacion": "En malla de alambre liso el límite es 300 mm (3.5.3.5)."
+     },
+     "citas": [
+      {
+       "articulo": "3.5.3.6",
+       "extracto": "Las intersecciones soldadas no deben estar espaciadas a más de 400 mm, en el sentido del esfuerzo calculado…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué diámetro máximo puede tener el refuerzo liso por cambios volumétricos en losas nervadas?",
+      "opciones": [
+       "1/4″",
+       "3/8″",
+       "1/2″",
+       "6 mm"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "3.5.4.1",
+       "extracto": "(c) Refuerzo por cambios volumétricos en losas nervadas que cumplan con 8.11. El diámetro de este refuerzo no deberá ser mayor de 1/4”."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Además del preesforzado, ¿dónde se prohíben los aditivos con cloruros?",
+      "opciones": [
+       "En concreto con aluminio embebido o en encofrados permanentes de acero galvanizado",
+       "En zapatas",
+       "En concreto simple",
+       "En columnas"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "3.6.3",
+       "extracto": "…no deben emplearse en concreto preesforzado, en concreto que contenga aluminio embebido o en concreto construido en encofrados permanentes de acero galvanizado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuánto tiempo máximo puede almacenarse un aditivo en obra desde su último ensayo?",
+      "opciones": [
+       "3 meses",
+       "6 meses",
+       "1 año",
+       "Hasta su vencimiento"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.7.6",
+       "extracto": "Los aditivos no deberán ser almacenados en obra por un período mayor de seis meses desde la fecha del último ensayo. En caso contrario, deberán reensayarse para evaluar su calidad antes de su empleo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo se almacena el cemento a granel en obra?",
+      "opciones": [
+       "En pilas cubiertas con plástico",
+       "En silos metálicos que impidan el ingreso de humedad",
+       "En cajones de madera",
+       "A la intemperie si se usa en 7 días"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.7.3",
+       "extracto": "(c) El cemento a granel se almacenará en silos metálicos cuyas características deberán impedir el ingreso de humedad o elementos contaminantes."
       }
      ]
     }
