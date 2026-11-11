@@ -11,6 +11,17 @@ SALIDA = "/Users/alejandrocabreratavara/Documents/tekluma/contenido/e060"
 os.makedirs(SALIDA, exist_ok=True)
 
 ARTICULOS = [{k: v for k, v in a.items() if v is not None} for a in json.load(open(f"{S}/articulos.json"))]
+# Textos que la extracción del PDF dejó incompletos (líneas con ℓ): se corrigen leyendo la página.
+PARCHES = [
+    ("10.11.3.1", ", debe tomarse", "La longitud no arriostrada de un elemento en compresión, ℓu, debe tomarse"),
+    ("10.11.3.2", "u debe medirse", "ℓu debe medirse"),
+    ("10.11.5", "/ k u r mayor a 100.", "Ningún elemento en compresión dentro de una estructura tendrá una esbeltez k ℓu / r mayor a 100."),
+    ("10.13.2", "cuando / u k r es menor", "cuando k ℓu / r es menor"),
+]
+for _n, _viejo, _nuevo in PARCHES:
+    _a = next(a for a in ARTICULOS if a["numero"] == _n)
+    assert _viejo in _a["texto"], (_n, _viejo)
+    _a["texto"] = _a["texto"].replace(_viejo, _nuevo, 1)
 POR_NUMERO = {a["numero"]: a for a in ARTICULOS}
 
 NORMA = {
@@ -2290,15 +2301,13 @@ CAP10 += [
     om("¿Qué deformación máxima utilizable se asume para el concreto en compresión?", ["0,002", "0,003", "0,004", "0,005"], 1, "10.2.3", de(CAP10, "10.2.3")),
     om("¿Qué esfuerzo tiene el bloque rectangular equivalente de compresión?", ["0,70 f′c", "0,80 f′c", "0,85 f′c", "f′c"], 2, "10.2.7.1", de(CAP10, "10.2.7.1")),
     om("¿Cuánto vale β1 para f′c = 21 MPa?", ["0,65", "0,75", "0,80", "0,85"], 3, "10.2.7.3", de(CAP10, "10.2.7.3")),
-    om("¿Y para f′c = 42 MPa?", ["0,70", "0,75", "0,80", "0,85"], 1, "10.2.7.3", de(CAP10, "10.2.7.3"), "Baja 0,05 por cada 7 MPa sobre 28: 0,85 − 0,10 = 0,75."),
     om("En flexión con φPn < 0,1 f′c Ag, ¿cuánto acero en tracción como máximo?", ["0,50 Asb", "0,75 Asb", "Asb", "0,025 bd"], 1, "10.3.4", de(CAP10, "10.3.4")),
     om("¿Qué cuantía de refuerzo longitudinal se permite en columnas?", ["0,5 % a 4 %", "1 % a 6 %", "1 % a 8 %", "2 % a 6 %"], 1, "10.9.1", de(CAP10, "10.9.1")),
     om("¿Cuántas barras como mínimo lleva una columna con estribos rectangulares?", ["3", "4", "6", "8"], 1, "10.9.2", de(CAP10, "10.9.2")),
-    om("¿Y una columna con espiral?", ["4", "5", "6", "8"], 2, "10.9.2", de(CAP10, "10.9.2")),
+    om("¿Cuántas barras longitudinales como mínimo lleva una columna con espiral?", ["4", "5", "6", "8"], 2, "10.9.2", de(CAP10, "10.9.2")),
     om("¿Qué factor multiplica φPon en una columna con estribos?", ["0,70", "0,75", "0,80", "0,85"], 2, "10.3.6.2", de(CAP10, "10.3.6.2")),
     om("¿Qué inercia se usa para columnas en el análisis de esbeltez?", ["0,35 Ig", "0,50 Ig", "0,70 Ig", "Ig"], 2, "10.11.1", de(CAP10, "10.11.1")),
     om("¿Qué radio de giro se toma en una columna rectangular?", ["0,25 h", "0,30 h", "0,35 h", "0,50 h"], 1, "10.11.2", de(CAP10, "10.11.2")),
-    om("Columna no arriostrada: ¿bajo qué k ℓu/r se desprecia la esbeltez?", ["22", "34", "40", "100"], 0, "10.13.2", de(CAP10, "10.13.2")),
     om("Columna arriostrada con M1/M2 = 0: ¿límite de k ℓu/r?", ["22", "34", "40", "46"], 1, "10.12.2", de(CAP10, "10.12.2"), "34 − 12 × 0 = 34."),
     om("¿Cuál es el índice de estabilidad Q máximo para tratar un entrepiso como arriostrado?", ["0,04", "0,05", "0,06", "0,10"], 2, "10.11.4.2", de(CAP10, "10.11.4.2")),
     om("Placa sobre zapata amplia: ¿cuánto puede aumentar como máximo la resistencia al aplastamiento?", ["Nada", "1,5 veces", "2 veces", "4 veces"], 2, "10.17.1", de(CAP10, "10.17.1"), fig="fig-10-17-1"),
@@ -2807,6 +2816,81 @@ CAP9 += [
        "9.9.6", "en una distancia 0,5 h cercana de la armadura principal de tracción por flexión.", fig="fig-9-9-6"),
     om("¿Espaciamiento máximo absoluto de la armadura superficial en vigas de más de 900 mm?", ["200 mm", "250 mm", "300 mm", "400 mm"], 2,
        "9.9.6", "s ≤ 300 mm, s ≤ 380 (250 / fs) – 2,5 Cc (9-20) s ≤ 300 (250 / fs) (9-21)"),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 10 (págs. 77–88) ══════════
+CAP10 += [
+    om("¿En qué elementos NO se suponen deformaciones proporcionales a la distancia al eje neutro?", ["Columnas cortas", "Vigas de gran peralte (10.7.1)", "Losas macizas", "Zapatas"], 1,
+       "10.2.2", "excepto que, para las vigas de gran peralte definidas en 10.7.1, debe emplearse un análisis que considere la distribución no lineal de las deformaciones unitarias."),
+    om("¿Qué forma puede tener la distribución de esfuerzos de compresión del concreto?", ["Solo rectangular", "Rectangular, trapezoidal, parabólica u otra que coincida con ensayos", "Solo parabólica", "Triangular"], 1,
+       "10.2.6", "se debe suponer rectangular, trapezoidal, parabólica o de cualquier otra forma que permita una predicción de la resistencia que coincida con los resultados de ensayos de laboratorio representativos."),
+    om("¿Cuánto vale β1 para un concreto de f′c = 42 MPa?", ["0,70", "0,75", "0,80", "0,85"], 1,
+       "10.2.7.3", "Para f’c entre 28 y 56 MPa se debe interpolar linealmente entre 0,85 y 0,65.", "Baja 0,05 por cada 7 MPa sobre 28: 0,85 − 0,10 = 0,75."),
+    om("¿Cuánto vale β1 para f′c ≥ 56 MPa?", ["0,60", "0,65", "0,70", "0,75"], 1,
+       "10.2.7.3", "Para f’c mayor o igual a 56 MPa, β1 se debe tomar como 0,65."),
+    om("Viga con acero en compresión: ¿se aplica el 0,75 a la porción de Asb equilibrada por ese acero?", ["Sí, a todo Asb", "No, esa porción no se reduce", "Se reduce a 0,50", "Solo si fy > 420"], 1,
+       "10.3.4", "En elementos con refuerzo en compresión, la porción de Asb equilibrada por el refuerzo en compresión no deberá reducirse mediante el factor 0,75 estipulado en el párrafo anterior."),
+    om("Columna preesforzada con espiral: ¿qué tope tiene φPn?", ["0,80 φPon", "0,85 φPon", "0,90 φPon", "φPon"], 1,
+       "10.3.6.3", "no debe exceder de 0,85 φPon para elementos con refuerzo en espiral y para elementos con estribos no debe exceder de 0,80 φPon."),
+    om("¿En qué elementos a flexión NO se exige φMn ≥ 1,2 Mcr?", ["Vigas T", "Zapatas y losas macizas", "Vigas chatas", "Viguetas"], 1,
+       "10.5.1", "En cualquier sección de un elemento estructural - excepto en zapatas y losas macizas - sometido a flexión"),
+    om("Viga de bw = 300 mm, d = 540 mm, f′c = 21 MPa, fy = 420 MPa: ¿As mín aproximado (ec. 10-3)?", ["~ 270 mm²", "~ 389 mm²", "~ 540 mm²", "~ 810 mm²"], 1,
+       "10.5.2", "El área mínima de refuerzo por tracción de las secciones rectangulares y de las secciones T con el ala en compresión, no será menor de:", "0,22 × √21 / 420 × 300 × 540 ≈ 389 mm²."),
+    om("Losa con acero mínimo: ¿espaciamiento máximo del refuerzo?", ["2 t y 300 mm", "3 t y 400 mm", "5 t y 450 mm", "400 mm"], 1,
+       "10.5.4", "El espaciamiento máximo del refuerzo no debe exceder tres veces el espesor ni de 400 mm."),
+    om("Columna con varias espirales entrelazadas: ¿dónde termina su sección efectiva?", ["En el borde de las espirales", "A una distancia igual al recubrimiento mínimo fuera de las espirales", "A 40 mm fuera de las espirales", "En la cara del concreto"], 1,
+       "10.8.1", "deben tomarse a una distancia fuera de los límites extremos de los espirales, igual al recubrimiento mínimo del concreto establecido en 7.7."),
+    om("Espiral con fyt mayor de 420 MPa: ¿qué empalme NO se permite?", ["Soldado", "Mecánico", "Traslapado según 7.10.4.5(a)", "Ninguno"], 2,
+       "10.9.3", "Para fyt mayor de 420 MPa, no deben usarse empalmes traslapados de acuerdo con 7.10.4.5(a)."),
+    om("Análisis de segundo orden: ¿cuánto pueden diferir las secciones finales de las usadas en el análisis?", ["5 %", "10 %", "15 %", "20 %"], 1,
+       "10.10.1", "Las dimensiones de la sección transversal de cada elemento no deben diferir en más del 10% de las utilizadas para el análisis, de lo contrario debe repetirse el análisis."),
+    om("¿Qué inercia se usa para losas planas sin vigas en el análisis de primer orden?", ["0,25 Ig", "0,35 Ig", "0,50 Ig", "0,70 Ig"], 0,
+       "10.11.1", "Losas planas sin vigas … 0,25 Ig"),
+    om("¿Qué inercia se usa para muros agrietados?", ["0,25 Ig", "0,35 Ig", "0,50 Ig", "0,70 Ig"], 1,
+       "10.11.1", "Muros agrietados … 0,35 Ig"),
+    om("Con cargas laterales sostenidas, ¿qué se hace con los momentos de inercia I?", ["Nada", "Se dividen entre (1 + βd)", "Se multiplican por 0,75", "Se duplican"], 1,
+       "10.11.1", "Los momentos de inercia, I, deben dividirse por ( 1 + βd ) cuando actúen cargas laterales sostenidas"),
+    om("¿Cómo se mide la longitud no arriostrada ℓu de una columna?", ["Entre ejes de vigas", "Distancia libre entre losas, vigas u otros apoyos laterales", "Altura de piso a piso", "Altura total del edificio"], 1,
+       "10.11.3.1", "debe tomarse como la distancia libre entre las losas de piso, vigas u otros elementos capaces de proporcionar apoyo lateral en la dirección que se está considerando."),
+    om("Columna con capitel: ¿hasta dónde se mide ℓu?", ["Hasta la cara superior de la losa", "Hasta el extremo inferior del capitel o cartela", "Hasta la mitad del capitel", "Hasta el eje de la losa"], 1,
+       "10.11.3.2", "debe medirse hasta el extremo inferior del capitel o cartela en el plano considerado."),
+    om("¿Qué esbeltez k ℓu/r máxima permite la E.060 en cualquier elemento a compresión?", ["22", "40", "100", "200"], 2,
+       "10.11.5", "Ningún elemento en compresión dentro de una estructura tendrá una esbeltez k ℓu / r mayor a 100."),
+    om("Columna con flexión biaxial: ¿cómo se magnifican los momentos?", ["Solo el mayor", "Cada eje por separado, según sus restricciones", "Con un solo δ para ambos", "No se magnifican"], 1,
+       "10.11.6", "el momento respecto a cada eje debe ser magnificado separadamente sobre la base de las condiciones de restricción correspondientes a dicho eje."),
+    om("Columna arriostrada en curvatura doble con M1/M2 = −0,5: ¿límite de k ℓu/r para ignorar la esbeltez?", ["28", "34", "40", "46"], 2,
+       "10.12.2", "no debe tomarse mayor que 40", "34 − 12 × (−0,5) = 40, que además es el tope."),
+    om("En la ec. 10-7, ¿cuándo es positivo M1/M2?", ["En curvatura doble", "En curvatura simple", "Siempre", "Cuando M1 > M2"], 1,
+       "10.12.2", "es positivo si el elemento se flexiona en curvatura simple y negativo si el elemento se flexiona en curvatura doble."),
+    om("¿Cuál es la expresión simplificada de EI para la magnificación (ec. 10-12)?", ["0,4 Ec Ig / (1 + βd)", "0,2 Ec Ig + Es Ise", "0,7 Ec Ig", "Ec Ig / 2,3"], 0,
+       "10.12.3", "Alternativamente:"),
+    om("Columna con cargas transversales entre sus apoyos: ¿cuánto vale Cm?", ["0,4", "0,6", "0,85", "1,0"], 3,
+       "10.12.3.1", "Para elementos con cargas transversales entre sus apoyos, Cm debe tomarse como 1,0."),
+    om("¿Cuál es el valor mínimo de Cm (ec. 10-13)?", ["0,2", "0,4", "0,6", "1,0"], 1,
+       "10.12.3.1", "Para elementos sin cargas transversales entre sus apoyos, Cm debe tomarse como:", "Cm = 0,6 + 0,4 (M1/M2) ≥ 0,4."),
+    om("Columna de h = 400 mm con Pu = 1000 kN: ¿M2,min?", ["15 kN·m", "27 kN·m", "30 kN·m", "42 kN·m"], 1,
+       "10.12.3.2", "donde 15 y h están en mm.", "M2,min = 1000 × (15 + 0,03 × 400) / 1000 = 27 kN·m."),
+    om("Si δs calculado con 1/(1 − Q) supera 1,5, ¿qué se hace?", ["Se usa 1,5", "Análisis de segundo orden (10.13.4.1) o 10.13.4.3", "Se ignora", "Se duplica la columna"], 1,
+       "10.13.4.2", "Si δs calculado de esta manera es mayor que 1,5 entonces δs Ms debe calcularse usando 10.13.4.1 (análisis de segundo orden) ó 10.13.4.3."),
+    om("Estabilidad bajo cargas de gravedad: si δsMs sale del 10.13.4.2, ¿qué Q máximo con 1,4 CM + 1,7 CV?", ["0,06", "0,25", "0,60", "2,5"], 2,
+       "10.13.6", "no debe exceder 0,60."),
+    om("En estructuras con desplazamiento lateral, ¿para qué momentos se diseñan las vigas?", ["Solo los de gravedad", "Los magnificados totales de las columnas que llegan al nudo", "Los de primer orden", "La mitad del de la columna"], 1,
+       "10.13.7", "los elementos a flexión deben diseñarse para los momentos magnificados totales provenientes de los elementos a compresión que concurren al nudo."),
+    om("Columna de f′c = 42 MPa y losa de 21 MPa confinada por los 4 lados: ¿resistencia equivalente en la conexión?", ["31,5 MPa", "38,9 MPa", "42 MPa", "21 MPa"], 1,
+       "10.15.3", "igual al 75% de la resistencia del concreto de la columna más el 35% de la resistencia del concreto del piso.", "0,75 × 42 + 0,35 × 21 = 31,5 + 7,35 = 38,85 MPa."),
+    om("Al usar la resistencia equivalente del 10.15.3, ¿qué relación máxima f′c columna / f′c losa se admite?", ["1,4", "2,0", "2,5", "3,0"], 2,
+       "10.15.3", "la relación entre la resistencia del concreto de la columna y la resistencia del concreto de la losa no debe ser mayor que 2,5 para el diseño."),
+    om("Columna compuesta con estribos: ¿espaciamiento vertical máximo de estribos?", ["16 db, 48 dest y la mitad de la menor dimensión", "16 db, 48 dest y la menor dimensión", "300 mm", "d/2"], 0,
+       "10.16.8.5", "El espaciamiento vertical entre los estribos transversales no debe exceder de la mitad de la menor dimensión lateral del elemento compuesto, de 48 veces el diámetro de los estribos ni de 16 veces el diámetro de las barras longitudinales."),
+    om("En la figura, ¿qué es A1?", ["El área de la zapata", "El área cargada", "La base del tronco de pirámide", "El área de acero"], 1,
+       "10.17.1", "La resistencia de diseño al aplastamiento del concreto no debe exceder φ(0,85 f’c A1)", fig="fig-10-17-1"),
+    om("¿Se aplica el 10.17 (aplastamiento) a los anclajes de postensado?", ["Sí", "No", "Solo con √(A2/A1) ≤ 1,5", "Solo en losas"], 1,
+       "10.17.2", "El numeral 10.17 no es aplicable a anclajes de postensado."),
+    om("¿A qué columnas se aplica la ecuación de Bresler (10-22)?", ["Circulares", "Cuadradas o rectangulares con armadura simétrica", "Cualquiera", "Solo con espiral"], 1,
+       "10.18", "aplicable a columnas cuadradas o rectangulares con armadura longitudinal simétrica."),
+    om("¿La ecuación Mux/φMnx + Muy/φMny ≤ 1 sirve también para vigas?", ["No", "Sí, para vigas con flexión biaxial", "Solo para vigas T", "Solo si Pu > 0,1 φPon"], 1,
+       "10.18", "La ecuación 10-23 es aplicable también a vigas sometidas a flexión biaxial."),
 ]
 
 CAPITULOS = [

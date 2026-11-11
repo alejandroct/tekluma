@@ -2667,12 +2667,12 @@
   {
    "numero": "10.11.3.1",
    "epigrafe": "La longitud no arriostrada de un elemento en compresión, u",
-   "texto": ", debe tomarse como la distancia libre entre las losas de piso, vigas u otros elementos capaces de proporcionar apoyo lateral en la dirección que se está considerando.",
+   "texto": "La longitud no arriostrada de un elemento en compresión, ℓu, debe tomarse como la distancia libre entre las losas de piso, vigas u otros elementos capaces de proporcionar apoyo lateral en la dirección que se está considerando.",
    "pagina": 81
   },
   {
    "numero": "10.11.3.2",
-   "texto": "Cuando existan capiteles o cartelas en las columnas, u debe medirse hasta el extremo inferior del capitel o cartela en el plano considerado.",
+   "texto": "Cuando existan capiteles o cartelas en las columnas, ℓu debe medirse hasta el extremo inferior del capitel o cartela en el plano considerado.",
    "pagina": 82
   },
   {
@@ -2693,7 +2693,7 @@
   {
    "numero": "10.11.5",
    "epigrafe": "Ningún elemento en compresión dentro de una estructura tendrá una esbeltez",
-   "texto": "/ k u r mayor a 100.",
+   "texto": "Ningún elemento en compresión dentro de una estructura tendrá una esbeltez k ℓu / r mayor a 100.",
    "pagina": 82
   },
   {
@@ -2746,7 +2746,7 @@
   },
   {
    "numero": "10.13.2",
-   "texto": "Para elementos en compresión no arriostrados contra desplazamientos laterales, pueden despreciarse los efectos de la esbeltez cuando / u k r es menor que 22.",
+   "texto": "Para elementos en compresión no arriostrados contra desplazamientos laterales, pueden despreciarse los efectos de la esbeltez cuando k ℓu / r es menor que 22.",
    "pagina": 84
   },
   {
