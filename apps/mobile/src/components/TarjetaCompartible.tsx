@@ -90,7 +90,7 @@ export function TarjetaCompartible({ estado, onCerrar }: { estado: EstadoLiga; o
 
         <View style={estilos.acciones}>
           <BotonVivo disabled={ocupado} onPress={compartirImagen} style={[estilos.boton, { backgroundColor: AMBAR }]}>
-            {ocupado ? <ActivityIndicator color={NAVY} /> : <Text style={[estilos.botonTexto, { color: NAVY }]}>Compartir imagen</Text>}
+            {ocupado ? <ActivityIndicator color={NAVY} /> : <Text style={[estilos.botonTexto, { color: NAVY }]}>Compartir mi liga</Text>}
           </BotonVivo>
           <BotonVivo onPress={() => compartirPorWhatsApp(textoLiga(estado))} style={[estilos.boton, { backgroundColor: "#25D366" }]}>
             <Text style={[estilos.botonTexto, { color: "#FFFFFF" }]}>Enviar por WhatsApp</Text>

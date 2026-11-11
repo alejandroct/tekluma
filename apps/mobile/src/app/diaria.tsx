@@ -230,10 +230,10 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
 
       <ImagenReto datos={imagen} captura={captura} />
       <BotonVivo onPress={() => compartir(texto)} style={[estilos.compartir, { backgroundColor: "#F6F5F2" }]}>
-        <Text style={estilos.compartirTexto}>Retar a mi grupo con imagen</Text>
+        <Text style={estilos.compartirTexto}>Retar a mi grupo</Text>
       </BotonVivo>
       <Pressable onPress={() => compartirPorWhatsApp(texto)} hitSlop={8}>
-        <Text style={{ color: "#A9B7CC", fontWeight: "600", textAlign: "center" }}>Enviar solo el texto por WhatsApp</Text>
+        <Text style={{ color: "#A9B7CC", fontWeight: "600", textAlign: "center" }}>Enviar por WhatsApp</Text>
       </Pressable>
       <Pressable onPress={() => router.push("/duelo/nuevo")} hitSlop={8}>
         <View style={[estilos.filaIcono, { justifyContent: "center", marginTop: 4 }]}>

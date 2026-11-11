@@ -214,10 +214,10 @@ function Marcador({ duelo, resultado }: { duelo: Duelo; resultado: ResultadoDuel
         {rivales.length === 0 && <Text style={{ color: "#A9B7CC", fontSize: 15 }}>Envía el reto y mira quién te gana.</Text>}
         <ImagenReto datos={imagen} captura={captura} />
         <BotonVivo onPress={() => compartir(texto)} style={[estilos.boton, { backgroundColor: "#F6F5F2", marginTop: 8 }]}>
-          <Text style={[estilos.botonTexto, { color: "#0F1B2D" }]}>Retar con imagen</Text>
+          <Text style={[estilos.botonTexto, { color: "#0F1B2D" }]}>Retar a un colega</Text>
         </BotonVivo>
         <Pressable onPress={() => compartirPorWhatsApp(texto)} hitSlop={8}>
-          <Text style={{ color: "#A9B7CC", fontWeight: "600", textAlign: "center" }}>Enviar solo el texto por WhatsApp</Text>
+          <Text style={{ color: "#A9B7CC", fontWeight: "600", textAlign: "center" }}>Enviar por WhatsApp</Text>
         </Pressable>
       </Animated.View>
 
