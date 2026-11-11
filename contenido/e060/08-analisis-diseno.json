@@ -793,9 +793,9 @@
        "L": {
         "etiqueta": "ℓn",
         "valores": [
+         5000,
          6000,
-         7000,
-         8000
+         7000
         ],
         "unidad": "mm"
        }
@@ -803,7 +803,7 @@
       "formula": "L/4",
       "tolerancia": 0.02,
       "unidadResultado": "mm",
-      "explicacion": "Con 8t a cada lado: 300 + 16t ≥ 1900 mm, que supera ℓn/4 en estos casos; manda ℓn/4."
+      "explicacion": "Con 8t a cada lado: 300 + 16t ≥ 1900 mm y con la mitad de la distancia libre, 3300 mm; ambos superan ℓn/4 (≤ 1750 mm), así que manda ℓn/4."
      },
      "citas": [
       {
@@ -1121,6 +1121,503 @@
       {
        "articulo": "8.10.2",
        "extracto": "El ancho efectivo de la losa usada como ala de las vigas T no debe exceder de la cuarta parte de la luz libre de la viga…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Además de la resistencia, ¿qué exige verificar el 8.1.1?",
+      "opciones": [
+       "Solo el costo",
+       "El comportamiento en servicio: deflexiones, agrietamiento, vibraciones, fatiga",
+       "Solo la durabilidad",
+       "Nada más"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.1.1",
+       "extracto": "Se comprobará que la respuesta de las elementos estructurales en condiciones de servicio (deflexiones, agrietamiento, vibraciones, fatiga, etc.) queden limitadas a valores tales que el funcionamiento sea satisfactorio."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Para qué elementos NO se permiten los métodos aproximados de análisis del 8.3.2?",
+      "opciones": [
+       "Losas macizas",
+       "Concreto preesforzado",
+       "Vigas continuas",
+       "Columnas"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.3.2",
+       "extracto": "Excepto para elementos de concreto preesforzado, se pueden emplear métodos aproximados de análisis estructural"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Coeficientes aproximados: ¿cuál es el límite de carga viva respecto a la muerta (en servicio)?",
+      "opciones": [
+       "Igual",
+       "Hasta el doble",
+       "Hasta tres veces",
+       "Sin límite"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "(d) La carga viva en servicio no sea mayor a tres veces la carga muerta en servicio."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se pueden usar los coeficientes aproximados si hay cargas concentradas?",
+      "opciones": [
+       "Sí, siempre",
+       "No: las cargas deben ser uniformes y de igual magnitud en cada tramo",
+       "Sí, si son pequeñas",
+       "Solo en losas"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "(c) Las cargas sean uniformemente distribuidas y no existan cargas concentradas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Tramo extremo cuyo extremo discontinuo NO está restringido: ¿coeficiente de momento positivo?",
+      "opciones": [
+       "1/9",
+       "1/11",
+       "1/14",
+       "1/16"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "(a) Tramos extremos El extremo discontinuo no está restringido …"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Tramo extremo monolítico con el apoyo: ¿coeficiente de momento positivo?",
+      "opciones": [
+       "1/11",
+       "1/12",
+       "1/14",
+       "1/16"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "El extremo discontinuo es monolítico con el apoyo …"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Viga de cuatro tramos: ¿coeficiente de momento negativo en la cara exterior del primer apoyo interior?",
+      "opciones": [
+       "1/9",
+       "1/10",
+       "1/11",
+       "1/12"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "(b) Más de dos tramos: …"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Coeficiente de momento negativo en las demás caras de apoyos interiores?",
+      "opciones": [
+       "1/10",
+       "1/11",
+       "1/12",
+       "1/16"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Momento negativo en las demás caras de apoyos interiores …"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Apoyo exterior monolítico que es una columna: ¿coeficiente de momento negativo en su cara interior?",
+      "opciones": [
+       "1/11",
+       "1/14",
+       "1/16",
+       "1/24"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Cuando el apoyo es una columna: …"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuándo vale 1/12 el momento negativo en todos los apoyos?",
+      "opciones": [
+       "Siempre en vigas",
+       "Losas de luces ≤ 3 m, o vigas con Σ rigidez de columnas / rigidez de viga > 8",
+       "Vigas de más de 6 m",
+       "Con un solo tramo"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Momento negativo en la cara de todos los apoyos para losas con luces que no excedan de 3 m y vigas en las cuales el cociente entre la suma de las rigideces de las columnas y la rigidez de la viga exceda de 8 en cada extremo del tramo:"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Coeficientes aproximados: ¿cortante en las caras de los apoyos que no son el primero interior?",
+      "opciones": [
+       "wu ℓn / 2",
+       "1,15 wu ℓn / 2",
+       "wu ℓn / 3",
+       "wu ℓn"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Caras de todos los demás apoyos: …"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para momentos negativos en caras de apoyos interiores, ¿qué ℓn se usa?",
+      "opciones": [
+       "La luz mayor",
+       "La luz menor",
+       "El promedio de las luces libres adyacentes",
+       "La distancia entre ejes"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "8.3.4",
+       "extracto": "Para el cálculo de los momentos negativos en las caras de los apoyos interiores, …se tomará como el promedio de las luces libres adyacentes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué deformaciones excluye la deformación neta εt usada para redistribuir?",
+      "opciones": [
+       "Las de flexión",
+       "Preesfuerzo efectivo, flujo plástico, retracción y temperatura",
+       "Solo la de temperatura",
+       "Ninguna"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.4.1",
+       "extracto": "La deformación neta excluye las deformaciones unitarias causadas por: el preesfuerzo efectivo, el flujo plástico, la retracción de fraguado y la variación de temperatura."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se puede redistribuir momentos si se usaron los coeficientes aproximados del 8.3.4?",
+      "opciones": [
+       "Sí, hasta 20 %",
+       "No",
+       "Sí, sin límite",
+       "Solo los positivos"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.4.1",
+       "extracto": "Excepto cuando se empleen métodos aproximados para el cálculo de los momentos flectores, se permite disminuir los momentos amplificados"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Para qué rango de peso unitario es válida Ec = wc^1,5 · 0,043 √f′c?",
+      "opciones": [
+       "1000 a 2000 kg/m³",
+       "1450 a 2500 kg/m³",
+       "1800 a 2400 kg/m³",
+       "Cualquier peso"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.5.1",
+       "extracto": "Para concretos de peso unitario wc comprendido entre 1450 y 2500 kg/m3"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Sin ensayos confiables, ¿cuánto vale el módulo de corte G del concreto?",
+      "opciones": [
+       "Ec / 2",
+       "Ec / 2,3",
+       "Ec / 2,5",
+       "0,4 Ec"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.5.4",
+       "extracto": "En ausencia de resultados experimentales confiables, el módulo de rigidez al esfuerzo cortante del concreto se podrá suponer igual a:"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo se obtiene el módulo de elasticidad Ep del acero de preesforzado?",
+      "opciones": [
+       "Es = 200 000 MPa",
+       "Mediante ensayos o lo da el fabricante",
+       "4700 √f′c",
+       "190 000 MPa fijo"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.5.6",
+       "extracto": "El módulo de elasticidad, Ep, para el acero de preesforzado deberá determinarse mediante ensayos o será suministrado por el fabricante."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Viga monolítica con sus apoyos: ¿con qué momentos se puede diseñar?",
+      "opciones": [
+       "Los del eje del apoyo",
+       "Los reducidos a la cara de los apoyos",
+       "El doble del positivo",
+       "wu ℓ² / 8"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.7.3",
+       "extracto": "Las vigas construidas monolíticamente con sus apoyos se podrán diseñar usando los momentos reducidos a la cara de los apoyos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para el momento máximo de una columna, ¿dónde se coloca la carga viva?",
+      "opciones": [
+       "En todos los tramos",
+       "En solo uno de los tramos adyacentes del piso",
+       "En tramos alternados",
+       "No se considera"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.8.1",
+       "extracto": "considerando la carga viva actuando en solo uno de los tramos adyacentes del piso o techo bajo consideración."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Viga con losa a un solo lado: ¿qué límites tiene el ala sobresaliente?",
+      "opciones": [
+       "ℓn/12, 6 t y mitad de la distancia libre a la siguiente alma",
+       "ℓn/4 y 8 t",
+       "4 bw",
+       "ℓn/8 y 6 t"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "8.10.3",
+       "extracto": "(a) La doceava parte de la luz libre de la viga. (b) Seis veces el espesor de la losa. (c) La mitad de la distancia libre a la siguiente alma."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Viga T aislada: ¿qué espesor mínimo y ancho máximo tiene el ala?",
+      "opciones": [
+       "t ≥ bw/2 y b ≤ 4 bw",
+       "t ≥ bw y b ≤ 8 bw",
+       "t ≥ 50 mm y b ≤ ℓn/4",
+       "t ≥ bw/3 y b ≤ 6 bw"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "8.10.4",
+       "extracto": "el ala debe tener un espesor no menor de la mitad del ancho del alma y un ancho efectivo no mayor de cuatro veces el ancho del alma."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Ala de viga T con refuerzo principal paralelo a la viga: ¿espaciamiento máximo del refuerzo transversal superior?",
+      "opciones": [
+       "3 t y 300 mm",
+       "5 t y 400 mm",
+       "3 t y 450 mm",
+       "400 mm"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.10.5",
+       "extracto": "(b) El espaciamiento del refuerzo transversal no debe exceder de cinco veces el espesor de la losa ni de 400 mm"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Aligerado con viguetas de 100 mm: ¿altura máxima de la vigueta?",
+      "opciones": [
+       "250 mm",
+       "300 mm",
+       "350 mm",
+       "400 mm"
+      ],
+      "correcta": 2,
+      "explicacion": "3,5 × 100 = 350 mm."
+     },
+     "citas": [
+      {
+       "articulo": "8.11.2",
+       "extracto": "El ancho de las nervaduras no debe ser menor de 100 mm y debe tener una altura no mayor de 3,5 veces su ancho mínimo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Losa nervada con 600 mm libres entre nervios: ¿espesor mínimo de la losa superior?",
+      "opciones": [
+       "40 mm",
+       "50 mm",
+       "60 mm",
+       "75 mm"
+      ],
+      "correcta": 1,
+      "explicacion": "600/12 = 50 mm, que coincide con el mínimo absoluto."
+     },
+     "citas": [
+      {
+       "articulo": "8.11.5",
+       "extracto": "El espesor de la losa no debe ser menor que 1/12 de la distancia libre entre las nervaduras, ni menor de 50 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Losa nervada con 900 mm libres entre nervios: ¿cómo se diseña?",
+      "opciones": [
+       "Como losa nervada con Vc + 10 %",
+       "Como losas y vigas comunes",
+       "No se permite construirla",
+       "Como losa en dos direcciones"
+      ],
+      "correcta": 1,
+      "explicacion": "Supera los 750 mm del 8.11.3."
+     },
+     "citas": [
+      {
+       "articulo": "8.11.4",
+       "extracto": "Las losas nervadas que no cumplan con las limitaciones de 8.11.1 a 8.11.3, deben diseñarse como losas y vigas comunes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Piso con tránsito intenso: ¿qué espesor de desgaste mínimo se descuenta de la sección resistente?",
+      "opciones": [
+       "5 mm",
+       "10 mm",
+       "15 mm",
+       "25 mm"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "8.12.2",
+       "extracto": "A éste se le asignará una dimensión no menor de 10 mm, salvo que la superficie expuesta se endurezca mediante algún tratamiento."
       }
      ]
     }
