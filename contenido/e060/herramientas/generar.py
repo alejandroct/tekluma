@@ -2505,6 +2505,38 @@ CAP3 += [
        "3.7.3", "(c) El cemento a granel se almacenará en silos metálicos cuyas características deberán impedir el ingreso de humedad o elementos contaminantes."),
 ]
 
+# ══════════ Revisión hoja por hoja · Cap. 4 (págs. 27–30) ══════════
+CAP4 += [
+    om("Según la Tabla 4.1, agregado de 19 mm con exposición severa: ¿aire total?", ["5,0 %", "5,5 %", "6,0 %", "7,0 %"], 2,
+       "4.2.1", "Los concretos de peso normal y los de pesos livianos expuestos a condiciones de congelamiento y deshielo o a productos químicos descongelantes deben tener aire incorporado, con el contenido total de aire indicado en la Tabla 4.1.",
+       fig="tabla-4-1"),
+    om("Agregado de 25 mm, exposición moderada y f′c = 42 MPa: ¿aire total requerido?", ["3,5 %", "4,5 %", "5,0 %", "6,0 %"], 0,
+       "4.2.1", "Para concretos con f’c mayor de 35 MPa, se puede reducir el aire incorporado indicado en la Tabla 4.1 en 1%.",
+       "Tabla 4.1: 4,5 %; con f′c > 35 MPa se reduce 1 %: 3,5 %.", fig="tabla-4-1"),
+    om("¿Cuál de estos casos es «exposición severa» al congelamiento según la E.060?", ["Muro exterior", "Losa sin contacto con el suelo", "Tablero de puente o estacionamiento", "Viga interior"], 2,
+       "4.2.1", "En la Tabla 4.1, una exposición severa es cuando, en un clima frío, el concreto puede estar en contacto casi constante con la humedad antes de congelarse o cuando se emplean sales descongelantes. Ejemplos de esto son pavimentos, tableros de puentes, aceras, estacionamientos, y tanques para agua."),
+    om("Según la Tabla 4.2, ¿qué f′c mínimo pide un concreto de baja permeabilidad expuesto al agua?", ["21 MPa", "28 MPa", "31 MPa", "35 MPa"], 1,
+       "4.2.2", "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta.",
+       fig="tabla-4-2"),
+    om("En concreto expuesto a descongelantes, ¿qué porcentaje máximo de ceniza volante permite la Tabla 4.3?", ["10 %", "25 %", "35 %", "50 %"], 1,
+       "4.2.3", "…el peso máximo de las cenizas volantes, otras puzolanas, microsílice o las escorias incluidas en el concreto, no debe exceder los porcentajes respecto al peso total de materiales cementantes dados en la Tabla 4.3.",
+       fig="tabla-4-3"),
+    om("¿Y de escoria (ASTM C 989)?", ["10 %", "25 %", "35 %", "50 %"], 3,
+       "4.2.3", "…el peso máximo de las cenizas volantes, otras puzolanas, microsílice o las escorias incluidas en el concreto, no debe exceder los porcentajes respecto al peso total de materiales cementantes dados en la Tabla 4.3.",
+       fig="tabla-4-3"),
+    om("Suelo con 0,5 % de sulfato soluble en agua: ¿qué exposición es según la Tabla 4.4?", ["Insignificante", "Moderada", "Severa", "Muy severa"], 2,
+       "4.3.1", "El concreto que va a estar expuesto a soluciones o suelos que contengan sulfatos debe cumplir con los requisitos de la Tabla 4.4.",
+       "Severa: 0,2 ≤ SO₄ < 2,0 % en el suelo."),
+    om("Exposición muy severa a sulfatos: ¿qué cemento exige la Tabla 4.4?", ["Tipo II", "Tipo IP(MS)", "Tipo V", "Tipo V más puzolana"], 3,
+       "4.3.1", "El concreto debe estar hecho con un cemento que proporcione resistencia a los sulfatos y que tenga una relación agua-material cementante máxima y un f’c mínimo según la Tabla 4.4."),
+    om("Además de elegir bien el cemento, ¿qué ayuda a un concreto durable frente a sulfatos?", ["Alto asentamiento", "Baja relación a/mc, buena compactación y curado húmedo suficiente", "Mucha agua de mezclado", "Curado al aire"], 1,
+       "4.3.1", "…son esenciales otros requisitos para lograr concretos durables expuestos a concentraciones de sulfatos, tales como: baja relación agua - material cementante, resistencia, adecuado contenido de aire, bajo asentamiento, adecuada compactación, uniformidad, recubrimiento adecuado del refuerzo y suficiente curado húmedo…"),
+    om("Según la Tabla 4.5, concreto armado que en servicio estará seco o protegido de la humedad: ¿ion cloruro máximo?", ["0,15 %", "0,30 %", "0,60 %", "1,00 %"], 3,
+       "4.4.1", "…no deben exceder los límites de la Tabla 4.5.", fig="tabla-4-5"),
+    om("Concreto armado expuesto a agua de mar: además de la Tabla 4.2, ¿qué más exige el 4.4.2?", ["Cemento tipo I", "El recubrimiento mínimo del 7.7", "Aire incorporado", "Acero galvanizado"], 1,
+       "4.4.2", "…deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua-material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7."),
+]
+
 CAPITULOS = [
     ("03", "3", "e060-c03-materiales", "E.060 · Cap. 3 · Materiales", "Agregados, agua, acero de refuerzo, aditivos y almacenamiento.", CAP3),
     ("04", "4", "e060-c04-durabilidad", "E.060 · Cap. 4 · Durabilidad", "Aire incorporado, exposición especial, sulfatos y cloruros (Tablas 4.1 a 4.5).", CAP4),
