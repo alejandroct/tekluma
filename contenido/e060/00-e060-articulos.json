@@ -6179,7 +6179,7 @@
   },
   {
    "numero": "18.9.3.3",
-   "texto": "En las zonas de momento negativo sobre las columnas de apoyo, el área mínima del refuerzo adherido, As, en la parte superior de la losa en cada dirección, debe calcularse mediante:\n\n 0,00075 As Acf = (18-8)\n donde cf A es la mayor área de la sección transversal bruta de las franjas viga - losa en los dos pórticos equivalentes ortogonales que se intersectan en la columna en una losa en dos direcciones.\n\n El refuerzo adherido requerido por la ecuación (18-8) debe distribuirse entre líneas que están 1,5h fuera de las caras opuestas de la columna de apoyo. Deben colocarse por lo menos 4 barras o alambres en cada dirección. El espaciamiento del refuerzo adherido no debe exceder de 300 mm.",
+   "texto": "En las zonas de momento negativo sobre las columnas de apoyo, el área mínima del refuerzo adherido, As, en la parte superior de la losa en cada dirección, debe calcularse mediante:\n\n As = 0,00075 Acf (18-8)\n donde Acf es la mayor área de la sección transversal bruta de las franjas viga - losa en los dos pórticos equivalentes ortogonales que se intersectan en la columna en una losa en dos direcciones.\n\n El refuerzo adherido requerido por la ecuación (18-8) debe distribuirse entre líneas que están 1,5h fuera de las caras opuestas de la columna de apoyo. Deben colocarse por lo menos 4 barras o alambres en cada dirección. El espaciamiento del refuerzo adherido no debe exceder de 300 mm.",
    "pagina": 164
   },
   {
@@ -6226,7 +6226,7 @@
   {
    "numero": "18.10.4",
    "epigrafe": "Redistribución",
-   "texto": "de momentos en elementos preesforzados continuos sometidos a flexión",
+   "texto": "Redistribución de momentos en elementos preesforzados continuos sometidos a flexión",
    "pagina": 165
   },
   {
@@ -6364,7 +6364,7 @@
   },
   {
    "numero": "18.13.4.1",
-   "texto": "El esfuerzo nominal a tracción del refuerzo adherido esta limitada a fy para el refuerzo no preesforzado y a fpy para el refuerzo preesforzado. El esfuerzo nominal de tracción del refuerzo no adherido preesforzado para resistir las fuerzas de tracción en las zonas de anclaje debe estar limitado a 70 fps fse = + en MPa.",
+   "texto": "El esfuerzo nominal a tracción del refuerzo adherido esta limitada a fy para el refuerzo no preesforzado y a fpy para el refuerzo preesforzado. El esfuerzo nominal de tracción del refuerzo no adherido preesforzado para resistir las fuerzas de tracción en las zonas de anclaje debe estar limitado a fps = fse + 70 en MPa.",
    "pagina": 167
   },
   {
