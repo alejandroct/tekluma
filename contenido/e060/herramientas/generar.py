@@ -18,6 +18,13 @@ PARCHES = [
     ("10.11.5", "/ k u r mayor a 100.", "Ningún elemento en compresión dentro de una estructura tendrá una esbeltez k ℓu / r mayor a 100."),
     ("10.13.2", "cuando / u k r es menor", "cuando k ℓu / r es menor"),
     ("11.6.3.7", ", no debe ser menor que:", "El área adicional de refuerzo longitudinal necesario para resistir torsión, Aℓ, no debe ser menor que:"),
+    ("13.2.1", "deberán basarse", "En un sistema de losas apoyado en columnas o muros, las dimensiones c1, c2 y ℓn deberán basarse"),
+    ("13.6.2.5", "debe considerarse entre", "La luz libre ℓn debe considerarse entre"),
+    ("13.6.2.5", "El valor de n empleado", "El valor de ℓn empleado"),
+    ("13.6.2.5", "0,65 1\n\n .", "0,65 ℓ1."),
+    ("13.6.5.2", ") 1 2 1 α / f entre", "Para valores de (αf1 ℓ2/ℓ1) entre"),
+    ("13.6.8.1", ") 1 2 1 α / f igual", "Las vigas con (αf1 ℓ2/ℓ1) igual"),
+    ("13.6.8.2", ") 1 2 1 α / f menor", "Al diseñar vigas con (αf1 ℓ2/ℓ1) menor"),
     ("12.1.2", "fc′ usados", "Los valores de √f’c usados"),
     ("12.2.3", "ℓ debe ser:", "Para barras corrugadas y alambres corrugados, ℓd debe ser:"),
     ("12.3.3", "ℓ por los siguientes", "Se permite multiplicar la longitud ℓdc por los siguientes"),
@@ -32,6 +39,10 @@ for _n, _viejo, _nuevo in PARCHES:
     _a = next(a for a in ARTICULOS if a["numero"] == _n)
     assert _viejo in _a["texto"], (_n, _viejo)
     _a["texto"] = _a["texto"].replace(_viejo, _nuevo, 1)
+# Las Tablas 13.1 a 13.3 (págs. 138–143) quedaron volcadas como números sueltos al final de 13.7.4.
+_a = next(a for a in ARTICULOS if a["numero"] == "13.7.4")
+assert "\n\n TABLA 13.1" in _a["texto"]
+_a["texto"] = _a["texto"].split("\n\n TABLA 13.1")[0] + "\n\n Tablas 13.1, 13.2 y 13.3: coeficientes Ca y Cb para momentos negativos y positivos (casos 1 a 9, m = A/B de 1,00 a 0,50)."
 # En los caps. 12 y 22 la extracción invirtió los subíndices de ℓ («d ℓ» por «ℓd»).
 for _a in ARTICULOS:
     if _a["numero"].split(".")[0] in ("12", "22"):
@@ -3060,6 +3071,82 @@ CAP12 += [
        "12.18.1", "no debe ser menor que la mayor de 1,3 ℓd y 200 mm."),
     om("Malla lisa con As ≥ 2 veces la requerida: ¿traslape mínimo entre alambres transversales extremos?", ["La mayor de 1,5 ℓd y 50 mm", "1,3 ℓd y 200 mm", "150 mm", "300 mm"], 0,
        "12.19.2", "no debe ser menor que la mayor de 1,5 ℓd y 50 mm"),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 13 (págs. 127–143) ══════════
+T13 = "Ca: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección corta."
+CAP13 += [
+    om("¿Cómo se define el área de apoyo efectiva para c1, c2 y ℓn?", ["La sección de la columna", "La intersección con el mayor cono, pirámide o cuña a no más de 45° dentro de columna y capitel", "El ábaco completo", "La franja de columna"], 1,
+       "13.2.1", "con el mayor cono circular recto, pirámide recta o cuña, cuyas superficies estén localizadas dentro de la columna y el capitel o ménsula, y que estén orientadas a un ángulo no mayor de 45° con respecto al eje de la columna."),
+    om("Refuerzo positivo que llega a un borde discontinuo: ¿cuánto debe embeberse en la viga o muro perimetral?", ["50 mm", "100 mm", "150 mm", "ℓd"], 2,
+       "13.3.3", "de por lo menos 150 mm en las vigas, muros o columnas perimetrales."),
+    om("Losa en voladizo más allá del apoyo: ¿dónde se ancla su refuerzo?", ["En la viga de borde", "Dentro de la propia losa", "En la columna", "No necesita anclaje"], 1,
+       "13.3.5", "se hará el anclaje del refuerzo dentro de la propia losa."),
+    om("Refuerzo especial de esquina: ¿hasta qué distancia desde la esquina se coloca?", ["1/4 de la luz menor", "1/5 de la luz mayor", "1/3 de la luz mayor", "1,5 m"], 1,
+       "13.3.6.3", "El refuerzo especial deberá colocarse a partir de la esquina hasta una distancia en cada dirección igual a 1/5 de la longitud de la luz mayor del paño."),
+    om("Para calcular el refuerzo de la losa, ¿qué espesor del ábaco bajo la losa se puede considerar como máximo?", ["Todo", "1/4 de la distancia del extremo del ábaco a la cara de la columna", "h/2", "1/6 de la luz"], 1,
+       "13.3.7", "el espesor del ábaco bajo la losa no deberá considerarse mayor a un cuarto de la distancia desde el extremo del ábaco a la cara de la columna o de su capitel."),
+    om("En la figura, losa sin ábacos: ¿hasta dónde llega el 50 % del refuerzo superior de la franja de columnas?", ["0,20 ℓn", "0,22 ℓn", "0,30 ℓn", "0,33 ℓn"], 2,
+       "13.3.8.1", "Además de los otros requisitos de 13.3, el refuerzo en las losas sin vigas debe tener como mínimo las longitudes indicadas en la Fig. 13.3.8.", fig="fig-13-3-8"),
+    om("En la figura, ¿hasta dónde se prolonga el refuerzo superior de la franja central?", ["0,15 ℓn", "0,20 ℓn", "0,22 ℓn", "0,30 ℓn"], 2,
+       "13.3.8.1", "Además de los otros requisitos de 13.3, el refuerzo en las losas sin vigas debe tener como mínimo las longitudes indicadas en la Fig. 13.3.8.", fig="fig-13-3-8"),
+    om("Con luces adyacentes distintas, ¿con qué luz se define la prolongación del refuerzo negativo?", ["La menor", "La mayor", "El promedio", "La del paño exterior"], 1,
+       "13.3.8.2", "debe basarse en los requisitos de la luz mayor."),
+    om("Losa sin vigas: ¿cuántas barras inferiores de la franja de columna deben pasar por el núcleo de la columna?", ["Ninguna", "Al menos una", "Al menos dos en cada dirección", "Todas"], 2,
+       "13.3.8.4", "Al menos dos barras o alambres inferiores de la franja de columna, en cada dirección, deben pasar a través del núcleo de la columna y deben anclarse en los apoyos exteriores."),
+    om("Abertura en la zona común de una franja de columna y una central: ¿cuánto refuerzo puede interrumpir?", ["1/8", "1/4 de cada franja", "1/3", "1/2"], 1,
+       "13.4.2.3", "las aberturas no deben interrumpir más de la cuarta parten del refuerzo en cada franja."),
+    om("¿En qué ancho se transmite γf Mu por flexión?", ["Franja de columna", "c2 + 3h (1,5 h a cada lado de la columna)", "c2 + 2d", "ℓ2/2"], 1,
+       "13.5.3.1", "comprendido entre ejes localizados a una y media veces el espesor de la losa o del ábaco (1,5 h) fuera de las caras opuestas de la columna o el capitel"),
+    om("Apoyo de borde con momento paralelo al borde: ¿cuándo puede llevarse γf hasta 1,0?", ["Si Vu ≤ 0,75 φVc", "Si Vu ≤ 0,4 φVc", "Siempre", "Nunca"], 0,
+       "13.5.3.2", "se permite que el valor de γf dado en la ecuación (13-1) sea incrementado hasta 1,0 siempre que Vu en apoyos de borde no exceda 0,75 φVc"),
+    om("¿Se puede ajustar γf en losas preesforzadas?", ["Sí, hasta 1,0", "Sí, hasta 25 %", "No", "Solo en esquinas"], 2,
+       "13.5.3.2", "No se permiten ajustes a γf en sistemas de losas preesforzadas."),
+    om("Método Directo: ¿cuánto pueden desalinearse las columnas?", ["5 % de la luz", "10 % de la luz", "15 % de la luz", "No pueden"], 1,
+       "13.6.1.4", "Las columnas pueden estar desalineadas hasta 10% de la luz"),
+    om("Método Directo con vigas en todos los lados: ¿qué rango debe cumplir αf1 ℓ2² / (αf2 ℓ1²)?", ["0,5 a 2,0", "0,2 a 5,0", "1,0 a 3,0", "Sin límite"], 1,
+       "13.6.1.6", "Para un paño con vigas entre los apoyos en todos los lados, debe satisfacerse la condición (13-2) para las dos direcciones perpendiculares."),
+    om("Paños a ambos lados con distinta luz transversal: ¿qué ℓ2 se usa en Mo?", ["La mayor", "La menor", "El promedio de las adyacentes", "La del paño crítico"], 2,
+       "13.6.2.3", "se debe tomar como el promedio de las luces transversales adyacentes."),
+    om("Columna circular en el Método Directo: ¿cómo se trata para ℓn?", ["Como su diámetro", "Como un apoyo cuadrado de la misma área", "Como un punto", "Como 0,8 del diámetro"], 1,
+       "13.6.2.5", "Los apoyos circulares o en forma de polígono regular deben tratarse como apoyos cuadrados que tengan la misma área."),
+    om("En la tabla, paño extremo de losa con vigas entre todos los apoyos: ¿fracción de Mo para momento positivo?", ["0,50", "0,52", "0,57", "0,63"], 2,
+       "13.6.3.3", "En cada paño extremo, el momento estático amplificado total, Mo, debe distribuirse como se indica en la tabla a continuación:", fig="tabla-13-6-3-3"),
+    om("En la tabla, losa sin vigas interiores y con viga de borde: ¿negativo exterior?", ["0,16 Mo", "0,26 Mo", "0,30 Mo", "0,65 Mo"], 2,
+       "13.6.3.3", "En cada paño extremo, el momento estático amplificado total, Mo, debe distribuirse como se indica en la tabla a continuación:", fig="tabla-13-6-3-3"),
+    om("En un apoyo común a dos paños con negativos distintos, ¿para qué momento se diseña?", ["El menor", "El mayor de los dos", "El promedio", "La suma"], 1,
+       "13.6.3.4", "deben diseñarse para resistir el mayor de los dos momentos amplificados negativos interiores"),
+    om("ℓ2/ℓ1 = 2 y αf1 ℓ2/ℓ1 ≥ 1: ¿fracción del negativo interior en la franja de columna?", ["0,45", "0,60", "0,75", "0,90"], 0,
+       "13.6.4.1", "Debe interpolarse linealmente entre los valores dados."),
+    om("Negativo exterior sin vigas (αf1 = 0) y βt ≥ 25: ¿qué fracción toma la franja de columna?", ["0,60", "0,75", "0,90", "1,00"], 1,
+       "13.6.4.2", "Las franjas de columnas deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado exterior:"),
+    om("Apoyos (columnas o muros) de ancho ≥ 0,75 ℓ2: ¿cómo se reparten los negativos?", ["Todo a la franja de columna", "Uniformes a lo largo de ℓ2", "75 % a la franja de columna", "Como en 13.6.4.1"], 1,
+       "13.6.4.3", "los momentos negativos deben considerarse uniformemente distribuidos a lo largo de"),
+    om("αf1 ℓ2/ℓ1 = 0,5: ¿qué fracción del momento de la franja de columna toman las vigas?", ["0", "0,425", "0,85", "1,0"], 1,
+       "13.6.5.2", "debe obtenerse por interpolación lineal entre 0,85 y 0 respectivamente.", "A medio camino entre 0 y 1,0: 0,85 × 0,5 = 0,425."),
+    om("Franja central junto a un borde apoyado en un muro: ¿para qué se diseña?", ["La mitad", "El doble del momento de su mitad de franja", "Lo mismo", "No lleva refuerzo"], 1,
+       "13.6.6.3", "debe ser diseñada para resistir el doble del momento asignado a la mitad de la franja central correspondiente al primer eje de apoyos interiores."),
+    om("Método Directo: ¿cuánto se pueden modificar los momentos positivo y negativo?", ["5 %", "10 %, sin bajar el Mo requerido", "20 %", "No se pueden"], 1,
+       "13.6.7", "Se permite que los momentos positivo y negativo amplificados sean modificados hasta en un 10%"),
+    om("¿Qué coeficiente lleva la ec. 13-7 para el momento en columnas de un apoyo interior?", ["0,05", "0,07", "0,10", "0,125"], 1,
+       "13.6.9.2", "En un apoyo interior, los elementos de apoyo arriba y abajo de la losa deben resistir el momento amplificado especificado por la ecuación (13-7) en proporción directa a sus rigideces"),
+    om("Método de Coeficientes: ¿cuánto pueden diferir luces contiguas?", ["10 %", "20 %", "Un tercio de la luz mayor", "La mitad"], 2,
+       "13.7.1.3", "no deben diferir en más de un tercio de la luz mayor."),
+    om("Método de Coeficientes: ¿qué ancho tiene la franja central?", ["0,25 ℓ", "La mitad del paño", "Un tercio del paño", "ℓ2 − c2"], 1,
+       "13.7.2.1", "Se denomina Franja Central a aquella de ancho igual a la mitad del paño o tablero"),
+    om("Método de Coeficientes: ¿cómo varían los momentos en las franjas de columnas?", ["Constantes", "Del total junto a la franja central a un tercio en el borde del paño", "A cero en el borde", "Al doble"], 1,
+       "13.7.3.3", "desde el valor total en el borde de la franja central hasta un tercio de este valor en el borde del paño."),
+    om("Si el negativo a un lado del apoyo es menor que el 80 % del otro, ¿qué se hace?", ["Se usa el mayor", "Se reparte la diferencia según rigideces de las losas", "Se promedian", "Se ignora"], 1,
+       "13.7.3.4", "la diferencia será distribuida en proporción a las rigideces relativas de las losas."),
+    om("Cortante en losa con un borde continuo opuesto a uno discontinuo: ¿qué aumento?", ["10 %", "15 %", "20 %", "25 %"], 1,
+       "13.7.4", "Cuando exista un borde continuo opuesto a uno discontinuo, la fuerza cortante se incrementará en 15%."),
+    om("En la Tabla 13.1, Caso 2 con m = 0,80: ¿Ca para momento negativo?", ["0,045", "0,055", "0,065", "0,071"], 2,
+       "13.7.3.2", T13, fig="tabla-13-1"),
+    om("En la Tabla 13.2 (carga muerta), Caso 1 con m = 1,00: ¿Ca positivo?", ["0,018", "0,027", "0,036", "0,045"], 2,
+       "13.7.3.2", T13, fig="tabla-13-2"),
+    om("En la Tabla 13.3 (carga viva), Caso 2 con m = 1,00: ¿Ca positivo?", ["0,018", "0,027", "0,032", "0,036"], 1,
+       "13.7.3.2", T13, fig="tabla-13-3"),
 ]
 
 CAPITULOS = [
