@@ -2405,12 +2405,12 @@ CAP13 += [
 
 CAP14 += [
     om("¿Cuál es la cuantía mínima de refuerzo vertical en muros (Cap. 14)?", ["0,0012", "0,0015", "0,0020", "0,0025"], 1, "14.3.1", de(CAP14, "14.3.1")),
-    om("¿Y la horizontal?", ["0,0012", "0,0015", "0,0020", "0,0025"], 2, "14.3.1", de(CAP14, "14.3.1")),
+    om("¿Cuál es la cuantía mínima de refuerzo horizontal en muros (Cap. 14)?", ["0,0012", "0,0015", "0,0020", "0,0025"], 2, "14.3.1", de(CAP14, "14.3.1")),
     om("¿Cuál es el espaciamiento máximo del refuerzo en muros?", ["2 t y 300 mm", "3 t y 400 mm", "5 t y 450 mm", "400 mm"], 1, "14.3.3", de(CAP14, "14.3.3")),
     om("Método empírico: ¿qué k se usa en un muro arriostrado arriba y abajo y restringido al giro?", ["0,8", "1,0", "1,5", "2,0"], 0, "14.5.2", de(CAP14, "14.5.2")),
     om("¿Espesor mínimo de un muro exterior de sótano?", ["150 mm", "200 mm", "250 mm", "300 mm"], 1, "14.5.3.2", de(CAP14, "14.5.3.2")),
     om("¿Qué refuerzo mínimo se exige alrededor de puertas y ventanas en muros?", ["1 barra de 1/2″", "2 barras de 5/8″", "2 barras de 1/2″", "Estribos cerrados"], 1, "14.10.3", de(CAP14, "14.10.3")),
-    om("¿Cuánto se prolongan esas barras más allá de las esquinas como mínimo?", ["300 mm", "450 mm", "600 mm", "ℓd sin mínimo"], 2, "14.10.3", de(CAP14, "14.10.3")),
+    om("Las barras de 5/8″ alrededor de vanos en muros: ¿cuánto se prolongan como mínimo más allá de las esquinas?", ["300 mm", "450 mm", "600 mm", "ℓd sin mínimo"], 2, "14.10.3", de(CAP14, "14.10.3")),
 ]
 
 CAP15 += [
@@ -3147,6 +3147,37 @@ CAP13 += [
        "13.7.3.2", T13, fig="tabla-13-2"),
     om("En la Tabla 13.3 (carga viva), Caso 2 con m = 1,00: ¿Ca positivo?", ["0,018", "0,027", "0,032", "0,036"], 1,
        "13.7.3.2", T13, fig="tabla-13-3"),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 14 (págs. 144–146) ══════════
+CAP14 += [
+    om("Placas que resisten sismo en su plano: ¿con qué capítulo se diseñan?", ["Cap. 14", "Cap. 21", "Cap. 11", "Cap. 22"], 1,
+       "14.1", "provenientes de las acciones sísmicas, denominados placas o muros de corte, se diseñarán de acuerdo a las disposiciones del Capítulo 21."),
+    om("Muro de 200 mm con una carga concentrada sobre 300 mm de apoyo y cargas a 2 m entre centros: ¿longitud efectiva?", ["300 mm", "700 mm", "1100 mm", "2000 mm"], 2,
+       "14.2.5", "no deberá exceder la distancia centro a centro entre cargas ni la longitud de la superficie de contacto más dos veces el espesor del muro a cada lado", "300 + 2 × (2 × 200) = 1100 mm, menor que 2000 mm."),
+    om("¿Cuándo debe confinarse con estribos el refuerzo vertical de un muro?", ["Siempre", "Si su cuantía excede 0,01 del área total", "Si el muro mide más de 200 mm", "Nunca"], 1,
+       "14.3.4", "El refuerzo vertical distribuido no necesita estar confinado por estribos a menos que su cuantía exceda de 0,01 del área total de concreto"),
+    om("¿Dónde debe caer la resultante de cargas para usar el método empírico en un muro de carga?", ["En el núcleo central de la sección", "Dentro del tercio central del espesor", "En el eje del muro", "Donde sea"], 1,
+       "14.5.1", "cuando la resultante de todas las cargas amplificadas esté localizada dentro del tercio central del espesor total del muro"),
+    om("Método empírico: muro arriostrado arriba y abajo, sin restricción al giro en ambos extremos: ¿k?", ["0,8", "1,0", "1,5", "2,0"], 1,
+       "14.5.2", "No restringidos contra la rotación en ambos extremos"),
+    om("Método empírico: muro no arriostrado contra desplazamiento lateral: ¿k?", ["1,0", "1,2", "1,5", "2,0"], 3,
+       "14.5.2", "Para muros no arriostrados con el fin de evitar el desplazamiento lateral"),
+    om("Muro de carga de 2,7 m de altura libre y 6 m de largo (método empírico): ¿espesor mínimo?", ["100 mm", "108 mm", "150 mm", "240 mm"], 1,
+       "14.5.3.1", "El espesor de los muros de carga no debe ser menor de 1/25 de la altura entre elementos que le proporcionen apoyo lateral o de la longitud del muro, la que sea menor, ni tampoco debe ser menor que 100 mm.", "2700 / 25 = 108 mm > 100 mm."),
+    om("Muro no portante con 4 m entre apoyos laterales: ¿espesor mínimo?", ["100 mm", "133 mm", "160 mm", "200 mm"], 1,
+       "14.6.1", "El espesor de los muros que no sean de carga no debe ser menor de 100 mm, ni menor de 1/30 de la distancia mínima entre elementos que le proporcionen apoyo lateral.", "4000 / 30 ≈ 133 mm."),
+    om("Muro usado como viga de cimentación: ¿qué refuerzo mínimo debe tener?", ["Ninguno", "El de 14.3", "El de vigas (10.5) solamente", "0,0025 en ambas direcciones"], 1,
+       "14.7.2", "El refuerzo de los muros empleados como vigas de cimentación debe cumplir con los requisitos de 14.3."),
+    om("Muro de contención: ¿cuándo puede omitirse el refuerzo mínimo de 14.3?", ["Nunca", "Si el proyectista dispone juntas de contracción y procedimientos que controlen contracción y temperatura", "Si mide menos de 250 mm", "Si está enterrado"], 1,
+       "14.8.2", "Este requisito podrá exceptuarse cuando el Ingeniero Proyectista disponga juntas de contracción y señale procedimientos constructivos que controlen los efectos de contracción y temperatura."),
+    om("En un muro de contención grueso, ¿en qué cara puede concentrarse más el acero de temperatura?", ["En la cara contra el suelo", "En la cara expuesta", "Por igual siempre", "En el centro"], 1,
+       "14.8.3", "Este refuerzo podrá disponerse en mayor proporción en la cara expuesta del muro."),
+    om("Muros de contención anclados: ¿qué debe verificarse especialmente?", ["Solo el volteo", "El punzonamiento por los anclajes y cada etapa de construcción", "La fisuración", "Nada adicional"], 1,
+       "14.9.1", "deberá prestarse especial atención en la verificación de los esfuerzos de punzonamiento ocasionados por los dispositivos de anclaje."),
+    om("¿Se consideran las aberturas al calcular la rigidez de un muro?", ["No", "Sí, en rigideces y resistencias", "Solo en resistencia", "Solo si son mayores de 1 m"], 1,
+       "14.10.2", "La presencia de aberturas debe considerarse en el cálculo de rigideces y resistencias."),
 ]
 
 CAPITULOS = [

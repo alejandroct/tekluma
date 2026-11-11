@@ -514,7 +514,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Y la horizontal?",
+      "pregunta": "¿Cuál es la cuantía mínima de refuerzo horizontal en muros (Cap. 14)?",
       "opciones": [
        "0,0012",
        "0,0015",
@@ -609,7 +609,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuánto se prolongan esas barras más allá de las esquinas como mínimo?",
+      "pregunta": "Las barras de 5/8″ alrededor de vanos en muros: ¿cuánto se prolongan como mínimo más allá de las esquinas?",
       "opciones": [
        "300 mm",
        "450 mm",
@@ -622,6 +622,256 @@
       {
        "articulo": "14.10.3",
        "extracto": "…deben colocarse por lo menos dos barras de 5/8” alrededor de todos los vanos de ventanas y puertas. Estas barras deben prolongarse más allá de las esquinas de las aberturas una distancia igual a la longitud de anclaje en tracción pero no menos de 600 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Placas que resisten sismo en su plano: ¿con qué capítulo se diseñan?",
+      "opciones": [
+       "Cap. 14",
+       "Cap. 21",
+       "Cap. 11",
+       "Cap. 22"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.1",
+       "extracto": "provenientes de las acciones sísmicas, denominados placas o muros de corte, se diseñarán de acuerdo a las disposiciones del Capítulo 21."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Muro de 200 mm con una carga concentrada sobre 300 mm de apoyo y cargas a 2 m entre centros: ¿longitud efectiva?",
+      "opciones": [
+       "300 mm",
+       "700 mm",
+       "1100 mm",
+       "2000 mm"
+      ],
+      "correcta": 2,
+      "explicacion": "300 + 2 × (2 × 200) = 1100 mm, menor que 2000 mm."
+     },
+     "citas": [
+      {
+       "articulo": "14.2.5",
+       "extracto": "no deberá exceder la distancia centro a centro entre cargas ni la longitud de la superficie de contacto más dos veces el espesor del muro a cada lado"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuándo debe confinarse con estribos el refuerzo vertical de un muro?",
+      "opciones": [
+       "Siempre",
+       "Si su cuantía excede 0,01 del área total",
+       "Si el muro mide más de 200 mm",
+       "Nunca"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.3.4",
+       "extracto": "El refuerzo vertical distribuido no necesita estar confinado por estribos a menos que su cuantía exceda de 0,01 del área total de concreto"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Dónde debe caer la resultante de cargas para usar el método empírico en un muro de carga?",
+      "opciones": [
+       "En el núcleo central de la sección",
+       "Dentro del tercio central del espesor",
+       "En el eje del muro",
+       "Donde sea"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.5.1",
+       "extracto": "cuando la resultante de todas las cargas amplificadas esté localizada dentro del tercio central del espesor total del muro"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Método empírico: muro arriostrado arriba y abajo, sin restricción al giro en ambos extremos: ¿k?",
+      "opciones": [
+       "0,8",
+       "1,0",
+       "1,5",
+       "2,0"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.5.2",
+       "extracto": "No restringidos contra la rotación en ambos extremos"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Método empírico: muro no arriostrado contra desplazamiento lateral: ¿k?",
+      "opciones": [
+       "1,0",
+       "1,2",
+       "1,5",
+       "2,0"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "14.5.2",
+       "extracto": "Para muros no arriostrados con el fin de evitar el desplazamiento lateral"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Muro de carga de 2,7 m de altura libre y 6 m de largo (método empírico): ¿espesor mínimo?",
+      "opciones": [
+       "100 mm",
+       "108 mm",
+       "150 mm",
+       "240 mm"
+      ],
+      "correcta": 1,
+      "explicacion": "2700 / 25 = 108 mm > 100 mm."
+     },
+     "citas": [
+      {
+       "articulo": "14.5.3.1",
+       "extracto": "El espesor de los muros de carga no debe ser menor de 1/25 de la altura entre elementos que le proporcionen apoyo lateral o de la longitud del muro, la que sea menor, ni tampoco debe ser menor que 100 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Muro no portante con 4 m entre apoyos laterales: ¿espesor mínimo?",
+      "opciones": [
+       "100 mm",
+       "133 mm",
+       "160 mm",
+       "200 mm"
+      ],
+      "correcta": 1,
+      "explicacion": "4000 / 30 ≈ 133 mm."
+     },
+     "citas": [
+      {
+       "articulo": "14.6.1",
+       "extracto": "El espesor de los muros que no sean de carga no debe ser menor de 100 mm, ni menor de 1/30 de la distancia mínima entre elementos que le proporcionen apoyo lateral."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Muro usado como viga de cimentación: ¿qué refuerzo mínimo debe tener?",
+      "opciones": [
+       "Ninguno",
+       "El de 14.3",
+       "El de vigas (10.5) solamente",
+       "0,0025 en ambas direcciones"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.7.2",
+       "extracto": "El refuerzo de los muros empleados como vigas de cimentación debe cumplir con los requisitos de 14.3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Muro de contención: ¿cuándo puede omitirse el refuerzo mínimo de 14.3?",
+      "opciones": [
+       "Nunca",
+       "Si el proyectista dispone juntas de contracción y procedimientos que controlen contracción y temperatura",
+       "Si mide menos de 250 mm",
+       "Si está enterrado"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.8.2",
+       "extracto": "Este requisito podrá exceptuarse cuando el Ingeniero Proyectista disponga juntas de contracción y señale procedimientos constructivos que controlen los efectos de contracción y temperatura."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En un muro de contención grueso, ¿en qué cara puede concentrarse más el acero de temperatura?",
+      "opciones": [
+       "En la cara contra el suelo",
+       "En la cara expuesta",
+       "Por igual siempre",
+       "En el centro"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.8.3",
+       "extracto": "Este refuerzo podrá disponerse en mayor proporción en la cara expuesta del muro."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Muros de contención anclados: ¿qué debe verificarse especialmente?",
+      "opciones": [
+       "Solo el volteo",
+       "El punzonamiento por los anclajes y cada etapa de construcción",
+       "La fisuración",
+       "Nada adicional"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.9.1",
+       "extracto": "deberá prestarse especial atención en la verificación de los esfuerzos de punzonamiento ocasionados por los dispositivos de anclaje."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se consideran las aberturas al calcular la rigidez de un muro?",
+      "opciones": [
+       "No",
+       "Sí, en rigideces y resistencias",
+       "Solo en resistencia",
+       "Solo si son mayores de 1 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.10.2",
+       "extracto": "La presencia de aberturas debe considerarse en el cálculo de rigideces y resistencias."
       }
      ]
     }
