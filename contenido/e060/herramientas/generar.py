@@ -2230,10 +2230,9 @@ CAP5 += [
 
 CAP6 += [
     om("¿Qué porcentaje máximo de la sección de una columna pueden ocupar los ductos embebidos?", ["2 %", "4 %", "6 %", "10 %"], 1, "6.3.4", "…no deben ocupar más del 4% del área de la sección transversal que se empleó para calcular su resistencia…"),
-    om("Losa de 200 mm: ¿diámetro exterior máximo de una tubería embebida?", ["50 mm", "66 mm", "80 mm", "100 mm"], 1, "6.3.5", "(a) No deben tener dimensiones exteriores mayores que la tercera parte del espesor total de la losa, muro o viga, donde estén embebidos.", "200 / 3 ≈ 66 mm."),
+    om("Losa de 200 mm: ¿diámetro exterior máximo de una tubería embebida?", ["50 mm", "66,7 mm", "80 mm", "100 mm"], 1, "6.3.5", "(a) No deben tener dimensiones exteriores mayores que la tercera parte del espesor total de la losa, muro o viga, donde estén embebidos.", "200 / 3 = 66,7 mm."),
     om("¿A qué distancia mínima entre centros se colocan tuberías embebidas paralelas?", ["1 diámetro", "2 diámetros", "3 diámetros", "5 diámetros"], 2, "6.3.5", "(b) No deben estar espaciados a menos de tres veces su diámetro o ancho medido de centro a centro."),
     om("Tubería embebida en contacto con el suelo: ¿recubrimiento mínimo?", ["20 mm", "30 mm", "40 mm", "50 mm"], 2, "6.3.10", "El recubrimiento de concreto para las tuberías y sus conexiones no debe ser menor de 40 mm en superficies de concreto expuestas a la intemperie o en contacto con el suelo…"),
-    om("¿Dónde se ubican las juntas de construcción en vigas y losas?", ["Sobre los apoyos", "En el tercio central del vano", "A un cuarto de la luz", "Donde termine la jornada"], 1, "6.4.4", "Las juntas de construcción en los pisos y techos deben estar localizadas dentro del tercio central del vano de las losas, vigas y vigas principales."),
     om("¿Qué metal no debe dejarse embebido sin protección por su reacción con el concreto?", ["Cobre", "Aluminio", "Acero galvanizado", "Bronce"], 1, "6.3.2", "No deben dejarse embebidos en el concreto estructural, tuberías y ductos de aluminio, a menos que se recubran o se pinten adecuadamente…"),
     om("Antes de desencofrar, ¿a qué pueden equivaler las cargas de construcción?", ["A la mitad de la carga viva", "A las cargas vivas de diseño", "Solo al peso propio", "A cero"], 1, "6.2.1", "Debe considerarse que las cargas de construcción pueden ser tan altas como las cargas vivas de diseño…"),
 ]
@@ -2570,6 +2569,31 @@ CAP5 += [
        "5.12.4", "No se utilizarán dispositivos de combustión durante las primeras 24 horas, a menos que se tomen precauciones para evitar la exposición del concreto a gases que contengan bióxido de carbono."),
     om("¿Qué define el «clima cálido» según la E.060?", ["Temperatura mayor de 30 °C", "Cualquier combinación de alta temperatura, baja humedad y viento que perjudique al concreto", "Solo la costa en verano", "Temperatura del concreto mayor de 32 °C"], 1,
        "5.13.1", "Para los fines de esta Norma se considera clima cálido cualquier combinación de alta temperatura ambiente, baja humedad relativa y alta velocidad del viento, que tienda a perjudicar la calidad del concreto fresco o endurecido."),
+]
+
+# ══════════ Revisión hoja por hoja · Cap. 6 (págs. 42–45) ══════════
+CAP6 += [
+    om("¿Qué condición básica deben cumplir los encofrados respecto al mortero?", ["Ser porosos para drenar", "Ser herméticos para impedir su fuga", "Ser de madera", "Estar mojados"], 1,
+       "6.1.2", "Los encofrados deberán ser suficientemente herméticos para impedir la fuga del mortero."),
+    om("Encofrados de elementos preesforzados: ¿qué deben permitir?", ["Que no se mueva nada", "Los movimientos del elemento al aplicar el preesfuerzo sin dañarlo", "Retirarse a las 24 h", "El paso de tuberías"], 1,
+       "6.1.6", "Los encofrados para elementos de concreto preesforzado deben estar diseñados y construidos de tal manera que permitan los movimientos del elemento sin causarle daños durante la aplicación de la fuerza de preesforzado."),
+    om("¿Quién define el procedimiento de retiro de puntales y reapuntalamiento?", ["La Supervisión", "El constructor, antes de iniciar la construcción", "El proyectista", "El proveedor de encofrados"], 1,
+       "6.2.2.1", "Con anterioridad al inicio de la construcción, el constructor debe definir un procedimiento y una programación para la remoción de los apuntalamientos, para la instalación de los reapuntalamientos y para calcular las cargas transferidas a la estructura durante el proceso."),
+    om("¿En qué caso no aplican los requisitos de retiro de puntales del 6.2.2?", ["Vigas y losas apoyadas sobre el terreno", "Losas de techo", "Vigas de más de 6 m", "Losas postensadas"], 0,
+       "6.2.2", "Los requisitos de 6.2.2.1 a 6.2.2.3 se deben cumplir en la construcción de vigas y losas excepto cuando se construyan apoyadas sobre el terreno."),
+    om("Para que una tubería embebida pueda reemplazar al concreto en compresión, ¿qué diámetro interior máximo puede tener?", ["25 mm", "50 mm", "75 mm", "100 mm"], 1,
+       "6.3.6", "(c) Tengan un diámetro interior nominal no superior a 50 mm y estén separados no menos de tres diámetros medidos centro a centro.",
+       "Además deben ser de acero o hierro, al menos calibre 40, y no estar expuestas a corrosión."),
+    om("En una losa maciza, ¿dónde se colocan las tuberías embebidas?", ["Bajo la malla inferior", "Entre las capas de refuerzo superior e inferior", "Sobre la malla superior", "Donde sea más fácil"], 1,
+       "6.3.9", "En losas macizas, las tuberías deben colocarse entre las capas de refuerzo superior e inferior, a menos que se requieran para irradiar calor o fundir nieve."),
+    om("Si una tubería choca con una barra, ¿qué dice la norma?", ["Se corta la barra", "Se dobla la barra", "Las tuberías se instalan sin cortar, doblar ni desplazar el refuerzo", "Se mueve la barra 5 cm"], 2,
+       "6.3.12", "Las tuberías y ductos deben fabricarse e instalarse de tal forma que no se requiera cortar, doblar o desplazar el refuerzo de su posición apropiada."),
+    om("¿Quién aprueba un cambio en la ubicación de las juntas de construcción?", ["El maestro de obra", "La Supervisión", "El proveedor de concreto", "Nadie, es libre"], 1,
+       "6.4.1", "Cualquier variación debe ser aprobada por la supervisión."),
+    om("Con encofrados de vaciado continuo de muros y losas, ¿se puede obviar la espera a que el muro deje de ser plástico?", ["No, nunca", "Sí, si la experiencia demuestra que no se produce el agrietamiento", "Sí, siempre", "Solo en un piso"], 1,
+       "6.4.6", "En los sistemas de encofrados basados en vaciados continuos de muros y losas, esta disposición podrá obviarse, si la experiencia acumulada en el uso de estos sistemas demuestra que no se suscita este problema."),
+    om("¿Cómo se construyen las vigas, capiteles y ábacos respecto a la losa?", ["Por separado", "Monolíticamente con la losa, salvo indicación en planos", "Siempre prefabricados", "Después de desencofrar la losa"], 1,
+       "6.4.7", "Las vigas, capiteles de columnas y ábacos de losas, deben considerarse como parte del sistema de losas y deben construirse monolíticamente con las mismas, a menos que en los planos se indique otra cosa."),
 ]
 
 CAPITULOS = [
