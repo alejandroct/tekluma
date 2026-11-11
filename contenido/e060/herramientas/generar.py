@@ -18,12 +18,26 @@ PARCHES = [
     ("10.11.5", "/ k u r mayor a 100.", "Ningún elemento en compresión dentro de una estructura tendrá una esbeltez k ℓu / r mayor a 100."),
     ("10.13.2", "cuando / u k r es menor", "cuando k ℓu / r es menor"),
     ("11.6.3.7", ", no debe ser menor que:", "El área adicional de refuerzo longitudinal necesario para resistir torsión, Aℓ, no debe ser menor que:"),
+    ("12.1.2", "fc′ usados", "Los valores de √f’c usados"),
+    ("12.2.3", "ℓ debe ser:", "Para barras corrugadas y alambres corrugados, ℓd debe ser:"),
+    ("12.3.3", "ℓ por los siguientes", "Se permite multiplicar la longitud ℓdc por los siguientes"),
+    ("12.5.3", "dg ℓ de 12.5.2", "La longitud ℓdg de 12.5.2"),
+    ("12.8", "TRACCIÓN\n Se debe", "Se debe"),
+    ("12.13.2", "igual o mayor que 0,17 / db fyt f c′.", "igual o mayor que 0,17 db fyt / √f’c."),
+    ("12.15.2", "TRACCIÓN (*) Relación", "TRACCIÓN\n As proporcionado / As requerido (*) · Porcentaje máximo de As empalmado en la longitud requerida para dicho empalme: 50 100\n Igual o mayor que 2 Clase A Clase B Menor que 2 Clase B Clase B\n (*) Relación"),
+    ("12.16.1", "\n As proporcionado\n As requerido\n (*)\n Porcentaje máximo de As empalmado\n en la longitud requerida para dicho\n empalme\n 50 100\n Igual o mayor que 2 Clase A Clase B\n Menor que 2 Clase B Clase B\n", ""),
     ("11.9.5", "/ Asc bd no debe ser menor que ( ) 0,04 / f c fy ′ .", "La cuantía Asc / bd no debe ser menor que 0,04 (f’c / fy)."),
 ]
 for _n, _viejo, _nuevo in PARCHES:
     _a = next(a for a in ARTICULOS if a["numero"] == _n)
     assert _viejo in _a["texto"], (_n, _viejo)
     _a["texto"] = _a["texto"].replace(_viejo, _nuevo, 1)
+# En los caps. 12 y 22 la extracción invirtió los subíndices de ℓ («d ℓ» por «ℓd»).
+for _a in ARTICULOS:
+    if _a["numero"].split(".")[0] in ("12", "22"):
+        for _viejo, _nuevo in (("dg ℓ", "ℓdg"), ("dc ℓ", "ℓdc"), ("d ℓ", "ℓd")):
+            _a["texto"] = _a["texto"].replace(_viejo, _nuevo)
+        _a["texto"] = _a["texto"].replace(" ,", ",").replace("ℓd,debe", "ℓd, debe")
 POR_NUMERO = {a["numero"]: a for a in ARTICULOS}
 
 NORMA = {
@@ -884,8 +898,9 @@ CAP12 = [
     tabla("Tabla 12.2 · Factores de modificación de ℓd", ["Valor"],
           [("ψt · barras superiores", ["1,3"]), ("ψe · epóxico con recubrimiento < 3db o espaciamiento < 6db", ["1,5"]), ("ψe · otras barras con epóxico", ["1,2"]), ("ψs · barras de 3/4″ y menores", ["0,8"]), ("λ · concreto liviano", ["1,3"])], 0, 0,
           "12.2.4", "Ψt Barras superiores.* 1,3 … Ψe … 1,5 … 1,2 … Ψs Barras de 3/4” y menores. 0,8 … λ Concreto liviano. 1,3"),
-    completar("El producto ψt ψe no necesita considerarse mayor que {{1,7}}.",
-              "12.2.4", "El producto: Ψt Ψe no necesita considerarse mayor que 1,7"),
+    completar("Según la nota de la Tabla 12.2, el producto Ψt Ψs no necesita considerarse mayor que {{1,7}}.",
+              "12.2.4", "El producto: Ψt Ψs no necesita considerarse mayor que 1,7",
+              "Así figura en la E.060; en el ACI 318 este tope de 1,7 se aplica al producto ψt ψe."),
     concepto("¿Cuándo se permite reducir ℓd por refuerzo en exceso, y cuándo no?",
              "Se multiplica por As requerido / As proporcionado. No se permite si se exige específicamente desarrollar fy ni en elementos con responsabilidad sísmica.",
              "12.2.5", "Se permite reducir ℓd cuando el refuerzo en un elemento sometido a flexión excede el requerido por análisis, mediante el factor de modificación (As requerido)÷(As proporcionado), excepto en los casos en los cuales se requiere específicamente el anclaje para desarrollar fy o cuando se trate de elementos con responsabilidad sísmica."),
@@ -921,9 +936,6 @@ CAP12 = [
            figura("fig-12-5-3-a"),
            "En barras de 1 3/8″ y menores: recubrimiento lateral (normal al plano del gancho) ≥ 65 mm y, en ganchos de 90°, recubrimiento ≥ 50 mm en la extensión más allá del gancho.",
            "12.5.3", "(a) Para barras de 1 3/8” y menores, ganchos con recubrimiento lateral (normal al plano del gancho) no menor de 65 mm y para ganchos de 90º adicionalmente con recubrimiento en la extensión de la barra más allá del gancho no menor de 50 mm … 0,7"),
-    opcion("Gancho de 90° confinado por estribos perpendiculares a no más de 3 db a lo largo de ℓdg: ¿qué factor se aplica?",
-           ["0,7", "0,75", "0,8", "1,0"], 2,
-           "12.5.3", "(b) Para ganchos de 90º de barras 1 3/8” y menores que se encuentran confinados por estribos perpendiculares a la barra que se está desarrollando, espaciados a lo largo de ℓdg a no más de 3 db… 0,8"),
     completar("Los ganchos {{no}} se consideran efectivos para el desarrollo de barras en compresión.",
               "12.5.4", "Los ganchos no deben considerarse efectivos para el desarrollo de barras en compresión."),
     concepto("¿Cuánto se extiende una barra más allá del punto donde ya no se necesita por flexión?",
@@ -2350,7 +2362,7 @@ CAP12 += [
     om("¿Cuánto vale ψs para barras de 3/4″ y menores?", ["0,8", "1,0", "1,2", "1,3"], 0, "12.2.4", de(CAP12, "12.2.4")),
     om("¿Cuál es la longitud de desarrollo mínima en compresión?", ["150 mm", "200 mm", "300 mm", "8 db"], 1, "12.3.2", de(CAP12, "12.3.2")),
     om("Paquete de 3 barras: ¿cuánto aumenta ℓd de cada barra?", ["10 %", "20 %", "33 %", "50 %"], 1, "12.4.1", de(CAP12, "12.4.1")),
-    om("¿Y en un paquete de 4 barras?", ["20 %", "25 %", "33 %", "50 %"], 2, "12.4.1", de(CAP12, "12.4.1")),
+    om("Paquete de 4 barras: ¿cuánto aumenta ℓd de cada barra?", ["20 %", "25 %", "33 %", "50 %"], 2, "12.4.1", de(CAP12, "12.4.1")),
     om("En la figura, ¿desde dónde se mide ℓdg?", ["Desde el inicio del gancho", "Desde la sección crítica hasta el borde exterior del gancho", "Desde el centro de la columna", "Desde el estribo"], 1, "12.5.2", de(CAP12, "12.5.2"), fig="fig-12-5-2"),
     om("Con estos recubrimientos (lateral ≥ 65 mm, extensión ≥ 50 mm), ¿por cuánto se multiplica ℓdg?", ["0,7", "0,75", "0,8", "1,0"], 0, "12.5.3", de(CAP12, "12.5.3"), fig="fig-12-5-3-a"),
     om("Gancho de 90° con estribos a ≤ 3 db como en la figura: ¿factor para ℓdg?", ["0,7", "0,75", "0,8", "1,0"], 2, "12.5.3", de(CAP12, "12.5.3"), fig="fig-12-5-3-b"),
@@ -2360,7 +2372,6 @@ CAP12 += [
     om("Empalme clase B en tracción: ¿qué longitud?", ["1,0 ℓd", "1,2 ℓd", "1,3 ℓd", "1,5 ℓd"], 2, "12.15.1", de(CAP12, "12.15.1")),
     om("Si se empalma el 100 % del acero en la misma zona, ¿qué clase de empalme corresponde?", ["Clase A", "Clase B", "Mecánico obligatorio", "No se permite"], 1, "12.15.2", de(CAP12, "12.15.2")),
     om("Traslape en compresión con fy = 420 MPa: ¿longitud?", ["0,043 fy db", "0,071 fy db", "0,13 fy db", "1,3 ℓd"], 1, "12.16.1", de(CAP12, "12.16.1")),
-    om("¿Por encima de qué diámetro no se permiten traslapes (salvo 12.16.2)?", ["1″", "1 1/4″", "1 3/8″", "1 3/4″"], 2, "12.14.2.1", de(CAP12, "12.14.2.1")),
     om("¿Qué resistencia debe desarrollar un empalme mecánico?", ["fy", "1,25 fy", "1,5 fy", "fu"], 1, "12.14.3.2", de(CAP12, "12.14.3.2")),
 ]
 
@@ -2972,6 +2983,83 @@ CAP11 += [
        "11.12.2.2", "En cada dirección fpc no debe ser menor que 0,9 MPa, ni tomarse mayor que 3,5 MPa."),
     om("En la figura (columna interior), ¿cuánto vale Ac de la sección crítica?", ["2d (c1 + c2 + 2d)", "d (2c1 + c2 + 2d)", "4 d c1", "(c1 + d)(c2 + d)"], 0,
        "11.12.6.2", "El esfuerzo cortante que resulta de la transferencia de momento por excentricidad del cortante debe suponerse que varía linealmente alrededor del centroide de las secciones críticas definidas en 11.12.1.2.", fig="fig-11-12-6"),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 12 (págs. 114–126) ══════════
+CAP12 += [
+    om("Con la Tabla 12.1, barra inferior de 1″ sin epóxico en concreto normal: ¿qué expresión da ℓd?", ["fy db / (2,6 √f′c)", "fy db / (2,1 √f′c)", "0,24 fy db / √f′c", "0,071 fy db"], 1,
+       "12.2.2", "Para barras corrugadas o alambres corrugados, ℓd se calculará de acuerdo a la Tabla 12.1.", fig="tabla-12-1"),
+    om("En la figura, sin estribos mínimos, ¿qué espaciamiento libre permite aún usar la Tabla 12.1?", ["≥ db", "≥ 2 db, con recubrimiento ≥ db", "≥ 25 mm", "≥ 3 db"], 1,
+       "12.2.2", "Para barras corrugadas o alambres corrugados, ℓd se calculará de acuerdo a la Tabla 12.1.", fig="fig-12-2-2"),
+    om("En la ec. 12-1, ¿se puede tomar Ktr = 0 aunque haya estribos?", ["No", "Sí, como simplificación de diseño", "Solo en columnas", "Solo si cb ≥ 2,5 db"], 1,
+       "12.2.3", "Se permite usar Ktr = 0, como una simplificación de diseño, aún si hay refuerzo transversal presente."),
+    om("¿Se puede reducir ℓd por refuerzo en exceso en un elemento con responsabilidad sísmica?", ["Sí, siempre", "No", "Solo hasta 25 %", "Solo con ganchos"], 1,
+       "12.2.5", "excepto en los casos en los cuales se requiere específicamente el anclaje para desarrollar fy o cuando se trate de elementos con responsabilidad sísmica."),
+    om("En la Tabla 12.2, ¿qué factor λ lleva el concreto liviano?", ["0,75", "0,85", "1,0", "1,3"], 3,
+       "12.2.4", "Los factores indicados en la Tabla 12.1, que afectan la longitud de desarrollo o empalmes de barras y alambres corrugados en tracción, se indican en la Tabla 12.2", fig="tabla-12-2"),
+    om("En la Tabla 12.2, barra con epóxico y recubrimiento ≥ 3 db y espaciamiento ≥ 6 db: ¿ψe?", ["1,0", "1,2", "1,3", "1,5"], 1,
+       "12.2.4", "Los factores indicados en la Tabla 12.1, que afectan la longitud de desarrollo o empalmes de barras y alambres corrugados en tracción, se indican en la Tabla 12.2", fig="tabla-12-2"),
+    om("¿Desde cuánta altura de concreto fresco debajo una barra se considera «superior»?", ["150 mm", "200 mm", "300 mm", "450 mm"], 2,
+       "12.2.4", "* Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas."),
+    om("Para los factores de la Tabla 12.2, ¿cómo se trata un paquete de barras?", ["Como la barra mayor", "Como una barra de diámetro que reproduzca el área total del paquete", "Como barras sueltas", "Con ψt = 1,3"], 1,
+       "12.4.2", "un paquete de barras debe ser tratado como una barra de un diámetro que reproduzca el área total del paquete."),
+    om("¿Cuál es el mínimo de ℓdg para una barra con gancho estándar?", ["300 mm", "El menor entre 8 db y 150 mm", "12 db", "200 mm"], 1,
+       "12.5.1", "pero no debe ser menor que el menor valor entre 8 db y 150 mm."),
+    om("Gancho con barra recubierta con epóxico: ¿qué ψe se usa en ℓdg?", ["1,0", "1,2", "1,3", "1,5"], 1,
+       "12.5.2", "con Ψe igual a 1,2 para refuerzo con recubrimiento epóxico y λ igual a 1,3 para concretos livianos."),
+    om("En la figura, gancho de 180° con estribos perpendiculares a ≤ 3 db: ¿factor para ℓdg?", ["0,7", "0,75", "0,8", "1,0"], 2,
+       "12.5.3", "(c) Ganchos de 180º en barras de 1 3/8” y menores que se encuentran confinados con estribos perpendiculares a la barra que se está desarrollando, espaciados a no más de 3 db a lo largo de", fig="fig-12-5-3-c"),
+    om("Con los factores 0,8 de ganchos, ¿a qué distancia máxima del borde exterior del gancho va el primer estribo?", ["db", "2 db", "3 db", "50 mm"], 1,
+       "12.5.3", "El primer estribo debe envolver la parte doblada del gancho a una distancia no mayor que 2 db, medida desde el borde exterior del gancho."),
+    om("¿Cómo se demuestra que un anclaje mecánico es adecuado?", ["Con cálculo simple", "Con ensayos o certificados del fabricante", "No hace falta", "Con prueba de carga de la estructura"], 1,
+       "12.6.2", "La efectividad de los anclajes mecánicos debe comprobarse con resultados de ensayos o certificados del fabricante que muestren que tales dispositivos mecánicos son adecuados."),
+    om("Malla electrosoldada corrugada en tracción: ¿ℓd mínima (fuera de traslapes)?", ["150 mm", "200 mm", "300 mm", "50 mm"], 1,
+       "12.7.1", "pero ℓd no debe ser menor a 200 mm, excepto para el cálculo de los empalmes por traslape de acuerdo con 12.18."),
+    om("Malla electrosoldada de alambre liso: ¿cómo desarrolla su fluencia?", ["Con ganchos", "Con 2 alambres transversales embebidos, el más próximo a ≥ 50 mm de la sección crítica", "Con 300 mm rectos", "No puede desarrollarla"], 1,
+       "12.8", "Se debe considerar que la resistencia a la fluencia del refuerzo electrosoldado de alambre liso se desarrolla mediante el embebido en el concreto de 2 alambres transversales, con el alambre transversal más próximo a no menos de 50 mm de la sección crítica."),
+    om("Torón sin adherencia hasta el extremo y con tracción en servicio en la zona precomprimida: ¿qué pasa con ℓd?", ["Se reduce a la mitad", "Se duplica", "Se multiplica por 1,3", "No cambia"], 1,
+       "12.9.4", "se debe duplicar ℓd especificada en 12.9.1."),
+    om("Con dos o más bastones, ¿qué anclaje debe tener el refuerzo que continúa?", ["d", "12 db", "≥ ℓd más allá del punto donde el cortado ya no se necesita", "300 mm"], 2,
+       "12.10.4", "el refuerzo que continúa deberá tener una longitud de anclaje mayor o igual a la longitud de desarrollo ℓd más allá del punto donde el refuerzo que se ha cortado o doblado no es necesario por cálculo."),
+    om("Corte de barras de 1″ en zona de tracción, con el doble del área requerida en lo que continúa: ¿qué Vu máximo?", ["(2/3) φVn", "(3/4) φVn", "φVn", "0,5 φVc"], 1,
+       "12.10.5", "(b) Para barras 1 3/8\" y menores, en las que el refuerzo que continúa proporciona el doble del área requerida por la flexión en el punto terminal y Vu no excede (3/4) φVn."),
+    om("En vigas, ¿cuánto debe entrar en el apoyo el tercio del refuerzo positivo?", ["50 mm", "100 mm", "150 mm", "ℓd"], 2,
+       "12.11.1", "En las vigas, dicho refuerzo se debe prolongar por lo menos 150 mm dentro del apoyo."),
+    om("En la ec. 12-5, ¿cuánto puede aumentarse Mn/Vu si el extremo está confinado por una reacción de compresión?", ["10 %", "20 %", "30 %", "50 %"], 2,
+       "12.11.3", "Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión."),
+    om("Viga con d = 400 mm, barras de 3/4″ y ℓn = 8 m: ¿prolongación del refuerzo negativo más allá del punto de inflexión?", ["229 mm", "400 mm", "500 mm", "ℓd"], 2,
+       "12.12.3", "no menor que d, 12 db ó", "Mayor de d = 400, 12 db = 229 y ℓn/16 = 500 mm."),
+    om("Estribos en U cerrados por pares, en vigas con d ≥ 450 mm y Ab fyt ≤ 40 kN por rama: ¿qué traslape necesitan?", ["1,3 ℓd", "Basta con prolongar las ramas en toda la altura disponible", "ℓd", "300 mm"], 1,
+       "12.13.4", "En elementos con un peralte efectivo de al menos 450 mm, los empalmes con Ab fyt no mayor que 40 kN por rama se pueden considerar adecuados si las ramas de los estribos se prolongan a lo largo de la altura total disponible del elemento."),
+    om("¿Se puede empalmar por traslape un paquete entero de barras?", ["Sí", "No", "Solo de 2 barras", "Solo en compresión"], 1,
+       "12.14.2.2", "No deben empalmarse por traslape paquetes enteros."),
+    om("Empalmes soldados o mecánicos que no desarrollan 1,25 fy: ¿en qué barras se permiten?", ["En cualquiera", "Solo en barras de 5/8″ y menores", "Solo en 1″ o más", "En ninguna"], 1,
+       "12.15.4", "se permiten para barras de 5/8” y menores solo si cumplen con 12.15.4.1 a 12.15.4.3."),
+    om("Esos empalmes de menor resistencia (12.15.4): ¿a qué distancia mínima se escalonan?", ["300 mm", "450 mm", "600 mm", "750 mm"], 2,
+       "12.15.4.1", "Los empalmes deben estar escalonados a distancias no menores de 600 mm."),
+    om("¿Cuál es la longitud mínima absoluta de un traslape en tracción?", ["200 mm", "300 mm", "400 mm", "ℓd"], 1,
+       "12.15.1", "pero no menor que 300 mm"),
+    om("Elementos en tracción (p. ej. tensores): ¿qué empalme exige la norma?", ["Traslape Clase B", "Soldado o mecánico completo, escalonado ≥ 750 mm", "Traslape Clase A", "Cualquiera"], 1,
+       "12.15.5", "Los empalmes en elementos en tracción se deben hacer con un empalme soldado o mecánico completo, de acuerdo con 12.14.3.2 ó 12.14.3.4, y los empalmes en las barras adyacentes deben estar escalonados a distancias no menores de 750 mm."),
+    om("Traslape en compresión con f′c = 17 MPa: ¿qué se hace con su longitud?", ["Nada", "Se multiplica por 1,3", "Se multiplica por 0,83", "Se duplica"], 1,
+       "12.16.1", "Para f’c menor que 21 MPa, la longitud del empalme por traslape debe multiplicarse por 1,3."),
+    om("Traslape en compresión con fy mayor que 420 MPa: ¿qué expresión se usa?", ["0,071 fy db", "(0,13 fy − 24) db", "0,043 fy db", "1,3 ℓd"], 1,
+       "12.16.1", "ó (0,13 fy -24) db para fy mayor que 420 MPa"),
+    om("Traslape en compresión entre barras de distinto diámetro: ¿qué longitud manda?", ["La de la barra menor", "La mayor entre ℓdc de la barra mayor y el traslape de la menor", "El promedio", "La de la barra mayor"], 1,
+       "12.16.2", "la longitud del empalme por traslape debe ser la mayor de ℓdc de la barra de mayor diámetro o la longitud del empalme por traslape de la barra de diámetro menor."),
+    om("Empalme a tope: ¿qué tolerancia angular se admite en el corte de los extremos?", ["0,5°", "1,5°", "3°", "5°"], 1,
+       "12.16.4.2", "con una tolerancia de 1,5º"),
+    om("Columna con barras en tracción mayor que 0,5 fy: ¿qué clase de traslape?", ["Clase A", "Clase B", "Compresión", "Mecánico obligatorio"], 1,
+       "12.17.2.3", "Cuando el esfuerzo en las barras debido a las cargas amplificadas es mayor que 0,5 fy en tracción, los empalmes por traslape por tracción deben ser Clase B."),
+    om("Columna zunchada (con espiral): ¿por cuánto se puede multiplicar el traslape de sus barras?", ["0,70", "0,75", "0,83", "1,0"], 1,
+       "12.17.2.5", "En elementos sometidos a compresión con espirales, se permite multiplicar la longitud del empalme por traslape de las barras dentro de la espiral por 0,75 pero dicha longitud no debe ser menor de 300 mm."),
+    om("Columna con empalmes a tope: ¿qué resistencia a tracción deben tener las barras continuas de cada cara?", ["0,10 fy As", "0,25 fy veces el área vertical de esa cara", "0,5 fy As", "Ninguna"], 1,
+       "12.17.4", "no menor que 0,25 fy veces el área del refuerzo vertical en esa cara."),
+    om("Traslape de malla electrosoldada corrugada: ¿longitud mínima entre extremos?", ["La mayor de 1,3 ℓd y 200 mm", "300 mm", "ℓd", "1,5 ℓd y 150 mm"], 0,
+       "12.18.1", "no debe ser menor que la mayor de 1,3 ℓd y 200 mm."),
+    om("Malla lisa con As ≥ 2 veces la requerida: ¿traslape mínimo entre alambres transversales extremos?", ["La mayor de 1,5 ℓd y 50 mm", "1,3 ℓd y 200 mm", "150 mm", "300 mm"], 0,
+       "12.19.2", "no debe ser menor que la mayor de 1,5 ℓd y 50 mm"),
 ]
 
 CAPITULOS = [
