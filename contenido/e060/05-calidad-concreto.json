@@ -1290,6 +1290,292 @@
        "extracto": "La resistencia promedio a la compresión requerida, f’cr, usada como base para la dosificación del concreto debe ser determinada según la Tabla 5.2…"
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para el muestreo, ¿cuál de estos cuenta como una «clase de concreto» distinta?",
+      "opciones": [
+       "El mismo concreto vaciado otro día",
+       "El mismo f′c con otro tamaño máximo de agregado",
+       "El concreto de otro piso",
+       "El mismo concreto con otro operario"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.1.7",
+       "extracto": "(b) Para una misma resistencia en compresión, cada una de las diferentes calidades de concreto obtenidas por variaciones en el tamaño máximo del agregado grueso, modificaciones en la granulometría del agregado fino o utilización de cualquier tipo de aditivo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Con dos mezcladoras en obra produciendo el mismo concreto, ¿cuántas clases de concreto hay para el muestreo?",
+      "opciones": [
+       "Una",
+       "Dos",
+       "Depende del volumen",
+       "Ninguna"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.1.7",
+       "extracto": "(c) El concreto producido por cada uno de los equipos de mezclado utilizados en la obra."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Mezclas de prueba: ¿cuántas relaciones agua/material cementante distintas como mínimo?",
+      "opciones": [
+       "1",
+       "2",
+       "3",
+       "5"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.3.3.2",
+       "extracto": "(b) …deben prepararse empleando al menos tres relaciones agua-material cementante o contenidos de cemento diferentes que produzcan un rango de resistencias que abarquen f’cr."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué tolerancia de asentamiento se admite en las mezclas de prueba respecto al máximo permitido?",
+      "opciones": [
+       "±10 mm",
+       "±20 mm",
+       "±25 mm",
+       "±50 mm"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.3.3.2",
+       "extracto": "(c) Las mezclas de prueba deben dosificarse para producir un asentamiento (slump) dentro de ±20 mm del máximo permitido, y para concreto con aire incorporado, dentro de ±0.5% del máximo contenido de aire permitido."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Sin experiencia ni mezclas de prueba (5.4), ¿hasta qué f′c se puede dosificar?",
+      "opciones": [
+       "21 MPa",
+       "28 MPa",
+       "35 MPa",
+       "Sin límite"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.4.1",
+       "extracto": "…debe ser al menos 8,5 MPa mayor que f’c. Esta alternativa no debe ser usada si el f’c especificado es mayor que 35 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un proyecto pequeño daría solo 3 ensayos de una clase de concreto: ¿qué hacer?",
+      "opciones": [
+       "Basta con 3",
+       "Ensayar al menos 5 tandas elegidas al azar",
+       "Ensayar núcleos",
+       "No ensayar"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.6.2.2",
+       "extracto": "…los ensayos deben hacerse por lo menos en cinco tandas de mezclado seleccionadas al azar, o en cada una cuando se empleen menos de cinco tandas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Concreto de f′c = 40 MPa: ¿cuál es el ensayo individual más bajo aceptable?",
+      "opciones": [
+       "36,0 MPa",
+       "36,5 MPa",
+       "37,0 MPa",
+       "38,0 MPa"
+      ],
+      "correcta": 0,
+      "explicacion": "Con f′c > 35 MPa el margen es 0,1 f′c = 4 MPa."
+     },
+     "citas": [
+      {
+       "articulo": "5.6.3.3",
+       "extracto": "(b) Ningún resultado individual del ensayo de resistencia (promedio de dos cilindros) es menor que f’c en más de 3,5 MPa cuando f’c es 35 MPa o menor, o en más de 0,1 f’c cuando f’c es mayor a 35 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuántos núcleos se extraen por cada ensayo de resistencia que no cumple 5.6.3.3 (b)?",
+      "opciones": [
+       "1",
+       "2",
+       "3",
+       "5"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.6.5.2",
+       "extracto": "En esos casos deben tomarse tres núcleos por cada resultado del ensayo de resistencia que sea menor que los valores señalados en 5.6.3.3 (b)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuándo no se aplica el límite del 85 % entre probetas curadas en obra y en laboratorio?",
+      "opciones": [
+       "Si las de obra superan f′c en más de 3,5 MPa",
+       "Si hace frío",
+       "Si el f′c es mayor de 35 MPa",
+       "Nunca"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "5.6.4.3",
+       "extracto": "La limitación del 85% no se aplica cuando la resistencia de aquellos que fueron curados en la obra exceda a f’c en más de 3,5 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuánto tiempo mínimo debe mezclarse el concreto preparado en obra, con todos los materiales en el tambor?",
+      "opciones": [
+       "30 s",
+       "60 s",
+       "90 s",
+       "3 min"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.8.4",
+       "extracto": "(d) El mezclado debe efectuarse por lo menos durante 90 segundos después de que todos los materiales estén dentro del tambor…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Antes de vaciar, ¿qué se hace con el agua libre del lugar de colocación?",
+      "opciones": [
+       "Se deja, ayuda al curado",
+       "Se retira, salvo que se use tubo bajo agua o lo permita la Supervisión",
+       "Se mezcla con el concreto",
+       "Se cubre con plástico"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.7.1",
+       "extracto": "(h) El agua libre debe ser retirada del lugar de colocación del concreto antes de depositarlo, a menos que se vaya a emplear un tubo para colocación bajo agua o que lo permita la Supervisión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se puede vaciar concreto bajo lluvia?",
+      "opciones": [
+       "Sí, siempre",
+       "Solo con métodos de protección autorizados por la Supervisión",
+       "Solo en zapatas",
+       "Solo con aditivo"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.11.1",
+       "extracto": "A menos que se empleen métodos de protección adecuados autorizados por la Supervisión, el concreto no deberá ser colocado durante lluvias, nevadas o granizadas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se puede reemplazar el curado húmedo por otro método?",
+      "opciones": [
+       "No",
+       "Sí, si se logra la resistencia de diseño en esa etapa y una durabilidad equivalente",
+       "Sí, sin condiciones",
+       "Solo en clima cálido"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.11.7",
+       "extracto": "El curado por vía húmeda podrá ser sustituido por cualquier otro medio de curado, siempre que se demuestre que la resistencia a la compresión del concreto, en la etapa de carga considerada, sea por lo menos igual a la resistencia de diseño requerida…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En clima frío, ¿por qué no se usan dispositivos de combustión en las primeras 24 horas sin precauciones?",
+      "opciones": [
+       "Por el ruido",
+       "Por la exposición del concreto al bióxido de carbono",
+       "Porque secan el encofrado",
+       "Por costo"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.12.4",
+       "extracto": "No se utilizarán dispositivos de combustión durante las primeras 24 horas, a menos que se tomen precauciones para evitar la exposición del concreto a gases que contengan bióxido de carbono."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué define el «clima cálido» según la E.060?",
+      "opciones": [
+       "Temperatura mayor de 30 °C",
+       "Cualquier combinación de alta temperatura, baja humedad y viento que perjudique al concreto",
+       "Solo la costa en verano",
+       "Temperatura del concreto mayor de 32 °C"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.13.1",
+       "extracto": "Para los fines de esta Norma se considera clima cálido cualquier combinación de alta temperatura ambiente, baja humedad relativa y alta velocidad del viento, que tienda a perjudicar la calidad del concreto fresco o endurecido."
+      }
+     ]
     }
    ]
   }

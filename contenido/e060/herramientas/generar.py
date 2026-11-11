@@ -2537,6 +2537,41 @@ CAP4 += [
        "4.4.2", "…deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua-material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7."),
 ]
 
+# ══════════ Revisión hoja por hoja · Cap. 5 (págs. 32–41) ══════════
+CAP5 += [
+    om("Para el muestreo, ¿cuál de estos cuenta como una «clase de concreto» distinta?", ["El mismo concreto vaciado otro día", "El mismo f′c con otro tamaño máximo de agregado", "El concreto de otro piso", "El mismo concreto con otro operario"], 1,
+       "5.1.7", "(b) Para una misma resistencia en compresión, cada una de las diferentes calidades de concreto obtenidas por variaciones en el tamaño máximo del agregado grueso, modificaciones en la granulometría del agregado fino o utilización de cualquier tipo de aditivo."),
+    om("Con dos mezcladoras en obra produciendo el mismo concreto, ¿cuántas clases de concreto hay para el muestreo?", ["Una", "Dos", "Depende del volumen", "Ninguna"], 1,
+       "5.1.7", "(c) El concreto producido por cada uno de los equipos de mezclado utilizados en la obra."),
+    om("Mezclas de prueba: ¿cuántas relaciones agua/material cementante distintas como mínimo?", ["1", "2", "3", "5"], 2,
+       "5.3.3.2", "(b) …deben prepararse empleando al menos tres relaciones agua-material cementante o contenidos de cemento diferentes que produzcan un rango de resistencias que abarquen f’cr."),
+    om("¿Qué tolerancia de asentamiento se admite en las mezclas de prueba respecto al máximo permitido?", ["±10 mm", "±20 mm", "±25 mm", "±50 mm"], 1,
+       "5.3.3.2", "(c) Las mezclas de prueba deben dosificarse para producir un asentamiento (slump) dentro de ±20 mm del máximo permitido, y para concreto con aire incorporado, dentro de ±0.5% del máximo contenido de aire permitido."),
+    om("Sin experiencia ni mezclas de prueba (5.4), ¿hasta qué f′c se puede dosificar?", ["21 MPa", "28 MPa", "35 MPa", "Sin límite"], 2,
+       "5.4.1", "…debe ser al menos 8,5 MPa mayor que f’c. Esta alternativa no debe ser usada si el f’c especificado es mayor que 35 MPa."),
+    om("Un proyecto pequeño daría solo 3 ensayos de una clase de concreto: ¿qué hacer?", ["Basta con 3", "Ensayar al menos 5 tandas elegidas al azar", "Ensayar núcleos", "No ensayar"], 1,
+       "5.6.2.2", "…los ensayos deben hacerse por lo menos en cinco tandas de mezclado seleccionadas al azar, o en cada una cuando se empleen menos de cinco tandas."),
+    om("Concreto de f′c = 40 MPa: ¿cuál es el ensayo individual más bajo aceptable?", ["36,0 MPa", "36,5 MPa", "37,0 MPa", "38,0 MPa"], 0,
+       "5.6.3.3", "(b) Ningún resultado individual del ensayo de resistencia (promedio de dos cilindros) es menor que f’c en más de 3,5 MPa cuando f’c es 35 MPa o menor, o en más de 0,1 f’c cuando f’c es mayor a 35 MPa.",
+       "Con f′c > 35 MPa el margen es 0,1 f′c = 4 MPa."),
+    om("¿Cuántos núcleos se extraen por cada ensayo de resistencia que no cumple 5.6.3.3 (b)?", ["1", "2", "3", "5"], 2,
+       "5.6.5.2", "En esos casos deben tomarse tres núcleos por cada resultado del ensayo de resistencia que sea menor que los valores señalados en 5.6.3.3 (b)."),
+    om("¿Cuándo no se aplica el límite del 85 % entre probetas curadas en obra y en laboratorio?", ["Si las de obra superan f′c en más de 3,5 MPa", "Si hace frío", "Si el f′c es mayor de 35 MPa", "Nunca"], 0,
+       "5.6.4.3", "La limitación del 85% no se aplica cuando la resistencia de aquellos que fueron curados en la obra exceda a f’c en más de 3,5 MPa."),
+    om("¿Cuánto tiempo mínimo debe mezclarse el concreto preparado en obra, con todos los materiales en el tambor?", ["30 s", "60 s", "90 s", "3 min"], 2,
+       "5.8.4", "(d) El mezclado debe efectuarse por lo menos durante 90 segundos después de que todos los materiales estén dentro del tambor…"),
+    om("Antes de vaciar, ¿qué se hace con el agua libre del lugar de colocación?", ["Se deja, ayuda al curado", "Se retira, salvo que se use tubo bajo agua o lo permita la Supervisión", "Se mezcla con el concreto", "Se cubre con plástico"], 1,
+       "5.7.1", "(h) El agua libre debe ser retirada del lugar de colocación del concreto antes de depositarlo, a menos que se vaya a emplear un tubo para colocación bajo agua o que lo permita la Supervisión."),
+    om("¿Se puede vaciar concreto bajo lluvia?", ["Sí, siempre", "Solo con métodos de protección autorizados por la Supervisión", "Solo en zapatas", "Solo con aditivo"], 1,
+       "5.11.1", "A menos que se empleen métodos de protección adecuados autorizados por la Supervisión, el concreto no deberá ser colocado durante lluvias, nevadas o granizadas."),
+    om("¿Se puede reemplazar el curado húmedo por otro método?", ["No", "Sí, si se logra la resistencia de diseño en esa etapa y una durabilidad equivalente", "Sí, sin condiciones", "Solo en clima cálido"], 1,
+       "5.11.7", "El curado por vía húmeda podrá ser sustituido por cualquier otro medio de curado, siempre que se demuestre que la resistencia a la compresión del concreto, en la etapa de carga considerada, sea por lo menos igual a la resistencia de diseño requerida…"),
+    om("En clima frío, ¿por qué no se usan dispositivos de combustión en las primeras 24 horas sin precauciones?", ["Por el ruido", "Por la exposición del concreto al bióxido de carbono", "Porque secan el encofrado", "Por costo"], 1,
+       "5.12.4", "No se utilizarán dispositivos de combustión durante las primeras 24 horas, a menos que se tomen precauciones para evitar la exposición del concreto a gases que contengan bióxido de carbono."),
+    om("¿Qué define el «clima cálido» según la E.060?", ["Temperatura mayor de 30 °C", "Cualquier combinación de alta temperatura, baja humedad y viento que perjudique al concreto", "Solo la costa en verano", "Temperatura del concreto mayor de 32 °C"], 1,
+       "5.13.1", "Para los fines de esta Norma se considera clima cálido cualquier combinación de alta temperatura ambiente, baja humedad relativa y alta velocidad del viento, que tienda a perjudicar la calidad del concreto fresco o endurecido."),
+]
+
 CAPITULOS = [
     ("03", "3", "e060-c03-materiales", "E.060 · Cap. 3 · Materiales", "Agregados, agua, acero de refuerzo, aditivos y almacenamiento.", CAP3),
     ("04", "4", "e060-c04-durabilidad", "E.060 · Cap. 4 · Durabilidad", "Aire incorporado, exposición especial, sulfatos y cloruros (Tablas 4.1 a 4.5).", CAP4),
