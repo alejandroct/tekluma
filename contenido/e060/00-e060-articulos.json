@@ -3384,7 +3384,7 @@
   {
    "numero": "11.6.3.7",
    "epigrafe": "El área adicional de refuerzo longitudinal necesario para resistir torsión, A",
-   "texto": ", no debe ser menor que:\n 2 cot At fyt A Ph s fy = θ ( ) ( ) (11-\n 22)\n donde θ debe tener el mismo valor usado en la ecuación (11-21) y At/s debe tomarse como la cantidad calculada con la ecuación (11-21) sin modificarla de acuerdo con 11.6.5.2 ó 11.6.5.3; fyt se refiere al refuerzo transversal cerrado para torsión y fy al refuerzo longitudinal de torsión.\n\n Fig. 11.6.3 Definición de Aoh (área sombreada).",
+   "texto": "El área adicional de refuerzo longitudinal necesario para resistir torsión, Aℓ, no debe ser menor que:\n 2 cot At fyt A Ph s fy = θ ( ) ( ) (11-\n 22)\n donde θ debe tener el mismo valor usado en la ecuación (11-21) y At/s debe tomarse como la cantidad calculada con la ecuación (11-21) sin modificarla de acuerdo con 11.6.5.2 ó 11.6.5.3; fyt se refiere al refuerzo transversal cerrado para torsión y fy al refuerzo longitudinal de torsión.\n\n Fig. 11.6.3 Definición de Aoh (área sombreada).",
    "pagina": 100
   },
   {
@@ -3681,7 +3681,7 @@
   {
    "numero": "11.9.5",
    "epigrafe": "La cuantía",
-   "texto": "/ Asc bd no debe ser menor que ( ) 0,04 / f c fy ′ .",
+   "texto": "La cuantía Asc / bd no debe ser menor que 0,04 (f’c / fy).",
    "pagina": 106
   },
   {
