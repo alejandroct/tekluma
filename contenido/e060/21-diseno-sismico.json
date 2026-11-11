@@ -733,7 +733,7 @@
   },
   {
    "numero": "21.9.7.5",
-   "texto": "Los muros estructurales que no sean diseñados de acuerdo con las disposiciones de 21.9.7.4 deben tener elementos confinados en los bordes y alrededor de las aberturas cuando el esfuerzo de compresión máximo de la fibra extrema correspondiente a las fuerzas amplificadas incluyendo los efectos sísmicos, sobrepase de 0,2 f’c. Los elementos de borde especiales pueden ser\n δu descontinuados donde el esfuerzo de compresión calculado sea menor que 0,15 f’c. Los esfuerzos deben calcularse para las fuerzas amplificadas usando un modelo lineal elástico y las propiedades de la sección bruta. Para muros con alas, debe usarse un ancho de ala efectivo como se define en 21.9.6.3.",
+   "texto": "Los muros estructurales que no sean diseñados de acuerdo con las disposiciones de 21.9.7.4 deben tener elementos confinados en los bordes y alrededor de las aberturas cuando el esfuerzo de compresión máximo de la fibra extrema correspondiente a las fuerzas amplificadas incluyendo los efectos sísmicos, sobrepase de 0,2 f’c. Los elementos de borde especiales pueden ser descontinuados donde el esfuerzo de compresión calculado sea menor que 0,15 f’c. Los esfuerzos deben calcularse para las fuerzas amplificadas usando un modelo lineal elástico y las propiedades de la sección bruta. Para muros con alas, debe usarse un ancho de ala efectivo como se define en 21.9.6.3.",
    "pagina": 201
   },
   {
@@ -838,7 +838,7 @@
   },
   {
    "numero": "21.10.2.8",
-   "texto": "Cuando no se requieren elementos de borde de acuerdo con lo indicado en 21.9.7.4 ó 21.9.7.6, y se concentre refuerzo vertical en los bordes del muro, el refuerzo concentrado deberá espaciarse de tal manera que su cuantía no exceda del 1% medida en el área en la cual se distribuye. En al Figura 21.10.2.8 se indica la manera de calcular la cuantía del acero concentrado en los extremos.\n\n Fig. 21.10.2.8 Cuantía de acero en bordes no confinados",
+   "texto": "Cuando no se requieren elementos de borde de acuerdo con lo indicado en 21.9.7.4 ó 21.9.7.6, y se concentre refuerzo vertical en los bordes del muro, el refuerzo concentrado deberá espaciarse de tal manera que su cuantía no exceda del 1% medida en el área en la cual se distribuye. En la Figura 21.10.2.8 se indica la manera de calcular la cuantía del acero concentrado en los extremos.\n\n Fig. 21.10.2.8 Cuantía de acero en bordes no confinados",
    "pagina": 205
   },
   {

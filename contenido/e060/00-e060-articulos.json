@@ -584,7 +584,7 @@
   },
   {
    "numero": "4.4.2",
-   "texto": "Cuando el concreto con refuerzo vaya a estar expuesto a cloruros de químicos descongelantes, sal, agua salobre, agua de mar o salpicaduras de las mismas, deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua- material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7. Para tendones preesforzados sin adherencia, véase 18.16.\n\n CALIDAD DEL CONCRETO, MEZCLADO Y COLOCACIÓN",
+   "texto": "Cuando el concreto con refuerzo vaya a estar expuesto a cloruros de químicos descongelantes, sal, agua salobre, agua de mar o salpicaduras de las mismas, deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua-material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7. Para tendones preesforzados sin adherencia, véase 18.16.\n\n CALIDAD DEL CONCRETO, MEZCLADO Y COLOCACIÓN",
    "pagina": 30
   },
   {
@@ -6023,7 +6023,7 @@
   },
   {
    "numero": "18.4.1",
-   "texto": "Los esfuerzos en el concreto inmediatamente después de la transferencia del preesforzado (antes de las pérdidas de preesfuerzo que dependen del tiempo) no deben exceder los valores siguientes:\n (a) Esfuerzo en la fibra extrema en compresión … 0,60 f ci′\n (b) Esfuerzo en la fibra extrema en tracción, salvo lo permitido en (c) … 0,25 f ci′\n (c) Esfuerzo en la fibra extrema en tracción en los extremos de elementos simplemente apoyados … 0,50 f ci′ donde los esfuerzos de tracción calculados, ft, excedan los límites señalados en (b) o (c), deberá colocarse refuerzo adicional adherido (no preesforzado o preesforzado) en la zona de tracción, para resistir la fuerza total de tracción en el concreto, calculada con la suposición de sección no fisurada. El refuerzo adicional se determinará sobre la base de un esfuerzo admisible de 0,6 fy , sin exceder de 210 MPa.",
+   "texto": "Los esfuerzos en el concreto inmediatamente después de la transferencia del preesforzado (antes de las pérdidas de preesfuerzo que dependen del tiempo) no deben exceder los valores siguientes:\n (a) Esfuerzo en la fibra extrema en compresión … 0,60 f’ci\n (b) Esfuerzo en la fibra extrema en tracción, salvo lo permitido en (c) … 0,25 √f’ci\n (c) Esfuerzo en la fibra extrema en tracción en los extremos de elementos simplemente apoyados … 0,50 √f’ci donde los esfuerzos de tracción calculados, ft, excedan los límites señalados en (b) o (c), deberá colocarse refuerzo adicional adherido (no preesforzado o preesforzado) en la zona de tracción, para resistir la fuerza total de tracción en el concreto, calculada con la suposición de sección no fisurada. El refuerzo adicional se determinará sobre la base de un esfuerzo admisible de 0,6 fy, sin exceder de 210 MPa.",
    "pagina": 160
   },
   {
@@ -7818,7 +7818,7 @@
   },
   {
    "numero": "21.9.7.5",
-   "texto": "Los muros estructurales que no sean diseñados de acuerdo con las disposiciones de 21.9.7.4 deben tener elementos confinados en los bordes y alrededor de las aberturas cuando el esfuerzo de compresión máximo de la fibra extrema correspondiente a las fuerzas amplificadas incluyendo los efectos sísmicos, sobrepase de 0,2 f’c. Los elementos de borde especiales pueden ser\n δu descontinuados donde el esfuerzo de compresión calculado sea menor que 0,15 f’c. Los esfuerzos deben calcularse para las fuerzas amplificadas usando un modelo lineal elástico y las propiedades de la sección bruta. Para muros con alas, debe usarse un ancho de ala efectivo como se define en 21.9.6.3.",
+   "texto": "Los muros estructurales que no sean diseñados de acuerdo con las disposiciones de 21.9.7.4 deben tener elementos confinados en los bordes y alrededor de las aberturas cuando el esfuerzo de compresión máximo de la fibra extrema correspondiente a las fuerzas amplificadas incluyendo los efectos sísmicos, sobrepase de 0,2 f’c. Los elementos de borde especiales pueden ser descontinuados donde el esfuerzo de compresión calculado sea menor que 0,15 f’c. Los esfuerzos deben calcularse para las fuerzas amplificadas usando un modelo lineal elástico y las propiedades de la sección bruta. Para muros con alas, debe usarse un ancho de ala efectivo como se define en 21.9.6.3.",
    "pagina": 201
   },
   {
@@ -7923,7 +7923,7 @@
   },
   {
    "numero": "21.10.2.8",
-   "texto": "Cuando no se requieren elementos de borde de acuerdo con lo indicado en 21.9.7.4 ó 21.9.7.6, y se concentre refuerzo vertical en los bordes del muro, el refuerzo concentrado deberá espaciarse de tal manera que su cuantía no exceda del 1% medida en el área en la cual se distribuye. En al Figura 21.10.2.8 se indica la manera de calcular la cuantía del acero concentrado en los extremos.\n\n Fig. 21.10.2.8 Cuantía de acero en bordes no confinados",
+   "texto": "Cuando no se requieren elementos de borde de acuerdo con lo indicado en 21.9.7.4 ó 21.9.7.6, y se concentre refuerzo vertical en los bordes del muro, el refuerzo concentrado deberá espaciarse de tal manera que su cuantía no exceda del 1% medida en el área en la cual se distribuye. En la Figura 21.10.2.8 se indica la manera de calcular la cuantía del acero concentrado en los extremos.\n\n Fig. 21.10.2.8 Cuantía de acero en bordes no confinados",
    "pagina": 205
   },
   {

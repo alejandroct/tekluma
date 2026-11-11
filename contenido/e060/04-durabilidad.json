@@ -76,7 +76,7 @@
   },
   {
    "numero": "4.4.2",
-   "texto": "Cuando el concreto con refuerzo vaya a estar expuesto a cloruros de químicos descongelantes, sal, agua salobre, agua de mar o salpicaduras de las mismas, deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua- material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7. Para tendones preesforzados sin adherencia, véase 18.16.\n\n CALIDAD DEL CONCRETO, MEZCLADO Y COLOCACIÓN",
+   "texto": "Cuando el concreto con refuerzo vaya a estar expuesto a cloruros de químicos descongelantes, sal, agua salobre, agua de mar o salpicaduras de las mismas, deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua-material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7. Para tendones preesforzados sin adherencia, véase 18.16.\n\n CALIDAD DEL CONCRETO, MEZCLADO Y COLOCACIÓN",
    "pagina": 30
   }
  ],
@@ -524,7 +524,7 @@
      "citas": [
       {
        "articulo": "4.3.1",
-       "extracto": "Tabla 4.4, nota **: Se considera el caso del agua de mar como exposición moderada."
+       "extracto": "** Se considera el caso del agua de mar como exposición moderada."
       }
      ]
     },
