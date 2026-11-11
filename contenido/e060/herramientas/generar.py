@@ -2287,6 +2287,75 @@ CAP9 += [
     om("¿Cuál es el fy máximo utilizable en los cálculos, en general?", ["420 MPa", "500 MPa", "550 MPa", "700 MPa"], 2, "9.5.1", de(CAP9, "9.5.1")),
 ]
 
+# ══════════ Complemento caps. 10 a 12: más opción múltiple y preguntas con figura ══════════
+
+CAP10 += [
+    om("¿Qué deformación máxima utilizable se asume para el concreto en compresión?", ["0,002", "0,003", "0,004", "0,005"], 1, "10.2.3", de(CAP10, "10.2.3")),
+    om("¿Qué esfuerzo tiene el bloque rectangular equivalente de compresión?", ["0,70 f′c", "0,80 f′c", "0,85 f′c", "f′c"], 2, "10.2.7.1", de(CAP10, "10.2.7.1")),
+    om("¿Cuánto vale β1 para f′c = 21 MPa?", ["0,65", "0,75", "0,80", "0,85"], 3, "10.2.7.3", de(CAP10, "10.2.7.3")),
+    om("¿Y para f′c = 42 MPa?", ["0,70", "0,75", "0,80", "0,85"], 1, "10.2.7.3", de(CAP10, "10.2.7.3"), "Baja 0,05 por cada 7 MPa sobre 28: 0,85 − 0,10 = 0,75."),
+    om("En flexión con φPn < 0,1 f′c Ag, ¿cuánto acero en tracción como máximo?", ["0,50 Asb", "0,75 Asb", "Asb", "0,025 bd"], 1, "10.3.4", de(CAP10, "10.3.4")),
+    om("¿Qué cuantía de refuerzo longitudinal se permite en columnas?", ["0,5 % a 4 %", "1 % a 6 %", "1 % a 8 %", "2 % a 6 %"], 1, "10.9.1", de(CAP10, "10.9.1")),
+    om("¿Cuántas barras como mínimo lleva una columna con estribos rectangulares?", ["3", "4", "6", "8"], 1, "10.9.2", de(CAP10, "10.9.2")),
+    om("¿Y una columna con espiral?", ["4", "5", "6", "8"], 2, "10.9.2", de(CAP10, "10.9.2")),
+    om("¿Qué factor multiplica φPon en una columna con estribos?", ["0,70", "0,75", "0,80", "0,85"], 2, "10.3.6.2", de(CAP10, "10.3.6.2")),
+    om("¿Qué inercia se usa para columnas en el análisis de esbeltez?", ["0,35 Ig", "0,50 Ig", "0,70 Ig", "Ig"], 2, "10.11.1", de(CAP10, "10.11.1")),
+    om("¿Qué radio de giro se toma en una columna rectangular?", ["0,25 h", "0,30 h", "0,35 h", "0,50 h"], 1, "10.11.2", de(CAP10, "10.11.2")),
+    om("Columna no arriostrada: ¿bajo qué k ℓu/r se desprecia la esbeltez?", ["22", "34", "40", "100"], 0, "10.13.2", de(CAP10, "10.13.2")),
+    om("Columna arriostrada con M1/M2 = 0: ¿límite de k ℓu/r?", ["22", "34", "40", "46"], 1, "10.12.2", de(CAP10, "10.12.2"), "34 − 12 × 0 = 34."),
+    om("¿Cuál es el índice de estabilidad Q máximo para tratar un entrepiso como arriostrado?", ["0,04", "0,05", "0,06", "0,10"], 2, "10.11.4.2", de(CAP10, "10.11.4.2")),
+    om("Placa sobre zapata amplia: ¿cuánto puede aumentar como máximo la resistencia al aplastamiento?", ["Nada", "1,5 veces", "2 veces", "4 veces"], 2, "10.17.1", de(CAP10, "10.17.1"), fig="fig-10-17-1"),
+    om("¿Qué φ se usa en el aplastamiento del concreto?", ["0,65", "0,70", "0,85", "0,90"], 1, "10.17.1", de(CAP10, "10.17.1")),
+    om("¿Cada cuánto ancho de la cara comprimida se deben arriostrar lateralmente las vigas?", ["24 b", "36 b", "50 b", "60 b"], 2, "10.4.1", de(CAP10, "10.4.1")),
+    om("Una viga cargada arriba y apoyada abajo es «de gran peralte» si su luz libre es…", ["≤ 2 h", "≤ 3 h", "≤ 4 h", "≤ 5 h"], 2, "10.7.1", de(CAP10, "10.7.1")),
+]
+
+CAP11 += [
+    om("¿Qué φ se usa en cortante?", ["0,70", "0,75", "0,85", "0,90"], 2, "11.1.1", de(CAP11, "11.1.1")),
+    om("¿Cuál es la expresión simplificada de Vc?", ["0,083 √f′c bw d", "0,17 √f′c bw d", "0,33 √f′c bw d", "0,53 √f′c bw d"], 1, "11.3.1.1", de(CAP11, "11.3.1.1")),
+    om("En casos como estos, ¿a qué distancia de la cara del apoyo se calcula Vu?", ["En la cara", "A d/2", "A d", "A h"], 2, "11.1.3.1", de(CAP11, "11.1.3.1"), fig="fig-11-1-3-1-a"),
+    om("En estos casos (carga colgada, carga concentrada cerca, apoyo traccionado), ¿se puede tomar Vu a d de la cara?", ["Sí, siempre", "No: se diseña con Vu en la cara", "Solo con estribos mínimos", "Solo si h > 600 mm"], 1, "11.1.3", "Se permiten diseñar las secciones ubicadas entre la cara del apoyo y la sección crítica… cuando se cumplan las tres condiciones siguientes…", fig="fig-11-1-3-1-b"),
+    om("¿Cuál es el espaciamiento máximo de estribos en vigas no preesforzadas?", ["d/4 y 300 mm", "d/2 y 600 mm", "d y 600 mm", "h/2 y 450 mm"], 1, "11.5.5.1", de(CAP11, "11.5.5.1")),
+    om("¿A partir de qué Vu se exige refuerzo mínimo de cortante en vigas?", ["Vu > 0,25 φVc", "Vu > 0,5 φVc", "Vu > φVc", "Siempre"], 1, "11.5.6.1", de(CAP11, "11.5.6.1")),
+    om("¿Cuál es el tope de Vs?", ["0,33 √f′c bw d", "0,50 √f′c bw d", "0,66 √f′c bw d", "0,83 √f′c bw d"], 2, "11.5.7.9", de(CAP11, "11.5.7.9")),
+    om("¿Qué fy máximo se usa para estribos de cortante?", ["280 MPa", "420 MPa", "550 MPa", "Sin límite"], 1, "11.5.2", de(CAP11, "11.5.2")),
+    om("¿Qué gancho exige el refuerzo transversal de torsión?", ["90°", "135°", "180°", "Ninguno"], 1, "11.6.4.2", de(CAP11, "11.6.4.2")),
+    om("¿Qué espaciamiento máximo tienen los estribos de torsión?", ["d/2 y 600 mm", "Ph/8 y 300 mm", "bt y 450 mm", "Ph/4 y 300 mm"], 1, "11.6.6.1", de(CAP11, "11.6.6.1")),
+    om("En la figura, ¿qué área se usa para calcular la resistencia a torsión?", ["Acp", "Aoh (y Ao ≈ 0,85 Aoh)", "Ag", "Acw"], 1, "11.6.3.6", de(CAP11, "11.6.3.6"), fig="fig-11-6-3"),
+    om("¿Qué torsión hay en estos casos?", ["De compatibilidad: se puede reducir Tu", "De equilibrio: se diseña para todo Tu", "No hay torsión", "Solo torsión de servicio"], 1, "11.6.2.1", de(CAP11, "11.6.2.1"), fig="fig-11-6-2-1"),
+    om("Concreto vaciado monolíticamente: ¿coeficiente de fricción μ?", ["0,6 λ", "1,0 λ", "1,4 λ", "2,0 λ"], 2, "11.7.4.3", de(CAP11, "11.7.4.3")),
+    om("En la figura, ¿qué expresión da Vn con refuerzo de fricción inclinado?", ["Avf fy μ", "Avf fy (μ sen α + cos α)", "Avf fy cos α", "0,2 f′c Ac"], 1, "11.7.4.2", "Vn = Avf fy (μ sen α + cos α) (11-26)", fig="fig-11-7-4-2"),
+    om("Muro bajo con hm/ℓm ≤ 1,5: ¿qué αc se usa para Vc?", ["0,17", "0,20", "0,25", "0,33"], 2, "11.10.5", de(CAP11, "11.10.5")),
+    om("Muro que requiere refuerzo por corte: ¿cuantía horizontal mínima?", ["0,0015", "0,0020", "0,0025", "0,0030"], 2, "11.10.10.2", de(CAP11, "11.10.10.2")),
+    om("¿A partir de qué espesor un muro lleva refuerzo en dos caras (11.10)?", ["150 mm", "Más de 200 mm", "250 mm", "300 mm"], 1, "11.10.10.5", de(CAP11, "11.10.10.5")),
+    om("En la figura, ¿a qué distancia de la columna está la sección crítica por punzonamiento?", ["d/4", "d/2", "d", "2d"], 1, "11.12.1.2", de(CAP11, "11.12.1.2"), fig="fig-11-12"),
+    om("Columna interior cuadrada: ¿qué expresión de Vc por punzonamiento suele mandar?", ["0,17 (1 + 2/β) √f′c bo d", "0,083 (αs d/bo + 2) √f′c bo d", "0,33 √f′c bo d", "0,53 √f′c bo d"], 2, "11.12.2.1", de(CAP11, "11.12.2.1")),
+    om("¿Qué αs corresponde a una columna de esquina?", ["10", "20", "30", "40"], 1, "11.12.2.1", de(CAP11, "11.12.2.1")),
+    om("¿Qué peralte mínimo debe tener una losa para usar estribos contra punzonamiento?", ["100 mm", "125 mm", "150 mm", "200 mm"], 2, "11.12.3", de(CAP11, "11.12.3")),
+    om("En la figura, ¿para qué sirven los estribos en la zona de cruce?", ["Para el cortante de la viga secundaria", "Para colgar la carga de la viga secundaria en la principal", "Para la torsión de la losa", "Para el acero de temperatura"], 1, "11.5.8.2", de(CAP11, "11.5.8.2"), fig="fig-11-5-8"),
+]
+
+CAP12 += [
+    om("¿Cuál es la longitud de desarrollo mínima en tracción?", ["200 mm", "250 mm", "300 mm", "400 mm"], 2, "12.2.1", de(CAP12, "12.2.1")),
+    om("Barra superior (300 mm o más de concreto fresco debajo): ¿qué factor ψt?", ["1,0", "1,2", "1,3", "1,5"], 2, "12.2.4", de(CAP12, "12.2.4")),
+    om("Barra con epóxico y recubrimiento menor que 3 db: ¿factor ψe?", ["1,0", "1,2", "1,3", "1,5"], 3, "12.2.4", de(CAP12, "12.2.4")),
+    om("¿Cuánto vale ψs para barras de 3/4″ y menores?", ["0,8", "1,0", "1,2", "1,3"], 0, "12.2.4", de(CAP12, "12.2.4")),
+    om("¿Cuál es la longitud de desarrollo mínima en compresión?", ["150 mm", "200 mm", "300 mm", "8 db"], 1, "12.3.2", de(CAP12, "12.3.2")),
+    om("Paquete de 3 barras: ¿cuánto aumenta ℓd de cada barra?", ["10 %", "20 %", "33 %", "50 %"], 1, "12.4.1", de(CAP12, "12.4.1")),
+    om("¿Y en un paquete de 4 barras?", ["20 %", "25 %", "33 %", "50 %"], 2, "12.4.1", de(CAP12, "12.4.1")),
+    om("En la figura, ¿desde dónde se mide ℓdg?", ["Desde el inicio del gancho", "Desde la sección crítica hasta el borde exterior del gancho", "Desde el centro de la columna", "Desde el estribo"], 1, "12.5.2", de(CAP12, "12.5.2"), fig="fig-12-5-2"),
+    om("Con estos recubrimientos (lateral ≥ 65 mm, extensión ≥ 50 mm), ¿por cuánto se multiplica ℓdg?", ["0,7", "0,75", "0,8", "1,0"], 0, "12.5.3", de(CAP12, "12.5.3"), fig="fig-12-5-3-a"),
+    om("Gancho de 90° con estribos a ≤ 3 db como en la figura: ¿factor para ℓdg?", ["0,7", "0,75", "0,8", "1,0"], 2, "12.5.3", de(CAP12, "12.5.3"), fig="fig-12-5-3-b"),
+    om("¿Sirven los ganchos para desarrollar barras en compresión?", ["Sí", "No", "Solo los de 90°", "Solo con estribos"], 1, "12.5.4", de(CAP12, "12.5.4")),
+    om("¿Cuánto se prolonga una barra más allá de donde ya no se necesita por flexión?", ["d o 12 db, el mayor", "6 db", "ℓd", "300 mm"], 0, "12.10.3", de(CAP12, "12.10.3")),
+    om("¿Qué parte del refuerzo positivo debe llegar hasta el apoyo?", ["1/4", "1/3", "1/2", "Todo"], 1, "12.11.1", de(CAP12, "12.11.1")),
+    om("Empalme clase B en tracción: ¿qué longitud?", ["1,0 ℓd", "1,2 ℓd", "1,3 ℓd", "1,5 ℓd"], 2, "12.15.1", de(CAP12, "12.15.1")),
+    om("Si se empalma el 100 % del acero en la misma zona, ¿qué clase de empalme corresponde?", ["Clase A", "Clase B", "Mecánico obligatorio", "No se permite"], 1, "12.15.2", de(CAP12, "12.15.2")),
+    om("Traslape en compresión con fy = 420 MPa: ¿longitud?", ["0,043 fy db", "0,071 fy db", "0,13 fy db", "1,3 ℓd"], 1, "12.16.1", de(CAP12, "12.16.1")),
+    om("¿Por encima de qué diámetro no se permiten traslapes (salvo 12.16.2)?", ["1″", "1 1/4″", "1 3/8″", "1 3/4″"], 2, "12.14.2.1", de(CAP12, "12.14.2.1")),
+    om("¿Qué resistencia debe desarrollar un empalme mecánico?", ["fy", "1,25 fy", "1,5 fy", "fu"], 1, "12.14.3.2", de(CAP12, "12.14.3.2")),
+]
+
 CAPITULOS = [
     ("03", "3", "e060-c03-materiales", "E.060 · Cap. 3 · Materiales", "Agregados, agua, acero de refuerzo, aditivos y almacenamiento.", CAP3),
     ("04", "4", "e060-c04-durabilidad", "E.060 · Cap. 4 · Durabilidad", "Aire incorporado, exposición especial, sulfatos y cloruros (Tablas 4.1 a 4.5).", CAP4),
