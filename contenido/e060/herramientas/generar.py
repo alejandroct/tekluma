@@ -1896,7 +1896,7 @@ CAP16 = [
 CAP17 = [
     concepto("¿Qué es un elemento compuesto de concreto a flexión?",
              "Uno formado por partes prefabricadas o vaciadas en obra en etapas distintas, conectadas para responder a las cargas como una unidad.",
-             "17.1.1", "…definidos como elementos prefabricados de concreto o fabricados en obra, construidos en etapas diferentes pero conectados entre si de manera tal que respondan a las cargas como una unidad."),
+             "17.1.1", "…definidos como elementos prefabricados de concreto o fabricados en obra, construidos en etapas diferentes pero conectados entre si de manera tal que respondan a las cargas como una sola unidad."),
     completar("En la resistencia de elementos compuestos {{no}} se distingue entre elementos apuntalados y no apuntalados.",
               "17.2.4", "En el cálculo de la resistencia de elementos compuestos no debe hacerse distinción entre elementos apuntalados y no apuntalados."),
     concepto("¿Cuándo se puede retirar el apuntalamiento de un elemento compuesto?",
@@ -3253,6 +3253,37 @@ CAP16 += [
        "16.9.2", "Las estructuras y elementos prefabricados deben estar adecuadamente apoyados y arriostrados durante el montaje para asegurar el adecuado alineamiento e integridad estructural hasta que se completen las conexiones permanentes."),
     om("Ensayo a flexión de un prefabricado aislado antes de volverse compuesto: ¿cuándo se permite cargarlo?", ["Siempre", "Solo si la compresión o el pandeo no son críticos para el elemento aislado", "Nunca", "Solo a 28 días"], 1,
        "16.10.1.1", "Las cargas de ensayo deben ser aplicadas sólo cuando los cálculos indiquen que para el elemento prefabricado aislado no es crítica la compresión o el pandeo."),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 17 (págs. 156–158) ══════════
+CAP17 += [
+    om("Elemento compuesto con concretos de distinta resistencia: ¿qué propiedades se usan en el diseño?", ["El promedio", "Las de cada elemento o los valores más críticos", "Siempre las del concreto en sitio", "Las del prefabricado"], 1,
+       "17.2.3", "deben utilizarse en el diseño las propiedades de los elementos individuales o los valores más críticos."),
+    om("¿Para qué cargas deben diseñarse los elementos antes de volverse compuestos?", ["Ninguna", "Las aplicadas antes de que el compuesto desarrolle su resistencia", "Solo su peso propio", "Las de servicio finales"], 1,
+       "17.2.5", "Todos los elementos deben diseñarse para resistir las cargas aplicadas antes del completo desarrollo de la resistencia de diseño del elemento compuesto."),
+    om("¿Qué control de deflexiones deben cumplir los elementos compuestos?", ["Ninguno", "El de 9.6", "ℓ/240 siempre", "El del Cap. 18"], 1,
+       "17.2.7", "Los elementos compuestos deben cumplir con los requisitos de control de deflexiones dados en 9.6."),
+    om("Si todo el elemento compuesto resiste el cortante vertical, ¿cómo se diseña?", ["Con 17.5", "Con el Cap. 11, como si fuera monolítico de la misma sección", "Solo con la sección prefabricada", "Con 11.7"], 1,
+       "17.4.1", "el diseño se hará de acuerdo con los requisitos del Capítulo 11, como si se tratara de un elemento monolítico de la misma sección transversal."),
+    om("¿Puede el refuerzo de cortante vertical tomar también el cortante horizontal?", ["No", "Sí, si está bien anclado y extendido a lo largo del elemento", "Solo en losas", "Solo con ρv ≥ 0,01"], 1,
+       "17.4.3", "Se permite considerar el refuerzo para cortante vertical, debidamente anclado y extendido a lo largo del elemento, como refuerzo para tomar el cortante horizontal."),
+    om("Elemento compuesto preesforzado: ¿qué d mínimo se puede tomar para el cortante horizontal?", ["0,5 h", "0,75 h", "0,8 h", "h"], 2,
+       "17.5.2", "pero no hay necesidad de tomarlo menor de 0,8 h para elementos de concreto preesforzado."),
+    om("Estribos mínimos y superficie limpia pero NO rugosa: ¿Vnh máximo?", ["0,35 bv d", "0,55 bv d", "1,8 bv d", "3,5 bv d"], 1,
+       "17.5.3.2", "Donde se proporcione el mínimo de estribos de acuerdo con 17.6 y las superficies de contacto estén limpias y libres de lechada, pero no se hayan hecho rugosas intencionalmente, Vnh no debe tomarse mayor a 0,55 bv d."),
+    om("En la ecuación de Vnh con rugosidad de 6 mm, ¿cómo se define ρv?", ["As / bd", "Av / (bv s)", "Av / Ag", "0,0025"], 1,
+       "17.5.3.3", "Deben usarse los valores de λ indicados en 11.7.4.3 y ρv es"),
+    om("Si se usa el método alternativo del 17.5.4, ¿qué área sustituye a bv d?", ["El área de acero", "El área de la superficie de contacto", "El área bruta", "bv h"], 1,
+       "17.5.4", "donde el área de la superficie de contacto debe sustituir a bv d."),
+    om("Con el método del 17.5.4, ¿cómo deben distribuirse los estribos?", ["Uniformes", "Aproximadamente según la distribución del esfuerzo de cortante en el elemento", "Concentrados en los apoyos", "Cada 600 mm"], 1,
+       "17.5.4.1", "debe representar aproximadamente la distribución del esfuerzo de cortante en el elemento."),
+    om("Si hay tracción a través de la superficie de contacto, ¿cuándo se permite transmitir cortante por contacto?", ["Nunca", "Solo con el mínimo de estribos de 17.6", "Siempre", "Solo si es rugosa"], 1,
+       "17.5.5", "sólo se permitirá la transmisión de cortante por contacto cuando se proporcione el mínimo de estribos de acuerdo con 17.6."),
+    om("¿Qué tipos de refuerzo pueden ser estribos de cortante horizontal?", ["Solo barras dobladas", "Barras individuales, alambres, estribos de ramas múltiples o malla electrosoldada vertical", "Solo conectores de acero", "Solo espirales"], 1,
+       "17.6.2", "Los estribos que resisten el cortante horizontal deben consistir en barras individuales, alambres, estribos de ramas múltiples o ramas verticales de refuerzo electrosoldado de alambre."),
+    om("¿Cómo deben anclarse los estribos de cortante horizontal?", ["Solo en el prefabricado", "Totalmente dentro de cada elemento conectado (12.13)", "Solo en la sobrelosa", "Con soldadura"], 1,
+       "17.6.3", "Todos los estribos deben anclarse totalmente dentro de cada uno de los elementos conectados de acuerdo con 12.13."),
 ]
 
 CAPITULOS = [
