@@ -2426,7 +2426,7 @@ CAP15 += [
 
 CAP16 += [
     om("En la figura, ¿qué longitud mínima de apoyo tiene una viga prefabricada?", ["ℓn/180 y no menos de 75 mm", "ℓn/180 y no menos de 50 mm", "100 mm", "ℓn/100"], 0, "16.6.2.2", de(CAP16, "16.6.2.2"), fig="fig-16-6-2"),
-    om("¿Y una losa sólida o alveolar?", ["ℓn/180 y no menos de 50 mm", "75 mm", "ℓn/240", "40 mm"], 0, "16.6.2.2", de(CAP16, "16.6.2.2"), fig="fig-16-6-2"),
+    om("¿Qué longitud mínima de apoyo tiene una losa prefabricada sólida o alveolar?", ["ℓn/180 y no menos de 50 mm", "75 mm", "ℓn/240", "40 mm"], 0, "16.6.2.2", de(CAP16, "16.6.2.2"), fig="fig-16-6-2"),
     om("En esta figura de amarres, ¿qué resistencia mínima tiene el amarre perimetral de cada piso?", ["25 kN", "45 kN", "75 kN", "100 kN"], 2, "16.5.2.4", de(CAP16, "16.5.2.4"), fig="fig-16-5-2"),
     om("¿Qué resistencia nominal mínima tiene el amarre vertical de una columna prefabricada?", ["1,0 Ag (N)", "1,5 Ag (N)", "2,0 Ag (N)", "45 kN"], 1, "16.5.1.3", de(CAP16, "16.5.1.3")),
     om("¿Se permiten conexiones que dependan solo de la fricción por gravedad?", ["Sí", "No", "Solo en losas", "Solo en zona 1"], 1, "16.5.1.4", "No se deben usar detalles de conexión que dependan solamente de la fricción producida por las cargas gravitacionales."),
@@ -3212,6 +3212,47 @@ CAP15 += [
        "15.9.2", "Las zapatas con pendiente o escalonadas que se diseñen como una unidad, deben construirse para asegurar su comportamiento como tal."),
     om("Zapatas combinadas y losas de cimentación: ¿cómo se define la presión del terreno?", ["Siempre uniforme", "Consistente con las propiedades del suelo, de la estructura y la mecánica de suelos", "Triangular", "Con el Método Directo"], 1,
        "15.10.3", "debe ser consistentes con las propiedades del suelo y la estructura y con los principios establecidos de mecánica de suelos."),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 16 (págs. 151–155) ══════════
+CAP16 += [
+    om("Pórticos y muros prefabricados sismorresistentes en zonas de alto riesgo sísmico: ¿cómo los considera la E.060?", ["Como convencionales", "Como sistemas «no convencionales» (véase 1.3)", "Prohibidos", "Igual que el concreto en sitio"], 1,
+       "16.1.2", "En este caso, los sistemas constructivos prefabricados serán considerados “no convencionales”. Véase 1.3."),
+    om("¿Qué tolerancias deben especificarse en estructuras prefabricadas?", ["Solo las de fábrica", "Las de los elementos prefabricados, los vaciados en sitio y los elementos de conexión", "Ninguna", "Solo las de montaje"], 1,
+       "16.2.3", "Deben especificarse las tolerancias tanto para los elementos prefabricados como para los vaciados en sitio y los elementos de conexión."),
+    om("Si las fuerzas en el plano de un muro o piso prefabricado producen tracción, ¿qué se exige?", ["Juntas de mortero", "Una trayectoria continua de refuerzo de acero", "Llaves de cortante", "Nada"], 1,
+       "16.3.2.2", "Cuando se produzcan fuerzas de tracción, debe proporcionarse una trayectoria continua de refuerzo de acero."),
+    om("Losas preesforzadas prefabricadas de menos de 3,6 m de ancho, sin conexión transversal: ¿qué refuerzo se puede omitir?", ["El de flexión", "El de retracción y temperatura en la dirección normal a la flexión", "Los estribos", "Ninguno"], 1,
+       "16.4.1", "se permite que los requisitos de refuerzo por retracción y temperatura de 9.7 en la dirección normal al refuerzo por flexión sean omitidos."),
+    om("Muro prefabricado exterior no preesforzado: ¿espaciamiento máximo del refuerzo?", ["5 t y 750 mm", "5 t y 450 mm", "3 t y 400 mm", "300 mm"], 1,
+       "16.4.2", "El espaciamiento del refuerzo no debe exceder de 5 veces el espesor del muro ni 750 mm para muros interiores o 450 mm para muros exteriores."),
+    om("Diafragma prefabricado: ¿resistencia mínima de la conexión con los elementos que soporta lateralmente?", ["1,5 kN/m", "4,5 kN/m", "25 kN/m", "45 kN/m"], 1,
+       "16.5.1.2", "deben tener una resistencia nominal a la tracción no menor que 4,5 kN por metro lineal."),
+    om("Columna prefabricada más grande de lo necesario: ¿qué Ag se puede usar para su amarre vertical?", ["Siempre la total", "Una reducida, pero no menor que la mitad del área total", "La cuarta parte", "La del núcleo"], 1,
+       "16.5.1.3", "se permite emplear un área efectiva reducida Ag basada en la sección transversal requerida, pero no menor a la mitad del área total."),
+    om("Paneles de muro sin tracción en la base: ¿dónde pueden anclarse sus amarres?", ["En el aire", "En una losa sobre el terreno apropiadamente reforzada", "Solo en zapatas", "No requieren"], 1,
+       "16.5.1.3", "(c) Cuando las fuerzas de diseño no generen tracción en la base, se permite que los amarres requeridos por 16.5.1.3 (b) sean anclados en una losa de concreto apoyada sobre el terreno, apropiadamente reforzada."),
+    om("Muros portantes prefabricados de varios pisos: ¿a qué distancia del plano del piso deben estar los amarres de piso?", ["300 mm", "600 mm", "1,2 m", "3 m"], 1,
+       "16.5.2.1", "Los amarres deben estar ubicados en o dentro de 600 mm del plano del sistema de piso o techo."),
+    om("¿Qué espaciamiento máximo tienen los amarres transversales de piso en muros portantes prefabricados?", ["3 m", "El espaciamiento de los muros de carga", "1,2 m", "600 mm"], 1,
+       "16.5.2.3", "deben tener un espaciamiento no mayor al espaciamiento de los muros de carga."),
+    om("En la figura, ¿qué exige la norma de los amarres verticales en muros portantes?", ["Solo en el primer piso", "Continuos en toda la altura, ≥ 45 kN/m y al menos dos por panel", "Uno por panel", "Solo en esquinas"], 1,
+       "16.5.2.5", "Deben proporcionarse amarres verticales de tracción en todos los muros y deben ser continuos en toda la altura de la edificación.", fig="fig-16-5-2"),
+    om("Conexión prefabricada donde manda el cortante: ¿qué disposiciones se pueden usar?", ["11.3", "11.7 (cortante por fricción)", "11.12", "21.7"], 1,
+       "16.6.1.1", "Cuando el cortante sea la principal carga impuesta, se permite usar las disposiciones de 11.7."),
+    om("En la figura, ¿cuánto deben retirarse los dispositivos de apoyo de un borde no reforzado?", ["5 mm", "13 mm", "25 mm", "50 mm"], 1,
+       "16.6.2.2", "(b) Los dispositivos de soporte en bordes no reforzados deben desplazarse un mínimo de 13 mm desde la cara del apoyo", fig="fig-16-6-2"),
+    om("Prefabricado isostático: ¿qué parte del refuerzo positivo debe llegar al centro del apoyo?", ["Nada", "Al menos un tercio", "La mitad", "Todo"], 1,
+       "16.6.2.3", "pero al menos un tercio de dicho refuerzo debe extenderse hasta el centro del apoyo"),
+    om("Dowels colocados con el concreto aún plástico (aprobados por el proyectista): ¿deben amarrarse al refuerzo?", ["Sí, siempre", "No se requiere, pero deben mantenerse en posición y el concreto compactarse bien", "Solo con soldadura", "No se permiten"], 1,
+       "16.7.1.1", "No se requiera que los elementos embebidos sean enganchados o amarrados al refuerzo dentro del concreto."),
+    om("¿Con qué deben coincidir las marcas de identificación de los prefabricados?", ["Con el catálogo del fabricante", "Con los planos de montaje", "Con el número de lote del cemento", "Con nada"], 1,
+       "16.8.2", "Las marcas de identificación deben corresponder con las de los planos de montaje."),
+    om("Durante el montaje de prefabricados, ¿qué se exige hasta completar las conexiones permanentes?", ["Nada", "Apoyarlos y arriostrarlos adecuadamente", "Soldarlos", "Vaciar la sobrelosa"], 1,
+       "16.9.2", "Las estructuras y elementos prefabricados deben estar adecuadamente apoyados y arriostrados durante el montaje para asegurar el adecuado alineamiento e integridad estructural hasta que se completen las conexiones permanentes."),
+    om("Ensayo a flexión de un prefabricado aislado antes de volverse compuesto: ¿cuándo se permite cargarlo?", ["Siempre", "Solo si la compresión o el pandeo no son críticos para el elemento aislado", "Nunca", "Solo a 28 días"], 1,
+       "16.10.1.1", "Las cargas de ensayo deben ser aplicadas sólo cuando los cálculos indiquen que para el elemento prefabricado aislado no es crítica la compresión o el pandeo."),
 ]
 
 CAPITULOS = [
