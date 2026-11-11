@@ -642,6 +642,197 @@
        "extracto": "Las barras de acero de refuerzo, alambre, tendones y ductos metálicos se almacenarán en un lugar seco, aislado del suelo y protegido de la humedad, tierra, sales, aceite y grasas."
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "El tamaño máximo nominal del agregado grueso no debe superar 1/5 de…",
+      "opciones": [
+       "La altura de la losa",
+       "La menor separación entre los lados del encofrado",
+       "El recubrimiento",
+       "El diámetro de la barra"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(a) 1/5 de la menor separación entre los lados del encofrado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una losa, el agregado grueso no debe superar qué fracción de su altura?",
+      "opciones": [
+       "1/2",
+       "1/3",
+       "1/4",
+       "1/5"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(b) 1/3 de la altura de la losa, de ser el caso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Respecto al espaciamiento libre entre barras, el agregado grueso no debe superar…",
+      "opciones": [
+       "1/2",
+       "2/3",
+       "3/4",
+       "Todo el espaciamiento"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "3.3.2",
+       "extracto": "(c) 3/4 del espaciamiento mínimo libre entre las barras o alambres individuales de refuerzo, paquetes de barras, tendones individuales, paquetes de tendones o ductos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Hasta qué resistencia se permite un concreto hecho con «hormigón»?",
+      "opciones": [
+       "10 MPa",
+       "14 MPa",
+       "17 MPa",
+       "21 MPa"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "3.3.10",
+       "extracto": "El “hormigón” sólo podrá emplearse en la elaboración de concretos con resistencia en compresión no mayor de 10 MPa a los 28 días."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En cuál de estos casos SÍ podría usarse agua de mar, con autorización?",
+      "opciones": [
+       "Concreto armado",
+       "Concreto preesforzado",
+       "Concreto simple de 14 MPa sin acabado especial",
+       "Concreto con insertos de aluminio"
+      ],
+      "correcta": 2,
+      "explicacion": "Se prohíbe en concreto armado y preesforzado, en concretos de más de 17 MPa, con fierro galvanizado o aluminio embebido y con acabado de importancia."
+     },
+     "citas": [
+      {
+       "articulo": "3.4.5",
+       "extracto": "No se utilizará en los siguientes casos: - Concreto armado y preesforzado. - Concretos con resistencias mayores de 17 MPa a los 28 días. - Concretos con elementos embebidos de fierro galvanizado o aluminio. - Concretos con un acabado superficial de importancia."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué deformación unitaria define fy en barras de más de 420 MPa?",
+      "opciones": [
+       "0,002",
+       "0,0035",
+       "0,005",
+       "0,01"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.5.3.2",
+       "extracto": "…para barras con fy mayor que 420 MPa, la resistencia a la fluencia debe tomarse como el esfuerzo correspondiente a una deformación unitaria de 0,35%."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es el diámetro mínimo del alambre corrugado de refuerzo?",
+      "opciones": [
+       "4 mm",
+       "5,5 mm",
+       "6 mm",
+       "8 mm"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.5.3.4",
+       "extracto": "…el diámetro del alambre no debe ser menor que 5,5 mm…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En qué caso se permiten barras lisas?",
+      "opciones": [
+       "Como refuerzo principal de vigas",
+       "En espirales de confinamiento",
+       "En columnas sísmicas",
+       "Nunca"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.5.4.1",
+       "extracto": "Las barras y alambres lisos sólo se permiten en los siguientes casos: (a) Espirales… (b) Acero de preesfuerzo; (c) Refuerzo por cambios volumétricos en losas nervadas que cumplan con 8.11. El diámetro de este refuerzo no deberá ser mayor de 1/4”."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuántas bolsas de cemento como máximo por pila se permiten al almacenarlo en obra?",
+      "opciones": [
+       "5",
+       "8",
+       "10",
+       "15"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "3.7.3",
+       "extracto": "(b) El cemento en bolsas se almacenará en obra en un lugar techado, fresco, libre de humedad, sin contacto con el suelo. Se almacenará en pilas de hasta 10 bolsas…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo se almacenan las barras de refuerzo en obra?",
+      "opciones": [
+       "Directamente sobre el terreno",
+       "En lugar seco, aislado del suelo y protegido",
+       "Bajo agua para evitar óxido",
+       "Expuestas al sol"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "3.7.5",
+       "extracto": "Las barras de acero de refuerzo, alambre, tendones y ductos metálicos se almacenarán en un lugar seco, aislado del suelo y protegido de la humedad, tierra, sales, aceite y grasas."
+      }
+     ]
     }
    ]
   }

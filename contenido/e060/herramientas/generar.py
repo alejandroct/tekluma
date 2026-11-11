@@ -2177,6 +2177,116 @@ CAP2 += [
        fig="fig-21-5-4-1"),
 ]
 
+# ══════════ Complemento caps. 3 a 9: más opción múltiple (pregunta del día y duelos) y preguntas con figura ══════════
+
+def de(cap, numero):
+    """Literal excerpt already used by a card of this chapter for that article."""
+    for t in cap:
+        for c in t["citas"]:
+            if c["articulo"] == numero:
+                return c["extracto"]
+    raise KeyError(numero)
+
+CAP3 += [
+    om("El tamaño máximo nominal del agregado grueso no debe superar 1/5 de…", ["La altura de la losa", "La menor separación entre los lados del encofrado", "El recubrimiento", "El diámetro de la barra"], 1, "3.3.2", de(CAP3, "3.3.2")),
+    om("En una losa, el agregado grueso no debe superar qué fracción de su altura?", ["1/2", "1/3", "1/4", "1/5"], 1, "3.3.2", "(b) 1/3 de la altura de la losa, de ser el caso."),
+    om("Respecto al espaciamiento libre entre barras, el agregado grueso no debe superar…", ["1/2", "2/3", "3/4", "Todo el espaciamiento"], 2, "3.3.2", "(c) 3/4 del espaciamiento mínimo libre entre las barras o alambres individuales de refuerzo, paquetes de barras, tendones individuales, paquetes de tendones o ductos."),
+    om("¿Hasta qué resistencia se permite un concreto hecho con «hormigón»?", ["10 MPa", "14 MPa", "17 MPa", "21 MPa"], 0, "3.3.10", "El “hormigón” sólo podrá emplearse en la elaboración de concretos con resistencia en compresión no mayor de 10 MPa a los 28 días."),
+    om("¿En cuál de estos casos SÍ podría usarse agua de mar, con autorización?", ["Concreto armado", "Concreto preesforzado", "Concreto simple de 14 MPa sin acabado especial", "Concreto con insertos de aluminio"], 2, "3.4.5", de(CAP3, "3.4.5"),
+       "Se prohíbe en concreto armado y preesforzado, en concretos de más de 17 MPa, con fierro galvanizado o aluminio embebido y con acabado de importancia."),
+    om("¿Qué deformación unitaria define fy en barras de más de 420 MPa?", ["0,002", "0,0035", "0,005", "0,01"], 1, "3.5.3.2", de(CAP3, "3.5.3.2")),
+    om("¿Cuál es el diámetro mínimo del alambre corrugado de refuerzo?", ["4 mm", "5,5 mm", "6 mm", "8 mm"], 1, "3.5.3.4", de(CAP3, "3.5.3.4")),
+    om("¿En qué caso se permiten barras lisas?", ["Como refuerzo principal de vigas", "En espirales de confinamiento", "En columnas sísmicas", "Nunca"], 1, "3.5.4.1", de(CAP3, "3.5.4.1")),
+    om("¿Cuántas bolsas de cemento como máximo por pila se permiten al almacenarlo en obra?", ["5", "8", "10", "15"], 2, "3.7.3", de(CAP3, "3.7.3")),
+    om("¿Cómo se almacenan las barras de refuerzo en obra?", ["Directamente sobre el terreno", "En lugar seco, aislado del suelo y protegido", "Bajo agua para evitar óxido", "Expuestas al sol"], 1, "3.7.5", de(CAP3, "3.7.5")),
+]
+
+CAP4 += [
+    om("Para proteger el refuerzo de cloruros (agua de mar), ¿qué f′c mínimo exige la Tabla 4.2?", ["21 MPa", "28 MPa", "31 MPa", "35 MPa"], 3, "4.2.2", de(CAP4, "4.2.2")),
+    om("Concreto de baja permeabilidad expuesto al agua: ¿relación a/mc máxima?", ["0,40", "0,45", "0,50", "0,55"], 2, "4.2.2", de(CAP4, "4.2.2")),
+    om("Exposición severa a sulfatos (1500 a 10000 ppm de SO₄ en agua): ¿qué cemento pide la Tabla 4.4?", ["Tipo I", "Tipo II", "Tipo V", "Cualquiera"], 2, "4.3.1", de(CAP4, "4.3.1")),
+    om("¿Cuál es el ion cloruro máximo en concreto preesforzado (Tabla 4.5)?", ["0,06 %", "0,15 %", "0,30 %", "1,00 %"], 0, "4.4.1", de(CAP4, "4.4.1")),
+    om("Concreto armado expuesto a cloruros en servicio: ¿ion cloruro máximo?", ["0,06 %", "0,15 %", "0,30 %", "1,00 %"], 1, "4.4.1", de(CAP4, "4.4.1")),
+    om("¿Qué tolerancia se acepta en el aire incorporado?", ["±0,5 %", "±1,0 %", "±1,5 %", "±2,0 %"], 2, "4.2.1", de(CAP4, "4.2.1")),
+    om("¿En qué exposición a sulfatos se prohíbe el cloruro de calcio como aditivo?", ["Despreciable", "Moderada", "Severa o muy severa", "En ninguna"], 2, "4.3.2", de(CAP4, "4.3.2")),
+    om("Congelamiento y deshielo en condición húmeda: ¿relación a/mc máxima (Tabla 4.2)?", ["0,40", "0,45", "0,50", "0,55"], 1, "4.2.2", de(CAP4, "4.2.2")),
+]
+
+CAP5 += [
+    om("Sin registros de ensayos, ¿qué f′cr se usa para un concreto de 21 a 35 MPa?", ["f′c + 7,0", "f′c + 8,5", "1,1 f′c + 5,0", "f′c + 1,34 Ss"], 1, "5.3.2.2", "TABLA 5.3 … 21 ≤ f’c ≤ 35 f’cr = f’c + 8,5"),
+    om("Concreto de f′c = 28 MPa sin registros de ensayos: ¿f′cr de dosificación?", ["33,5 MPa", "35,0 MPa", "36,5 MPa", "38,0 MPa"], 2, "5.3.2.2", "TABLA 5.3 … 21 ≤ f’c ≤ 35 f’cr = f’c + 8,5", "28 + 8,5 = 36,5 MPa."),
+    om("Con 15 ensayos consecutivos, ¿por cuánto se multiplica la desviación estándar?", ["1,00", "1,03", "1,08", "1,16"], 3, "5.3.1.2", "…se debe establecer la desviación estándar de la muestra, Ss, como el producto de la desviación estándar calculada de la muestra por el factor de modificación de la Tabla 5.1."),
+    om("¿Cuántas probetas forman un «ensayo de resistencia»?", ["1", "2", "3", "5"], 1, "5.1.6", "Se considera como un ensayo de resistencia al promedio de las resistencias de dos probetas cilíndricas hechas de la misma muestra de concreto…"),
+    om("¿Cada cuántos m³ de concreto se toma como mínimo una muestra?", ["25 m³", "50 m³", "100 m³", "150 m³"], 1, "5.6.2.1", "…ni menos de una vez por cada 50 m3 de concreto, ni menos de una vez por cada 300 m2 de superficie de losas o muros."),
+    om("Con concreto premezclado, ¿cada cuántos camiones se toma al menos una muestra?", ["3", "5", "8", "10"], 1, "5.6.2.1", "No deberá tomarse menos de una muestra de ensayo por cada cinco camiones cuando se trate de concreto premezclado."),
+    om("f′c = 21 MPa. ¿Cuál es el ensayo individual más bajo aceptable?", ["17,5 MPa", "18,9 MPa", "19,5 MPa", "21,0 MPa"], 0, "5.6.3.3", "(b) Ningún resultado individual del ensayo de resistencia (promedio de dos cilindros) es menor que f’c en más de 3,5 MPa cuando f’c es 35 MPa o menor…"),
+    om("¿Cuándo es aceptable el concreto de una zona evaluada con núcleos?", ["Promedio ≥ 75 % y ninguno < 65 %", "Promedio ≥ 85 % y ninguno < 75 %", "Promedio ≥ f′c", "Promedio ≥ 90 % y ninguno < 80 %"], 1, "5.6.5.4", "…si el promedio de tres núcleos es por lo menos igual al 85% de f’c y ningún núcleo tiene una resistencia menor del 75% de f’c."),
+    om("¿Cuál es la temperatura máxima del concreto al colocarse?", ["25 °C", "28 °C", "32 °C", "35 °C"], 2, "5.11.2", "…Además, no deberá ser mayor de 32º C."),
+    om("¿Cuántos días de curado húmedo mínimo exige el concreto normal?", ["3", "5", "7", "14"], 2, "5.11.5", "…permanentemente húmedo por lo menos durante los primeros 7 días después de la colocación (excepto para concreto de alta resistencia inicial)."),
+    om("¿Por debajo de qué temperatura ambiente se considera clima frío?", ["0 °C", "5 °C", "10 °C", "15 °C"], 1, "5.12.1", "Para los fines de esta Norma se considera como clima frío a aquel en que, en cualquier momento del vaciado, la temperatura ambiente pueda estar por debajo de 5º C."),
+    om("¿Qué temperatura máxima pueden tener los encofrados metálicos y el acero al vaciar?", ["32 °C", "40 °C", "50 °C", "60 °C"], 2, "5.11.4", "La temperatura de los encofrados metálicos y el acero de refuerzo no deberá ser mayor de 50º C."),
+    om("Según esta tabla, con Ss conocida y f′c ≤ 35 MPa, ¿cómo se obtiene f′cr?", ["Solo con f′c + 1,34 Ss", "El mayor de f′c + 1,34 Ss y f′c + 2,33 Ss − 3,5", "El menor de ambas", "f′c + 8,5"], 1, "5.3.2.1", "La resistencia promedio a la compresión requerida, f’cr, usada como base para la dosificación del concreto debe ser determinada según la Tabla 5.2…", fig="tabla-5-2"),
+]
+
+CAP6 += [
+    om("¿Qué porcentaje máximo de la sección de una columna pueden ocupar los ductos embebidos?", ["2 %", "4 %", "6 %", "10 %"], 1, "6.3.4", "…no deben ocupar más del 4% del área de la sección transversal que se empleó para calcular su resistencia…"),
+    om("Losa de 200 mm: ¿diámetro exterior máximo de una tubería embebida?", ["50 mm", "66 mm", "80 mm", "100 mm"], 1, "6.3.5", "(a) No deben tener dimensiones exteriores mayores que la tercera parte del espesor total de la losa, muro o viga, donde estén embebidos.", "200 / 3 ≈ 66 mm."),
+    om("¿A qué distancia mínima entre centros se colocan tuberías embebidas paralelas?", ["1 diámetro", "2 diámetros", "3 diámetros", "5 diámetros"], 2, "6.3.5", "(b) No deben estar espaciados a menos de tres veces su diámetro o ancho medido de centro a centro."),
+    om("Tubería embebida en contacto con el suelo: ¿recubrimiento mínimo?", ["20 mm", "30 mm", "40 mm", "50 mm"], 2, "6.3.10", "El recubrimiento de concreto para las tuberías y sus conexiones no debe ser menor de 40 mm en superficies de concreto expuestas a la intemperie o en contacto con el suelo…"),
+    om("¿Dónde se ubican las juntas de construcción en vigas y losas?", ["Sobre los apoyos", "En el tercio central del vano", "A un cuarto de la luz", "Donde termine la jornada"], 1, "6.4.4", "Las juntas de construcción en los pisos y techos deben estar localizadas dentro del tercio central del vano de las losas, vigas y vigas principales."),
+    om("¿Qué metal no debe dejarse embebido sin protección por su reacción con el concreto?", ["Cobre", "Aluminio", "Acero galvanizado", "Bronce"], 1, "6.3.2", "No deben dejarse embebidos en el concreto estructural, tuberías y ductos de aluminio, a menos que se recubran o se pinten adecuadamente…"),
+    om("Antes de desencofrar, ¿a qué pueden equivaler las cargas de construcción?", ["A la mitad de la carga viva", "A las cargas vivas de diseño", "Solo al peso propio", "A cero"], 1, "6.2.1", "Debe considerarse que las cargas de construcción pueden ser tan altas como las cargas vivas de diseño…"),
+]
+
+CAP7 += [
+    om("En la figura, ¿qué extensión lleva el gancho estándar de 180°?", ["4 db y no menos de 65 mm", "6 db", "12 db", "8 db y no menos de 50 mm"], 0, "7.1.1", de(CAP7, "7.1.1"), fig="fig-7-1"),
+    om("En la figura, ¿qué extensión lleva el gancho estándar de 90°?", ["4 db", "6 db", "8 db", "12 db"], 3, "7.1.2", de(CAP7, "7.1.2"), fig="fig-7-1"),
+    om("En la figura, ¿qué extensión lleva un estribo con gancho a 135°?", ["4 db", "6 db", "10 db", "12 db"], 1, "7.1.3", de(CAP7, "7.1.3"), fig="fig-7-1"),
+    om("¿Qué diámetro interior mínimo de doblado tiene una barra de 3/4″ (Tabla 7.1, ver figura)?", ["4 db", "6 db", "8 db", "10 db"], 1, "7.2.1", de(CAP7, "7.2.1"), fig="fig-7-2"),
+    om("¿Y para una barra de 1 3/8″?", ["6 db", "8 db", "10 db", "12 db"], 1, "7.2.1", de(CAP7, "7.2.1"), fig="fig-7-2"),
+    om("Estribos de 5/8″ o menos: ¿diámetro interior mínimo de doblado?", ["2 db", "4 db", "6 db", "8 db"], 1, "7.2.2", de(CAP7, "7.2.2")),
+    om("¿Cuál es la distancia libre mínima entre barras paralelas de una capa en vigas?", ["db y 20 mm", "db y 25 mm", "1,5 db y 40 mm", "2 db"], 1, "7.6.1", de(CAP7, "7.6.1")),
+    om("¿Cuántas barras como máximo puede tener un paquete?", ["2", "3", "4", "6"], 2, "7.6.5.1", de(CAP7, "7.6.5.1")),
+    om("Viga en contacto permanente con el suelo: ¿recubrimiento mínimo?", ["40 mm", "50 mm", "60 mm", "70 mm"], 3, "7.7.1", de(CAP7, "7.7.1")),
+    om("Losa interior no expuesta con barras de 1/2″: ¿recubrimiento mínimo?", ["20 mm", "25 mm", "30 mm", "40 mm"], 0, "7.7.1", de(CAP7, "7.7.1")),
+    om("Columna con barras de 5/8″ a la intemperie: ¿recubrimiento mínimo?", ["30 mm", "40 mm", "50 mm", "70 mm"], 1, "7.7.1", de(CAP7, "7.7.1")),
+    om("¿Cuántas vueltas adicionales se usan para anclar una espiral en cada extremo?", ["0,5", "1", "1,5", "2"], 2, "7.10.4.4", de(CAP7, "7.10.4.4")),
+    om("¿Qué separación libre máxima puede haber entre una barra de columna y otra apoyada lateralmente por estribo?", ["100 mm", "150 mm", "200 mm", "250 mm"], 1, "7.10.5.3", de(CAP7, "7.10.5.3")),
+    om("Columna de 30 × 50 con barras de 3/4″ y estribos de 3/8″: ¿espaciamiento vertical máximo de estribos?", ["250 mm", "300 mm", "306 mm", "456 mm"], 1, "7.10.5.2", de(CAP7, "7.10.5.2"), "El menor entre 16 db = 306 mm, 48 dest = 456 mm y la menor dimensión, 300 mm."),
+]
+
+CAP8 += [
+    om("Tramo interior de una viga continua: ¿coeficiente aproximado de momento positivo?", ["1/11", "1/14", "1/16", "1/24"], 2, "8.3.4", "(b) Tramos interiores … (1/16) wu ℓn²"),
+    om("Momento negativo en la cara exterior del primer apoyo interior con dos tramos:", ["1/9", "1/10", "1/11", "1/12"], 0, "8.3.4", "Momento negativo en la cara exterior del primer apoyo interior (a) Dos tramos: … (1/9) wu ℓn²"),
+    om("Apoyo exterior monolítico que es una viga de borde: ¿coeficiente de momento negativo?", ["1/16", "1/24", "1/11", "0"], 1, "8.3.4", "Cuando el apoyo es una viga de borde: … (1/24) wu ℓn²"),
+    om("Para usar los coeficientes aproximados, ¿cuánto puede exceder una luz a la adyacente?", ["10 %", "20 %", "30 %", "50 %"], 1, "8.3.4", "(b) Las luces de los tramos sean aproximadamente iguales, sin que la mayor de dos luces adyacentes exceda en más de 20% a la menor."),
+    om("¿Cuál es Ec para un concreto normal de f′c = 21 MPa (aprox.)?", ["15 000 MPa", "17 500 MPa", "21 500 MPa", "25 000 MPa"], 2, "8.5.2", "Ec = 4700 √f’c (en MPa) (8-3)", "4700 × √21 ≈ 21 540 MPa."),
+    om("¿Qué módulo de elasticidad se usa para el acero de refuerzo?", ["150 000 MPa", "200 000 MPa", "210 000 MPa", "250 000 MPa"], 1, "8.5.5", "El módulo de elasticidad, Es, para el acero de refuerzo no preesforzado puede tomarse como 200 000 MPa."),
+    om("¿Cuál es el espaciamiento libre máximo entre nervios de una losa nervada?", ["500 mm", "600 mm", "750 mm", "900 mm"], 2, "8.11.3", "El espaciamiento libre entre las nervaduras no debe exceder de 750 mm."),
+    om("¿Cuál es el ancho mínimo de una vigueta de aligerado?", ["75 mm", "100 mm", "120 mm", "150 mm"], 1, "8.11.2", "El ancho de las nervaduras no debe ser menor de 100 mm y debe tener una altura no mayor de 3,5 veces su ancho mínimo."),
+    om("¿En cuánto puede aumentarse Vc de las viguetas de un aligerado?", ["5 %", "10 %", "15 %", "20 %"], 1, "8.11.8", "La resistencia a la fuerza cortante Vc proporcionada por el concreto de las nervaduras podrá ser considerada 10% mayor…"),
+    om("¿Con qué εt mínimo se permite redistribuir momentos negativos?", ["0,004", "0,005", "0,0075", "0,01"], 2, "8.4.2", "…la deformación εt sea mayor a igual a 0,0075."),
+    om("En la figura, ¿hasta cuánto se pueden redistribuir los momentos?", ["10 %", "20 %", "1000 εt %", "εt / 0,003 %"], 2, "8.4.1", "…en no más de: 1000 εt (en porcentaje) (8-1)", fig="fig-8-4-1"),
+    om("Viga T interior: ¿qué ancho total máximo puede tener el ala?", ["ℓn/8", "ℓn/4", "ℓn/2", "16 t"], 1, "8.10.2", "El ancho efectivo de la losa usada como ala de las vigas T no debe exceder de la cuarta parte de la luz libre de la viga…"),
+]
+
+CAP9 += [
+    om("¿Cuál es la combinación básica de diseño de la E.060?", ["1,2 CM + 1,6 CV", "1,4 CM + 1,7 CV", "1,25 CM + 1,25 CV", "1,5 CM + 1,8 CV"], 1, "9.2.1", de(CAP9, "9.2.1")),
+    om("¿Qué φ corresponde a flexión sin carga axial?", ["0,70", "0,75", "0,85", "0,90"], 3, "9.3.2.2", de(CAP9, "9.3.2.2")),
+    om("¿Qué φ corresponde a cortante y torsión?", ["0,70", "0,75", "0,85", "0,90"], 2, "9.3.2.2", de(CAP9, "9.3.2.2")),
+    om("Columna con estribos (no espiral) a compresión: ¿qué φ?", ["0,65", "0,70", "0,75", "0,90"], 1, "9.3.2.2", de(CAP9, "9.3.2.2")),
+    om("¿Cuál es el f′c mínimo del concreto estructural (salvo concreto simple)?", ["14 MPa", "17 MPa", "21 MPa", "28 MPa"], 1, "9.4.1", de(CAP9, "9.4.1")),
+    om("Losa maciza simplemente apoyada (fy 420): ¿peralte mínimo sin verificar deflexiones?", ["ℓ/16", "ℓ/20", "ℓ/24", "ℓ/28"], 1, "9.6.2.1", de(CAP9, "9.6.2.1")),
+    om("Viga en voladizo: ¿peralte mínimo de la Tabla 9.1?", ["ℓ/8", "ℓ/10", "ℓ/16", "ℓ/21"], 0, "9.6.2.1", de(CAP9, "9.6.2.1")),
+    om("Techo plano sin elementos frágiles: ¿deflexión inmediata máxima por carga viva?", ["ℓ/180", "ℓ/240", "ℓ/360", "ℓ/480"], 0, "9.6.2.6", de(CAP9, "9.6.2.6")),
+    om("¿Qué cuantía mínima de temperatura llevan las losas con barras corrugadas de fy 420?", ["0,0012", "0,0015", "0,0018", "0,0020"], 2, "9.7.2", de(CAP9, "9.7.2")),
+    om("Según la curva, ¿qué factor ξ corresponde a 12 meses de carga sostenida?", ["1,0", "1,2", "1,4", "2,0"], 2, "9.6.2.5", de(CAP9, "9.6.2.5"), fig="fig-9-6-2-5"),
+    om("¿Y a partir de 5 años?", ["1,4", "1,6", "1,8", "2,0"], 3, "9.6.2.5", de(CAP9, "9.6.2.5"), fig="fig-9-6-2-5"),
+    om("¿A partir de qué peralte de viga se exige armadura superficial en las caras laterales?", ["600 mm", "750 mm", "900 mm", "1200 mm"], 2, "9.9.6", de(CAP9, "9.9.6")),
+    om("¿Se combinan sismo y viento simultáneamente?", ["Sí, siempre", "No es necesario", "Solo en edificios altos", "Solo en zona 4"], 1, "9.2.4", de(CAP9, "9.2.4")),
+    om("¿Cuál es el fy máximo utilizable en los cálculos, en general?", ["420 MPa", "500 MPa", "550 MPa", "700 MPa"], 2, "9.5.1", de(CAP9, "9.5.1")),
+]
+
 CAPITULOS = [
     ("03", "3", "e060-c03-materiales", "E.060 · Cap. 3 · Materiales", "Agregados, agua, acero de refuerzo, aditivos y almacenamiento.", CAP3),
     ("04", "4", "e060-c04-durabilidad", "E.060 · Cap. 4 · Durabilidad", "Aire incorporado, exposición especial, sulfatos y cloruros (Tablas 4.1 a 4.5).", CAP4),

@@ -488,6 +488,140 @@
        "extracto": "Las vigas y las losas apoyadas sobre columnas o muros no deben vaciarse hasta que el concreto del apoyo vertical haya endurecido hasta el punto que haya dejado de ser plástico."
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué porcentaje máximo de la sección de una columna pueden ocupar los ductos embebidos?",
+      "opciones": [
+       "2 %",
+       "4 %",
+       "6 %",
+       "10 %"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "6.3.4",
+       "extracto": "…no deben ocupar más del 4% del área de la sección transversal que se empleó para calcular su resistencia…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Losa de 200 mm: ¿diámetro exterior máximo de una tubería embebida?",
+      "opciones": [
+       "50 mm",
+       "66 mm",
+       "80 mm",
+       "100 mm"
+      ],
+      "correcta": 1,
+      "explicacion": "200 / 3 ≈ 66 mm."
+     },
+     "citas": [
+      {
+       "articulo": "6.3.5",
+       "extracto": "(a) No deben tener dimensiones exteriores mayores que la tercera parte del espesor total de la losa, muro o viga, donde estén embebidos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A qué distancia mínima entre centros se colocan tuberías embebidas paralelas?",
+      "opciones": [
+       "1 diámetro",
+       "2 diámetros",
+       "3 diámetros",
+       "5 diámetros"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "6.3.5",
+       "extracto": "(b) No deben estar espaciados a menos de tres veces su diámetro o ancho medido de centro a centro."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Tubería embebida en contacto con el suelo: ¿recubrimiento mínimo?",
+      "opciones": [
+       "20 mm",
+       "30 mm",
+       "40 mm",
+       "50 mm"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "6.3.10",
+       "extracto": "El recubrimiento de concreto para las tuberías y sus conexiones no debe ser menor de 40 mm en superficies de concreto expuestas a la intemperie o en contacto con el suelo…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Dónde se ubican las juntas de construcción en vigas y losas?",
+      "opciones": [
+       "Sobre los apoyos",
+       "En el tercio central del vano",
+       "A un cuarto de la luz",
+       "Donde termine la jornada"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "6.4.4",
+       "extracto": "Las juntas de construcción en los pisos y techos deben estar localizadas dentro del tercio central del vano de las losas, vigas y vigas principales."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué metal no debe dejarse embebido sin protección por su reacción con el concreto?",
+      "opciones": [
+       "Cobre",
+       "Aluminio",
+       "Acero galvanizado",
+       "Bronce"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "6.3.2",
+       "extracto": "No deben dejarse embebidos en el concreto estructural, tuberías y ductos de aluminio, a menos que se recubran o se pinten adecuadamente…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Antes de desencofrar, ¿a qué pueden equivaler las cargas de construcción?",
+      "opciones": [
+       "A la mitad de la carga viva",
+       "A las cargas vivas de diseño",
+       "Solo al peso propio",
+       "A cero"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "Debe considerarse que las cargas de construcción pueden ser tan altas como las cargas vivas de diseño…"
+      }
+     ]
     }
    ]
   }

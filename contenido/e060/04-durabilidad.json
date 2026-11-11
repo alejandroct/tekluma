@@ -648,6 +648,158 @@
        "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días…"
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para proteger el refuerzo de cloruros (agua de mar), ¿qué f′c mínimo exige la Tabla 4.2?",
+      "opciones": [
+       "21 MPa",
+       "28 MPa",
+       "31 MPa",
+       "35 MPa"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "4.2.2",
+       "extracto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Concreto de baja permeabilidad expuesto al agua: ¿relación a/mc máxima?",
+      "opciones": [
+       "0,40",
+       "0,45",
+       "0,50",
+       "0,55"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "4.2.2",
+       "extracto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Exposición severa a sulfatos (1500 a 10000 ppm de SO₄ en agua): ¿qué cemento pide la Tabla 4.4?",
+      "opciones": [
+       "Tipo I",
+       "Tipo II",
+       "Tipo V",
+       "Cualquiera"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "4.3.1",
+       "extracto": "El concreto que va a estar expuesto a soluciones o suelos que contengan sulfatos debe cumplir con los requisitos de la Tabla 4.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es el ion cloruro máximo en concreto preesforzado (Tabla 4.5)?",
+      "opciones": [
+       "0,06 %",
+       "0,15 %",
+       "0,30 %",
+       "1,00 %"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "4.4.1",
+       "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días… no deben exceder los límites de la Tabla 4.5."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Concreto armado expuesto a cloruros en servicio: ¿ion cloruro máximo?",
+      "opciones": [
+       "0,06 %",
+       "0,15 %",
+       "0,30 %",
+       "1,00 %"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "4.4.1",
+       "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días… no deben exceder los límites de la Tabla 4.5."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué tolerancia se acepta en el aire incorporado?",
+      "opciones": [
+       "±0,5 %",
+       "±1,0 %",
+       "±1,5 %",
+       "±2,0 %"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "4.2.1",
+       "extracto": "…deben tener aire incorporado, con el contenido total de aire indicado en la Tabla 4.1."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En qué exposición a sulfatos se prohíbe el cloruro de calcio como aditivo?",
+      "opciones": [
+       "Despreciable",
+       "Moderada",
+       "Severa o muy severa",
+       "En ninguna"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "4.3.2",
+       "extracto": "El cloruro de calcio no debe emplearse como aditivo en concretos sometidos a exposición a sulfatos severa o muy severa, tal como se definen en la Tabla 4.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Congelamiento y deshielo en condición húmeda: ¿relación a/mc máxima (Tabla 4.2)?",
+      "opciones": [
+       "0,40",
+       "0,45",
+       "0,50",
+       "0,55"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "4.2.2",
+       "extracto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta."
+      }
+     ]
     }
    ]
   }
