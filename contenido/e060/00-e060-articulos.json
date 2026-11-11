@@ -6997,7 +6997,7 @@
   {
    "numero": "20.3.2",
    "epigrafe": "Intensidad de la carga",
-   "texto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que ( ) 0,85 1,4CM 1,7CV + . Se puede reducir la carga viva de acuerdo con\n las disposiciones de la NTE E.020 Cargas.",
+   "texto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV). Se puede reducir la carga viva de acuerdo con\n las disposiciones de la NTE E.020 Cargas.",
    "pagina": 178
   },
   {
@@ -7054,7 +7054,7 @@
   },
   {
    "numero": "20.5.2",
-   "texto": "Las deflexiones máximas medidas deben satisfacer una de las siguientes condiciones:\n\n 2 1 20000 t\n h Δ≤ (20-1)\n\n 1 4 r Δ Δ≤ (20-2)\n donde h es el peralte del elemento y t la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor. Para losas armadas en dos direcciones, t será la luz mas corta. Para voladizos, t deberá considerarse como el doble de la distancia del apoyo al extremo del voladizo.\n\n Si la máxima deflexión medida, 1 Δ, y la deflexión residual, r Δ, no satisfacen (20-1) ó (20-2), se puede repetir la prueba de carga.\n La repetición de la prueba no debe realizarse antes de 72 horas desde la remoción de la carga correspondiente a la primera prueba. La porción de la estructura ensayada en la repetición de la prueba debe considerarse aceptable si la recuperación de la deflexión r Δ satisface la condición:\n\n (20-3)\n donde 2 Δ es la deflexión máxima medida durante la segunda prueba, relativa a la posición de la estructura al iniciar la segunda prueba.",
+   "texto": "Las deflexiones máximas medidas deben satisfacer una de las siguientes condiciones:\n Δ1 ≤ ℓt² / 20000 h (20-1)\n Δr ≤ Δ1 / 4 (20-2)\n donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor. Para losas armadas en dos direcciones, ℓt será la luz mas corta. Para voladizos, ℓt deberá considerarse como el doble de la distancia del apoyo al extremo del voladizo.\n\n Si la máxima deflexión medida, Δ1, y la deflexión residual, Δr, no satisfacen (20-1) ó (20-2), se puede repetir la prueba de carga.\n La repetición de la prueba no debe realizarse antes de 72 horas desde la remoción de la carga correspondiente a la primera prueba. La porción de la estructura ensayada en la repetición de la prueba debe considerarse aceptable si la recuperación de la deflexión Δr satisface la condición:\n Δr ≤ Δ2 / 5 (20-3)\n donde Δ2 es la deflexión máxima medida durante la segunda prueba, relativa a la posición de la estructura al iniciar la segunda prueba.",
    "pagina": 179
   },
   {
