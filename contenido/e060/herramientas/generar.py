@@ -65,6 +65,19 @@ for _n, _viejo, _nuevo in PARCHES:
 _a = next(a for a in ARTICULOS if a["numero"] == "13.7.4")
 assert "\n\n TABLA 13.1" in _a["texto"]
 _a["texto"] = _a["texto"].split("\n\n TABLA 13.1")[0] + "\n\n Tablas 13.1, 13.2 y 13.3: coeficientes Ca y Cb para momentos negativos y positivos (casos 1 a 9, m = A/B de 1,00 a 0,50)."
+# Fórmulas del cap. 22 que la extracción dejó ilegibles, y el Anexo I pegado al último artículo.
+TEXTOS_CORREGIDOS = {
+    "22.5.1": "El diseño de secciones transversales sometidas a flexión debe basarse en la siguiente ecuación:\n φ Mn ≥ Mu (22-1)\n donde:\n Mn = 0,42 √f’c Sm (22-2)\n si controla la tracción, y\n Mn = 0,85 f’c Sm (22-3)\n si controla la compresión, donde Sm es el módulo de sección correspondiente.",
+    "22.5.2": "El diseño de secciones transversales sometidas a compresión debe basarse en la siguiente ecuación:\n φPn ≥ Pu (22-4)\n donde Pn se calcula como:\n Pn = 0,60 f’c [1 − (ℓc / 32h)²] A1 (22-5)\n donde A1 es el área cargada.",
+    "22.6.5.2": "El diseño de muros sometidos a cargas axiales de compresión debe basarse en:\n φPn ≥ Pu (22-13)\n donde Pn se calcula como:\n Pn = 0,45 f’c Ag [1 − (ℓc / 32h)²] (22-14)",
+    "22.5.3": "Los elementos sometidos a una combinación de flexión y carga axial de compresión deben diseñarse de manera que en la cara de compresión:\n Pu/φPn + Mu/φMn ≤ 1 (22-6)\n y en la cara de tracción:\n Mu/Sm − Pu/Ag ≤ 0,42 φ √f’c (22-7)",
+    "22.5.4": "El diseño de secciones transversales rectangulares sometidas a cortante debe basarse en:\n φVn ≥ Vu (22-8)\n donde Vn se calcula como:\n Vn = 0,11 √f’c bw h (22-9)\n para la acción como viga, y como:\n Vn = 0,11 (1 + 2/β) √f’c bo h (22-10)\n para la acción en dos direcciones, pero no mayor que 0,22 √f’c bo h. En la ecuación (22-10), β corresponde a la relación de lado largo a lado corto de la carga concentrada o del área de la reacción.",
+    "22.5.5": "El diseño de superficies de apoyo sometidas a compresión debe basarse en:\n φBn ≥ Bu (22-11) donde Bu es la carga de aplastamiento amplificada y Bn es la resistencia nominal al aplastamiento del área cargada A1, calculada como:\n Bn = 0,85 f’c A1 (22-12)\n excepto cuando la superficie de apoyo es más ancha en todos los lados que el área cargada, caso en el cual Bn debe multiplicarse por √(A2/A1), pero no por más de 2.",
+}
+for _n, _texto in TEXTOS_CORREGIDOS.items():
+    next(a for a in ARTICULOS if a["numero"] == _n)["texto"] = _texto
+_a = next(a for a in ARTICULOS if a["numero"] == "22.10.2.3")
+_a["texto"] = _a["texto"].split("\n\n ANEXO I")[0]
 # En los caps. 12 y 22 la extracción invirtió los subíndices de ℓ («d ℓ» por «ℓd»).
 for _a in ARTICULOS:
     if _a["numero"].split(".")[0] in ("12", "22"):
@@ -3552,6 +3565,47 @@ CAP21 += [
        "21.12.2.2", "el refuerzo longitudinal que resiste la flexión debe tener ganchos de 90 grados cerca del fondo de la cimentación, con el extremo libre de las barras orientado hacia el centro de la columna."),
     om("Pilotes en zona sísmica 3: ¿en qué longitud superior llevan confinamiento de 21.6.4?", ["1 m", "5 veces su dimensión y no menos de 1,8 m", "3 m", "Toda la longitud"], 1,
        "21.12.4.4", "En la parte superior del elemento en por lo menos cinco veces la dimensión transversal del elemento, pero no menos de 1,8 m por debajo de la parte inferior del cabezal del pilote;"),
+]
+
+
+# ══════════ Revisión hoja por hoja · Cap. 22 (págs. 211–216) ══════════
+CAP22 += [
+    om("¿Controla la E.060 el diseño de una vereda o losa sobre el terreno?", ["Sí, siempre", "No, salvo que transmita cargas verticales o laterales de otras partes de la estructura al suelo", "Solo si es armada", "Solo en zona 3"], 1,
+       "22.1.2", "no está controlado por esta Norma, a menos que ellas transmitan cargas verticales o fuerzas laterales desde otras partes de la estructura al suelo."),
+    om("¿Puede usarse concreto simple en elementos diseñados para disipar energía sísmica?", ["Sí", "No", "Solo en muros", "Solo con φ = 0,5"], 1,
+       "22.2.2", "No está permitido el empleo de concreto simple en elementos estructurales sometidos a solicitaciones sísmicas que hayan sido determinadas en base a la capacidad de la estructura de disipar energía."),
+    om("Si la resistencia requerida excede la de diseño en un elemento de concreto simple, ¿qué se hace?", ["Se aumenta φ", "Se refuerza y se diseña como concreto armado", "Se acepta con juntas", "Se usa ciclópeo"], 1,
+       "22.4.3", "debe proporcionarse refuerzo y el elemento debe diseñarse como uno de concreto armado de acuerdo con los requisitos pertinentes de esta Norma."),
+    om("¿Cuándo puede contarse con la resistencia a tracción del concreto simple?", ["Nunca", "Cuando se han seguido las disposiciones de juntas de 22.3", "Siempre", "Solo con f′c ≥ 21 MPa"], 1,
+       "22.4.5", "se puede considerar la resistencia a tracción del concreto cuando se han seguido las disposiciones de 22.3."),
+    om("¿Se supone continuidad a flexión entre elementos adyacentes de concreto simple?", ["Sí", "No", "Solo con dowels", "Solo en muros"], 1,
+       "22.4.7", "No se debe suponer continuidad a la flexión debida a tracción entre elementos adyacentes de concreto simple estructural."),
+    om("Flexocompresión en concreto simple, cara traccionada: ¿qué límite tiene Mu/Sm − Pu/Ag?", ["0,42 φ √f′c", "0,85 φ f′c", "0,11 √f′c", "0,62 √f′c"], 0,
+       "22.5.3", "y en la cara de tracción:"),
+    om("Concreto simple, cortante en dos direcciones: ¿tope de Vn?", ["0,11 √f′c bo h", "0,17 √f′c bo h", "0,22 √f′c bo h", "0,33 √f′c bo d"], 2,
+       "22.5.4", "para la acción en dos direcciones, pero no mayor que"),
+    om("Aplastamiento en concreto simple: ¿cómo se calcula Bn?", ["0,60 f′c A1", "0,85 f′c A1 (× √(A2/A1) ≤ 2 si el apoyo es más ancho)", "f′c A1", "0,45 f′c Ag"], 1,
+       "22.5.5", "excepto cuando la superficie de apoyo es más ancha en todos los lados que el área"),
+    om("Muro de concreto simple con la resultante fuera del tercio central: ¿cómo se diseña?", ["Con 22.6.5 (empírico)", "Con 22.5.3 (flexocompresión)", "Como concreto armado", "No se permite"], 1,
+       "22.6.3", "En caso contrario, los muros deben diseñarse de acuerdo con 22.5.3."),
+    om("Muro de carga de concreto simple de 3 m de altura y 5 m de largo: ¿espesor mínimo?", ["100 mm", "125 mm", "150 mm", "200 mm"], 2,
+       "22.6.6.2", "el espesor de muros de carga no debe ser menor que un 1/24 de la longitud o altura no apoyada, la que sea menor, ni que 150 mm.", "3000/24 = 125 mm, pero el mínimo absoluto es 150 mm."),
+    om("Vanos en muros de concreto simple: ¿qué refuerzo mínimo los rodea?", ["Ninguno", "Dos barras de 5/8″ prolongadas 600 mm más allá de las esquinas", "Una barra de 1/2″", "Malla"], 1,
+       "22.6.6.5", "Se deben proporcionar no menos de dos barras de diámetro 5/8” alrededor de todas las aberturas de ventanas y puertas."),
+    om("Zapata de concreto simple, acción como viga: ¿a qué distancia de la carga está la sección crítica?", ["d", "h", "h/2", "En la cara"], 1,
+       "22.7.6.2", "ubicada a una distancia h del borde de la carga concentrada o área de reacción."),
+    om("Zapata de concreto simple, acción en dos direcciones: ¿qué distancia mínima tiene el perímetro crítico?", ["d/2", "0,5 h", "h", "No hay"], 1,
+       "22.7.6.2", "pero no necesita estar más cerca que 0,5h del perímetro de la carga concentrada o área de carga."),
+    om("Pedestal de concreto simple con menor dimensión de 400 mm: ¿altura no apoyada máxima?", ["800 mm", "1000 mm", "1200 mm", "1600 mm"], 2,
+       "22.8.2", "La relación entre la altura no apoyada y la menor dimensión lateral de pedestales de concreto simple no debe exceder de 3.", "3 × 400 = 1200 mm."),
+    om("¿Qué carga axial máxima admite un pedestal de concreto simple?", ["φPn de 22.5.2", "φBn de aplastamiento (22.5.5)", "0,85 f′c Ag", "Sin límite"], 1,
+       "22.8.3", "no debe exceder la resistencia de diseño al aplastamiento, φBn, dada en 22.5.5."),
+    om("Prefabricados de concreto simple: ¿cuándo aplican las limitaciones de 22.2?", ["Solo en su condición final", "También durante fabricación, transporte y montaje", "Solo en montaje", "Nunca"], 1,
+       "22.9.2", "no sólo en su condición final sino también durante la fabricación, transporte y montaje."),
+    om("Concreto ciclópeo: ¿qué f′c mínimo tiene su matriz?", ["7 MPa", "10 MPa", "14 MPa", "17 MPa"], 1,
+       "22.10.1", "(a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa."),
+    om("Diseño con concreto ciclópeo: ¿qué φ y qué f′c se usan?", ["φ = 0,65 y f′c real", "φ = 0,5 y f′c ≤ 10 MPa", "φ = 0,7 y 14 MPa", "φ = 0,9 y 10 MPa"], 1,
+       "22.10.2.3", "En el calculo de las resistencias según 22.5 se utilizará un factor φ = 0,5 y se utilizará, para el diseño, un valor de f’c no mayor a 10 MPa."),
 ]
 
 CAPITULOS = [
