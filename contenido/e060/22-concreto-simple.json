@@ -782,6 +782,158 @@
        "extracto": "El uso de este concreto estará limitado a cimientos corridos, sobrecimientos, muros de contención de gravedad y falsas zapatas."
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué f′c mínimo tiene el concreto simple estructural?",
+      "opciones": [
+       "10 MPa",
+       "14 MPa",
+       "17 MPa",
+       "21 MPa"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "22.2.4",
+       "extracto": "La resistencia especificada del concreto simple para ser usado con fines estructurales medida a los 28 días no debe ser menor de 14 MPa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué φ se usa en concreto simple?",
+      "opciones": [
+       "0,50",
+       "0,65",
+       "0,70",
+       "0,90"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "22.4.2",
+       "extracto": "El factor de reducción de resistencia será de 0,65 como se indica en 9.3.2.9."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se permiten columnas de concreto simple?",
+      "opciones": [
+       "Sí",
+       "No",
+       "Solo de un piso",
+       "Solo en zona 1"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "22.2.2",
+       "extracto": "(a) Elementos que están apoyados de manera continua sobre el suelo… (b) Elementos en los cuales el efecto de arco genera compresión bajo todas las condiciones de carga; (c) Muros y pedestales… No está permitido el uso de columnas de concreto estructural simple."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En concreto vaciado contra el suelo, ¿cuánto se descuenta del peralte de cálculo?",
+      "opciones": [
+       "25 mm",
+       "50 mm",
+       "75 mm",
+       "Nada"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "22.4.8",
+       "extracto": "…excepto para el concreto vaciado contra el suelo en donde la altura o peralte del elemento deberá tomarse 50 mm menor que la dimensión real."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué espesor mínimo tiene una zapata de concreto simple?",
+      "opciones": [
+       "200 mm",
+       "250 mm",
+       "300 mm",
+       "400 mm"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "22.7.4",
+       "extracto": "El espesor de las zapatas de concreto simple estructural no debe ser menor que 300 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué porcentaje máximo de piedra desplazadora lleva el concreto ciclópeo?",
+      "opciones": [
+       "20 %",
+       "25 %",
+       "30 %",
+       "40 %"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "22.10.1",
+       "extracto": "(a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa. (b) La piedra desplazadora no excederá del 30% del volumen total de concreto ciclópeo… (c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué tamaño máximo puede tener la piedra del concreto ciclópeo?",
+      "opciones": [
+       "150 mm",
+       "200 mm",
+       "250 mm",
+       "300 mm"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "22.10.1",
+       "extracto": "(a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa. (b) La piedra desplazadora no excederá del 30% del volumen total de concreto ciclópeo… (c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué relación altura / menor dimensión no debe pasar un pedestal de concreto simple?",
+      "opciones": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "22.8.2",
+       "extracto": "La relación entre la altura no apoyada y la menor dimensión lateral de pedestales de concreto simple no debe exceder de 3."
+      }
+     ]
     }
    ]
   }

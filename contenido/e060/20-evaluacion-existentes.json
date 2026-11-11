@@ -449,6 +449,101 @@
        "extracto": "Si la estructura no satisface las condiciones o criterios de 20.1.2, 20.5.2 ó 20.5.3, se puede utilizar la estructura para un nivel menor de cargas…"
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué carga total mínima se aplica en una prueba de carga?",
+      "opciones": [
+       "1,4 CM + 1,7 CV",
+       "0,85 (1,4 CM + 1,7 CV)",
+       "CM + CV",
+       "1,25 (CM + CV)"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "20.3.2",
+       "extracto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué edad mínima debe tener la estructura para la prueba de carga?",
+      "opciones": [
+       "28 días",
+       "42 días",
+       "56 días",
+       "90 días"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "20.3.3",
+       "extracto": "Una prueba de carga no debe realizarse hasta que la porción de la estructura que se someterá a la carga tenga al menos 56 días."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En cuántos incrementos como mínimo se aplica la carga de prueba?",
+      "opciones": [
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "20.4.2",
+       "extracto": "La carga de prueba debe aplicarse en no menos de cuatro incrementos aproximadamente iguales."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es la deflexión residual máxima aceptable (ec. 20-2)?",
+      "opciones": [
+       "Δ1/2",
+       "Δ1/3",
+       "Δ1/4",
+       "Δ1/5"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "20.5.2",
+       "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) Δr ≤ Δ1 / 4 (20-2)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué φ máximo se permite en flexión en una evaluación con propiedades medidas?",
+      "opciones": [
+       "0,90",
+       "0,95",
+       "1,00",
+       "1,10"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "20.2.5",
+       "extracto": "…se puede incrementar el valor del coeficiente de reducción de resistencia (φ) con respecto a los valores dados en 9.3, pero este no deberá ser mayor a: - Flexión sin carga axial 1,00… - Cortante o torsión 0,90 - Aplastamiento del concreto 0,85"
+      }
+     ]
     }
    ]
   }

@@ -1418,6 +1418,177 @@
        "extracto": "Al calcular la resistencia a flexión, se deben considerar los tendones externos como tendones no adheridos, a menos que se tomen las precauciones para adherir efectivamente los tendones externos…"
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un elemento preesforzado con ft ≤ 0,62 √f′c en servicio es…",
+      "opciones": [
+       "Clase U",
+       "Clase T",
+       "Clase C",
+       "No preesforzado"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "18.3.3",
+       "extracto": "(a) Clase U: ft ≤ 0,62 √f’c (b) Clase T: 0,62 √f’c < ft ≤ 1,0 √f’c Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como Clase U, con ft ≤ 0,50 √f’c."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué compresión se admite en el concreto justo después de la transferencia?",
+      "opciones": [
+       "0,45 f′ci",
+       "0,60 f′ci",
+       "0,70 f′ci",
+       "0,85 f′ci"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "18.4.1",
+       "extracto": "(a) Esfuerzo en la fibra extrema en compresión… 0,60 f’ci (b) Esfuerzo en la fibra extrema en tracción, salvo lo permitido en (c)… 0,25 √f’ci (c) …en los extremos de elementos simplemente apoyados… 0,50 √f’ci"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En servicio, con cargas sostenidas, ¿qué compresión se admite?",
+      "opciones": [
+       "0,45 f′c",
+       "0,60 f′c",
+       "0,70 f′c",
+       "0,85 f′c"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "18.4.2",
+       "extracto": "(a) Esfuerzo en la fibra extrema en compresión debido al preesforzado y a las cargas sostenidas en el tiempo… 0,45 f’c (b) …debida al preesforzado y al total de las cargas… 0,60 f’c"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué esfuerzo máximo se permite en el acero por la fuerza del gato?",
+      "opciones": [
+       "0,70 fpu",
+       "0,74 fpu",
+       "0,80 fpu",
+       "0,94 fpu"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "18.5.1",
+       "extracto": "(a) Debido a la fuerza del gato de preesforzado… 0,94 fpy pero no mayor que el mínimo entre 0,80 fpu… (b) Inmediatamente después de la transferencia del preesfuerzo… 0,82 fpy pero no mayor que 0,74 fpu (c) Tendones de postensado, en anclajes y acoples… 0,70 fpu"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué refuerzo adherido mínimo lleva un elemento con tendones no adheridos?",
+      "opciones": [
+       "0,0018 Ag",
+       "0,004 Act",
+       "0,00075 Acf",
+       "0,01 Ag"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "18.9.2",
+       "extracto": "…el área mínima del refuerzo adherido debe calcularse mediante As = 0,004 Act (18-6)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es la relación agua/cemento máxima del mortero de inyección?",
+      "opciones": [
+       "0,40",
+       "0,45",
+       "0,50",
+       "0,55"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "18.18.3.3",
+       "extracto": "La relación agua cemento no debe exceder de 0,45 en peso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué porcentaje de la rotura deben desarrollar los anclajes de postensado?",
+      "opciones": [
+       "85 %",
+       "90 %",
+       "95 %",
+       "100 %"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "18.21.1",
+       "extracto": "Los anclajes y conectores para tendones adheridos y no adheridos deben desarrollar al menos el 95% de la resistencia a la rotura especificada para el acero de preesforzado…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuánta pérdida por acero roto no reemplazado se tolera?",
+      "opciones": [
+       "1 %",
+       "2 %",
+       "5 %",
+       "Ninguna"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "18.20.4",
+       "extracto": "La pérdida total de presfuerzo debida al acero de preesforzado roto que no es reemplazado no debe exceder del 2% del presfuerzo total."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Ducto para un solo torón: ¿diámetro interior mínimo?",
+      "opciones": [
+       "El del torón",
+       "Torón + 3 mm",
+       "Torón + 6 mm",
+       "2 veces el torón"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "18.17.2",
+       "extracto": "Los ductos inyectados para un solo alambre, un torón o una barra deben tener un diámetro interior al menos 6 mm mayor que el diámetro del acero de preesforzado."
+      }
+     ]
     }
    ]
   }

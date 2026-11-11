@@ -341,6 +341,82 @@
        "extracto": "…el área de los estribos no debe ser menor que la requerida por 11.5.6.2, y su espaciamiento no debe exceder de cuatro veces la dimensión menor del elemento soportado, ni de 600 mm."
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Superficie de contacto limpia y rugosa, sin estribos: ¿Vnh máximo?",
+      "opciones": [
+       "0,35 bv d",
+       "0,55 bv d",
+       "1,8 bv d",
+       "3,5 bv d"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "17.5.3.1",
+       "extracto": "…la resistencia al cortante Vnh no debe tomarse mayor a 0,55 bv d."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es el tope de Vnh con estribos y rugosidad de 6 mm?",
+      "opciones": [
+       "1,8 bv d",
+       "2,5 bv d",
+       "3,5 bv d",
+       "0,2 f′c bv d"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "17.5.3.3",
+       "extracto": "Vnh debe tomarse igual a (1,8 + 0,6 ρv fy) λ bv d, pero no mayor que 3,5 bv d."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se distingue entre elementos apuntalados y no apuntalados al calcular la resistencia?",
+      "opciones": [
+       "Sí",
+       "No",
+       "Solo en cortante",
+       "Solo en flexión"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "17.2.4",
+       "extracto": "En el cálculo de la resistencia de elementos compuestos no debe hacerse distinción entre elementos apuntalados y no apuntalados."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué espaciamiento máximo tienen los estribos de cortante horizontal?",
+      "opciones": [
+       "300 mm",
+       "4 veces la menor dimensión del elemento soportado y 600 mm",
+       "d/2",
+       "Ph/8"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "17.6.1",
+       "extracto": "…el área de los estribos no debe ser menor que la requerida por 11.5.6.2, y su espaciamiento no debe exceder de cuatro veces la dimensión menor del elemento soportado, ni de 600 mm."
+      }
+     ]
     }
    ]
   }

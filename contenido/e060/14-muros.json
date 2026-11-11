@@ -491,6 +491,139 @@
        "extracto": "…deben colocarse por lo menos dos barras de 5/8” alrededor de todos los vanos de ventanas y puertas. Estas barras deben prolongarse más allá de las esquinas de las aberturas una distancia igual a la longitud de anclaje en tracción pero no menos de 600 mm."
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es la cuantía mínima de refuerzo vertical en muros (Cap. 14)?",
+      "opciones": [
+       "0,0012",
+       "0,0015",
+       "0,0020",
+       "0,0025"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.3.1",
+       "extracto": "(a) La cuantía de refuerzo horizontal no será menor que 0,002. (b) La cuantía de refuerzo vertical no será menor que 0,0015."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Y la horizontal?",
+      "opciones": [
+       "0,0012",
+       "0,0015",
+       "0,0020",
+       "0,0025"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "14.3.1",
+       "extracto": "(a) La cuantía de refuerzo horizontal no será menor que 0,002. (b) La cuantía de refuerzo vertical no será menor que 0,0015."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es el espaciamiento máximo del refuerzo en muros?",
+      "opciones": [
+       "2 t y 300 mm",
+       "3 t y 400 mm",
+       "5 t y 450 mm",
+       "400 mm"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.3.3",
+       "extracto": "El refuerzo vertical y el horizontal no debe estar espaciados a más de tres veces el espesor del muro, ni de 400 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Método empírico: ¿qué k se usa en un muro arriostrado arriba y abajo y restringido al giro?",
+      "opciones": [
+       "0,8",
+       "1,0",
+       "1,5",
+       "2,0"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "14.5.2",
+       "extracto": "φPn = 0,55 φ f’c Ag [1 − (k ℓc / 32h)²] (14-1) donde φ = 0,70"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Espesor mínimo de un muro exterior de sótano?",
+      "opciones": [
+       "150 mm",
+       "200 mm",
+       "250 mm",
+       "300 mm"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.5.3.2",
+       "extracto": "El espesor de los muros exteriores de sótanos y cimentaciones no debe ser menor que 200 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué refuerzo mínimo se exige alrededor de puertas y ventanas en muros?",
+      "opciones": [
+       "1 barra de 1/2″",
+       "2 barras de 5/8″",
+       "2 barras de 1/2″",
+       "Estribos cerrados"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.10.3",
+       "extracto": "…deben colocarse por lo menos dos barras de 5/8” alrededor de todos los vanos de ventanas y puertas. Estas barras deben prolongarse más allá de las esquinas de las aberturas una distancia igual a la longitud de anclaje en tracción pero no menos de 600 mm."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuánto se prolongan esas barras más allá de las esquinas como mínimo?",
+      "opciones": [
+       "300 mm",
+       "450 mm",
+       "600 mm",
+       "ℓd sin mínimo"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "14.10.3",
+       "extracto": "…deben colocarse por lo menos dos barras de 5/8” alrededor de todos los vanos de ventanas y puertas. Estas barras deben prolongarse más allá de las esquinas de las aberturas una distancia igual a la longitud de anclaje en tracción pero no menos de 600 mm."
+      }
+     ]
     }
    ]
   }

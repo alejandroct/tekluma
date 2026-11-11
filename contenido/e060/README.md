@@ -29,7 +29,7 @@ Formato: `tekluma-mazos/1` (ver `packages/shared/src/importacion.ts`). Se cargan
 | `21-diseno-sismico.json` | Cap. 21 · 65 tarjetas (vigas, columnas y nudos por sistema, columna fuerte, muros y elementos de borde, ductilidad limitada; 11 figuras) |
 | `22-concreto-simple.json` | Cap. 22 · 19 tarjetas (límites de uso, Mn, Pn, Vn, muros, zapatas, concreto ciclópeo) |
 
-Los 22 capítulos tienen mazo (611 tarjetas). Orden sugerido: primero `00` (carga toda la norma como fuente), luego los capítulos; cada mazo se ubica en el catálogo según su número de capítulo (`orden` = 100 + capítulo). Cada archivo de capítulo trae también sus artículos, así que se puede importar solo.
+Los 22 capítulos tienen mazo (829 tarjetas: 329 de opción múltiple, la base de la pregunta del día y los duelos, y 69 con figura del PDF). Orden sugerido: primero `00` (carga toda la norma como fuente), luego los capítulos; cada mazo se ubica en el catálogo según su número de capítulo (`orden` = 100 + capítulo). Cada archivo de capítulo trae también sus artículos, así que se puede importar solo.
 
 ## Cómo se hicieron
 

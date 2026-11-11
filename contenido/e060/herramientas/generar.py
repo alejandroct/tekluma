@@ -2356,6 +2356,120 @@ CAP12 += [
     om("¿Qué resistencia debe desarrollar un empalme mecánico?", ["fy", "1,25 fy", "1,5 fy", "fu"], 1, "12.14.3.2", de(CAP12, "12.14.3.2")),
 ]
 
+# ══════════ Complemento caps. 13 a 22: más opción múltiple y preguntas con figura ══════════
+
+CAP13 += [
+    om("¿Qué ancho tiene la franja de columna a cada lado del eje?", ["0,25 ℓ1 o 0,25 ℓ2, el menor", "0,5 ℓ1", "ℓ2/3", "1,5 h"], 0, "13.2.2", de(CAP13, "13.2.2")),
+    om("¿Cuál es el espaciamiento máximo del refuerzo en losas en dos direcciones?", ["1,5 h", "2 h", "3 h", "400 mm"], 1, "13.3.2", de(CAP13, "13.3.2")),
+    om("¿Cuántos paños continuos por dirección exige el Método Directo?", ["2", "3", "4", "5"], 1, "13.6.1.1", de(CAP13, "13.6.1.1")),
+    om("Paño interior: ¿qué fracción de Mo va a momento negativo?", ["0,35", "0,50", "0,65", "0,75"], 2, "13.6.3.2", de(CAP13, "13.6.3.2")),
+    om("Paño extremo con borde exterior no restringido: ¿momento negativo exterior?", ["0", "0,16 Mo", "0,26 Mo", "0,65 Mo"], 0, "13.6.3.3", de(CAP13, "13.6.3.3")),
+    om("¿Qué momento se transmite entre la losa y una columna de borde en el Método Directo?", ["0,1 Mo", "0,3 Mo", "0,5 Mo", "0,65 Mo"], 1, "13.6.3.6", de(CAP13, "13.6.3.6")),
+    om("Con b1 = b2, ¿qué fracción γf del momento no balanceado se transmite por flexión?", ["0,40", "0,50", "0,60", "0,75"], 2, "13.5.3.1", de(CAP13, "13.5.3.1"), "γf = 1 / (1 + 2/3) = 0,60."),
+    om("Si αf1 ℓ2/ℓ1 ≥ 1, ¿qué parte del momento de la franja de columna toma la viga?", ["50 %", "75 %", "85 %", "100 %"], 2, "13.6.5.1", de(CAP13, "13.6.5.1")),
+    om("¿Qué peralte mínimo deben tener las vigas para usar el Método de Coeficientes?", ["ℓn/10 o 2 h", "ℓn/15 o 1,5 h, el mayor", "ℓn/20", "3 h"], 1, "13.7.1.1", de(CAP13, "13.7.1.1")),
+    om("Según la Tabla 13.1, paño interior cuadrado (Caso 2, m = 1): ¿Ca para momento negativo?", ["0,033", "0,045", "0,061", "0,076"], 1, "13.7.3.2", de(CAP13, "13.7.3.2"), fig="tabla-13-1"),
+    om("En bordes discontinuos, ¿qué momento negativo se considera en el Método de Coeficientes?", ["0", "1/3 del positivo", "1/2 del positivo", "Igual al positivo"], 1, "13.7.3.5", de(CAP13, "13.7.3.5")),
+    om("¿Cuánto debe extenderse como mínimo un ábaco desde el eje del apoyo?", ["ℓ/8", "ℓ/6", "ℓ/4", "ℓ/3"], 1, "13.2.6", de(CAP13, "13.2.6")),
+]
+
+CAP14 += [
+    om("¿Cuál es la cuantía mínima de refuerzo vertical en muros (Cap. 14)?", ["0,0012", "0,0015", "0,0020", "0,0025"], 1, "14.3.1", de(CAP14, "14.3.1")),
+    om("¿Y la horizontal?", ["0,0012", "0,0015", "0,0020", "0,0025"], 2, "14.3.1", de(CAP14, "14.3.1")),
+    om("¿Cuál es el espaciamiento máximo del refuerzo en muros?", ["2 t y 300 mm", "3 t y 400 mm", "5 t y 450 mm", "400 mm"], 1, "14.3.3", de(CAP14, "14.3.3")),
+    om("Método empírico: ¿qué k se usa en un muro arriostrado arriba y abajo y restringido al giro?", ["0,8", "1,0", "1,5", "2,0"], 0, "14.5.2", de(CAP14, "14.5.2")),
+    om("¿Espesor mínimo de un muro exterior de sótano?", ["150 mm", "200 mm", "250 mm", "300 mm"], 1, "14.5.3.2", de(CAP14, "14.5.3.2")),
+    om("¿Qué refuerzo mínimo se exige alrededor de puertas y ventanas en muros?", ["1 barra de 1/2″", "2 barras de 5/8″", "2 barras de 1/2″", "Estribos cerrados"], 1, "14.10.3", de(CAP14, "14.10.3")),
+    om("¿Cuánto se prolongan esas barras más allá de las esquinas como mínimo?", ["300 mm", "450 mm", "600 mm", "ℓd sin mínimo"], 2, "14.10.3", de(CAP14, "14.10.3")),
+]
+
+CAP15 += [
+    om("¿Con qué cargas se dimensiona el área de la zapata?", ["Amplificadas", "De servicio", "Solo carga muerta", "Las del sismo"], 1, "15.2.2", de(CAP15, "15.2.2")),
+    om("¿Cuánto puede aumentar la presión admisible del suelo con sismo o viento?", ["10 %", "20 %", "30 %", "50 %"], 2, "15.2.4", de(CAP15, "15.2.4")),
+    om("¿A qué porcentaje pueden reducirse las fuerzas sísmicas para verificar el suelo?", ["50 %", "70 %", "80 %", "No se reducen"], 2, "15.2.5", "Para determinar los esfuerzos en el suelo o las fuerzas en pilotes, las acciones sísmicas podrán reducirse al 80% de los valores provenientes del análisis…"),
+    om("Zapata con columna de concreto: ¿dónde está la sección crítica por flexión?", ["En el eje", "En la cara de la columna", "A d de la cara", "A d/2 de la cara"], 1, "15.4.2", de(CAP15, "15.4.2")),
+    om("Zapata de 3,0 × 2,0 m: ¿qué fracción γs del acero corto va en la franja central?", ["0,60", "0,67", "0,80", "1,00"], 2, "15.4.4.2", de(CAP15, "15.4.4.2"), "β = 1,5 → γs = 2 / 2,5 = 0,80."),
+    om("¿Cuál es la altura mínima de una zapata sobre el suelo, sobre el refuerzo inferior?", ["200 mm", "250 mm", "300 mm", "400 mm"], 2, "15.7", de(CAP15, "15.7")),
+    om("¿Y de una zapata sobre pilotes?", ["300 mm", "400 mm", "500 mm", "600 mm"], 1, "15.7", de(CAP15, "15.7")),
+    om("¿Qué refuerzo mínimo cruza la junta columna–zapata en columnas vaciadas en obra?", ["0,0015 Ag", "0,005 Ag", "0,01 Ag", "4 barras"], 1, "15.8.2.1", de(CAP15, "15.8.2.1")),
+    om("¿Se puede usar el Método Directo para losas de cimentación?", ["Sí", "No", "Solo con vigas", "Solo si son rectangulares"], 1, "15.10.2", de(CAP15, "15.10.2")),
+]
+
+CAP16 += [
+    om("En la figura, ¿qué longitud mínima de apoyo tiene una viga prefabricada?", ["ℓn/180 y no menos de 75 mm", "ℓn/180 y no menos de 50 mm", "100 mm", "ℓn/100"], 0, "16.6.2.2", de(CAP16, "16.6.2.2"), fig="fig-16-6-2"),
+    om("¿Y una losa sólida o alveolar?", ["ℓn/180 y no menos de 50 mm", "75 mm", "ℓn/240", "40 mm"], 0, "16.6.2.2", de(CAP16, "16.6.2.2"), fig="fig-16-6-2"),
+    om("En esta figura de amarres, ¿qué resistencia mínima tiene el amarre perimetral de cada piso?", ["25 kN", "45 kN", "75 kN", "100 kN"], 2, "16.5.2.4", de(CAP16, "16.5.2.4"), fig="fig-16-5-2"),
+    om("¿Qué resistencia nominal mínima tiene el amarre vertical de una columna prefabricada?", ["1,0 Ag (N)", "1,5 Ag (N)", "2,0 Ag (N)", "45 kN"], 1, "16.5.1.3", de(CAP16, "16.5.1.3")),
+    om("¿Se permiten conexiones que dependan solo de la fricción por gravedad?", ["Sí", "No", "Solo en losas", "Solo en zona 1"], 1, "16.5.1.4", "No se deben usar detalles de conexión que dependan solamente de la fricción producida por las cargas gravitacionales."),
+]
+
+CAP17 += [
+    om("Superficie de contacto limpia y rugosa, sin estribos: ¿Vnh máximo?", ["0,35 bv d", "0,55 bv d", "1,8 bv d", "3,5 bv d"], 1, "17.5.3.1", de(CAP17, "17.5.3.1")),
+    om("¿Cuál es el tope de Vnh con estribos y rugosidad de 6 mm?", ["1,8 bv d", "2,5 bv d", "3,5 bv d", "0,2 f′c bv d"], 2, "17.5.3.3", de(CAP17, "17.5.3.3")),
+    om("¿Se distingue entre elementos apuntalados y no apuntalados al calcular la resistencia?", ["Sí", "No", "Solo en cortante", "Solo en flexión"], 1, "17.2.4", de(CAP17, "17.2.4")),
+    om("¿Qué espaciamiento máximo tienen los estribos de cortante horizontal?", ["300 mm", "4 veces la menor dimensión del elemento soportado y 600 mm", "d/2", "Ph/8"], 1, "17.6.1", de(CAP17, "17.6.1")),
+]
+
+CAP18 += [
+    om("Un elemento preesforzado con ft ≤ 0,62 √f′c en servicio es…", ["Clase U", "Clase T", "Clase C", "No preesforzado"], 0, "18.3.3", de(CAP18, "18.3.3")),
+    om("¿Qué compresión se admite en el concreto justo después de la transferencia?", ["0,45 f′ci", "0,60 f′ci", "0,70 f′ci", "0,85 f′ci"], 1, "18.4.1", de(CAP18, "18.4.1")),
+    om("En servicio, con cargas sostenidas, ¿qué compresión se admite?", ["0,45 f′c", "0,60 f′c", "0,70 f′c", "0,85 f′c"], 0, "18.4.2", de(CAP18, "18.4.2")),
+    om("¿Qué esfuerzo máximo se permite en el acero por la fuerza del gato?", ["0,70 fpu", "0,74 fpu", "0,80 fpu", "0,94 fpu"], 2, "18.5.1", de(CAP18, "18.5.1")),
+    om("¿Qué refuerzo adherido mínimo lleva un elemento con tendones no adheridos?", ["0,0018 Ag", "0,004 Act", "0,00075 Acf", "0,01 Ag"], 1, "18.9.2", de(CAP18, "18.9.2")),
+    om("¿Cuál es la relación agua/cemento máxima del mortero de inyección?", ["0,40", "0,45", "0,50", "0,55"], 1, "18.18.3.3", de(CAP18, "18.18.3.3")),
+    om("¿Qué porcentaje de la rotura deben desarrollar los anclajes de postensado?", ["85 %", "90 %", "95 %", "100 %"], 2, "18.21.1", de(CAP18, "18.21.1")),
+    om("¿Cuánta pérdida por acero roto no reemplazado se tolera?", ["1 %", "2 %", "5 %", "Ninguna"], 1, "18.20.4", de(CAP18, "18.20.4")),
+    om("Ducto para un solo torón: ¿diámetro interior mínimo?", ["El del torón", "Torón + 3 mm", "Torón + 6 mm", "2 veces el torón"], 2, "18.17.2", "Los ductos inyectados para un solo alambre, un torón o una barra deben tener un diámetro interior al menos 6 mm mayor que el diámetro del acero de preesforzado."),
+]
+
+CAP19 += [
+    om("¿Qué f′c mínimo exige una cáscara?", ["17 MPa", "21 MPa", "28 MPa", "35 MPa"], 1, "19.3.1", de(CAP19, "19.3.1")),
+    om("¿Qué espaciamiento máximo tiene el refuerzo de una cáscara en general?", ["300 mm y 3 t", "450 mm y 5 t", "600 mm", "2 t"], 1, "19.4.10", de(CAP19, "19.4.10")),
+    om("¿Qué traslape mínimo se usa en barras traccionadas de una cáscara?", ["1,0 ℓd y 300 mm", "1,2 veces el del Cap. 12 y 450 mm", "1,3 ℓd", "600 mm"], 1, "19.4.12", de(CAP19, "19.4.12")),
+]
+
+CAP20 += [
+    om("¿Qué carga total mínima se aplica en una prueba de carga?", ["1,4 CM + 1,7 CV", "0,85 (1,4 CM + 1,7 CV)", "CM + CV", "1,25 (CM + CV)"], 1, "20.3.2", de(CAP20, "20.3.2")),
+    om("¿Qué edad mínima debe tener la estructura para la prueba de carga?", ["28 días", "42 días", "56 días", "90 días"], 2, "20.3.3", "Una prueba de carga no debe realizarse hasta que la porción de la estructura que se someterá a la carga tenga al menos 56 días."),
+    om("¿En cuántos incrementos como mínimo se aplica la carga de prueba?", ["2", "3", "4", "5"], 2, "20.4.2", de(CAP20, "20.4.2")),
+    om("¿Cuál es la deflexión residual máxima aceptable (ec. 20-2)?", ["Δ1/2", "Δ1/3", "Δ1/4", "Δ1/5"], 2, "20.5.2", de(CAP20, "20.5.2")),
+    om("¿Qué φ máximo se permite en flexión en una evaluación con propiedades medidas?", ["0,90", "0,95", "1,00", "1,10"], 2, "20.2.5", de(CAP20, "20.2.5")),
+]
+
+CAP21 += [
+    om("¿Cuál es el f′c mínimo en elementos sismorresistentes?", ["17 MPa", "21 MPa", "28 MPa", "35 MPa"], 1, "21.3.2.1", de(CAP21, "21.3.2.1")),
+    om("¿Qué relación fu/fy medida mínima exige el acero A615 para uso sísmico?", ["1,10", "1,20", "1,25", "1,50"], 2, "21.3.3", de(CAP21, "21.3.3")),
+    om("¿Qué R tiene un sistema de pórticos de concreto armado?", ["6", "7", "8", "4"], 2, "21.2.5", de(CAP21, "21.2.5")),
+    om("En esta viga (sistema dual tipo I), ¿qué longitud tiene la zona de confinamiento?", ["h", "1,5 h", "2 h", "ℓn/4"], 2, "21.4.4.4", de(CAP21, "21.4.4.4"), fig="fig-21-4-4"),
+    om("¿A qué distancia de la cara del apoyo va el primer estribo en vigas de 21.4?", ["50 mm", "100 mm", "150 mm", "d/4"], 1, "21.4.4.4", de(CAP21, "21.4.4.4")),
+    om("¿Y en vigas de pórticos (21.5)?", ["50 mm", "75 mm", "100 mm", "d/4"], 0, "21.5.3.2", de(CAP21, "21.5.3.2")),
+    om("En esta columna (21.4), ¿cuál es el espaciamiento máximo So en la zona Lo?", ["50 mm", "100 mm", "150 mm", "d/4"], 1, "21.4.5.3", de(CAP21, "21.4.5.3"), fig="fig-21-4-5"),
+    om("¿Qué longitud mínima tiene Lo en columnas?", ["El mayor de ℓn/6, la mayor dimensión y 500 mm", "ℓn/4", "2 h", "600 mm"], 0, "21.4.5.3", de(CAP21, "21.4.5.3")),
+    om("Según la figura, ¿qué condición de columna fuerte – viga débil se exige?", ["ΣMnc ≥ ΣMnv", "ΣMnc ≥ 1,2 ΣMnv", "ΣMnc ≥ 1,5 ΣMnv", "Mnc ≥ 2 Mnv"], 1, "21.6.2.2", de(CAP21, "21.6.2.2"), fig="fig-21-6-2-2"),
+    om("¿Qué Mpr se usa para el cortante de diseño en pórticos?", ["Mn", "1,1 Mn", "1,25 Mn", "1,5 Mn"], 2, "21.5.4.1", de(CAP21, "21.5.4.1"), fig="fig-21-5-4-1"),
+    om("Nudo confinado en sus cuatro caras: ¿Vn máximo?", ["1,0 √f′c Aj", "1,2 √f′c Aj", "1,7 √f′c Aj", "2,0 √f′c Aj"], 2, "21.7.4.1", de(CAP21, "21.7.4.1"), fig="fig-21-7-4-1"),
+    om("Barra de viga de 3/4″ que atraviesa un nudo: ¿dimensión mínima de la columna?", ["300 mm", "382 mm", "450 mm", "500 mm"], 1, "21.7.2.4", de(CAP21, "21.7.2.4"), "20 × 19,1 mm = 382 mm."),
+    om("En la figura, ¿qué distancia máxima hay entre ramas de estribos o grapas (hx)?", ["250 mm", "300 mm", "350 mm", "400 mm"], 2, "21.6.4.3", de(CAP21, "21.6.4.3"), fig="fig-21-6-4-3"),
+    om("¿Cuántos pisos como máximo permite un edificio de losas planas sin vigas?", ["3", "4", "5", "7"], 2, "21.8.2", de(CAP21, "21.8.2")),
+    om("¿Cuál es el espesor mínimo del alma de un muro de ductilidad limitada?", ["80 mm", "100 mm", "120 mm", "150 mm"], 1, "21.9.3.2", de(CAP21, "21.9.3.2")),
+    om("¿Cuándo debe un muro llevar dos capas de refuerzo (21.9)?", ["Espesor ≥ 150 mm", "Espesor ≥ 200 mm o Vu > 0,17 Acv √f′c", "Siempre", "Solo en sótanos"], 1, "21.9.4.3", de(CAP21, "21.9.4.3")),
+    om("En esta figura, ¿cuándo se confinan los bordes del muro?", ["Si c ≥ ℓm / [600 (δu/hm)]", "Si Pu > 0,1 f′c Ag", "Siempre", "Si hm > 10 m"], 0, "21.9.7.4", de(CAP21, "21.9.7.4"), fig="fig-21-9-7-4"),
+    om("¿Qué f′c mínimo tienen los muros de ductilidad limitada?", ["14 MPa", "17 MPa", "21 MPa", "28 MPa"], 1, "21.10.1", de(CAP21, "21.10.1")),
+    om("¿Qué espesor mínimo tiene una losa que actúa como diafragma sísmico?", ["50 mm", "65 mm", "75 mm", "100 mm"], 0, "21.11.4", de(CAP21, "21.11.4")),
+    om("Viga de cimentación entre zapatas: ¿menor dimensión mínima?", ["Luz libre/20, sin pasar de 400 mm", "Luz libre/10", "250 mm", "300 mm"], 0, "21.12.3.2", de(CAP21, "21.12.3.2")),
+]
+
+CAP22 += [
+    om("¿Qué f′c mínimo tiene el concreto simple estructural?", ["10 MPa", "14 MPa", "17 MPa", "21 MPa"], 1, "22.2.4", de(CAP22, "22.2.4")),
+    om("¿Qué φ se usa en concreto simple?", ["0,50", "0,65", "0,70", "0,90"], 1, "22.4.2", de(CAP22, "22.4.2")),
+    om("¿Se permiten columnas de concreto simple?", ["Sí", "No", "Solo de un piso", "Solo en zona 1"], 1, "22.2.2", de(CAP22, "22.2.2")),
+    om("En concreto vaciado contra el suelo, ¿cuánto se descuenta del peralte de cálculo?", ["25 mm", "50 mm", "75 mm", "Nada"], 1, "22.4.8", de(CAP22, "22.4.8")),
+    om("¿Qué espesor mínimo tiene una zapata de concreto simple?", ["200 mm", "250 mm", "300 mm", "400 mm"], 2, "22.7.4", de(CAP22, "22.7.4")),
+    om("¿Qué porcentaje máximo de piedra desplazadora lleva el concreto ciclópeo?", ["20 %", "25 %", "30 %", "40 %"], 2, "22.10.1", de(CAP22, "22.10.1")),
+    om("¿Qué tamaño máximo puede tener la piedra del concreto ciclópeo?", ["150 mm", "200 mm", "250 mm", "300 mm"], 2, "22.10.1", de(CAP22, "22.10.1")),
+    om("¿Qué relación altura / menor dimensión no debe pasar un pedestal de concreto simple?", ["2", "3", "4", "5"], 1, "22.8.2", de(CAP22, "22.8.2")),
+]
+
 CAPITULOS = [
     ("03", "3", "e060-c03-materiales", "E.060 · Cap. 3 · Materiales", "Agregados, agua, acero de refuerzo, aditivos y almacenamiento.", CAP3),
     ("04", "4", "e060-c04-durabilidad", "E.060 · Cap. 4 · Durabilidad", "Aire incorporado, exposición especial, sulfatos y cloruros (Tablas 4.1 a 4.5).", CAP4),

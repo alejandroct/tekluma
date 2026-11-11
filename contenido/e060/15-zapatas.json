@@ -691,6 +691,178 @@
        "extracto": "En terrenos de baja capacidad portante ó cimentaciones sobre pilotes, deberá analizarse la necesidad de conectar las zapatas mediante vigas…"
       }
      ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Con qué cargas se dimensiona el área de la zapata?",
+      "opciones": [
+       "Amplificadas",
+       "De servicio",
+       "Solo carga muerta",
+       "Las del sismo"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "15.2.2",
+       "extracto": "El área de la base de la zapata o el número y distribución de pilotes debe determinarse a partir de las fuerzas y momentos no amplificados (en servicio) transmitidos al suelo… a partir de la resistencia admisible del suelo…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuánto puede aumentar la presión admisible del suelo con sismo o viento?",
+      "opciones": [
+       "10 %",
+       "20 %",
+       "30 %",
+       "50 %"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.2.4",
+       "extracto": "Se podrá considerar un incremento del 30% en el valor de la presión admisible del suelo para los estados de cargas en los que intervengan cargas temporales, tales como sismo o viento."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A qué porcentaje pueden reducirse las fuerzas sísmicas para verificar el suelo?",
+      "opciones": [
+       "50 %",
+       "70 %",
+       "80 %",
+       "No se reducen"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.2.5",
+       "extracto": "Para determinar los esfuerzos en el suelo o las fuerzas en pilotes, las acciones sísmicas podrán reducirse al 80% de los valores provenientes del análisis…"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Zapata con columna de concreto: ¿dónde está la sección crítica por flexión?",
+      "opciones": [
+       "En el eje",
+       "En la cara de la columna",
+       "A d de la cara",
+       "A d/2 de la cara"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "15.4.2",
+       "extracto": "(a) Para zapatas que soporten una columna, pedestal o muro de concreto, en la cara de la columna, pedestal o muro. (b) Para zapatas que soporten muros de albañilería, en el punto medio entre el eje central y el borde del muro. (c) …en el punto medio entre la cara de la columna y el borde de la plancha de acero"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Zapata de 3,0 × 2,0 m: ¿qué fracción γs del acero corto va en la franja central?",
+      "opciones": [
+       "0,60",
+       "0,67",
+       "0,80",
+       "1,00"
+      ],
+      "correcta": 2,
+      "explicacion": "β = 1,5 → γs = 2 / 2,5 = 0,80."
+     },
+     "citas": [
+      {
+       "articulo": "15.4.4.2",
+       "extracto": "…una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja… cuyo ancho sea igual a la longitud del lado corto de la zapata… γs = 2 / (β + 1) (15-1) donde β es la relación del lado largo al lado corto de la zapata."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es la altura mínima de una zapata sobre el suelo, sobre el refuerzo inferior?",
+      "opciones": [
+       "200 mm",
+       "250 mm",
+       "300 mm",
+       "400 mm"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.7",
+       "extracto": "La altura de las zapatas, medida sobre el refuerzo inferior no debe ser menor de 300 mm para zapatas apoyadas sobre el suelo, ni menor de 400 mm en el caso de zapatas apoyadas sobre pilotes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Y de una zapata sobre pilotes?",
+      "opciones": [
+       "300 mm",
+       "400 mm",
+       "500 mm",
+       "600 mm"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "15.7",
+       "extracto": "La altura de las zapatas, medida sobre el refuerzo inferior no debe ser menor de 300 mm para zapatas apoyadas sobre el suelo, ni menor de 400 mm en el caso de zapatas apoyadas sobre pilotes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué refuerzo mínimo cruza la junta columna–zapata en columnas vaciadas en obra?",
+      "opciones": [
+       "0,0015 Ag",
+       "0,005 Ag",
+       "0,01 Ag",
+       "4 barras"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "15.8.2.1",
+       "extracto": "Para columnas y pedestales construidos en obra, el área de refuerzo a través de la junta no debe ser menor de 0,005 Ag, donde Ag es el área bruta del elemento soportado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Se puede usar el Método Directo para losas de cimentación?",
+      "opciones": [
+       "Sí",
+       "No",
+       "Solo con vigas",
+       "Solo si son rectangulares"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "15.10.2",
+       "extracto": "El Método Directo de Diseño del Capítulo 13 no debe utilizarse para el diseño de zapatas combinadas y losas de cimentación."
+      }
+     ]
     }
    ]
   }
