@@ -257,6 +257,7 @@ p { margin: 0; }
 .entrada .datos { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 4px 0; }
 .entrada .pie-entrada { margin-top: auto; padding-top: var(--e3); }
 @media (min-width: 720px) { .entradas { grid-template-columns: 1fr 1fr; } .entrada { padding: var(--e6); } }
+@media (min-width: 1040px) { .entradas { grid-template-columns: repeat(3, 1fr); } }
 
 /* Disponibilidad */
 .tiendas { display: grid; gap: 1px; background: var(--linea); border: 1px solid var(--linea); }

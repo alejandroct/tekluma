@@ -23,11 +23,16 @@ export default $config({
     const dominio = produccion ? "tekluma.app" : `${$app.stage}.tekluma.app`;
     const dns = sst.aws.dns();
 
+    // Rebotes y quejas de SES: AWS suspende cuentas con tasas altas, así que cada uno llega como aviso
+    // legible a hola@ (ver workers/avisos-correo.ts). El suscriptor se agrega más abajo, con el entorno.
+    const avisosCorreo = new sst.aws.SnsTopic("AvisosCorreo");
+
     // Correos transaccionales (códigos de login) con SES; SST crea los registros DKIM en Route 53.
     const correo = new sst.aws.Email("Correo", {
       sender: dominio,
       dns,
       dmarc: "v=DMARC1; p=quarantine; adkim=s; aspf=s;",
+      events: [{ name: "RebotesYQuejas", types: ["bounce", "complaint"], topic: avisosCorreo.arn }],
     });
 
     // Secretos: `npx sst secret set <Nombre> "<valor>" --stage <stage>`.
@@ -73,6 +78,15 @@ export default $config({
       functionName: migrador.name,
       input: JSON.stringify({}),
       triggers: { despliegue: Date.now().toString() },
+    });
+
+    avisosCorreo.subscribe("AvisoCorreo", {
+      handler: "apps/api/src/workers/avisos-correo.handler",
+      link: [correo],
+      architecture: "arm64",
+      runtime,
+      environment,
+      nodejs,
     });
 
     // Paquetes de mazos e imágenes (se servirán vía CloudFront con URL firmada).
