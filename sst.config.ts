@@ -8,7 +8,12 @@ export default $config({
       removal: input?.stage === "produccion" ? "retain" : "remove",
       protect: input?.stage === "produccion",
       // Perfil propio para no mezclar credenciales con otros proyectos de la misma cuenta.
-      providers: { aws: { region: "sa-east-1", profile: process.env.CI ? undefined : "tekluma" } },
+      // Cloudflare: solo para el DNS de dccingenieriayconstruccion.com (registrado allí; el sitio sigue en AWS).
+      // Necesita CLOUDFLARE_API_TOKEN y CLOUDFLARE_DEFAULT_ACCOUNT_ID en el entorno (.env, no versionado).
+      providers: {
+        aws: { region: "sa-east-1", profile: process.env.CI ? undefined : "tekluma" },
+        cloudflare: "6.24.0",
+      },
     };
   },
   async run() {
@@ -132,14 +137,22 @@ export default $config({
       },
     });
 
-    // Sitio institucional de la empresa titular (DCC). En producción usa su propio dominio, cuya zona
-    // tiene que existir en Route 53 de esta cuenta (se crea sola si el dominio se compra en Route 53);
-    // en los demás stages se revisa en dcc.<stage>.tekluma.app.
+    // Sitio institucional de la empresa titular (DCC). Su dominio está registrado en Cloudflare, que obliga
+    // a usar su DNS: SST crea allí la validación del certificado y el registro hacia CloudFront.
+    // Un dominio solo puede estar en una distribución de CloudFront, así que lo sirve un único stage.
+    // Mientras producción no exista lo sirve dev; para pasarlo, cambiar a "produccion", desplegar dev
+    // (libera el dominio) y luego producción.
+    const STAGE_DOMINIO_EMPRESA = "dev";
     const sitioEmpresa = new sst.aws.StaticSite("SitioEmpresa", {
       path: "apps/dcc",
-      domain: produccion
-        ? { name: "dccingenieriayconstruccion.com", redirects: ["www.dccingenieriayconstruccion.com"], dns }
-        : { name: `dcc.${dominio}`, dns },
+      domain:
+        $app.stage === STAGE_DOMINIO_EMPRESA
+          ? {
+              name: "dccingenieriayconstruccion.com",
+              redirects: ["www.dccingenieriayconstruccion.com"],
+              dns: sst.cloudflare.dns(),
+            }
+          : { name: `dcc.${dominio}`, dns },
       errorPage: "404.html",
       assets: {
         fileOptions: [

@@ -56,6 +56,10 @@ declare module "sst" {
       "type": "sst.sst.Secret"
       "value": string
     }
+    "SitioEmpresa": {
+      "type": "sst.aws.StaticSite"
+      "url": string
+    }
     "Web": {
       "type": "sst.aws.StaticSite"
       "url": string
