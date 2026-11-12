@@ -17,7 +17,7 @@
   },
   {
    "numero": "11.1.1",
-   "texto": "El diseño de secciones transversales sometidas a fuerza cortante debe estar basado en la ecuación 11-1 (Diseño por Resistencia):\n φ Vn ≥ Vu (11-1)\n donde Vu es la fuerza cortante amplificada en la sección considerada y Vn es la resistencia nominal al cortante calculada mediante:\n Vn = Vc + Vs\n (11-2)\n En la ecuación 11-2 Vc es la resistencia nominal al cortante proporcionada por el concreto, Vs es la resistencia nominal al cortante proporcionada por el refuerzo de cortante, ambas calculadas de acuerdo a las disposiciones de este Capítulo.",
+   "texto": "El diseño de secciones transversales sometidas a fuerza cortante debe estar basado en la ecuación 11-1 (Diseño por Resistencia):\n φ Vn ≥ Vu (11-1)\n donde Vu es la fuerza cortante amplificada en la sección considerada y Vn es la resistencia nominal al cortante calculada mediante:\n Vn = Vc + Vs (11-2)\n En la ecuación 11-2 Vc es la resistencia nominal al cortante proporcionada por el concreto, Vs es la resistencia nominal al cortante proporcionada por el refuerzo de cortante, ambas calculadas de acuerdo a las disposiciones de este Capítulo.",
    "pagina": 89
   },
   {
@@ -32,14 +32,12 @@
   },
   {
    "numero": "11.1.2",
-   "epigrafe": "Los valores de",
-   "texto": "f c′ usados en este Capítulo no deben exceder 8,3 MPa excepto en lo permitido en 11.1.2.1.",
+   "texto": "Los valores de √f’c usados en este Capítulo no deben exceder 8,3 MPa excepto en lo permitido en 11.1.2.1.",
    "pagina": 89
   },
   {
    "numero": "11.1.2.1",
-   "epigrafe": "Se permite usar valores de",
-   "texto": "f c′mayores que 8,3 MPa al calcular Vc, Vci y Vcw para vigas de concreto preesforzado con un refuerzo mínimo en el alma que cumpla con lo dispuesto en 11.5.6.2, 11.5.6.3 ú 11.6.5.2.",
+   "texto": "Se permite usar valores de √f’c mayores que 8,3 MPa al calcular Vc, Vci y Vcw para vigas de concreto preesforzado con un refuerzo mínimo en el alma que cumpla con lo dispuesto en 11.5.6.2, 11.5.6.3 ú 11.6.5.2.",
    "pagina": 89
   },
   {
@@ -49,7 +47,7 @@
   },
   {
    "numero": "11.1.3.1",
-   "texto": "Para elementos no preesforzados, se permite diseñar las secciones localizadas a una distancia menor a d, medida desde la cara del apoyo, para la fuerza cortante Vu calculada a la distancia d de la cara del apoyo (figuras 11.1.3.1 a y b).\n\n Fig. 11.1.3.1.a Condiciones de apoyo y de aplicación de las cargas externas en las\n cuales se puede reducir la fuerza Vu de diseño a d de la cara.",
+   "texto": "Para elementos no preesforzados, se permite diseñar las secciones localizadas a una distancia menor a d, medida desde la cara del apoyo, para la fuerza cortante Vu calculada a la distancia d de la cara del apoyo (figuras 11.1.3.1 a y b).\n\n Fig. 11.1.3.1.a Condiciones de apoyo y de aplicación de las cargas externas en las cuales se puede reducir la fuerza Vu de diseño a d de la cara.",
    "pagina": 89
   },
   {
@@ -70,23 +68,23 @@
   },
   {
    "numero": "11.2.1",
-   "texto": "Las disposiciones para la resistencia a cortante y torsión se aplican a los concretos de peso normal. Cuando se emplea concreto con agregado liviano, debe aplicarse alguna de las siguientes modificaciones en el término f c′contenido en el Capítulo 11, excepto en 11.5.5.3, 11.5.7.9, 11.6.3.1 y 11.12.3.2.",
+   "texto": "Las disposiciones para la resistencia a cortante y torsión se aplican a los concretos de peso normal. Cuando se emplea concreto con agregado liviano, debe aplicarse alguna de las siguientes modificaciones en el término √f’c contenido en el Capítulo 11, excepto en 11.5.5.3, 11.5.7.9, 11.6.3.1 y 11.12.3.2.",
    "pagina": 90
   },
   {
    "numero": "11.2.1.1",
-   "texto": "Cuando se ha especificado el valor de fct y el concreto se ha dosificado de acuerdo con 5.2, debe reemplazarse f c′ por 1,8 fct, pero el valor de 1,8 fct no debe\n exceder de f c′.",
+   "texto": "Cuando se ha especificado el valor de fct y el concreto se ha dosificado de acuerdo con 5.2, debe reemplazarse √f’c por 1,8 fct, pero el valor de 1,8 fct no debe exceder de √f’c.",
    "pagina": 90
   },
   {
    "numero": "11.2.1.2",
-   "texto": "Cuando el valor fct no esté especificado, todos los valores de f c′ deben multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85\n Fig. 11.1.3.1.b Condiciones de apoyo y de aplicación de las cargas externas\n en las cuales no se puede reducir la fuerza Vu de diseño.\n\n para concreto liviano con arena de peso normal. Se permite usar una interpolación lineal cuando la arena se sustituya parcialmente.",
+   "texto": "Cuando el valor fct no esté especificado, todos los valores de √f’c deben multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85 para concreto liviano con arena de peso normal. Se permite usar una interpolación lineal cuando la arena se sustituya parcialmente.\n\n Fig. 11.1.3.1.b Condiciones de apoyo y de aplicación de las cargas externas en las cuales no se puede reducir la fuerza Vu de diseño.",
    "pagina": 90
   },
   {
    "numero": "11.3",
-   "epigrafe": "Resistencia Al Cortante Proporcionada Por El Concreto En",
-   "texto": "ELEMENTOS NO PREESFORZADOS",
+   "epigrafe": "Resistencia Al Cortante Proporcionada Por El Concreto En Elementos No Preesforzados",
+   "texto": "Resistencia Al Cortante Proporcionada Por El Concreto En Elementos No Preesforzados",
    "pagina": 91
   },
   {
@@ -96,12 +94,12 @@
   },
   {
    "numero": "11.3.1.1",
-   "texto": "Para elementos sometidos únicamente a cortante y flexión:\n\n 0,17 w Vc f c b d ′ = (11- 3)",
+   "texto": "Para elementos sometidos únicamente a cortante y flexión:\n Vc = 0,17 √f’c bw d (11-3)",
    "pagina": 91
   },
   {
    "numero": "11.3.1.2",
-   "texto": "Para elementos sometidos a compresión axial Nu:\n 0,17 1 14 w Nu Vc f c b d Ag ( ) ′ = + ( )\n (11-\n 4)\n La cantidad Nu/Ag debe expresarse en MPa.",
+   "texto": "Para elementos sometidos a compresión axial Nu:\n Vc = 0,17 (1 + Nu / 14 Ag) √f’c bw d (11-4)\n La cantidad Nu/Ag debe expresarse en MPa.",
    "pagina": 91
   },
   {
@@ -116,17 +114,17 @@
   },
   {
    "numero": "11.3.2.1",
-   "texto": "Para elementos sometidos únicamente a cortante y flexión:\n (0,16 17 ) w Vu d Vc f c b d w Mu ′ = + ρ (11-5)\n pero no mayor que 0,29 w f c b d ′ . Además el término / Vu d Mu no debe tomarse mayor que 1,0 al calcular Vc por medio de la ecuación (11-5). Mu y Vu deben determinarse en la sección analizada para la misma combinación de cargas.",
+   "texto": "Para elementos sometidos únicamente a cortante y flexión:\n Vc = (0,16 √f’c + 17 ρw Vu d / Mu) bw d (11-5)\n pero no mayor que 0,29 √f’c bw d. Además el término Vu d / Mu no debe tomarse mayor que 1,0 al calcular Vc por medio de la ecuación (11-5). Mu y Vu deben determinarse en la sección analizada para la misma combinación de cargas.",
    "pagina": 91
   },
   {
    "numero": "11.3.2.2",
-   "texto": "Para elementos sometidos a compresión axial, se permite utilizar la ecuación (11-5) para calcular Vc con Mm sustituyendo a Mu y / Vud Mu no limitada a 1,0 donde:\n 4\n 8 m h d M Mu Nu − − ( ) = ( )\n (11-6)\n\n Sin embargo, Vc no debe tomarse mayor que\n 0,29 0,29 1 w Nu Vc f c b d\n Ag ′ = + (11-7)\n\n La cantidad Nu/Ag debe expresarse en MPa. Cuando Mm, calculado por medio de la ecuación (11-6) es negativo, Vc debe calcularse por medio de la ecuación (11-7).",
+   "texto": "Para elementos sometidos a compresión axial, se permite utilizar la ecuación (11-5) para calcular Vc con Mm sustituyendo a Mu y Vu d / Mu no limitada a 1,0 donde:\n Mm = Mu − Nu (4h − d) / 8 (11-6)\n Sin embargo, Vc no debe tomarse mayor que\n Vc = 0,29 √f’c bw d √(1 + 0,29 Nu / Ag) (11-7)\n La cantidad Nu/Ag debe expresarse en MPa. Cuando Mm, calculado por medio de la ecuación (11-6) es negativo, Vc debe calcularse por medio de la ecuación (11-7).",
    "pagina": 91
   },
   {
    "numero": "11.3.2.3",
-   "texto": "Para elementos sometidos a tracción axial significativa:\n\n 0,29 0,17 1 w Nu Vc f c b d Ag ′ = − ( ) ( )\n (11-\n 8)\n pero no menor que cero, donde Nu es la fuerza de tracción y Nu/Ag debe expresarse en MPa.",
+   "texto": "Para elementos sometidos a tracción axial significativa:\n Vc = 0,17 (1 + 0,29 Nu / Ag) √f’c bw d (11-8)\n pero no menor que cero, donde Nu es la fuerza de tracción y Nu/Ag debe expresarse en MPa.",
    "pagina": 91
   },
   {
@@ -136,8 +134,8 @@
   },
   {
    "numero": "11.4",
-   "epigrafe": "Resistencia Al Cortante Proporcionada Por El Concreto En",
-   "texto": "ELEMENTOS PREESFORZADOS",
+   "epigrafe": "Resistencia Al Cortante Proporcionada Por El Concreto En Elementos Preesforzados",
+   "texto": "Resistencia Al Cortante Proporcionada Por El Concreto En Elementos Preesforzados",
    "pagina": 92
   },
   {
@@ -147,7 +145,7 @@
   },
   {
    "numero": "11.4.2",
-   "texto": "Para elementos que tengan una fuerza efectiva de preesfuerzo no menor al 40% de la resistencia a la tracción del acero de preesfuerzo por flexión (Aps fpu), se permite utilizar 11-9, salvo que se efectúe un cálculo más detallado de acuerdo con 11.4.3.\n 0,05 4,8 w Vu dp Vc f c b d Mu ′ = + ( ) ( )\n (11-9)\n pero no es necesario considerar Vc menor que 0,17 w f c b d ′ . Sin embargo, Vc no\n debe tomarse mayor que 0,42 w f c b d ′ ni que el valor dado en 11.4.4 u 11.4.5. Además / Vu dp Mu no se debe tomar mayor que 1,0. Mu y Vu deben determinarse en la sección analizada para la misma combinación de cargas.",
+   "texto": "Para elementos que tengan una fuerza efectiva de preesfuerzo no menor al 40% de la resistencia a la tracción del acero de preesfuerzo por flexión (Aps fpu), se permite utilizar 11-9, salvo que se efectúe un cálculo más detallado de acuerdo con 11.4.3.\n Vc = (0,05 √f’c + 4,8 Vu dp / Mu) bw d (11-9)\n pero no es necesario considerar Vc menor que 0,17 √f’c bw d. Sin embargo, Vc no debe tomarse mayor que 0,42 √f’c bw d ni que el valor dado en 11.4.4 u 11.4.5. Además Vu dp / Mu no se debe tomar mayor que 1,0. Mu y Vu deben determinarse en la sección analizada para la misma combinación de cargas.",
    "pagina": 92
   },
   {
@@ -157,12 +155,12 @@
   },
   {
    "numero": "11.4.3.1",
-   "texto": "Vci se debe calcular con:\n max 0,05 cre w Vi M Vci f c b dp Vd\n M ′ = + + (11-10)\n donde no hay necesidad de considerar dp menor que 0,80h y Mcre se calcula con:\n ( ) 0,5 cre I M f c fpe fd Yt\n ′ = + − ( ) ( )\n (11-11)\n los valores de Mmax y Vi se deben calcular con la combinación de carga que causa el máximo momento amplificado en la sección. No hay necesidad de tomar Vci menor que 0,14 w f c b d ′ .",
+   "texto": "Vci se debe calcular con:\n Vci = 0,05 √f’c bw dp + Vd + Vi Mcre / Mmax (11-10)\n donde no hay necesidad de considerar dp menor que 0,80h y Mcre se calcula con:\n Mcre = (I / Yt) (0,5 √f’c + fpe − fd) (11-11)\n Los valores de Mmax y Vi se deben calcular con la combinación de carga que causa el máximo momento amplificado en la sección. No hay necesidad de tomar Vci menor que 0,14 √f’c bw d.",
    "pagina": 92
   },
   {
    "numero": "11.4.3.2",
-   "texto": "Vcw se debe calcular con:\n ( ) 0,29 0,3 w Vcw f c fpc b dp Vp ′ = + + (11-\n 12)\n donde no hay necesidad de tomar dp menor de 0,80h.\n\n Alternativamente, Vcw puede considerarse como la fuerza cortante que corresponde a la carga muerta más la carga viva que produce un esfuerzo principal de tracción de 0,33 f c′ en el eje centroidal del elemento o en la intersección del ala con el alma cuando el eje centroidal se ubique en el ala. En elementos compuestos, el esfuerzo principal de tracción se debe calcular utilizando la sección transversal que resiste la carga viva.",
+   "texto": "Vcw se debe calcular con:\n Vcw = (0,29 √f’c + 0,3 fpc) bw dp + Vp (11-12)\n donde no hay necesidad de tomar dp menor de 0,80h.\n Alternativamente, Vcw puede considerarse como la fuerza cortante que corresponde a la carga muerta más la carga viva que produce un esfuerzo principal de tracción de 0,33 √f’c en el eje centroidal del elemento o en la intersección del ala con el alma cuando el eje centroidal se ubique en el ala. En elementos compuestos, el esfuerzo principal de tracción se debe calcular utilizando la sección transversal que resiste la carga viva.",
    "pagina": 92
   },
   {
@@ -230,8 +228,7 @@
   },
   {
    "numero": "11.5.5.3",
-   "epigrafe": "Donde Vs sobrepase 0,33",
-   "texto": "w f c b d ′ , las separaciones máximas dadas en 11.5.5.1 y 11.5.5.2 se deben reducir a la mitad.",
+   "texto": "Donde Vs sobrepase 0,33 √f’c bw d, las separaciones máximas dadas en 11.5.5.1 y 11.5.5.2 se deben reducir a la mitad.",
    "pagina": 94
   },
   {
@@ -247,12 +244,12 @@
   },
   {
    "numero": "11.5.6.2",
-   "texto": "Cuando se requiera refuerzo de cortante, de acuerdo con 11.5.6.1 o por análisis y cuando 11.6.1 permita que la torsión sea despreciada, Av min para elementos preesforzados (excepto en lo previsto por 11.5.6.3) y no preesforzados se debe calcular mediante:\n min 0,062 w b s Av f c\n fyt ′ = (11-13)\n Pero no debe ser menor que 0,35 / w b s fyt .",
+   "texto": "Cuando se requiera refuerzo de cortante, de acuerdo con 11.5.6.1 o por análisis y cuando 11.6.1 permita que la torsión sea despreciada, Av min para elementos preesforzados (excepto en lo previsto por 11.5.6.3) y no preesforzados se debe calcular mediante:\n Av min = 0,062 √f’c bw s / fyt (11-13)\n Pero no debe ser menor que 0,35 bw s / fyt.",
    "pagina": 94
   },
   {
    "numero": "11.5.6.3",
-   "texto": "Para elementos preesforzados que tengan una fuerza de preesforzado efectiva no menor al 40% de la resistencia a la tracción del refuerzo por flexión (Aps fpu), el área de refuerzo para cortante debe ser mayor o igual que el menor valor dado por las ecuaciones (11-13) y (11-14).\n min\n 80 w\n Aps fpu s d Av\n fyt d b = (11-14)",
+   "texto": "Para elementos preesforzados que tengan una fuerza de preesforzado efectiva no menor al 40% de la resistencia a la tracción del refuerzo por flexión (Aps fpu), el área de refuerzo para cortante debe ser mayor o igual que el menor valor dado por las ecuaciones (11-13) y (11-14).\n Av min = (Aps fpu s / 80 fyt d) √(d / bw) (11-14)",
    "pagina": 94
   },
   {
@@ -268,7 +265,7 @@
   },
   {
    "numero": "11.5.7.2",
-   "texto": "Cuando se utilice refuerzo de cortante perpendicular al eje del elemento:\n\n Av fyt d Vs\n s = (11-\n 15)\n Av es el área de refuerzo para cortante dentro del espaciamiento s, proporcionada por la suma de las áreas de las ramas de los estribos ubicados en el alma.",
+   "texto": "Cuando se utilice refuerzo de cortante perpendicular al eje del elemento:\n Vs = Av fyt d / s (11-15)\n Av es el área de refuerzo para cortante dentro del espaciamiento s, proporcionada por la suma de las áreas de las ramas de los estribos ubicados en el alma.",
    "pagina": 94
   },
   {
@@ -278,12 +275,12 @@
   },
   {
    "numero": "11.5.7.4",
-   "texto": "Cuando se utilicen estribos inclinados como refuerzo de cortante:\n ( ) sen cos Av fyt d Vs\n s\n α+ α = (11-16)\n donde α es el ángulo entre los estribos inclinados y el eje longitudinal del elemento y s se mide en la dirección del eje longitudinal.",
+   "texto": "Cuando se utilicen estribos inclinados como refuerzo de cortante:\n Vs = Av fyt (sen α + cos α) d / s (11-16)\n donde α es el ángulo entre los estribos inclinados y el eje longitudinal del elemento y s se mide en la dirección del eje longitudinal.",
    "pagina": 95
   },
   {
    "numero": "11.5.7.5",
-   "texto": "Cuando el refuerzo de cortante consiste en una barra individual ó en un solo grupo de barras paralelas, todas dobladas a la misma distancia del apoyo:\n sen Vs Av fyt = α (11-17)\n pero no mayor que 0,25 w f c b d ′ , donde α es el ángulo entre el refuerzo doblado y el eje longitudinal del elemento.",
+   "texto": "Cuando el refuerzo de cortante consiste en una barra individual ó en un solo grupo de barras paralelas, todas dobladas a la misma distancia del apoyo:\n Vs = Av fyt sen α (11-17)\n pero no mayor que 0,25 √f’c bw d, donde α es el ángulo entre el refuerzo doblado y el eje longitudinal del elemento.",
    "pagina": 95
   },
   {
@@ -303,7 +300,7 @@
   },
   {
    "numero": "11.5.7.9",
-   "texto": "En ningún caso se debe considerar Vs mayor que 0,66 w f c b d ′ .",
+   "texto": "En ningún caso se debe considerar Vs mayor que 0,66 √f’c bw d.",
    "pagina": 95
   },
   {
@@ -319,7 +316,7 @@
   },
   {
    "numero": "11.5.8.2",
-   "texto": "El refuerzo de suspensión estará constituido por estribos cerrados de altura total y deberán proveer una resistencia en tracción en la cara de apoyo de acuerdo con:\n\n hs Ah fy Vu\n hp φ ≥\n\n Vu es la fuerza cortante en la viga secundaria en la cara de encuentro, Ah es el área del refuerzo de suspensión adyacente a la cara de la viga de soporte (principal), hs y hp son los peraltes de las vigas secundaria y principal respectivamente y φ = 0,85.",
+   "texto": "El refuerzo de suspensión estará constituido por estribos cerrados de altura total y deberán proveer una resistencia en tracción en la cara de apoyo de acuerdo con:\n φ Ah fy ≥ Vu hs / hp\n Vu es la fuerza cortante en la viga secundaria en la cara de encuentro, Ah es el área del refuerzo de suspensión adyacente a la cara de la viga de soporte (principal), hs y hp son los peraltes de las vigas secundaria y principal respectivamente y φ = 0,85.",
    "pagina": 95
   },
   {
@@ -352,7 +349,7 @@
   {
    "numero": "11.6.1",
    "epigrafe": "Casos en los cuales puede ignorarse la torsión",
-   "texto": "Los momentos torsores que no exceden de aproximadamente la cuarta parte del momento torsor de agrietamiento, Tcr, no producen una reducción significativa en la resistencia a flexión ni en la resistencia al cortante, por lo que pueden ser ignorados. En consecuencia se permite despreciar los efectos de la torsión si el momento torsor amplificado Tu es menor que:\n\n (a) en elementos no preesforzados:\n Fig. 11.5.8 Refuerzo de suspensión.\n\n 2 0,083 cp\n Acp f c\n P ′ φ\n ( ) ( ) (b) en elementos preesforzados:\n 2 0,083 1 0,33\n cp\n cp\n A fpc f c\n P f c ′ φ +\n ′\n ( ) ( ) (c) Para elementos no preesforzados sometidos a tracción axial o fuerzas de compresión:\n 2 0,083 1 0,33 cp\n A Nu cp f c\n P Ag f c ′ φ +\n ′\n ( ) ( )\n\n Nu es positivo para cargas de compresión y negativo para tracción. En elementos construidos monolíticamente con una losa, el ancho sobresaliente del ala usado para calcular Acp y Pcp debe cumplir con 13.2.5 (ver figura 11.6.1). Para una sección hueca, se debe usar Ag en lugar de Acp en 11.6.1 y los límites externos de la sección deben cumplir con 13.2.5.",
+   "texto": "Los momentos torsores que no exceden de aproximadamente la cuarta parte del momento torsor de agrietamiento, Tcr, no producen una reducción significativa en la resistencia a flexión ni en la resistencia al cortante, por lo que pueden ser ignorados. En consecuencia se permite despreciar los efectos de la torsión si el momento torsor amplificado Tu es menor que:\n (a) en elementos no preesforzados:\n φ 0,083 √f’c (Acp² / Pcp)\n (b) en elementos preesforzados:\n φ 0,083 √f’c (Acp² / Pcp) √(1 + fpc / 0,33 √f’c)\n (c) Para elementos no preesforzados sometidos a tracción axial o fuerzas de compresión:\n φ 0,083 √f’c (Acp² / Pcp) √(1 + Nu / 0,33 Ag √f’c)\n Nu es positivo para cargas de compresión y negativo para tracción. En elementos construidos monolíticamente con una losa, el ancho sobresaliente del ala usado para calcular Acp y Pcp debe cumplir con 13.2.5 (ver figura 11.6.1). Para una sección hueca, se debe usar Ag en lugar de Acp en 11.6.1 y los límites externos de la sección deben cumplir con 13.2.5.",
    "pagina": 96
   },
   {
@@ -372,7 +369,7 @@
   },
   {
    "numero": "11.6.2.2",
-   "texto": "En estructuras estáticamente indeterminadas (figura 11.6.2.2), donde se puede producir una reducción del momento torsor en el elemento debido a la redistribución de fuerzas internas después del agrietamiento por torsión, se permite reducir el máximo torsor Tu a los valores dados en (a), (b) o (c) según corresponda:\n (a) En elementos no preesforzados, en las secciones descritas en 11.6.2.4:\n 2 0,33 cp\n cp\n A fc P ′ φ\n ( ) ( ) (b) En elementos preesforzados, en las secciones descritas en 11.6.2.5:\n\n (c) Para elementos no preesforzados sometidos a una fuerza axial de tracción o compresión:\n\n Fig. 11.6.2.2 Casos en los cuales la resistencia a la torsión no es indispensable para el\n equilibrio de la estructura (torsión de compatibilidad).\n Fig. 11.6.2.1 Casos en los cuales la resistencia a la torsión es indispensable para\n el equilibrio de la estructura (torsión de equilibrio).\n 2 0,33 1 0,33\n cp\n cp\n A fpc fc P fc ′ φ +\n ′\n ( ) ( )\n 2 0,33 1 0,33\n cp\n cp\n A Nu fc P Ag fc ′ φ +\n ′\n ( ) ( )\n\n En los casos (a), (b) ó (c), los momentos de flexión y las fuerzas cortantes redistribuidas a los elementos adyacentes deben usarse en el diseño de estos elementos. Para secciones huecas, Acp no debe ser reemplazado por Ag en 11.6.2.2.",
+   "texto": "En estructuras estáticamente indeterminadas (figura 11.6.2.2), donde se puede producir una reducción del momento torsor en el elemento debido a la redistribución de fuerzas internas después del agrietamiento por torsión, se permite reducir el máximo torsor Tu a los valores dados en (a), (b) o (c) según corresponda:\n (a) En elementos no preesforzados, en las secciones descritas en 11.6.2.4:\n φ 0,33 √f’c (Acp² / Pcp)\n (b) En elementos preesforzados, en las secciones descritas en 11.6.2.5:\n φ 0,33 √f’c (Acp² / Pcp) √(1 + fpc / 0,33 √f’c)\n (c) Para elementos no preesforzados sometidos a una fuerza axial de tracción o compresión:\n φ 0,33 √f’c (Acp² / Pcp) √(1 + Nu / 0,33 Ag √f’c)\n En los casos (a), (b) ó (c), los momentos de flexión y las fuerzas cortantes redistribuidas a los elementos adyacentes deben usarse en el diseño de estos elementos. Para secciones huecas, Acp no debe ser reemplazado por Ag en 11.6.2.2.\n\n Fig. 11.6.2.2 Casos en los cuales la resistencia a la torsión no es indispensable para el equilibrio de la estructura (torsión de compatibilidad).\n Fig. 11.6.2.1 Casos en los cuales la resistencia a la torsión es indispensable para el equilibrio de la estructura (torsión de equilibrio).",
    "pagina": 98
   },
   {
@@ -398,7 +395,7 @@
   },
   {
    "numero": "11.6.3.1",
-   "texto": "Las dimensiones de la sección transversal deben ser tales que:\n\n (a) en secciones sólidas:\n 2 2\n 2 0,66 1,7 w w oh\n Vu Tu Ph Vc f c b d A b d\n ′ + ≤φ + ( ) ( ) ( ) ( ) ( ) ( )\n (11-18)\n (b) en secciones huecas:\n 2 0,66 1,7\n h\n w w oh\n Vu Tu P Vc f c b d A b d\n ′ + ≤φ + ( ) ( ) ( ) ( ) ( ) ( )\n (11-19)\n Para elementos preesforzados, d debe determinarse de acuerdo con 11.5.3.",
+   "texto": "Las dimensiones de la sección transversal deben ser tales que:\n (a) en secciones sólidas:\n √[(Vu / bw d)² + (Tu Ph / 1,7 Aoh²)²] ≤ φ (Vc / bw d + 0,66 √f’c) (11-18)\n (b) en secciones huecas:\n (Vu / bw d) + (Tu Ph / 1,7 Aoh²) ≤ φ (Vc / bw d + 0,66 √f’c) (11-19)\n Para elementos preesforzados, d debe determinarse de acuerdo con 11.5.3.",
    "pagina": 99
   },
   {
@@ -408,7 +405,7 @@
   },
   {
    "numero": "11.6.3.3",
-   "texto": "Si el espesor de la pared es menor que / oh h A P , el segundo término en la expresión (11-19) debe ser tomado como:\n 1,7 oh\n Tu\n A t ( ) ( ) donde t es el espesor de la pared de la sección hueca en la ubicación donde se están verificando los esfuerzos.",
+   "texto": "Si el espesor de la pared es menor que Aoh / Ph, el segundo término en la expresión (11-19) debe ser tomado como:\n Tu / (1,7 Aoh t)\n donde t es el espesor de la pared de la sección hueca en la ubicación donde se están verificando los esfuerzos.",
    "pagina": 99
   },
   {
@@ -418,33 +415,33 @@
   },
   {
    "numero": "11.6.3.5",
-   "texto": "Donde el momento torsor Tu excede el momento torsor especificado en 11.6.1, el diseño de la sección debe basarse en:\n Tn Tu φ ≥ (11- 20)",
+   "texto": "Donde el momento torsor Tu excede el momento torsor especificado en 11.6.1, el diseño de la sección debe basarse en:\n φ Tn ≥ Tu (11-20)",
    "pagina": 100
   },
   {
    "numero": "11.6.3.6",
-   "texto": "Tn debe calcularse mediante:\n 2 cot Ao At fyt Tn\n s = θ (11-21)\n\n Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh. θ no debe tomarse menor a 30° ni mayor que 60°. Se puede tomar θ igual a:\n (a) 45° en elementos no preesforzados o con un preesforzado menor al indicado en (b), (b) 37.5° para elementos preesforzados con una fuerza efectiva de preesforzado no menor a un 40% de la resistencia a tracción del refuerzo longitudinal (Aps fpu).",
+   "texto": "Tn debe calcularse mediante:\n Tn = (2 Ao At fyt / s) cot θ (11-21)\n Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh. θ no debe tomarse menor a 30° ni mayor que 60°. Se puede tomar θ igual a:\n (a) 45° en elementos no preesforzados o con un preesforzado menor al indicado en (b).\n (b) 37.5° para elementos preesforzados con una fuerza efectiva de preesforzado no menor a un 40% de la resistencia a tracción del refuerzo longitudinal (Aps fpu).",
    "pagina": 100
   },
   {
    "numero": "11.6.3.7",
    "epigrafe": "El área adicional de refuerzo longitudinal necesario para resistir torsión, A",
-   "texto": "El área adicional de refuerzo longitudinal necesario para resistir torsión, Aℓ, no debe ser menor que:\n 2 cot At fyt A Ph s fy = θ ( ) ( ) (11-\n 22)\n donde θ debe tener el mismo valor usado en la ecuación (11-21) y At/s debe tomarse como la cantidad calculada con la ecuación (11-21) sin modificarla de acuerdo con 11.6.5.2 ó 11.6.5.3; fyt se refiere al refuerzo transversal cerrado para torsión y fy al refuerzo longitudinal de torsión.\n\n Fig. 11.6.3 Definición de Aoh (área sombreada).",
+   "texto": "El área adicional de refuerzo longitudinal necesario para resistir torsión, Aℓ, no debe ser menor que:\n Aℓ = (At / s) Ph (fyt / fy) cot² θ (11-22)\n donde θ debe tener el mismo valor usado en la ecuación (11-21) y At/s debe tomarse como la cantidad calculada con la ecuación (11-21) sin modificarla de acuerdo con 11.6.5.2 ó 11.6.5.3; fyt se refiere al refuerzo transversal cerrado para torsión y fy al refuerzo longitudinal de torsión.\n\n Fig. 11.6.3 Definición de Aoh (área sombreada).",
    "pagina": 100
   },
   {
    "numero": "11.6.3.8",
-   "texto": "El refuerzo necesario para torsión debe ser añadido al necesario para el cortante, momento flector y fuerza axial que actúan en combinación con el momento torsor. Debe cumplirse con el requisito más restrictivo para el espaciamiento y la colocación del refuerzo. El área de estribos para cortante, Av, se define en términos de todas las ramas de los estribos para cortante, el área de estribos para torsión, At, se define en términos de una sola rama y el área de todos las ramas necesarias de estribos para cortante y torsión, A(v+t), se calcula mediante:\n\n ( ) total 2 v t A Av At\n s s s\n + = + ( ) ( ) ( ) ( )\n\n En los estribos con más de dos ramas para cortante, sólo las ramas adyacentes a los lados de la viga deben ser incluidas en la suma, dado que las ramas interiores no son efectivas para torsión.",
+   "texto": "El refuerzo necesario para torsión debe ser añadido al necesario para el cortante, momento flector y fuerza axial que actúan en combinación con el momento torsor. Debe cumplirse con el requisito más restrictivo para el espaciamiento y la colocación del refuerzo. El área de estribos para cortante, Av, se define en términos de todas las ramas de los estribos para cortante, el área de estribos para torsión, At, se define en términos de una sola rama y el área de todos las ramas necesarias de estribos para cortante y torsión, A(v+t), se calcula mediante:\n (A(v+t) / s) total = Av / s + 2 (At / s)\n En los estribos con más de dos ramas para cortante, sólo las ramas adyacentes a los lados de la viga deben ser incluidas en la suma, dado que las ramas interiores no son efectivas para torsión.",
    "pagina": 101
   },
   {
    "numero": "11.6.3.9",
-   "texto": "Se permite reducir el área de refuerzo longitudinal para torsión en la zona de compresión por flexión en una cantidad igual a ( ) / 0,9 Mu d fy , donde Mu ocurre en la sección simultáneamente con Tu, pero el refuerzo provisto no debe ser menor que el requerido por 11.6.5.3 u 11.6.6.2.",
+   "texto": "Se permite reducir el área de refuerzo longitudinal para torsión en la zona de compresión por flexión en una cantidad igual a Mu / (0,9 d fy), donde Mu ocurre en la sección simultáneamente con Tu, pero el refuerzo provisto no debe ser menor que el requerido por 11.6.5.3 u 11.6.6.2.",
    "pagina": 101
   },
   {
    "numero": "11.6.3.10",
-   "texto": "En vigas preesforzadas:\n (a) el total del refuerzo longitudinal, incluyendo el acero de preesforzado, debe resistir en cada sección Mu más una fuerza de tracción longitudinal concéntrica adicional igual a A fy\n\n , basada en el valor de Tu en esa sección, y (b) el espaciamiento del refuerzo longitudinal incluyendo los tendones debe satisfacer los requisitos de 11.6.6.2.",
+   "texto": "En vigas preesforzadas:\n (a) el total del refuerzo longitudinal, incluyendo el acero de preesforzado, debe resistir en cada sección Mu más una fuerza de tracción longitudinal concéntrica adicional igual a Aℓ fy, basada en el valor de Tu en esa sección, y\n (b) el espaciamiento del refuerzo longitudinal incluyendo los tendones debe satisfacer los requisitos de 11.6.6.2.",
    "pagina": 101
   },
   {
@@ -475,7 +472,7 @@
   },
   {
    "numero": "11.6.4.4",
-   "texto": "En secciones huecas sometidas a torsión, la distancia desde el eje del refuerzo transversal para torsión hasta la cara interior de la pared de la sección hueca no debe ser menor que 0,5 / oh A Ph .",
+   "texto": "En secciones huecas sometidas a torsión, la distancia desde el eje del refuerzo transversal para torsión hasta la cara interior de la pared de la sección hueca no debe ser menor que 0,5 Aoh / Ph.",
    "pagina": 101
   },
   {
@@ -491,12 +488,12 @@
   },
   {
    "numero": "11.6.5.2",
-   "texto": "Donde se requiera refuerzo para torsión de acuerdo con 11.6.5.1, el área mínima de estribos cerrados debe calcularse mediante:\n ( ) 2 0,062 w b s Av At f c\n fyt ′ + = (11-23)\n pero no debe ser menor de ( ) 0,35 / w b s fyt .",
+   "texto": "Donde se requiera refuerzo para torsión de acuerdo con 11.6.5.1, el área mínima de estribos cerrados debe calcularse mediante:\n (Av + 2 At) = 0,062 √f’c bw s / fyt (11-23)\n pero no debe ser menor de 0,35 bw s / fyt.",
    "pagina": 102
   },
   {
    "numero": "11.6.5.3",
-   "texto": "Donde se requiera refuerzo para torsión de acuerdo con 11.6.5.1, el área mínima total de refuerzo longitudinal para torsión, min , A\n\n , debe calcularse mediante:\n\n min 0,42 , cp h f c A At fyt A P fy s fy\n ′ = −( ) ( ) (11-\n 24)\n donde / At s no debe tomarse menor que 0,175 / w b fyt ; fyt se refiere al refuerzo transversal cerrado para torsión y fy al refuerzo longitudinal para torsión.",
+   "texto": "Donde se requiera refuerzo para torsión de acuerdo con 11.6.5.1, el área mínima total de refuerzo longitudinal para torsión, Aℓ,min, debe calcularse mediante:\n Aℓ,min = 0,42 √f’c Acp / fy − (At / s) Ph (fyt / fy) (11-24)\n donde At / s no debe tomarse menor que 0,175 bw / fyt; fyt se refiere al refuerzo transversal cerrado para torsión y fy al refuerzo longitudinal para torsión.",
    "pagina": 102
   },
   {
@@ -560,22 +557,22 @@
   },
   {
    "numero": "11.7.4.1",
-   "texto": "Donde el refuerzo de cortante por fricción es perpendicular al plano de cortante, y no existan cargas axiales de compresión, Vn debe calcularse mediante:\n vf Vn A fy = μ (11-25)\n µ es el coeficiente de fricción especificado en 11.7.4.3.",
+   "texto": "Donde el refuerzo de cortante por fricción es perpendicular al plano de cortante, y no existan cargas axiales de compresión, Vn debe calcularse mediante:\n Vn = Avf fy μ (11-25)\n µ es el coeficiente de fricción especificado en 11.7.4.3.",
    "pagina": 103
   },
   {
    "numero": "11.7.4.2",
-   "texto": "Cuando el refuerzo de cortante por fricción está inclinado en relación con el plano de cortante, de manera que la fuerza cortante produce tracción en dicho refuerzo, Vn debe calcularse mediante:\n ( ) sen cos vf Vn A fy = μ α+ α (11-26)\n α es el ángulo menor entre el refuerzo de cortante por fricción y el plano de cortante (Figura 11.7.4.2).",
+   "texto": "Cuando el refuerzo de cortante por fricción está inclinado en relación con el plano de cortante, de manera que la fuerza cortante produce tracción en dicho refuerzo, Vn debe calcularse mediante:\n Vn = Avf fy (μ sen α + cos α) (11-26)\n α es el ángulo menor entre el refuerzo de cortante por fricción y el plano de cortante (Figura 11.7.4.2).",
    "pagina": 103
   },
   {
    "numero": "11.7.4.3",
-   "texto": "El coeficiente de fricción μ en las ecuaciones (11-25) y (11-26) debe ser:\n - Para concreto colocado monolíticamente … 1,4λ - Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa tal como se especifica en 11.7.9 … 1,0λ - Concreto colocado contra concreto endurecido con la superficie de contacto no intencionalmente rugosa … 0,6λ\n Fig. 11.7.4.2 Refuerzo de cortante por fricción inclinado con respecto a la fisura supuesta.\n α\n\n - Concreto anclado a acero estructural laminado mediante conectores (studs) con cabeza o mediante barras de refuerzo que cumplan con 11.7.10 … 0,7λ\n donde λ = 1,0 para concreto de peso normal; 0,85 para concreto liviano con arena de peso normal y 0,75 para concreto liviano en todos sus componentes. Se permite interpolar linealmente si se emplea sustitución parcial de arena.",
+   "texto": "El coeficiente de fricción μ en las ecuaciones (11-25) y (11-26) debe ser:\n | Condición | μ\n | Para concreto colocado monolíticamente | 1,4λ\n | Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa tal como se especifica en 11.7.9 | 1,0λ\n | Concreto colocado contra concreto endurecido con la superficie de contacto no intencionalmente rugosa | 0,6λ\n | Concreto anclado a acero estructural laminado mediante conectores (studs) con cabeza o mediante barras de refuerzo que cumplan con 11.7.10 | 0,7λ\n donde λ = 1,0 para concreto de peso normal; 0,85 para concreto liviano con arena de peso normal y 0,75 para concreto liviano en todos sus componentes. Se permite interpolar linealmente si se emplea sustitución parcial de arena.\n\n Fig. 11.7.4.2 Refuerzo de cortante por fricción inclinado con respecto a la fisura supuesta.",
    "pagina": 103
   },
   {
    "numero": "11.7.5",
-   "texto": "Vn no debe tomarse mayor que el menor de 0,2 f’c Ac y 5,5 Ac , donde Ac es el área de la sección de concreto que resiste la transferencia de cortante.",
+   "texto": "Vn no debe tomarse mayor que el menor de 0,2 f’c Ac y 5,5 Ac, donde Ac es el área de la sección de concreto que resiste la transferencia de cortante.",
    "pagina": 104
   },
   {
@@ -611,8 +608,7 @@
   },
   {
    "numero": "11.8.1",
-   "epigrafe": "Las disposiciones de 11.8 deben ser aplicadas a elementos con n",
-   "texto": "que no exceda cuatro veces la altura total del elemento y que estén cargados en una cara y apoyados en su cara opuesta, de manera tal que puedan desarrollarse puntales de compresión entre las caras y los apoyos. Véase también 12.10.6.",
+   "texto": "Las disposiciones de 11.8 deben ser aplicadas a elementos con ℓn que no exceda cuatro veces la altura total del elemento y que estén cargados en una cara y apoyados en su cara opuesta, de manera tal que puedan desarrollarse puntales de compresión entre las caras y los apoyos. Véase también 12.10.6.",
    "pagina": 104
   },
   {
@@ -622,7 +618,7 @@
   },
   {
    "numero": "11.8.3",
-   "texto": "La resistencia al corte Vn para elementos de gran peralte a flexión no será mayor que:\n\n 0,83 w Vn f c b d ′ ≤\n (11-27)",
+   "texto": "La resistencia al corte Vn para elementos de gran peralte a flexión no será mayor que:\n Vn ≤ 0,83 √f’c bw d (11-27)",
    "pagina": 104
   },
   {
@@ -632,12 +628,12 @@
   },
   {
    "numero": "11.8.5",
-   "texto": "La contribución del concreto Vc debe evaluarse según:\n\n 0,17 w Vc f c b d ′ = (11-28)",
+   "texto": "La contribución del concreto Vc debe evaluarse según:\n Vc = 0,17 √f’c bw d (11-28)",
    "pagina": 105
   },
   {
    "numero": "11.8.6",
-   "texto": "Donde Vu exceda la resistencia al corte proporcionada por el concreto, φVc, debe proveerse refuerzo por corte. La resistencia provista por el refuerzo, Vs, se calculará con la expresión:\n 2\n 1 11\n 12 12\n n n Av Avh d d Vs fy d s s\n + − = +\n [ ] ( ) ( ) ( ) ( ) [ ] (11-29)\n\n Av: Área de refuerzo por corte, perpendicular al refuerzo de tracción por flexión\n espaciado una distancia s. Avh: Área de refuerzo por corte, paralelo al refuerzo de flexión espaciado una\n distancia s2.",
+   "texto": "Donde Vu exceda la resistencia al corte proporcionada por el concreto, φVc, debe proveerse refuerzo por corte. La resistencia provista por el refuerzo, Vs, se calculará con la expresión:\n Vs = [(Av / s) (1 + ℓn/d) / 12 + (Avh / s2) (11 − ℓn/d) / 12] fy d (11-29)\n Av: Área de refuerzo por corte, perpendicular al refuerzo de tracción por flexión espaciado una distancia s.\n Avh: Área de refuerzo por corte, paralelo al refuerzo de flexión espaciado una distancia s2.",
    "pagina": 105
   },
   {
@@ -678,7 +674,7 @@
   },
   {
    "numero": "11.9.3",
-   "texto": "La sección en la cara del apoyo debe diseñarse para resistir simultáneamente con la fuerza cortante Vu, un momento amplificado ( ) Mu Vu v Nuc h d a = + − [ ] [ ] y una\n fuerza horizontal amplificada de tracción, Nuc.",
+   "texto": "La sección en la cara del apoyo debe diseñarse para resistir simultáneamente con la fuerza cortante Vu, un momento amplificado Mu = [Vu av + Nuc (h − d)] y una fuerza horizontal amplificada de tracción, Nuc.",
    "pagina": 106
   },
   {
@@ -693,34 +689,32 @@
   },
   {
    "numero": "11.9.3.2.1",
-   "texto": "Para concreto de densidad normal, Vn no debe tomarse mayor que el menor de 0,2 w f c b d ′ ó 5,5 w b d .",
+   "texto": "Para concreto de densidad normal, Vn no debe tomarse mayor que el menor de 0,2 f’c bw d ó 5,5 bw d.",
    "pagina": 106
   },
   {
    "numero": "11.9.3.2.2",
-   "texto": "Para el concreto liviano en todos sus componentes o concreto liviano con arena de peso normal, Vn no debe tomarse mayor que el menor de ( ) 0,2 0,07 / w v d f c b d a ′ −\n ó ( ) 5,5 1,9 / w v d b d a − .",
+   "texto": "Para el concreto liviano en todos sus componentes o concreto liviano con arena de peso normal, Vn no debe tomarse mayor que el menor de (0,2 − 0,07 av/d) f’c bw d ó (5,5 − 1,9 av/d) bw d.",
    "pagina": 106
   },
   {
    "numero": "11.9.3.3",
-   "epigrafe": "El refuerzo Af para resistir el momento amplificado",
-   "texto": "( ) Mu Vu v Nuc h d a = + − [ ] [ ]\n debe calcularse de acuerdo con 10.2 y 10.3.",
+   "texto": "El refuerzo Af para resistir el momento amplificado Mu = [Vu av + Nuc (h − d)] debe calcularse de acuerdo con 10.2 y 10.3.",
    "pagina": 106
   },
   {
    "numero": "11.9.3.4",
-   "texto": "El refuerzo An para resistir la fuerza amplificada de tracción Nuc debe determinarse mediante: An fy Nuc φ ≥ . La fuerza de tracción amplificada, Nuc, no debe tomarse menor que 0,2 Vu a menos que se tomen disposiciones especiales para evitar las fuerzas de tracción. Nuc debe considerarse como una carga viva aún cuando la tracción resulte de la restricción al flujo plástico, retracción o variación de temperatura.",
+   "texto": "El refuerzo An para resistir la fuerza amplificada de tracción Nuc debe determinarse mediante: φ An fy ≥ Nuc. La fuerza de tracción amplificada, Nuc, no debe tomarse menor que 0,2 Vu a menos que se tomen disposiciones especiales para evitar las fuerzas de tracción. Nuc debe considerarse como una carga viva aún cuando la tracción resulte de la restricción al flujo plástico, retracción o variación de temperatura.",
    "pagina": 106
   },
   {
    "numero": "11.9.3.5",
-   "epigrafe": "El área del refuerzo principal de tracción,  Asc,  no  debe  ser  menor  que  la mayor",
-   "texto": "entre (Af + An) y 2\n 3 Avf An + ( ) ( )\n .",
+   "texto": "El área del refuerzo principal de tracción, Asc, no debe ser menor que la mayor entre (Af + An) y (2/3 Avf + An).",
    "pagina": 106
   },
   {
    "numero": "11.9.4",
-   "texto": "El área total, Ah, de los estribos paralelos al refuerzo principal de tracción no debe ser menor que 0,5 (Asc – An). El área Ah debe distribuirse uniformemente dentro de los ( ) 2/3 d adyacentes al refuerzo principal de tracción.",
+   "texto": "El área total, Ah, de los estribos paralelos al refuerzo principal de tracción no debe ser menor que 0,5 (Asc – An). El área Ah debe distribuirse uniformemente dentro de los (2/3) d adyacentes al refuerzo principal de tracción.",
    "pagina": 106
   },
   {
@@ -762,29 +756,27 @@
   },
   {
    "numero": "11.10.4",
-   "texto": "La resistencia Vn, en cualquier sección horizontal para cortante en el plano del muro no debe tomarse mayor que:\n 0,83 Vn f c Acw ′ ≤ donde Acw representa el área de corte de la sección transversal del muro (área del alma) o del segmento del muro considerado.",
+   "texto": "La resistencia Vn, en cualquier sección horizontal para cortante en el plano del muro no debe tomarse mayor que:\n Vn ≤ 0,83 √f’c Acw\n donde Acw representa el área de corte de la sección transversal del muro (área del alma) o del segmento del muro considerado.",
    "pagina": 107
   },
   {
    "numero": "11.10.5",
-   "texto": "La contribución del concreto, Vc, no debe exceder de:\n ( ) c Vc Acw f c′ = α (11-\n 30)\n donde el coeficiente αc es 0,25 para [ ] / 1,5 hm m ≤\n\n ; 0,17 para [ ] / 2,0 hm m ≥ y\n varia linealmente entre 0,25 y 0,17 para [ ] / hm m entre 1,5 y 2,0. m es la longitud total del muro o del segmento del muro considerado y hm es la altura total del muro.",
+   "texto": "La contribución del concreto, Vc, no debe exceder de:\n Vc = Acw (αc √f’c) (11-30)\n donde el coeficiente αc es 0,25 para hm/ℓm ≤ 1,5; 0,17 para hm/ℓm ≥ 2,0 y varía linealmente entre 0,25 y 0,17 para hm/ℓm entre 1,5 y 2,0. ℓm es la longitud total del muro o del segmento del muro considerado y hm es la altura total del muro.",
    "pagina": 107
   },
   {
    "numero": "11.10.6",
-   "texto": "Para muros o segmentos de muros sometidos a una tracción axial Nu (caso por ejemplo de muros acoplados con vigas) el valor de Vc obtenido de la ecuación (11- 30) se multiplicará por el factor (1– 0,29 Nu/Ag) ≥ 0 donde Nu/Ag debe expresarse en MPa.",
+   "texto": "Para muros o segmentos de muros sometidos a una tracción axial Nu (caso por ejemplo de muros acoplados con vigas) el valor de Vc obtenido de la ecuación (11-30) se multiplicará por el factor (1– 0,29 Nu/Ag) ≥ 0 donde Nu/Ag debe expresarse en MPa.",
    "pagina": 107
   },
   {
    "numero": "11.10.7",
-   "epigrafe": "Donde Vu sea menor que",
-   "texto": "0,085 f c Acw ′ , el refuerzo distribuido debe proporcionarse según lo estipulado en 11.10.10 o de acuerdo con los siguientes mínimos: (a) La cuantía de refuerzo horizontal no será menor que 0,002. (b) La cuantía de refuerzo vertical no será menor que 0,0015.\n El espaciamiento del refuerzo en cada dirección en muros estructurales no debe exceder de tres veces el espesor del muro ni de 400 mm",
+   "texto": "Donde Vu sea menor que 0,085 √f’c Acw, el refuerzo distribuido debe proporcionarse según lo estipulado en 11.10.10 o de acuerdo con los siguientes mínimos:\n (a) La cuantía de refuerzo horizontal no será menor que 0,002.\n (b) La cuantía de refuerzo vertical no será menor que 0,0015.\n El espaciamiento del refuerzo en cada dirección en muros estructurales no debe exceder de tres veces el espesor del muro ni de 400 mm",
    "pagina": 107
   },
   {
    "numero": "11.10.8",
-   "epigrafe": "Donde Vu sea mayor que 0,085",
-   "texto": "f c Acw ′ el refuerzo del muro para resistir el cortante debe proporcionarse según lo estipulado en 11.10.10.",
+   "texto": "Donde Vu sea mayor que 0,085 √f’c Acw el refuerzo del muro para resistir el cortante debe proporcionarse según lo estipulado en 11.10.10.",
    "pagina": 108
   },
   {
@@ -800,7 +792,7 @@
   },
   {
    "numero": "11.10.10.1",
-   "texto": "Donde Vu exceda la resistencia al corte φVc, deberá proveerse refuerzo por corte. La resistencia Vs se calculará con la expresión:\n Vs Acw h fy = ρ (11-31)\n donde h ρ es la cuantía de refuerzo horizontal para cortante con espaciamiento s.",
+   "texto": "Donde Vu exceda la resistencia al corte φVc, deberá proveerse refuerzo por corte. La resistencia Vs se calculará con la expresión:\n Vs = Acw ρh fy (11-31)\n donde ρh es la cuantía de refuerzo horizontal para cortante con espaciamiento s.",
    "pagina": 108
   },
   {
@@ -810,8 +802,7 @@
   },
   {
    "numero": "11.10.10.3",
-   "epigrafe": "La cuantía de refuerzo vertical para cortante, v",
-   "texto": "ρ, no debe ser menor que:\n ( ) 0,0025 0,5 2,5 0,0025 0,0025 m\n m\n h v h ρ= + − ρ− ≥ ( ) ( ) (11-32)\n pero no necesita ser mayor que el valor de h ρ requerido por 11.10.10.1. En la ecuación (11-32), hm es la altura total del muro y m es la longitud total del muro.",
+   "texto": "La cuantía de refuerzo vertical para cortante, ρv, no debe ser menor que:\n ρv = 0,0025 + 0,5 (2,5 − hm/ℓm) (ρh − 0,0025) ≥ 0,0025 (11-32)\n pero no necesita ser mayor que el valor de ρh requerido por 11.10.10.1. En la ecuación (11-32), hm es la altura total del muro y ℓm es la longitud total del muro.",
    "pagina": 108
   },
   {
@@ -873,12 +864,12 @@
   },
   {
    "numero": "11.12.2.1",
-   "texto": "Para losas no preesforzadas y zapatas, Vc debe ser el menor entre (a), (b) y (c):\n (a)\n 2 0,17 1 o Vc f c b d ′ = +\n β ( ) ( )\n (11-\n 33)\n donde β es la relación del lado largo al lado corto de la sección de la columna, la carga concentrada o el área de reacción.\n (b)\n 0,083 2 s o o\n d Vc f c b d b\n α ′ = + ( ) ( )\n (11-\n 34)\n donde αs es 40 para columnas interiores, 30 para columnas de borde, y 20 para columnas en esquina.\n (c)\n\n 0,33 o Vc f c b d ′ = (11- 35)\n\n β = an / bn",
+   "texto": "Para losas no preesforzadas y zapatas, Vc debe ser el menor entre (a), (b) y (c):\n (a) Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)\n donde β es la relación del lado largo al lado corto de la sección de la columna, la carga concentrada o el área de reacción.\n (b) Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)\n donde αs es 40 para columnas interiores, 30 para columnas de borde, y 20 para columnas en esquina.\n (c) Vc = 0,33 √f’c bo d (11-35)\n β = an / bn",
    "pagina": 109
   },
   {
    "numero": "11.12.2.2",
-   "texto": "En columnas de losas preesforzadas en dos direcciones que cumplan con los requisitos de 18.9.3:\n ( ) 0,3 p o Vc f c fpc b d Vp ′ =β + + (11-36)\n donde βp es el menor entre 0,29 y ( ) 0,0083 / 1,5 s o d b + α , αs es 40 para columnas interiores, 30 para columnas de borde y 20 para columnas en esquina, bo es el perímetro de la sección crítica definida en 11.12.1.2, pc f se toma como el valor promedio de fpc para las dos direcciones y Vp es la componente vertical de todas las fuerzas efectivas de preesforzado que cruzan la sección crítica. Se permite calcular Vc con la ecuación (11-36) si se satisfacen las tres condiciones siguientes; en caso contrario se debe aplicar 11.12.2.1:\n (a) ninguna porción de la sección transversal de una columna debe estar más cerca a un borde discontinuo que cuatro veces el espesor de la losa.\n (b) El valor de f c′ utilizado en la ecuación (11-36) no debe tomarse mayor que 0,5 MPa. (c) En cada dirección fpc no debe ser menor que 0,9 MPa, ni tomarse mayor que 3,5 MPa.",
+   "texto": "En columnas de losas preesforzadas en dos direcciones que cumplan con los requisitos de 18.9.3:\n Vc = (βp √f’c + 0,3 fpc) bo d + Vp (11-36)\n donde βp es el menor entre 0,29 y 0,0083 (αs d / bo + 1,5), αs es 40 para columnas interiores, 30 para columnas de borde y 20 para columnas en esquina, bo es el perímetro de la sección crítica definida en 11.12.1.2, fpc se toma como el valor promedio de fpc para las dos direcciones y Vp es la componente vertical de todas las fuerzas efectivas de preesforzado que cruzan la sección crítica.\n Se permite calcular Vc con la ecuación (11-36) si se satisfacen las tres condiciones siguientes; en caso contrario se debe aplicar 11.12.2.1:\n (a) ninguna porción de la sección transversal de una columna debe estar más cerca a un borde discontinuo que cuatro veces el espesor de la losa.\n (b) El valor de √f’c utilizado en la ecuación (11-36) no debe tomarse mayor que 0,5 MPa.\n (c) En cada dirección fpc no debe ser menor que 0,9 MPa, ni tomarse mayor que 3,5 MPa.",
    "pagina": 110
   },
   {
@@ -888,13 +879,12 @@
   },
   {
    "numero": "11.12.3.1",
-   "texto": "Vn debe calcularse con la ecuación (11-2), donde Vc no debe tomarse mayor que 0,17 o f c b d ′ y Vs debe calcularse de acuerdo con 11.5. En la ecuación (11-15), Av debe tomarse como el área de sección transversal de todas las ramas de refuerzo en una línea periférica que es geométricamente similar al perímetro de la sección de la columna.",
+   "texto": "Vn debe calcularse con la ecuación (11-2), donde Vc no debe tomarse mayor que 0,17 √f’c bo d y Vs debe calcularse de acuerdo con 11.5. En la ecuación (11-15), Av debe tomarse como el área de sección transversal de todas las ramas de refuerzo en una línea periférica que es geométricamente similar al perímetro de la sección de la columna.",
    "pagina": 110
   },
   {
    "numero": "11.12.3.2",
-   "epigrafe": "Vn no debe considerarse mayor que 0,5",
-   "texto": "o f c b d ′ .",
+   "texto": "Vn no debe considerarse mayor que 0,5 √f’c bo d.",
    "pagina": 110
   },
   {
@@ -936,12 +926,12 @@
   },
   {
    "numero": "11.12.6.1",
-   "texto": "Cuando las cargas de gravedad, viento o sismo u otras fuerzas laterales produzcan transmisión de momentos no balanceados, Mu, entre una losa y una columna, la fracción γf Mu debe ser transmitida por flexión de acuerdo con 13.5.3. El resto del momento no balanceado dado por γv Mu se considera transferido por excentricidad del cortante alrededor del centroide de la sección crítica definida en 11.12.1.2, donde\n ( ) 1 v f γ= −γ (11-\n 39)",
+   "texto": "Cuando las cargas de gravedad, viento o sismo u otras fuerzas laterales produzcan transmisión de momentos no balanceados, Mu, entre una losa y una columna, la fracción γf Mu debe ser transmitida por flexión de acuerdo con 13.5.3. El resto del momento no balanceado dado por γv Mu se considera transferido por excentricidad del cortante alrededor del centroide de la sección crítica definida en 11.12.1.2, donde\n γv = (1 − γf) (11-39)",
    "pagina": 112
   },
   {
    "numero": "11.12.6.2",
-   "texto": "El esfuerzo cortante que resulta de la transferencia de momento por excentricidad del cortante debe suponerse que varía linealmente alrededor del centroide de las secciones críticas definidas en 11.12.1.2. El máximo esfuerzo cortante debido a Vu y Mu no debe exceder φ vn, donde:\n (a) Para elementos sin refuerzo para cortante\n n\n o\n Vc v\n b d\n φ φ = (11-\n 40)\n donde Vc se define en 11.12.2.1 ó 11.12.2.2.\n (b) Para elementos con refuerzo para cortante distinto a cabezales de cortante:\n\n Fig. 11.12.5.1 Aberturas y bordes libres en losas (las líneas discontinuas\n muestran el perímetro efectivo).\n\n ( ) n\n o\n Vc Vs v\n b d\n φ + φ = (11-\n 41)\n donde Vc y Vs se definen en 11.12.3.1. El diseño debe tomar en cuenta la variación del esfuerzo cortante alrededor de la columna. El esfuerzo cortante debido a la fuerza cortante y momento amplificados no debe exceder de\n 0,17 f c′ φ en la sección crítica ubicada a d/2 fuera de la línea exterior de las ramas del estribo que rodean la columna.\n\n a) Columna interior\n Fig. 11.12.6 Distribución de los esfuerzos cortantes en el perímetro de la sección crítica en\n conexiones losa a columna\n b) Columna de borde\n 3 3 2\n ( )\n 1 2\n 1 1 2 1\n 2 ( 2 )\n ( ) ( ) ( )( ) 6 6 2\n AB v AB Vu Mu c vu\n Ac Jc Ac d c c d\n d c d c d d d c d c d Jc\n = γ +\n = + +\n + + + + = + +\n\n 3 3 2\n 2\n 1 ( )\n 1 2\n 1 1 2\n 1\n )\n 2 (\n (2 2 )\n ( 0,5 ) ( 0,5 ) ( ) 6 6 0,5 2( 1 0.5 ) ( ) 2\n AB\n AB\n AB\n AB\n d v AB Vu Mu Vu g c c vu g c Ac Jc Ac d c c d\n d c d c d d Jc c d d c\n c d c d d c\n + = γ − + = −\n = + +\n + + = + + + +\n + + + −",
+   "texto": "El esfuerzo cortante que resulta de la transferencia de momento por excentricidad del cortante debe suponerse que varía linealmente alrededor del centroide de las secciones críticas definidas en 11.12.1.2. El máximo esfuerzo cortante debido a Vu y Mu no debe exceder φ vn, donde:\n (a) Para elementos sin refuerzo para cortante\n φ vn = φ Vc / (bo d) (11-40)\n donde Vc se define en 11.12.2.1 ó 11.12.2.2.\n (b) Para elementos con refuerzo para cortante distinto a cabezales de cortante:\n φ vn = φ (Vc + Vs) / (bo d) (11-41)\n donde Vc y Vs se definen en 11.12.3.1. El diseño debe tomar en cuenta la variación del esfuerzo cortante alrededor de la columna. El esfuerzo cortante debido a la fuerza cortante y momento amplificados no debe exceder de φ 0,17 √f’c en la sección crítica ubicada a d/2 fuera de la línea exterior de las ramas del estribo que rodean la columna.\n\n Fig. 11.12.5.1 Aberturas y bordes libres en losas (las líneas discontinuas muestran el perímetro efectivo).\n Fig. 11.12.6 Distribución de los esfuerzos cortantes en el perímetro de la sección crítica en conexiones losa a columna",
    "pagina": 112
   }
  ],
@@ -1821,7 +1811,7 @@
      "citas": [
       {
        "articulo": "11.7.4.3",
-       "extracto": "Para concreto colocado monolíticamente … 1,4λ - Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa… 1,0λ - … no intencionalmente rugosa … 0,6λ"
+       "extracto": "Para concreto colocado monolíticamente … 1,4λ … Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa… 1,0λ … no intencionalmente rugosa … 0,6λ"
       }
      ]
     },
@@ -2147,7 +2137,7 @@
      "citas": [
       {
        "articulo": "11.12.2.1",
-       "extracto": "Vc debe ser el menor entre (a), (b) y (c): Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"
+       "extracto": "Vc debe ser el menor entre (a), (b) y (c): (a) Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"
       }
      ]
     },
@@ -2493,7 +2483,7 @@
      "citas": [
       {
        "articulo": "11.7.4.3",
-       "extracto": "Para concreto colocado monolíticamente … 1,4λ - Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa… 1,0λ - … no intencionalmente rugosa … 0,6λ"
+       "extracto": "Para concreto colocado monolíticamente … 1,4λ … Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa… 1,0λ … no intencionalmente rugosa … 0,6λ"
       }
      ]
     },
@@ -2609,7 +2599,7 @@
      "citas": [
       {
        "articulo": "11.12.2.1",
-       "extracto": "Vc debe ser el menor entre (a), (b) y (c): Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"
+       "extracto": "Vc debe ser el menor entre (a), (b) y (c): (a) Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"
       }
      ]
     },
@@ -2628,7 +2618,7 @@
      "citas": [
       {
        "articulo": "11.12.2.1",
-       "extracto": "Vc debe ser el menor entre (a), (b) y (c): Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"
+       "extracto": "Vc debe ser el menor entre (a), (b) y (c): (a) Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"
       }
      ]
     },

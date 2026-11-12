@@ -43,7 +43,7 @@
   },
   {
    "numero": "9.2.3",
-   "texto": "Si en el diseño se tuvieran que considerar cargas de sismo (CS), además de lo indicado en 9.2.1, la resistencia requerida será como mínimo:\n U = 1,25 (CM + CV) ± CS\n (9-4)\n U = 0,9 CM ± CS (9-5)",
+   "texto": "Si en el diseño se tuvieran que considerar cargas de sismo (CS), además de lo indicado en 9.2.1, la resistencia requerida será como mínimo:\n U = 1,25 (CM + CV) ± CS (9-4)\n U = 0,9 CM ± CS (9-5)",
    "pagina": 63
   },
   {
@@ -58,7 +58,7 @@
   },
   {
    "numero": "9.2.6",
-   "texto": "Si fuera necesario incluir en el diseño el efecto de cargas debidas a peso y presión de líquidos (CL) con densidades bien definidas y alturas máximas controladas, además de los indicado en 9.2.1, la resistencia requerida será como mínimo:\n\n U = 1,4 CM + 1,7 CV + 1,4 CL (9-8)",
+   "texto": "Si fuera necesario incluir en el diseño el efecto de cargas debidas a peso y presión de líquidos (CL) con densidades bien definidas y alturas máximas controladas, además de los indicado en 9.2.1, la resistencia requerida será como mínimo:\n U = 1,4 CM + 1,7 CV + 1,4 CL (9-8)",
    "pagina": 63
   },
   {
@@ -109,7 +109,7 @@
   },
   {
    "numero": "9.3.2.2",
-   "texto": "Carga axial y carga axial con flexión:\n (a) Carga axial de tracción con o sin flexión … 0,90 (b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70\n Para elementos en flexocompresión\n\n φ puede incrementarse linealmente hasta 0,90 en la medida que\n\n φPn disminuye desde 0,1 f’c Ag ó\n\n φPb, el que sea menor, hasta cero.",
+   "texto": "Carga axial y carga axial con flexión:\n (a) Carga axial de tracción con o sin flexión: 0,90\n (b) Carga axial de compresión con o sin flexión:\n Elementos con refuerzo en espiral según 10.9.3: 0,75\n Otros elementos: 0,70\n Para elementos en flexocompresión φ puede incrementarse linealmente hasta 0,90 en la medida que φPn disminuye desde 0,1 f’c Ag ó φPb, el que sea menor, hasta cero.",
    "pagina": 64
   },
   {
@@ -134,7 +134,7 @@
   },
   {
    "numero": "9.3.2.7",
-   "texto": "Las longitudes de desarrollo especificadas en el capítulo 12 no requieren de un factor\n\n φ.",
+   "texto": "Las longitudes de desarrollo especificadas en el capítulo 12 no requieren de un factor φ.",
    "pagina": 65
   },
   {
@@ -183,7 +183,7 @@
   },
   {
    "numero": "9.6.2.1",
-   "texto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas) que no soporten o estén ligados a elementos no estructurales susceptibles de dañarse por deflexiones excesivas del elemento estructural. Estos límites pueden obviarse si el cálculo de las deflexiones demuestra que es posible utilizar un espesor menor sin provocar efectos adversos.\n\n TABLA 9.1 PERALTES O ESPESORES MÍNIMOS DE VIGAS NO PREESFORZADAS O LOSAS REFORZADAS EN UNA DIRECCIÓN A MENOS QUE SE CALCULEN\n LAS DEFLEXIONES\n\n Espesor o peralte mínimo, h\n\n Simplemente\n apoyados\n Con un extremo continuo\n Ambos extremos continuos\n En voladizo\n Elementos\n Elementos que no soporten o estén ligados a divisiones u otro tipo de elementos no estructurales susceptibles de dañarse debido a deflexiones grandes. Losas macizas en una dirección 20 ℓ 24 ℓ 28 ℓ 10 ℓ\n Vigas o losas nervadas en una dirección 16 ℓ 5, 18 ℓ\n\n 21 ℓ 8 ℓ\n\n Notas: Los valores dados en esta tabla se deben usar directamente en elementos de concreto de peso normal (alrededor de 2300 Kg/m3) y refuerzo con fy igual a 420 MPa. Para otras condiciones, los valores deben modificarse como sigue:\n (a) Para concreto liviano estructural con densidad dentro del rango de 1450 a 1900 Kg/m3, los valores de la tabla deben multiplicarse por (1,65 – 0,0003 wc), pero no menos de 1,09 (b) Para fy distinto de 420 MPa, los valores de la Tabla deben multiplicarse por (0,4 + fy / 700).",
+   "texto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas) que no soporten o estén ligados a elementos no estructurales susceptibles de dañarse por deflexiones excesivas del elemento estructural. Estos límites pueden obviarse si el cálculo de las deflexiones demuestra que es posible utilizar un espesor menor sin provocar efectos adversos.\n\n TABLA 9.1 PERALTES O ESPESORES MÍNIMOS DE VIGAS NO PREESFORZADAS O LOSAS REFORZADAS EN UNA DIRECCIÓN A MENOS QUE SE CALCULEN\n LAS DEFLEXIONES\n Notas: Los valores dados en esta tabla se deben usar directamente en elementos de concreto de peso normal (alrededor de 2300 Kg/m3) y refuerzo con fy igual a 420 MPa. Para otras condiciones, los valores deben modificarse como sigue:\n (a) Para concreto liviano estructural con densidad dentro del rango de 1450 a 1900 Kg/m3, los valores de la tabla deben multiplicarse por (1,65 – 0,0003 wc), pero no menos de 1,09.\n (b) Para fy distinto de 420 MPa, los valores de la Tabla deben multiplicarse por (0,4 + fy / 700).",
    "pagina": 66
   },
   {
@@ -193,7 +193,7 @@
   },
   {
    "numero": "9.6.2.3",
-   "texto": "A menos que se haga un análisis más completo o que se disponga de datos experimentales confiables para evaluar la rigidez a flexión del elemento (Ec Ie), la deflexión inmediata para elementos de concreto de peso normal podrá calcularse con el módulo de elasticidad del concreto especificado en 8.5 y con el momento de inercia efectivo de la sección transformada agrietada (Ie). Cuando el momento flector para condiciones de servicio en cualquier sección del elemento no exceda el momento de agrietamiento (Mcr), podrá usarse el momento de inercia de la sección no agrietada (Ig).\n El momento de agrietamiento de la sección se calculará mediante:\n\n fr Ig Mcr\n Yt = (9-11) donde fr es la resistencia del concreto a tracción por flexión (Módulo de Rotura) que a falta de información experimental confiable podrá considerarse, para concretos de peso normal, como:\n\n 0,62 fr f c′ =\n (9-12)\n Cuando se use concreto con agregado liviano, debe aplicarse alguna de las modificaciones siguientes:\n (a) Cuando el valor de fct (split test) esté especificado y la dosificación del concreto esté de acuerdo con 5.2, fr debe modificarse sustituyendo f c′ por 1,8 fct, pero el valor de 1,8 fct utilizado no debe exceder de f c′. (b) Cuando no se especifique fct, fr debe multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85 para concreto liviano con arena de peso normal. Se permite interpolar linealmente si se usa una sustitución parcial de la arena.\n Para el cálculo del momento de inercia de la sección transformada agrietada (Ie), cuando exista acero en compresión, se podrá utilizar una relación modular de 2n (n = Es / Ec) para la transformación del acero en compresión a concreto equivalente.",
+   "texto": "A menos que se haga un análisis más completo o que se disponga de datos experimentales confiables para evaluar la rigidez a flexión del elemento (Ec Ie), la deflexión inmediata para elementos de concreto de peso normal podrá calcularse con el módulo de elasticidad del concreto especificado en 8.5 y con el momento de inercia efectivo de la sección transformada agrietada (Ie). Cuando el momento flector para condiciones de servicio en cualquier sección del elemento no exceda el momento de agrietamiento (Mcr), podrá usarse el momento de inercia de la sección no agrietada (Ig).\n El momento de agrietamiento de la sección se calculará mediante:\n Mcr = fr Ig / Yt (9-11)\n donde fr es la resistencia del concreto a tracción por flexión (Módulo de Rotura) que a falta de información experimental confiable podrá considerarse, para concretos de peso normal, como:\n fr = 0,62 √f’c (9-12)\n Cuando se use concreto con agregado liviano, debe aplicarse alguna de las modificaciones siguientes:\n (a) Cuando el valor de fct (split test) esté especificado y la dosificación del concreto esté de acuerdo con 5.2, fr debe modificarse sustituyendo √f’c por 1,8 fct, pero el valor de 1,8 fct utilizado no debe exceder de √f’c. (b) Cuando no se especifique fct, fr debe multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85 para concreto liviano con arena de peso normal. Se permite interpolar linealmente si se usa una sustitución parcial de la arena.\n Para el cálculo del momento de inercia de la sección transformada agrietada (Ie), cuando exista acero en compresión, se podrá utilizar una relación modular de 2n (n = Es / Ec) para la transformación del acero en compresión a concreto equivalente.",
    "pagina": 66
   },
   {
@@ -203,12 +203,12 @@
   },
   {
    "numero": "9.6.2.5",
-   "texto": "A menos que se haga un análisis más completo, la deflexión diferida o adicional en el tiempo, resultante del flujo plástico del concreto y de la retracción de los elementos en flexión, podrá estimarse multiplicando la deflexión inmediata causada por las cargas sostenidas (carga muerta y la porción de carga viva que se prevé actuará permanentemente) por el factor λΔ.\n 1 50 ' ξ λΔ= + ρ (9-15) donde ρ′ es la cuantía del acero en compresión calculado en la mitad de la luz para tramos simples y continuos y en el punto de apoyo para voladizos. Puede tomarse ξ, el factor dependiente del tiempo para cargas sostenidas, igual a:\n 5 años o más … 2,0 12 meses … 1,4 6 meses … 1,2 3 meses … 1,0\n Para otras duraciones de las cargas sostenidas, se podrá usar el gráfico a que se presenta a continuación.",
+   "texto": "A menos que se haga un análisis más completo, la deflexión diferida o adicional en el tiempo, resultante del flujo plástico del concreto y de la retracción de los elementos en flexión, podrá estimarse multiplicando la deflexión inmediata causada por las cargas sostenidas (carga muerta y la porción de carga viva que se prevé actuará permanentemente) por el factor λΔ.\n λΔ = ξ / (1 + 50 ρ’) (9-15)\n donde ρ’ es la cuantía del acero en compresión calculado en la mitad de la luz para tramos simples y continuos y en el punto de apoyo para voladizos. Puede tomarse ξ, el factor dependiente del tiempo para cargas sostenidas, igual a:\n | Duración de la carga sostenida | ξ\n | 5 años o más | 2,0\n | 12 meses | 1,4\n | 6 meses | 1,2\n | 3 meses | 1,0\n Para otras duraciones de las cargas sostenidas, se podrá usar el gráfico a que se presenta a continuación.",
    "pagina": 67
   },
   {
    "numero": "9.6.2.6",
-   "texto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2\n\n Fig. 9.6.2.5 Factor dependiente del tiempo para cargas sostenidas.\n\n Duración de la carga (meses)\n ξ\n\n TABLA 9.2 DEFLEXIÓNES MÁXIMAS ADMISIBLES\n Tipo de elemento Deflexión considerada Límite de\n deflexión Techos planos que no soporten ni estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes.\n Deflexión inmediata debida a la carga viva 180 / *\n\n Pisos que no soporten ni estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes.\n Deflexión inmediata debida a la carga viva 360 /\n\n Pisos o techos que soporten o estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes.\n La parte de la deflexión total que ocurre después de la unión de los elementos no estructurales (la suma de la deflexión a largo plazo debida a todas las cargas permanentes, y la deflexión inmediata debida a cualquier carga viva adicional)†\n 480 /\n\n ‡\n Pisos o techos que soporten o estén ligados a elementos no estructurales no susceptibles de sufrir daños debido a deflexiones grandes.\n 240 /\n\n §\n * Este límite no tiene por objeto constituirse en un resguardo contra el estancamiento de aguas. Este último se debe verificar mediante cálculos de deflexiones adecuados, incluyendo las deflexiones debidas al agua estancada, y considerando los efectos a largo plazo de todas las cargas permanentes, la contraflecha, las tolerancias de construcción y la confiabilidad en las medidas tomadas para el drenaje de las aguas. † Las deflexiones a largo plazo se pueden reducir en la cantidad de deflexión\n calculada que ocurra antes de unir los elementos no estructurales. Esta cantidad se determina basándose en datos de ingeniería aceptables correspondiente a las características tiempo-deflexión de elementos similares a los que se están considerando. ‡ Este límite se puede exceder si se toman medidas adecuadas para prevenir\n daños en elementos apoyados o unidos. § Pero no mayor que la tolerancia establecida para los elementos no estructurales.\n Este límite se puede exceder si se proporciona una contraflecha de modo que la deflexión total menos la contraflecha no exceda dicho límite.",
+   "texto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2\n\n Fig. 9.6.2.5 Factor dependiente del tiempo para cargas sostenidas.\n TABLA 9.2 DEFLEXIÓNES MÁXIMAS ADMISIBLES\n * Este límite no tiene por objeto constituirse en un resguardo contra el estancamiento de aguas. Este último se debe verificar mediante cálculos de deflexiones adecuados, incluyendo las deflexiones debidas al agua estancada, y considerando los efectos a largo plazo de todas las cargas permanentes, la contraflecha, las tolerancias de construcción y la confiabilidad en las medidas tomadas para el drenaje de las aguas.\n † Las deflexiones a largo plazo se pueden reducir en la cantidad de deflexión calculada que ocurra antes de unir los elementos no estructurales. Esta cantidad se determina basándose en datos de ingeniería aceptables correspondiente a las características tiempo-deflexión de elementos similares a los que se están considerando.\n ‡ Este límite se puede exceder si se toman medidas adecuadas para prevenir daños en elementos apoyados o unidos.\n § Pero no mayor que la tolerancia establecida para los elementos no estructurales.\n Este límite se puede exceder si se proporciona una contraflecha de modo que la deflexión total menos la contraflecha no exceda dicho límite.",
    "pagina": 68
   },
   {
@@ -224,12 +224,12 @@
   },
   {
    "numero": "9.6.3.2",
-   "texto": "El espesor mínimo de las losas sin vigas interiores que se extiendan entre los apoyos y que tienen una relación entre lados no mayor que 2, debe estar de acuerdo con lo requerido en la Tabla 9.3 y no debe ser inferior que los siguientes valores:\n (a) Losas sin ábacos como se definen en 13.2.6 … 125 mm (b) Losas con ábacos como se definen en 13.2.6 … 100 mm\n\n TABLA 9.3 ESPESORES MÍNIMOS DE LOSAS SIN VIGAS INTERIORES*\n fy MPa †\n Sin ábacos ‡ Con ábacos ‡\n Paneles exteriores Paneles interiores Paneles exteriores Paneles interiores Sin vigas de\n borde\n Con vigas de\n borde §\n\n Sin vigas de\n borde\n Con vigas de\n borde §\n\n 280 33\n n\n\n 36\n n\n\n 36\n n\n\n 36\n n\n\n 40\n n\n\n 40\n n\n\n 420 30\n n\n\n 33\n n\n\n 33\n n\n\n 33\n n\n\n 36\n n\n\n 36\n n\n\n 520 28\n n\n\n 31\n n\n\n 31\n n\n\n 31\n n\n\n 34\n n\n\n 34\n n\n\n * Para construcción en dos direcciones, n\n\n , es la luz libre en la dirección larga, medida entre caras de los apoyos en losas sin vigas y entre caras de las vigas, para losas con vigas u otros apoyos en otros casos. † Para fy entre los valores dados en la tabla, el espesor mínimo debe obtenerse por interpolación lineal. ‡ Ábaco, como se define en 13.2.6. § Losas con vigas entre las columnas a lo largo de los bordes exteriores. El valor\n de αf para la viga de borde no debe ser menor que 0,8.",
+   "texto": "El espesor mínimo de las losas sin vigas interiores que se extiendan entre los apoyos y que tienen una relación entre lados no mayor que 2, debe estar de acuerdo con lo requerido en la Tabla 9.3 y no debe ser inferior que los siguientes valores:\n (a) Losas sin ábacos como se definen en 13.2.6: 125 mm\n (b) Losas con ábacos como se definen en 13.2.6: 100 mm\n\n TABLA 9.3 ESPESORES MÍNIMOS DE LOSAS SIN VIGAS INTERIORES*\n * Para construcción en dos direcciones, ℓn, es la luz libre en la dirección larga, medida entre caras de los apoyos en losas sin vigas y entre caras de las vigas, para losas con vigas u otros apoyos en otros casos.\n † Para fy entre los valores dados en la tabla, el espesor mínimo debe obtenerse por interpolación lineal.\n ‡ Ábaco, como se define en 13.2.6.\n § Losas con vigas entre las columnas a lo largo de los bordes exteriores. El valor de αf para la viga de borde no debe ser menor que 0,8.",
    "pagina": 69
   },
   {
    "numero": "9.6.3.3",
-   "texto": "El espesor mínimo h para losas con vigas que se extienden entre los apoyos en todos los lados debe ser: (a) Para 0,2 αfm ≤ ; se aplican las disposiciones de 9.6.3.2.\n (b) Para 0,2 2,0 αfm < < ; h no debe ser menor que:\n ( ) 1400 0,8\n 36 5β α 0,2\n n\n fm\n fy\n h\n ( ) + ( ) = + − (9-16)\n pero no menor que 125 mm.\n (c) Para 2,0 αfm > ; h no debe ser menor que:\n 0,8 1400 36 9β\n n fy\n h\n ( ) + ( ) = + (9-17)\n pero no menor que 90 mm.\n (d) En los bordes discontinuos debe disponerse una viga de borde que tenga una relación de rigidez αf no menor de 0,80, o bien aumentar el espesor mínimo requerido por las ecuaciones (9-16) ó (9-17), por lo menos un 10% en el panel que tenga un borde discontinuo.\n El término n en (b) y (c) corresponde a la luz libre en la dirección larga medida cara a cara de las vigas. El término β en (b) y (c) corresponde a la relación de la luz libre en la dirección larga a la luz libre en la dirección corta del paño.",
+   "texto": "El espesor mínimo h para losas con vigas que se extienden entre los apoyos en todos los lados debe ser:\n (a) Para αfm ≤ 0,2; se aplican las disposiciones de 9.6.3.2.\n (b) Para 0,2 < αfm < 2,0; h no debe ser menor que:\n h = ℓn (0,8 + fy/1400) / [36 + 5β (αfm − 0,2)] (9-16)\n pero no menor que 125 mm.\n (c) Para αfm > 2,0; h no debe ser menor que:\n h = ℓn (0,8 + fy/1400) / (36 + 9β) (9-17)\n pero no menor que 90 mm.\n (d) En los bordes discontinuos debe disponerse una viga de borde que tenga una relación de rigidez αf no menor de 0,80, o bien aumentar el espesor mínimo requerido por las ecuaciones (9-16) ó (9-17), por lo menos un 10% en el panel que tenga un borde discontinuo.\n El término ℓn en (b) y (c) corresponde a la luz libre en la dirección larga medida cara a cara de las vigas. El término β en (b) y (c) corresponde a la relación de la luz libre en la dirección larga a la luz libre en la dirección corta del paño.",
    "pagina": 71
   },
   {
@@ -299,7 +299,7 @@
   },
   {
    "numero": "9.7.2",
-   "texto": "La armadura por retracción y temperatura en losas, deberá proporcionar las siguientes relaciones mínimas de área de la armadura a área de la sección total de concreto, según el tipo de acero de refuerzo que se use.\n\n - Barras lisas\n\n 0,0025\n - Barras corrugadas con fy < 420 Mpa 0,0020 - Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 Mpa\n 0,0018",
+   "texto": "La armadura por retracción y temperatura en losas, deberá proporcionar las siguientes relaciones mínimas de área de la armadura a área de la sección total de concreto, según el tipo de acero de refuerzo que se use.\n | Tipo de acero de refuerzo | Cuantía mínima\n | Barras lisas | 0,0025\n | Barras corrugadas con fy < 420 MPa | 0,0020\n | Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 MPa | 0,0018",
    "pagina": 73
   },
   {
@@ -324,7 +324,7 @@
   },
   {
    "numero": "9.7.7",
-   "texto": "El acero de preesfuerzo, que cumpla con 3.5.5, empleado como refuerzo de retracción y temperatura debe suministrarse de acuerdo a lo siguiente:\n (a) El acero debe dimensionarse para que, descontadas las pérdidas de acuerdo a 18.6, produzca un esfuerzo promedio de compresión mínimo de 0,7 MPa sobre el área bruta de concreto. (b) El espaciamiento entre los tendones no debe exceder de 1,8 m. (c) Si el espaciamiento entre los tendones excede de 1,4 m se debe colocar armadura adherida adicional de contracción y temperatura, de acuerdo con 9.7.2, entre los tendones en los bordes de la losa. La armadura adicional se extenderá desde los bordes de la losa hasta una distancia igual al espaciamiento entre los tendones.\n\n Fig. 9.7.7 Acero de preesfuerzo utilizado como refuerzo de retracción y temperatura en una\n losa.",
+   "texto": "El acero de preesfuerzo, que cumpla con 3.5.5, empleado como refuerzo de retracción y temperatura debe suministrarse de acuerdo a lo siguiente:\n (a) El acero debe dimensionarse para que, descontadas las pérdidas de acuerdo a 18.6, produzca un esfuerzo promedio de compresión mínimo de 0,7 MPa sobre el área bruta de concreto. (b) El espaciamiento entre los tendones no debe exceder de 1,8 m. (c) Si el espaciamiento entre los tendones excede de 1,4 m se debe colocar armadura adherida adicional de contracción y temperatura, de acuerdo con 9.7.2, entre los tendones en los bordes de la losa. La armadura adicional se extenderá desde los bordes de la losa hasta una distancia igual al espaciamiento entre los tendones.\n\n Fig. 9.7.7 Acero de preesfuerzo utilizado como refuerzo de retracción y temperatura en una losa.",
    "pagina": 73
   },
   {
@@ -340,8 +340,8 @@
   },
   {
    "numero": "9.9",
-   "epigrafe": "Distribución Del Refuerzo Por Flexión En Vigas Y Losas Armadas",
-   "texto": "EN UNA DIRECCIÓN. CONTROL DE LA FISURACIÓN",
+   "epigrafe": "Distribución Del Refuerzo Por Flexión En Vigas Y Losas Armadas En Una Dirección. Control De La Fisuración",
+   "texto": "Distribución Del Refuerzo Por Flexión En Vigas Y Losas Armadas En Una Dirección. Control De La Fisuración",
    "pagina": 74
   },
   {
@@ -356,7 +356,7 @@
   },
   {
    "numero": "9.9.3",
-   "texto": "El refuerzo de tracción por flexión deberá distribuirse adecuadamente en las zonas en tracción máxima del elemento para controlar el ancho de las grietas por flexión. Su distribución y esfuerzo bajo condiciones de servicio deberá ser tal que permita obtener un valor del parámetro Z menor o igual que 26 KN/mm. El parámetro Z se calculará mediante:\n\n 3 Z fs dc Act = (9-18)\n donde fs es el esfuerzo en el acero, en MPa, el cual puede estimarse sobre la base del momento flector en condiciones de servicio Ms, mediante:\n ( ) 0,9\n Ms fs\n d As = (9-19)\n dc: espesor del recubrimiento (mm) de concreto medido desde la fibra extrema en\n tracción al centro de la barra de refuerzo más cercana a esa fibra.\n Act: área efectiva del concreto en tracción (mm2) que rodea al refuerzo principal de\n tracción y cuyo centroide coincide con el de dicho refuerzo, dividida entre el número de barras. Cuando el refuerzo principal de tracción está compuesto por barras de varios diámetros, el número de barras equivalente se calculará dividiendo el área total de acero entre al área de la barra de mayor diámetro.\n\n Fig. 9.9.3 Area efectiva de concreto en tracción.",
+   "texto": "El refuerzo de tracción por flexión deberá distribuirse adecuadamente en las zonas en tracción máxima del elemento para controlar el ancho de las grietas por flexión. Su distribución y esfuerzo bajo condiciones de servicio deberá ser tal que permita obtener un valor del parámetro Z menor o igual que 26 KN/mm. El parámetro Z se calculará mediante:\n Z = fs ∛(dc Act) (9-18)\n donde fs es el esfuerzo en el acero, en MPa, el cual puede estimarse sobre la base del momento flector en condiciones de servicio Ms, mediante:\n fs = Ms / (0,9 d As) (9-19)\n dc: espesor del recubrimiento (mm) de concreto medido desde la fibra extrema en tracción al centro de la barra de refuerzo más cercana a esa fibra.\n Act: área efectiva del concreto en tracción (mm²) que rodea al refuerzo principal de tracción y cuyo centroide coincide con el de dicho refuerzo, dividida entre el número de barras. Cuando el refuerzo principal de tracción está compuesto por barras de varios diámetros, el número de barras equivalente se calculará dividiendo el área total de acero entre al área de la barra de mayor diámetro.\n\n Fig. 9.9.3 Area efectiva de concreto en tracción.",
    "pagina": 74
   },
   {
@@ -371,7 +371,7 @@
   },
   {
    "numero": "9.9.6",
-   "texto": "Si el peralte h de una viga o nervadura excede de 900 mm, se deberá colocar armadura (superficial) longitudinal uniformemente distribuida en ambas caras laterales del alma, en una distancia 0,5 h cercana de la armadura principal de tracción por flexión. El espaciamiento de la armadura superficial no excederá del menor de los siguientes valores:\n\n s ≤ 300 mm, s ≤ 380 (250 / fs) – 2,5 Cc (9-20) s ≤ 300 (250 / fs) (9-21)\n donde Cc es la menor distancia medida desde la superficie del refuerzo, o acero de preesfuerzo, superficial a la cara lateral del elemento y fs es el esfuerzo en el acero principal de flexión calculado con 9-19.\n\n El refuerzo superficial se puede incluir en el cálculo de la resistencia a flexión de la sección únicamente si se hace un análisis de compatibilidad de deformaciones para determinar los esfuerzos de las barras o alambres individuales.\n\n Act = 2 ys b ys = Centroide del refuerzo principal\n de tracción por flexión\n\n Fig. 9.9.6 Refuerzo superficial en vigas con peralte mayor a 900 mm.",
+   "texto": "Si el peralte h de una viga o nervadura excede de 900 mm, se deberá colocar armadura (superficial) longitudinal uniformemente distribuida en ambas caras laterales del alma, en una distancia 0,5 h cercana de la armadura principal de tracción por flexión. El espaciamiento de la armadura superficial no excederá del menor de los siguientes valores:\n s ≤ 300 mm,\n s ≤ 380 (250 / fs) − 2,5 Cc (9-20)\n s ≤ 300 (250 / fs) (9-21)\n donde Cc es la menor distancia medida desde la superficie del refuerzo, o acero de preesfuerzo, superficial a la cara lateral del elemento y fs es el esfuerzo en el acero principal de flexión calculado con 9-19.\n\n El refuerzo superficial se puede incluir en el cálculo de la resistencia a flexión de la sección únicamente si se hace un análisis de compatibilidad de deformaciones para determinar los esfuerzos de las barras o alambres individuales.\n\n Fig. 9.9.6 Refuerzo superficial en vigas con peralte mayor a 900 mm.",
    "pagina": 75
   }
  ],
@@ -1095,7 +1095,7 @@
      "citas": [
       {
        "articulo": "9.6.2.5",
-       "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: 5 años o más … 2,0 12 meses … 1,4 6 meses … 1,2 3 meses … 1,0"
+       "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"
       }
      ]
     },
@@ -1248,7 +1248,7 @@
      "citas": [
       {
        "articulo": "9.7.2",
-       "extracto": "- Barras lisas 0,0025 - Barras corrugadas con fy < 420 Mpa 0,0020 - Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 Mpa 0,0018"
+       "extracto": "Barras lisas 0,0025 Barras corrugadas con fy < 420 MPa 0,0020 Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 MPa 0,0018"
       }
      ]
     },
@@ -1277,7 +1277,7 @@
      "citas": [
       {
        "articulo": "9.7.2",
-       "extracto": "Barras corrugadas o malla de alambre… con fy ≥ 420 Mpa 0,0018"
+       "extracto": "Barras corrugadas o malla de alambre… con fy ≥ 420 MPa 0,0018"
       }
      ]
     },
@@ -1484,7 +1484,7 @@
      "citas": [
       {
        "articulo": "9.7.2",
-       "extracto": "- Barras lisas 0,0025 - Barras corrugadas con fy < 420 Mpa 0,0020 - Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 Mpa 0,0018"
+       "extracto": "Barras lisas 0,0025 Barras corrugadas con fy < 420 MPa 0,0020 Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 MPa 0,0018"
       }
      ]
     },
@@ -1504,7 +1504,7 @@
      "citas": [
       {
        "articulo": "9.6.2.5",
-       "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: 5 años o más … 2,0 12 meses … 1,4 6 meses … 1,2 3 meses … 1,0"
+       "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"
       }
      ]
     },
@@ -1946,7 +1946,7 @@
      "citas": [
       {
        "articulo": "9.6.2.5",
-       "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: 5 años o más … 2,0 12 meses … 1,4 6 meses … 1,2 3 meses … 1,0"
+       "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"
       }
      ]
     },
@@ -2101,7 +2101,7 @@
      "citas": [
       {
        "articulo": "9.7.2",
-       "extracto": "- Barras lisas"
+       "extracto": "Barras lisas"
       }
      ]
     },
@@ -2199,7 +2199,7 @@
      "citas": [
       {
        "articulo": "9.9.3",
-       "extracto": "Act: área efectiva del concreto en tracción (mm2) que rodea al refuerzo principal de"
+       "extracto": "Act: área efectiva del concreto en tracción (mm²) que rodea al refuerzo principal de tracción"
       }
      ]
     },

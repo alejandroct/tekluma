@@ -64,18 +64,18 @@
   },
   {
    "numero": "8.3.4",
-   "texto": "Como alternativa a los métodos de análisis estructural, se permite utilizar para el análisis por cargas de gravedad de vigas continuas, losas armadas en una dirección y vigas de pórticos de poca altura, los siguientes momentos y fuerzas cortantes aproximados, siempre y cuando se cumplan las siguientes condiciones:\n (a) Haya dos o más tramos. (b) Las luces de los tramos sean aproximadamente iguales, sin que la mayor de dos luces adyacentes exceda en más de 20% a la menor. (c) Las cargas sean uniformemente distribuidas y no existan cargas concentradas. Las cargas uniformemente distribuidas en cada uno de los tramos deben tener la misma magnitud.\n\n (d) La carga viva en servicio no sea mayor a tres veces la carga muerta en servicio. (e) Los elementos sean prismáticos de sección constante. (f) Si se trata de la viga de un pórtico de poca altura, este debe estar arriostrado lateralmente para las cargas verticales.\n\n • Momento positivo\n (a) Tramos extremos El extremo discontinuo no está restringido … 2 ( ) 1/11 n u w\n\n El extremo discontinuo es monolítico con el apoyo … 2 (1/14) n u w (b) Tramos interiores … 2 (1/16) n u w\n\n • Momento negativo en la cara exterior del primer apoyo interior\n (a) Dos tramos: … 2 (1/ 9) n u w (b) Más de dos tramos: … 2 (1/10) n u w\n\n • Momento negativo en las demás caras de apoyos interiores … 2 (1/11) n u w\n\n • Momento negativo en la cara de todos los apoyos para losas con luces que no excedan de 3 m y vigas en las cuales el cociente entre la suma de las rigideces de las columnas y la rigidez de la viga exceda de 8 en cada extremo del tramo: … 2 (1/12) n u w\n\n • Momento negativo en la cara interior de los apoyos exteriores para los elementos construidos monolíticamente con sus apoyos:\n Cuando el apoyo es una viga de borde: … 2 (1/ 24) n u w\n\n Cuando el apoyo es una columna: … 2 (1/16) n u w\n\n • Fuerza Cortante\n Cara exterior del primer apoyo interior: … 2 1.15 (1/ 2) n u w\n\n Caras de todos los demás apoyos: … 2 (1/ 2) n u w\n\n El valor de n es la luz libre del tramo. Para el cálculo de los momentos negativos en las caras de los apoyos interiores, n se tomará como el promedio de las luces libres adyacentes.",
+   "texto": "Como alternativa a los métodos de análisis estructural, se permite utilizar para el análisis por cargas de gravedad de vigas continuas, losas armadas en una dirección y vigas de pórticos de poca altura, los siguientes momentos y fuerzas cortantes aproximados, siempre y cuando se cumplan las siguientes condiciones:\n (a) Haya dos o más tramos. (b) Las luces de los tramos sean aproximadamente iguales, sin que la mayor de dos luces adyacentes exceda en más de 20% a la menor. (c) Las cargas sean uniformemente distribuidas y no existan cargas concentradas. Las cargas uniformemente distribuidas en cada uno de los tramos deben tener la misma magnitud.\n\n (d) La carga viva en servicio no sea mayor a tres veces la carga muerta en servicio. (e) Los elementos sean prismáticos de sección constante. (f) Si se trata de la viga de un pórtico de poca altura, este debe estar arriostrado lateralmente para las cargas verticales.\n\n • Momento positivo\n (a) Tramos extremos\n El extremo discontinuo no está restringido: (1/11) wu ℓn²\n El extremo discontinuo es monolítico con el apoyo: (1/14) wu ℓn²\n (b) Tramos interiores: (1/16) wu ℓn²\n • Momento negativo en la cara exterior del primer apoyo interior\n (a) Dos tramos: (1/9) wu ℓn²\n (b) Más de dos tramos: (1/10) wu ℓn²\n • Momento negativo en las demás caras de apoyos interiores: (1/11) wu ℓn²\n • Momento negativo en la cara de todos los apoyos para losas con luces que no excedan de 3 m y vigas en las cuales el cociente entre la suma de las rigideces de las columnas y la rigidez de la viga exceda de 8 en cada extremo del tramo: (1/12) wu ℓn²\n • Momento negativo en la cara interior de los apoyos exteriores para los elementos construidos monolíticamente con sus apoyos:\n Cuando el apoyo es una viga de borde: (1/24) wu ℓn²\n Cuando el apoyo es una columna: (1/16) wu ℓn²\n • Fuerza Cortante\n Cara exterior del primer apoyo interior: 1,15 (1/2) wu ℓn²\n Caras de todos los demás apoyos: (1/2) wu ℓn²\n El valor de ℓn es la luz libre del tramo. Para el cálculo de los momentos negativos en las caras de los apoyos interiores, ℓn se tomará como el promedio de las luces libres adyacentes.",
    "pagina": 57
   },
   {
    "numero": "8.4",
-   "epigrafe": "Redistribución De Momentos En Elementos Continuos Sometidos",
-   "texto": "A FLEXIÓN",
+   "epigrafe": "Redistribución De Momentos En Elementos Continuos Sometidos A Flexión",
+   "texto": "Redistribución De Momentos En Elementos Continuos Sometidos A Flexión",
    "pagina": 58
   },
   {
    "numero": "8.4.1",
-   "texto": "Excepto cuando se empleen métodos aproximados para el cálculo de los momentos flectores, se permite disminuir los momentos amplificados (Mu) - calculados asumiendo comportamiento lineal elástico de la estructura - en las secciones de máximo momento negativo o máximo momento positivo en cualquier vano de un elemento continuo sometido a flexión, para cualquier distribución de carga supuesta, en no más de:\n\n 1000 εt (en porcentaje) (8-1)\n\n εt es la deformación unitaria neta de tracción en el acero más alejado del borde comprimido de la sección, cuando esta alcanza su resistencia nominal (Mn). La deformación neta excluye las deformaciones unitarias causadas por: el preesfuerzo efectivo, el flujo plástico, la retracción de fraguado y la variación de temperatura.",
+   "texto": "Excepto cuando se empleen métodos aproximados para el cálculo de los momentos flectores, se permite disminuir los momentos amplificados (Mu) - calculados asumiendo comportamiento lineal elástico de la estructura - en las secciones de máximo momento negativo o máximo momento positivo en cualquier vano de un elemento continuo sometido a flexión, para cualquier distribución de carga supuesta, en no más de:\n 1000 εt (en porcentaje) (8-1)\n εt es la deformación unitaria neta de tracción en el acero más alejado del borde comprimido de la sección, cuando esta alcanza su resistencia nominal (Mn). La deformación neta excluye las deformaciones unitarias causadas por: el preesfuerzo efectivo, el flujo plástico, la retracción de fraguado y la variación de temperatura.",
    "pagina": 59
   },
   {
@@ -96,12 +96,12 @@
   },
   {
    "numero": "8.5.1",
-   "texto": "Para concretos de peso unitario wc comprendido entre 1450 y 2500 kg/m3, el módulo de elasticidad, Ec, para el concreto puede tomarse como:\n\n 1,5 ( ) 0,043 c Ec w f c′ = (en MPa)\n (8-2)",
+   "texto": "Para concretos de peso unitario wc comprendido entre 1450 y 2500 kg/m3, el módulo de elasticidad, Ec, para el concreto puede tomarse como:\n Ec = (wc)^1,5 0,043 √f’c (en MPa) (8-2)",
    "pagina": 59
   },
   {
    "numero": "8.5.2",
-   "texto": "Para concretos de peso unitario normal (wc ≈ 2300 kg/m3), Ec, puede tomarse como:\n 4700 Ec f c′ = (en MPa) (8-3)",
+   "texto": "Para concretos de peso unitario normal (wc ≈ 2300 kg/m³), Ec, puede tomarse como:\n Ec = 4700 √f’c (en MPa) (8-3)",
    "pagina": 59
   },
   {
@@ -111,7 +111,7 @@
   },
   {
    "numero": "8.5.4",
-   "texto": "En ausencia de resultados experimentales confiables, el módulo de rigidez al esfuerzo cortante del concreto se podrá suponer igual a:\n\n 2,3\n Ec G = (8-4)",
+   "texto": "En ausencia de resultados experimentales confiables, el módulo de rigidez al esfuerzo cortante del concreto se podrá suponer igual a:\n G = Ec / 2,3 (8-4)",
    "pagina": 59
   },
   {

@@ -163,5 +163,48 @@ function fragmento(texto: string, terminos: string[]): string {
   return `${inicio > 0 ? "…" : ""}${limpio.slice(inicio, inicio + 170)}${inicio + 170 < limpio.length ? "…" : ""}`;
 }
 
+// ───── Formato del texto ─────
+
+export type Bloque =
+  | { tipo: "parrafo"; texto: string }
+  | { tipo: "formula"; expresion: string; numero: string }
+  | { tipo: "tabla"; filas: string[][] };
+
+/** «Vc = 0,17 √f’c bw d (11-3)»: una línea corta que termina en su número de ecuación. */
+const FORMULA = /^(.+?)\s*\((\d{1,2}-\d{1,2}[a-z]?)\)$/;
+
+/**
+ * Parte el texto de un artículo en párrafos, fórmulas numeradas y tablas (filas que empiezan con «|»;
+ * la primera es el encabezado). Así se transcribieron en contenido/e060/herramientas/limpieza.py.
+ */
+export function bloquesTexto(texto: string): Bloque[] {
+  const bloques: Bloque[] = [];
+  let parrafo: string[] = [];
+  const cerrar = () => {
+    if (parrafo.length) bloques.push({ tipo: "parrafo", texto: parrafo.join("\n") });
+    parrafo = [];
+  };
+  for (const bruta of texto.split("\n")) {
+    const linea = bruta.trim();
+    if (linea.startsWith("|")) {
+      cerrar();
+      const celdas = linea.slice(1).split("|").map((c) => c.trim());
+      const ultimo = bloques[bloques.length - 1];
+      if (ultimo?.tipo === "tabla") ultimo.filas.push(celdas);
+      else bloques.push({ tipo: "tabla", filas: [celdas] });
+      continue;
+    }
+    const formula = linea.length <= 130 ? FORMULA.exec(linea) : null;
+    if (formula && (/[=≤≥<>]/.test(formula[1]!) || formula[1]!.length < 40)) {
+      cerrar();
+      bloques.push({ tipo: "formula", expresion: formula[1]!, numero: formula[2]! });
+      continue;
+    }
+    if (linea) parrafo.push(linea);
+  }
+  cerrar();
+  return bloques;
+}
+
 /** Un artículo que solo repite su título (p. ej. «7.1 · ALCANCE») se muestra como encabezado de sección. */
 export const esEncabezado = (a: ArticuloNorma) => !!a.e && normalizar(a.t.trim()) === normalizar(a.e.trim());

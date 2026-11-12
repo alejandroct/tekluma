@@ -94,7 +94,7 @@
   },
   {
    "numero": "18.3.3",
-   "texto": "Los elementos preesforzados sometidos a flexión deben clasificarse como Clase U o Clase T, en función del esfuerzo en la fibra extrema en tracción en la zona precomprimida en tracción, ft, calculado para cargas de servicio, de la siguiente forma:\n (a) Clase U:\n 0,62 ft f c′ ≤ (b) Clase T:\n 0,62 1,0 f c ft f c ′ ′ < ≤\n\n Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como Clase U, con 0,50 ft f c′ ≤ .",
+   "texto": "Los elementos preesforzados sometidos a flexión deben clasificarse como Clase U o Clase T, en función del esfuerzo en la fibra extrema en tracción en la zona precomprimida en tracción, ft, calculado para cargas de servicio, de la siguiente forma:\n (a) Clase U: ft ≤ 0,62 √f’c\n (b) Clase T: 0,62 √f’c < ft ≤ 1,0 √f’c\n Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como Clase U, con ft ≤ 0,50 √f’c.",
    "pagina": 160
   },
   {
@@ -163,12 +163,12 @@
   },
   {
    "numero": "18.6.2.1",
-   "texto": "Ppx, que es la fuerza en los tendones de postensado a una distancia px\n\n , del extremo donde se aplica la fuerza del gato, debe calcularse mediante:\n\n ( ) μ α K px p px Ppx Ppj e− + = (18-1)\n Cuando ( ) K px p px +μα no es mayor que 0,3; Ppx puede calcularse mediante:\n\n 1 (1 μ α ) Ppx Ppj K px p px − = + + (18-2) px debe estar expresado en metros.",
+   "texto": "Ppx, que es la fuerza en los tendones de postensado a una distancia ℓpx, del extremo donde se aplica la fuerza del gato, debe calcularse mediante:\n Ppx = Ppj e^−(K ℓpx + μp αpx) (18-1)\n Cuando (K ℓpx + μp αpx) no es mayor que 0,3; Ppx puede calcularse mediante:\n Ppx = Ppj (1 + K ℓpx + μp αpx)^−1 (18-2)\n ℓpx debe estar expresado en metros.",
    "pagina": 161
   },
   {
    "numero": "18.6.2.2",
-   "texto": "Las pérdidas por fricción deben basarse en coeficientes de fricción por curvatura p μ y por desviación accidental K determinados experimentalmente y deben ser verificados durante las operaciones de tensado del tendón. En la Tabla 18.1 se muestran rangos de valores comunes para estos coeficientes.\n\n TABLA 18.1\n\n RANGOS DE VALORES DE LOS COEFICIENTES DE FRICCIÓN EN TENDONES\n POSTENSADOSE EN LAS ECUACIONES (18-1) Y (18-2)\n\n Los coeficientes incluidos en la Tabla 18.1 dan el rango de valores que normalmente puede esperarse. Debido a la gran variedad de ductos de acero de preesforzado y recubrimientos disponibles, estos valores sólo pueden servir como guía. Los valores de los coeficientes que se deben utilizar para aceros de preesforzado y ductos de tipo especial deben obtenerse de los fabricantes de tendones y ser verificados experimentalmente.",
+   "texto": "Las pérdidas por fricción deben basarse en coeficientes de fricción por curvatura μp y por desviación accidental K determinados experimentalmente y deben ser verificados durante las operaciones de tensado del tendón. En la Tabla 18.1 se muestran rangos de valores comunes para estos coeficientes.\n\n TABLA 18.1\n\n RANGOS DE VALORES DE LOS COEFICIENTES DE FRICCIÓN EN TENDONES\n POSTENSADOSE EN LAS ECUACIONES (18-1) Y (18-2)\n\n Los coeficientes incluidos en la Tabla 18.1 dan el rango de valores que normalmente puede esperarse. Debido a la gran variedad de ductos de acero de preesforzado y recubrimientos disponibles, estos valores sólo pueden servir como guía. Los valores de los coeficientes que se deben utilizar para aceros de preesforzado y ductos de tipo especial deben obtenerse de los fabricantes de tendones y ser verificados experimentalmente.",
    "pagina": 161
   },
   {
@@ -194,7 +194,7 @@
   },
   {
    "numero": "18.7.2",
-   "texto": "Como alternativa a una determinación más precisa de fps basada en la compatibilidad de deformaciones, se pueden utilizar los siguientes valores aproximados de fps, siempre que fse no sea menor que 0,5 fpu\n (a) Para elementos con tendones adheridos.\n\n ( ) γ 1 ρ ω ω' β1\n p p fpu d fps fpu\n f c dp = − + − ′\n ( ) [ ]\n\n [ ] ( ) (18-3) donde p Aps bd ρ= ; fy f c′ ω=ρ ; ' ρ' fy f c′ ω= y γp es 0,55 para\n fpy fpu entre 0,80 y 0,85; 0,40 para fpy fpu entre 0,85 y 0,90 y 0,28 para\n fpy fpu mayor que 0,90.\n Cuando se tiene en cuenta cualquier refuerzo de compresión al calcular fps mediante la ecuación (18-3), el término:\n\n Coeficiente por\n desviación accidental, K\n\n Coeficiente\n de curvatura,\n μp\n Tendones inyectados en ducto metálico\n Tendones de alambre Barras de alta resistencia\n Torones de 7 alambres\n 0,0033–0,0049 0,0003–0,0020 0,0016–0,0066\n\n 0,15 - 0,25 0,08 - 0,30 0,15 - 0,25\n Tendones no\n adheridos\n con mástique\n Tendones de alambre y\n torones de 7 alambres\n\n 0,0033–0,0066\n\n 0,05 - 0,15\n pre engrasados\n Tendones de alambre y\n torones de 7 alambres 0,0010–0,0066 0,05 - 0,15 ( ) ρ ' p fpu d f c dp [ ] + ω−ω\n\n ′ [ ] no debe tomarse menor de 0,17 y d’ no debe ser mayor de 0,15 dp.\n (b) Para elementos con tendones no adheridos y con una relación luz a peralte de 35 ó menos:\n 70 100 ρp\n f c fps fse ′ = + + (18-4)\n pero fps en la ecuación (18-4) no debe tomarse mayor que fpy ni que (fse + 420).\n (c) Para elementos con tendones no adheridos y con una relación luz a peralte mayor de 35:\n 70 300 ρ\n f c fps fse\n p\n ′ = + + (18-5)\n pero fps en la ecuación (18-5) no debe tomarse mayor que fpy ni que (fse + 210).",
+   "texto": "Como alternativa a una determinación más precisa de fps basada en la compatibilidad de deformaciones, se pueden utilizar los siguientes valores aproximados de fps, siempre que fse no sea menor que 0,5 fpu\n (a) Para elementos con tendones adheridos.\n fps = fpu (1 − γp/β1 [ρp fpu/f’c + d/dp (ω − ω’)]) (18-3)\n donde ρp = Aps/bd; ω = ρ fy/f’c; ω’ = ρ’ fy/f’c y γp es 0,55 para fpy/fpu entre 0,80 y 0,85; 0,40 para fpy/fpu entre 0,85 y 0,90 y 0,28 para fpy/fpu mayor que 0,90.\n Cuando se tiene en cuenta cualquier refuerzo de compresión al calcular fps mediante la ecuación (18-3), el término:\n [ρp fpu / f’c + (d / dp) (ω − ω’)]\n no debe tomarse menor de 0,17 y d’ no debe ser mayor de 0,15 dp.\n (b) Para elementos con tendones no adheridos y con una relación luz a peralte de 35 ó menos:\n fps = fse + 70 + f’c / (100 ρp) (18-4)\n pero fps en la ecuación (18-4) no debe tomarse mayor que fpy ni que (fse + 420).\n (c) Para elementos con tendones no adheridos y con una relación luz a peralte mayor de 35:\n fps = fse + 70 + f’c / (300 ρp) (18-5)\n pero fps en la ecuación (18-5) no debe tomarse mayor que fpy ni que (fse + 210).",
    "pagina": 162
   },
   {
@@ -210,7 +210,7 @@
   },
   {
    "numero": "18.8.1",
-   "texto": "La cuantía de armadura pretensada y no pretensada empleada para calcular la resistencia a flexión de una sección, excepto por lo dispuesto en 18.8.2, debe ser tal que:\n\n ωp , [ωp + (d /dp) ( ω - ω’)] ó [ωpw + (d /dp) (ωw - ω’w)] no sea mayor de 0,36 β1.\n La cuantía ωp se calcula como ρp fps f c′. Las cuantías ωw y ωpw se utilizan en secciones T y se calculan como ω y ωp, respectivamente, excepto que cuando se calculan ρ y ρp, debe usarse el ancho del alma bw y el área de refuerzo o acero de presforzado requerida para desarrollar la resistencia a la compresión del alma sola debe usarse en lugar de As o Aps. La cuantía ω’w se calcula como ω’, excepto que al calcular ρ' , debe usarse el ancho del alma bw en lugar de b.",
+   "texto": "La cuantía de armadura pretensada y no pretensada empleada para calcular la resistencia a flexión de una sección, excepto por lo dispuesto en 18.8.2, debe ser tal que:\n ωp, [ωp + (d /dp) ( ω - ω’)] ó [ωpw + (d /dp) (ωw - ω’w)] no sea mayor de 0,36 β1.\n La cuantía ωp se calcula como ρp fps / f’c. Las cuantías ωw y ωpw se utilizan en secciones T y se calculan como ω y ωp, respectivamente, excepto que cuando se calculan ρ y ρp, debe usarse el ancho del alma bw y el área de refuerzo o acero de presforzado requerida para desarrollar la resistencia a la compresión del alma sola debe usarse en lugar de As o Aps. La cuantía ω’w se calcula como ω’, excepto que al calcular ρ', debe usarse el ancho del alma bw en lugar de b.",
    "pagina": 163
   },
   {
@@ -241,7 +241,7 @@
   },
   {
    "numero": "18.9.2",
-   "texto": "Con excepción de lo dispuesto en 18.9.3, el área mínima del refuerzo adherido debe calcularse mediante\n\n 0,004 As Act = (18-6) donde Act es el área de la porción de la sección transversal entre el borde en tracción por flexión y el centro de gravedad de la sección bruta.",
+   "texto": "Con excepción de lo dispuesto en 18.9.3, el área mínima del refuerzo adherido debe calcularse mediante\n As = 0,004 Act (18-6)\n donde Act es el área de la porción de la sección transversal entre el borde en tracción por flexión y el centro de gravedad de la sección bruta.",
    "pagina": 164
   },
   {
@@ -261,12 +261,12 @@
   },
   {
    "numero": "18.9.3.1",
-   "texto": "No se requiere refuerzo adherido en las zonas de momento positivo donde el esfuerzo de tracción en la fibra extrema en tracción de la zona de tracción precomprimida al nivel de cargas de servicio, ft (después de considerar todas la pérdidas de preesforzado), no excede 0,17 f c′.",
+   "texto": "No se requiere refuerzo adherido en las zonas de momento positivo donde el esfuerzo de tracción en la fibra extrema en tracción de la zona de tracción precomprimida al nivel de cargas de servicio, ft (después de considerar todas la pérdidas de preesforzado), no excede 0,17 √f’c.",
    "pagina": 164
   },
   {
    "numero": "18.9.3.2",
-   "texto": "En las zonas de momento positivo donde el esfuerzo de tracción calculado en el concreto bajo carga de servicio excede 0,17 f c′, el área mínima del refuerzo adherido debe calcularse mediante:\n\n 0,5\n Nc As\n fy = (18-7) donde el valor de fy usado en el ecuación (18-7) no debe exceder de 420 MPa. El refuerzo adherido debe distribuirse de manera uniforme sobre la zona de tracción precomprimida, tan cerca como sea posible de la fibra extrema en tracción.",
+   "texto": "En las zonas de momento positivo donde el esfuerzo de tracción calculado en el concreto bajo carga de servicio excede 0,17 √f’c, el área mínima del refuerzo adherido debe calcularse mediante:\n As = Nc / (0,5 fy) (18-7)\n donde el valor de fy usado en el ecuación (18-7) no debe exceder de 420 MPa. El refuerzo adherido debe distribuirse de manera uniforme sobre la zona de tracción precomprimida, tan cerca como sea posible de la fibra extrema en tracción.",
    "pagina": 164
   },
   {
@@ -281,17 +281,17 @@
   },
   {
    "numero": "18.9.4.1",
-   "texto": "En zonas de momento positivo, la longitud del refuerzo adherido debe ser como mínimo un tercio de la luz libre, n\n\n /3 , y estar centrada en la zona de momento positivo.",
+   "texto": "En zonas de momento positivo, la longitud del refuerzo adherido debe ser como mínimo un tercio de la luz libre, ℓn/3, y estar centrada en la zona de momento positivo.",
    "pagina": 165
   },
   {
    "numero": "18.9.4.2",
-   "texto": "En zonas de momento negativo, el refuerzo adherido debe prolongarse como mínimo un sexto de la luz libre, n\n\n /6 , a cada lado del apoyo.",
+   "texto": "En zonas de momento negativo, el refuerzo adherido debe prolongarse como mínimo un sexto de la luz libre, ℓn/6, a cada lado del apoyo.",
    "pagina": 165
   },
   {
    "numero": "18.9.4.3",
-   "texto": "Cuando se dispone refuerzo adherido para contribuir a la resistencia de diseño, φMn , de acuerdo con 18.7.3 o para las condiciones de esfuerzo de tracción de acuerdo con 18.9.3.2, la longitud mínima deberá cumplir también con las disposiciones del Capítulo 12.",
+   "texto": "Cuando se dispone refuerzo adherido para contribuir a la resistencia de diseño, φMn, de acuerdo con 18.7.3 o para las condiciones de esfuerzo de tracción de acuerdo con 18.9.3.2, la longitud mínima deberá cumplir también con las disposiciones del Capítulo 12.",
    "pagina": 165
   },
   {
@@ -317,7 +317,6 @@
   },
   {
    "numero": "18.10.4",
-   "epigrafe": "Redistribución",
    "texto": "Redistribución de momentos en elementos preesforzados continuos sometidos a flexión",
    "pagina": 165
   },
@@ -461,12 +460,12 @@
   },
   {
    "numero": "18.13.4.2",
-   "texto": "Salvo el caso de concreto confinado dentro de espirales o estribos cerrados que proporcionen confinamiento equivalente al indicado por la ecuación (10-5), la resistencia nominal a compresión del concreto en la zona general debe limitarse a\n 0,7λ f ci′.",
+   "texto": "Salvo el caso de concreto confinado dentro de espirales o estribos cerrados que proporcionen confinamiento equivalente al indicado por la ecuación (10-5), la resistencia nominal a compresión del concreto en la zona general debe limitarse a 0,7 λ f’ci.",
    "pagina": 167
   },
   {
    "numero": "18.13.4.3",
-   "texto": "La resistencia a compresión del concreto en el momento de postensar, f ci′, debe especificarse en los planos de diseño. A menos que se usen dispositivos de anclaje sobredimensionados para compensar la menor resistencia a compresión o que el acero esté esforzado a no más del 50% de la fuerza final del preesforzado, el acero de preesforzado no debe tensarse sino hasta que la resistencia a la compresión del concreto medida en ensayos consistentes con el curado del elemento, sea al menos 28 MPa para torones de varios alambres o de a lo menos 17 MPa para los tendones de un cable o para barras.",
+   "texto": "La resistencia a compresión del concreto en el momento de postensar, f’ci, debe especificarse en los planos de diseño. A menos que se usen dispositivos de anclaje sobredimensionados para compensar la menor resistencia a compresión o que el acero esté esforzado a no más del 50% de la fuerza final del preesforzado, el acero de preesforzado no debe tensarse sino hasta que la resistencia a la compresión del concreto medida en ensayos consistentes con el curado del elemento, sea al menos 28 MPa para torones de varios alambres o de a lo menos 17 MPa para los tendones de un cable o para barras.",
    "pagina": 167
   },
   {
@@ -551,7 +550,7 @@
   },
   {
    "numero": "18.14.2.3",
-   "texto": "Si el espaciamiento, medido centro a centro, de los dispositivos de anclaje es de 300 mm o menos, los dispositivos de anclaje se deben considerar como agrupados. Por cada grupo de seis o más dispositivos de anclaje, se deben proporcionar n + 1 barras en horquilla o estribos cerrados al menos de diámetro 3/8”, donde n es la cantidad de dispositivos de anclaje. Debe colocarse una barra en horquilla o estribo entre cada dispositivo de anclaje y uno a cada lado del grupo. Las barras en horquilla o estribos deben colocarse con los extremos extendiéndose dentro de la losa, perpendicularmente al borde. La parte central de las barras en horquilla o estribos debe colocarse perpendicularmente al plano de la losa desde 3 8 h hasta\n 2 h delante de los dispositivos de anclaje.",
+   "texto": "Si el espaciamiento, medido centro a centro, de los dispositivos de anclaje es de 300 mm o menos, los dispositivos de anclaje se deben considerar como agrupados. Por cada grupo de seis o más dispositivos de anclaje, se deben proporcionar n + 1 barras en horquilla o estribos cerrados al menos de diámetro 3/8”, donde n es la cantidad de dispositivos de anclaje. Debe colocarse una barra en horquilla o estribo entre cada dispositivo de anclaje y uno a cada lado del grupo. Las barras en horquilla o estribos deben colocarse con los extremos extendiéndose dentro de la losa, perpendicularmente al borde. La parte central de las barras en horquilla o estribos debe colocarse perpendicularmente al plano de la losa desde 3/8 h hasta 2 h delante de los dispositivos de anclaje.",
    "pagina": 169
   },
   {
@@ -590,8 +589,8 @@
   },
   {
    "numero": "18.16",
-   "epigrafe": "Protección Contra La Corrosión De Tendones De Preesforzado",
-   "texto": "NO ADHERIDOS",
+   "epigrafe": "Protección Contra La Corrosión De Tendones De Preesforzado No Adheridos",
+   "texto": "Protección Contra La Corrosión De Tendones De Preesforzado No Adheridos",
    "pagina": 170
   },
   {

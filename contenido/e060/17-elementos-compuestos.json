@@ -126,7 +126,7 @@
   },
   {
    "numero": "17.5.3.3",
-   "texto": "Donde se proporcione el mínimo de estribos de acuerdo con 17.6 y las superficies de contacto están limpias, libres de lechada y se hayan hecho rugosas intencionalmente con una amplitud aproximada de 6 mm, Vnh debe tomarse igual a\n (1,8 0,6 ) λ ρv fy bvd + , pero no mayor que 3,5 bv d. Deben usarse los valores de λ indicados en 11.7.4.3 y ρv es ( ) Av bv s .",
+   "texto": "Donde se proporcione el mínimo de estribos de acuerdo con 17.6 y las superficies de contacto están limpias, libres de lechada y se hayan hecho rugosas intencionalmente con una amplitud aproximada de 6 mm, Vnh debe tomarse igual a (1,8 + 0,6 ρv fy) λ bv d, pero no mayor que 3,5 bv d. Deben usarse los valores de λ indicados en 11.7.4.3 y ρv es Av / (bv s).",
    "pagina": 157
   },
   {

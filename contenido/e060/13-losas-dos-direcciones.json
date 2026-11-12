@@ -38,13 +38,12 @@
   },
   {
    "numero": "13.2.1",
-   "epigrafe": "En un sistema de losas apoyado en columnas o muros, las dimensiones c1, c2 y n",
    "texto": "En un sistema de losas apoyado en columnas o muros, las dimensiones c1, c2 y ℓn deberán basarse en un área de apoyo efectiva definida por la intersección de la superficie inferior de la losa, o del ábaco si lo hubiera, con el mayor cono circular recto, pirámide recta o cuña, cuyas superficies estén localizadas dentro de la columna y el capitel o ménsula, y que estén orientadas a un ángulo no mayor de 45° con respecto al eje de la columna.",
    "pagina": 127
   },
   {
    "numero": "13.2.2",
-   "texto": "Una franja de columna es una franja de diseño con un ancho a cada lado del eje de la columna igual a 0,25 2 ó 0,25 1\n\n , el que sea menor. Las franjas de columna incluyen las vigas, si las hubiera.",
+   "texto": "Una franja de columna es una franja de diseño con un ancho a cada lado del eje de la columna igual a 0,25 ℓ2 ó 0,25 ℓ1, el que sea menor. Las franjas de columna incluyen las vigas, si las hubiera.",
    "pagina": 127
   },
   {
@@ -222,7 +221,7 @@
   },
   {
    "numero": "13.5.3.1",
-   "texto": "Una fracción del momento no balanceado, dada por γf Mu, deberá considerarse transmitida por flexión sobre una franja de losa cuyo ancho efectivo esté comprendido entre ejes localizados a una y media veces el espesor de la losa o del ábaco (1,5 h) fuera de las caras opuestas de la columna o el capitel, donde Mu es el momento amplificado transmitido y.\n\n ( ) 1 2\n 1 γ\n 1 2/3 / f\n b b =\n +\n (13-\n 1)",
+   "texto": "Una fracción del momento no balanceado, dada por γf Mu, deberá considerarse transmitida por flexión sobre una franja de losa cuyo ancho efectivo esté comprendido entre ejes localizados a una y media veces el espesor de la losa o del ábaco (1,5 h) fuera de las caras opuestas de la columna o el capitel, donde Mu es el momento amplificado transmitido y\n γf = 1 / (1 + (2/3) √(b1/b2)) (13-1)",
    "pagina": 130
   },
   {
@@ -279,7 +278,7 @@
   },
   {
    "numero": "13.6.1.6",
-   "texto": "Para un paño con vigas entre los apoyos en todos los lados, debe satisfacerse la condición (13-2) para las dos direcciones perpendiculares.\n 2\n 2 2\n 1\n α 1 0,2 5,0 α 2\n f\n f ≤ ≤ (13-2)\n Donde αf 1 y αf 2 se calculan de acuerdo con la ecuación (13-3).\n αf Ecb Ib\n Ecs Is = (13-\n 3)",
+   "texto": "Para un paño con vigas entre los apoyos en todos los lados, debe satisfacerse la condición (13-2) para las dos direcciones perpendiculares.\n 0,2 ≤ (αf1 ℓ2²) / (αf2 ℓ1²) ≤ 5,0 (13-2)\n Donde αf1 y αf2 se calculan de acuerdo con la ecuación (13-3).\n αf = Ecb Ib / (Ecs Is) (13-3)",
    "pagina": 131
   },
   {
@@ -305,22 +304,21 @@
   },
   {
    "numero": "13.6.2.2",
-   "texto": "La suma absoluta del momento amplificado positivo y el promedio de los momentos amplificados negativos, en cada dirección, no debe ser menor que:\n 2 2\n 8\n qu n Mo = (13-\n 4)\n donde n es la luz libre en la dirección en la cual se determinan los momentos.",
+   "texto": "La suma absoluta del momento amplificado positivo y el promedio de los momentos amplificados negativos, en cada dirección, no debe ser menor que:\n Mo = qu ℓ2 ℓn² / 8 (13-4)\n donde ℓn es la luz libre en la dirección en la cual se determinan los momentos.",
    "pagina": 132
   },
   {
    "numero": "13.6.2.3",
-   "texto": "Cuando no se tenga la misma luz transversal en los paños a ambos lados del eje central de los apoyos, 2 en la ecuación (13-4) se debe tomar como el promedio de las luces transversales adyacentes.",
+   "texto": "Cuando no se tenga la misma luz transversal en los paños a ambos lados del eje central de los apoyos, ℓ2 en la ecuación (13-4) se debe tomar como el promedio de las luces transversales adyacentes.",
    "pagina": 132
   },
   {
    "numero": "13.6.2.4",
-   "texto": "Cuando se considere el paño adyacente y paralelo a un borde, la distancia del borde al eje central del paño deberá considerarse como 2 en la ecuación (13-4).",
+   "texto": "Cuando se considere el paño adyacente y paralelo a un borde, la distancia del borde al eje central del paño deberá considerarse como ℓ2 en la ecuación (13-4).",
    "pagina": 132
   },
   {
    "numero": "13.6.2.5",
-   "epigrafe": "La luz libre n",
    "texto": "La luz libre ℓn debe considerarse entre caras de las columnas, capiteles, ménsulas o muros. El valor de ℓn empleado en la ecuación (13-4) no debe ser menor que 0,65 ℓ1. Los apoyos circulares o en forma de polígono regular deben tratarse como apoyos cuadrados que tengan la misma área.",
    "pagina": 132
   },
@@ -368,22 +366,22 @@
   },
   {
    "numero": "13.6.4.1",
-   "texto": "Las franjas de columna deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado interior:\n\n 2\n 1\n\n 0,50 1,00 2,00\n 2 1 1 α 0 f ( )= ( )\n\n 0,75 0,75 0,75\n 2 1 1 α 1,0 f ( )≥ ( )\n\n 0,90 0,75 0,45\n Debe interpolarse linealmente entre los valores dados.",
+   "texto": "Las franjas de columna deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado interior:\n | ℓ2/ℓ1 | 0,50 | 1,00 | 2,00\n | (αf1 ℓ2/ℓ1) = 0 | 0,75 | 0,75 | 0,75\n | (αf1 ℓ2/ℓ1) ≥ 1,0 | 0,90 | 0,75 | 0,45\n Debe interpolarse linealmente entre los valores dados.",
    "pagina": 133
   },
   {
    "numero": "13.6.4.2",
-   "texto": "Las franjas de columnas deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado exterior:\n\n 2\n 1\n\n 0,5 1,0 2,0\n 2 1 1 α 0 f ( )= ( )\n\n βt = 0 1,00 1,00 1,00\n βt ≥ 25 0,75 0,75 0,75\n 2 1 1 α 1,0 f ( )≥ ( )\n\n βt = 0 1,00 1,00 1,00\n βt ≥ 25 0,90 0,75 0,45\n Deben hacerse interpolaciones lineales entre los valores dados.\n βt se calcula con la ecuación (13-5) y C se calcula con (13-6).\n\n β 2\n cb\n cs s E C t E I = (13-\n 5)\n\n 3 1 0,63 3 x x y C y ( ) =Σ − ( )\n (13-\n 6)\n La constante C para secciones en forma de T o L puede evaluarse dividiendo la sección en regiones rectangulares teniendo en cuenta lo indicado en 13.2.5, y sumando los valores de C calculados para cada región.",
+   "texto": "Las franjas de columnas deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado exterior:\n | ℓ2/ℓ1 | | 0,5 | 1,0 | 2,0\n | (αf1 ℓ2/ℓ1) = 0 | βt = 0 | 1,00 | 1,00 | 1,00\n | (αf1 ℓ2/ℓ1) = 0 | βt ≥ 25 | 0,75 | 0,75 | 0,75\n | (αf1 ℓ2/ℓ1) ≥ 1,0 | βt = 0 | 1,00 | 1,00 | 1,00\n | (αf1 ℓ2/ℓ1) ≥ 1,0 | βt ≥ 25 | 0,90 | 0,75 | 0,45\n Deben hacerse interpolaciones lineales entre los valores dados.\n βt se calcula con la ecuación (13-5) y C se calcula con (13-6).\n βt = Ecb C / (2 Ecs Is) (13-5)\n C = Σ (1 − 0,63 x/y) (x³ y / 3) (13-6)\n La constante C para secciones en forma de T o L puede evaluarse dividiendo la sección en regiones rectangulares teniendo en cuenta lo indicado en 13.2.5, y sumando los valores de C calculados para cada región.",
    "pagina": 133
   },
   {
    "numero": "13.6.4.3",
-   "texto": "Cuando los apoyos consistan en columnas o muros que se extienden por una distancia igual o mayor que 0,75 2 utilizada para calcular Mo, los momentos negativos deben considerarse uniformemente distribuidos a lo largo de 2\n\n .",
+   "texto": "Cuando los apoyos consistan en columnas o muros que se extienden por una distancia igual o mayor que 0,75 ℓ2 utilizada para calcular Mo, los momentos negativos deben considerarse uniformemente distribuidos a lo largo de ℓ2.",
    "pagina": 134
   },
   {
    "numero": "13.6.4.4",
-   "texto": "Las franjas de columnas deben diseñarse para resistir las siguientes fracciones de los momentos positivos amplificados:\n\n 2\n 1\n\n 0,50 1,00 2,00\n 2 1 1 α 0 f ( )= ( )\n\n 0,60 0,60 0,60\n 2 1 1 α 1,0 f ( )≥ ( )\n\n 0,90 0,75 0,45\n Debe interpolarse linealmente entre los valores dados.",
+   "texto": "Las franjas de columnas deben diseñarse para resistir las siguientes fracciones de los momentos positivos amplificados:\n | ℓ2/ℓ1 | 0,50 | 1,00 | 2,00\n | (αf1 ℓ2/ℓ1) = 0 | 0,60 | 0,60 | 0,60\n | (αf1 ℓ2/ℓ1) ≥ 1,0 | 0,90 | 0,75 | 0,45\n Debe interpolarse linealmente entre los valores dados.",
    "pagina": 134
   },
   {
@@ -399,7 +397,7 @@
   },
   {
    "numero": "13.6.5.1",
-   "texto": "Las vigas entre los apoyos deben ser diseñadas para resistir el 85% de los momentos de la franja de columna si ( ) 1 2 1 α / f es igual o mayor que uno.",
+   "texto": "Las vigas entre los apoyos deben ser diseñadas para resistir el 85% de los momentos de la franja de columna si (αf1 ℓ2/ℓ1) es igual o mayor que uno.",
    "pagina": 134
   },
   {
@@ -486,7 +484,7 @@
   },
   {
    "numero": "13.6.9.2",
-   "texto": "En un apoyo interior, los elementos de apoyo arriba y abajo de la losa deben resistir el momento amplificado especificado por la ecuación (13-7) en proporción directa a sus rigideces, a menos que se realice un análisis general.\n\n ( ) ( ) 2 2 2 2 0,07 0,5 ( ) Du Lu Du n n M q q q′ = + − [ ] ′ ′ [ ] (13-\n 7) donde Du q′, 2′ y n′ se refieren a la luz más corta.",
+   "texto": "En un apoyo interior, los elementos de apoyo arriba y abajo de la losa deben resistir el momento amplificado especificado por la ecuación (13-7) en proporción directa a sus rigideces, a menos que se realice un análisis general.\n M = 0,07 [(qDu + 0,5 qLu) ℓ2 ℓn² − q’Du ℓ’2 (ℓ’n)²] (13-7)\n donde q’Du, ℓ’2 y ℓ’n se refieren a la luz más corta.",
    "pagina": 135
   },
   {
@@ -550,7 +548,7 @@
   },
   {
    "numero": "13.7.3.2",
-   "texto": "Los momentos de flexión para las franjas centrales se calcularán por medio de las expresiones:\n Ma = Ca wu A² (13-8) Mb = Cb wu B² (13-9) Donde: A: Luz libre del tramo en la dirección corta.\n B: Luz libre del tramo en la dirección larga.\n Ma: Momento de flexión en la dirección A.\n Mb: Momento de flexión en la dirección B. Ca: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección corta. Cb: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección larga.\n wu: Carga última uniformemente repartida por unidad de área de la losa.",
+   "texto": "Los momentos de flexión para las franjas centrales se calcularán por medio de las expresiones:\n Ma = Ca wu A² (13-8)\n Mb = Cb wu B² (13-9)\n Donde:\n A: Luz libre del tramo en la dirección corta.\n B: Luz libre del tramo en la dirección larga.\n Ma: Momento de flexión en la dirección A.\n Mb: Momento de flexión en la dirección B.\n Ca: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección corta.\n Cb: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección larga.\n wu: Carga última uniformemente repartida por unidad de área de la losa.",
    "pagina": 136
   },
   {
@@ -571,7 +569,7 @@
   {
    "numero": "13.7.4",
    "epigrafe": "Fuerza cortante en la losa y cargas en las vigas de apoyo",
-   "texto": "13.7.3.1 Las fuerzas cortantes en la losa se calcularán suponiendo que la sección crítica se encuentra ubicada a una distancia d (peralte efectivo) de la cara del apoyo. A menos que se haga un análisis más preciso, la fuerza cortante que actúa en un ancho unitario podrá ser calculada utilizando la ecuación 13-10. Cuando exista un borde continuo opuesto a uno discontinuo, la fuerza cortante se incrementará en 15%.\n\n 1,0 0,5 2\n A A V w d\n B = − − ( )( ) ( )( ) (13-10)\n\n 13.7.3.2 Las vigas deben ser diseñadas para resistir el cortante producido por las cargas amplificadas en áreas tributarias limitadas por líneas a 45º trazadas desde las esquinas de cada paño y por los ejes centrales de los paños adyacentes paralelos a los lados largos. Para la viga corta podrá utilizarse una carga equivalente uniformemente repartida por metro lineal igual a wu (A / 3).\n\n Tablas 13.1, 13.2 y 13.3: coeficientes Ca y Cb para momentos negativos y positivos (casos 1 a 9, m = A/B de 1,00 a 0,50).",
+   "texto": "13.7.3.1 Las fuerzas cortantes en la losa se calcularán suponiendo que la sección crítica se encuentra ubicada a una distancia d (peralte efectivo) de la cara del apoyo. A menos que se haga un análisis más preciso, la fuerza cortante que actúa en un ancho unitario podrá ser calculada utilizando la ecuación 13-10. Cuando exista un borde continuo opuesto a uno discontinuo, la fuerza cortante se incrementará en 15%.\n V = w (A/2 − d) (1,0 − 0,5 A/B) (13-10)\n 13.7.3.2 Las vigas deben ser diseñadas para resistir el cortante producido por las cargas amplificadas en áreas tributarias limitadas por líneas a 45º trazadas desde las esquinas de cada paño y por los ejes centrales de los paños adyacentes paralelos a los lados largos. Para la viga corta podrá utilizarse una carga equivalente uniformemente repartida por metro lineal igual a wu (A / 3).\n\n Tablas 13.1, 13.2 y 13.3: coeficientes Ca y Cb para momentos negativos y positivos (casos 1 a 9, m = A/B de 1,00 a 0,50).",
    "pagina": 137
   }
  ],

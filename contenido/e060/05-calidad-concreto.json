@@ -73,8 +73,8 @@
   },
   {
    "numero": "5.3",
-   "epigrafe": "Dosificación Basada En La Experiencia En Obra O En Mezclas De",
-   "texto": "PRUEBA",
+   "epigrafe": "Dosificación Basada En La Experiencia En Obra O En Mezclas De Prueba",
+   "texto": "Dosificación Basada En La Experiencia En Obra O En Mezclas De Prueba",
    "pagina": 33
   },
   {
@@ -101,12 +101,12 @@
   },
   {
    "numero": "5.3.2.1",
-   "texto": "La resistencia promedio a la compresión requerida, f’cr, usada como base para la dosificación del concreto debe ser determinada según la Tabla 5.2, empleando la desviación estándar, Ss, calculada de acuerdo con 5.3.1.1 o con 5.3.1.2.\n\n TABLA 5.2 RESISTENCIA PROMEDIO A LA COMPRESIÓN REQUERIDA CUANDO HAY DATOS DISPONIBLES PARA ESTABLECER UNA DESVIACIÓN ESTÁNDAR DE\n LA MUESTRA\n Resistencia especificada a la\n compresión, MPa\n Resistencia promedio requerida a la\n compresión, MPa\n f’c ≤ 35\n Usar el mayor valor obtenido de las ecuaciones (5-1) y (5-2): f’cr = f’c + 1,34 Ss (5-1) f’cr = f’c + 2,33 Ss - 3,5 (5-2)\n f’c > 35\n Usar el mayor valor obtenido de las ecuaciones (5-1) y (5-3): f’cr = f’c + 1,34 Ss (5-1) f’cr =0,90 f’c + 2,33 Ss (5-3)",
+   "texto": "La resistencia promedio a la compresión requerida, f’cr, usada como base para la dosificación del concreto debe ser determinada según la Tabla 5.2, empleando la desviación estándar, Ss, calculada de acuerdo con 5.3.1.1 o con 5.3.1.2.\n\n TABLA 5.2 RESISTENCIA PROMEDIO A LA COMPRESIÓN REQUERIDA CUANDO HAY DATOS DISPONIBLES PARA ESTABLECER UNA DESVIACIÓN ESTÁNDAR DE\n LA MUESTRA\n Para f’c ≤ 35 MPa, usar el mayor valor obtenido de las ecuaciones (5-1) y (5-2):\n f’cr = f’c + 1,34 Ss (5-1)\n f’cr = f’c + 2,33 Ss − 3,5 (5-2)\n Para f’c > 35 MPa, usar el mayor valor obtenido de las ecuaciones (5-1) y (5-3):\n f’cr = f’c + 1,34 Ss (5-1)\n f’cr = 0,90 f’c + 2,33 Ss (5-3)",
    "pagina": 33
   },
   {
    "numero": "5.3.2.2",
-   "texto": "Cuando una instalación productora de concreto no tenga registros de ensayos de resistencia en obra para el cálculo de Ss que se ajusten a los requisitos de 5.3.1.1 o de 5.3.1.2, f’cr debe determinarse de la Tabla 5.3, y la documentación relativa a la resistencia promedio debe cumplir con los requisitos de 5.3.3.\n\n TABLA 5.3 RESISTENCIA PROMEDIO A LA COMPRESIÓN REQUERIDA CUANDO NO HAY\n DATOS DISPONIBLES PARA ESTABLECER UNA DESVIACIÓN ESTÁNDAR DE\n LA MUESTRA\n Resistencia especificada a la\n compresión, MPa\n Resistencia promedio requerida\n a la compresión, MPa f’c < 21 f’cr = f’c + 7,0 21 ≤ f’c ≤ 35 f’cr = f’c + 8,5 f’c > 35 f’cr = 1,1 f’c + 5,0",
+   "texto": "Cuando una instalación productora de concreto no tenga registros de ensayos de resistencia en obra para el cálculo de Ss que se ajusten a los requisitos de 5.3.1.1 o de 5.3.1.2, f’cr debe determinarse de la Tabla 5.3, y la documentación relativa a la resistencia promedio debe cumplir con los requisitos de 5.3.3.\n\n TABLA 5.3 RESISTENCIA PROMEDIO A LA COMPRESIÓN REQUERIDA CUANDO NO HAY\n DATOS DISPONIBLES PARA ESTABLECER UNA DESVIACIÓN ESTÁNDAR DE\n LA MUESTRA\n | Resistencia especificada a la compresión, MPa | Resistencia promedio requerida a la compresión, MPa\n | f’c < 21 | f’cr = f’c + 7,0\n | 21 ≤ f’c ≤ 35 | f’cr = f’c + 8,5\n | f’c > 35 | f’cr = 1,1 f’c + 5,0",
    "pagina": 34
   },
   {
@@ -127,8 +127,8 @@
   },
   {
    "numero": "5.4",
-   "epigrafe": "Dosificación Cuando No Se Cuenta Con Experiencia En Obra O",
-   "texto": "MEZCLAS DE PRUEBA",
+   "epigrafe": "Dosificación Cuando No Se Cuenta Con Experiencia En Obra O Mezclas De Prueba",
+   "texto": "Dosificación Cuando No Se Cuenta Con Experiencia En Obra O Mezclas De Prueba",
    "pagina": 35
   },
   {
@@ -259,8 +259,8 @@
   },
   {
    "numero": "5.7",
-   "epigrafe": "Preparación Del Equipo Y Del Lugar De Colocación Del",
-   "texto": "CONCRETO",
+   "epigrafe": "Preparación Del Equipo Y Del Lugar De Colocación Del Concreto",
+   "texto": "Preparación Del Equipo Y Del Lugar De Colocación Del Concreto",
    "pagina": 37
   },
   {

@@ -2,7 +2,7 @@ import json,glob,re,sys,unicodedata
 def norm(s):
     s=unicodedata.normalize("NFC",s)
     for a,b in [("’","'"),("′","'"),("”",'"'),("″",'"'),("“",'"'),("º","°"),("–","-"),("−","-")]: s=s.replace(a,b)
-    return re.sub(r"\s+"," ",s).strip()
+    return re.sub(r"\s+"," ",s.replace("|"," ")).strip()
 A={a['numero']:norm(a['texto']) for a in json.load(open('/Users/alejandrocabreratavara/Documents/tekluma/contenido/e060/00-e060-articulos.json'))['articulos']}
 malos=0
 for f in sorted(glob.glob('/Users/alejandrocabreratavara/Documents/tekluma/contenido/e060/[0-2]*.json')):

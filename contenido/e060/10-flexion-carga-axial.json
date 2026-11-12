@@ -109,12 +109,12 @@
   },
   {
    "numero": "10.3.6.1",
-   "texto": "Para elementos no preesforzados con refuerzo en espiral que cumplan con 7.10.4 o para elementos compuestos que cumplan con 10.16:\n φPn max = 0,85 φ Pon = 0,85 φ[0,85 ( ) ] f c Ag Ast fy Ast ′ − + (10-1)",
+   "texto": "Para elementos no preesforzados con refuerzo en espiral que cumplan con 7.10.4 o para elementos compuestos que cumplan con 10.16:\n φPn max = 0,85 φ Pon = 0,85 φ [0,85 f’c (Ag − Ast) + fy Ast] (10-1)",
    "pagina": 78
   },
   {
    "numero": "10.3.6.2",
-   "texto": "Para elementos no preesforzados con estribos que cumplan con 7.10.5:\n φPn max = 0,80 φ Pon = 0,80 φ[0,85 ( ) ] f c Ag Ast fy Ast ′ − + (10-2)",
+   "texto": "Para elementos no preesforzados con estribos que cumplan con 7.10.5:\n φPn max = 0,80 φ Pon = 0,80 φ [0,85 f’c (Ag − Ast) + fy Ast] (10-2)",
    "pagina": 78
   },
   {
@@ -129,8 +129,8 @@
   },
   {
    "numero": "10.4",
-   "epigrafe": "Distancia Entre Los Apoyos Laterales De Elementos Sometidos",
-   "texto": "A FLEXIÓN",
+   "epigrafe": "Distancia Entre Los Apoyos Laterales De Elementos Sometidos A Flexión",
+   "texto": "Distancia Entre Los Apoyos Laterales De Elementos Sometidos A Flexión",
    "pagina": 78
   },
   {
@@ -151,12 +151,12 @@
   },
   {
    "numero": "10.5.1",
-   "texto": "En cualquier sección de un elemento estructural - excepto en zapatas y losas macizas - sometido a flexión, donde por el análisis se requiera refuerzo de acero en tracción, el área de acero que se proporcione será la necesaria para que la resistencia de diseño de la sección sea por lo menos 1,2 veces el momento de agrietamiento de la sección bruta Mcr (φMn ≥ 1,2 Mcr), donde:\n fr Ig Mcr\n Yt =\n 0,62 fr f c′ =",
+   "texto": "En cualquier sección de un elemento estructural - excepto en zapatas y losas macizas - sometido a flexión, donde por el análisis se requiera refuerzo de acero en tracción, el área de acero que se proporcione será la necesaria para que la resistencia de diseño de la sección sea por lo menos 1,2 veces el momento de agrietamiento de la sección bruta Mcr (φMn ≥ 1,2 Mcr), donde:\n Mcr = fr Ig / Yt\n fr = 0,62 √f’c",
    "pagina": 79
   },
   {
    "numero": "10.5.2",
-   "texto": "El área mínima de refuerzo por tracción de las secciones rectangulares y de las secciones T con el ala en compresión, no será menor de:\n\n min 0,22 w f c As b d fy\n ′ = (10-\n 3)",
+   "texto": "El área mínima de refuerzo por tracción de las secciones rectangulares y de las secciones T con el ala en compresión, no será menor de:\n As min = (0,22 √f’c / fy) bw d (10-3)",
    "pagina": 79
   },
   {
@@ -171,8 +171,8 @@
   },
   {
    "numero": "10.6",
-   "epigrafe": "Distribución Del Refuerzo De Flexión En Vigas Y Losas En Una",
-   "texto": "DIRECCIÓN",
+   "epigrafe": "Distribución Del Refuerzo De Flexión En Vigas Y Losas En Una Dirección",
+   "texto": "Distribución Del Refuerzo De Flexión En Vigas Y Losas En Una Dirección",
    "pagina": 79
   },
   {
@@ -188,7 +188,7 @@
   },
   {
    "numero": "10.7.1",
-   "texto": "Las vigas de gran peralte son elementos cargados en una cara y apoyados en la cara opuesta, de manera que se pueden desarrollar puntales de compresión entre las cargas y los apoyos y tienen:\n (a) luz libre, n\n\n , igual o menor a cuatro veces el peralte total del elemento, o (b) regiones con cargas concentradas a una distancia del apoyo menor a dos veces el peralte de la viga.",
+   "texto": "Las vigas de gran peralte son elementos cargados en una cara y apoyados en la cara opuesta, de manera que se pueden desarrollar puntales de compresión entre las cargas y los apoyos y tienen:\n (a) luz libre, ℓn, igual o menor a cuatro veces el peralte total del elemento, o\n (b) regiones con cargas concentradas a una distancia del apoyo menor a dos veces el peralte de la viga.",
    "pagina": 79
   },
   {
@@ -261,7 +261,7 @@
   },
   {
    "numero": "10.9.3",
-   "texto": "La cuantía volumétrica del refuerzo en espiral, ρs, no debe ser menor que el valor dado por:\n s 0,45 1 ρ Ag f c\n Ach fyt\n ′ = − ( ) ( )\n (10-\n 5)\n el valor de fyt (esfuerzo de fluencia del acero de la espiral) a usar en la ecuación (10-5) no debe ser mayor de 700 MPa. Para fyt mayor de 420 MPa, no deben usarse empalmes traslapados de acuerdo con 7.10.4.5(a).",
+   "texto": "La cuantía volumétrica del refuerzo en espiral, ρs, no debe ser menor que el valor dado por:\n ρs = 0,45 (Ag / Ach − 1) (f’c / fyt) (10-5)\n el valor de fyt (esfuerzo de fluencia del acero de la espiral) a usar en la ecuación (10-5) no debe ser mayor de 700 MPa. Para fyt mayor de 420 MPa, no deben usarse empalmes traslapados de acuerdo con 7.10.4.5(a).",
    "pagina": 80
   },
   {
@@ -325,7 +325,7 @@
   },
   {
    "numero": "10.11.4.2",
-   "texto": "También se permite suponer como arriostrado (sin desplazamiento lateral) a un entrepiso en la estructura si el índice de estabilidad del entrepiso, Q :\n\n ( ) o Pu Q\n Vus he\n Σ Δ = (10-6)\n es menor o igual a 0,06. En la ecuación 10-6:\n Pu Σ : Suma de las cargas amplificadas, muertas y vivas, acumuladas desde el extremo superior del edificio hasta el entrepiso considerado. Para el caso de solicitaciones sísmicas Pu Σ debe basarse en la misma fracción de la sobrecarga utilizada para el cálculo de las fuerzas sísmicas laterales. o Δ: Deformación relativa entre el nivel superior y el inferior del entrepiso considerado, debido a las fuerzas laterales amplificadas y calculada de acuerdo a un análisis elástico de Primer Orden. Para el caso de fuerzas laterales de sismo, o Δ deberá multiplicarse por 0,75 veces el factor de reducción (R) considerado en la determinación de estas fuerzas tal como se estipula en la NTE E.030 Diseño Sismorresistente. Vus: Fuerza cortante amplificada en el entrepiso, debida a las cargas laterales. he: Altura del entrepiso medida piso a piso.",
+   "texto": "También se permite suponer como arriostrado (sin desplazamiento lateral) a un entrepiso en la estructura si el índice de estabilidad del entrepiso, Q:\n Q = (ΣPu Δo) / (Vus he) (10-6)\n es menor o igual a 0,06. En la ecuación 10-6:\n ΣPu: Suma de las cargas amplificadas, muertas y vivas, acumuladas desde el extremo superior del edificio hasta el entrepiso considerado. Para el caso de solicitaciones sísmicas ΣPu debe basarse en la misma fracción de la sobrecarga utilizada para el cálculo de las fuerzas sísmicas laterales.\n Δo: Deformación relativa entre el nivel superior y el inferior del entrepiso considerado, debido a las fuerzas laterales amplificadas y calculada de acuerdo a un análisis elástico de Primer Orden. Para el caso de fuerzas laterales de sismo, Δo deberá multiplicarse por 0,75 veces el factor de reducción (R) considerado en la determinación de estas fuerzas tal como se estipula en la NTE E.030 Diseño Sismorresistente.\n Vus: Fuerza cortante amplificada en el entrepiso, debida a las cargas laterales.\n he: Altura del entrepiso medida piso a piso.",
    "pagina": 82
   },
   {
@@ -341,8 +341,8 @@
   },
   {
    "numero": "10.12",
-   "epigrafe": "Momentos Magnificados En Estructuras Sin Desplazamiento",
-   "texto": "LATERAL",
+   "epigrafe": "Momentos Magnificados En Estructuras Sin Desplazamiento Lateral",
+   "texto": "Momentos Magnificados En Estructuras Sin Desplazamiento Lateral",
    "pagina": 82
   },
   {
@@ -352,29 +352,28 @@
   },
   {
    "numero": "10.12.2",
-   "texto": "En estructuras sin desplazamiento lateral se permite ignorar los efectos de esbeltez en elementos a compresión que satisfacen:\n\n 1\n 2 34 12 k u M\n r M ≤ − ( ) ( ) (10-7)\n\n En la ecuación 10-7, el término ( ) 1 2 34 12 / M M − [ ] [ ] no debe tomarse mayor que 40. El término 1 2 / M M es positivo si el elemento se flexiona en curvatura simple y negativo si el elemento se flexiona en curvatura doble.",
+   "texto": "En estructuras sin desplazamiento lateral se permite ignorar los efectos de esbeltez en elementos a compresión que satisfacen:\n k ℓu / r ≤ 34 − 12 (M1 / M2) (10-7)\n En la ecuación 10-7, el término [34 − 12 (M1/M2)] no debe tomarse mayor que 40. El término M1/M2 es positivo si el elemento se flexiona en curvatura simple y negativo si el elemento se flexiona en curvatura doble.",
    "pagina": 82
   },
   {
    "numero": "10.12.3",
-   "texto": "Los elementos a compresión deben diseñarse para la fuerza axial amplificada Pu y el momento amplificado Mu, magnificado por los efectos de curvatura (efectos de segundo orden) del elemento, Mc, como sigue:\n\n 2 Mc ns M =δ (10-8) donde:\n δ 1,0 1 0,75\n Cm ns Pu\n Pc\n = ≥ −\n (10-\n 9)\n ( )\n 2\n 2 π EI Pc\n k u = (10-\n 10)\n EI debe tomarse como:\n ( ) 0,2 1 Ec Ig Es Ise EI d + = +β (10-\n 11)\n Alternativamente:\n 0,4\n 1 β\n Ec Ig EI\n d =\n +\n (10-\n 12)",
+   "texto": "Los elementos a compresión deben diseñarse para la fuerza axial amplificada Pu y el momento amplificado Mu, magnificado por los efectos de curvatura (efectos de segundo orden) del elemento, Mc, como sigue:\n Mc = δns M2 (10-8)\n donde:\n δns = Cm / [1 − Pu / (0,75 Pc)] ≥ 1,0 (10-9)\n Pc = π² EI / (k ℓu)² (10-10)\n EI debe tomarse como:\n EI = (0,2 Ec Ig + Es Ise) / (1 + βd) (10-11)\n Alternativamente:\n EI = 0,4 Ec Ig / (1 + βd) (10-12)",
    "pagina": 83
   },
   {
    "numero": "10.12.3.1",
-   "texto": "Para elementos sin cargas transversales entre sus apoyos, Cm debe tomarse como:\n 1\n 2 0,6 0,4 0,4 M Cm M ( ) = + ≥ ( )\n (10-\n 13)\n donde 1/ 2 M M es positivo si la columna se flexiona en curvatura simple. Para elementos con cargas transversales entre sus apoyos, Cm debe tomarse como 1,0.",
+   "texto": "Para elementos sin cargas transversales entre sus apoyos, Cm debe tomarse como:\n Cm = 0,6 + 0,4 (M1 / M2) ≥ 0,4 (10-13)\n donde M1/M2 es positivo si la columna se flexiona en curvatura simple. Para elementos con cargas transversales entre sus apoyos, Cm debe tomarse como 1,0.",
    "pagina": 83
   },
   {
    "numero": "10.12.3.2",
-   "epigrafe": "El momento amplificado, M 2, en la ecuación (10-8) no debe tomarse menor que",
-   "texto": "( ) 2 min , 15 0,03 M Pu h = + (10-14)\n alrededor de cada eje separadamente, donde 15 y h están en mm. Para elementos en los que M 2,min supera a M 2 , el valor de Cm en la ecuación (10-13) debe ser tomado como 1,0 o estar basado en la relación de los momentos calculados para los extremos, dividiendo M 1 por M 2 .",
+   "texto": "El momento amplificado, M2, en la ecuación (10-8) no debe tomarse menor que\n M2,min = Pu (15 + 0,03 h) (10-14)\n alrededor de cada eje separadamente, donde 15 y h están en mm. Para elementos en los que M2,min supera a M2, el valor de Cm en la ecuación (10-13) debe ser tomado como 1,0 o estar basado en la relación de los momentos calculados para los extremos, dividiendo M1 por M2.",
    "pagina": 83
   },
   {
    "numero": "10.13",
-   "epigrafe": "Momentos Magnificados En Estructuras Con Desplazamiento",
-   "texto": "LATERAL",
+   "epigrafe": "Momentos Magnificados En Estructuras Con Desplazamiento Lateral",
+   "texto": "Momentos Magnificados En Estructuras Con Desplazamiento Lateral",
    "pagina": 83
   },
   {
@@ -389,7 +388,7 @@
   },
   {
    "numero": "10.13.3",
-   "texto": "Los momentos M 1 y M 2 en los extremos de un elemento individual a compresión deben tomarse como:\n 1 1 1 δ ns s M M s M = + (10- 15)\n 2 2 2 δ ns s M M s M = + (10-16)\n donde 1 δ s s M y 2 δ s s M deben calcularse de acuerdo con 10.13.4",
+   "texto": "Los momentos M1 y M2 en los extremos de un elemento individual a compresión deben tomarse como:\n M1 = M1ns + δs M1s (10-15)\n M2 = M2ns + δs M2s (10-16)\n donde δs M1s y δs M2s deben calcularse de acuerdo con 10.13.4",
    "pagina": 84
   },
   {
@@ -400,23 +399,22 @@
   },
   {
    "numero": "10.13.4.1",
-   "texto": "Los momentos magnificados por desplazamiento lateral, δs Ms , son los momentos en los extremos de la columna calculados a través de un análisis elástico de segundo orden basado en las rigideces del elemento dadas en 10.11.1",
+   "texto": "Los momentos magnificados por desplazamiento lateral, δs Ms, son los momentos en los extremos de la columna calculados a través de un análisis elástico de segundo orden basado en las rigideces del elemento dadas en 10.11.1",
    "pagina": 84
   },
   {
    "numero": "10.13.4.2",
-   "epigrafe": "Alternativamente, se permite calcular δs Ms como",
-   "texto": "1 δ\n 1 s Ms Ms Ms Q = ≥ −\n (10-17)\n Si δs calculado de esta manera es mayor que 1,5 entonces δs Ms debe calcularse usando 10.13.4.1 (análisis de segundo orden) ó 10.13.4.3.",
+   "texto": "Alternativamente, se permite calcular δs Ms como\n δs Ms = Ms / (1 − Q) ≥ Ms (10-17)\n Si δs calculado de esta manera es mayor que 1,5 entonces δs Ms debe calcularse usando 10.13.4.1 (análisis de segundo orden) ó 10.13.4.3.",
    "pagina": 84
   },
   {
    "numero": "10.13.4.3",
-   "texto": "Alternativamente, se puede calcular el momento magnificado, δs Ms , como:\n δ\n 1 0,75\n Ms s Ms Ms Pu\n Pc\n = ≥ Σ −\n Σ\n (10-18)\n donde Pu Σ es la sumatoria de todas las cargas verticales amplificadas en el entrepiso considerado y Pc Σ es la sumatoria para todas las columnas que resisten el desplazamiento lateral en un piso. Pc se calcula usando la ecuación (10-10) con el valor k de 10.13.1 y el valor para EI obtenido de la ecuación (10-11) o la ecuación (10-12).",
+   "texto": "Alternativamente, se puede calcular el momento magnificado, δs Ms, como:\n δs Ms = Ms / [1 − ΣPu / (0,75 ΣPc)] ≥ Ms (10-18)\n donde ΣPu es la sumatoria de todas las cargas verticales amplificadas en el entrepiso considerado y ΣPc es la sumatoria para todas las columnas que resisten el desplazamiento lateral en un piso. Pc se calcula usando la ecuación (10-10) con el valor k de 10.13.1 y el valor para EI obtenido de la ecuación (10-11) o la ecuación (10-12).",
    "pagina": 84
   },
   {
    "numero": "10.13.5",
-   "texto": "Si un elemento individual en compresión cumple con:\n\n 35 u\n r Pu f c Ag\n >\n ′ (10-\n 19)\n éste debe ser diseñado para la fuerza amplificada Pu y el momento Mc calculado usando 10.12.3 en donde M 1 y M 2 se calculan de acuerdo con 10.13.3, βd según se definió para la combinación de cargas considerada, y k según lo definido en 10.12.1",
+   "texto": "Si un elemento individual en compresión cumple con:\n ℓu / r > 35 / √[Pu / (f’c Ag)] (10-19)\n éste debe ser diseñado para la fuerza amplificada Pu y el momento Mc calculado usando 10.12.3 en donde M1 y M2 se calculan de acuerdo con 10.13.3, βd según se definió para la combinación de cargas considerada, y k según lo definido en 10.12.1",
    "pagina": 84
   },
   {
@@ -431,14 +429,14 @@
   },
   {
    "numero": "10.14",
-   "epigrafe": "Elementos Cargados Axialmente Que Soportan Sistemas De",
-   "texto": "LOSAS\n Los elementos cargados axialmente que soportan un sistema de losas incluido dentro del alcance de 13.1, deben diseñarse como se dispone en el Capítulo 10 y de acuerdo con los requisitos adicionales del Capítulo 13.",
+   "epigrafe": "Elementos Cargados Axialmente Que Soportan Sistemas De Losas",
+   "texto": "Los elementos cargados axialmente que soportan un sistema de losas incluido dentro del alcance de 13.1, deben diseñarse como se dispone en el Capítulo 10 y de acuerdo con los requisitos adicionales del Capítulo 13.",
    "pagina": 85
   },
   {
    "numero": "10.15",
-   "epigrafe": "Transmisión De Cargas De Las Columnas A Través De Losas De",
-   "texto": "PISO\n Si la resistencia especificada en compresión del concreto, f’c, de una columna es 1,4 veces mayor que la del sistema de piso, la transmisión de la carga a través de la losa de piso debe lograrse de acuerdo con alguna de las alternativas especificadas en 10.15.1, 10.15.2 ó 10.15.3.",
+   "epigrafe": "Transmisión De Cargas De Las Columnas A Través De Losas De Piso",
+   "texto": "Si la resistencia especificada en compresión del concreto, f’c, de una columna es 1,4 veces mayor que la del sistema de piso, la transmisión de la carga a través de la losa de piso debe lograrse de acuerdo con alguna de las alternativas especificadas en 10.15.1, 10.15.2 ó 10.15.3.",
    "pagina": 85
   },
   {
@@ -484,7 +482,7 @@
   },
   {
    "numero": "10.16.5",
-   "texto": "Para la evaluación de los efectos de esbeltez, el radio de giro, r, de la sección compuesta no debe ser mayor que el valor dado por ( ) ( )\n /5\n /5\n Ec Ig Es Isx r\n Ec Ag Es Asx\n + =\n +\n (10-20) y como alternativa a un cálculo más preciso, EI en la ecuación (10-10) debe tomarse ya sea como lo indica la ecuación (10-11) o por medio de ( ) /5\n 1 βd\n Ec Ig EI Es Isx = + +\n (10-21)",
+   "texto": "Para la evaluación de los efectos de esbeltez, el radio de giro, r, de la sección compuesta no debe ser mayor que el valor dado por\n r = √[(Ec Ig / 5 + Es Isx) / (Ec Ag / 5 + Es Asx)] (10-20)\n y como alternativa a un cálculo más preciso, EI en la ecuación (10-10) debe tomarse ya sea como lo indica la ecuación (10-11) o por medio de\n EI = (Ec Ig / 5) / (1 + βd) + Es Isx (10-21)",
    "pagina": 86
   },
   {
@@ -495,7 +493,7 @@
   },
   {
    "numero": "10.16.6.1",
-   "texto": "Para un elemento compuesto con el núcleo de concreto confinado (enfundado) en acero estructural, el espesor del acero de confinamiento no debe ser menor que:\n 3\n fy b\n Es\n , para cada cara de ancho b\n ni que:\n 8\n fy D\n Es\n , para secciones circulares de diámetro D",
+   "texto": "Para un elemento compuesto con el núcleo de concreto confinado (enfundado) en acero estructural, el espesor del acero de confinamiento no debe ser menor que:\n b √(fy / 3Es), para cada cara de ancho b\n ni que:\n D √(fy / 8Es), para secciones circulares de diámetro D",
    "pagina": 86
   },
   {
@@ -588,7 +586,7 @@
   },
   {
    "numero": "10.17.1",
-   "texto": "La resistencia de diseño al aplastamiento del concreto no debe exceder φ(0,85 f’c A1) excepto cuando la superficie de soporte sea más ancha en todos los lados que el área cargada. En este caso se permite que la resistencia de diseño al aplastamiento en el área cargada se multiplique por 2 1 / A A , pero no más que 2 (figura 10.17.1).\n\n Fig. 10.17.1 Áreas de aplastamiento A1 y A2.",
+   "texto": "La resistencia de diseño al aplastamiento del concreto no debe exceder φ(0,85 f’c A1) excepto cuando la superficie de soporte sea más ancha en todos los lados que el área cargada. En este caso se permite que la resistencia de diseño al aplastamiento en el área cargada se multiplique por √(A2/A1), pero no más que 2 (figura 10.17.1).\n\n Fig. 10.17.1 Áreas de aplastamiento A1 y A2.",
    "pagina": 87
   },
   {
@@ -599,7 +597,7 @@
   {
    "numero": "10.18",
    "epigrafe": "Flexión Biaxial",
-   "texto": "Cuando las columnas están sujetas simultáneamente a momentos flectores en sus dos ejes principales, el diseño deberá hacerse a partir de las hipótesis y principios dados en 10.2 y 10.3. Alternativamente se podrá usar la siguiente ecuación aproximada, aplicable a columnas cuadradas o rectangulares con armadura longitudinal simétrica.\n\n 1 1 1 1\n Pn Pnx Pny Pon = + − (10-22)\n donde :\n Pn es la resistencia nominal a carga axial en flexión biaxial. Pnx es la resistencia nominal bajo la acción de momento únicamente en X (ey = 0). Pny es la resistencia nominal bajo la acción de momento únicamente en Y (ex = 0). Pon es la resistencia nominal bajo la acción de carga axial únicamente (ex = ey = 0)\n que se calcula mediante: 0,85 ( ) f c Ag Ast fy Ast ′ − +\n\n Deberá verificarse que la resistencia de diseño no exceda de lo especificado en 10.3.6.\n La ecuación 10-22 es válida para valores de Pu ≥ 0,1 φ Pon; para valores menores de la carga axial Pu, se usará la siguiente ecuación:\n\n 1.0 Mux Muy\n Mnx Mny + ≤ φ φ\n (10-23)\n donde φMnx y φMny son las resistencias de diseño de la sección con respecto a los ejes X e Y respectivamente. La ecuación 10-23 es aplicable también a vigas sometidas a flexión biaxial.",
+   "texto": "Cuando las columnas están sujetas simultáneamente a momentos flectores en sus dos ejes principales, el diseño deberá hacerse a partir de las hipótesis y principios dados en 10.2 y 10.3. Alternativamente se podrá usar la siguiente ecuación aproximada, aplicable a columnas cuadradas o rectangulares con armadura longitudinal simétrica.\n 1/Pn = 1/Pnx + 1/Pny − 1/Pon (10-22)\n donde:\n Pn es la resistencia nominal a carga axial en flexión biaxial. Pnx es la resistencia nominal bajo la acción de momento únicamente en X (ey = 0). Pny es la resistencia nominal bajo la acción de momento únicamente en Y (ex = 0). Pon es la resistencia nominal bajo la acción de carga axial únicamente (ex = ey = 0) que se calcula mediante:\n Pon = 0,85 f’c (Ag − Ast) + fy Ast\n Deberá verificarse que la resistencia de diseño no exceda de lo especificado en 10.3.6.\n La ecuación 10-22 es válida para valores de Pu ≥ 0,1 φ Pon; para valores menores de la carga axial Pu, se usará la siguiente ecuación:\n Mux / φMnx + Muy / φMny ≤ 1,0 (10-23)\n donde φMnx y φMny son las resistencias de diseño de la sección con respecto a los ejes X e Y respectivamente. La ecuación 10-23 es aplicable también a vigas sometidas a flexión biaxial.",
    "pagina": 88
   }
  ],

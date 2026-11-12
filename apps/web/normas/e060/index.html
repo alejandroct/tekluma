@@ -43,7 +43,15 @@
       .art.destacado { background: var(--acento-suave); box-shadow: inset 4px 0 0 var(--ambar); }
       .art .num { font-family: var(--mono); font-weight: 500; color: var(--ambar); font-size: 14px; text-decoration: none; margin-right: var(--e3); }
       .art .epi { font-weight: 700; }
+      /* La fuente convierte «(c)» en «©»: en la norma los incisos (a), (b), (c) deben verse tal cual. */
+      .art, .resultado { font-feature-settings: "calt" 0, "liga" 0; }
       .art p { margin: 6px 0 0; white-space: pre-line; max-width: 72ch; }
+      .art .formula { display: flex; align-items: center; justify-content: space-between; gap: var(--e4); max-width: 72ch; margin: 10px 0 4px; padding: 10px 16px; border: 1px solid var(--linea); border-radius: 6px; background: var(--superficie); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 18px; line-height: 1.45; }
+      .art .formula .eq { font-family: var(--mono); font-style: normal; font-size: 13px; color: var(--ambar); white-space: nowrap; }
+      .art .tabla { max-width: 100%; overflow-x: auto; margin: 10px 0 4px; }
+      .art .tabla table { border-collapse: collapse; font-size: 15px; line-height: 1.4; min-width: 60%; }
+      .art .tabla th, .art .tabla td { border: 1px solid var(--linea); padding: 7px 10px; text-align: left; vertical-align: top; }
+      .art .tabla th { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--tinta-2); background: var(--superficie); }
       .art.seccion { padding-top: var(--e5); }
       .art.seccion .epi { font-size: 19px; font-weight: 800; }
       .art .acciones { display: flex; gap: var(--e2); margin-top: var(--e2); opacity: 0; transition: opacity 0.15s; }
@@ -130,10 +138,32 @@
       const pagina = (n) => `paginas/p${String(n).padStart(3, "0")}.jpg`;
       let norma = null, normales = null, paginaVisor = 1;
 
-      fetch("norma.json")
+      fetch("norma.json", { cache: "no-cache" })
         .then((r) => r.json())
         .then((n) => { norma = n; pintar(); irAlHash(); })
         .catch(() => { $("texto").innerHTML = '<p class="cargando">NO SE PUDO CARGAR LA NORMA. RECARGA LA PÁGINA.</p>'; });
+
+      // Fórmulas numeradas («Vc = 0,17 √f’c bw d (11-3)») y tablas («| celda | celda»), como en la app.
+      function cuerpo(texto) {
+        let html = "", parrafo = [], tabla = null;
+        const cerrarParrafo = () => { if (parrafo.length) html += `<p>${esc(parrafo.join("\n"))}</p>`; parrafo = []; };
+        const cerrarTabla = () => {
+          if (tabla) html += `<div class="tabla"><table>${tabla.map((f, i) => `<tr>${f.map((c) => (i ? `<td>${esc(c)}</td>` : `<th>${esc(c)}</th>`)).join("")}</tr>`).join("")}</table></div>`;
+          tabla = null;
+        };
+        for (const bruta of texto.split("\n")) {
+          const l = bruta.trim();
+          if (l.startsWith("|")) { cerrarParrafo(); (tabla ??= []).push(l.slice(1).split("|").map((c) => c.trim())); continue; }
+          cerrarTabla();
+          const m = l.length <= 130 ? /^(.+?)\s*\((\d{1,2}-\d{1,2}[a-z]?)\)$/.exec(l) : null;
+          if (m && (/[=≤≥<>]/.test(m[1]) || m[1].length < 40)) {
+            cerrarParrafo();
+            html += `<div class="formula"><span>${esc(m[1])}</span><span class="eq">(${m[2]})</span></div>`;
+          } else if (l) parrafo.push(l);
+        }
+        cerrarParrafo(); cerrarTabla();
+        return html;
+      }
 
       function pintar() {
         $("rotulo").textContent = `${norma.codigo} · ${norma.titulo} · ${norma.articulos.length.toLocaleString("es-PE")} artículos`;
@@ -151,7 +181,7 @@
           const seccion = a.e && normal(a.t.trim()) === normal(a.e.trim());
           html += `<article class="art${seccion ? " seccion" : ""}" id="${a.n}">`;
           html += `<a class="num" href="#${a.n}">${a.n}</a>${a.e ? `<span class="epi">${esc(a.e)}</span>` : ""}`;
-          if (!seccion) html += `<p>${esc(a.t.trim())}</p>`;
+          if (!seccion) html += cuerpo(a.t);
           for (const f of a.f || []) html += `<figure class="figura" data-src="${f.src}"><img loading="lazy" src="${f.src}" width="${f.w}" height="${f.h}" alt="${esc(f.pie)}" /><figcaption>${esc(f.pie)}</figcaption></figure>`;
           if (!seccion && a.p) html += `<div class="acciones"><button class="chip" data-pagina="${a.p}">PÁG. ${a.p} · ORIGINAL</button><button class="chip" data-copiar="${a.n}">COPIAR ENLACE</button></div>`;
           html += "</article>";

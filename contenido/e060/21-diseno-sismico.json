@@ -164,8 +164,8 @@
   },
   {
    "numero": "21.4",
-   "epigrafe": "Requisitos Para Vigas Y Columnas De Los Edificios Con Sistema",
-   "texto": "RESISTENTE A FUERZAS LATERALES DE MUROS ESTRUCTURALES O DUAL TIPO I",
+   "epigrafe": "Requisitos Para Vigas Y Columnas De Los Edificios Con Sistema Resistente A Fuerzas Laterales De Muros Estructurales O Dual Tipo I",
+   "texto": "Requisitos Para Vigas Y Columnas De Los Edificios Con Sistema Resistente A Fuerzas Laterales De Muros Estructurales O Dual Tipo I",
    "pagina": 185
   },
   {
@@ -247,8 +247,8 @@
   },
   {
    "numero": "21.5",
-   "epigrafe": "Requisitos Para Las Vigas De Los Edificios Con Sistemas",
-   "texto": "RESISTENTES A FUERZAS LATERALES DE PÓRTICOS Y DUALES TIPO II.",
+   "epigrafe": "Requisitos Para Las Vigas De Los Edificios Con Sistemas Resistentes A Fuerzas Laterales De Pórticos Y Duales Tipo II.",
+   "texto": "Requisitos Para Las Vigas De Los Edificios Con Sistemas Resistentes A Fuerzas Laterales De Pórticos Y Duales Tipo II.",
    "pagina": 189
   },
   {
@@ -264,7 +264,6 @@
   },
   {
    "numero": "21.5.1.2",
-   "epigrafe": "La luz libre del elemento n",
    "texto": "La luz libre del elemento ℓn no debe ser menor que cuatro veces su peralte.",
    "pagina": 189
   },
@@ -381,7 +380,7 @@
   },
   {
    "numero": "21.6.2.2",
-   "texto": "Las resistencias a flexión de las columnas en las caras de los nudos deben satisfacer la ecuación (21-1)\n 1,2 Mnc Mnv ≥ Σ Σ (21-1)\n donde:\n Mnc Σ = suma de los momentos nominales de flexión de las columnas que llegan al nudo, evaluados en las caras del nudo. La resistencia a la flexión de la columna debe calcularse para la fuerza axial amplificada, consistente con la dirección de las fuerzas laterales consideradas, que conduzca a la resistencia a la flexión más baja.\n Mnv Σ = suma de los momentos resistentes nominales a flexión de las vigas que llegan al nudo, evaluados en las caras del nudo. En vigas T, cuando la losa está en tracción debida al momento en la cara del nudo, debe suponerse que el refuerzo de la losa dentro del ancho efectivo definido en 8.10 contribuye a Mnv , siempre que el refuerzo de la losa esté adecuadamente anclado en la sección crítica para flexión.\n Las resistencias a la flexión deben sumarse de tal manera que los momentos de las columnas se opongan a los momentos de las vigas. Debe satisfacerse la ecuación (21-1) para momentos en las vigas actuando en ambas direcciones en el plano vertical del pórtico que se considera.\n\n Fig. 21.6.2.2 Resistencia a flexión de las columnas en las caras de los nudos",
+   "texto": "Las resistencias a flexión de las columnas en las caras de los nudos deben satisfacer la ecuación (21-1)\n ΣMnc ≥ 1,2 ΣMnv (21-1)\n donde:\n ΣMnc = suma de los momentos nominales de flexión de las columnas que llegan al nudo, evaluados en las caras del nudo. La resistencia a la flexión de la columna debe calcularse para la fuerza axial amplificada, consistente con la dirección de las fuerzas laterales consideradas, que conduzca a la resistencia a la flexión más baja.\n ΣMnv = suma de los momentos resistentes nominales a flexión de las vigas que llegan al nudo, evaluados en las caras del nudo. En vigas T, cuando la losa está en tracción debida al momento en la cara del nudo, debe suponerse que el refuerzo de la losa dentro del ancho efectivo definido en 8.10 contribuye a Mnv, siempre que el refuerzo de la losa esté adecuadamente anclado en la sección crítica para flexión.\n Las resistencias a la flexión deben sumarse de tal manera que los momentos de las columnas se opongan a los momentos de las vigas. Debe satisfacerse la ecuación (21-1) para momentos en las vigas actuando en ambas direcciones en el plano vertical del pórtico que se considera.\n\n Fig. 21.6.2.2 Resistencia a flexión de las columnas en las caras de los nudos",
    "pagina": 192
   },
   {
@@ -413,7 +412,7 @@
   },
   {
    "numero": "21.6.4.1",
-   "texto": "Debe proporcionarse refuerzo transversal en las cantidades que se especifican en (a) hasta (e), a menos que en 21.6.3.2 ó 21.6.5 se exija mayor cantidad:\n (a) La cuantía volumétrica de refuerzo en espiral o de estribos cerrados de confinamiento circulares, ρs , no debe ser menor que la requerida en la ecuación (21-2).\n ρ 0,12 s\n f c fyt = ′ (21-\n 2) y no debe ser menor que la requerida en 10.9.3 por la ecuación (10-5). (b) En columnas de núcleo rectangular, el área total de la sección transversal del refuerzo de estribos cerrados de confinamiento rectangulares y grapas suplementarias, Ash, no debe ser menor que la requerida por las ecuaciones (21-3) y (21-4)\n\n 0,3 1 c\n yh\n s b f Ag c Ash\n f Ach\n ′ = − [ ] ( ) ( ) [ ] (21-3)\n\n 0,09 c\n yh\n s b f c Ash\n f\n ′ = (21-4)\n Donde s es el espaciamiento del refuerzo de confinamiento, bc es la dimensión del núcleo confinado del elemento normal al refuerzo con área Ash y esfuerzo de fluencia fyh medida centro a centro del refuerzo de confinamiento. Ach es el área del núcleo confinado medida al exterior del refuerzo de confinamiento.\n (c) El refuerzo transversal debe disponerse mediante estribos cerrados de confinamiento sencillos o múltiples. Se pueden usar grapas suplementarias del mismo diámetro de barra y con el mismo espaciamiento que los estribos cerrados de confinamiento. Cada extremo de las grapas suplementarias debe enlazar una barra perimetral del refuerzo longitudinal.\n (d) Cuando la resistencia de diseño del núcleo de la sección transversal del elemento satisface los requisitos de las combinaciones de carga de diseño, incluyendo el efecto sísmico, no es necesario satisfacer la ecuación (21-3) y 10.9.3.\n (e) Si el espesor de concreto fuera del refuerzo transversal de confinamiento excede 100 mm, debe colocarse refuerzo transversal adicional con un espaciamiento no mayor a 300 mm. El recubrimiento de concreto sobre el refuerzo adicional no debe exceder de 100 mm.\n\n Ash = 2 (as1 + as2 cosθ)\n\n Ash = 2 as1 + as2\n\n Fig. 21.6.4.1 Ejemplos de determinación de Ash",
+   "texto": "Debe proporcionarse refuerzo transversal en las cantidades que se especifican en (a) hasta (e), a menos que en 21.6.3.2 ó 21.6.5 se exija mayor cantidad:\n (a) La cuantía volumétrica de refuerzo en espiral o de estribos cerrados de confinamiento circulares, ρs, no debe ser menor que la requerida en la ecuación (21-2)\n ρs = 0,12 f’c / fyt (21-2)\n y no debe ser menor que la requerida en 10.9.3 por la ecuación (10-5).\n (b) En columnas de núcleo rectangular, el área total de la sección transversal del refuerzo de estribos cerrados de confinamiento rectangulares y grapas suplementarias, Ash, no debe ser menor que la requerida por las ecuaciones (21-3) y (21-4)\n Ash = 0,3 (s bc f’c / fyh) [(Ag / Ach) − 1] (21-3)\n Ash = 0,09 s bc f’c / fyh (21-4)\n Donde s es el espaciamiento del refuerzo de confinamiento, bc es la dimensión del núcleo confinado del elemento normal al refuerzo con área Ash y esfuerzo de fluencia fyh medida centro a centro del refuerzo de confinamiento. Ach es el área del núcleo confinado medida al exterior del refuerzo de confinamiento.\n (c) El refuerzo transversal debe disponerse mediante estribos cerrados de confinamiento sencillos o múltiples. Se pueden usar grapas suplementarias del mismo diámetro de barra y con el mismo espaciamiento que los estribos cerrados de confinamiento. Cada extremo de las grapas suplementarias debe enlazar una barra perimetral del refuerzo longitudinal.\n (d) Cuando la resistencia de diseño del núcleo de la sección transversal del elemento satisface los requisitos de las combinaciones de carga de diseño, incluyendo el efecto sísmico, no es necesario satisfacer la ecuación (21-3) y 10.9.3.\n (e) Si el espesor de concreto fuera del refuerzo transversal de confinamiento excede 100 mm, debe colocarse refuerzo transversal adicional con un espaciamiento no mayor a 300 mm. El recubrimiento de concreto sobre el refuerzo adicional no debe exceder de 100 mm.\n\n Ash = 2 (as1 + as2 cosθ)\n\n Ash = 2 as1 + as2\n\n Fig. 21.6.4.1 Ejemplos de determinación de Ash",
    "pagina": 193
   },
   {
@@ -450,8 +449,8 @@
   },
   {
    "numero": "21.7",
-   "epigrafe": "Requisitos Para Los Nudos De Los Edificios Con Sistema",
-   "texto": "RESISTENTE A FUERZAS LATERALES DE PÓRTICOS Y DUALES TIPO II",
+   "epigrafe": "Requisitos Para Los Nudos De Los Edificios Con Sistema Resistente A Fuerzas Laterales De Pórticos Y Duales Tipo II",
+   "texto": "Requisitos Para Los Nudos De Los Edificios Con Sistema Resistente A Fuerzas Laterales De Pórticos Y Duales Tipo II",
    "pagina": 195
   },
   {
@@ -515,7 +514,7 @@
   },
   {
    "numero": "21.7.4.1",
-   "texto": "La resistencia Vn en el nudo no debe ser mayor que las fuerzas especificadas a continuación, para concreto de peso normal: Para nudos confinados en las cuatro caras: … 1,7 f c Aj ′\n Para nudos confinados en tres caras o en dos caras opuestas: … 1,2 f c Aj ′\n Para otros casos … 1,0 f c Aj ′\n\n Se considera que un elemento (viga) proporciona confinamiento al nudo si al menos las tres cuartas partes de la cara lateral del nudo está cubierta por el elemento que llega al nudo.\n Aj es el área efectiva de la sección transversal dentro del nudo en la dirección de análisis, calculada como el producto de la profundidad del nudo por su ancho efectivo. La profundidad del nudo es la dimensión total de la columna en la dirección de análisis. El ancho efectivo del nudo es el ancho total de la columna, excepto que cuando la viga llega a una columna más ancha que ésta, el ancho efectivo del nudo no debe exceder el menor de (a) y (b): (a) el ancho de la viga más la profundidad del nudo. Si el ancho difiere a ambos lados de la columna, se utilizará el promedio de ellos.\n (b) dos veces la distancia del eje longitudinal de la viga al borde más cercano de la columna.\n\n Fig. 21.7.4.1 Área efectiva en el nudo",
+   "texto": "La resistencia Vn en el nudo no debe ser mayor que las fuerzas especificadas a continuación, para concreto de peso normal:\n | Nudo | Vn máximo\n | Para nudos confinados en las cuatro caras: | 1,7 √f’c Aj\n | Para nudos confinados en tres caras o en dos caras opuestas: | 1,2 √f’c Aj\n | Para otros casos | 1,0 √f’c Aj\n Se considera que un elemento (viga) proporciona confinamiento al nudo si al menos las tres cuartas partes de la cara lateral del nudo está cubierta por el elemento que llega al nudo.\n Aj es el área efectiva de la sección transversal dentro del nudo en la dirección de análisis, calculada como el producto de la profundidad del nudo por su ancho efectivo. La profundidad del nudo es la dimensión total de la columna en la dirección de análisis. El ancho efectivo del nudo es el ancho total de la columna, excepto que cuando la viga llega a una columna más ancha que ésta, el ancho efectivo del nudo no debe exceder el menor de (a) y (b):\n (a) el ancho de la viga más la profundidad del nudo. Si el ancho difiere a ambos lados de la columna, se utilizará el promedio de ellos.\n (b) dos veces la distancia del eje longitudinal de la viga al borde más cercano de la columna.\n\n Fig. 21.7.4.1 Área efectiva en el nudo",
    "pagina": 196
   },
   {
@@ -640,7 +639,7 @@
   },
   {
    "numero": "21.9.4.3",
-   "texto": "En un muro deben emplearse cuando menos dos capas de refuerzo cuando:\n (a) El espesor del muro sea mayor o igual de 200 mm. (b) O cuando la fuerza cortante Vu exceda 0,17 Acv f c′",
+   "texto": "En un muro deben emplearse cuando menos dos capas de refuerzo cuando:\n (a) El espesor del muro sea mayor o igual de 200 mm.\n (b) O cuando la fuerza cortante Vu exceda 0,17 Acv √f’c",
    "pagina": 199
   },
   {
@@ -671,7 +670,7 @@
   },
   {
    "numero": "21.9.5.3",
-   "texto": "En todas las zonas de los muros o segmentos de muro donde se espere fluencia por flexión del refuerzo vertical como consecuencia de la respuesta sísmica inelástica de la estructura, el cortante de diseño Vu deberá ajustarse a la capacidad en flexión instalada del muro o segmento de muro mediante:\n Mn Vu Vua\n Mua ≥ ( ) ( ) (21-5)\n Donde Vua y Mua son el cortante y el momento amplificados provenientes del análisis y Mn es el momento nominal resistente del muro, calculado con los aceros realmente colocados, asociado a la carga Pu. El cociente Mn/Mua no debe tomarse mayor que el coeficiente de reducción (R) utilizado en la determinación de las fuerzas laterales de sismo.\n\n Esta disposición podrá limitarse a una altura del muro medida desde la base\n equivalente a la longitud del muro m\n\n ,\n 4\n Mu\n Vu\n ó la altura de los dos primeros pisos, la\n que sea mayor.",
+   "texto": "En todas las zonas de los muros o segmentos de muro donde se espere fluencia por flexión del refuerzo vertical como consecuencia de la respuesta sísmica inelástica de la estructura, el cortante de diseño Vu deberá ajustarse a la capacidad en flexión instalada del muro o segmento de muro mediante:\n Vu ≥ Vua (Mn / Mua) (21-5)\n Donde Vua y Mua son el cortante y el momento amplificados provenientes del análisis y Mn es el momento nominal resistente del muro, calculado con los aceros realmente colocados, asociado a la carga Pu. El cociente Mn/Mua no debe tomarse mayor que el coeficiente de reducción (R) utilizado en la determinación de las fuerzas laterales de sismo.\n Esta disposición podrá limitarse a una altura del muro medida desde la base equivalente a la longitud del muro ℓm, Mu / (4 Vu) ó la altura de los dos primeros pisos, la que sea mayor.",
    "pagina": 199
   },
   {
@@ -728,7 +727,7 @@
   },
   {
    "numero": "21.9.7.4",
-   "texto": "Este acápite se aplica a los muros que son efectivamente continuos desde la base de la estructura hasta su parte superior y son diseñados para tener una única sección crítica para flexión y carga axial. Los muros que no satisfagan estos requisitos deben ser diseñados usando 21.9.7.5.\n\n (a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de:\n 600 ( / )\n m\n m c\n u h δ ≥ (21-6)\n m es la longitud del muro en el plano horizontal y hm la altura total del mismo. δu es el desplazamiento lateral inelástico producido por el sismo de diseñó en el nivel más alto del muro correspondiente a m h y debe ser calculado de acuerdo al artículo 16.4 de la NTE E.030, El valor de c en la ecuación (21-6) corresponde a la mayor profundidad del eje neutro calculada para la fuerza axial amplificada y la resistencia nominal a momento consistente con el desplazamiento de diseño δu. El cociente\n δ / m u h en la ecuación (21-6) no debe tomarse menor que 0,005.\n Para muros con alas, el cálculo de la profundidad del eje neutro debe incluir el ancho de ala efectivo como se define en 21.9.6.3. Deberá utilizarse el mayor valor de c que se obtenga de considerar compresión en cada extremo del muro.\n\n (b) Donde se requieran elementos confinados de borde, el refuerzo del mismo debe extenderse verticalmente desde la sección crítica a una distancia no\n menor que el mayor valor entre m y\n 4\n Mu\n Vu\n .\n\n Fig. 21.9.7.4 Elementos confinados de borde en muros.",
+   "texto": "Este acápite se aplica a los muros que son efectivamente continuos desde la base de la estructura hasta su parte superior y son diseñados para tener una única sección crítica para flexión y carga axial. Los muros que no satisfagan estos requisitos deben ser diseñados usando 21.9.7.5.\n (a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de:\n c ≥ ℓm / [600 (δu / hm)] (21-6)\n ℓm es la longitud del muro en el plano horizontal y hm la altura total del mismo. δu es el desplazamiento lateral inelástico producido por el sismo de diseñó en el nivel más alto del muro correspondiente a hm y debe ser calculado de acuerdo al artículo 16.4 de la NTE E.030, El valor de c en la ecuación (21-6) corresponde a la mayor profundidad del eje neutro calculada para la fuerza axial amplificada y la resistencia nominal a momento consistente con el desplazamiento de diseño δu. El cociente δu / hm en la ecuación (21-6) no debe tomarse menor que 0,005.\n Para muros con alas, el cálculo de la profundidad del eje neutro debe incluir el ancho de ala efectivo como se define en 21.9.6.3. Deberá utilizarse el mayor valor de c que se obtenga de considerar compresión en cada extremo del muro.\n (b) Donde se requieran elementos confinados de borde, el refuerzo del mismo debe extenderse verticalmente desde la sección crítica a una distancia no menor que el mayor valor entre ℓm y Mu / (4 Vu).\n\n Fig. 21.9.7.4 Elementos confinados de borde en muros.",
    "pagina": 200
   },
   {
@@ -738,7 +737,7 @@
   },
   {
    "numero": "21.9.7.6",
-   "texto": "En donde se requieran elementos de borde confinados de acuerdo con 21.9.7.4 ó 21.9.7.5 se debe cumplir con las siguientes condiciones:\n (a) El elemento de borde se debe extender horizontalmente desde la fibra extrema en compresión hasta una distancia no menor que el mayor valor entre ( ) 0,1 c m − y / 2 c ,\n (b) En las secciones con alas, los elementos de borde deben incluir el ancho efectivo del ala en compresión y se deben extender por lo menos 300 mm dentro del alma.\n (c) El refuerzo transversal de los elementos de borde debe cumplir con los requisitos especificados en 21.6.4.1.c, y 21.6.4.3.\n (d) Los estribos serán como mínimo de 8 mm de diámetro para barras longitudinales de hasta 5/8” de diámetro, de 3/8” para barras longitudinales de hasta 1” de diámetro y de 1/2\" para barras longitudinales de mayor diámetro.\n (e) El espaciamiento no debe exceder al menor entre los siguientes valores:\n - Diez veces el diámetro de la barra longitudinal confinada de menor diámetro. - La menor dimensión de la sección transversal del elemento de borde. - 250 mm.\n (f) El refuerzo transversal de los elementos de borde en la base del muro debe\n extenderse dentro del apoyo en por lo menos en la longitud de desarrollo en tracción del refuerzo longitudinal de mayor diámetro de los elementos de borde, a menos que los elementos de borde terminen en una zapata o losa de cimentación, en donde el refuerzo transversal de los elementos de borde se debe extender, por lo menos, 300 mm dentro de la zapata o losa de cimentación.\n (g) El refuerzo horizontal en el alma del muro debe estar anclado para desarrollar\n fy, dentro del núcleo confinado del elemento de borde. El refuerzo horizontal que termine en los bordes de muros estructurales debe tener un gancho estándar que enganche el refuerzo de borde.",
+   "texto": "En donde se requieran elementos de borde confinados de acuerdo con 21.9.7.4 ó 21.9.7.5 se debe cumplir con las siguientes condiciones:\n (a) El elemento de borde se debe extender horizontalmente desde la fibra extrema en compresión hasta una distancia no menor que el mayor valor entre (c − 0,1 ℓm) y c/2,\n (b) En las secciones con alas, los elementos de borde deben incluir el ancho efectivo del ala en compresión y se deben extender por lo menos 300 mm dentro del alma.\n (c) El refuerzo transversal de los elementos de borde debe cumplir con los requisitos especificados en 21.6.4.1.c, y 21.6.4.3.\n (d) Los estribos serán como mínimo de 8 mm de diámetro para barras longitudinales de hasta 5/8” de diámetro, de 3/8” para barras longitudinales de hasta 1” de diámetro y de 1/2\" para barras longitudinales de mayor diámetro.\n (e) El espaciamiento no debe exceder al menor entre los siguientes valores:\n - Diez veces el diámetro de la barra longitudinal confinada de menor diámetro.\n - La menor dimensión de la sección transversal del elemento de borde.\n - 250 mm.\n (f) El refuerzo transversal de los elementos de borde en la base del muro debe extenderse dentro del apoyo en por lo menos en la longitud de desarrollo en tracción del refuerzo longitudinal de mayor diámetro de los elementos de borde, a menos que los elementos de borde terminen en una zapata o losa de cimentación, en donde el refuerzo transversal de los elementos de borde se debe extender, por lo menos, 300 mm dentro de la zapata o losa de cimentación.\n (g) El refuerzo horizontal en el alma del muro debe estar anclado para desarrollar fy, dentro del núcleo confinado del elemento de borde. El refuerzo horizontal que termine en los bordes de muros estructurales debe tener un gancho estándar que enganche el refuerzo de borde.",
    "pagina": 202
   },
   {
@@ -749,7 +748,7 @@
   {
    "numero": "21.9.8",
    "epigrafe": "Juntas de construcción",
-   "texto": "Todas las juntas de construcción en los muros estructurales deben cumplir con lo indicado en 6.4. El refuerzo vertical distribuido en el alma del muro debe asegurar una adecuada resistencia al corte por fricción en todas las juntas. La resistencia a corte por fricción se calculará con:\n φ Vn = φ μ (Nu + Av fy) φ = 0,85 (21-7)\n La fuerza normal (Nu) se calculará como 0,9 veces la carga muerta. El coeficiente de fricción (μ) debe ajustarse a lo indicado en 11.7.4.3 indicando claramente en los planos el detalle de la junta y su tratamiento. La resistencia a corte por fricción deberá ser mayor al cortante Vu, calculado de acuerdo al 21.9.5.3",
+   "texto": "Todas las juntas de construcción en los muros estructurales deben cumplir con lo indicado en 6.4. El refuerzo vertical distribuido en el alma del muro debe asegurar una adecuada resistencia al corte por fricción en todas las juntas. La resistencia a corte por fricción se calculará con:\n φ Vn = φ μ (Nu + Av fy), con φ = 0,85 (21-7)\n La fuerza normal (Nu) se calculará como 0,9 veces la carga muerta. El coeficiente de fricción (μ) debe ajustarse a lo indicado en 11.7.4.3 indicando claramente en los planos el detalle de la junta y su tratamiento. La resistencia a corte por fricción deberá ser mayor al cortante Vu, calculado de acuerdo al 21.9.5.3",
    "pagina": 202
   },
   {
@@ -775,12 +774,12 @@
   },
   {
    "numero": "21.9.9.4",
-   "texto": "Para cualquier relación de aspecto, Vn no debe suponerse mayor que 0,83Acw f c′ donde Acw representa el área de la sección transversal de concreto de la viga de acople (área del alma).",
+   "texto": "Para cualquier relación de aspecto, Vn no debe suponerse mayor que 0,83 Acw √f’c donde Acw representa el área de la sección transversal de concreto de la viga de acople (área del alma).",
    "pagina": 203
   },
   {
    "numero": "21.9.9.5",
-   "texto": "Las vigas de acople reforzadas con dos grupos de barras que se crucen diagonalmente colocadas en forma simétrica respecto al centro de la luz deben cumplir con (a) a (f):\n\n (a) Vn, se debe determinar mediante:\n Vn = 2 Avd\n fy\n sen α\n ≤\n 0,83Acw f c′ (21-8)\n donde α es el ángulo entre las barras colocadas diagonalmente y el eje longitudinal de la viga de acoplamiento y Avd es el área total en cada grupo de barras colocadas diagonalmente.\n (b) Cada grupo de barras colocado diagonalmente debe consistir en un mínimo de cuatro barras colocadas en dos o más capas. Las barras colocadas diagonalmente deben tener anclajes en tracción en el muro capaces de desarrollar 1,25 fy;\n (c) Cada grupo de barras colocadas diagonalmente debe estar confinado por estribos cerrados o espirales en un núcleo con lados medidos al exterior del refuerzo transversal no menor de 0,5 bw en la dirección paralela al ancho de la viga y de 0,2 bw en la otra dirección. El espaciamiento del refuerzo transversal no deberá exceder de seis veces el diámetro de las barras diagonales. Adicionalmente se debe proveer de refuerzo paralelo y transversal al eje longitudinal de la viga con una cuantía mínima en cada dirección de 0,0025 y con un espaciamiento que no exceda de 250 mm.\n\n Fig. 21.9.9.5 i Refuerzo de vigas de acople\n (d) Alternativamente al armado especificado en c, podrá proveerse refuerzo\n transversal de confinamiento en toda la longitud de la viga que satisfaga lo dispuesto en 21.6.4.1 a), b) y c) con un espaciamiento que no exceda de seis veces el diámetro de las barras diagonales ni de 150 mm y con estribos o grapas suplementarias espaciados a no más de 200 mm tanto horizontal como verticalmente. Adicionalmente se debe proveer refuerzo distribuido paralelo al eje longitudinal de la viga con una cuantía mínima de 0,0025 con un espaciamiento que no exceda de 200 mm y un diámetro mínimo de 1/2”.\n\n Fig. 21.9.9.5 ii Refuerzo alternativo de vigas de acople",
+   "texto": "Las vigas de acople reforzadas con dos grupos de barras que se crucen diagonalmente colocadas en forma simétrica respecto al centro de la luz deben cumplir con (a) a (f):\n (a) Vn, se debe determinar mediante:\n Vn = 2 Avd fy sen α ≤ 0,83 Acw √f’c (21-8)\n donde α es el ángulo entre las barras colocadas diagonalmente y el eje longitudinal de la viga de acoplamiento y Avd es el área total en cada grupo de barras colocadas diagonalmente.\n (b) Cada grupo de barras colocado diagonalmente debe consistir en un mínimo de cuatro barras colocadas en dos o más capas. Las barras colocadas diagonalmente deben tener anclajes en tracción en el muro capaces de desarrollar 1,25 fy;\n (c) Cada grupo de barras colocadas diagonalmente debe estar confinado por estribos cerrados o espirales en un núcleo con lados medidos al exterior del refuerzo transversal no menor de 0,5 bw en la dirección paralela al ancho de la viga y de 0,2 bw en la otra dirección. El espaciamiento del refuerzo transversal no deberá exceder de seis veces el diámetro de las barras diagonales. Adicionalmente se debe proveer de refuerzo paralelo y transversal al eje longitudinal de la viga con una cuantía mínima en cada dirección de 0,0025 y con un espaciamiento que no exceda de 250 mm.\n\n Fig. 21.9.9.5 i Refuerzo de vigas de acople (d) Alternativamente al armado especificado en c, podrá proveerse refuerzo transversal de confinamiento en toda la longitud de la viga que satisfaga lo dispuesto en 21.6.4.1 a), b) y c) con un espaciamiento que no exceda de seis veces el diámetro de las barras diagonales ni de 150 mm y con estribos o grapas suplementarias espaciados a no más de 200 mm tanto horizontal como verticalmente. Adicionalmente se debe proveer refuerzo distribuido paralelo al eje longitudinal de la viga con una cuantía mínima de 0,0025 con un espaciamiento que no exceda de 200 mm y un diámetro mínimo de 1/2”.\n\n Fig. 21.9.9.5 ii Refuerzo alternativo de vigas de acople",
    "pagina": 203
   },
   {
@@ -934,12 +933,12 @@
   },
   {
    "numero": "21.11.7.1",
-   "texto": "La resistencia Vn de un diafragma estructural no debe exceder:\n\n ( ) 0,17 ρ Vn Acv f c t fy ′ = + (21-9)",
+   "texto": "La resistencia Vn de un diafragma estructural no debe exceder:\n Vn = Acv (0,17 √f’c + ρt fy) (21-9)",
    "pagina": 207
   },
   {
    "numero": "21.11.7.2",
-   "texto": "La resistencia Vn de los diafragmas formados por sobrelosas compuestas construidas en sitio y de los diafragmas formados por sobrelosas no compuestas colocadas sobre un piso prefabricado no debe exceder de:\n ( ) ρ Vn Acv t fy = (21-10)\n en donde Acv se basa en el espesor de la sobrelosa. El refuerzo requerido se debe distribuir uniformemente en ambas direcciones.",
+   "texto": "La resistencia Vn de los diafragmas formados por sobrelosas compuestas construidas en sitio y de los diafragmas formados por sobrelosas no compuestas colocadas sobre un piso prefabricado no debe exceder de:\n Vn = Acv ρt fy (21-10)\n en donde Acv se basa en el espesor de la sobrelosa. El refuerzo requerido se debe distribuir uniformemente en ambas direcciones.",
    "pagina": 208
   },
   {
@@ -2439,7 +2438,7 @@
      "citas": [
       {
        "articulo": "21.9.7.4",
-       "extracto": "(a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de: c ≥ ℓm / 600 (δu / hm) (21-6)"
+       "extracto": "(a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de: c ≥ ℓm / [600 (δu / hm)] (21-6)"
       }
      ]
     },
@@ -2473,7 +2472,7 @@
      "citas": [
       {
        "articulo": "21.9.7.4",
-       "extracto": "c ≥ ℓm / 600 (δu / hm) (21-6)… El cociente δu / hm en la ecuación (21-6) no debe tomarse menor que 0,005."
+       "extracto": "c ≥ ℓm / [600 (δu / hm)] (21-6)… El cociente δu / hm en la ecuación (21-6) no debe tomarse menor que 0,005."
       }
      ]
     },
@@ -2959,7 +2958,7 @@
      "citas": [
       {
        "articulo": "21.9.7.4",
-       "extracto": "(a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de: c ≥ ℓm / 600 (δu / hm) (21-6)"
+       "extracto": "(a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de: c ≥ ℓm / [600 (δu / hm)] (21-6)"
       }
      ]
     },

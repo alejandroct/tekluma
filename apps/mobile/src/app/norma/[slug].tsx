@@ -12,6 +12,7 @@ import {
   Text,
   TextInput,
   useWindowDimensions,
+  Platform,
   View,
 } from "react-native";
 import { Stack, useLocalSearchParams } from "expo-router";
@@ -21,6 +22,7 @@ import * as Haptics from "expo-haptics";
 import { IconoBuscar, IconoCerrar, IconoChevron, IconoCompartir, IconoIndice, IconoPagina } from "@/components/Iconos";
 import {
   abrirNorma,
+  bloquesTexto,
   buscar,
   enlaceArticulo,
   esEncabezado,
@@ -351,7 +353,7 @@ const FilaArticulo = memo(function FilaArticulo({ art, slug, t, destacado, patro
           <Text style={[estilos.articuloNumero, { color: t.ambar }]}>{art.n}</Text>
           {!!art.e && <Text style={[estilos.articuloEpigrafe, { color: t.texto }]}>{art.e}</Text>}
         </View>
-        <TextoResaltado texto={art.t.trim()} patron={patron} style={[estilos.articuloTexto, { color: t.texto }]} marca={t.ambar} />
+        <TextoArticulo texto={art.t} patron={patron} t={t} />
         {art.f?.map((f) => (
           <Pressable key={f.src} onPress={() => onFigura(f)} style={[estilos.figura, { borderColor: t.borde }]}>
             <Image source={{ uri: urlNorma(slug, f.src) }} style={{ width: anchoFigura - 2, height: ((anchoFigura - 2) * f.h) / f.w }} resizeMode="contain" />
@@ -391,6 +393,52 @@ function Resaltado({ color }: { color: string }) {
     <>
       <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: color }, estiloFondo]} />
       <Animated.View pointerEvents="none" style={[estilos.barraDestacado, { backgroundColor: color }, estiloBarra]} />
+    </>
+  );
+}
+
+/** Párrafos, fórmulas numeradas (como en la hoja, con su número a la derecha) y tablas que se deslizan de lado. */
+function TextoArticulo({ texto, patron, t }: { texto: string; patron: RegExp | null; t: Tema }) {
+  const bloques = useMemo(() => bloquesTexto(texto), [texto]);
+  return (
+    <>
+      {bloques.map((b, i) => {
+        if (b.tipo === "parrafo") {
+          return <TextoResaltado key={i} texto={b.texto} patron={patron} style={[estilos.articuloTexto, { color: t.texto }]} marca={t.ambar} />;
+        }
+        if (b.tipo === "formula") {
+          return (
+            <View key={i} style={[estilos.formula, { borderColor: t.borde, backgroundColor: t.superficie }]}>
+              <TextoResaltado texto={b.expresion} patron={patron} style={[estilos.formulaTexto, { color: t.texto }]} marca={t.ambar} />
+              <Text style={[estilos.formulaNumero, { color: t.ambar }]}>({b.numero})</Text>
+            </View>
+          );
+        }
+        const columnas = Math.max(...b.filas.map((f) => f.length));
+        const anchos = Array.from({ length: columnas }, (_, c) =>
+          Math.min(230, Math.max(72, Math.max(...b.filas.map((f) => (f[c] ?? "").length)) * 7 + 22)),
+        );
+        return (
+          <ScrollView key={i} horizontal showsHorizontalScrollIndicator={false} style={estilos.tablaMarco}>
+            <View style={[estilos.tabla, { borderColor: t.borde }]}>
+              {b.filas.map((fila, f) => (
+                <View key={f} style={[estilos.tablaFila, { borderColor: t.borde, borderTopWidth: f ? StyleSheet.hairlineWidth : 0, backgroundColor: f === 0 ? t.superficie : "transparent" }]}>
+                  {anchos.map((ancho, c) => (
+                    <View key={c} style={[estilos.tablaCelda, { width: ancho, borderColor: t.borde, borderLeftWidth: c ? StyleSheet.hairlineWidth : 0 }]}>
+                      <TextoResaltado
+                        texto={fila[c] ?? ""}
+                        patron={patron}
+                        style={[f === 0 ? estilos.tablaEncabezado : estilos.tablaTexto, { color: f === 0 ? t.textoSuave : t.texto }]}
+                        marca={t.ambar}
+                      />
+                    </View>
+                  ))}
+                </View>
+              ))}
+            </View>
+          </ScrollView>
+        );
+      })}
     </>
   );
 }
@@ -625,6 +673,15 @@ const estilos = StyleSheet.create({
   articuloNumero: { fontFamily: MONO_FUERTE, fontSize: 13, letterSpacing: 0.3 },
   articuloEpigrafe: { fontSize: 15, fontWeight: "700", flexShrink: 1 },
   articuloTexto: { fontSize: 15.5, lineHeight: 23 },
+  formula: { flexDirection: "row", alignItems: "center", gap: 12, borderWidth: StyleSheet.hairlineWidth, borderRadius: 6, paddingHorizontal: 14, paddingVertical: 10, marginVertical: 2 },
+  formulaTexto: { flex: 1, fontSize: 16.5, lineHeight: 24, fontStyle: "italic", fontFamily: Platform.select({ ios: "Georgia", default: "serif" }) },
+  formulaNumero: { fontFamily: MONO, fontSize: 12 },
+  tablaMarco: { marginVertical: 4, flexGrow: 0 },
+  tabla: { borderWidth: StyleSheet.hairlineWidth, borderRadius: 6, overflow: "hidden" },
+  tablaFila: { flexDirection: "row" },
+  tablaCelda: { paddingHorizontal: 9, paddingVertical: 7, justifyContent: "center" },
+  tablaEncabezado: { fontFamily: MONO, fontSize: 11, lineHeight: 15, letterSpacing: 0.3 },
+  tablaTexto: { fontSize: 14, lineHeight: 19 },
   articuloPie: { flexDirection: "row", gap: 8, marginTop: 2 },
   salto: { flexDirection: "row", alignItems: "center", gap: 10, paddingHorizontal: 20, paddingVertical: 8 },
   saltoLinea: { flex: 1, height: StyleSheet.hairlineWidth },

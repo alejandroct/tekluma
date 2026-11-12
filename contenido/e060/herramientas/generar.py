@@ -4,7 +4,7 @@ Fuente: E.060 Concreto Armado (DS N° 010-2009-VIVIENDA), PDF de 227 páginas.
 Los artículos salen del texto literal del PDF (con su página); las tarjetas se escriben a mano
 leyendo cada página, incluidas tablas, fórmulas y figuras.
 """
-import base64, json, os
+import base64, json, os, re
 
 S = os.environ.get("E060_TRABAJO", "/private/tmp/claude-501/e060")
 SALIDA = "/Users/alejandrocabreratavara/Documents/tekluma/contenido/e060"
@@ -88,9 +88,45 @@ _a["texto"] = _a["texto"].split("\n\n ANEXO I")[0]
 # En los caps. 12 y 22 la extracción invirtió los subíndices de ℓ («d ℓ» por «ℓd»).
 for _a in ARTICULOS:
     if _a["numero"].split(".")[0] in ("12", "22"):
-        for _viejo, _nuevo in (("dg ℓ", "ℓdg"), ("dc ℓ", "ℓdc"), ("d ℓ", "ℓd")):
-            _a["texto"] = _a["texto"].replace(_viejo, _nuevo)
+        _a["texto"] = re.sub(r"(?<!\w)(dg|dc|d) ℓ", r"ℓ\1", _a["texto"])
         _a["texto"] = _a["texto"].replace(" ,", ",").replace("ℓd,debe", "ℓd, debe")
+# Epígrafes partidos en dos líneas: la segunda quedó como texto del artículo («… EN MEZCLAS DE» + «PRUEBA»).
+for _a in ARTICULOS:
+    _t = _a["texto"].strip()
+    if _a.get("epigrafe") and len(_t) < 90 and _t == _t.upper() and _t.lower() != _a["epigrafe"].strip().lower():
+        _a["epigrafe"] = re.sub(r"\bI(i+)\b", lambda m: "I" + m[1].upper(), f'{_a["epigrafe"].strip()} {_t.title()}')
+        _a["texto"] = _a["epigrafe"]
+for _a in ARTICULOS:
+    _primera, _, _resto = _a["texto"].partition("\n")
+    _primera = _primera.strip()
+    if _a.get("epigrafe") and _resto and 0 < len(_primera) < 40 and _primera == _primera.upper() and re.search(r"[A-ZÁÉÍÓÚÑ]{3}", _primera):
+        _a["epigrafe"] = f'{_a["epigrafe"].strip()} {_primera.title()}'
+        _a["texto"] = _resto.strip()
+# Fórmulas y tablas transcritas leyendo cada página (ver limpieza.py).
+from limpieza import CORTES, EPIGRAFES, EPIGRAFES_FALSOS, LIMPIEZA, notacion
+for _n, _marca in CORTES.items():
+    _a = next(a for a in ARTICULOS if a["numero"] == _n)
+    assert _marca in _a["texto"], (_n, _marca)
+    _a["texto"] = _a["texto"].split(_marca)[0]
+_fallidas = []
+for _n, _viejo, _nuevo in LIMPIEZA:
+    _a = next(a for a in ARTICULOS if a["numero"] == _n)
+    if _viejo not in _a["texto"]:
+        _fallidas.append(f"{_n}: {_viejo[:70]!r}\n    texto: {_a['texto']!r}")
+    _a["texto"] = _a["texto"].replace(_viejo, _nuevo, 1)
+assert not _fallidas, "\n".join(_fallidas)
+POR_NUMERO_LIMPIO = {a["numero"]: a for a in ARTICULOS}
+POR_NUMERO_LIMPIO["2.1"]["texto"] = notacion(POR_NUMERO_LIMPIO["2.1"]["texto"])
+for _a in ARTICULOS:
+    # Rótulos de figura partidos en dos líneas: la segunda («cuales se puede reducir…») se une a la primera.
+    _a["texto"] = re.sub(r"(\n *Fig\.[^\n]*)\n +(?=[a-záéíóúñ(])", r"\1 ", _a["texto"])
+    _a["texto"] = re.sub(r"(?<=\S) ,", ",", _a["texto"])
+for _a in ARTICULOS:
+    if _a["numero"] in EPIGRAFES_FALSOS:
+        assert _a["texto"].lower().startswith(_a["epigrafe"][:12].strip().lower()), (_a["numero"], _a["texto"][:40])
+        del _a["epigrafe"]
+    if _a["numero"] in EPIGRAFES:
+        _a["epigrafe"] = EPIGRAFES[_a["numero"]]
 POR_NUMERO = {a["numero"]: a for a in ARTICULOS}
 
 NORMA = {
@@ -463,7 +499,7 @@ CAP9 = [
     completar("En elementos continuos en ambos extremos: Ie promedio = (Ie1 + Ie2 + {{2}} Ie3) / 4.",
               "9.6.2.4", "(a) En elementos continuos en ambos extremos: Ie promedio = ( Ie1 + Ie2 + 2 Ie3 ) / 4 (9-13)"),
     tabla("Factor ξ por duración de cargas sostenidas", ["ξ"], XI, 1, 0,
-          "9.6.2.5", "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: 5 años o más … 2,0 12 meses … 1,4 6 meses … 1,2 3 meses … 1,0"),
+          "9.6.2.5", "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"),
     imagen("Según la curva de la Fig. 9.6.2.5, ¿hacia qué valor tiende ξ para cargas sostenidas de 5 años o más?", figura("fig-9-6-2-5"),
            "ξ = 2,0", "9.6.2.5", "5 años o más … 2,0"),
     caso("Deflexión diferida: con ξ = {X} y cuantía de acero en compresión ρ′ = {R}, ¿cuánto vale λΔ = ξ / (1 + 50 ρ′)?",
@@ -477,10 +513,10 @@ CAP9 = [
            "9.6.2.6", "La deflexión calculada… no debe exceder los límites establecidos en la Tabla 9.2",
            "ℓ/480 para pisos o techos que soportan elementos no estructurales susceptibles de daño; ℓ/240 si no son susceptibles."),
     tabla("Cuantía mínima de retracción y temperatura en losas (9.7.2)", ["As / Ag"], CUANTIAS, 2, 0,
-          "9.7.2", "- Barras lisas 0,0025 - Barras corrugadas con fy < 420 Mpa 0,0020 - Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 Mpa 0,0018"),
+          "9.7.2", "Barras lisas 0,0025 Barras corrugadas con fy < 420 MPa 0,0020 Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 MPa 0,0018"),
     caso("Losa maciza de {H} cm de espesor con barras corrugadas fy = 420 MPa. ¿Área mínima de acero por retracción y temperatura por metro de ancho (cm²/m)?",
          {"H": {"etiqueta": "Espesor", "valores": [12, 15, 17, 20, 25], "unidad": "cm"}}, "0.0018*100*H", "cm²/m",
-         "9.7.2", "Barras corrugadas o malla de alambre… con fy ≥ 420 Mpa 0,0018",
+         "9.7.2", "Barras corrugadas o malla de alambre… con fy ≥ 420 MPa 0,0018",
          "As = 0,0018 × b × h, con b = 100 cm."),
     completar("El refuerzo por retracción y temperatura se coloca a no más de tres veces el espesor de la losa, sin exceder {{400 mm}}.",
               "9.7.3", "…deberá colocarse con un espaciamiento entre ejes menor o igual a tres veces el espesor de la losa, sin exceder de 400 mm."),
@@ -843,7 +879,7 @@ CAP11 = [
               "11.6.6.3", "El refuerzo para torsión debe extenderse por lo menos una distancia (bt + d) más allá del punto en que se requiera por análisis."),
     tabla("Coeficiente de fricción μ (cortante por fricción)", ["μ"],
           [("Concreto vaciado monolíticamente", ["1,4 λ"]), ("Contra concreto endurecido rugoso", ["1,0 λ"]), ("Contra concreto endurecido no rugoso", ["0,6 λ"])], 0, 0,
-          "11.7.4.3", "Para concreto colocado monolíticamente … 1,4λ - Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa… 1,0λ - … no intencionalmente rugosa … 0,6λ"),
+          "11.7.4.3", "Para concreto colocado monolíticamente … 1,4λ … Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa… 1,0λ … no intencionalmente rugosa … 0,6λ"),
     caso("Junta monolítica con refuerzo de cortante por fricción perpendicular Avf = {A} mm² y fy = 420 MPa. ¿Vn (kN)?",
          {"A": {"etiqueta": "Avf", "valores": [400, 600, 800], "unidad": "mm²"}},
          "A*420*1.4/1000", "kN",
@@ -900,7 +936,7 @@ CAP11 = [
               "11.12.1.2", "…pero no necesita estar más cerca de d/2 desde: (a) los bordes o las esquinas de las columnas, cargas concentradas, o áreas de reacción…"),
     concepto("¿Cuáles son las tres expresiones de Vc por punzonamiento en losas no preesforzadas y zapatas?",
              "El menor de: 0,17 (1 + 2/β) √f′c bo d; 0,083 (αs d/bo + 2) √f′c bo d; y 0,33 √f′c bo d.",
-             "11.12.2.1", "Vc debe ser el menor entre (a), (b) y (c): Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"),
+             "11.12.2.1", "Vc debe ser el menor entre (a), (b) y (c): (a) Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"),
     tabla("Factor αs para punzonamiento", ["αs"],
           [("Columna interior", ["40"]), ("Columna de borde", ["30"]), ("Columna en esquina", ["20"])], 1, 0,
           "11.12.2.1", "…donde αs es 40 para columnas interiores, 30 para columnas de borde, y 20 para columnas en esquina."),
@@ -1261,12 +1297,12 @@ CAP21 = [
     imagen("¿Cuándo se requieren elementos de borde confinados y qué dimensiones tienen?",
            figura("fig-21-9-7-4"),
            "Cuando c ≥ ℓm / [600 (δu/hm)], con δu/hm ≥ 0,005. Se extienden horizontalmente al menos el mayor de c − 0,1ℓm y c/2, y en altura el mayor de ℓm y Mu/4Vu.",
-           "21.9.7.4", "(a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de: c ≥ ℓm / 600 (δu / hm) (21-6)"),
+           "21.9.7.4", "(a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de: c ≥ ℓm / [600 (δu / hm)] (21-6)"),
     caso("Muro de ℓm = {L} mm con δu/hm = {R}. ¿Profundidad del eje neutro a partir de la cual se confinan los bordes (mm)?",
          {"L": {"etiqueta": "ℓm", "valores": [3000, 4000, 5000], "unidad": "mm"},
           "R": {"etiqueta": "δu/hm", "valores": [0.005, 0.0075, 0.01], "unidad": None}},
          "L/(600*R)", "mm",
-         "21.9.7.4", "c ≥ ℓm / 600 (δu / hm) (21-6)… El cociente δu / hm en la ecuación (21-6) no debe tomarse menor que 0,005."),
+         "21.9.7.4", "c ≥ ℓm / [600 (δu / hm)] (21-6)… El cociente δu / hm en la ecuación (21-6) no debe tomarse menor que 0,005."),
     tabla("Elementos de borde de muros", ["Requisito"],
           [("Espesor mínimo", ["150 mm"]), ("Recubrimiento mínimo", ["25 mm"]), ("Método de esfuerzos: confinar si", ["σ > 0,2 f′c"]), ("Método de esfuerzos: se puede cortar si", ["σ < 0,15 f′c"])], 2, 0,
           "21.9.7.5", "…deben tener elementos confinados en los bordes y alrededor de las aberturas cuando el esfuerzo de compresión máximo de la fibra extrema… sobrepase de 0,2 f’c. Los elementos de borde especiales pueden ser descontinuados donde el esfuerzo de compresión calculado sea menor que 0,15 f’c."),
@@ -2020,7 +2056,7 @@ CAP20 = [
          {"H": {"etiqueta": "h", "valores": [500, 600], "unidad": "mm"},
           "L": {"etiqueta": "ℓt", "valores": [6000, 7000, 8000], "unidad": "mm"}},
          "L^2/(20000*H)", "mm",
-         "20.5.2", "Δ1 ≤ ℓt² / 20000 h (20-1) donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor."),
+         "20.5.2", "Δ1 ≤ ℓt² / 20000 h (20-1) … donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor."),
     caso("En una prueba de carga se midió una deflexión máxima Δ1 = {D} mm. ¿Deflexión residual máxima aceptable por la ec. 20-2 (mm)?",
          {"D": {"etiqueta": "Δ1", "valores": [8, 12, 16, 20], "unidad": "mm"}},
          "D/4", "mm",
@@ -2862,7 +2898,7 @@ CAP9 += [
     om("Elemento preesforzado Clase U: ¿qué inercia se permite para sus deflexiones inmediatas?", ["Ie", "Icr", "Ig de la sección total", "0,5 Ig"], 2,
        "9.6.4.1", "se permite utilizar el momento de inercia de la sección total de concreto, Ig, para los elementos a flexión Clase U"),
     om("Losa con barras lisas: ¿cuantía mínima de retracción y temperatura?", ["0,0018", "0,0020", "0,0025", "0,0030"], 2,
-       "9.7.2", "- Barras lisas"),
+       "9.7.2", "Barras lisas"),
     om("Tendones como refuerzo de temperatura (ver figura): ¿qué compresión promedio mínima deben dar?", ["0,5 MPa", "0,7 MPa", "1,0 MPa", "1,4 MPa"], 1,
        "9.7.7", "produzca un esfuerzo promedio de compresión mínimo de 0,7 MPa sobre el área bruta de concreto.", fig="fig-9-7-7"),
     om("Tendones usados como refuerzo de temperatura: ¿espaciamiento máximo entre ellos?", ["1,4 m", "1,5 m", "1,8 m", "2,4 m"], 2,
@@ -2872,7 +2908,7 @@ CAP9 += [
     om("Control de fisuración: ¿qué valor máximo puede tener el parámetro Z?", ["20 kN/mm", "26 kN/mm", "31 kN/mm", "36 kN/mm"], 1,
        "9.9.3", "permita obtener un valor del parámetro Z menor o igual que 26 KN/mm."),
     om("En la figura, ¿qué representa Act?", ["El área de acero", "El área de concreto en tracción alrededor del refuerzo, entre el número de barras", "El área bruta", "El área del ala"], 1,
-       "9.9.3", "Act: área efectiva del concreto en tracción (mm2) que rodea al refuerzo principal de", fig="fig-9-9-3"),
+       "9.9.3", "Act: área efectiva del concreto en tracción (mm²) que rodea al refuerzo principal de tracción", fig="fig-9-9-3"),
     om("¿Bastan los requisitos de Z para un elemento en ambiente agresivo o que debe ser impermeable?", ["Sí", "No: deben tomarse precauciones especiales", "Sí, con Z ≤ 20", "Solo en losas"], 1,
        "9.9.4", "Las disposiciones del 9.9.3 no son suficientes para elementos expuestos a ambientes agresivos ni para obtener elementos impermeables."),
     om("Ala de viga T en tracción: ¿en qué ancho se distribuye parte del refuerzo de tracción?", ["Solo en el alma", "En el ancho efectivo del ala o ℓ/10, el menor", "En ℓ/4", "En 8 t"], 1,
@@ -3697,6 +3733,9 @@ def rotulos(nombre):
     return [f"{p} {base}{s}" for p in pref for s in sufijos]
 
 
+# Tablas que el texto del artículo ya trae fila por fila (las tarjetas citan sus filas): no se repiten como imagen.
+TABLAS_EN_TEXTO = {"tabla-12-1", "tabla-12-2"}
+
 # Figuras cuyo rótulo no quedó en el texto extraído (tablas de las págs. 138–143 y la tabla del 13.6.3.3).
 FIGURAS_MANUALES = {
     "tabla-13-6-3-3": ("13.6.3.3", "Distribución del momento estático total Mo en un paño extremo"),
@@ -3711,6 +3750,8 @@ def figuras_por_articulo():
     for archivo in sorted(os.listdir(f"{S}/figuras")):
         nombre = archivo.rsplit(".", 1)[0]
         if not re.match(r"^(fig|tabla)-\d", nombre):
+            continue
+        if nombre in TABLAS_EN_TEXTO:
             continue
         if nombre in FIGURAS_MANUALES:
             numero, pie = FIGURAS_MANUALES[nombre]
@@ -3749,7 +3790,7 @@ def oracion(titulo):
         return titulo
     salida = []
     for i, p in enumerate(palabras):
-        sigla = any(c.isdigit() for c in p) or (p.isupper() and len(p) > 1)
+        sigla = any(c.isdigit() for c in p) or (p.isupper() and len(p) > 1) or p.rstrip(".,") in ("I", "II", "III")
         salida.append(p if sigla else (p[:1].upper() + p[1:].lower() if i == 0 else p.lower()))
     return " ".join(salida)
 
@@ -3766,8 +3807,16 @@ def publicar_norma():
             fila["e"] = oracion(a["epigrafe"])
         if a["numero"] in figuras:
             # El rótulo ya va como pie de la figura: se quita del texto para no repetirlo.
-            pies = [re.sub(r"\s+", " ", pie)[:24] for _, pie in figuras[a["numero"]]]
-            lineas = [l for l in fila["t"].split("\n") if not any(re.sub(r"\s+", " ", l.strip()).startswith(p) for p in pies)]
+            pies = [re.sub(r"\s+", " ", pie)[:24].lower() for _, pie in figuras[a["numero"]]]
+            lineas, quitada = [], False
+            for l in fila["t"].split("\n"):
+                es_pie = any(re.sub(r"\s+", " ", l.strip()).lower().startswith(p) for p in pies)
+                # Un rótulo en mayúsculas puede seguir en la línea siguiente («… PARA LA PROTECCIÓN CONTRA» / «LA CORROSIÓN …»).
+                if es_pie or (quitada and l.strip() and l.strip() == l.strip().upper() and not re.search(r"[|=*†‡§]", l)):
+                    quitada = True
+                    continue
+                quitada = False
+                lineas.append(l)
             fila["t"] = re.sub(r"\n{3,}", "\n\n", "\n".join(lineas)).strip()
             fila["f"] = []
             for nombre, pie in figuras[a["numero"]]:

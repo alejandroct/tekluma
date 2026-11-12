@@ -22,14 +22,13 @@
   },
   {
    "numero": "12.1.2",
-   "epigrafe": "Los valores de",
    "texto": "Los valores de √f’c usados en este capítulo no deben exceder de 8,3 MPa.",
    "pagina": 114
   },
   {
    "numero": "12.2",
-   "epigrafe": "Longitud De Desarrollo De Barras Corrugadas Y De Alambres",
-   "texto": "CORRUGADOS A TRACCIÓN",
+   "epigrafe": "Longitud De Desarrollo De Barras Corrugadas Y De Alambres Corrugados A Tracción",
+   "texto": "Longitud De Desarrollo De Barras Corrugadas Y De Alambres Corrugados A Tracción",
    "pagina": 114
   },
   {
@@ -39,18 +38,17 @@
   },
   {
    "numero": "12.2.2",
-   "texto": "Para barras corrugadas o alambres corrugados, ℓd se calculará de acuerdo a la Tabla 12.1.\n TABLA 12.1 LONGITUD DE DESARROLLO DE BARRAS EN TRACCIÓN\n Condiciones\n Alambres corrugados o barras\n de 3/4” y menores\n Barras mayores de\n 3/4”\n Espaciamiento libre entre barras o alambres que están siendo empalmados o desarrolladas no menor que db, con recubrimiento libre no menor que db, y estribos a lo largo de ℓd por lo menos iguales al mínimo indicado en 11.5.6.\n Aplicable también cuando el espaciamiento libre entre barras o alambres que están siendo desarrolladas o empalmadas no sea menor que 2 db y el recubrimiento libre no menor que db (ver Fig.12.1).\n ψ ψ λ\n 2,6\n t e fy db f c′\n ( ) ( )\n\n ψ ψ λ\n 2,1\n t e fy db f c′\n ( ) ( )\n\n Otros casos Ver 12.2.3 Ver 12.2.3\n\n Fig. 12.2.2 Condiciones para la longitud de desarrollo (Tabla 12.1) de barras en tracción",
+   "texto": "Para barras corrugadas o alambres corrugados, ℓd se calculará de acuerdo a la Tabla 12.1.\n TABLA 12.1 LONGITUD DE DESARROLLO DE BARRAS EN TRACCIÓN\n | Condiciones | Alambres corrugados o barras de 3/4” y menores | Barras mayores de 3/4”\n | Espaciamiento libre entre barras o alambres que están siendo empalmados o desarrolladas no menor que db, con recubrimiento libre no menor que db, y estribos a lo largo de ℓd por lo menos iguales al mínimo indicado en 11.5.6. Aplicable también cuando el espaciamiento libre entre barras o alambres que están siendo desarrolladas o empalmadas no sea menor que 2 db y el recubrimiento libre no menor que db (ver Fig. 12.2.2). | (fy ψt ψe λ / 2,6 √f’c) db | (fy ψt ψe λ / 2,1 √f’c) db\n | Otros casos | Ver 12.2.3 | Ver 12.2.3\n\n Fig. 12.2.2 Condiciones para la longitud de desarrollo (Tabla 12.1) de barras en tracción",
    "pagina": 114
   },
   {
    "numero": "12.2.3",
-   "epigrafe": "Para barras corrugadas y alambres corrugados, d",
-   "texto": "Para barras corrugadas y alambres corrugados, ℓd debe ser:\n\n λ\n 1,1\n t e s fy db cb Ktr f c\n db\n ΨΨΨ\n + ′\n ( ) ( ) ( ) ( )\n (12-1)\n\n El término cb Ktr\n db\n + ( ) ( )\n no debe tomarse mayor a 2,5 y\n 10\n Atr fyt Ktr\n s n = (12-2) en donde: n es el número de barras o alambres que se empalman o desarrollan dentro del plano de hendimiento (splitting). cb es la menor distancia entre:\n (a) La distancia del centro de una barra o alambre a la superficie más cercana del concreto. (b) La mitad de la separación centro a centro de las barras o alambres que se desarrollan. Se permite usar Ktr = 0, como una simplificación de diseño, aún si hay refuerzo transversal presente.",
+   "texto": "Para barras corrugadas y alambres corrugados, ℓd debe ser:\n ℓd = [fy Ψt Ψe Ψs λ / (1,1 √f’c (cb + Ktr) / db)] db (12-1)\n El término (cb + Ktr)/db no debe tomarse mayor a 2,5 y\n Ktr = Atr fyt / 10 s n (12-2)\n en donde:\n n es el número de barras o alambres que se empalman o desarrollan dentro del plano de hendimiento (splitting).\n cb es la menor distancia entre:\n (a) La distancia del centro de una barra o alambre a la superficie más cercana del concreto.\n (b) La mitad de la separación centro a centro de las barras o alambres que se desarrollan.\n Se permite usar Ktr = 0, como una simplificación de diseño, aún si hay refuerzo transversal presente.",
    "pagina": 115
   },
   {
    "numero": "12.2.4",
-   "texto": "Los factores indicados en la Tabla 12.1, que afectan la longitud de desarrollo o empalmes de barras y alambres corrugados en tracción, se indican en la Tabla 12.2\n\n TABLA 12.2 FACTOR DE MODIFICACIÓN DE LAS LONGITUDES DE DESARROLLO\n Factor Condiciones Valor\n Ψt\n Barras superiores.*\n Otras barras.\n 1,3\n 1,0\n\n Ψe\n Barras o alambres con tratamiento superficial epóxico y recubrimiento menor que 3db o espaciamiento libre menor que 6 db.\n Otras barras o alambres con tratamiento superficial epóxico.\n Barras sin tratamiento superficial\n\n 1,5\n\n 1,2\n 1,0\n Ψs\n Barras de 3/4” y menores.\n Barras mayores de 3/4”.\n 0,8\n 1,0\n λ\n Concreto liviano.\n Concreto de peso normal.\n 1,3\n 1,0\n El producto: Ψt Ψs no necesita considerarse mayor que 1,7 * Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas.",
+   "texto": "Los factores indicados en la Tabla 12.1, que afectan la longitud de desarrollo o empalmes de barras y alambres corrugados en tracción, se indican en la Tabla 12.2\n\n TABLA 12.2 FACTOR DE MODIFICACIÓN DE LAS LONGITUDES DE DESARROLLO\n | Factor | Condiciones | Valor\n | Ψt | Barras superiores.* | 1,3\n | Ψt | Otras barras. | 1,0\n | Ψe | Barras o alambres con tratamiento superficial epóxico y recubrimiento menor que 3db o espaciamiento libre menor que 6 db. | 1,5\n | Ψe | Otras barras o alambres con tratamiento superficial epóxico. | 1,2\n | Ψe | Barras sin tratamiento superficial | 1,0\n | Ψs | Barras de 3/4” y menores. | 0,8\n | Ψs | Barras mayores de 3/4”. | 1,0\n | λ | Concreto liviano. | 1,3\n | λ | Concreto de peso normal. | 1,0\n El producto: Ψt Ψs no necesita considerarse mayor que 1,7\n * Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas.",
    "pagina": 115
   },
   {
@@ -61,8 +59,8 @@
   },
   {
    "numero": "12.3",
-   "epigrafe": "Longitud De Desarrollo De Barras Corrugadas Y Alambres",
-   "texto": "CORRUGADOS A COMPRESIÓN",
+   "epigrafe": "Longitud De Desarrollo De Barras Corrugadas Y Alambres Corrugados A Compresión",
+   "texto": "Longitud De Desarrollo De Barras Corrugadas Y Alambres Corrugados A Compresión",
    "pagina": 116
   },
   {
@@ -72,13 +70,12 @@
   },
   {
    "numero": "12.3.2",
-   "texto": "Para las barras corrugadas y alambres corrugados, ℓdc debe tomarse como el\n mayor entre (0,24 / ) fy f c db ′ y ( ) 0,043fy db, donde la constante 0,043 tiene la\n unidad de mm2/N.",
+   "texto": "Para las barras corrugadas y alambres corrugados, ℓdc debe tomarse como el mayor entre (0,24 fy / √f’c) db y (0,043 fy) db, donde la constante 0,043 tiene la unidad de mm²/N.",
    "pagina": 117
   },
   {
    "numero": "12.3.3",
-   "epigrafe": "Se permite multiplicar la longitud dc",
-   "texto": "Se permite multiplicar la longituℓddc por los siguientes factores de modificación:\n (a) El refuerzo excede lo requerido por el análisis, salvo en elementos con responsabilidad sísmica … (As requerido) ÷ (As proporcionado)\n (b) El refuerzo está confinado con una espiral cuya barra tiene un diámetro no menor de 1/4” y no más que 100 mm de paso o dentro de estribos 1/2” de acuerdo con 7.10.5, y espaciados a distancias no mayores que 100 mm medidos entre centros … 0,75",
+   "texto": "Se permite multiplicar la longitud ℓdc por los siguientes factores de modificación:\n (a) El refuerzo excede lo requerido por el análisis, salvo en elementos con responsabilidad sísmica … (As requerido) ÷ (As proporcionado)\n (b) El refuerzo está confinado con una espiral cuya barra tiene un diámetro no menor de 1/4” y no más que 100 mm de paso o dentro de estribos 1/2” de acuerdo con 7.10.5, y espaciados a distancias no mayores que 100 mm medidos entre centros … 0,75",
    "pagina": 117
   },
   {
@@ -110,13 +107,12 @@
   },
   {
    "numero": "12.5.2",
-   "texto": "Para las barras corrugadas, ℓdg debe ser ( ) 0,24 λ / e fy f c db ′ Ψ con Ψe igual a 1,2 para refuerzo con recubrimiento epóxico y λ igual a 1,3 para concretos livianos. Para otros casos, Ψe y λ deben tomarse igual a 1,0.\n\n Fig. 12.5.2 Longitud de anclaje con gancho estándar en tracción.",
+   "texto": "Para las barras corrugadas, ℓdg debe ser (0,24 Ψe λ fy / √f’c) db con Ψe igual a 1,2 para refuerzo con recubrimiento epóxico y λ igual a 1,3 para concretos livianos. Para otros casos, Ψe y λ deben tomarse igual a 1,0.\n\n Fig. 12.5.2 Longitud de anclaje con gancho estándar en tracción.",
    "pagina": 117
   },
   {
    "numero": "12.5.3",
-   "epigrafe": "La longitud",
-   "texto": "La longituℓddg de 12.5.2 se puede multiplicar por los siguientes factores cuando corresponda:\n (a) Para barras de 1 3/8” y menores, ganchos con recubrimiento lateral (normal al\n plano del gancho) no menor de 65 mm y para ganchos de 90º adicionalmente con recubrimiento en la extensión de la barra más allá del gancho no menor de 50 mm … 0,7\n\n Fig. 12.5.3.a Casos en los que se puede multiplicar ℓdg por 0,7\n (b) Para ganchos de 90º de barras 1 3/8” y menores que se encuentran confinados\n por estribos perpendiculares a la barra que se está desarrollando, espaciados a lo largo de ℓdg a no más de 3 db; o rodeado con estribos paralelos a la barra que se está desarrollando y espaciados a no más de 3 db a lo largo de la longitud de desarrollo del extremo del gancho más el doblez … 0,8\n\n Fig. 12.5.3.b Casos con gancho estándar a 90º en los que se puede multiplicar ℓdg\n por 0,8 (c) Ganchos de 180º en barras de 1 3/8” y menores que se encuentran confinados\n con estribos perpendiculares a la barra que se está desarrollando, espaciados a no más de 3 db\n a lo largo de ℓdg … 0.8\n\n Fig. 12.5.3.c Caso con gancho estándar a 180º en el que se puede multiplicar ldg por\n 0,8 (d) Para elementos sin responsabilidad sísmica en los cuales no se requiera específicamente anclaje o longitud de desarrollo para lograr fy y se dispone de una cuantía de refuerzo mayor a la requerida por análisis … As requerido\n As proporcionado\n\n En 12.5.3 b) y 12.5.3 c), db es el diámetro de la barra con gancho. El primer estribo debe envolver la parte doblada del gancho a una distancia no mayor que 2 db, medida desde el borde exterior del gancho.",
+   "texto": "La longitud ℓdg de 12.5.2 se puede multiplicar por los siguientes factores cuando corresponda:\n (a) Para barras de 1 3/8” y menores, ganchos con recubrimiento lateral (normal al plano del gancho) no menor de 65 mm y para ganchos de 90º adicionalmente con recubrimiento en la extensión de la barra más allá del gancho no menor de 50 mm: 0,7\n (b) Para ganchos de 90º de barras 1 3/8” y menores que se encuentran confinados por estribos perpendiculares a la barra que se está desarrollando, espaciados a lo largo de ℓdg a no más de 3 db; o rodeado con estribos paralelos a la barra que se está desarrollando y espaciados a no más de 3 db a lo largo de la longitud de desarrollo del extremo del gancho más el doblez: 0,8\n (c) Ganchos de 180º en barras de 1 3/8” y menores que se encuentran confinados con estribos perpendiculares a la barra que se está desarrollando, espaciados a no más de 3 db a lo largo de ℓdg: 0,8\n (d) Para elementos sin responsabilidad sísmica en los cuales no se requiera específicamente anclaje o longitud de desarrollo para lograr fy y se dispone de una cuantía de refuerzo mayor a la requerida por análisis: As requerido / As proporcionado\n En 12.5.3 b) y 12.5.3 c), db es el diámetro de la barra con gancho. El primer estribo debe envolver la parte doblada del gancho a una distancia no mayor que 2 db, medida desde el borde exterior del gancho.\n\n Fig. 12.5.3.a Casos en los que se puede multiplicar ℓdg por 0,7\n Fig. 12.5.3.b Casos con gancho estándar a 90º en los que se puede multiplicar ℓdg por 0,8\n Fig. 12.5.3.c Caso con gancho estándar a 180º en el que se puede multiplicar ℓdg por 0,8",
    "pagina": 118
   },
   {
@@ -147,8 +143,8 @@
   },
   {
    "numero": "12.7",
-   "epigrafe": "Longitud De Desarrollo De Refuerzo Electrosoldado De",
-   "texto": "ALAMBRE CORRUGADO A TRACCIÓN",
+   "epigrafe": "Longitud De Desarrollo De Refuerzo Electrosoldado De Alambre Corrugado A Tracción",
+   "texto": "Longitud De Desarrollo De Refuerzo Electrosoldado De Alambre Corrugado A Tracción",
    "pagina": 119
   },
   {
@@ -158,7 +154,7 @@
   },
   {
    "numero": "12.7.2",
-   "texto": "Para el refuerzo electrosoldado de alambre corrugado con al menos un alambre transversal dentro de ℓd y a no menos de 50 mm de la sección crítica, el factor para refuerzo electrosoldado de alambre debe tomarse como el mayor de:\n\n ( ) 240 fy\n fy\n − ó 5 db\n s ( ) ( ) pero no mayor que 1,0, donde s es la separación entre los alambres que se desarrollan.",
+   "texto": "Para el refuerzo electrosoldado de alambre corrugado con al menos un alambre transversal dentro de ℓd y a no menos de 50 mm de la sección crítica, el factor para refuerzo electrosoldado de alambre debe tomarse como el mayor de:\n (fy − 240) / fy ó 5 db / s\n pero no mayor que 1,0, donde s es la separación entre los alambres que se desarrollan.",
    "pagina": 120
   },
   {
@@ -173,8 +169,8 @@
   },
   {
    "numero": "12.8",
-   "epigrafe": "Desarrollo De Refuerzo Electrosoldado De Alambre Liso A",
-   "texto": "Se debe considerar que la resistencia a la fluencia del refuerzo electrosoldado de alambre liso se desarrolla mediante el embebido en el concreto de 2 alambres transversales, con el alambre transversal más próximo a no menos de 50 mm de la sección crítica. Sin embargo, ℓd no debe ser menor que:\n 3,3 λ b A fy d\n s f c =\n ′ ( ) ( ) ( )( ) (12-3) donde ℓd se mide desde la sección crítica hasta el alambre transversal más alejado y s es el espaciamiento entre alambres a desarrollarse. Cuando el refuerzo proporcionado excede del requerido, ℓd, puede reducirse de acuerdo con 12.2.5. La longitud ℓd no debe ser menor a 150 mm, excepto para el cálculo de empalmes por traslape de acuerdo con 12.19.",
+   "epigrafe": "Desarrollo de refuerzo electrosoldado de alambre liso a tracción",
+   "texto": "Se debe considerar que la resistencia a la fluencia del refuerzo electrosoldado de alambre liso se desarrolla mediante el embebido en el concreto de 2 alambres transversales, con el alambre transversal más próximo a no menos de 50 mm de la sección crítica. Sin embargo, ℓd no debe ser menor que:\n ℓd = 3,3 (Ab / s) (fy / √f’c) λ (12-3)\n donde ℓd se mide desde la sección crítica hasta el alambre transversal más alejado y s es el espaciamiento entre alambres a desarrollarse. Cuando el refuerzo proporcionado excede del requerido, ℓd, puede reducirse de acuerdo con 12.2.5. La longitud ℓd no debe ser menor a 150 mm, excepto para el cálculo de empalmes por traslape de acuerdo con 12.19.",
    "pagina": 120
   },
   {
@@ -185,13 +181,12 @@
   },
   {
    "numero": "12.9.1",
-   "texto": "Salvo como se dispone en 12.9.2, los torones de preesforzado de siete alambres deben adherirse más allá de la sección crítica en una distancia no menor que:\n\n 21 7\n fse fps fse d db db − = + ( ) ( ) ( ) ( ) (12-4)\n En esta fórmula, fse y fps se expresan en MPa.",
+   "texto": "Salvo como se dispone en 12.9.2, los torones de preesforzado de siete alambres deben adherirse más allá de la sección crítica en una distancia no menor que:\n ℓd = (fse / 21) db + ((fps − fse) / 7) db (12-4)\n En esta fórmula, fse y fps se expresan en MPa.",
    "pagina": 120
   },
   {
    "numero": "12.9.2",
-   "epigrafe": "Se permite un embebido menor que d",
-   "texto": "ℓ en una sección de un elemento siempre que el esfuerzo de diseño del torón para esa sección no exceda los valores obtenidos a partir de la ecuación (12-4).",
+   "texto": "Se permite un embebido menor que ℓd en una sección de un elemento siempre que el esfuerzo de diseño del torón para esa sección no exceda los valores obtenidos a partir de la ecuación (12-4).",
    "pagina": 120
   },
   {
@@ -258,7 +253,7 @@
   },
   {
    "numero": "12.11.3",
-   "texto": "En los apoyos simples y en los puntos de inflexión, el refuerzo de tracción para momento positivo debe limitarse a un diámetro tal que ℓd calculado para fy de acuerdo con 12.2 satisfaga la ecuación (12-5), excepto que no es necesario satisfacer dicha ecuación para los refuerzos que terminan más allá del eje central de los apoyos simples mediante un gancho estándar o un anclaje mecánico equivalente, como mínimo, a un gancho estándar.\n\n Mn d a Vu ≤ + (12-\n 5)\n donde Mn se calcula suponiendo que todo el refuerzo de la sección está sometido a fy, Vu se calcula en la sección y a ℓ en el apoyo debe ser la longitud embebida más allá del centro del apoyo.\n a ℓ en el punto de inflexión debe limitarse a d ó 12 db, el que sea mayor.\n Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión.",
+   "texto": "En los apoyos simples y en los puntos de inflexión, el refuerzo de tracción para momento positivo debe limitarse a un diámetro tal que ℓd calculado para fy de acuerdo con 12.2 satisfaga la ecuación (12-5), excepto que no es necesario satisfacer dicha ecuación para los refuerzos que terminan más allá del eje central de los apoyos simples mediante un gancho estándar o un anclaje mecánico equivalente, como mínimo, a un gancho estándar.\n ℓd ≤ Mn / Vu + ℓa (12-5)\n donde Mn se calcula suponiendo que todo el refuerzo de la sección está sometido a fy, Vu se calcula en la sección y ℓa en el apoyo debe ser la longitud embebida más allá del centro del apoyo.\n ℓa en el punto de inflexión debe limitarse a d ó 12 db, el que sea mayor.\n Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión.",
    "pagina": 121
   },
   {
@@ -284,7 +279,7 @@
   },
   {
    "numero": "12.12.3",
-   "texto": "Por lo menos 1/3 del refuerzo total por tracción en el apoyo proporcionado para resistir momento negativo debe tener una longitud embebida más allá del punto de inflexión, no menor que d, 12 db ó /16 n\n\n, la que sea mayor.",
+   "texto": "Por lo menos 1/3 del refuerzo total por tracción en el apoyo proporcionado para resistir momento negativo debe tener una longitud embebida más allá del punto de inflexión, no menor que d, 12 db ó ℓn/16, la que sea mayor.",
    "pagina": 122
   },
   {
@@ -394,7 +389,7 @@
   },
   {
    "numero": "12.15.2",
-   "texto": "Los empalmes por traslape de alambres y barras corrugadas sometidas a tracción deben ser empalmes por traslape Clase A o Clase B de acuerdo con la Tabla 12.3\n\n Tabla 12.3 EMPLAMES POR TRASLAPE EN TRACCIÓN\n As proporcionado / As requerido (*) · Porcentaje máximo de As empalmado en la longitud requerida para dicho empalme: 50 100\n Igual o mayor que 2 Clase A Clase B Menor que 2 Clase B Clase B\n (*) Relación entre el área de refuerzo proporcionada y la requerida por cálculo en la zona de empalme.",
+   "texto": "Los empalmes por traslape de alambres y barras corrugadas sometidas a tracción deben ser empalmes por traslape Clase A o Clase B de acuerdo con la Tabla 12.3\n\n Tabla 12.3 EMPLAMES POR TRASLAPE EN TRACCIÓN\n | As proporcionado / As requerido (*) | 50% de As empalmado en la longitud requerida | 100% de As empalmado en la longitud requerida\n | Igual o mayor que 2 | Clase A | Clase B\n | Menor que 2 | Clase B | Clase B\n (*) Relación entre el área de refuerzo proporcionada y la requerida por cálculo en la zona de empalme.",
    "pagina": 124
   },
   {
@@ -525,8 +520,8 @@
   },
   {
    "numero": "12.18",
-   "epigrafe": "Empalmes De Refuerzo Electrosoldado De Alambre Corrugado",
-   "texto": "A TRACCIÓN",
+   "epigrafe": "Empalmes De Refuerzo Electrosoldado De Alambre Corrugado A Tracción",
+   "texto": "Empalmes De Refuerzo Electrosoldado De Alambre Corrugado A Tracción",
    "pagina": 126
   },
   {
@@ -546,8 +541,8 @@
   },
   {
    "numero": "12.19",
-   "epigrafe": "Empalmes De Refuerzo Electrosoldado De Alambre Liso A",
-   "texto": "TRACCIÓN\n La longitud mínima de empalmes por traslape de refuerzo electrosoldado de alambre liso debe cumplir con 12.19.1 y 12.19.2.",
+   "epigrafe": "Empalmes De Refuerzo Electrosoldado De Alambre Liso A Tracción",
+   "texto": "La longitud mínima de empalmes por traslape de refuerzo electrosoldado de alambre liso debe cumplir con 12.19.1 y 12.19.2.",
    "pagina": 126
   },
   {

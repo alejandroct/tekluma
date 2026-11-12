@@ -187,7 +187,7 @@
   },
   {
    "numero": "16.6.2.2",
-   "texto": "A menos que se demuestre por medio del análisis o ensayos que el comportamiento no se ve afectado, debe cumplirse con (a) y (b):\n (a) Cada elemento y su sistema de apoyo debe tener dimensiones de diseño seleccionadas de manera que, después de considerar las tolerancias, la distancia desde el borde del apoyo al extremo del elemento prefabricado en la dirección de la luz sea al menos /180 n\n\n , pero no menos que: Para losas sólidas o alveolares … 50 mm Para vigas o elementos en forma de T … 75 mm\n (b) Los dispositivos de soporte en bordes no reforzados deben desplazarse un mínimo de 13 mm desde la cara del apoyo, o al menos la dimensión del chaflán en bordes achaflanados.\n\n Fig. 16.6.2. Longitud de apoyo de un elemento prefabricado.",
+   "texto": "A menos que se demuestre por medio del análisis o ensayos que el comportamiento no se ve afectado, debe cumplirse con (a) y (b):\n (a) Cada elemento y su sistema de apoyo debe tener dimensiones de diseño seleccionadas de manera que, después de considerar las tolerancias, la distancia desde el borde del apoyo al extremo del elemento prefabricado en la dirección de la luz sea al menos ℓn/180, pero no menos que:\n Para losas sólidas o alveolares: 50 mm\n Para vigas o elementos en forma de T: 75 mm\n (b) Los dispositivos de soporte en bordes no reforzados deben desplazarse un mínimo de 13 mm desde la cara del apoyo, o al menos la dimensión del chaflán en bordes achaflanados.\n\n Fig. 16.6.2. Longitud de apoyo de un elemento prefabricado.",
    "pagina": 154
   },
   {

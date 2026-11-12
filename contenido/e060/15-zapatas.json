@@ -68,8 +68,8 @@
   },
   {
    "numero": "15.3",
-   "epigrafe": "Zapatas Que Soportan Columnas O Pedestales De Forma",
-   "texto": "CIRCULAR O DE POLÍGONO REGULAR\n Para la localización de las secciones críticas para momentos, cortantes, y longitud de desarrollo del refuerzo en las zapatas, se permite considerar las columnas o pedestales de concreto de forma circular o de polígono regular como elementos cuadrados con la misma área.",
+   "epigrafe": "Zapatas Que Soportan Columnas O Pedestales De Forma Circular O De Polígono Regular",
+   "texto": "Para la localización de las secciones críticas para momentos, cortantes, y longitud de desarrollo del refuerzo en las zapatas, se permite considerar las columnas o pedestales de concreto de forma circular o de polígono regular como elementos cuadrados con la misma área.",
    "pagina": 147
   },
   {
@@ -105,7 +105,7 @@
   },
   {
    "numero": "15.4.4.2",
-   "texto": "Para el refuerzo en la dirección corta, una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja (centrada con respecto al eje de la columna o pedestal) cuyo ancho sea igual a la longitud del lado corto de la zapata. El resto del refuerzo requerido en la dirección corta, (1 - γs) As, debe distribuirse uniformemente en las zonas que queden fuera de la franja central de la zapata.\n\n ( )\n 2 γ\n β 1 s =\n +\n (15-1)\n donde β es la relación del lado largo al lado corto de la zapata.",
+   "texto": "Para el refuerzo en la dirección corta, una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja (centrada con respecto al eje de la columna o pedestal) cuyo ancho sea igual a la longitud del lado corto de la zapata. El resto del refuerzo requerido en la dirección corta, (1 - γs) As, debe distribuirse uniformemente en las zonas que queden fuera de la franja central de la zapata.\n γs = 2 / (β + 1) (15-1)\n donde β es la relación del lado largo al lado corto de la zapata.",
    "pagina": 148
   },
   {
@@ -173,8 +173,8 @@
   },
   {
    "numero": "15.8",
-   "epigrafe": "Transmisión De Fuerzas En La Base De  Columnas, Muros O",
-   "texto": "PEDESTALES",
+   "epigrafe": "Transmisión De Fuerzas En La Base De  Columnas, Muros O Pedestales",
+   "texto": "Transmisión De Fuerzas En La Base De  Columnas, Muros O Pedestales",
    "pagina": 149
   },
   {

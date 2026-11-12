@@ -111,7 +111,7 @@
   },
   {
    "numero": "7.5.2.1",
-   "texto": "La tolerancia para el peralte efectivo d y para el recubrimiento mínimo de concreto en elementos sometidos a flexión, muros y elementos sometidos a compresión debe ser la siguiente:\n\n Tolerancia en d Tolerancia en el recubrimiento\n mínimo de concreto\n d ≤ 200 mm ± 10 mm -10 mm\n d > 200 mm ± 13 mm -13 mm\n Excepto que la tolerancia para la distancia libre al fondo de los encofrados debe ser -6 mm y la tolerancia para el recubrimiento no debe exceder -1/3 del recubrimiento mínimo de concreto requerido en los planos de diseño y especificaciones.",
+   "texto": "La tolerancia para el peralte efectivo d y para el recubrimiento mínimo de concreto en elementos sometidos a flexión, muros y elementos sometidos a compresión debe ser la siguiente:\n\n | Peralte | Tolerancia en d | Tolerancia en el recubrimiento mínimo de concreto\n | d ≤ 200 mm | ± 10 mm | −10 mm\n | d > 200 mm | ± 13 mm | −13 mm\n Excepto que la tolerancia para la distancia libre al fondo de los encofrados debe ser -6 mm y la tolerancia para el recubrimiento no debe exceder -1/3 del recubrimiento mínimo de concreto requerido en los planos de diseño y especificaciones.",
    "pagina": 48
   },
   {
@@ -459,7 +459,7 @@
   },
   {
    "numero": "7.11.3",
-   "texto": "Los estribos cerrados se deben formar de una sola pieza con sus ganchos extremos colocados superpuestos abrazando la misma barra longitudinal, o se deben formar de una o dos piezas unidas mediante un empalme por traslape Clase B (longitud de traslape de 1,3 d\n\n ) o anclándolas de acuerdo con 12.13.",
+   "texto": "Los estribos cerrados se deben formar de una sola pieza con sus ganchos extremos colocados superpuestos abrazando la misma barra longitudinal, o se deben formar de una o dos piezas unidas mediante un empalme por traslape Clase B (longitud de traslape de 1,3 ℓd) o anclándolas de acuerdo con 12.13.",
    "pagina": 55
   },
   {

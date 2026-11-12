@@ -37,8 +37,8 @@
   },
   {
    "numero": "20.2",
-   "epigrafe": "Determinación",
-   "texto": "DE LAS PROPIEDADES DE LOS MATERIALES Y DIMENSIONES DE LOS ELEMENTOS ESTRUCTURALES",
+   "epigrafe": "Determinación De Las Propiedades De Los Materiales Y Dimensiones De Los Elementos Estructurales",
+   "texto": "Determinación De Las Propiedades De Los Materiales Y Dimensiones De Los Elementos Estructurales",
    "pagina": 177
   },
   {
@@ -158,8 +158,8 @@
   },
   {
    "numero": "20.6",
-   "epigrafe": "Disposiciones Para La Aceptación De Cargas De Servicio",
-   "texto": "MENORES\n Si la estructura no satisface las condiciones o criterios de 20.1.2, 20.5.2 ó 20.5.3, se puede utilizar la estructura para un nivel menor de cargas, con base en los resultados de la prueba de carga o del análisis, siempre que lo apruebe la autoridad responsable.",
+   "epigrafe": "Disposiciones Para La Aceptación De Cargas De Servicio Menores",
+   "texto": "Si la estructura no satisface las condiciones o criterios de 20.1.2, 20.5.2 ó 20.5.3, se puede utilizar la estructura para un nivel menor de cargas, con base en los resultados de la prueba de carga o del análisis, siempre que lo apruebe la autoridad responsable.",
    "pagina": 179
   },
   {
@@ -175,7 +175,7 @@
   },
   {
    "numero": "20.7.2.1",
-   "texto": "Ninguna medida de seguridad debe interferir en los procedimientos de la prueba de carga ni afectar los resultados.\n 2 5 r Δ Δ≤\n\n CAPITULO 21 DISPOSICIONES ESPECIALES PARA EL DISEÑO SISMICO",
+   "texto": "Ninguna medida de seguridad debe interferir en los procedimientos de la prueba de carga ni afectar los resultados.",
    "pagina": 179
   }
  ],
@@ -393,7 +393,7 @@
      "citas": [
       {
        "articulo": "20.5.2",
-       "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor."
+       "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) … donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor."
       }
      ]
     },

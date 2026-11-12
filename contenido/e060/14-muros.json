@@ -106,7 +106,7 @@
   },
   {
    "numero": "14.5.2",
-   "texto": "La resistencia axial de diseño φPn de un muro que satisface las limitaciones de 14.5.1, debe calcularse mediante la ecuación (14-1), a menos que se diseñe de acuerdo con 14.4.\n 2 0,55 1 32\n c Pn f c Ag\n h k ′ φ = φ − [ ] ( ) ( ) [ ] (14-1)\n donde φ = 0,70 y el factor de longitud efectiva k es:\n Para muros arriostrados en la parte superior e inferior con el fin de evitar el desplazamiento lateral y:\n (a) Restringidos contra la rotación en uno o ambos extremos (superior y/o inferior) … 0,8 (b) No restringidos contra la rotación en ambos extremos … 1,0\n Para muros no arriostrados con el fin de evitar el desplazamiento lateral … 2,0",
+   "texto": "La resistencia axial de diseño φPn de un muro que satisface las limitaciones de 14.5.1, debe calcularse mediante la ecuación (14-1), a menos que se diseñe de acuerdo con 14.4.\n φPn = 0,55 φ f’c Ag [1 − (k ℓc / 32h)²] (14-1)\n donde φ = 0,70 y el factor de longitud efectiva k es:\n Para muros arriostrados en la parte superior e inferior con el fin de evitar el desplazamiento lateral y:\n (a) Restringidos contra la rotación en uno o ambos extremos (superior y/o inferior): 0,8\n (b) No restringidos contra la rotación en ambos extremos: 1,0\n Para muros no arriostrados con el fin de evitar el desplazamiento lateral: 2,0",
    "pagina": 145
   },
   {
