@@ -3795,7 +3795,7 @@ def oracion(titulo):
     return " ".join(salida)
 
 
-MATHJAX = f"{S}/mj/render.mjs"  # MathJax 3 (mathjax-full) instalado junto a las herramientas de trabajo
+MATHJAX = f"{S}/mj/render.mjs"  # copia de herramientas/mathjax-render.mjs, con mathjax-full@3.2.2 instalado en {S}/mj
 
 
 def dibujar_formulas(articulos):

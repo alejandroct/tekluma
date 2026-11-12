@@ -156,7 +156,7 @@
       const LETRAS = "A-Za-zÁÉÍÓÚÑáéíóúñ0-9’′ℓαβγδεθλμξπρσφψωΔΣΨΩ";
       let reSimbolos = null;
       const conSimbolos = (texto) => {
-        const html = esc(texto);
+        const html = esc(texto).replace(/\b(mm|m)([234])\b/g, (_, u, e) => u + "²³⁴"[e - 2]);
         if (!reSimbolos) return html;
         return html.replace(reSimbolos, (_, antes, s) => {
           const corte = /^[ΣΔφ]?.[’′]?/.exec(s)[0].length;
@@ -201,7 +201,7 @@
       }
 
       function pintar() {
-        const lista = (norma.simbolos || []).filter((x) => x !== x.toUpperCase()).sort((a, b) => b.length - a.length).map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+        const lista = (norma.simbolos || []).filter((x) => !/^[A-Z]{2}/.test(x)).sort((a, b) => b.length - a.length).map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
         reSimbolos = lista.length ? new RegExp(`(^|[^${LETRAS}])(${lista.join("|")})(?![${LETRAS}])`, "g") : null;
         $("rotulo").textContent = `${norma.codigo} · ${norma.titulo} · ${norma.articulos.length.toLocaleString("es-PE")} artículos`;
         $("indice").innerHTML = norma.capitulos.map((c) => `<a href="#cap-${c.n}"><span>${c.n.padStart(2, "0")}</span>${esc(c.titulo)}</a>`).join("");

@@ -407,10 +407,12 @@ function Resaltado({ color }: { color: string }) {
 /** Tamaño de un «ex» de MathJax según la letra del texto que acompaña. */
 const EX = (tamano: number) => tamano * 0.45;
 
-/** Una fórmula dibujada (SVG de MathJax); si no cabe en el ancho, se desliza de lado. */
+/** Una fórmula dibujada (SVG de MathJax): si no cabe, se achica hasta un 30 %; si aun así no cabe, se desliza de lado. */
 function Dibujo({ dibujo, tamano, color, ancho }: { dibujo: FormulaSvg; tamano: number; color: string; ancho?: number }) {
-  const w = dibujo.w * EX(tamano);
-  const h = dibujo.h * EX(tamano);
+  const natural = dibujo.w * EX(tamano);
+  const escala = ancho ? Math.max(Math.min(1, ancho / natural), 0.7) : 1;
+  const w = natural * escala;
+  const h = dibujo.h * EX(tamano) * escala;
   const svg = <SvgXml xml={dibujo.svg} width={w} height={h} color={color} />;
   if (!ancho || w <= ancho) return svg;
   return (
@@ -534,7 +536,7 @@ type PropsResaltado = { texto: string; patron: RegExp | null; style: object; mar
 function TextoResaltado({ texto, patron, style, marca, simbolos, tamano = 15 }: PropsResaltado) {
   if (!patron) {
     const trozos = trozosConSimbolos(texto, simbolos);
-    if (trozos.length === 1 && typeof trozos[0] === "string") return <Text style={style}>{texto}</Text>;
+    if (trozos.length === 1 && typeof trozos[0] === "string") return <Text style={style}>{trozos[0]}</Text>;
     return (
       <Text style={style}>
         {trozos.map((tr, i) =>
@@ -782,7 +784,7 @@ const estilos = StyleSheet.create({
   formulaTexto: { flex: 1, fontSize: 16.5, lineHeight: 24, fontStyle: "italic", fontFamily: Platform.select({ ios: "Georgia", default: "serif" }), fontVariant: ["lining-nums"] },
   simbolo: { fontStyle: "italic" },
   definicion: { flexDirection: "row", alignItems: "center", gap: 12, paddingVertical: 7, borderTopWidth: StyleSheet.hairlineWidth },
-  definicionSimbolo: { width: 64, alignItems: "flex-start" },
+  definicionSimbolo: { width: 54, alignItems: "flex-start" },
   definicionTexto: { flex: 1, fontSize: 14.5, lineHeight: 20 },
   formulaNumero: { fontFamily: MONO, fontSize: 12 },
   tablaMarco: { marginVertical: 4, gap: 6 },

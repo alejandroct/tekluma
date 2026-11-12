@@ -231,19 +231,21 @@ export function bloquesTexto(texto: string, formulas: Record<string, FormulaSvg>
 
 /**
  * Parte un párrafo en texto y símbolos de la notación («Vc», «f’c», «ℓd»): cada símbolo con su letra base
- * y su subíndice («f’c» → f’ + c). Los nombres en mayúsculas (CM, EI) se dejan tal cual.
+ * y su subíndice («f’c» → f’ + c). Los nombres que empiezan con dos mayúsculas (CM, CVi, EI) se dejan tal cual.
  */
 export type Trozo = string | { base: string; sub: string };
 
 const patronesSimbolos = new WeakMap<string[], RegExp>();
 const LETRAS = "A-Za-zÁÉÍÓÚÑáéíóúñ0-9’′ℓαβγδεθλμξπρσφψωΔΣΨΩ";
 
-export function trozosConSimbolos(texto: string, simbolos: string[] | undefined): Trozo[] {
+export function trozosConSimbolos(original: string, simbolos: string[] | undefined): Trozo[] {
+  // Unidades con exponente tal como se ven impresas: mm2 → mm², kg/m3 → kg/m³.
+  const texto = original.replace(/\b(mm|m)([234])\b/g, (_, u: string, e: string) => u + "²³⁴"[Number(e) - 2]);
   if (!simbolos?.length) return [texto];
   let patron = patronesSimbolos.get(simbolos);
   if (!patron) {
     const lista = simbolos
-      .filter((s) => s !== s.toUpperCase())
+      .filter((s) => !/^[A-Z]{2}/.test(s)) // CM, CVi, EI: nombres, no símbolos con subíndice
       .sort((a, b) => b.length - a.length)
       .map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
     // Sin «lookbehind» ni \\p{L}, por compatibilidad con Hermes: el carácter previo se captura aparte.
