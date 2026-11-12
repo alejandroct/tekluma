@@ -125,6 +125,8 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 - [ ] **(código)** Textos de las tiendas (nombre, subtítulo, descripción, palabras clave) y capturas desde el simulador.
 
 ### 8. Producción **(tú da el visto bueno)**
+- [x] **Desplegado el 12/11/2026**: `tekluma.app`, `api.tekluma.app`, `admin.tekluma.app`; migraciones aplicadas y SES con `tekluma.app`
+  verificado (DKIM correcto). Falta: acceso de producción de SES (sigue en sandbox) e importar y publicar los mazos.
 - Desplegar el stage `produccion` (dominio raíz `tekluma.app`, API `api.tekluma.app` y el sitio de la empresa en
   `dccingenieriayconstruccion.com`, que necesita el dominio ya comprado) con sus propios secretos
   (los cargas tú con `sst secret set … --stage produccion`) y su base de datos de Neon.
