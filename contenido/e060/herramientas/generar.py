@@ -3734,7 +3734,10 @@ def rotulos(nombre):
 
 
 # Tablas que el texto del artículo ya trae fila por fila (las tarjetas citan sus filas): no se repiten como imagen.
-TABLAS_EN_TEXTO = {"tabla-12-1", "tabla-12-2"}
+TABLAS_EN_TEXTO = {
+    "tabla-4-1", "tabla-4-2", "tabla-4-3", "tabla-4-5", "tabla-5-2", "tabla-9-1", "tabla-9-2", "tabla-9-3",
+    "tabla-12-1", "tabla-12-2", "tabla-13-6-3-3", "tabla-18-1",
+}
 
 # Figuras cuyo rótulo no quedó en el texto extraído (tablas de las págs. 138–143 y la tabla del 13.6.3.3).
 FIGURAS_MANUALES = {
@@ -3848,7 +3851,9 @@ def publicar_norma():
             for l in fila["t"].split("\n"):
                 es_pie = any(re.sub(r"\s+", " ", l.strip()).lower().startswith(p) for p in pies)
                 # Un rótulo en mayúsculas puede seguir en la línea siguiente («… PARA LA PROTECCIÓN CONTRA» / «LA CORROSIÓN …»).
-                if es_pie or (quitada and l.strip() == l.strip().upper() and not re.search(r"[|=*†‡§]", l)):
+                # Un «TABLA x.y» en la línea siguiente es otro rótulo, no la continuación de este.
+                sigue = quitada and l.strip() == l.strip().upper() and not re.search(r"[|=*†‡§]", l) and not l.strip().startswith("TABLA")
+                if es_pie or sigue:
                     quitada = True
                     continue
                 quitada = False

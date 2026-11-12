@@ -340,7 +340,7 @@
   },
   {
    "numero": "13.6.3.3",
-   "texto": "En cada paño extremo, el momento estático amplificado total, Mo, debe distribuirse como se indica en la tabla a continuación:\n\n (1) (2) (3) (4) (5)\n Borde exterior no restringido\n Losa con vigas entre\n todos los\n apoyos\n Losa sin vigas entre los\n apoyos interiores Borde exterior totalmente restringido Sin viga de borde\n Con viga de\n borde\n Momento negativo\n amplificado\n interior\n 0,75 0,70 0,70 0,70 0,65\n Momento positivo\n amplificado 0,63 0,57 0,52 0,50 0,35\n Momento negativo\n amplificado\n 0 0,16 0,26 0,30 0,65 exterior",
+   "texto": "En cada paño extremo, el momento estático amplificado total, Mo, debe distribuirse como se indica en la tabla a continuación:\n\n | Momento amplificado | (1) Borde exterior no restringido | (2) Losa con vigas entre todos los apoyos | (3) Losa sin vigas entre los apoyos interiores, sin viga de borde | (4) Losa sin vigas entre los apoyos interiores, con viga de borde | (5) Borde exterior totalmente restringido\n | Momento negativo amplificado interior | 0,75 | 0,70 | 0,70 | 0,70 | 0,65\n | Momento positivo amplificado | 0,63 | 0,57 | 0,52 | 0,50 | 0,35\n | Momento negativo amplificado exterior | 0 | 0,16 | 0,26 | 0,30 | 0,65",
    "pagina": 132
   },
   {

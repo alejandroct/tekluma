@@ -522,6 +522,80 @@ LIMPIEZA = [
     ("10.17.1", "se multiplique por 2 1 / A A , pero", "se multiplique por √(A2/A1), pero"),
     ("18.14.2.3", "desde 3 8 h hasta\n 2 h delante", "desde 3/8 h hasta 2 h delante"),
     ("2.1", "espaciamiento 2s ,", "espaciamiento s2,"),
+    # ───── Tablas transcritas leyendo cada página (antes se veían como imagen o como texto corrido) ─────
+    ("4.2.1", " TABLA 4.1 CONTENIDO TOTAL DE AIRE PARA CONCRETO RESISTENTE AL\n CONGELAMIENTO\n Tamaño máximo nominal\n del agregado* (mm)\n Contenido de aire (en porcentaje) Exposición severa Exposición moderada 9,5 7,5 6,0 12,5 7,0 5,5 19,0 6,0 5,0 25,0 6,0 4,5 37,5 5,5 4,5 50,0** 5,0 4,0 75,0** 4,5 3,5\n",
+     " TABLA 4.1 CONTENIDO TOTAL DE AIRE PARA CONCRETO RESISTENTE AL CONGELAMIENTO\n"
+     " | Tamaño máximo nominal del agregado* (mm) | Contenido de aire (%), exposición severa | Contenido de aire (%), exposición moderada\n"
+     " | 9,5 | 7,5 | 6,0\n | 12,5 | 7,0 | 5,5\n | 19,0 | 6,0 | 5,0\n | 25,0 | 6,0 | 4,5\n | 37,5 | 5,5 | 4,5\n | 50,0** | 5,0 | 4,0\n | 75,0** | 4,5 | 3,5\n"),
+    ("4.2.1", "de mayor tamaño\n para diversos tamaños nominales máximos. ** Estos", "de mayor tamaño para diversos tamaños nominales máximos.\n ** Estos"),
+    ("4.2.2", " TABLA 4.2 REQUISITOS PARA CONDICIONES ESPECIALES DE EXPOSICIÓN\n Condición de la\n exposición\n Relación máxima agua - material cementante (en peso)\n para concretos de peso\n normal *\n f’c mínimo (MPa) para concretos de peso normal o con agregados ligeros* Concreto que se pretende tenga baja permeabilidad en exposición al agua.\n 0,50 28\n Concreto expuesto a ciclos de congelamiento y deshielo en condición húmeda o a productos químicos descongelantes.\n 0,45 31\n Para proteger de la corrosión el refuerzo de acero cuando el concreto está expuesto a cloruros provenientes de productos descongelantes, sal, agua salobre, agua de mar o a salpicaduras del mismo origen.\n 0,40 35\n",
+     " TABLA 4.2 REQUISITOS PARA CONDICIONES ESPECIALES DE EXPOSICIÓN\n"
+     " | Condición de la exposición | Relación máxima agua - material cementante (en peso) para concretos de peso normal* | f’c mínimo (MPa) para concretos de peso normal o con agregados ligeros*\n"
+     " | Concreto que se pretende tenga baja permeabilidad en exposición al agua. | 0,50 | 28\n"
+     " | Concreto expuesto a ciclos de congelamiento y deshielo en condición húmeda o a productos químicos descongelantes. | 0,45 | 31\n"
+     " | Para proteger de la corrosión el refuerzo de acero cuando el concreto está expuesto a cloruros provenientes de productos descongelantes, sal, agua salobre, agua de mar o a salpicaduras del mismo origen. | 0,40 | 35\n"),
+    ("4.2.3", " TABLA 4.3 REQUISITOS PARA CONCRETO EXPUESTO A PRODUCTOS QUÍMICOS\n DESCONGELANTES\n\n Materiales cementantes\n Porcentaje Máximo del total de\n materiales cementantes en\n peso* Cenizas volantes u otras puzolanas que cumplen la NTP 334.104 25\n Escoria que cumple ASTM C 989 50 Microsílice que cumple la NTP 334.087 10 Total de cenizas volantes u otras puzolanas, escoria y microsílice. 50**\n Total de cenizas volantes u otras puzolanas y microsílice 35**\n",
+     " TABLA 4.3 REQUISITOS PARA CONCRETO EXPUESTO A PRODUCTOS QUÍMICOS DESCONGELANTES\n"
+     " | Materiales cementantes | Porcentaje máximo del total de materiales cementantes en peso*\n"
+     " | Cenizas volantes u otras puzolanas que cumplen la NTP 334.104 | 25\n"
+     " | Escoria que cumple ASTM C 989 | 50\n"
+     " | Microsílice que cumple la NTP 334.087 | 10\n"
+     " | Total de cenizas volantes u otras puzolanas, escoria y microsílice. | 50**\n"
+     " | Total de cenizas volantes u otras puzolanas y microsílice | 35**\n"),
+    ("4.4.1", " TABLA 4.5 CONTENIDO MÁXIMO DE IONES CLORURO PARA LA PROTECCIÓN CONTRA\n LA CORROSIÓN DEL REFUERZO\n",
+     " TABLA 4.5 CONTENIDO MÁXIMO DE IONES CLORURO PARA LA PROTECCIÓN CONTRA LA CORROSIÓN DEL REFUERZO\n"
+     " | Tipo de elemento | Contenido máximo de iones de cloruro solubles en agua en el concreto (porcentaje en peso del cemento)\n"
+     " | Concreto preesforzado | 0,06\n"
+     " | Concreto armado que en servicio estará expuesto a cloruros | 0,15\n"
+     " | Concreto armado que en servicio estará seco o protegido contra la humedad | 1,00\n"
+     " | Otras construcciones de concreto armado | 0,30\n"),
+    ("5.3.1.2", " TABLA 5.1 FACTOR DE MODIFICACIÓN PARA LA DESVIACIÓN ESTÁNDAR DE LA\n MUESTRA CUANDO SE DISPONE DE MENOS DE 30 ENSAYOS\n Número de ensayos (*)\n Factor de modificación para la desviación estándar de la\n muestra (+) Menos de 15 (emplear Tabla 5.3) 15 1,16 20 1,08 25 1,03 30 o más 1,00\n",
+     " TABLA 5.1 FACTOR DE MODIFICACIÓN PARA LA DESVIACIÓN ESTÁNDAR DE LA MUESTRA CUANDO SE DISPONE DE MENOS DE 30 ENSAYOS\n"
+     " | Número de ensayos (*) | Factor de modificación para la desviación estándar de la muestra (+)\n"
+     " | Menos de 15 | Emplear Tabla 5.3\n | 15 | 1,16\n | 20 | 1,08\n | 25 | 1,03\n | 30 o más | 1,00\n"),
+    ("5.3.1.2", "ensayos intermedios. (+) Desviación estándar de la muestra modificada, Ss, para usar en la\n determinación", "ensayos intermedios.\n (+) Desviación estándar de la muestra modificada, Ss, para usar en la determinación"),
+    ("5.3.2.1", " TABLA 5.2 RESISTENCIA PROMEDIO A LA COMPRESIÓN REQUERIDA CUANDO HAY DATOS DISPONIBLES PARA ESTABLECER UNA DESVIACIÓN ESTÁNDAR DE\n LA MUESTRA\n Para f’c ≤ 35 MPa, usar el mayor valor obtenido de las ecuaciones (5-1) y (5-2):\n f’cr = f’c + 1,34 Ss (5-1)\n f’cr = f’c + 2,33 Ss − 3,5 (5-2)\n Para f’c > 35 MPa, usar el mayor valor obtenido de las ecuaciones (5-1) y (5-3):\n f’cr = f’c + 1,34 Ss (5-1)\n f’cr = 0,90 f’c + 2,33 Ss (5-3)",
+     " TABLA 5.2 RESISTENCIA PROMEDIO A LA COMPRESIÓN REQUERIDA CUANDO HAY DATOS DISPONIBLES PARA ESTABLECER UNA DESVIACIÓN ESTÁNDAR DE LA MUESTRA\n"
+     " | Resistencia especificada a la compresión, MPa | Resistencia promedio requerida a la compresión, MPa\n"
+     " | f’c ≤ 35 | Usar el mayor valor obtenido de las ecuaciones (5-1) y (5-2)\n"
+     " | f’c > 35 | Usar el mayor valor obtenido de las ecuaciones (5-1) y (5-3)\n"
+     " f’cr = f’c + 1,34 Ss (5-1)\n f’cr = f’c + 2,33 Ss − 3,5 (5-2)\n f’cr = 0,90 f’c + 2,33 Ss (5-3)"),
+    ("7.2.3", " TABLA 7.1 DIÁMETROS INTERIORES MÍNIMOS DE DOBLADO\n Diámetro de las barras Diámetro mínimo de doblado 1/4” a 1” 6 db 1 1/8” a 1 3/8” 8 db 1 11/16” a 2 1/4” 10 db\n",
+     " TABLA 7.1 DIÁMETROS INTERIORES MÍNIMOS DE DOBLADO\n"
+     " | Diámetro de las barras | Diámetro mínimo de doblado\n"
+     " | 1/4” a 1” | 6 db\n | 1 1/8” a 1 3/8” | 8 db\n | 1 11/16” a 2 1/4” | 10 db\n"),
+    ("9.6.2.1", " TABLA 9.1 PERALTES O ESPESORES MÍNIMOS DE VIGAS NO PREESFORZADAS O LOSAS REFORZADAS EN UNA DIRECCIÓN A MENOS QUE SE CALCULEN\n LAS DEFLEXIONES\n",
+     " TABLA 9.1 PERALTES O ESPESORES MÍNIMOS DE VIGAS NO PREESFORZADAS O LOSAS REFORZADAS EN UNA DIRECCIÓN A MENOS QUE SE CALCULEN LAS DEFLEXIONES\n"
+     " | Elementos | Simplemente apoyados | Con un extremo continuo | Ambos extremos continuos | En voladizo\n"
+     " | Losas macizas en una dirección | ℓ / 20 | ℓ / 24 | ℓ / 28 | ℓ / 10\n"
+     " | Vigas o losas nervadas en una dirección | ℓ / 16 | ℓ / 18,5 | ℓ / 21 | ℓ / 8\n"
+     " Espesor o peralte mínimo, h, de elementos que no soporten o estén ligados a divisiones u otro tipo de elementos no estructurales susceptibles de dañarse debido a deflexiones grandes.\n"),
+    ("9.6.2.6", " TABLA 9.2 DEFLEXIÓNES MÁXIMAS ADMISIBLES\n",
+     " TABLA 9.2 DEFLEXIÓNES MÁXIMAS ADMISIBLES\n"
+     " | Tipo de elemento | Deflexión considerada | Límite de deflexión\n"
+     " | Techos planos que no soporten ni estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes. | Deflexión inmediata debida a la carga viva | ℓ / 180 *\n"
+     " | Pisos que no soporten ni estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes. | Deflexión inmediata debida a la carga viva | ℓ / 360\n"
+     " | Pisos o techos que soporten o estén ligados a elementos no estructurales susceptibles de sufrir daños debido a deflexiones grandes. | La parte de la deflexión total que ocurre después de la unión de los elementos no estructurales (la suma de la deflexión a largo plazo debida a todas las cargas permanentes, y la deflexión inmediata debida a cualquier carga viva adicional) † | ℓ / 480 ‡\n"
+     " | Pisos o techos que soporten o estén ligados a elementos no estructurales no susceptibles de sufrir daños debido a deflexiones grandes. | La misma de la fila anterior † | ℓ / 240 §\n"),
+    ("9.6.3.2", " TABLA 9.3 ESPESORES MÍNIMOS DE LOSAS SIN VIGAS INTERIORES*\n",
+     " TABLA 9.3 ESPESORES MÍNIMOS DE LOSAS SIN VIGAS INTERIORES*\n"
+     " | fy (MPa) † | Sin ábacos ‡, paneles exteriores sin vigas de borde | Sin ábacos ‡, paneles exteriores con vigas de borde § | Sin ábacos ‡, paneles interiores | Con ábacos ‡, paneles exteriores sin vigas de borde | Con ábacos ‡, paneles exteriores con vigas de borde § | Con ábacos ‡, paneles interiores\n"
+     " | 280 | ℓn / 33 | ℓn / 36 | ℓn / 36 | ℓn / 36 | ℓn / 40 | ℓn / 40\n"
+     " | 420 | ℓn / 30 | ℓn / 33 | ℓn / 33 | ℓn / 33 | ℓn / 36 | ℓn / 36\n"
+     " | 520 | ℓn / 28 | ℓn / 31 | ℓn / 31 | ℓn / 31 | ℓn / 34 | ℓn / 34\n"),
+    ("13.6.3.3", "\n (1) (2) (3) (4) (5)\n Borde exterior no restringido\n Losa con vigas entre\n todos los\n apoyos\n Losa sin vigas entre los\n apoyos interiores Borde exterior totalmente restringido Sin viga de borde\n Con viga de\n borde\n Momento negativo\n amplificado\n interior\n 0,75 0,70 0,70 0,70 0,65\n Momento positivo\n amplificado 0,63 0,57 0,52 0,50 0,35\n Momento negativo\n amplificado\n 0 0,16 0,26 0,30 0,65 exterior",
+     "\n | Momento amplificado | (1) Borde exterior no restringido | (2) Losa con vigas entre todos los apoyos | (3) Losa sin vigas entre los apoyos interiores, sin viga de borde | (4) Losa sin vigas entre los apoyos interiores, con viga de borde | (5) Borde exterior totalmente restringido\n"
+     " | Momento negativo amplificado interior | 0,75 | 0,70 | 0,70 | 0,70 | 0,65\n"
+     " | Momento positivo amplificado | 0,63 | 0,57 | 0,52 | 0,50 | 0,35\n"
+     " | Momento negativo amplificado exterior | 0 | 0,16 | 0,26 | 0,30 | 0,65"),
+    ("18.6.2.2", " TABLA 18.1\n\n RANGOS DE VALORES DE LOS COEFICIENTES DE FRICCIÓN EN TENDONES\n POSTENSADOSE EN LAS ECUACIONES (18-1) Y (18-2)\n",
+     " TABLA 18.1 RANGOS DE VALORES DE LOS COEFICIENTES DE FRICCIÓN EN TENDONES POSTENSADOS EN LAS ECUACIONES (18-1) Y (18-2)\n"
+     " | Tendones | Tipo | Coeficiente por desviación accidental, K | Coeficiente de curvatura, μp\n"
+     " | Inyectados en ducto metálico | Tendones de alambre | 0,0033 – 0,0049 | 0,15 – 0,25\n"
+     " | Inyectados en ducto metálico | Barras de alta resistencia | 0,0003 – 0,0020 | 0,08 – 0,30\n"
+     " | Inyectados en ducto metálico | Torones de 7 alambres | 0,0016 – 0,0066 | 0,15 – 0,25\n"
+     " | No adheridos, con mástique | Tendones de alambre y torones de 7 alambres | 0,0033 – 0,0066 | 0,05 – 0,15\n"
+     " | No adheridos, preengrasados | Tendones de alambre y torones de 7 alambres | 0,0010 – 0,0066 | 0,05 – 0,15\n"),
 ]
 
 # Oraciones que la extracción tomó por epígrafe (el texto ya las lleva completas): se quita el epígrafe.
@@ -566,6 +640,10 @@ def notacion(texto):
 # Fórmulas cuya escritura en el texto es ambigua para el conversor automático (latex.py): su LaTeX a mano,
 # comparado con la página del PDF.
 LATEX_MANUAL = {
+    # Límites de la Tabla 9.2 con su llamada a pie de tabla.
+    "ℓ / 180 *": r"\dfrac{\ell}{180}\;{}^{*}",
+    "ℓ / 480 ‡": r"\dfrac{\ell}{480}\;{}^{\ddagger}",
+    "ℓ / 240 §": r"\dfrac{\ell}{240}\;{}^{\S}",
     "√[(Vu / bw d)² + (Tu Ph / 1,7 Aoh²)²] ≤ φ (Vc / bw d + 0,66 √f’c)":
         r"\sqrt{\left(\dfrac{V_{u}}{b_{w}\,d}\right)^{2}+\left(\dfrac{T_{u}\,P_{h}}{1{,}7\,A_{oh}^{2}}\right)^{2}}\leq\phi\left(\dfrac{V_{c}}{b_{w}\,d}+0{,}66\,\sqrt{f'_{c}}\right)",
     "(Vu / bw d) + (Tu Ph / 1,7 Aoh²) ≤ φ (Vc / bw d + 0,66 √f’c)":
