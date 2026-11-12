@@ -1100,3 +1100,29 @@ a.medio:hover {
   font-size: 14px;
   color: color-mix(in srgb, var(--marino-tinta) 75%, transparent);
 }
+.tec p + p,
+.lista-tec + p {
+  margin-top: 12px;
+}
+.lista-tec {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  font-size: 15px;
+}
+.lista-tec li {
+  position: relative;
+  padding-left: 16px;
+}
+.lista-tec li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background: #e0a24c;
+  transform: rotate(45deg);
+}
