@@ -9,9 +9,10 @@ Plazo realista desde hoy: **3 a 4 semanas** hasta estar publicados en las dos ti
 Urb. Bello Horizonte Etapa Uno (Av. Los Rubíes, frente al Pampón), Piura. Úsalo **idéntico** en D-U-N-S, Apple, Google y el banco.
 En las tiendas aparecerá como vendedor; la app se sigue llamando Tekluma.
 
-**Sitio web de la empresa:** `https://dccingenieriayconstruccion.com` (código en `apps/dcc`; vista previa en
-`https://dcc.dev.tekluma.app`). Es el que se declara a D&B, Apple y Google, con un correo de ese dominio.
-`tekluma.app` queda como sitio del producto (app, normas, soporte) y su página `/empresa` nombra a DCC como titular.
+**Sitio web de la empresa:** `https://dccingenieriayconstruccion.com` (publicado; código en `apps/dcc`). Es el que se
+declara a D&B, Apple y Google, con un correo de ese dominio. El dominio está registrado en Cloudflare y su DNS se queda allí:
+SST crea los registros con el token de `.env` (`CLOUDFLARE_API_TOKEN`, no versionado). `tekluma.app` queda como sitio del
+producto (app, normas, soporte) y su página `/empresa` nombra a DCC como titular.
 
 ---
 
@@ -20,14 +21,12 @@ En las tiendas aparecerá como vendedor; la app se sigue llamando Tekluma.
 ### 1. Dominio y correo de la empresa **(tú)** — 1 día
 Apple pide un correo del dominio de la organización (no Gmail) y las dos tiendas piden un sitio web público.
 
-1. Compra `dccingenieriayconstruccion.com` **en la misma cuenta de AWS** (consola → Route 53 → Registered domains →
-   Register domain, ≈ US$15 al año). Así la zona DNS se crea sola y el despliegue de producción la encuentra.
-   Si lo compras en otro registrador, crea la zona en Route 53 y cambia allá los servidores de nombres (NS) por los de AWS.
+1. [x] Dominio `dccingenieriayconstruccion.com` comprado en Cloudflare y sitio publicado.
 2. Crea los buzones en Zoho Mail (gratis, un dominio) o Google Workspace (≈ US$7/mes por usuario):
    - `contacto@dccingenieriayconstruccion.com` (el que aparece en el sitio);
    - opcional, uno a nombre de la representante legal para los trámites;
    - en Workspace puedes agregar `tekluma.app` como dominio secundario para `hola@tekluma.app` sin pagar otro usuario.
-3. El proveedor te dará registros MX y TXT (SPF, DKIM): pásamelos y los agrego al DNS.
+3. El proveedor te dará registros MX y TXT (SPF, DKIM): se agregan en Cloudflare → DNS del dominio.
 4. Prueba enviando un correo a cada dirección. Tu Gmail puede seguir siendo la cuenta de Play Console y recibir reenvíos.
 
 ### 2. Número D-U-N-S **(tú)** — gratis, hasta 5 días hábiles (a veces más en Perú)
