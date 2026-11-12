@@ -5,6 +5,7 @@ import { router, useLocalSearchParams } from "expo-router";
 import Animated, { FadeInDown, FadeInRight, FadeInUp, ZoomIn } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
 import type { Grade } from "ts-fsrs";
+import { CitaNorma } from "@/components/CitaNorma";
 import { CupoAgotado } from "@/components/CupoAgotado";
 import { Tarjeta } from "@/components/Tarjeta";
 import { intersticialAlTerminar } from "@/lib/anuncios";
@@ -159,16 +160,14 @@ export default function Repaso() {
         </Animated.View>
         {revelada &&
           actual.citas.map((c, i) => (
-            <Animated.View
-              key={c.articuloId}
-              entering={FadeInDown.delay(120 + i * 80)}
-              style={[estilos.cita, { backgroundColor: t.superficie, borderColor: t.borde }]}
-            >
-              <Text style={[estilos.citaArticulo, { color: t.ambar }]}>
-                {mazo.norma.codigo} · ART. {c.articulo}
-                {c.pagina ? ` · PÁG. ${c.pagina}` : ""}
-              </Text>
-              <Text style={{ color: t.textoSuave, fontSize: 14, lineHeight: 20 }}>{c.extracto}</Text>
+            <Animated.View key={c.articuloId} entering={FadeInDown.delay(120 + i * 80)}>
+              <CitaNorma
+                norma={mazo.norma.codigo}
+                articulo={c.articulo}
+                pagina={c.pagina}
+                extracto={c.extracto}
+                colores={{ fondo: t.superficie, borde: t.borde, acento: t.ambar, texto: t.textoSuave, suave: t.textoSuave }}
+              />
             </Animated.View>
           ))}
       </ScrollView>
@@ -193,8 +192,6 @@ const estilos = StyleSheet.create({
   notas: { flexDirection: "row", gap: 8, padding: 16, paddingBottom: 36, borderTopWidth: StyleSheet.hairlineWidth },
   nota: { flex: 1, borderRadius: 6, paddingVertical: 14, alignItems: "center", borderWidth: 1, borderTopWidth: 3 },
   notaTexto: { fontWeight: "700", fontSize: 15 },
-  cita: { borderWidth: StyleSheet.hairlineWidth, borderRadius: 8, padding: 14, gap: 4 },
-  citaArticulo: { fontSize: 12, fontFamily: MONO_FUERTE, letterSpacing: 0.6 },
   rotulo: { flexDirection: "row", borderWidth: StyleSheet.hairlineWidth, borderRadius: 6 },
   celda: { flex: 1, paddingHorizontal: 12, paddingVertical: 8, gap: 2 },
   celdaEtiqueta: { fontSize: 10, fontFamily: MONO, letterSpacing: 1.2 },

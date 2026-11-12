@@ -74,6 +74,7 @@ export default function RootLayout() {
           <Stack.Screen name="afiliacion" options={{ title: "Universidad y región", presentation: "modal", headerShadowVisible: false }} />
           <Stack.Screen name="diaria" options={{ title: "Pregunta del día", presentation: "modal", headerShadowVisible: false }} />
           <Stack.Screen name="premium" options={{ title: "", presentation: "modal", headerShadowVisible: false }} />
+          <Stack.Screen name="norma/[slug]" options={{ title: "Norma", presentation: "modal", headerShadowVisible: false }} />
         </Stack.Protected>
       </Stack>
       {intro && <Arranque onFin={terminarIntro} />}

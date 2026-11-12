@@ -13,6 +13,7 @@ import Animated, {
 import type { EstadoDiaria, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, GananciaFlotante } from "@/components/Animaciones";
 import { Figura } from "@/components/Tarjeta";
+import { CitaNorma } from "@/components/CitaNorma";
 import { ImagenReto, useCompartirConImagen, type DatosImagen } from "@/components/ImagenReto";
 import { compartirPorWhatsApp, faltaParaLaSiguiente, intentarDiaria, obtenerDiaria, textoCompartir } from "@/lib/diaria";
 import { sonarMoneda } from "@/lib/sonidos";
@@ -218,12 +219,12 @@ function Resultado({ pregunta, celebracion }: { pregunta: PreguntaDiaria; celebr
         <View style={[estilos.solucion, { borderColor: "rgba(246,245,242,0.2)" }]}>
           {!!estado.solucion.explicacion && <Text style={estilos.solucionTexto}>{estado.solucion.explicacion}</Text>}
           {estado.solucion.cita && (
-            <View style={{ gap: 4 }}>
-              <Text style={estilos.citaArticulo}>
-                {pregunta.norma} · ART. {estado.solucion.cita.articulo}
-              </Text>
-              <Text style={[estilos.solucionTexto, { color: "#A9B7CC" }]}>{estado.solucion.cita.extracto}</Text>
-            </View>
+            <CitaNorma
+              norma={pregunta.norma}
+              articulo={estado.solucion.cita.articulo}
+              extracto={estado.solucion.cita.extracto}
+              colores={{ fondo: "rgba(246,245,242,0.06)", borde: "rgba(246,245,242,0.2)", acento: "#FF8A1F", texto: "#A9B7CC", suave: "#A9B7CC" }}
+            />
           )}
         </View>
       )}
@@ -263,7 +264,6 @@ const estilos = StyleSheet.create({
   resultadoTitulo: { color: "#F6F5F2", fontSize: 24, fontWeight: "700" },
   resultadoLinea: { color: "#F6F5F2", fontSize: 15, fontWeight: "600" },
   rotuloPie: { fontSize: 11, fontFamily: MONO, letterSpacing: 1.2, textAlign: "center", marginTop: 6 },
-  citaArticulo: { color: "#FF8A1F", fontSize: 12, fontFamily: MONO_FUERTE, letterSpacing: 0.6 },
   solucion: { borderRadius: 8, borderWidth: 1, padding: 14, gap: 10 },
   solucionTexto: { color: "#F6F5F2", fontSize: 14, lineHeight: 20 },
   compartir: { borderRadius: 8, paddingVertical: 15, alignItems: "center", marginTop: 6 },

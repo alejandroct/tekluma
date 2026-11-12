@@ -324,3 +324,72 @@ export function Puesto({ n, texto, ambar }: { n: number; texto: string; ambar: s
     </View>
   );
 }
+
+// ───────── Lector de normas ─────────
+
+/** Lupa de plano: aro y mango recto. */
+export const IconoBuscar: Icono = ({ tamano = 24, color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Circle cx={10.5} cy={10.5} r={6} stroke={color} {...trazo} />
+      <Line x1={15} y1={15} x2={20.5} y2={20.5} stroke={color} {...trazo} />
+    </>,
+  );
+
+/** Índice: renglones con su número a la izquierda. */
+export const IconoIndice: Icono = ({ tamano = 24, color, acento = color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Rect x={3.5} y={5} width={2.5} height={2.5} fill={acento} />
+      <Rect x={3.5} y={10.75} width={2.5} height={2.5} fill={acento} />
+      <Rect x={3.5} y={16.5} width={2.5} height={2.5} fill={acento} />
+      <Line x1={9} y1={6.25} x2={20.5} y2={6.25} stroke={color} {...trazo} />
+      <Line x1={9} y1={12} x2={20.5} y2={12} stroke={color} {...trazo} />
+      <Line x1={9} y1={17.75} x2={17} y2={17.75} stroke={color} {...trazo} />
+    </>,
+  );
+
+/** Compartir: flecha que sale de una bandeja. */
+export const IconoCompartir: Icono = ({ tamano = 24, color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Line x1={12} y1={3.5} x2={12} y2={14.5} stroke={color} {...trazo} />
+      <Polyline points="8,7.5 12,3.5 16,7.5" stroke={color} {...trazo} />
+      <Polyline points="5,11 5,20.5 19,20.5 19,11" stroke={color} {...trazo} />
+    </>,
+  );
+
+export const IconoCerrar: Icono = ({ tamano = 24, color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Line x1={6} y1={6} x2={18} y2={18} stroke={color} {...trazo} />
+      <Line x1={18} y1={6} x2={6} y2={18} stroke={color} {...trazo} />
+    </>,
+  );
+
+/** Hoja de la norma con esquina doblada: abre la página original del PDF. */
+export const IconoPagina: Icono = ({ tamano = 24, color, acento = color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Polyline points="14.5,3.5 5,3.5 5,20.5 19,20.5 19,8" stroke={color} {...trazo} />
+      <Polyline points="14.5,3.5 14.5,8 19,8 14.5,3.5" stroke={color} {...trazo} />
+      <Line x1={8.5} y1={12} x2={15.5} y2={12} stroke={acento} {...trazo} />
+      <Line x1={8.5} y1={15.5} x2={13} y2={15.5} stroke={acento} {...trazo} />
+    </>,
+  );
+
+/** Norma: tomo con lomo y marcador. */
+export const IconoNorma: Icono = ({ tamano = 24, color, acento = color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Rect x={5} y={3.5} width={14} height={17} stroke={color} {...trazo} />
+      <Line x1={8.5} y1={3.5} x2={8.5} y2={20.5} stroke={color} {...trazo} />
+      <Polyline points="12,3.5 12,10 14,8.5 16,10 16,3.5" stroke={acento} {...trazo} />
+    </>,
+  );

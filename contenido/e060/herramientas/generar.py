@@ -3666,3 +3666,130 @@ for num, cap, slug, titulo, descripcion, tarjetas in sorted(CAPITULOS, key=lambd
     for t in tarjetas:
         tipos[t["contenido"]["tipo"]] = tipos.get(t["contenido"]["tipo"], 0) + 1
     print(ruta.split("/")[-1], len(articulos), "artículos,", len(tarjetas), "tarjetas", tipos, tam // 1024, "KB")
+
+
+# ══════════ Norma digitalizada para el lector (apps/web/normas/e060) ══════════
+# La app y la web leen la norma completa desde aquí: capítulos, artículos con su página
+# y las figuras recortadas, ubicadas en el artículo que las rotula.
+import hashlib, re, shutil
+
+WEB = "/Users/alejandrocabreratavara/Documents/tekluma/apps/web/normas/e060"
+TITULOS_CAPITULO = {
+    1: "Requisitos generales", 2: "Definiciones", 3: "Materiales", 4: "Requisitos de durabilidad",
+    5: "Calidad del concreto, mezclado y colocación", 6: "Encofrados, tuberías embebidas y juntas de construcción",
+    7: "Detalles del refuerzo", 8: "Análisis y diseño — consideraciones generales", 9: "Requisitos de resistencia y de servicio",
+    10: "Flexión y carga axial", 11: "Cortante y torsión", 12: "Longitudes de desarrollo y empalmes del refuerzo",
+    13: "Losas en dos direcciones", 14: "Muros", 15: "Zapatas", 16: "Concreto prefabricado",
+    17: "Elementos compuestos de concreto sometidos a flexión", 18: "Concreto preesforzado", 19: "Cáscaras y losas plegadas",
+    20: "Evaluación de la resistencia de estructuras existentes", 21: "Disposiciones especiales para el diseño sísmico",
+    22: "Concreto estructural simple",
+}
+
+
+def rotulos(nombre):
+    """Rótulos con que el PDF nombra una figura recortada: fig-11-1-3-1-a → «Fig. 11.1.3.1.a» y variantes."""
+    tipo, *partes = nombre.split("-")
+    numeros = [p for p in partes if p.isdigit()]
+    resto = [p for p in partes if not p.isdigit()]
+    base = ".".join(numeros)
+    sufijos = [""] if not resto else [f".{resto[0]}", resto[0], f" {resto[0]}"]
+    pref = ["Fig.", "Fig"] if tipo == "fig" else ["TABLA", "Tabla"]
+    return [f"{p} {base}{s}" for p in pref for s in sufijos]
+
+
+# Figuras cuyo rótulo no quedó en el texto extraído (tablas de las págs. 138–143 y la tabla del 13.6.3.3).
+FIGURAS_MANUALES = {
+    "tabla-13-6-3-3": ("13.6.3.3", "Distribución del momento estático total Mo en un paño extremo"),
+    "tabla-13-1": ("13.7.3.2", "Tabla 13.1 Coeficientes para momentos negativos"),
+    "tabla-13-2": ("13.7.3.2", "Tabla 13.2 Coeficientes para momentos positivos debidos a la carga muerta"),
+    "tabla-13-3": ("13.7.3.2", "Tabla 13.3 Coeficientes para momentos positivos debidos a la carga viva"),
+}
+
+
+def figuras_por_articulo():
+    asignadas = {}
+    for archivo in sorted(os.listdir(f"{S}/figuras")):
+        nombre = archivo.rsplit(".", 1)[0]
+        if not re.match(r"^(fig|tabla)-\d", nombre):
+            continue
+        if nombre in FIGURAS_MANUALES:
+            numero, pie = FIGURAS_MANUALES[nombre]
+            asignadas.setdefault(numero, []).append((10**6, nombre, pie))
+            continue
+        # El rótulo más formal manda: «TABLA 9.1» (encabezado) antes que una mención «Tabla 9.1» en el texto.
+        for rotulo in rotulos(nombre):
+            a = next((a for a in ARTICULOS if rotulo in a["texto"]), None)
+            if a:
+                pos = a["texto"].find(rotulo)
+                linea = re.sub(r"\s+", " ", a["texto"][pos:].split("\n")[0]).strip()
+                if linea.startswith("TABLA"):
+                    num, _, titulo = linea[6:].partition(" ")
+                    linea = f"Tabla {num} {titulo[:1]}{titulo[1:].lower()}".strip()
+                asignadas.setdefault(a["numero"], []).append((pos, nombre, linea))
+                break
+    return {n: [(nombre, pie) for _, nombre, pie in sorted(v)] for n, v in asignadas.items()}
+
+
+def jpeg_tamano(datos):
+    """Ancho y alto de un JPEG leyendo su marcador SOF (sin dependencias)."""
+    i = 2
+    while i < len(datos):
+        marca, largo = datos[i + 1], int.from_bytes(datos[i + 2:i + 4], "big")
+        if marca in (0xC0, 0xC1, 0xC2):
+            return int.from_bytes(datos[i + 7:i + 9], "big"), int.from_bytes(datos[i + 5:i + 7], "big")
+        i += 2 + largo
+    raise ValueError("JPEG sin SOF")
+
+
+def oracion(titulo):
+    """«Recubrimiento De Concreto Para El Refuerzo» → «Recubrimiento de concreto para el refuerzo».
+    Respeta siglas y códigos (ASTM, E.030, NTP) y deja tal cual los títulos que ya vienen bien escritos."""
+    palabras = titulo.split()
+    if sum(p[:1].isupper() for p in palabras) < max(2, len(palabras) * 0.6):
+        return titulo
+    salida = []
+    for i, p in enumerate(palabras):
+        sigla = any(c.isdigit() for c in p) or (p.isupper() and len(p) > 1)
+        salida.append(p if sigla else (p[:1].upper() + p[1:].lower() if i == 0 else p.lower()))
+    return " ".join(salida)
+
+
+def publicar_norma():
+    os.makedirs(f"{WEB}/figuras", exist_ok=True)
+    figuras = figuras_por_articulo()
+    articulos, primeras = [], {}
+    for a in ARTICULOS:
+        cap = int(a["numero"].split(".")[0])
+        primeras.setdefault(cap, a.get("pagina", 1))
+        fila = {"n": a["numero"], "t": a["texto"], "p": a.get("pagina")}
+        if a.get("epigrafe"):
+            fila["e"] = oracion(a["epigrafe"])
+        if a["numero"] in figuras:
+            fila["f"] = []
+            for nombre, pie in figuras[a["numero"]]:
+                with open(f"{S}/figuras/{nombre}.jpg", "rb") as img:
+                    ancho, alto = jpeg_tamano(img.read())
+                fila["f"].append({"src": f"figuras/{nombre}.jpg", "pie": pie, "w": ancho, "h": alto})
+            for nombre, _ in figuras[a["numero"]]:
+                shutil.copy(f"{S}/figuras/{nombre}.jpg", f"{WEB}/figuras/{nombre}.jpg")
+        articulos.append(fila)
+    cuerpo = {
+        "codigo": NORMA["codigo"],
+        "titulo": NORMA["titulo"],
+        "dispositivo": NORMA["dispositivo"],
+        "publicadaEn": NORMA["publicadaEn"],
+        "paginas": len([f for f in os.listdir(f"{WEB}/paginas") if f.endswith(".jpg")]),
+        "capitulos": [{"n": str(c), "titulo": TITULOS_CAPITULO[c], "p": primeras[c]} for c in sorted(primeras)],
+        "articulos": articulos,
+    }
+    version = hashlib.sha1(json.dumps(cuerpo, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
+    with open(f"{WEB}/norma.json", "w", encoding="utf-8") as f:
+        json.dump({"version": version, **cuerpo}, f, ensure_ascii=False, separators=(",", ":"))
+    indice = [{"codigo": NORMA["codigo"], "slug": "e060", "titulo": NORMA["titulo"], "version": version}]
+    with open(os.path.dirname(WEB) + "/index.json", "w", encoding="utf-8") as f:
+        json.dump(indice, f, ensure_ascii=False, separators=(",", ":"))
+    total = sum(len(v) for v in figuras.values())
+    print("norma.json", len(articulos), "artículos,", total, "figuras, versión", version, os.path.getsize(f"{WEB}/norma.json") // 1024, "KB")
+
+
+publicar_norma()
