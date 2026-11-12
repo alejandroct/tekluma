@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState, type FormEvent } from "react";
 import type { EditorialStatus } from "@tekluma/shared";
 import { api, type Mazo, type Norma, type Tarjeta, type Yo } from "../api";
 import { ESTADOS, TIPOS, resumen } from "../etiquetas";
-import { IconoBuscar, IconoChevron, IconoEliminar, IconoMas, IconoPublicar } from "../iconos";
+import { IconoBuscar, IconoCheck, IconoChevron, IconoCruz, IconoEliminar, IconoEnviar, IconoMas, IconoPublicar } from "../iconos";
 import { Aviso, confirmar, EncabezadoPagina, Estado, pedir, Vacio } from "../ui";
 import { Editor } from "./Editor";
 
@@ -28,6 +28,9 @@ export function Mazos({ yo }: { yo: Yo }) {
   const [abierta, setAbierta] = useState<Tarjeta | "nueva" | null>(null);
   const [mensaje, setMensaje] = useState<string | null>(null);
   const [creando, setCreando] = useState(false);
+  const [seleccion, setSeleccion] = useState<Set<string>>(new Set());
+  const [ocupado, setOcupado] = useState(false);
+  const [mazosElegidos, setMazosElegidos] = useState<Set<string>>(new Set());
 
   const cargarMazos = useCallback(() => api<Mazo[]>("/editorial/mazos").then(setMazos), []);
   const cargarTarjetas = useCallback(() => {
@@ -43,6 +46,7 @@ export function Mazos({ yo }: { yo: Yo }) {
     setAbierta(null);
     setMensaje(null);
     setBusqueda("");
+    setSeleccion(new Set());
   };
 
   const mazo = mazos.find((m) => m.id === mazoId);
@@ -53,6 +57,77 @@ export function Mazos({ yo }: { yo: Yo }) {
   const aprobadas = mazo?.counts.approved ?? 0;
   // Keep the open card in sync with the reloaded list so status changes show immediately.
   const tarjetaAbierta = abierta && abierta !== "nueva" ? (tarjetas.find((t) => t.id === abierta.id) ?? abierta) : null;
+
+  // Selection only counts cards still in the list; the action buttons act on those in the right state.
+  const elegidas = tarjetas.filter((t) => seleccion.has(t.id));
+  const deEstado = (estado: EditorialStatus) => elegidas.filter((t) => t.status === estado);
+  const todasVisibles = visibles.length > 0 && visibles.every((t) => seleccion.has(t.id));
+  const alternar = (id: string) =>
+    setSeleccion((s) => {
+      const n = new Set(s);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
+      return n;
+    });
+  const alternarVisibles = () =>
+    setSeleccion((s) => {
+      const n = new Set(s);
+      for (const t of visibles) {
+        if (todasVisibles) n.delete(t.id);
+        else n.add(t.id);
+      }
+      return n;
+    });
+
+  const enLote = async (accion: "enviar" | "aprobar" | "rechazar", ids: string[]) => {
+    let comment: string | undefined;
+    if (accion === "rechazar") {
+      const texto = await pedir({
+        titulo: `Rechazar ${ids.length} ${ids.length === 1 ? "tarjeta" : "tarjetas"}`,
+        mensaje: "Vuelven a borrador con este comentario para su autor.",
+        accion: "Rechazar",
+        peligro: true,
+        campo: { etiqueta: "Qué corregir", placeholder: "Ej.: revisar la cita del artículo" },
+      });
+      if (typeof texto !== "string") return;
+      comment = texto;
+    }
+    setOcupado(true);
+    try {
+      const r = await api<{ procesadas: number; omitidas: { motivo: string }[] }>("/editorial/tarjetas/lote", { body: { ids, accion, comment } });
+      const verbo = { enviar: "enviadas a revisión", aprobar: "aprobadas", rechazar: "devueltas a borrador" }[accion];
+      const tuyas = r.omitidas.filter((o) => o.motivo === "es tuya").length;
+      setMensaje(`${r.procesadas} ${r.procesadas === 1 ? "tarjeta" : "tarjetas"} ${verbo}.${tuyas ? ` ${tuyas} omitidas: no puedes revisar las tuyas.` : ""}`);
+      setSeleccion(new Set());
+      alCambiar();
+    } catch (e) {
+      setMensaje((e as Error).message);
+    } finally {
+      setOcupado(false);
+    }
+  };
+
+  const publicarElegidas = async () => {
+    if (!mazo) return;
+    const ids = deEstado("approved").map((t) => t.id);
+    const ok = await confirmar({
+      titulo: `Publicar la versión ${(mazo.version ?? 0) + 1}`,
+      mensaje: `Con ${ids.length} ${ids.length === 1 ? "tarjeta aprobada nueva" : "tarjetas aprobadas nuevas"} y las ya publicadas. Las demás aprobadas quedan para una versión posterior.`,
+      accion: "Publicar",
+    });
+    if (!ok) return;
+    setOcupado(true);
+    try {
+      await api(`/editorial/mazos/${mazo.id}/publicar`, { body: { tarjetas: ids } });
+      setMensaje(`Versión ${(mazo.version ?? 0) + 1} publicada con ${ids.length} ${ids.length === 1 ? "tarjeta nueva" : "tarjetas nuevas"}.`);
+      setSeleccion(new Set());
+      alCambiar();
+    } catch (e) {
+      setMensaje((e as Error).message);
+    } finally {
+      setOcupado(false);
+    }
+  };
 
   const publicar = async () => {
     if (!mazo) return;
@@ -65,6 +140,7 @@ export function Mazos({ yo }: { yo: Yo }) {
     try {
       await api(`/editorial/mazos/${mazo.id}/publicar`, { body: {} });
       setMensaje(`Versión ${(mazo.version ?? 0) + 1} publicada.`);
+      setSeleccion(new Set());
       cargarMazos();
       cargarTarjetas();
     } catch (e) {
@@ -89,6 +165,63 @@ export function Mazos({ yo }: { yo: Yo }) {
     } catch (e) {
       setMensaje((e as Error).message);
     }
+  };
+
+  /* Deck index: act on several decks at once. */
+  const elegidosIndice = mazos.filter((m) => mazosElegidos.has(m.id));
+  const enRevisionIndice = elegidosIndice.reduce((n, m) => n + (m.counts.in_review ?? 0), 0);
+  const conAprobadas = elegidosIndice.filter((m) => (m.counts.approved ?? 0) > 0);
+  const todosMazos = mazos.length > 0 && mazos.every((m) => mazosElegidos.has(m.id));
+  const alternarMazo = (id: string) =>
+    setMazosElegidos((s) => {
+      const n = new Set(s);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
+      return n;
+    });
+
+  const aprobarMazos = async () => {
+    const ok = await confirmar({
+      titulo: `Aprobar ${enRevisionIndice} ${enRevisionIndice === 1 ? "tarjeta" : "tarjetas"}`,
+      mensaje: `Todas las tarjetas en revisión de ${elegidosIndice.length} ${elegidosIndice.length === 1 ? "mazo" : "mazos"} pasan a aprobadas. Aún no se publican.`,
+      accion: "Aprobar",
+    });
+    if (!ok) return;
+    setOcupado(true);
+    try {
+      const r = await api<{ procesadas: number; omitidas: { motivo: string }[] }>("/editorial/tarjetas/lote", {
+        body: { mazos: elegidosIndice.map((m) => m.id), accion: "aprobar" },
+      });
+      const tuyas = r.omitidas.filter((o) => o.motivo === "es tuya").length;
+      setMensaje(`${r.procesadas} ${r.procesadas === 1 ? "tarjeta aprobada" : "tarjetas aprobadas"}.${tuyas ? ` ${tuyas} omitidas: no puedes revisar las tuyas.` : ""}`);
+      cargarMazos();
+    } catch (e) {
+      setMensaje((e as Error).message);
+    } finally {
+      setOcupado(false);
+    }
+  };
+
+  const publicarMazos = async () => {
+    const ok = await confirmar({
+      titulo: `Publicar ${conAprobadas.length} ${conAprobadas.length === 1 ? "mazo" : "mazos"}`,
+      mensaje: "Cada mazo sale en una versión nueva con todas sus tarjetas aprobadas y las ya publicadas.",
+      accion: "Publicar",
+    });
+    if (!ok) return;
+    setOcupado(true);
+    const fallos: string[] = [];
+    for (const m of conAprobadas) {
+      try {
+        await api(`/editorial/mazos/${m.id}/publicar`, { body: {} });
+      } catch (e) {
+        fallos.push(`${m.title}: ${(e as Error).message}`);
+      }
+    }
+    setOcupado(false);
+    setMazosElegidos(new Set());
+    setMensaje(fallos.length ? fallos.join(" · ") : `Versión nueva publicada en ${conAprobadas.length} ${conAprobadas.length === 1 ? "mazo" : "mazos"}.`);
+    cargarMazos();
   };
 
   const alCambiar = () => {
@@ -119,11 +252,42 @@ export function Mazos({ yo }: { yo: Yo }) {
           }
         />
         {yo.rol === "admin" && creando && <NuevoMazo onListo={() => (setCreando(false), cargarMazos())} onCancelar={() => setCreando(false)} />}
+        {mensaje && <Aviso tono={/^(Versión |\d+ tarjeta)/.test(mensaje) ? "ok" : "error"}>{mensaje}</Aviso>}
         <section className="panel">
+          {yo.rol !== "author" && elegidosIndice.length > 0 && (
+            <div className="barra barra-lote" role="toolbar" aria-label="Acciones con los mazos seleccionados">
+              <span className="lote-cuenta">
+                {elegidosIndice.length} {elegidosIndice.length === 1 ? "mazo seleccionado" : "mazos seleccionados"}
+              </span>
+              <button className="boton secundario" disabled={ocupado || enRevisionIndice === 0} onClick={aprobarMazos}>
+                <IconoCheck tamano={16} />
+                Aprobar las que están en revisión
+                <span className="boton-cuenta">{enRevisionIndice}</span>
+              </button>
+              <button className="boton primario" disabled={ocupado || conAprobadas.length === 0} onClick={publicarMazos}>
+                <IconoPublicar tamano={16} />
+                Publicar
+                <span className="boton-cuenta">{conAprobadas.length}</span>
+              </button>
+              <button className="boton fantasma" onClick={() => setMazosElegidos(new Set())}>
+                Quitar selección
+              </button>
+            </div>
+          )}
           <div className="tabla-envoltura">
             <table>
               <thead>
                 <tr>
+                  {yo.rol !== "author" && (
+                    <th className="col-check">
+                      <input
+                        type="checkbox"
+                        aria-label="Seleccionar todos los mazos"
+                        checked={todosMazos}
+                        onChange={() => setMazosElegidos(todosMazos ? new Set() : new Set(mazos.map((m) => m.id)))}
+                      />
+                    </th>
+                  )}
                   <th className="col-codigo">Norma</th>
                   <th>Mazo</th>
                   <th>Acceso</th>
@@ -138,7 +302,18 @@ export function Mazos({ yo }: { yo: Yo }) {
               </thead>
               <tbody>
                 {mazos.map((m) => (
-                  <tr key={m.id} className="clic" tabIndex={0} onClick={() => elegir(m.id)} onKeyDown={(e) => e.key === "Enter" && elegir(m.id)}>
+                  <tr
+                    key={m.id}
+                    className={`clic${mazosElegidos.has(m.id) ? " seleccionada" : ""}`}
+                    tabIndex={0}
+                    onClick={() => elegir(m.id)}
+                    onKeyDown={(e) => e.key === "Enter" && elegir(m.id)}
+                  >
+                    {yo.rol !== "author" && (
+                      <td className="col-check" onClick={(e) => e.stopPropagation()}>
+                        <input type="checkbox" aria-label={`Seleccionar ${m.title}`} checked={mazosElegidos.has(m.id)} onChange={() => alternarMazo(m.id)} />
+                      </td>
+                    )}
                     <td className="codigo-norma">{m.standardCode}</td>
                     <td>
                       <span className="celda-titulo">{m.title}</span>
@@ -240,7 +415,7 @@ export function Mazos({ yo }: { yo: Yo }) {
           </>
         }
       />
-      {mensaje && <Aviso tono={mensaje.startsWith("Versión ") ? "ok" : "error"}>{mensaje}</Aviso>}
+      {mensaje && <Aviso tono={/^(Versión |\d+ tarjeta)/.test(mensaje) ? "ok" : "error"}>{mensaje}</Aviso>}
       <section className="panel">
         <div className="barra">
           <div className="segmentos" role="group" aria-label="Filtrar por estado">
@@ -256,10 +431,51 @@ export function Mazos({ yo }: { yo: Yo }) {
             <input type="search" placeholder="Buscar en tarjetas" aria-label="Buscar en tarjetas" value={busqueda} onChange={(e) => setBusqueda(e.target.value)} />
           </label>
         </div>
+        {elegidas.length > 0 && (
+          <div className="barra barra-lote" role="toolbar" aria-label="Acciones con las tarjetas seleccionadas">
+            <span className="lote-cuenta">
+              {elegidas.length} {elegidas.length === 1 ? "seleccionada" : "seleccionadas"}
+            </span>
+            {deEstado("draft").length > 0 && (
+              <button className="boton secundario" disabled={ocupado} onClick={() => enLote("enviar", deEstado("draft").map((t) => t.id))}>
+                <IconoEnviar tamano={16} />
+                Enviar a revisión
+                <span className="boton-cuenta">{deEstado("draft").length}</span>
+              </button>
+            )}
+            {yo.rol !== "author" && deEstado("in_review").length > 0 && (
+              <>
+                <button className="boton secundario" disabled={ocupado} onClick={() => enLote("aprobar", deEstado("in_review").map((t) => t.id))}>
+                  <IconoCheck tamano={16} />
+                  Aprobar
+                  <span className="boton-cuenta">{deEstado("in_review").length}</span>
+                </button>
+                <button className="boton secundario" disabled={ocupado} onClick={() => enLote("rechazar", deEstado("in_review").map((t) => t.id))}>
+                  <IconoCruz tamano={16} />
+                  Rechazar
+                  <span className="boton-cuenta">{deEstado("in_review").length}</span>
+                </button>
+              </>
+            )}
+            {yo.rol !== "author" && deEstado("approved").length > 0 && (
+              <button className="boton primario" disabled={ocupado} onClick={publicarElegidas} title="Publica solo las aprobadas seleccionadas; las ya publicadas se mantienen">
+                <IconoPublicar tamano={16} />
+                Publicar seleccionadas
+                <span className="boton-cuenta">+{deEstado("approved").length}</span>
+              </button>
+            )}
+            <button className="boton fantasma" onClick={() => setSeleccion(new Set())}>
+              Quitar selección
+            </button>
+          </div>
+        )}
         <div className="tabla-envoltura">
           <table>
             <thead>
               <tr>
+                <th className="col-check">
+                  <input type="checkbox" aria-label="Seleccionar todas las tarjetas visibles" checked={todasVisibles} onChange={alternarVisibles} />
+                </th>
                 <th className="col-codigo opcional">ID</th>
                 <th>Tarjeta</th>
                 <th>Tipo</th>
@@ -271,7 +487,16 @@ export function Mazos({ yo }: { yo: Yo }) {
             </thead>
             <tbody>
               {visibles.map((t) => (
-                <tr key={t.id} className="clic" tabIndex={0} onClick={() => setAbierta(t)} onKeyDown={(e) => e.key === "Enter" && setAbierta(t)}>
+                <tr
+                  key={t.id}
+                  className={`clic${seleccion.has(t.id) ? " seleccionada" : ""}`}
+                  tabIndex={0}
+                  onClick={() => setAbierta(t)}
+                  onKeyDown={(e) => e.key === "Enter" && setAbierta(t)}
+                >
+                  <td className="col-check" onClick={(e) => e.stopPropagation()}>
+                    <input type="checkbox" aria-label="Seleccionar tarjeta" checked={seleccion.has(t.id)} onChange={() => alternar(t.id)} />
+                  </td>
                   <td className="mono secundario-celda opcional">{t.id.slice(0, 8)}</td>
                   <td>
                     <span className="recorte">{resumen(t.content) || <span className="nota">(sin texto)</span>}</span>

@@ -5,9 +5,11 @@ import { articles, cardCitations, cards, deckReleases, decks, standards, standar
 
 /**
  * Publishes a new version of a deck with its approved (or already published) cards.
+ * With `soloTarjetas`, only those approved cards join the version; the rest stay approved for later.
+ * Already published cards always stay in the package so the app never loses them.
  * The resulting package is immutable: fixing a card means publishing another version.
  */
-export async function publicarMazo(deckId: string, publishedBy: string) {
+export async function publicarMazo(deckId: string, publishedBy: string, soloTarjetas?: string[]) {
   return db.transaction(async (tx) => {
     const [mazo] = await tx
       .select({ id: decks.id, code: standards.code, title: standards.title, standardId: standards.id })
@@ -21,11 +23,14 @@ export async function publicarMazo(deckId: string, publishedBy: string) {
       .from(standardVersions)
       .where(and(eq(standardVersions.standardId, mazo.standardId), eq(standardVersions.isCurrent, true)));
 
-    const filas = await tx
+    const candidatas = await tx
       .select()
       .from(cards)
       .where(and(eq(cards.deckId, deckId), inArray(cards.status, ["approved", "published"])))
       .orderBy(cards.createdAt);
+    const elegidas = soloTarjetas ? new Set(soloTarjetas) : null;
+    const filas = elegidas ? candidatas.filter((t) => t.status === "published" || elegidas.has(t.id)) : candidatas;
+    if (elegidas && !filas.some((t) => t.status === "approved")) throw new Error("Ninguna de las tarjetas elegidas está aprobada");
     if (filas.length === 0) throw new Error("El mazo no tiene tarjetas aprobadas");
 
     const citas = await tx
@@ -66,6 +71,6 @@ export async function publicarMazo(deckId: string, publishedBy: string) {
     await tx.insert(deckReleases).values({ deckId, version, package: paquete, cardCount: filas.length, publishedBy });
     await tx.update(cards).set({ status: "published" }).where(inArray(cards.id, filas.map((t) => t.id)));
 
-    return { version, totalTarjetas: filas.length };
+    return { version, totalTarjetas: filas.length, nuevas: filas.filter((t) => t.status === "approved").length };
   });
 }

@@ -194,9 +194,10 @@ export const editorial = new Hono<StaffVars>()
     return c.json(await eliminarMazo(mazo.id));
   })
 
-  .post("/mazos/:id/publicar", requiereStaff("reviewer"), async (c) => {
+  /** Without `tarjetas`, publishes every approved card; with it, only those (plus the already published). */
+  .post("/mazos/:id/publicar", requiereStaff("reviewer"), zValidator("json", z.object({ tarjetas: z.array(z.uuid()).max(2000).optional() })), async (c) => {
     try {
-      return c.json(await publicarMazo(c.req.param("id"), c.get("usuarioId")));
+      return c.json(await publicarMazo(c.req.param("id"), c.get("usuarioId"), c.req.valid("json").tarjetas));
     } catch (e) {
       throw new HTTPException(400, { message: (e as Error).message });
     }
@@ -285,6 +286,61 @@ export const editorial = new Hono<StaffVars>()
         .set({ status: approved ? "approved" : "draft", reviewerId: c.get("usuarioId"), updatedAt: new Date() })
         .where(eq(cards.id, tarjeta.id));
       return c.json({ ok: true });
+    },
+  )
+
+  /**
+   * Same editorial steps as above, for many cards at once. Cards in the wrong state are skipped and
+   * reported. Admins may approve their own cards here, as they already can when importing.
+   */
+  .post(
+    "/tarjetas/lote",
+    zValidator(
+      "json",
+      z
+        .object({
+          ids: z.array(z.uuid()).max(2000).optional(),
+          /** Instead of ids: every card of these decks (only those in the right state are touched). */
+          mazos: z.array(z.uuid()).max(200).optional(),
+          accion: z.enum(["enviar", "aprobar", "rechazar"]),
+          comment: z.string().optional(),
+        })
+        .refine((b) => b.ids?.length || b.mazos?.length, "Elige tarjetas o mazos"),
+    ),
+    async (c) => {
+      const { ids, mazos, accion, comment } = c.req.valid("json");
+      const yo = c.get("usuarioId");
+      const rol = c.get("rol");
+      if (accion !== "enviar" && rol === "author") throw new HTTPException(403, { message: "No tienes permiso para esta acción" });
+      if (accion === "rechazar" && !comment?.trim()) throw new HTTPException(400, { message: "Explica qué corregir al rechazar" });
+
+      const filas = await db
+        .select({ id: cards.id, status: cards.status, authorId: cards.authorId })
+        .from(cards)
+        .where(mazos?.length ? inArray(cards.deckId, mazos) : inArray(cards.id, ids!));
+      const requerido = accion === "enviar" ? "draft" : "in_review";
+      const omitidas: { id: string; motivo: string }[] = [];
+      const validas = filas.filter((t) => {
+        if (t.status !== requerido) return omitidas.push({ id: t.id, motivo: accion === "enviar" ? "no es borrador" : "no está en revisión" }), false;
+        if (accion !== "enviar" && t.authorId === yo && rol !== "admin") return omitidas.push({ id: t.id, motivo: "es tuya" }), false;
+        return true;
+      });
+      const idsValidos = validas.map((t) => t.id);
+      if (idsValidos.length) {
+        await db.transaction(async (tx) => {
+          if (accion === "enviar") {
+            await tx.update(cards).set({ status: "in_review", updatedAt: new Date() }).where(inArray(cards.id, idsValidos));
+            return;
+          }
+          const approved = accion === "aprobar";
+          await tx.insert(editorialReviews).values(idsValidos.map((cardId) => ({ cardId, reviewerId: yo, approved, comment: comment?.trim() || (approved ? "Aprobada en lote" : undefined) })));
+          await tx
+            .update(cards)
+            .set({ status: approved ? "approved" : "draft", reviewerId: yo, updatedAt: new Date() })
+            .where(inArray(cards.id, idsValidos));
+        });
+      }
+      return c.json({ procesadas: idsValidos.length, omitidas });
     },
   )
 

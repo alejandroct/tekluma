@@ -1695,3 +1695,27 @@ td.derecha {
   font-size: var(--t-sm);
   line-height: 1.55;
 }
+
+/* ───────────────────────── Bulk selection ───────────────────────── */
+.col-check {
+  width: 36px;
+  padding-right: 0 !important;
+}
+.col-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primario);
+  cursor: pointer;
+}
+tr.seleccionada td {
+  background: var(--seleccion);
+}
+.barra-lote {
+  background: var(--superficie-2);
+}
+.lote-cuenta {
+  font-weight: 600;
+  font-size: var(--t-sm);
+  color: var(--texto);
+  margin-right: var(--e2);
+}
