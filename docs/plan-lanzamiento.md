@@ -114,8 +114,9 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 - [x] Privacidad y términos con los datos de la empresa (`/privacidad`, `/terminos`) y página `/empresa`.
 - [ ] **(tú)** Inscribir el banco de datos «Usuarios de Tekluma» ante la Autoridad Nacional de Protección de Datos Personales (Ley 29733)
       y pasarme el código para ponerlo en la política de privacidad.
-- [ ] **(código)** Libro de Reclamaciones virtual (obligatorio para vender a consumidores en Perú): formulario en la web que guarda
-      el reclamo y envía copia al usuario y a `hola@tekluma.app`.
+- [x] **(código)** Libro de Reclamaciones virtual: formulario en `/reclamaciones` (enlazado en el pie de la web y en Perfil de la app),
+      hoja con número correlativo, constancia por correo al consumidor y copia a `hola@tekluma.app`, plazo de 15 días hábiles,
+      y vista «Reclamos» en el panel (solo administradores) para responder.
 - [ ] **(código)** Recordatorio diario de la pregunta del día (notificación local; el usuario elige la hora y puede apagarlo).
 - [ ] **(código)** Métricas propias del embudo (instala → primera tarjeta → vuelve al día siguiente → Premium), sin terceros.
 - [ ] **(código)** Registro de errores con Sentry (queda listo; se activa cuando crees el proyecto y me pases el DSN, que no es secreto).

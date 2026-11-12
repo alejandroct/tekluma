@@ -4,3 +4,4 @@ export * from "./paquetes";
 export * from "./api";
 export * from "./ligas";
 export * from "./importacion";
+export * from "./reclamos";

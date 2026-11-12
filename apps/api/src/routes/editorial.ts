@@ -4,7 +4,7 @@ import { HTTPException } from "hono/http-exception";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
 import { and, count, desc, eq, inArray, sql } from "drizzle-orm";
-import { contenidoTarjetaSchema, DECK_ACCESS, DISCIPLINES, importacionSchema, STAFF_ROLES, type StaffRole } from "@tekluma/shared";
+import { contenidoTarjetaSchema, DECK_ACCESS, DISCIPLINES, importacionSchema, respuestaReclamoSchema, STAFF_ROLES, type StaffRole } from "@tekluma/shared";
 import { auth } from "../auth";
 import { db } from "../db/client";
 import { articles, cardCitations, cards, deckReleases, decks, editorialReviews, standards, standardVersions, users } from "../db/schema";
@@ -12,6 +12,7 @@ import { publicarMazo } from "../publicacion";
 import { eliminarMazo, eliminarNorma } from "../eliminacion";
 import { compararNumeros } from "../util";
 import { importar, ImportacionError } from "../importacion";
+import { codigoHoja, listarReclamos, ReclamoError, reenviarConstancia, responderReclamo } from "../reclamos";
 
 type StaffVars = { Variables: { usuarioId: string; rol: StaffRole } };
 
@@ -399,4 +400,30 @@ export const editorial = new Hono<StaffVars>()
       if (!actualizado) throw new HTTPException(404, { message: "Esa persona aún no tiene cuenta: pídele que inicie sesión una vez" });
       return c.json({ ok: true });
     },
-  );
+  )
+
+  // ───────── Complaints book (admins only: it holds personal data) ─────────
+
+  .get("/reclamos", requiereStaff("admin"), async (c) =>
+    c.json((await listarReclamos()).map((h) => ({ ...h, codigo: codigoHoja(h) }))),
+  )
+
+  .post("/reclamos/:id/respuesta", requiereStaff("admin"), zValidator("json", respuestaReclamoSchema), async (c) => {
+    try {
+      await responderReclamo(c.req.param("id"), c.req.valid("json").respuesta, c.get("usuarioId"));
+    } catch (e) {
+      if (e instanceof ReclamoError) throw new HTTPException(e.status, { message: e.message });
+      throw e;
+    }
+    return c.json({ ok: true });
+  })
+
+  .post("/reclamos/:id/constancia", requiereStaff("admin"), async (c) => {
+    try {
+      await reenviarConstancia(c.req.param("id"));
+    } catch (e) {
+      if (e instanceof ReclamoError) throw new HTTPException(e.status, { message: e.message });
+      throw e;
+    }
+    return c.json({ ok: true });
+  });

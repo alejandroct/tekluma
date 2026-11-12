@@ -85,6 +85,10 @@ export default function Perfil() {
       <Pressable onPress={confirmarEliminacion} hitSlop={8} style={{ alignItems: "center", paddingVertical: 8 }}>
         <Text style={{ color: t.textoSuave, fontSize: 14, textDecorationLine: "underline" }}>Eliminar mi cuenta</Text>
       </Pressable>
+      {/* Obligatorio en Perú: acceso visible al Libro de Reclamaciones virtual. */}
+      <Pressable onPress={() => Linking.openURL("https://tekluma.app/reclamaciones")} hitSlop={8} style={{ alignItems: "center", paddingVertical: 4 }}>
+        <Text style={{ color: t.textoSuave, fontSize: 14, textDecorationLine: "underline" }}>Libro de Reclamaciones</Text>
+      </Pressable>
     </ScrollView>
   );
 }

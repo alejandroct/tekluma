@@ -172,3 +172,12 @@ export const IconoImportar = (p: Props) => (
     <path d="M2.75 12.75V17.25H17.25V12.75" />
   </Icono>
 );
+
+/** Complaints book: an open book with a ruled page. */
+export const IconoReclamos = (p: Props) => (
+  <Icono {...p}>
+    <path d="M10 4.75C8.5 3.75 5.5 3.25 2.75 3.75V15.75C5.5 15.25 8.5 15.75 10 16.75C11.5 15.75 14.5 15.25 17.25 15.75V3.75C14.5 3.25 11.5 3.75 10 4.75Z" />
+    <path d="M10 4.75V16.75" />
+    <path d="M12.25 7.25H15M12.25 10H15M5 7.25H7.75" />
+  </Icono>
+);

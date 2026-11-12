@@ -1719,3 +1719,51 @@ tr.seleccionada td {
   color: var(--texto);
   margin-right: var(--e2);
 }
+
+/* ───────────────────────── Libro de Reclamaciones ───────────────────────── */
+.reclamos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: var(--e5);
+  align-items: start;
+}
+@media (max-width: 1180px) {
+  .reclamos {
+    grid-template-columns: 1fr;
+  }
+}
+tr.clic {
+  cursor: pointer;
+}
+tr.seleccionada td {
+  background: var(--revision-fondo);
+}
+.estado-vencido {
+  color: var(--error);
+  border-color: currentColor;
+  background: transparent;
+}
+.datos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--e3) var(--e4);
+}
+.dato {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.texto-reclamo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: var(--e3);
+  border-top: 1px solid var(--linea);
+}
+.texto-reclamo p {
+  margin: 0 0 var(--e2);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

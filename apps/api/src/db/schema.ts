@@ -13,6 +13,7 @@ import {
   date,
   uniqueIndex,
   index,
+  serial,
 } from "drizzle-orm/pg-core";
 import {
   COIN_REASONS,
@@ -25,6 +26,8 @@ import {
   type ContenidoTarjeta,
   type Division,
   type PaqueteMazo,
+  type EstadoReclamo,
+  type TipoReclamo,
 } from "@tekluma/shared";
 
 const id = () => uuid("id").primaryKey().defaultRandom();
@@ -388,4 +391,41 @@ export const reviewStates = pgTable(
     updatedAt: updatedAt(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.cardId] }), index("review_states_due_idx").on(t.userId, t.due)],
+);
+
+// ───────────── Complaints book (Libro de Reclamaciones) ─────────────
+
+/** One sheet of the virtual complaints book; kept at least two years as the law requires. */
+export const complaints = pgTable(
+  "complaints",
+  {
+    id: id(),
+    /** Correlative sheet number, shown as 000001-2026. */
+    number: serial("number").notNull().unique(),
+    kind: text("kind").$type<TipoReclamo>().notNull(),
+    name: text("name").notNull(),
+    documentType: text("document_type").notNull(),
+    documentNumber: text("document_number").notNull(),
+    address: text("address").notNull(),
+    phone: text("phone").notNull(),
+    email: text("email").notNull(),
+    isMinor: boolean("is_minor").notNull().default(false),
+    guardian: text("guardian"),
+    itemType: text("item_type").notNull(),
+    itemDescription: text("item_description").notNull(),
+    /** Amount claimed in céntimos (PEN), if any. */
+    amountCents: integer("amount_cents"),
+    detail: text("detail").notNull(),
+    request: text("request").notNull(),
+    status: text("status").$type<EstadoReclamo>().notNull().default("pendiente"),
+    /** Last day to answer: 15 business days after filing. */
+    dueAt: timestamp("due_at", { withTimezone: true }).notNull(),
+    /** When the receipt reached the consumer by email (null = SES failed; resend by hand). */
+    receiptSentAt: timestamp("receipt_sent_at", { withTimezone: true }),
+    response: text("response"),
+    respondedAt: timestamp("responded_at", { withTimezone: true }),
+    respondedBy: uuid("responded_by").references(() => users.id, { onDelete: "set null" }),
+    createdAt: createdAt(),
+  },
+  (t) => [index("complaints_created_idx").on(t.createdAt)],
 );

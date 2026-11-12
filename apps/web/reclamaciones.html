@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Libro de Reclamaciones · Tekluma</title>
+    <meta name="description" content="Libro de Reclamaciones virtual de Tekluma (DCC INGENIERIA Y CONSTRUCCION S.A.C., RUC 20612731951)." />
+    <meta name="theme-color" content="#F6F5F2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F1B2D" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20261110" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="/estilos.css?v=20261113" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="hoja">
+        <a class="marca" href="/" aria-label="Tekluma, inicio">
+          <picture><source srcset="/logo-oscuro.svg?v=20261110" media="(prefers-color-scheme: dark)" /><img src="/logo.svg?v=20261110" alt="Tekluma" width="105" height="26" /></picture>
+        </a>
+        <nav aria-label="Principal">
+          <a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a><a href="/reclamaciones" aria-current="page">Reclamaciones</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="documento">
+      <div class="hoja">
+        <aside class="doc-lado">
+          <div class="doc-cab">
+            <span class="etq">Conforme al Código de Protección y Defensa del Consumidor</span>
+            <h1>Libro de Reclamaciones</h1>
+            <div class="doc-ficha">
+              <div><span class="etq">Proveedor</span><span>DCC INGENIERIA Y CONSTRUCCION S.A.C.</span></div>
+              <div><span class="etq">RUC</span><span class="mono">20612731951</span></div>
+              <div><span class="etq">Domicilio</span><span>Mz. B1 Lote 12, Urb. Bello Horizonte Etapa Uno, Piura, Perú</span></div>
+              <div><span class="etq">Plazo de respuesta</span><span>15 días hábiles</span></div>
+            </div>
+          </div>
+          <div class="reclamo-tipos">
+            <p><b>Reclamo:</b> disconformidad con el producto o servicio (por ejemplo, un cobro de Premium o una función que no funciona).</p>
+            <p><b>Queja:</b> disconformidad que no es sobre el producto o servicio, o malestar con la atención recibida.</p>
+          </div>
+        </aside>
+
+        <article class="legal">
+          <form id="form-reclamo" class="form-reclamo" novalidate>
+            <fieldset>
+              <legend><span class="n">1.</span> Identificación del consumidor</legend>
+              <div class="rejilla-campos">
+                <label class="campo-grupo ancho"><span class="etq">Nombre completo</span><input class="campo" name="nombre" autocomplete="name" required maxlength="120" /></label>
+                <label class="campo-grupo"><span class="etq">Tipo de documento</span>
+                  <select class="campo" name="tipoDocumento"><option>DNI</option><option value="CE">Carné de extranjería</option><option>Pasaporte</option><option>RUC</option></select>
+                </label>
+                <label class="campo-grupo"><span class="etq">Número de documento</span><input class="campo" name="numeroDocumento" inputmode="numeric" required maxlength="20" /></label>
+                <label class="campo-grupo ancho"><span class="etq">Domicilio</span><input class="campo" name="domicilio" autocomplete="street-address" required maxlength="200" /></label>
+                <label class="campo-grupo"><span class="etq">Teléfono</span><input class="campo" name="telefono" type="tel" autocomplete="tel" required maxlength="20" /></label>
+                <label class="campo-grupo"><span class="etq">Correo electrónico</span><input class="campo" name="email" type="email" autocomplete="email" required maxlength="200" /></label>
+                <label class="marcar ancho"><input type="checkbox" name="menorDeEdad" /> <span>Soy menor de edad</span></label>
+                <label class="campo-grupo ancho" id="grupo-apoderado" hidden><span class="etq">Nombre del padre, madre o apoderado</span><input class="campo" name="apoderado" maxlength="120" /></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="n">2.</span> Identificación del bien contratado</legend>
+              <div class="rejilla-campos">
+                <div class="campo-grupo ancho">
+                  <span class="etq">Tipo</span>
+                  <div class="eleccion">
+                    <label><input type="radio" name="bien" value="servicio" checked /> <span>Servicio</span></label>
+                    <label><input type="radio" name="bien" value="producto" /> <span>Producto</span></label>
+                  </div>
+                </div>
+                <label class="campo-grupo ancho"><span class="etq">Descripción</span><input class="campo" name="descripcionBien" required maxlength="300" placeholder="Ej.: suscripción Premium mensual de Tekluma" /></label>
+                <label class="campo-grupo"><span class="etq">Monto reclamado (S/, opcional)</span><input class="campo" name="montoReclamado" type="number" min="0" step="0.01" inputmode="decimal" /></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="n">3.</span> Detalle de la reclamación y pedido</legend>
+              <div class="rejilla-campos">
+                <div class="campo-grupo ancho">
+                  <span class="etq">Tipo</span>
+                  <div class="eleccion">
+                    <label><input type="radio" name="tipo" value="reclamo" checked /> <span>Reclamo</span></label>
+                    <label><input type="radio" name="tipo" value="queja" /> <span>Queja</span></label>
+                  </div>
+                </div>
+                <label class="campo-grupo ancho"><span class="etq">Detalle</span><textarea class="campo" name="detalle" rows="6" required maxlength="3000" placeholder="Cuéntanos qué pasó, con fechas si las tienes."></textarea></label>
+                <label class="campo-grupo ancho"><span class="etq">Pedido</span><textarea class="campo" name="pedido" rows="3" required maxlength="2000" placeholder="¿Qué solicitas que hagamos?"></textarea></label>
+              </div>
+            </fieldset>
+
+            <!-- Trampa para bots: una persona no ve ni llena este campo. -->
+            <label class="trampa" aria-hidden="true">Sitio web <input name="web" tabindex="-1" autocomplete="off" /></label>
+
+            <label class="marcar"><input type="checkbox" name="conformidad" required /> <span>Declaro que los datos consignados son verdaderos.</span></label>
+
+            <p class="nota">Te enviaremos una copia de esta hoja a tu correo y la respuesta en un plazo máximo de 15 días hábiles. La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI. Tus datos se tratan según nuestra <a href="/privacidad">Política de privacidad</a>, solo para atender esta hoja.</p>
+
+            <p class="aviso-error" id="error-general" role="alert" hidden></p>
+            <button class="btn btn-acento" type="submit">Enviar hoja de reclamación <svg class="i" aria-hidden="true"><use href="/iconos.svg?v=20261110#i-enviar" /></svg></button>
+          </form>
+
+          <section class="resultado" id="resultado" hidden tabindex="-1">
+            <div class="resultado-cab"><span class="etq">Hoja registrada</span></div>
+            <h2 id="resultado-titulo"></h2>
+            <p id="resultado-texto"></p>
+            <pre class="hoja-texto" id="resultado-hoja"></pre>
+            <div class="acciones-fila">
+              <button class="btn btn-primario" type="button" onclick="window.print()">Imprimir o guardar en PDF</button>
+              <a class="btn btn-linea" href="/">Volver al inicio</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="pie">
+      <div class="hoja">
+        <div class="cajetin">
+          <div class="doble"><span class="etq">Proyecto</span><a class="marca-pie" href="/" aria-label="Tekluma, inicio"><picture><source srcset="/logo-oscuro.svg?v=20261110" media="(prefers-color-scheme: dark)" /><img src="/logo.svg?v=20261110" alt="Tekluma" width="81" height="20" /></picture></a></div>
+          <div><span class="etq">Titular</span><a href="/empresa">DCC Ingeniería y Construcción S.A.C.</a></div>
+          <div><span class="etq">Documentos</span><span class="vinculos"><a href="/terminos">Términos</a><a href="/privacidad">Privacidad</a><a href="/empresa">Empresa</a><a href="/reclamaciones">Libro de Reclamaciones</a></span></div>
+          <div><span class="etq">Contacto</span><a href="mailto:hola@tekluma.app">hola@tekluma.app</a></div>
+          <div><span class="etq">Año</span><span class="mono">© 2026</span></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // La API vive en api.<este dominio>; en local, en el puerto 8787.
+      const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8787" : `https://api.${location.hostname}`;
+      const form = document.getElementById("form-reclamo");
+      const errorGeneral = document.getElementById("error-general");
+      const apoderado = document.getElementById("grupo-apoderado");
+
+      form.menorDeEdad.addEventListener("change", () => (apoderado.hidden = !form.menorDeEdad.checked));
+
+      function limpiarErrores() {
+        form.querySelectorAll(".campo.error").forEach((c) => c.classList.remove("error"));
+        form.querySelectorAll(".msj-error").forEach((m) => m.remove());
+        errorGeneral.hidden = true;
+      }
+
+      function marcarError(nombre, mensaje) {
+        const campo = form.elements[nombre];
+        const nodo = campo instanceof RadioNodeList ? campo[0] : campo;
+        if (!nodo) return false;
+        nodo.classList?.add("error");
+        const msj = document.createElement("span");
+        msj.className = "msj-error";
+        msj.textContent = mensaje;
+        (nodo.closest(".campo-grupo, .marcar") ?? nodo.parentElement).append(msj);
+        return true;
+      }
+
+      form.addEventListener("submit", async (ev) => {
+        ev.preventDefault();
+        limpiarErrores();
+        const f = form.elements;
+        const monto = f.montoReclamado.value.trim();
+        const datos = {
+          tipo: f.tipo.value,
+          nombre: f.nombre.value,
+          tipoDocumento: f.tipoDocumento.value,
+          numeroDocumento: f.numeroDocumento.value,
+          domicilio: f.domicilio.value,
+          telefono: f.telefono.value,
+          email: f.email.value.trim(),
+          menorDeEdad: f.menorDeEdad.checked,
+          apoderado: f.menorDeEdad.checked ? f.apoderado.value : undefined,
+          bien: f.bien.value,
+          descripcionBien: f.descripcionBien.value,
+          montoReclamado: monto === "" ? undefined : Number(monto),
+          detalle: f.detalle.value,
+          pedido: f.pedido.value,
+          conformidad: f.conformidad.checked,
+          web: f.web.value,
+        };
+        const boton = form.querySelector("button[type=submit]");
+        boton.disabled = true;
+        try {
+          const r = await fetch(API + "/reclamos", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(datos) });
+          const json = await r.json().catch(() => ({}));
+          if (!r.ok) {
+            // zod-validator manda los problemas en error.message (JSON en texto).
+            let problemas = json.error?.issues ?? [];
+            if (!problemas.length && typeof json.error?.message === "string") {
+              try { problemas = JSON.parse(json.error.message); } catch {}
+            }
+            let primero = null;
+            for (const p of problemas) if (marcarError(p.path?.[0], p.message) && !primero) primero = p.path[0];
+            if (primero) form.elements[primero]?.focus?.() ?? form.elements[primero]?.[0]?.focus();
+            else {
+              errorGeneral.textContent = json.message ?? "No pudimos registrar la hoja. Inténtalo de nuevo o escríbenos a hola@tekluma.app.";
+              errorGeneral.hidden = false;
+            }
+            return;
+          }
+          const fmt = (iso) => new Date(iso).toLocaleDateString("es-PE", { timeZone: "America/Lima", day: "numeric", month: "long", year: "numeric" });
+          document.getElementById("resultado-titulo").textContent = `Hoja N° ${json.codigo}`;
+          document.getElementById("resultado-texto").textContent =
+            `Registramos tu ${datos.tipo} el ${fmt(json.fecha)}. Te enviamos una copia a ${datos.email} y te responderemos a más tardar el ${fmt(json.vence)}.`;
+          document.getElementById("resultado-hoja").textContent = json.hoja;
+          form.hidden = true;
+          const resultado = document.getElementById("resultado");
+          resultado.hidden = false;
+          resultado.focus();
+          resultado.scrollIntoView({ block: "start" });
+        } catch {
+          errorGeneral.textContent = "Sin conexión. Revisa tu internet e inténtalo de nuevo.";
+          errorGeneral.hidden = false;
+        } finally {
+          boton.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

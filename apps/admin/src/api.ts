@@ -1,4 +1,4 @@
-import type { ContenidoTarjeta, DeckAccess, Discipline, EditorialStatus, StaffRole } from "@tekluma/shared";
+import type { ContenidoTarjeta, DeckAccess, Discipline, EditorialStatus, EstadoReclamo, StaffRole, TipoReclamo } from "@tekluma/shared";
 
 const BASE = import.meta.env.VITE_API_URL ?? "http://localhost:8787";
 
@@ -72,3 +72,28 @@ export type Tarjeta = {
   lastReview: { approved: boolean; comment: string | null } | null;
 };
 export type Miembro = { id: string; email: string; name: string; staffRole: StaffRole };
+
+export type Reclamo = {
+  id: string;
+  codigo: string;
+  kind: TipoReclamo;
+  name: string;
+  documentType: string;
+  documentNumber: string;
+  address: string;
+  phone: string;
+  email: string;
+  isMinor: boolean;
+  guardian: string | null;
+  itemType: string;
+  itemDescription: string;
+  amountCents: number | null;
+  detail: string;
+  request: string;
+  status: EstadoReclamo;
+  dueAt: string;
+  receiptSentAt: string | null;
+  response: string | null;
+  respondedAt: string | null;
+  createdAt: string;
+};

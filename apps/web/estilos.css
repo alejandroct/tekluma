@@ -456,3 +456,36 @@ p { margin: 0; }
 /* Figura de la pregunta (diaria y duelo) */
 .figura { margin: 0; padding: 10px; background: #fff; border: 1px solid var(--linea-fuerte); border-radius: 6px; }
 .figura img { display: block; width: 100%; height: auto; max-height: 340px; object-fit: contain; }
+
+/* ── Libro de Reclamaciones ── */
+.form-reclamo [hidden], .resultado[hidden] { display: none; }
+.reclamo-tipos { display: grid; gap: var(--e3); margin-top: var(--e5); font-size: 14px; line-height: 1.55; color: var(--tinta-2); }
+.reclamo-tipos b { color: var(--tinta); }
+.form-reclamo { display: flex; flex-direction: column; gap: var(--e6); line-height: 1.5; }
+.form-reclamo fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.form-reclamo legend { display: flex; align-items: baseline; gap: 10px; padding: 0 0 var(--e3); margin-bottom: var(--e4); width: 100%; border-bottom: 1px solid var(--linea); font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+.form-reclamo legend .n { font-family: var(--mono); font-size: 14px; font-weight: 500; color: var(--tinta-3); }
+.rejilla-campos { display: grid; gap: var(--e4); }
+@media (min-width: 640px) { .rejilla-campos { grid-template-columns: 1fr 1fr; } .rejilla-campos .ancho { grid-column: 1 / -1; } }
+.form-reclamo .campo { font-size: 16px; font-weight: 500; }
+.form-reclamo textarea.campo { resize: vertical; min-height: 96px; line-height: 1.5; }
+.form-reclamo select.campo { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--tinta-2) 50%), linear-gradient(135deg, var(--tinta-2) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 40px; }
+.eleccion { display: flex; flex-wrap: wrap; gap: var(--e2); }
+.eleccion label { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px; border: 1px solid var(--linea-fuerte); border-radius: var(--radio); background: var(--superficie); font-weight: 600; cursor: pointer; }
+.eleccion label:has(input:checked) { border-color: var(--tinta); box-shadow: inset 0 -2px 0 var(--ambar); }
+.eleccion input, .marcar input { accent-color: var(--ambar); width: 18px; height: 18px; margin: 0; }
+.marcar { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; font-weight: 600; cursor: pointer; flex-wrap: wrap; }
+.marcar input { margin-top: 2px; flex: none; }
+.marcar .msj-error { flex-basis: 100%; }
+.msj-error { font-size: 13.5px; font-weight: 600; color: var(--rojo); }
+.aviso-error { padding: var(--e3) var(--e4); border: 1px solid var(--rojo); border-left-width: 3px; color: var(--tinta); font-size: 15px; }
+.trampa { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.form-reclamo button[disabled] { opacity: 0.6; cursor: wait; }
+.form-reclamo > .btn { align-self: flex-start; }
+.hoja-texto { margin: 0; padding: var(--e4); white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--mono); font-size: 13px; line-height: 1.6; background: var(--fondo); border: 1px solid var(--linea); }
+.acciones-fila { display: flex; flex-wrap: wrap; gap: var(--e3); }
+@media print {
+  .cabecera, .pie, .doc-lado, .acciones-fila { display: none !important; }
+  .resultado { border: 0; padding: 0; }
+  .hoja-texto { border: 0; font-size: 11px; }
+}
