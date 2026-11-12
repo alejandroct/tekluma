@@ -19,6 +19,7 @@ import { Stack, useLocalSearchParams } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { FadeIn, FadeInDown, useAnimatedStyle, useSharedValue, withDelay, withSequence, withTiming } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
+import { SvgXml } from "react-native-svg";
 import { IconoBuscar, IconoCerrar, IconoChevron, IconoCompartir, IconoIndice, IconoPagina } from "@/components/Iconos";
 import {
   abrirNorma,
@@ -28,11 +29,13 @@ import {
   esEncabezado,
   normalizar,
   patronTerminos,
+  trozosConSimbolos,
   urlNorma,
   urlPagina,
   type ArticuloNorma,
   type CapituloNorma,
   type FiguraNorma,
+  type FormulaSvg,
   type Norma,
   type Resultado,
 } from "@/lib/normas";
@@ -199,12 +202,14 @@ export default function LectorNorma() {
           t={t}
           destacado={item.art.n === destacado}
           patron={item.art.n === destacado ? patron : null}
+          formulas={norma?.formulas}
+          simbolos={norma?.simbolos}
           onPagina={setPagina}
           onFigura={setFigura}
           onCompartir={compartir}
         />
       ),
-    [t, slug, destacado, patron, compartir],
+    [t, slug, destacado, patron, compartir, norma],
   );
 
   const titulo = norma ? norma.codigo : "Norma";
@@ -329,12 +334,14 @@ type PropsFila = {
   t: Tema;
   destacado: boolean;
   patron: RegExp | null;
+  formulas?: Record<string, FormulaSvg>;
+  simbolos?: string[];
   onPagina: (p: number) => void;
   onFigura: (f: FiguraNorma) => void;
   onCompartir: (a: ArticuloNorma) => void;
 };
 
-const FilaArticulo = memo(function FilaArticulo({ art, slug, t, destacado, patron, onPagina, onFigura, onCompartir }: PropsFila) {
+const FilaArticulo = memo(function FilaArticulo({ art, slug, t, destacado, patron, formulas, simbolos, onPagina, onFigura, onCompartir }: PropsFila) {
   const { width } = useWindowDimensions();
   if (esEncabezado(art)) {
     return (
@@ -353,7 +360,7 @@ const FilaArticulo = memo(function FilaArticulo({ art, slug, t, destacado, patro
           <Text style={[estilos.articuloNumero, { color: t.ambar }]}>{art.n}</Text>
           {!!art.e && <Text style={[estilos.articuloEpigrafe, { color: t.texto }]}>{art.e}</Text>}
         </View>
-        <TextoArticulo texto={art.t} patron={patron} t={t} />
+        <TextoArticulo texto={art.t} patron={patron} t={t} formulas={formulas} simbolos={simbolos} notacion={art.n === "2.1"} />
         {art.f?.map((f) => (
           <Pressable key={f.src} onPress={() => onFigura(f)} style={[estilos.figura, { borderColor: t.borde }]}>
             <Image source={{ uri: urlNorma(slug, f.src) }} style={{ width: anchoFigura - 2, height: ((anchoFigura - 2) * f.h) / f.w }} resizeMode="contain" />
@@ -397,48 +404,122 @@ function Resaltado({ color }: { color: string }) {
   );
 }
 
-/** Párrafos, fórmulas numeradas (como en la hoja, con su número a la derecha) y tablas que se deslizan de lado. */
-function TextoArticulo({ texto, patron, t }: { texto: string; patron: RegExp | null; t: Tema }) {
-  const bloques = useMemo(() => bloquesTexto(texto), [texto]);
+/** Tamaño de un «ex» de MathJax según la letra del texto que acompaña. */
+const EX = (tamano: number) => tamano * 0.45;
+
+/** Una fórmula dibujada (SVG de MathJax); si no cabe en el ancho, se desliza de lado. */
+function Dibujo({ dibujo, tamano, color, ancho }: { dibujo: FormulaSvg; tamano: number; color: string; ancho?: number }) {
+  const w = dibujo.w * EX(tamano);
+  const h = dibujo.h * EX(tamano);
+  const svg = <SvgXml xml={dibujo.svg} width={w} height={h} color={color} />;
+  if (!ancho || w <= ancho) return svg;
+  return (
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ maxWidth: ancho }}>
+      {svg}
+    </ScrollView>
+  );
+}
+
+type PropsTexto = {
+  texto: string;
+  patron: RegExp | null;
+  t: Tema;
+  formulas?: Record<string, FormulaSvg>;
+  simbolos?: string[];
+  notacion?: boolean;
+};
+
+/** Párrafos con sus símbolos (Vc, f’c), fórmulas dibujadas con su número a la derecha y tablas que se deslizan de lado. */
+function TextoArticulo({ texto, patron, t, formulas, simbolos, notacion }: PropsTexto) {
+  const { width } = useWindowDimensions();
+  const bloques = useMemo(() => bloquesTexto(texto, formulas, notacion), [texto, formulas, notacion]);
+  const anchoFormula = Math.min(width, 720) - 40 - 30 - 56;
   return (
     <>
       {bloques.map((b, i) => {
         if (b.tipo === "parrafo") {
-          return <TextoResaltado key={i} texto={b.texto} patron={patron} style={[estilos.articuloTexto, { color: t.texto }]} marca={t.ambar} />;
+          return (
+            <TextoResaltado
+              key={i}
+              texto={b.texto}
+              patron={patron}
+              simbolos={simbolos}
+              tamano={15.5}
+              style={[estilos.articuloTexto, { color: t.texto }]}
+              marca={t.ambar}
+            />
+          );
+        }
+        if (b.tipo === "definicion") {
+          return (
+            <View key={i} style={[estilos.definicion, { borderColor: t.borde }]}>
+              <View style={estilos.definicionSimbolo}>
+                <Dibujo dibujo={b.dibujo} tamano={17} color={t.texto} />
+              </View>
+              <TextoResaltado texto={b.texto} patron={patron} simbolos={simbolos} tamano={14.5} style={[estilos.definicionTexto, { color: t.texto }]} marca={t.ambar} />
+            </View>
+          );
         }
         if (b.tipo === "formula") {
           return (
             <View key={i} style={[estilos.formula, { borderColor: t.borde, backgroundColor: t.superficie }]}>
-              <TextoResaltado texto={b.expresion} patron={patron} style={[estilos.formulaTexto, { color: t.texto }]} marca={t.ambar} />
-              <Text style={[estilos.formulaNumero, { color: t.ambar }]}>({b.numero})</Text>
+              <View style={{ flex: 1 }}>
+                {b.dibujo ? (
+                  <Dibujo dibujo={b.dibujo} tamano={17} color={t.texto} ancho={anchoFormula} />
+                ) : (
+                  <TextoResaltado texto={b.expresion} patron={patron} style={[estilos.formulaTexto, { color: t.texto }]} marca={t.ambar} />
+                )}
+              </View>
+              {!!b.numero && <Text style={[estilos.formulaNumero, { color: t.ambar }]}>({b.numero})</Text>}
             </View>
           );
         }
         const columnas = Math.max(...b.filas.map((f) => f.length));
-        const anchos = Array.from({ length: columnas }, (_, c) =>
+        const anchoCelda = (celda: string, encabezado: boolean) => {
+          const dibujo = formulas?.[celda];
+          if (dibujo) return dibujo.w * EX(15) + 22;
           // El ancho lo marcan las celdas del cuerpo; el encabezado (en mono, más largo) se parte en líneas.
-          Math.min(230, Math.max(72, Math.min((b.filas[0]?.[c] ?? "").length, 16) * 7.5 + 22, ...b.filas.slice(1).map((f) => (f[c] ?? "").length * 7 + 22))),
+          return encabezado ? Math.min(celda.length, 16) * 7.5 + 22 : celda.length * 7 + 22;
+        };
+        const anchos = Array.from({ length: columnas }, (_, c) =>
+          Math.min(260, Math.max(72, ...b.filas.map((f, n) => anchoCelda(f[c] ?? "", n === 0)))),
         );
         return (
           <View key={i} style={estilos.tablaMarco}>
             {!!b.titulo && <Text style={[estilos.tablaTitulo, { color: t.textoSuave }]}>{b.titulo}</Text>}
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <View style={[estilos.tabla, { borderColor: t.borde }]}>
-              {b.filas.map((fila, f) => (
-                <View key={f} style={[estilos.tablaFila, { borderColor: t.borde, borderTopWidth: f ? StyleSheet.hairlineWidth : 0, backgroundColor: f === 0 ? t.superficie : "transparent" }]}>
-                  {anchos.map((ancho, c) => (
-                    <View key={c} style={[estilos.tablaCelda, { width: ancho, borderColor: t.borde, borderLeftWidth: c ? StyleSheet.hairlineWidth : 0 }]}>
-                      <TextoResaltado
-                        texto={fila[c] ?? ""}
-                        patron={patron}
-                        style={[f === 0 ? estilos.tablaEncabezado : estilos.tablaTexto, { color: f === 0 ? t.textoSuave : t.texto }]}
-                        marca={t.ambar}
-                      />
-                    </View>
-                  ))}
-                </View>
-              ))}
-            </View>
+              <View style={[estilos.tabla, { borderColor: t.borde }]}>
+                {b.filas.map((fila, f) => (
+                  <View
+                    key={f}
+                    style={[
+                      estilos.tablaFila,
+                      { borderColor: t.borde, borderTopWidth: f ? StyleSheet.hairlineWidth : 0, backgroundColor: f === 0 ? t.superficie : "transparent" },
+                    ]}
+                  >
+                    {anchos.map((ancho, c) => {
+                      const celda = fila[c] ?? "";
+                      const dibujo = formulas?.[celda];
+                      return (
+                        <View key={c} style={[estilos.tablaCelda, { width: ancho, borderColor: t.borde, borderLeftWidth: c ? StyleSheet.hairlineWidth : 0 }]}>
+                          {dibujo ? (
+                            <Dibujo dibujo={dibujo} tamano={15} color={f === 0 ? t.textoSuave : t.texto} />
+                          ) : (
+                            <TextoResaltado
+                              texto={celda}
+                              patron={patron}
+                              simbolos={f === 0 ? undefined : simbolos}
+                              tamano={14}
+                              style={[f === 0 ? estilos.tablaEncabezado : estilos.tablaTexto, { color: f === 0 ? t.textoSuave : t.texto }]}
+                              marca={t.ambar}
+                            />
+                          )}
+                        </View>
+                      );
+                    })}
+                  </View>
+                ))}
+              </View>
             </ScrollView>
           </View>
         );
@@ -447,8 +528,28 @@ function TextoArticulo({ texto, patron, t }: { texto: string; patron: RegExp | n
   );
 }
 
-function TextoResaltado({ texto, patron, style, marca }: { texto: string; patron: RegExp | null; style: object; marca: string }) {
-  if (!patron) return <Text style={style}>{texto}</Text>;
+type PropsResaltado = { texto: string; patron: RegExp | null; style: object; marca: string; simbolos?: string[]; tamano?: number };
+
+/** Texto con los términos buscados marcados; sin búsqueda, los símbolos de la notación van con su subíndice. */
+function TextoResaltado({ texto, patron, style, marca, simbolos, tamano = 15 }: PropsResaltado) {
+  if (!patron) {
+    const trozos = trozosConSimbolos(texto, simbolos);
+    if (trozos.length === 1 && typeof trozos[0] === "string") return <Text style={style}>{texto}</Text>;
+    return (
+      <Text style={style}>
+        {trozos.map((tr, i) =>
+          typeof tr === "string" ? (
+            tr
+          ) : (
+            <Text key={i} style={estilos.simbolo}>
+              {tr.base}
+              <Text style={{ fontSize: tamano * 0.7 }}>{tr.sub}</Text>
+            </Text>
+          ),
+        )}
+      </Text>
+    );
+  }
   const partes = texto.split(patron);
   return (
     <Text style={style}>
@@ -679,6 +780,10 @@ const estilos = StyleSheet.create({
   articuloTexto: { fontSize: 15.5, lineHeight: 23 },
   formula: { flexDirection: "row", alignItems: "center", gap: 12, borderWidth: StyleSheet.hairlineWidth, borderRadius: 6, paddingHorizontal: 14, paddingVertical: 10, marginVertical: 2 },
   formulaTexto: { flex: 1, fontSize: 16.5, lineHeight: 24, fontStyle: "italic", fontFamily: Platform.select({ ios: "Georgia", default: "serif" }), fontVariant: ["lining-nums"] },
+  simbolo: { fontStyle: "italic" },
+  definicion: { flexDirection: "row", alignItems: "center", gap: 12, paddingVertical: 7, borderTopWidth: StyleSheet.hairlineWidth },
+  definicionSimbolo: { width: 64, alignItems: "flex-start" },
+  definicionTexto: { flex: 1, fontSize: 14.5, lineHeight: 20 },
   formulaNumero: { fontFamily: MONO, fontSize: 12 },
   tablaMarco: { marginVertical: 4, gap: 6 },
   tablaTitulo: { fontFamily: MONO, fontSize: 11, lineHeight: 16, letterSpacing: 0.6 },

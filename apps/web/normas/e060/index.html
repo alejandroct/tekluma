@@ -47,6 +47,13 @@
       .art, .resultado { font-feature-settings: "calt" 0, "liga" 0; }
       .art p { margin: 6px 0 0; white-space: pre-line; max-width: 72ch; }
       .art .formula { display: flex; align-items: center; justify-content: space-between; gap: var(--e4); max-width: 72ch; margin: 10px 0 4px; padding: 10px 16px; border: 1px solid var(--linea); border-radius: 6px; background: var(--superficie); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-variant-numeric: lining-nums; font-size: 18px; line-height: 1.45; }
+      .art .formula .mj { overflow-x: auto; font-style: normal; font-size: 19px; max-width: 100%; }
+      .art .formula .mj svg, .art .tabla .mj svg, .definicion .mj svg { display: block; }
+      .art .tabla .mj { font-size: 16px; }
+      .sim { font-style: italic; }
+      .sim sub { font-size: 0.72em; }
+      .definicion { display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: center; max-width: 72ch; padding: 6px 0; border-top: 1px solid var(--linea); font-size: 15px; }
+      .definicion .mj { font-size: 18px; }
       .art .formula .eq { font-family: var(--mono); font-style: normal; font-size: 13px; color: var(--ambar); white-space: nowrap; }
       .art .tabla { max-width: 100%; overflow-x: auto; margin: 10px 0 4px; }
       .art .tabla table { border-collapse: collapse; font-size: 15px; line-height: 1.4; min-width: 60%; }
@@ -145,11 +152,27 @@
         .catch(() => { $("texto").innerHTML = '<p class="cargando">NO SE PUDO CARGAR LA NORMA. RECARGA LA PÁGINA.</p>'; });
 
       // Fórmulas numeradas («Vc = 0,17 √f’c bw d (11-3)») y tablas («| celda | celda»), como en la app.
-      function cuerpo(texto) {
+      // Símbolos de la notación (Vc, f’c, ℓd) con su subíndice: V<sub>c</sub>.
+      const LETRAS = "A-Za-zÁÉÍÓÚÑáéíóúñ0-9’′ℓαβγδεθλμξπρσφψωΔΣΨΩ";
+      let reSimbolos = null;
+      const conSimbolos = (texto) => {
+        const html = esc(texto);
+        if (!reSimbolos) return html;
+        return html.replace(reSimbolos, (_, antes, s) => {
+          const corte = /^[ΣΔφ]?.[’′]?/.exec(s)[0].length;
+          return `${antes}<span class="sim">${s.slice(0, corte)}<sub>${s.slice(corte)}</sub></span>`;
+        });
+      };
+      const dibujo = (f, clase = "") => `<span class="mj ${clase}">${f.svg}</span>`;
+
+      // Fórmulas dibujadas con MathJax (Vc = 0,17 √f’c bw d → SVG), tablas («| celda | celda») y la notación de 2.1.
+      function cuerpo(texto, notacion) {
+        const F = norma.formulas || {};
         let html = "", parrafo = [], tabla = null;
-        const cerrarParrafo = () => { if (parrafo.length) html += `<p>${esc(parrafo.join("\n"))}</p>`; parrafo = []; };
+        const cerrarParrafo = () => { if (parrafo.length) html += `<p>${conSimbolos(parrafo.join("\n"))}</p>`; parrafo = []; };
+        const celda = (c, i) => (F[c] ? `<td>${dibujo(F[c])}</td>` : i ? `<td>${conSimbolos(c)}</td>` : `<th>${esc(c)}</th>`);
         const cerrarTabla = () => {
-          if (tabla) html += `<div class="tabla"><table>${tabla.titulo ? `<caption>${esc(tabla.titulo)}</caption>` : ""}${tabla.map((f, i) => `<tr>${f.map((c) => (i ? `<td>${esc(c)}</td>` : `<th>${esc(c)}</th>`)).join("")}</tr>`).join("")}</table></div>`;
+          if (tabla) html += `<div class="tabla"><table>${tabla.titulo ? `<caption>${esc(tabla.titulo)}</caption>` : ""}${tabla.map((f, i) => `<tr>${f.map((c) => celda(c, i)).join("")}</tr>`).join("")}</table></div>`;
           tabla = null;
         };
         for (const bruta of texto.split("\n")) {
@@ -158,10 +181,19 @@
             if (!tabla) { const k = parrafo.findLastIndex((x) => /^tabla\s+\d/i.test(x)); tabla = []; if (k >= 0) tabla.titulo = parrafo.splice(k).join(" "); }
             cerrarParrafo(); tabla.push(l.slice(1).split("|").map((c) => c.trim())); continue; }
           cerrarTabla();
-          const m = l.length <= 130 ? /^(.+?)\s*\((\d{1,2}-\d{1,2}[a-z]?)\)$/.exec(l) : null;
-          if (m && (/[=≤≥<>]/.test(m[1]) || m[1].length < 40)) {
+          const d = notacion ? /^(\S+(?: \S+)?) = (.+)$/.exec(l) : null;
+          if (d && F[d[1]]) {
             cerrarParrafo();
-            html += `<div class="formula"><span>${esc(m[1])}</span><span class="eq">(${m[2]})</span></div>`;
+            html += `<div class="definicion"><span class="def-sim">${dibujo(F[d[1]])}</span><span>${conSimbolos(d[2])}</span></div>`;
+            continue;
+          }
+          const m = l.length <= 130 ? /^(.+?)\s*\((\d{1,2}-\d{1,2}[a-z]?)\)$/.exec(l) : null;
+          if (m && l !== l.toUpperCase() && (/[=≤≥<>]/.test(m[1]) || m[1].length < 40)) {
+            cerrarParrafo();
+            html += `<div class="formula">${F[m[1]] ? dibujo(F[m[1]]) : `<span>${esc(m[1])}</span>`}<span class="eq">(${m[2]})</span></div>`;
+          } else if (F[l]) {
+            cerrarParrafo();
+            html += `<div class="formula">${dibujo(F[l])}</div>`;
           } else if (l) parrafo.push(l);
         }
         cerrarParrafo(); cerrarTabla();
@@ -169,6 +201,8 @@
       }
 
       function pintar() {
+        const lista = (norma.simbolos || []).filter((x) => x !== x.toUpperCase()).sort((a, b) => b.length - a.length).map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+        reSimbolos = lista.length ? new RegExp(`(^|[^${LETRAS}])(${lista.join("|")})(?![${LETRAS}])`, "g") : null;
         $("rotulo").textContent = `${norma.codigo} · ${norma.titulo} · ${norma.articulos.length.toLocaleString("es-PE")} artículos`;
         $("indice").innerHTML = norma.capitulos.map((c) => `<a href="#cap-${c.n}"><span>${c.n.padStart(2, "0")}</span>${esc(c.titulo)}</a>`).join("");
         $("capitulos").innerHTML = norma.capitulos.map((c) => `<a href="#cap-${c.n}" title="${esc(c.titulo)}">Cap. ${c.n}</a>`).join("");
@@ -184,7 +218,7 @@
           const seccion = a.e && normal(a.t.trim()) === normal(a.e.trim());
           html += `<article class="art${seccion ? " seccion" : ""}" id="${a.n}">`;
           html += `<a class="num" href="#${a.n}">${a.n}</a>${a.e ? `<span class="epi">${esc(a.e)}</span>` : ""}`;
-          if (!seccion) html += cuerpo(a.t);
+          if (!seccion) html += cuerpo(a.t, a.n === "2.1");
           for (const f of a.f || []) html += `<figure class="figura" data-src="${f.src}"><img loading="lazy" src="${f.src}" width="${f.w}" height="${f.h}" alt="${esc(f.pie)}" /><figcaption>${esc(f.pie)}</figcaption></figure>`;
           if (!seccion && a.p) html += `<div class="acciones"><button class="chip" data-pagina="${a.p}">PÁG. ${a.p} · ORIGINAL</button><button class="chip" data-copiar="${a.n}">COPIAR ENLACE</button></div>`;
           html += "</article>";

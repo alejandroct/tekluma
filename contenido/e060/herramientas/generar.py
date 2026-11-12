@@ -3795,6 +3795,42 @@ def oracion(titulo):
     return " ".join(salida)
 
 
+MATHJAX = f"{S}/mj/render.mjs"  # MathJax 3 (mathjax-full) instalado junto a las herramientas de trabajo
+
+
+def dibujar_formulas(articulos):
+    """{expresión del texto: {svg, w, h}}: cada fórmula (y cada símbolo de la notación 2.1) en SVG con MathJax.
+    w y h van en ex; el lector las escala al tamaño de su letra."""
+    import subprocess
+    from latex import NoEsFormula, a_latex, formulas_del_texto
+    from limpieza import LATEX_MANUAL
+
+    pedidos = {}
+    for fila in articulos:
+        if fila["n"] == "2.1":
+            candidatas = [l.strip().split(" = ", 1)[0] for l in fila["t"].split("\n")[1:] if " = " in l]
+        else:
+            candidatas = formulas_del_texto(fila["t"])
+        for expresion in candidatas:
+            try:
+                pedidos.setdefault(expresion, a_latex(expresion, LATEX_MANUAL))
+            except NoEsFormula:
+                pass
+    lista = [{"id": e, "tex": tex} for e, tex in pedidos.items()]
+    salida = json.loads(subprocess.run(["node", MATHJAX], input=json.dumps(lista), capture_output=True, text=True, check=True).stdout)
+    errores = {e: v["error"] for e, v in salida.items() if "error" in v}
+    assert not errores, errores
+    return {e: {"svg": v["svg"], "w": round(v["w"], 2), "h": round(v["h"], 2)} for e, v in sorted(salida.items())}
+
+
+def simbolos_de_notacion(articulos):
+    """Símbolos de la lista de notación (2.1) que el lector escribe con subíndice dentro del texto: «Vc», «ℓd», «f’c».
+    Quedan fuera las letras sueltas y «Es», que en el texto también es el verbo."""
+    notacion = next(f for f in articulos if f["n"] == "2.1")["t"].split("\n")[1:]
+    simbolos = {l.strip().split(" = ", 1)[0] for l in notacion if " = " in l}
+    return sorted(s for s in simbolos if len(s) > 1 and " " not in s and s not in {"Es"})
+
+
 def publicar_norma():
     os.makedirs(f"{WEB}/figuras", exist_ok=True)
     figuras = figuras_por_articulo()
@@ -3812,7 +3848,7 @@ def publicar_norma():
             for l in fila["t"].split("\n"):
                 es_pie = any(re.sub(r"\s+", " ", l.strip()).lower().startswith(p) for p in pies)
                 # Un rótulo en mayúsculas puede seguir en la línea siguiente («… PARA LA PROTECCIÓN CONTRA» / «LA CORROSIÓN …»).
-                if es_pie or (quitada and l.strip() and l.strip() == l.strip().upper() and not re.search(r"[|=*†‡§]", l)):
+                if es_pie or (quitada and l.strip() == l.strip().upper() and not re.search(r"[|=*†‡§]", l)):
                     quitada = True
                     continue
                 quitada = False
@@ -3826,6 +3862,7 @@ def publicar_norma():
             for nombre, _ in figuras[a["numero"]]:
                 shutil.copy(f"{S}/figuras/{nombre}.jpg", f"{WEB}/figuras/{nombre}.jpg")
         articulos.append(fila)
+    formulas = dibujar_formulas(articulos)
     cuerpo = {
         "codigo": NORMA["codigo"],
         "titulo": NORMA["titulo"],
@@ -3834,6 +3871,8 @@ def publicar_norma():
         "paginas": len([f for f in os.listdir(f"{WEB}/paginas") if f.endswith(".jpg")]),
         "capitulos": [{"n": str(c), "titulo": TITULOS_CAPITULO[c], "p": primeras[c]} for c in sorted(primeras)],
         "articulos": articulos,
+        "formulas": formulas,
+        "simbolos": simbolos_de_notacion(articulos),
     }
     version = hashlib.sha1(json.dumps(cuerpo, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
     with open(f"{WEB}/norma.json", "w", encoding="utf-8") as f:

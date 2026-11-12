@@ -10,6 +10,9 @@ import { db } from "./db";
 export type FiguraNorma = { src: string; pie: string; w: number; h: number };
 export type ArticuloNorma = { n: string; e?: string; t: string; p?: number; f?: FiguraNorma[] };
 export type CapituloNorma = { n: string; titulo: string; p: number };
+/** Fórmula dibujada con MathJax: SVG con su ancho y alto en «ex» (≈ 0,44 del tamaño de letra). */
+export type FormulaSvg = { svg: string; w: number; h: number };
+
 export type Norma = {
   version: string;
   codigo: string;
@@ -19,6 +22,10 @@ export type Norma = {
   paginas: number;
   capitulos: CapituloNorma[];
   articulos: ArticuloNorma[];
+  /** Expresión tal como aparece en el texto → su dibujo. */
+  formulas?: Record<string, FormulaSvg>;
+  /** Símbolos de la notación (2.1) que se escriben con subíndice dentro del texto: «Vc», «ℓd», «f’c». */
+  simbolos?: string[];
 };
 
 /** La web vive en el mismo dominio que la API, sin el «api.» (api.dev.tekluma.app → dev.tekluma.app). */
@@ -167,7 +174,8 @@ function fragmento(texto: string, terminos: string[]): string {
 
 export type Bloque =
   | { tipo: "parrafo"; texto: string }
-  | { tipo: "formula"; expresion: string; numero: string }
+  | { tipo: "formula"; expresion: string; numero?: string; dibujo?: FormulaSvg }
+  | { tipo: "definicion"; simbolo: string; dibujo: FormulaSvg; texto: string }
   | { tipo: "tabla"; titulo?: string; filas: string[][] };
 
 /** «Vc = 0,17 √f’c bw d (11-3)»: una línea corta que termina en su número de ecuación. */
@@ -177,7 +185,7 @@ const FORMULA = /^(.+?)\s*\((\d{1,2}-\d{1,2}[a-z]?)\)$/;
  * Parte el texto de un artículo en párrafos, fórmulas numeradas y tablas (filas que empiezan con «|»;
  * la primera es el encabezado). Así se transcribieron en contenido/e060/herramientas/limpieza.py.
  */
-export function bloquesTexto(texto: string): Bloque[] {
+export function bloquesTexto(texto: string, formulas: Record<string, FormulaSvg> = {}, notacion = false): Bloque[] {
   const bloques: Bloque[] = [];
   let parrafo: string[] = [];
   const cerrar = () => {
@@ -197,16 +205,63 @@ export function bloquesTexto(texto: string): Bloque[] {
       else bloques.push({ tipo: "tabla", titulo: rotulo, filas: [celdas] });
       continue;
     }
-    const formula = linea.length <= 130 ? FORMULA.exec(linea) : null;
-    if (formula && (/[=≤≥<>]/.test(formula[1]!) || formula[1]!.length < 40)) {
+    // En la notación (2.1), «Vc = resistencia nominal…»: el símbolo dibujado y su definición.
+    const definicion = notacion ? /^(\S+(?: \S+)?) = (.+)$/.exec(linea) : null;
+    if (definicion && formulas[definicion[1]!]) {
       cerrar();
-      bloques.push({ tipo: "formula", expresion: formula[1]!, numero: formula[2]! });
+      bloques.push({ tipo: "definicion", simbolo: definicion[1]!, dibujo: formulas[definicion[1]!]!, texto: definicion[2]! });
+      continue;
+    }
+    const formula = linea.length <= 130 ? FORMULA.exec(linea) : null;
+    if (formula && linea !== linea.toUpperCase() && (/[=≤≥<>]/.test(formula[1]!) || formula[1]!.length < 40)) {
+      cerrar();
+      bloques.push({ tipo: "formula", expresion: formula[1]!, numero: formula[2]!, dibujo: formulas[formula[1]!] });
+      continue;
+    }
+    if (formulas[linea]) {
+      cerrar();
+      bloques.push({ tipo: "formula", expresion: linea, dibujo: formulas[linea] });
       continue;
     }
     if (linea) parrafo.push(linea);
   }
   cerrar();
   return bloques;
+}
+
+/**
+ * Parte un párrafo en texto y símbolos de la notación («Vc», «f’c», «ℓd»): cada símbolo con su letra base
+ * y su subíndice («f’c» → f’ + c). Los nombres en mayúsculas (CM, EI) se dejan tal cual.
+ */
+export type Trozo = string | { base: string; sub: string };
+
+const patronesSimbolos = new WeakMap<string[], RegExp>();
+const LETRAS = "A-Za-zÁÉÍÓÚÑáéíóúñ0-9’′ℓαβγδεθλμξπρσφψωΔΣΨΩ";
+
+export function trozosConSimbolos(texto: string, simbolos: string[] | undefined): Trozo[] {
+  if (!simbolos?.length) return [texto];
+  let patron = patronesSimbolos.get(simbolos);
+  if (!patron) {
+    const lista = simbolos
+      .filter((s) => s !== s.toUpperCase())
+      .sort((a, b) => b.length - a.length)
+      .map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    // Sin «lookbehind» ni \\p{L}, por compatibilidad con Hermes: el carácter previo se captura aparte.
+    patron = new RegExp(`(^|[^${LETRAS}])(${lista.join("|")})(?![${LETRAS}])`, "g");
+    patronesSimbolos.set(simbolos, patron);
+  }
+  const salida: Trozo[] = [];
+  let desde = 0;
+  for (const m of texto.matchAll(patron)) {
+    const inicio = m.index! + m[1]!.length;
+    if (inicio > desde) salida.push(texto.slice(desde, inicio));
+    const s = m[2]!;
+    const corte = /^[ΣΔφ]?.[’′]?/.exec(s)![0].length;
+    salida.push({ base: s.slice(0, corte), sub: s.slice(corte) });
+    desde = inicio + s.length;
+  }
+  if (desde < texto.length) salida.push(texto.slice(desde));
+  return salida;
 }
 
 /** Un artículo que solo repite su título (p. ej. «7.1 · ALCANCE») se muestra como encabezado de sección. */

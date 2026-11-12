@@ -561,3 +561,21 @@ def notacion(texto):
         else:
             lineas.append(l)
     return "\n ".join(lineas)
+
+
+# Fórmulas cuya escritura en el texto es ambigua para el conversor automático (latex.py): su LaTeX a mano,
+# comparado con la página del PDF.
+LATEX_MANUAL = {
+    "√[(Vu / bw d)² + (Tu Ph / 1,7 Aoh²)²] ≤ φ (Vc / bw d + 0,66 √f’c)":
+        r"\sqrt{\left(\dfrac{V_{u}}{b_{w}\,d}\right)^{2}+\left(\dfrac{T_{u}\,P_{h}}{1{,}7\,A_{oh}^{2}}\right)^{2}}\leq\phi\left(\dfrac{V_{c}}{b_{w}\,d}+0{,}66\,\sqrt{f'_{c}}\right)",
+    "(Vu / bw d) + (Tu Ph / 1,7 Aoh²) ≤ φ (Vc / bw d + 0,66 √f’c)":
+        r"\left(\dfrac{V_{u}}{b_{w}\,d}\right)+\left(\dfrac{T_{u}\,P_{h}}{1{,}7\,A_{oh}^{2}}\right)\leq\phi\left(\dfrac{V_{c}}{b_{w}\,d}+0{,}66\,\sqrt{f'_{c}}\right)",
+    "(A(v+t) / s) total = Av / s + 2 (At / s)":
+        r"\left(\dfrac{A_{(v+t)}}{s}\right)_{\text{total}}=\dfrac{A_{v}}{s}+2\left(\dfrac{A_{t}}{s}\right)",
+    "Vs = [(Av / s) (1 + ℓn/d) / 12 + (Avh / s2) (11 − ℓn/d) / 12] fy d":
+        r"V_{s}=\left[\dfrac{A_{v}}{s}\left(\dfrac{1+\frac{\ell_{n}}{d}}{12}\right)+\dfrac{A_{vh}}{s_{2}}\left(\dfrac{11-\frac{\ell_{n}}{d}}{12}\right)\right]f_{y}\,d",
+    "(fy − 240) / fy ó 5 db / s":
+        r"\dfrac{f_{y}-240}{f_{y}}\qquad\text{ó}\qquad\dfrac{5\,d_{b}}{s}",
+    "(a) Clase U: ft ≤ 0,62 √f’c": r"\text{(a)}\quad\text{Clase U:}\quad f_{t}\leq 0{,}62\,\sqrt{f'_{c}}",
+    "(b) Clase T: 0,62 √f’c < ft ≤ 1,0 √f’c": r"\text{(b)}\quad\text{Clase T:}\quad 0{,}62\,\sqrt{f'_{c}}<f_{t}\leq 1{,}0\,\sqrt{f'_{c}}",
+}
