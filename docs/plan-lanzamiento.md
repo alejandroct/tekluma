@@ -33,6 +33,9 @@ Apple pide un correo del dominio de la organización (no Gmail) y las dos tienda
 5. Prueba enviando un correo a cada dirección desde otra cuenta.
 
 ### 2. Número D-U-N-S **(tú)** — gratis, hasta 5 días hábiles (a veces más en Perú)
+
+- [x] **Solicitado el 12/11/2026** por la gerente general (Cinthia Chira Oliva) con su Apple Account corporativa.
+  Esperar el correo de Dun & Bradstreet; cuando llegue el número, esperar 2 días hábiles y pasar a Apple y Google.
 Lo necesitan **Apple y Google** para cuentas de organización.
 
 1. Entra a la herramienta de Apple: <https://developer.apple.com/enroll/duns-lookup/>
