@@ -9,24 +9,26 @@ Plazo realista desde hoy: **3 a 4 semanas** hasta estar publicados en las dos ti
 Urb. Bello Horizonte Etapa Uno (Av. Los Rubíes, frente al Pampón), Piura. Úsalo **idéntico** en D-U-N-S, Apple, Google y el banco.
 En las tiendas aparecerá como vendedor; la app se sigue llamando Tekluma.
 
-**Sitio web de la empresa:** `https://tekluma.app/empresa` (razón social, RUC, domicilio y contacto; enlazado desde el pie de
-todas las páginas). Es el que se declara a Apple, Google y D&B. Hoy está en dev; se publica en `tekluma.app` con el punto 8.
+**Sitio web de la empresa:** `https://dccingenieriayconstruccion.com` (código en `apps/dcc`; vista previa en
+`https://dcc.dev.tekluma.app`). Es el que se declara a D&B, Apple y Google, con un correo de ese dominio.
+`tekluma.app` queda como sitio del producto (app, normas, soporte) y su página `/empresa` nombra a DCC como titular.
 
 ---
 
 ## Semana 1 · Trámites que tardan (empezar hoy)
 
-### 1. Correo con el dominio de la empresa **(tú)** — 1 día
+### 1. Dominio y correo de la empresa **(tú)** — 1 día
 Apple pide un correo del dominio de la organización (no Gmail) y las dos tiendas piden un sitio web público.
-Hoy `tekluma.app` no recibe correo (no tiene registros MX).
 
-Tu Gmail (`dcc.ingenieria.construccion@…`) **no sirve** para Apple: tiene que ser `@tekluma.app`. Sí puede ser la cuenta
-de Google con la que abras Play Console, y el correo nuevo se puede reenviar a ese Gmail.
-
-1. Crea un buzón `hola@tekluma.app` (o con tu nombre) en Zoho Mail (plan gratuito, hasta 5 buzones) o Google Workspace (≈ US$7/mes).
-2. El proveedor te dará registros MX y TXT: pásamelos y los agrego al DNS (Route 53, ya administrado por SST),
-   o agrégalos tú en la consola de AWS → Route 53 → `tekluma.app`.
-3. Prueba enviando un correo a esa dirección.
+1. Compra `dccingenieriayconstruccion.com` **en la misma cuenta de AWS** (consola → Route 53 → Registered domains →
+   Register domain, ≈ US$15 al año). Así la zona DNS se crea sola y el despliegue de producción la encuentra.
+   Si lo compras en otro registrador, crea la zona en Route 53 y cambia allá los servidores de nombres (NS) por los de AWS.
+2. Crea los buzones en Zoho Mail (gratis, un dominio) o Google Workspace (≈ US$7/mes por usuario):
+   - `contacto@dccingenieriayconstruccion.com` (el que aparece en el sitio);
+   - opcional, uno a nombre de la representante legal para los trámites;
+   - en Workspace puedes agregar `tekluma.app` como dominio secundario para `hola@tekluma.app` sin pagar otro usuario.
+3. El proveedor te dará registros MX y TXT (SPF, DKIM): pásamelos y los agrego al DNS.
+4. Prueba enviando un correo a cada dirección. Tu Gmail puede seguir siendo la cuenta de Play Console y recibir reenvíos.
 
 ### 2. Número D-U-N-S **(tú)** — gratis, hasta 5 días hábiles (a veces más en Perú)
 Lo necesitan **Apple y Google** para cuentas de organización.
@@ -37,7 +39,7 @@ Lo necesitan **Apple y Google** para cuentas de organización.
    - Si aparece: anota el número de 9 dígitos. Ya lo tienes.
    - Si no aparece: llena el formulario «Submit your information». Datos que te piden:
      razón social, nombre comercial, dirección fiscal, teléfono de la empresa, nombre y cargo del contacto
-     (el representante legal o alguien con poder), correo del dominio (paso 1) y sitio web.
+     (la representante legal o alguien con poder), correo del dominio (paso 1) y sitio web `dccingenieriayconstruccion.com`.
 4. Dun & Bradstreet te escribe al correo con el número. Si te piden documentos, envía la **ficha RUC** y la **vigencia de poder**.
 5. Cuando llegue el número, espera hasta **2 días hábiles** antes de usarlo en Apple (D&B se lo tiene que pasar).
 
@@ -62,8 +64,9 @@ de EE. UU. que piden las tiendas (W-8BEN-E para la empresa). Perú no tiene conv
 ## Semana 1–2 · Cuentas de desarrollador
 
 ### 5. Apple Developer Program (organización) **(tú)** — US$99 al año
-Requisitos: D-U-N-S, correo del dominio, sitio web público (`tekluma.app`, ver punto 8) y ser el representante legal
-o tener autoridad para firmar por la empresa.
+Requisitos: D-U-N-S, correo del dominio, sitio web público (`dccingenieriayconstruccion.com`) y ser la representante legal
+o tener autoridad para firmar por la empresa. Si la cuenta la abres tú y no ella, Apple puede pedir que la representante
+confirme por teléfono o correo que tienes esa autoridad: tenla al tanto.
 
 1. Entra a <https://developer.apple.com/programs/enroll/> (o desde la app «Apple Developer» en tu iPhone, que es más rápido).
 2. «Start Your Enrollment» → tipo de entidad **Company / Organization**.
@@ -116,7 +119,8 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 - [ ] **(código)** Textos de las tiendas (nombre, subtítulo, descripción, palabras clave) y capturas desde el simulador.
 
 ### 8. Producción **(tú da el visto bueno)**
-- Desplegar el stage `produccion` (dominio raíz `tekluma.app`, API `api.tekluma.app`) con sus propios secretos
+- Desplegar el stage `produccion` (dominio raíz `tekluma.app`, API `api.tekluma.app` y el sitio de la empresa en
+  `dccingenieriayconstruccion.com`, que necesita el dominio ya comprado) con sus propios secretos
   (los cargas tú con `sst secret set … --stage produccion`) y su base de datos de Neon.
 - Importar los mazos de la E.060 en producción y publicarlos desde el panel.
 - Apuntar la app de las tiendas a `https://api.tekluma.app`.
@@ -136,7 +140,7 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 
 | Semana | Tú | Código |
 |---|---|---|
-| 1 | Correo del dominio, D-U-N-S, cuenta bancaria, contador | Recordatorios, métricas, Sentry |
+| 1 | Dominio y correo de la empresa, D-U-N-S, cuenta bancaria, contador | Recordatorios, métricas, Sentry |
 | 2 | Apple y Google (cuando llegue el D-U-N-S), AdMob | Páginas por artículo, EAS, textos de tienda |
 | 3 | Productos Premium, producción, invitar beta | Builds de beta, correcciones |
 | 4 | Revisión de tiendas | Correcciones finales, lanzamiento |

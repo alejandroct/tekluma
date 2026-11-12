@@ -132,6 +132,30 @@ export default $config({
       },
     });
 
-    return { web: web.url, api: router.url, admin: admin.url, lambda: api.url, remitente: correo.sender };
+    // Sitio institucional de la empresa titular (DCC). En producción usa su propio dominio, cuya zona
+    // tiene que existir en Route 53 de esta cuenta (se crea sola si el dominio se compra en Route 53);
+    // en los demás stages se revisa en dcc.<stage>.tekluma.app.
+    const sitioEmpresa = new sst.aws.StaticSite("SitioEmpresa", {
+      path: "apps/dcc",
+      domain: produccion
+        ? { name: "dccingenieriayconstruccion.com", redirects: ["www.dccingenieriayconstruccion.com"], dns }
+        : { name: `dcc.${dominio}`, dns },
+      errorPage: "404.html",
+      assets: {
+        fileOptions: [
+          { files: "**", cacheControl: "public,max-age=0,must-revalidate" },
+          { files: "**/*.html", cacheControl: "max-age=0,no-cache,no-store,must-revalidate" },
+        ],
+      },
+    });
+
+    return {
+      web: web.url,
+      api: router.url,
+      admin: admin.url,
+      empresa: sitioEmpresa.url,
+      lambda: api.url,
+      remitente: correo.sender,
+    };
   },
 });
