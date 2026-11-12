@@ -22,12 +22,15 @@ producto (app, normas, soporte) y su página `/empresa` nombra a DCC como titula
 Apple pide un correo del dominio de la organización (no Gmail) y las dos tiendas piden un sitio web público.
 
 1. [x] Dominio `dccingenieriayconstruccion.com` comprado en Cloudflare y sitio publicado.
-2. Crea los buzones en Zoho Mail (gratis, un dominio) o Google Workspace (≈ US$7/mes por usuario):
-   - `contacto@dccingenieriayconstruccion.com` (el que aparece en el sitio);
-   - opcional, uno a nombre de la representante legal para los trámites;
-   - en Workspace puedes agregar `tekluma.app` como dominio secundario para `hola@tekluma.app` sin pagar otro usuario.
-3. El proveedor te dará registros MX y TXT (SPF, DKIM): se agregan en Cloudflare → DNS del dominio.
-4. Prueba enviando un correo a cada dirección. Tu Gmail puede seguir siendo la cuenta de Play Console y recibir reenvíos.
+2. [x] Google Workspace con `dccingenieriayconstruccion.com` como dominio principal (MX, SPF, DKIM y DMARC en Cloudflare).
+3. `tekluma.app` como dominio secundario de Workspace. Sus registros van en Route 53 y se cargan a mano
+   (no con SST: son de todo el dominio, no de un stage):
+   - [x] MX `1 smtp.google.com` y SPF `v=spf1 include:_spf.google.com include:amazonses.com ~all`;
+   - [ ] TXT de verificación de Google (va en el mismo conjunto TXT de la raíz que el SPF);
+   - [ ] DKIM `google._domainkey`. Es obligatorio: el DMARC de producción (`adkim=s; aspf=s`) rechaza lo que salga
+     de `hola@tekluma.app` sin firma DKIM del propio dominio.
+4. Alias del usuario principal: `contacto@dccingenieriayconstruccion.com`, `hola@tekluma.app` y `soporte@tekluma.app`.
+5. Prueba enviando un correo a cada dirección desde otra cuenta.
 
 ### 2. Número D-U-N-S **(tú)** — gratis, hasta 5 días hábiles (a veces más en Perú)
 Lo necesitan **Apple y Google** para cuentas de organización.
