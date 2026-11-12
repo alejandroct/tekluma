@@ -36,7 +36,7 @@ import {
 } from "@/lib/normas";
 import { MONO, MONO_FUERTE, useTema, type Tema } from "@/lib/tema";
 
-type Fila = { tipo: "cap"; cap: CapituloNorma } | { tipo: "art"; art: ArticuloNorma };
+type Fila = { tipo: "cap"; cap: CapituloNorma } | { tipo: "pag"; p: number } | { tipo: "art"; art: ArticuloNorma };
 
 /** Proporción de una página A4 del PDF (ancho / alto). */
 const A4 = 595 / 842;
@@ -53,7 +53,10 @@ export default function LectorNorma() {
   const [pagina, setPagina] = useState<number | null>(null);
   const [figura, setFigura] = useState<FiguraNorma | null>(null);
   const lista = useRef<FlatList<Fila>>(null);
+  /** Destino del salto en curso, como posición en la norma completa (no cambia si se suman capítulos). */
   const saltoPendiente = useRef<number | null>(null);
+  const intentosSalto = useRef(0);
+  const desdeActual = useRef(0);
 
   useEffect(() => {
     abrirNorma(slug, setNorma)
@@ -69,6 +72,7 @@ export default function LectorNorma() {
     if (!norma) return { filas, posicion, fijas };
     const caps = new Map(norma.capitulos.map((c) => [c.n, c]));
     let actual = "";
+    let paginaActual = 0;
     for (const art of norma.articulos) {
       const cap = art.n.split(".")[0]!;
       if (cap !== actual && caps.has(cap)) {
@@ -76,6 +80,11 @@ export default function LectorNorma() {
         posicion.set(`cap:${cap}`, filas.length);
         fijas.push(filas.length);
         filas.push({ tipo: "cap", cap: caps.get(cap)! });
+      }
+      // Salto de hoja: marca dónde empieza cada página del PDF y la abre al tocarlo.
+      if (art.p && art.p !== paginaActual) {
+        paginaActual = art.p;
+        filas.push({ tipo: "pag", p: art.p });
       }
       posicion.set(art.n, filas.length);
       filas.push({ tipo: "art", art });
@@ -85,6 +94,39 @@ export default function LectorNorma() {
 
   const resultados = useMemo(() => (norma && consulta.trim().length > 0 ? buscar(norma, consulta) : null), [norma, consulta]);
 
+  // La lista arranca en el capítulo del artículo pedido (el salto es inmediato aunque esté lejos)
+  // y suma los capítulos anteriores a medida que el usuario sube.
+  const [desde, setDesde] = useState(0);
+  const [salto, setSalto] = useState<{ indice: number; vez: number } | null>(null);
+  const datos = useMemo(() => filas.slice(desde), [filas, desde]);
+  useEffect(() => {
+    desdeActual.current = desde;
+  }, [desde]);
+  const fijasVisibles = useMemo(() => fijas.filter((i) => i >= desde).map((i) => i - desde), [fijas, desde]);
+
+  const saltar = useCallback(
+    (global: number) => {
+      const capitulo = fijas.filter((i) => i <= global).pop() ?? 0;
+      setDesde(capitulo);
+      desdeActual.current = capitulo;
+      saltoPendiente.current = global;
+      intentosSalto.current = 0;
+      setSalto({ indice: global - capitulo, vez: Date.now() });
+    },
+    [fijas],
+  );
+
+  useEffect(() => {
+    if (!salto) return;
+    const id = setTimeout(() => lista.current?.scrollToIndex({ index: salto.indice, viewPosition: 0, viewOffset: 52, animated: false }), 40);
+    // Pasado el salto, ya se pueden sumar los capítulos de arriba.
+    const fin = setTimeout(() => (saltoPendiente.current = null), 1500);
+    return () => {
+      clearTimeout(id);
+      clearTimeout(fin);
+    };
+  }, [salto]);
+
   const irA = useCallback(
     (clave: string, terminos: string[] = []) => {
       const indice = posicion.get(clave);
@@ -93,32 +135,39 @@ export default function LectorNorma() {
       setConsulta("");
       setResaltar(terminos);
       if (!clave.startsWith("cap:")) setDestacado(clave);
-      saltoPendiente.current = indice;
-      requestAnimationFrame(() => lista.current?.scrollToIndex({ index: indice, viewPosition: 0.08, animated: true }));
+      saltar(indice);
     },
-    [posicion],
+    [posicion, saltar],
   );
 
-  // Al abrir desde una cita, salta al artículo apenas la lista existe.
-  const saltoInicial = useRef(false);
+  // Al abrir desde una cita (o si llega otra cita con el lector abierto), salta a ese artículo.
+  const ultimoArticulo = useRef<string | null>(null);
   useEffect(() => {
-    if (!norma || saltoInicial.current) return;
-    saltoInicial.current = true;
-    if (articulo) {
-      const indice = posicion.get(articulo) ?? posicion.get(articulo.split(".").slice(0, -1).join("."));
-      if (indice !== undefined) {
-        saltoPendiente.current = indice;
-        setTimeout(() => lista.current?.scrollToIndex({ index: indice, viewPosition: 0.08, animated: false }), 60);
-      }
-    }
-  }, [norma, articulo, posicion]);
+    if (!norma || !articulo || ultimoArticulo.current === articulo) return;
+    ultimoArticulo.current = articulo;
+    const indice = posicion.get(articulo) ?? posicion.get(articulo.split(".").slice(0, -1).join("."));
+    if (indice === undefined) return;
+    const id = setTimeout(() => {
+      setDestacado(articulo);
+      saltar(indice);
+    }, 0);
+    return () => clearTimeout(id);
+  }, [norma, articulo, posicion, saltar]);
+
+  const alLlegarArriba = useCallback(() => {
+    if (saltoPendiente.current !== null || desde === 0) return;
+    setDesde(fijas.filter((i) => i < desde).pop() ?? 0);
+  }, [desde, fijas]);
 
   // Las filas tienen alto variable: si el destino aún no se midió, se acerca y se reintenta.
   const alFallarSalto = useCallback(({ index, averageItemLength }: { index: number; averageItemLength: number }) => {
+    const destino = saltoPendiente.current;
+    if (destino === null || destino - desdeActual.current !== index || intentosSalto.current++ > 25) return;
     lista.current?.scrollToOffset({ offset: index * averageItemLength, animated: false });
     setTimeout(() => {
-      if (saltoPendiente.current === index) lista.current?.scrollToIndex({ index, viewPosition: 0.08, animated: true });
-    }, 120);
+      const actual = saltoPendiente.current;
+      if (actual !== null) lista.current?.scrollToIndex({ index: actual - desdeActual.current, viewPosition: 0, viewOffset: 52, animated: false });
+    }, 60);
   }, []);
 
   const compartir = useCallback(
@@ -139,6 +188,8 @@ export default function LectorNorma() {
     ({ item }: { item: Fila }) =>
       item.tipo === "cap" ? (
         <EncabezadoCapitulo cap={item.cap} t={t} />
+      ) : item.tipo === "pag" ? (
+        <SaltoPagina p={item.p} t={t} onPagina={setPagina} />
       ) : (
         <FilaArticulo
           art={item.art}
@@ -203,15 +254,16 @@ export default function LectorNorma() {
         </View>
       </View>
 
-      {resultados ? (
-        <ListaResultados resultados={resultados} consulta={consulta} t={t} onElegir={(r) => irA(r.articulo.n, normalizar(consulta).split(/\s+/))} />
-      ) : (
+      <View style={{ flex: 1 }}>
         <FlatList
           ref={lista}
-          data={filas}
-          keyExtractor={(f) => (f.tipo === "cap" ? `cap-${f.cap.n}` : f.art.n)}
+          data={datos}
+          keyExtractor={(f) => (f.tipo === "cap" ? `cap-${f.cap.n}` : f.tipo === "pag" ? `pag-${f.p}` : f.art.n)}
           renderItem={renderFila}
-          stickyHeaderIndices={fijas}
+          stickyHeaderIndices={fijasVisibles}
+          onStartReached={alLlegarArriba}
+          onStartReachedThreshold={1.5}
+          maintainVisibleContentPosition={{ minIndexForVisible: 0 }}
           initialNumToRender={30}
           maxToRenderPerBatch={30}
           windowSize={15}
@@ -219,7 +271,13 @@ export default function LectorNorma() {
           contentContainerStyle={{ paddingBottom: 60 }}
           ListFooterComponent={<PieNorma norma={norma} t={t} />}
         />
-      )}
+        {/* Los resultados van encima: la lista sigue montada y el salto al artículo es inmediato. */}
+        {resultados && (
+          <View style={[StyleSheet.absoluteFill, { backgroundColor: t.fondo }]}>
+            <ListaResultados resultados={resultados} consulta={consulta} t={t} onElegir={(r) => irA(r.articulo.n, normalizar(consulta).split(/\s+/))} />
+          </View>
+        )}
+      </View>
 
       <IndiceCapitulos
         visible={indiceAbierto}
@@ -247,6 +305,19 @@ const EncabezadoCapitulo = memo(function EncabezadoCapitulo({ cap, t }: { cap: C
         {cap.titulo}
       </Text>
     </View>
+  );
+});
+
+const SaltoPagina = memo(function SaltoPagina({ p, t, onPagina }: { p: number; t: Tema; onPagina: (p: number) => void }) {
+  return (
+    <Pressable onPress={() => onPagina(p)} hitSlop={6} style={estilos.salto} accessibilityLabel={`Ver la página ${p} del PDF original`}>
+      <View style={[estilos.saltoLinea, { backgroundColor: t.borde }]} />
+      <View style={[estilos.chip, { borderColor: t.borde, backgroundColor: t.fondo }]}>
+        <IconoPagina tamano={13} color={t.textoSuave} acento={t.ambar} />
+        <Text style={[estilos.chipTexto, { color: t.textoSuave }]}>PÁG. {p}</Text>
+      </View>
+      <View style={[estilos.saltoLinea, { backgroundColor: t.borde }]} />
+    </Pressable>
   );
 });
 
@@ -288,10 +359,10 @@ const FilaArticulo = memo(function FilaArticulo({ art, slug, t, destacado, patro
           </Pressable>
         ))}
         <View style={estilos.articuloPie}>
-          {!!art.p && (
+          {destacado && !!art.p && (
             <Pressable onPress={() => onPagina(art.p!)} hitSlop={8} style={[estilos.chip, { borderColor: t.borde }]}>
               <IconoPagina tamano={14} color={t.textoSuave} acento={t.ambar} />
-              <Text style={[estilos.chipTexto, { color: t.textoSuave }]}>PÁG. {art.p}</Text>
+              <Text style={[estilos.chipTexto, { color: t.textoSuave }]}>VER PÁG. {art.p}</Text>
             </Pressable>
           )}
           {destacado && (
@@ -555,6 +626,8 @@ const estilos = StyleSheet.create({
   articuloEpigrafe: { fontSize: 15, fontWeight: "700", flexShrink: 1 },
   articuloTexto: { fontSize: 15.5, lineHeight: 23 },
   articuloPie: { flexDirection: "row", gap: 8, marginTop: 2 },
+  salto: { flexDirection: "row", alignItems: "center", gap: 10, paddingHorizontal: 20, paddingVertical: 8 },
+  saltoLinea: { flex: 1, height: StyleSheet.hairlineWidth },
   chip: { flexDirection: "row", alignItems: "center", gap: 5, borderWidth: StyleSheet.hairlineWidth, borderRadius: 4, paddingHorizontal: 7, paddingVertical: 3 },
   chipTexto: { fontFamily: MONO, fontSize: 10.5, letterSpacing: 0.8 },
   figura: { marginTop: 6, borderWidth: StyleSheet.hairlineWidth, borderRadius: 6, backgroundColor: "#FFFFFF", overflow: "hidden", alignSelf: "flex-start" },

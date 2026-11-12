@@ -3765,6 +3765,10 @@ def publicar_norma():
         if a.get("epigrafe"):
             fila["e"] = oracion(a["epigrafe"])
         if a["numero"] in figuras:
+            # El rótulo ya va como pie de la figura: se quita del texto para no repetirlo.
+            pies = [re.sub(r"\s+", " ", pie)[:24] for _, pie in figuras[a["numero"]]]
+            lineas = [l for l in fila["t"].split("\n") if not any(re.sub(r"\s+", " ", l.strip()).startswith(p) for p in pies)]
+            fila["t"] = re.sub(r"\n{3,}", "\n\n", "\n".join(lineas)).strip()
             fila["f"] = []
             for nombre, pie in figuras[a["numero"]]:
                 with open(f"{S}/figuras/{nombre}.jpg", "rb") as img:
