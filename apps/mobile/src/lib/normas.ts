@@ -168,7 +168,7 @@ function fragmento(texto: string, terminos: string[]): string {
 export type Bloque =
   | { tipo: "parrafo"; texto: string }
   | { tipo: "formula"; expresion: string; numero: string }
-  | { tipo: "tabla"; filas: string[][] };
+  | { tipo: "tabla"; titulo?: string; filas: string[][] };
 
 /** «Vc = 0,17 √f’c bw d (11-3)»: una línea corta que termina en su número de ecuación. */
 const FORMULA = /^(.+?)\s*\((\d{1,2}-\d{1,2}[a-z]?)\)$/;
@@ -187,11 +187,14 @@ export function bloquesTexto(texto: string): Bloque[] {
   for (const bruta of texto.split("\n")) {
     const linea = bruta.trim();
     if (linea.startsWith("|")) {
+      // «TABLA 12.2 FACTOR DE …» justo antes de las filas es el rótulo de la tabla.
+      const titulo = !bloques.length || bloques[bloques.length - 1]?.tipo !== "tabla" ? parrafo.findLastIndex((l) => /^tabla\s+\d/i.test(l)) : -1;
+      const rotulo = titulo >= 0 ? parrafo.splice(titulo).join(" ") : undefined;
       cerrar();
       const celdas = linea.slice(1).split("|").map((c) => c.trim());
       const ultimo = bloques[bloques.length - 1];
       if (ultimo?.tipo === "tabla") ultimo.filas.push(celdas);
-      else bloques.push({ tipo: "tabla", filas: [celdas] });
+      else bloques.push({ tipo: "tabla", titulo: rotulo, filas: [celdas] });
       continue;
     }
     const formula = linea.length <= 130 ? FORMULA.exec(linea) : null;

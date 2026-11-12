@@ -46,11 +46,12 @@
       /* La fuente convierte «(c)» en «©»: en la norma los incisos (a), (b), (c) deben verse tal cual. */
       .art, .resultado { font-feature-settings: "calt" 0, "liga" 0; }
       .art p { margin: 6px 0 0; white-space: pre-line; max-width: 72ch; }
-      .art .formula { display: flex; align-items: center; justify-content: space-between; gap: var(--e4); max-width: 72ch; margin: 10px 0 4px; padding: 10px 16px; border: 1px solid var(--linea); border-radius: 6px; background: var(--superficie); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 18px; line-height: 1.45; }
+      .art .formula { display: flex; align-items: center; justify-content: space-between; gap: var(--e4); max-width: 72ch; margin: 10px 0 4px; padding: 10px 16px; border: 1px solid var(--linea); border-radius: 6px; background: var(--superficie); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-variant-numeric: lining-nums; font-size: 18px; line-height: 1.45; }
       .art .formula .eq { font-family: var(--mono); font-style: normal; font-size: 13px; color: var(--ambar); white-space: nowrap; }
       .art .tabla { max-width: 100%; overflow-x: auto; margin: 10px 0 4px; }
       .art .tabla table { border-collapse: collapse; font-size: 15px; line-height: 1.4; min-width: 60%; }
       .art .tabla th, .art .tabla td { border: 1px solid var(--linea); padding: 7px 10px; text-align: left; vertical-align: top; }
+      .art .tabla caption { text-align: left; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--tinta-3); padding-bottom: 6px; }
       .art .tabla th { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--tinta-2); background: var(--superficie); }
       .art.seccion { padding-top: var(--e5); }
       .art.seccion .epi { font-size: 19px; font-weight: 800; }
@@ -148,12 +149,14 @@
         let html = "", parrafo = [], tabla = null;
         const cerrarParrafo = () => { if (parrafo.length) html += `<p>${esc(parrafo.join("\n"))}</p>`; parrafo = []; };
         const cerrarTabla = () => {
-          if (tabla) html += `<div class="tabla"><table>${tabla.map((f, i) => `<tr>${f.map((c) => (i ? `<td>${esc(c)}</td>` : `<th>${esc(c)}</th>`)).join("")}</tr>`).join("")}</table></div>`;
+          if (tabla) html += `<div class="tabla"><table>${tabla.titulo ? `<caption>${esc(tabla.titulo)}</caption>` : ""}${tabla.map((f, i) => `<tr>${f.map((c) => (i ? `<td>${esc(c)}</td>` : `<th>${esc(c)}</th>`)).join("")}</tr>`).join("")}</table></div>`;
           tabla = null;
         };
         for (const bruta of texto.split("\n")) {
           const l = bruta.trim();
-          if (l.startsWith("|")) { cerrarParrafo(); (tabla ??= []).push(l.slice(1).split("|").map((c) => c.trim())); continue; }
+          if (l.startsWith("|")) {
+            if (!tabla) { const k = parrafo.findLastIndex((x) => /^tabla\s+\d/i.test(x)); tabla = []; if (k >= 0) tabla.titulo = parrafo.splice(k).join(" "); }
+            cerrarParrafo(); tabla.push(l.slice(1).split("|").map((c) => c.trim())); continue; }
           cerrarTabla();
           const m = l.length <= 130 ? /^(.+?)\s*\((\d{1,2}-\d{1,2}[a-z]?)\)$/.exec(l) : null;
           if (m && (/[=≤≥<>]/.test(m[1]) || m[1].length < 40)) {

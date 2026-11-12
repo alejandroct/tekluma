@@ -416,10 +416,13 @@ function TextoArticulo({ texto, patron, t }: { texto: string; patron: RegExp | n
         }
         const columnas = Math.max(...b.filas.map((f) => f.length));
         const anchos = Array.from({ length: columnas }, (_, c) =>
-          Math.min(230, Math.max(72, Math.max(...b.filas.map((f) => (f[c] ?? "").length)) * 7 + 22)),
+          // El ancho lo marcan las celdas del cuerpo; el encabezado (en mono, más largo) se parte en líneas.
+          Math.min(230, Math.max(72, Math.min((b.filas[0]?.[c] ?? "").length, 16) * 7.5 + 22, ...b.filas.slice(1).map((f) => (f[c] ?? "").length * 7 + 22))),
         );
         return (
-          <ScrollView key={i} horizontal showsHorizontalScrollIndicator={false} style={estilos.tablaMarco}>
+          <View key={i} style={estilos.tablaMarco}>
+            {!!b.titulo && <Text style={[estilos.tablaTitulo, { color: t.textoSuave }]}>{b.titulo}</Text>}
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <View style={[estilos.tabla, { borderColor: t.borde }]}>
               {b.filas.map((fila, f) => (
                 <View key={f} style={[estilos.tablaFila, { borderColor: t.borde, borderTopWidth: f ? StyleSheet.hairlineWidth : 0, backgroundColor: f === 0 ? t.superficie : "transparent" }]}>
@@ -436,7 +439,8 @@ function TextoArticulo({ texto, patron, t }: { texto: string; patron: RegExp | n
                 </View>
               ))}
             </View>
-          </ScrollView>
+            </ScrollView>
+          </View>
         );
       })}
     </>
@@ -674,9 +678,10 @@ const estilos = StyleSheet.create({
   articuloEpigrafe: { fontSize: 15, fontWeight: "700", flexShrink: 1 },
   articuloTexto: { fontSize: 15.5, lineHeight: 23 },
   formula: { flexDirection: "row", alignItems: "center", gap: 12, borderWidth: StyleSheet.hairlineWidth, borderRadius: 6, paddingHorizontal: 14, paddingVertical: 10, marginVertical: 2 },
-  formulaTexto: { flex: 1, fontSize: 16.5, lineHeight: 24, fontStyle: "italic", fontFamily: Platform.select({ ios: "Georgia", default: "serif" }) },
+  formulaTexto: { flex: 1, fontSize: 16.5, lineHeight: 24, fontStyle: "italic", fontFamily: Platform.select({ ios: "Georgia", default: "serif" }), fontVariant: ["lining-nums"] },
   formulaNumero: { fontFamily: MONO, fontSize: 12 },
-  tablaMarco: { marginVertical: 4, flexGrow: 0 },
+  tablaMarco: { marginVertical: 4, gap: 6 },
+  tablaTitulo: { fontFamily: MONO, fontSize: 11, lineHeight: 16, letterSpacing: 0.6 },
   tabla: { borderWidth: StyleSheet.hairlineWidth, borderRadius: 6, overflow: "hidden" },
   tablaFila: { flexDirection: "row" },
   tablaCelda: { paddingHorizontal: 9, paddingVertical: 7, justifyContent: "center" },
