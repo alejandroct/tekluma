@@ -13,6 +13,9 @@
   --acento-suave: #f3e6d2;
   --plano: #1f4e79;
   --plano-tenue: #8fa6bd;
+  --iso-izq: #13283f;
+  --iso-der: #2e5a87;
+  --iso-sup: #d99a3e;
   --sombra: 0 1px 2px rgb(19 32 46 / 6%), 0 8px 24px rgb(19 32 46 / 6%);
   --ancho: 1160px;
   --sans: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -34,6 +37,9 @@
     --acento-suave: #2c2416;
     --plano: #8fb6dc;
     --plano-tenue: #4d6680;
+    --iso-izq: #e7eaee;
+    --iso-der: #8fb6dc;
+    --iso-sup: #e0a24c;
     --sombra: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 25%);
     color-scheme: dark;
   }
@@ -51,6 +57,9 @@
   --acento-suave: #2c2416;
   --plano: #8fb6dc;
   --plano-tenue: #4d6680;
+  --iso-izq: #e7eaee;
+  --iso-der: #8fb6dc;
+  --iso-sup: #e0a24c;
   --sombra: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 25%);
   color-scheme: dark;
 }
@@ -177,26 +186,27 @@ p {
   text-decoration: none;
   min-width: 0;
 }
-.marca svg {
-  width: 36px;
+.marca-iso {
+  width: 31px;
   height: 36px;
   flex: none;
 }
 .marca-texto {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   line-height: 1.1;
   min-width: 0;
 }
-.marca-texto b {
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+.marca-dcc {
+  width: 51px;
+  height: 17px;
+  color: var(--tinta);
 }
 .marca-texto span {
-  font-size: 11.5px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--tenue);
   white-space: nowrap;

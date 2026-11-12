@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marca · DCC Ingeniería y Construcción</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20261113" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="/estilos.css?v=20261113" />
+    <style>
+      .manual { padding: 56px 0 88px; }
+      .manual h1 { margin-top: 10px; font-size: clamp(32px, 5vw, 48px); }
+      .manual > .hoja > p { margin-top: 14px; color: var(--tenue); max-width: 40em; }
+      .manual h2 { margin: 64px 0 8px; font-size: 26px; }
+      .manual h2 + p { color: var(--tenue); max-width: 42em; }
+      .versiones { display: grid; gap: 16px; margin-top: 24px; }
+      @media (min-width: 760px) { .versiones { grid-template-columns: repeat(2, 1fr); } }
+      .version { border: 1px solid var(--linea); border-radius: 10px; overflow: hidden; background: var(--papel); }
+      .version-lienzo { display: grid; place-items: center; min-height: 220px; padding: 36px; }
+      .version-lienzo img { max-height: 150px; width: auto; }
+      .lienzo-claro { background: #f4f2ee; }
+      .lienzo-blanco { background: #ffffff; }
+      .lienzo-oscuro { background: #13283f; }
+      .version-pie { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding: 14px 18px; border-top: 1px solid var(--linea); }
+      .version-pie b { font-size: 15px; }
+      .descargas { display: flex; gap: 8px; }
+      .descargas a { font-family: var(--mono); font-size: 12px; padding: 5px 10px; border: 1px solid var(--linea); border-radius: 6px; text-decoration: none; }
+      .descargas a:hover { border-color: var(--tenue); }
+      .colores { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
+      @media (min-width: 760px) { .colores { grid-template-columns: repeat(4, 1fr); } }
+      .color { border: 1px solid var(--linea); border-radius: 10px; overflow: hidden; background: var(--papel); }
+      .color i { display: block; height: 96px; }
+      .color div { padding: 12px 14px 14px; }
+      .color b { display: block; font-size: 15px; }
+      .color span { display: block; font-family: var(--mono); font-size: 12.5px; color: var(--tenue); margin-top: 2px; }
+      .reglas { display: grid; gap: 12px; margin-top: 24px; }
+      @media (min-width: 760px) { .reglas { grid-template-columns: repeat(2, 1fr); } }
+      .regla { padding: 18px 20px; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel); font-size: 15.5px; }
+      .regla b { display: block; margin-bottom: 4px; }
+      .regla.si b { color: #2f7a4b; }
+      .regla.no b { color: #b3412e; }
+      .tipos { display: grid; gap: 12px; margin-top: 24px; }
+      @media (min-width: 760px) { .tipos { grid-template-columns: 1fr 1fr; } }
+      .tipo { padding: 22px 24px; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel); }
+      .tipo .muestra { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 8px 0 6px; }
+      .tipo .muestra.mono { font-family: var(--mono); font-weight: 500; font-size: 26px; letter-spacing: 0; }
+      .tipo p { color: var(--tenue); font-size: 15px; }
+    </style>
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="hoja">
+        <a class="marca" href="/" aria-label="DCC Ingeniería y Construcción, inicio">
+          <img src="/marca/dcc-isotipo.svg" alt="" width="31" height="36" />
+          <span class="marca-texto"><b style="font-size: 19px; font-weight: 800; letter-spacing: 0.04em">Marca</b><span>DCC Ingeniería y Construcción</span></span>
+        </a>
+        <a class="boton boton-linea" href="/">Volver al sitio</a>
+      </div>
+    </header>
+
+    <main class="manual">
+      <div class="hoja">
+        <span class="etq">Manual de marca · v1 · noviembre 2026</span>
+        <h1>Identidad de DCC</h1>
+        <p>El isotipo es un cubo isométrico, que representa el modelo BIM. Su cara derecha está dividida en tres niveles, que representan el edificio. Úsalo siempre desde estos archivos, sin redibujarlo ni cambiar sus colores.</p>
+
+        <h2>Versiones del logo</h2>
+        <p>Usa el SVG para la web e impresión (escala sin perder calidad) y el PNG para documentos de Word, PowerPoint y redes.</p>
+        <div class="versiones">
+          <div class="version">
+            <div class="version-lienzo lienzo-blanco"><img src="dcc-logo-horizontal.svg" alt="Logo horizontal a color" /></div>
+            <div class="version-pie"><b>Horizontal · color</b><span class="descargas"><a href="dcc-logo-horizontal.svg" download>SVG</a><a href="dcc-logo-horizontal.png" download>PNG</a></span></div>
+          </div>
+          <div class="version">
+            <div class="version-lienzo lienzo-oscuro"><img src="dcc-logo-horizontal-negativo.svg" alt="Logo horizontal en negativo" /></div>
+            <div class="version-pie"><b>Horizontal · negativo</b><span class="descargas"><a href="dcc-logo-horizontal-negativo.svg" download>SVG</a><a href="dcc-logo-horizontal-negativo.png" download>PNG</a></span></div>
+          </div>
+          <div class="version">
+            <div class="version-lienzo lienzo-claro"><img src="dcc-logo-vertical.svg" alt="Logo vertical a color" /></div>
+            <div class="version-pie"><b>Vertical · color</b><span class="descargas"><a href="dcc-logo-vertical.svg" download>SVG</a><a href="dcc-logo-vertical.png" download>PNG</a></span></div>
+          </div>
+          <div class="version">
+            <div class="version-lienzo lienzo-oscuro"><img src="dcc-logo-vertical-negativo.svg" alt="Logo vertical en negativo" /></div>
+            <div class="version-pie"><b>Vertical · negativo</b><span class="descargas"><a href="dcc-logo-vertical-negativo.svg" download>SVG</a><a href="dcc-logo-vertical-negativo.png" download>PNG</a></span></div>
+          </div>
+          <div class="version">
+            <div class="version-lienzo lienzo-blanco"><img src="dcc-logo-horizontal-mono.svg" alt="Logo horizontal a una tinta" /></div>
+            <div class="version-pie"><b>Una tinta (sellos, grabados, fax)</b><span class="descargas"><a href="dcc-logo-horizontal-mono.svg" download>SVG</a><a href="dcc-logo-horizontal-mono.png" download>PNG</a></span></div>
+          </div>
+          <div class="version">
+            <div class="version-lienzo lienzo-claro"><img src="dcc-isotipo.svg" alt="Isotipo" style="max-height: 120px" /></div>
+            <div class="version-pie"><b>Isotipo solo</b><span class="descargas"><a href="dcc-isotipo.svg" download>SVG</a><a href="dcc-isotipo.png" download>PNG</a></span></div>
+          </div>
+          <div class="version">
+            <div class="version-lienzo lienzo-claro"><img src="dcc-avatar.png" alt="Avatar" style="max-height: 130px; border-radius: 50%" /></div>
+            <div class="version-pie"><b>Foto de perfil (Google, WhatsApp, LinkedIn)</b><span class="descargas"><a href="dcc-avatar.png" download>PNG</a></span></div>
+          </div>
+          <div class="version">
+            <div class="version-lienzo lienzo-blanco"><img src="dcc-workspace-320x132.png" alt="Logo para Google Workspace" style="max-height: 132px" /></div>
+            <div class="version-pie"><b>Google Workspace (320 × 132)</b><span class="descargas"><a href="dcc-workspace-320x132.png" download>PNG</a></span></div>
+          </div>
+        </div>
+
+        <h2>Colores</h2>
+        <p>Azul marino para textos y fondos, ocre para acentos y llamados a la acción.</p>
+        <div class="colores">
+          <div class="color"><i style="background: #13283f"></i><div><b>Azul marino</b><span>#13283F · RGB 19 40 63</span></div></div>
+          <div class="color"><i style="background: #2e5a87"></i><div><b>Azul plano</b><span>#2E5A87 · RGB 46 90 135</span></div></div>
+          <div class="color"><i style="background: #d99a3e"></i><div><b>Ocre</b><span>#D99A3E · RGB 217 154 62</span></div></div>
+          <div class="color"><i style="background: #f4f2ee; border-bottom: 1px solid var(--linea)"></i><div><b>Papel</b><span>#F4F2EE · RGB 244 242 238</span></div></div>
+        </div>
+
+        <h2>Tipografía</h2>
+        <p>Ambas son gratuitas en Google Fonts y se pueden instalar en Word y PowerPoint.</p>
+        <div class="tipos">
+          <div class="tipo"><span class="etq">Títulos y textos</span><div class="muestra">Archivo</div><p>SemiBold y Bold para títulos; Regular para párrafos.</p></div>
+          <div class="tipo"><span class="etq">Datos técnicos y rótulos</span><div class="muestra mono">IBM Plex Mono</div><p>Códigos, cotas, RUC y etiquetas en mayúsculas.</p></div>
+        </div>
+
+        <h2>Uso correcto</h2>
+        <div class="reglas">
+          <div class="regla si"><b>Sí</b>Deja alrededor del logo un margen libre igual al ancho de la letra D.</div>
+          <div class="regla si"><b>Sí</b>Sobre fondos oscuros o fotos, usa la versión en negativo.</div>
+          <div class="regla no"><b>No</b>Estirar, rotar, cambiar los colores ni agregar sombras o contornos.</div>
+          <div class="regla no"><b>No</b>Usar el horizontal a menos de 120 px de ancho: ahí usa el isotipo solo.</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
