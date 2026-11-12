@@ -26,8 +26,8 @@ Apple pide un correo del dominio de la organización (no Gmail) y las dos tienda
 3. `tekluma.app` como dominio secundario de Workspace. Sus registros van en Route 53 y se cargan a mano
    (no con SST: son de todo el dominio, no de un stage):
    - [x] MX `1 smtp.google.com` y SPF `v=spf1 include:_spf.google.com include:amazonses.com ~all`;
-   - [ ] TXT de verificación de Google (va en el mismo conjunto TXT de la raíz que el SPF);
-   - [ ] DKIM `google._domainkey`. Es obligatorio: el DMARC de producción (`adkim=s; aspf=s`) rechaza lo que salga
+   - [x] TXT de verificación de Google (va en el mismo conjunto TXT de la raíz que el SPF);
+   - [x] DKIM `google._domainkey`. Es obligatorio: el DMARC de producción (`adkim=s; aspf=s`) rechaza lo que salga
      de `hola@tekluma.app` sin firma DKIM del propio dominio.
 4. Alias del usuario principal: `contacto@dccingenieriayconstruccion.com`, `hola@tekluma.app` y `soporte@tekluma.app`.
 5. Prueba enviando un correo a cada dirección desde otra cuenta.
