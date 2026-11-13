@@ -39,7 +39,7 @@ export function guardarAjuste(clave: string, valor: unknown) {
 }
 
 /** Ajustes del dispositivo, no de la cuenta: sobreviven al cerrar sesión. */
-const AJUSTES_DEL_DISPOSITIVO = ["tutorial", "recordatorio"];
+const AJUSTES_DEL_DISPOSITIVO = ["tutorial", "recordatorio", "instalacion", "embudo"];
 
 /** Deja el dispositivo limpio: progreso, ajustes y los mazos descargados (contenido exclusivo de Tekluma). */
 export function borrarDatosLocales() {

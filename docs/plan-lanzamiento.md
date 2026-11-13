@@ -123,7 +123,8 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
       enlace «Privacidad de los anuncios» en Perfil donde la ley lo exige. Manifiesto de privacidad de iOS.
 - [ ] **(tú)** En AdMob → **Privacidad y mensajes**: crear el mensaje de **GDPR** y el **mensaje explicativo de IDFA** (iOS),
       en español. Sin ellos la app usa los textos de prueba de Google.
-- [ ] **(código)** Métricas propias del embudo (instala → primera tarjeta → vuelve al día siguiente → Premium), sin terceros.
+- [x] **(código)** Embudo de activación propio, sin terceros (abre la app → tutorial → código → sesión → perfil → primera tarjeta →
+      10 tarjetas el primer día → vuelve al día siguiente → ve Premium → compra), en el panel → Métricas.
 - [x] **(código)** Registro de errores con Sentry en la app y en la API, sin datos personales (solo el id interno del usuario).
       Declarado en `/privacidad` y en `docs/fichas-tiendas.md`.
 - [ ] **(tú)** Crear la cuenta gratuita en <https://sentry.io> (región EE. UU.) con dos proyectos: `tekluma-app` (React Native)

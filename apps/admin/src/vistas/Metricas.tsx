@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NOMBRES_PROFESION, REGIONES, UNIVERSIDADES, type Profession } from "@tekluma/shared";
-import { api, type Metricas as DatosMetricas } from "../api";
+import { api, type Embudo as DatosEmbudo, type Metricas as DatosMetricas } from "../api";
 import { MOTIVOS_MONEDAS } from "../etiquetas";
 import { Aviso, EncabezadoPagina } from "../ui";
 import { Barras, Cifra, numero, porcentaje, Reparto } from "./graficos";
@@ -46,6 +46,8 @@ export function Metricas() {
             <Cifra etiqueta="Duelos" valor={numero(t.duelos7)} detalle={`creados en 7 días · ${numero(t.partidas7)} partidas`} />
             <Cifra etiqueta="Anuncios con premio" valor={numero(t.anuncios7)} detalle="vistos en 7 días" />
           </section>
+
+          <Embudo />
 
           <section className="panel">
             <div className="panel-cab">
@@ -160,5 +162,73 @@ export function Metricas() {
         </div>
       )}
     </>
+  );
+}
+
+/** `base`: step the percentage is measured against when it is not the previous one (not every step is required). */
+const PASOS: { clave: keyof DatosEmbudo; nombre: string; ayuda: string; base?: keyof DatosEmbudo }[] = [
+  { clave: "primeraApertura", nombre: "Abrió la app", ayuda: "Primera vez que se abre en el dispositivo" },
+  { clave: "tutorialVisto", nombre: "Terminó el tutorial", ayuda: "O lo saltó" },
+  { clave: "codigoPedido", nombre: "Pidió el código", ayuda: "Escribió su correo" },
+  { clave: "sesionIniciada", nombre: "Inició sesión", ayuda: "Escribió el código" },
+  { clave: "perfilCompleto", nombre: "Completó su perfil", ayuda: "Nombre y profesión" },
+  { clave: "primeraTarjeta", nombre: "Estudió una tarjeta", ayuda: "Al menos una" },
+  { clave: "diezTarjetas", nombre: "10 tarjetas el primer día", ayuda: "El día de su registro" },
+  { clave: "volvioDia1", nombre: "Volvió al día siguiente", ayuda: "Activo el día después del registro", base: "primeraTarjeta" },
+  { clave: "premiumVisto", nombre: "Vio la pantalla Premium", ayuda: "Abrió la oferta" },
+  { clave: "premiumComprado", nombre: "Compró Premium", ayuda: "Sin contar los regalados desde el panel" },
+];
+
+/** Activation funnel: where installs drop off, from first open to buying Premium. */
+function Embudo() {
+  const [dias, setDias] = useState(30);
+  const [e, setE] = useState<DatosEmbudo | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    api<DatosEmbudo>(`/editorial/metricas/embudo?dias=${dias}`).then(setE, (err) => setError((err as Error).message));
+  }, [dias]);
+
+  const total = e?.primeraApertura ?? 0;
+  return (
+    <section className="panel">
+      <div className="panel-cab">
+        <h2>Embudo de activación</h2>
+        <select value={dias} onChange={(ev) => setDias(Number(ev.target.value))} aria-label="Periodo">
+          <option value={7}>Instalaciones de 7 días</option>
+          <option value={30}>Instalaciones de 30 días</option>
+          <option value={90}>Instalaciones de 90 días</option>
+        </select>
+      </div>
+      <div className="panel-cuerpo">
+        {error && <Aviso tono="error">{error}</Aviso>}
+        {e && total === 0 ? (
+          <p className="nota">Aún no hay instalaciones en este periodo: el embudo se llena cuando la app esté publicada.</p>
+        ) : (
+          e && (
+            <ol className="embudo">
+              {PASOS.map((p, i) => {
+                const n = e[p.clave];
+                const anterior = i === 0 ? n : e[p.base ?? PASOS[i - 1]!.clave];
+                return (
+                  <li key={p.clave}>
+                    <span className="embudo-nombre">
+                      {p.nombre}
+                      <span className="nota">{p.ayuda}</span>
+                    </span>
+                    <span className="reparto-barra">
+                      <span style={{ width: `${(n / Math.max(1, total)) * 100}%` }} />
+                    </span>
+                    <span className="mono reparto-n">{numero(n)}</span>
+                    <span className="mono embudo-paso" title={p.base ? "De quienes estudiaron una tarjeta" : "Del paso anterior"}>
+                      {i === 0 ? "" : porcentaje(n, anterior)}
+                    </span>
+                  </li>
+                );
+              })}
+            </ol>
+          )
+        )}
+      </div>
+    </section>
   );
 }

@@ -25,6 +25,7 @@ import {
   XP_SOURCES,
   type ContenidoTarjeta,
   type Division,
+  type EventoEmbudo,
   type PaqueteMazo,
   type EstadoReclamo,
   type TipoReclamo,
@@ -448,4 +449,20 @@ export const supportActions = pgTable(
     createdAt: createdAt(),
   },
   (t) => [index("support_actions_user_idx").on(t.userId)],
+);
+
+// ───────────── Activation funnel ─────────────
+
+/** First time each install reached each app-side funnel step (one row per install and event). */
+export const installEvents = pgTable(
+  "install_events",
+  {
+    installId: uuid("install_id").notNull(),
+    event: text("event").$type<EventoEmbudo>().notNull(),
+    /** Set once the install signs in, so later steps can be read from the user's data. */
+    userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+    platform: text("platform").notNull(),
+    createdAt: createdAt(),
+  },
+  (t) => [primaryKey({ columns: [t.installId, t.event] }), index("install_events_created_idx").on(t.event, t.createdAt), index("install_events_user_idx").on(t.userId)],
 );

@@ -13,7 +13,7 @@ import { eliminarMazo, eliminarNorma } from "../eliminacion";
 import { compararNumeros } from "../util";
 import { importar, ImportacionError } from "../importacion";
 import { codigoHoja, listarReclamos, ReclamoError, reenviarConstancia, responderReclamo } from "../reclamos";
-import { fichaUsuario, FILTROS, listarUsuarios, metricasGenerales, ORDENES } from "../metricas";
+import { embudo, fichaUsuario, FILTROS, listarUsuarios, metricasGenerales, ORDENES } from "../metricas";
 import { ajustarMonedas, darPremium, historialSoporte, quitarPremium, SoporteError } from "../soporte";
 
 type StaffVars = { Variables: { usuarioId: string; rol: StaffRole } };
@@ -445,6 +445,10 @@ export const editorial = new Hono<StaffVars>()
   // ───────── Users and metrics (admins only: personal data) ─────────
 
   .get("/metricas", requiereStaff("admin"), async (c) => c.json(await metricasGenerales()))
+
+  .get("/metricas/embudo", requiereStaff("admin"), zValidator("query", z.object({ dias: z.coerce.number().int().min(1).max(365).default(30) })), async (c) =>
+    c.json(await embudo(c.req.valid("query").dias)),
+  )
 
   .get(
     "/usuarios",

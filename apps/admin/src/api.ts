@@ -173,3 +173,9 @@ export type AccionSoporte = {
   staff: string | null;
   staffEmail: string | null;
 };
+
+export type Embudo = Record<
+  | "primeraApertura" | "tutorialVisto" | "codigoPedido" | "sesionIniciada" | "perfilCompleto"
+  | "primeraTarjeta" | "diezTarjetas" | "volvioDia1" | "premiumVisto" | "premiumComprado",
+  number
+>;

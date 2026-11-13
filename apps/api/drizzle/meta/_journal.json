@@ -50,6 +50,13 @@
       "when": 1794600889024,
       "tag": "0006_soporte",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1794602161388,
+      "tag": "0007_embudo",
+      "breakpoints": true
     }
   ]
 }

@@ -4,6 +4,7 @@ import { router } from "expo-router";
 import { comprar, comprasDisponibles, obtenerPlanes, restaurar, type IdPlan, type PlanTienda } from "@/lib/compras";
 import { obtenerCupo } from "@/lib/cupo";
 import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
+import { registrarEvento } from "@/lib/embudo";
 import { IconoCorrecto } from "@/components/Iconos";
 
 type Plan = { id: IdPlan; nombre: string; precio: string; detalle: string; destacado?: string };
@@ -34,6 +35,7 @@ export default function Premium() {
   const [ocupado, setOcupado] = useState(false);
 
   useEffect(() => {
+    registrarEvento("premium_visto");
     if (!comprasDisponibles) return;
     obtenerPlanes()
       .then(setTienda)

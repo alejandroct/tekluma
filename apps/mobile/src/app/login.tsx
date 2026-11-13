@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ActivityIndicator, Image, KeyboardAvoidingView, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { authClient } from "@/lib/auth";
+import { registrarEvento } from "@/lib/embudo";
 import { MONO, MONO_FUERTE, useTema } from "@/lib/tema";
 
 export default function Login() {
@@ -17,6 +18,7 @@ export default function Login() {
     const { error } = await authClient.emailOtp.sendVerificationOtp({ email: email.trim(), type: "sign-in" });
     setCargando(false);
     if (error) return setError(error.message ?? "No pudimos enviar el código");
+    registrarEvento("codigo_pedido");
     setPaso("codigo");
   };
 

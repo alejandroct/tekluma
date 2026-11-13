@@ -9,6 +9,7 @@ import { Arranque } from "@/components/Arranque";
 import { iniciarAnuncios } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { iniciarCompras } from "@/lib/compras";
+import { registrarEvento } from "@/lib/embudo";
 import { conErrores, usuarioDeErrores } from "@/lib/errores";
 import { iniciarNotificaciones } from "@/lib/recordatorio";
 import { iniciarSonidos } from "@/lib/sonidos";
@@ -30,6 +31,7 @@ function RootLayout() {
   useEffect(() => {
     iniciarSonidos();
     iniciarNotificaciones();
+    registrarEvento("primera_apertura");
   }, []);
 
   // Consentimiento y permiso de rastreo recién cuando el usuario ya está dentro, no en el tutorial ni en el login.
@@ -54,7 +56,9 @@ function RootLayout() {
   const usuarioId = sesion?.user.id;
   useEffect(() => {
     usuarioDeErrores(usuarioId ?? null);
-    if (usuarioId) iniciarCompras(usuarioId).catch(() => {});
+    if (!usuarioId) return;
+    registrarEvento("sesion_iniciada");
+    iniciarCompras(usuarioId).catch(() => {});
   }, [usuarioId]);
 
   if (isPending || !fuentesListas) return <View style={{ flex: 1, backgroundColor: t.fondo }} />;

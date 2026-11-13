@@ -8,6 +8,7 @@ import { cuenta } from "./routes/cuenta";
 import { cupo } from "./routes/cupo";
 import { diaria } from "./routes/diaria";
 import { duelos } from "./routes/duelos";
+import { eventos } from "./routes/eventos";
 import { liga } from "./routes/liga";
 import { editorial } from "./routes/editorial";
 import { mazosRoutes } from "./routes/mazos";
@@ -28,6 +29,7 @@ export const app = new Hono()
   .route("/cupo", cupo)
   .route("/diaria", diaria)
   .route("/duelos", duelos)
+  .route("/eventos", eventos)
   .route("/liga", liga)
   .route("/editorial", editorial)
   .route("/reclamos", reclamos)

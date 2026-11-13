@@ -1949,3 +1949,36 @@ td.negativo {
   flex-direction: column;
   gap: var(--e3);
 }
+.panel-cab select {
+  width: auto;
+}
+.embudo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--e3);
+}
+.embudo li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(80px, 2fr) 3.5em 3.5em;
+  gap: var(--e3);
+  align-items: center;
+  font-size: var(--t-sm);
+}
+.embudo-nombre {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.embudo-nombre .nota {
+  font-size: var(--t-xs);
+}
+.embudo .reparto-barra {
+  height: 10px;
+}
+.embudo-paso {
+  text-align: right;
+  color: var(--ambar);
+}

@@ -5,3 +5,4 @@ export * from "./api";
 export * from "./ligas";
 export * from "./importacion";
 export * from "./reclamos";
+export * from "./embudo";

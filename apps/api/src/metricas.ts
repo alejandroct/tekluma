@@ -241,3 +241,36 @@ export async function fichaUsuario(id: string) {
     serie,
   };
 }
+
+/**
+ * Embudo de activación de las instalaciones que abrieron la app por primera vez en los últimos `dias`.
+ * Los primeros pasos los manda la app; desde el inicio de sesión se leen de los datos del usuario.
+ */
+export async function embudo(dias: number) {
+  const [f] = await filas<Record<string, number>>(sql`
+    with inst as (
+      select install_id from install_events
+      where event = 'primera_apertura' and created_at >= now() - make_interval(days => ${dias})
+    ),
+    ev as (select install_id, event, user_id from install_events where install_id in (select install_id from inst)),
+    u as (
+      select distinct on (ev.install_id) ev.install_id, us.id, us.name, us.premium_until,
+        (us.created_at at time zone 'America/Lima')::date as alta
+      from ev join users us on us.id = ev.user_id
+    )
+    select
+      (select count(*) from inst)::int as "primeraApertura",
+      (select count(*) from ev where event = 'tutorial_visto')::int as "tutorialVisto",
+      (select count(*) from ev where event = 'codigo_pedido')::int as "codigoPedido",
+      (select count(*) from u)::int as "sesionIniciada",
+      (select count(*) from u where name <> '')::int as "perfilCompleto",
+      (select count(*) from u where exists (select 1 from daily_card_views v where v.user_id = u.id))::int as "primeraTarjeta",
+      (select count(*) from u where (select count(*) from daily_card_views v where v.user_id = u.id and v.day = u.alta) >= 10)::int as "diezTarjetas",
+      (select count(*) from u where exists (select 1 from ${actividad} a where a.user_id = u.id and a.day = u.alta + 1))::int as "volvioDia1",
+      (select count(*) from ev where event = 'premium_visto')::int as "premiumVisto",
+      -- Premium comprado: excluye a quien solo lo recibió desde el panel de soporte.
+      (select count(*) from u where u.premium_until is not null
+        and not exists (select 1 from support_actions s where s.user_id = u.id and s.kind = 'premium'))::int as "premiumComprado"
+  `);
+  return f!;
+}

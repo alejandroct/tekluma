@@ -104,7 +104,7 @@ Para eliminar la cuenta: Perfil → «Eliminar mi cuenta».
 | Identificadores → ID de usuario | Funcionalidad de la app | Sí | No |
 | Identificadores → ID del dispositivo (IDFA) | Publicidad de terceros | No | **Sí** (solo si el usuario lo permite) |
 | Compras → Historial de compras | Funcionalidad de la app | Sí | No |
-| Uso → Interacción con el producto (progreso de estudio) | Funcionalidad de la app | Sí | No |
+| Uso → Interacción con el producto (progreso de estudio y pasos del embudo) | Funcionalidad de la app, analítica | Sí | No |
 | Uso → Datos de publicidad | Publicidad de terceros | No | Sí |
 | Ubicación → Aproximada (la deduce AdMob por la IP) | Publicidad de terceros | No | Sí |
 | Diagnóstico → Datos de fallos (Sentry) | Funcionalidad de la app | Sí (solo el id interno) | No |
