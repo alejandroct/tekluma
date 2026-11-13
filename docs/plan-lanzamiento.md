@@ -131,7 +131,10 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
       y `tekluma-api` (Node.js). En cada proyecto → Settings → Security & Privacy, activar **«Prevent Storing of IP Addresses»**.
       Hecho: proyectos creados, privacidad configurada, `SentryDsn` cargado en producción y el DSN de la app en `eas.json`.
 - [x] Token de Sentry cargado en EAS como variable secreta `SENTRY_AUTH_TOKEN` (production y preview).
-- [ ] **(código)** Una página web por artículo de la norma (`/normas/e060/21.6.4/`) para que Google las indexe: es el canal gratuito de usuarios.
+- [x] **(código)** Una página web por sección de la norma (218 en la E.060, p. ej. `/normas/e060/7-2/`) con preguntas de práctica,
+      `sitemap.xml` y `robots.txt`. Se regeneran solas con `generar.py`.
+- [ ] **(tú, al lanzar en tiendas)** Google Search Console: propiedad de dominio `tekluma.app` (pasarme el TXT para Route 53)
+      y enviar `https://tekluma.app/sitemap.xml`. Mientras antes se haga, antes aparecen las páginas en Google.
 - [x] **(código)** Configuración de compilación con EAS (`apps/mobile/eas.json`: perfiles development, preview y production;
       el número de compilación lo lleva EAS y sube solo). Íconos y splash ya están.
 - [x] Cuenta de Expo (organización `dcc-ingenieria-y-construccion`), proyecto vinculado (`@dcc-ingenieria-y-construccion/tekluma`)
