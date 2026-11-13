@@ -148,6 +148,7 @@ export default $config({
     // para que un rediseño nunca quede con estilos viejos en caché.
     const web = new sst.aws.StaticSite("Web", {
       path: "apps/web",
+      errorPage: "404.html",
       domain: { name: dominio, dns },
       assets: {
         fileOptions: [

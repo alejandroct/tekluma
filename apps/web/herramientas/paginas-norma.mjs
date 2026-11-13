@@ -1,5 +1,5 @@
 /**
- * Genera una página HTML estática por sección de cada norma (normas/<slug>/<sección>/index.html),
+ * Genera una página HTML estática por sección de cada norma (normas/<slug>/7-2/index.html para la 7.2),
  * el índice de secciones dentro del visor, sitemap.xml y robots.txt. Google lee estas páginas sin
  * ejecutar JavaScript; el visor (normas/<slug>/) sigue siendo la versión interactiva.
  *
@@ -18,6 +18,9 @@ const PREGUNTAS_POR_SECCION = 3;
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const normal = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[′’´`]/g, "'").toLowerCase();
 const seccionDe = (n) => n.split(".").slice(0, 2).join(".");
+/** Carpeta de la sección: «7-2», no «7.2». El sitio estático toma lo que va tras un punto como extensión
+ *  de archivo y no resolvería /normas/e060/7.2 (sin barra final) a su index.html. */
+const carpeta = (s) => s.replace(/\./g, "-");
 const pagina = (slug, p) => `/normas/${slug}/paginas/p${String(p).padStart(3, "0")}.jpg`;
 
 /** Mismo dibujo que el visor (normas/e060/index.html): párrafos, tablas «| a | b», fórmulas en SVG y símbolos. */
@@ -153,7 +156,7 @@ const pie = (dispositivo) => `<footer class="pie">
 
 function paginaSeccion({ norma, slug, s, arts, capitulo, anterior, siguiente, hermanas, preguntas, dibujante }) {
   const titulo = arts[0].e ?? arts[0].t;
-  const url = `${SITIO}/normas/${slug}/${s}/`;
+  const url = `${SITIO}/normas/${slug}/${carpeta(s)}/`;
   const tituloPagina = `${s} ${titulo} · Norma ${norma.codigo} ${norma.titulo} · Tekluma`;
   const desc = descripcion(arts, titulo, norma.codigo);
   const paginas = [...new Set(arts.map((a) => a.p).filter(Boolean))];
@@ -217,7 +220,7 @@ function paginaSeccion({ norma, slug, s, arts, capitulo, anterior, siguiente, he
   };
 
   const vecina = (x, clase, rotulo) =>
-    x ? `<a class="${clase}" href="/normas/${slug}/${x.s}/"><span>${rotulo}</span>${esc(x.s)} ${esc(x.titulo)}</a>` : "";
+    x ? `<a class="${clase}" href="/normas/${slug}/${carpeta(x.s)}/"><span>${rotulo}</span>${esc(x.s)} ${esc(x.titulo)}</a>` : "";
 
   return `<!doctype html>
 <html lang="es-PE">
@@ -266,7 +269,7 @@ function paginaSeccion({ norma, slug, s, arts, capitulo, anterior, siguiente, he
 
       <h2>Capítulo ${capitulo.n} · ${esc(capitulo.titulo)}</h2>
       <ul class="lista-secciones">
-        ${hermanas.map((x) => `<li${x.s === s ? ' class="actual"' : ""}><a href="/normas/${slug}/${x.s}/"><span class="n">${esc(x.s)}</span>${esc(x.titulo)}</a></li>`).join("\n        ")}
+        ${hermanas.map((x) => `<li${x.s === s ? ' class="actual"' : ""}><a href="/normas/${slug}/${carpeta(x.s)}/"><span class="n">${esc(x.s)}</span>${esc(x.titulo)}</a></li>`).join("\n        ")}
       </ul>
     </main>
 
@@ -291,7 +294,7 @@ function indiceEnVisor(slug, secciones, capitulos) {
             const propias = secciones.filter((x) => x.s.split(".")[0] === c.n);
             if (!propias.length) return "";
             return `<h3><span>${esc(c.n.padStart(2, "0"))}</span>${esc(c.titulo)}</h3>
-        <ul class="lista-secciones">${propias.map((x) => `<li><a href="/normas/${slug}/${x.s}/"><span class="n">${esc(x.s)}</span>${esc(x.titulo)}</a></li>`).join("")}</ul>`;
+        <ul class="lista-secciones">${propias.map((x) => `<li><a href="/normas/${slug}/${carpeta(x.s)}/"><span class="n">${esc(x.s)}</span>${esc(x.titulo)}</a></li>`).join("")}</ul>`;
           })
           .join("\n        ")}
       </details>
@@ -320,7 +323,7 @@ for (const { slug } of JSON.parse(readFileSync(join(WEB, "normas", "index.json")
 
   // Borra solo las carpetas de secciones (nombres numéricos) generadas antes, por si cambió la norma.
   for (const d of readdirSync(join(WEB, "normas", slug), { withFileTypes: true }))
-    if (d.isDirectory() && /^\d+(\.\d+)*$/.test(d.name)) rmSync(join(WEB, "normas", slug, d.name), { recursive: true });
+    if (d.isDirectory() && /^\d+([.-]\d+)*$/.test(d.name)) rmSync(join(WEB, "normas", slug, d.name), { recursive: true });
 
   const capitulos = new Map(norma.capitulos.map((c) => [c.n, c]));
   secciones.forEach((x, i) => {
@@ -338,11 +341,11 @@ for (const { slug } of JSON.parse(readFileSync(join(WEB, "normas", "index.json")
       preguntas: (preguntas.get(x.s) ?? []).slice(0, PREGUNTAS_POR_SECCION),
       dibujante,
     });
-    mkdirSync(join(WEB, "normas", slug, x.s), { recursive: true });
-    writeFileSync(join(WEB, "normas", slug, x.s, "index.html"), html);
+    mkdirSync(join(WEB, "normas", slug, carpeta(x.s)), { recursive: true });
+    writeFileSync(join(WEB, "normas", slug, carpeta(x.s), "index.html"), html);
   });
   indiceEnVisor(slug, secciones, norma.capitulos);
-  urls.push(`${SITIO}/normas/${slug}/`, ...secciones.map((x) => `${SITIO}/normas/${slug}/${x.s}/`));
+  urls.push(`${SITIO}/normas/${slug}/`, ...secciones.map((x) => `${SITIO}/normas/${slug}/${carpeta(x.s)}/`));
   console.log(`${norma.codigo}: ${secciones.length} páginas de sección`);
 }
 
