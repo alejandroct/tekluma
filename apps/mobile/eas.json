@@ -9,21 +9,24 @@
       "distribution": "internal",
       "env": {
         "EXPO_PUBLIC_API_URL": "https://api.dev.tekluma.app"
-      }
+      },
+      "channel": "development"
     },
     "preview": {
       "distribution": "internal",
       "env": {
         "EXPO_PUBLIC_API_URL": "https://api.dev.tekluma.app",
         "EXPO_PUBLIC_SENTRY_DSN": "https://feba760fd770656b2e4b876e90cb4674@o4512426355326976.ingest.us.sentry.io/4512426398777344"
-      }
+      },
+      "channel": "preview"
     },
     "production": {
       "autoIncrement": true,
       "env": {
         "EXPO_PUBLIC_API_URL": "https://api.tekluma.app",
         "EXPO_PUBLIC_SENTRY_DSN": "https://feba760fd770656b2e4b876e90cb4674@o4512426355326976.ingest.us.sentry.io/4512426398777344"
-      }
+      },
+      "channel": "production"
     }
   },
   "submit": {
