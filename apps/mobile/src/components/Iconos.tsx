@@ -121,6 +121,21 @@ export const IconoPodio: Icono = ({ tamano = 24, color, acento = color }) =>
     </>,
   );
 
+/** Hoja de examen con casillas marcadas: el simulacro. */
+export const IconoSimulacro: Icono = ({ tamano = 24, color, acento = color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Rect x={4.5} y={3} width={15} height={18} stroke={color} {...trazo} />
+      <Line x1={11} y1={8} x2={16.5} y2={8} stroke={color} {...trazo} />
+      <Line x1={11} y1={12.5} x2={16.5} y2={12.5} stroke={color} {...trazo} />
+      <Line x1={11} y1={17} x2={16.5} y2={17} stroke={color} {...trazo} />
+      <Rect x={7.25} y={6.75} width={2.5} height={2.5} fill={acento} />
+      <Rect x={7.25} y={11.25} width={2.5} height={2.5} fill={acento} />
+      <Rect x={7.25} y={15.75} width={2.5} height={2.5} stroke={color} {...trazo} strokeWidth={1.25} />
+    </>,
+  );
+
 /** Cronómetro. */
 export const IconoCronometro: Icono = ({ tamano = 24, color, acento = color }) =>
   lienzo(

@@ -61,6 +61,9 @@ El texto íntegro de la E.060, ordenado por capítulos, con buscador, fórmulas 
 ESTUDIA SIN SEÑAL
 Descarga los mazos y repasa en obra, en el bus o donde no haya cobertura. Tu progreso se sincroniza cuando vuelves a tener conexión.
 
+SIMULACRO DE EXAMEN
+Preguntas al azar con tiempo límite, como en un examen. Al entregar ves tu nota sobre 20, en qué capítulos fallas y el artículo de cada respuesta.
+
 MÍDETE CON TUS COLEGAS
 • Pregunta del día: la misma para todos, tres intentos.
 • Duelos 1 vs 1: reta a un colega por WhatsApp con cinco preguntas cronometradas.
@@ -70,7 +73,7 @@ TU HÁBITO
 Elige la hora de tu recordatorio diario y mantén tu racha.
 
 GRATIS Y PREMIUM
-Tekluma es gratis, con un cupo diario de tarjetas que puedes ampliar con monedas. Tekluma Premium te da repaso ilimitado, sin anuncios y todos los mazos. La suscripción se renueva automáticamente salvo que la canceles al menos 24 horas antes del fin del periodo; puedes gestionarla o cancelarla en los ajustes de tu cuenta de Apple.
+Tekluma es gratis, con un cupo diario de tarjetas que puedes ampliar con monedas. Tekluma Premium te da repaso ilimitado, simulacros ilimitados, sin anuncios y todos los mazos. La suscripción se renueva automáticamente salvo que la canceles al menos 24 horas antes del fin del periodo; puedes gestionarla o cancelarla en los ajustes de tu cuenta de Apple.
 
 Pensado para ingenieros civiles, arquitectos y estudiantes que preparan exámenes, concursos o el día a día en obra.
 
@@ -125,7 +128,7 @@ Domina la Norma E.060 con tarjetas que citan el artículo exacto. 10 min al día
 
 **Descripción completa** (máx. 4000): la misma de App Store, cambiando el párrafo de la suscripción por:
 ```
-Tekluma es gratis, con un cupo diario de tarjetas que puedes ampliar con monedas. Tekluma Premium te da repaso ilimitado, sin anuncios y todos los mazos. La suscripción se renueva automáticamente; puedes cancelarla cuando quieras en Google Play → Pagos y suscripciones.
+Tekluma es gratis, con un cupo diario de tarjetas que puedes ampliar con monedas. Tekluma Premium te da repaso ilimitado, simulacros ilimitados, sin anuncios y todos los mazos. La suscripción se renueva automáticamente; puedes cancelarla cuando quieras en Google Play → Pagos y suscripciones.
 ```
 
 **Etiquetas:** Educación · Referencia.

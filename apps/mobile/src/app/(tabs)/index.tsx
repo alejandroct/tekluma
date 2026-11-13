@@ -4,7 +4,7 @@ import { router, useFocusEffect } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import type { EstadoCupo, PreguntaDiaria } from "@tekluma/shared";
 import { BotonVivo, NumeroAnimado } from "@/components/Animaciones";
-import { Casillas, IconoChevron, IconoDuelo, IconoPreguntaDia, IconoPremium, MarcoIcono } from "@/components/Iconos";
+import { Casillas, IconoChevron, IconoDuelo, IconoPreguntaDia, IconoPremium, IconoSimulacro, MarcoIcono } from "@/components/Iconos";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { obtenerDiaria } from "@/lib/diaria";
 import { paquetesLocales } from "@/lib/mazos";
@@ -94,6 +94,7 @@ export default function Hoy() {
       <Text style={[estilos.seccion, { color: t.textoSuave }]}>RETOS</Text>
       {diaria && <TarjetaDiaria diaria={diaria} />}
       <AccesoDuelo />
+      <AccesoSimulacro />
 
       {resumen && resumen.length > 1 && (
         <View style={{ gap: 8, marginTop: 8 }}>
@@ -155,6 +156,24 @@ function AccesoDuelo() {
         <View style={{ flex: 1, gap: 4 }}>
           <Text style={[estilos.accesoEtiqueta, { color: t.textoSuave }]}>DUELO 1 VS 1</Text>
           <Text style={[estilos.accesoTitulo, { color: t.texto }]}>Reta a un colega por WhatsApp</Text>
+        </View>
+        <IconoChevron color={t.textoSuave} />
+      </BotonVivo>
+    </Animated.View>
+  );
+}
+
+function AccesoSimulacro() {
+  const t = useTema();
+  return (
+    <Animated.View entering={FadeInDown.delay(90).springify()}>
+      <BotonVivo onPress={() => router.push("/simulacro")} style={[estilos.acceso, { backgroundColor: t.superficie, borderColor: t.borde }]}>
+        <MarcoIcono borde={t.borde} fondo={t.fondo}>
+          <IconoSimulacro color={t.texto} acento={t.ambar} />
+        </MarcoIcono>
+        <View style={{ flex: 1, gap: 4 }}>
+          <Text style={[estilos.accesoEtiqueta, { color: t.textoSuave }]}>SIMULACRO DE EXAMEN</Text>
+          <Text style={[estilos.accesoTitulo, { color: t.texto }]}>Ponte a prueba con nota sobre 20</Text>
         </View>
         <IconoChevron color={t.textoSuave} />
       </BotonVivo>

@@ -6,3 +6,4 @@ export * from "./ligas";
 export * from "./importacion";
 export * from "./reclamos";
 export * from "./embudo";
+export * from "./simulacro";

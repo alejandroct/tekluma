@@ -466,3 +466,23 @@ export const installEvents = pgTable(
   },
   (t) => [primaryKey({ columns: [t.installId, t.event] }), index("install_events_created_idx").on(t.event, t.createdAt), index("install_events_user_idx").on(t.userId)],
 );
+
+// ───────────── Mock exams ─────────────
+
+/** A timed practice exam: questions fixed at the start, answers scored on submission. */
+export const mockExams = pgTable(
+  "mock_exams",
+  {
+    id: id(),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    standardCode: text("standard_code").notNull(),
+    cardIds: jsonb("card_ids").$type<string[]>().notNull(),
+    timeLimitSec: integer("time_limit_sec").notNull(),
+    answers: jsonb("answers").$type<(number | null)[]>(),
+    correct: integer("correct"),
+    seconds: integer("seconds"),
+    submittedAt: timestamp("submitted_at", { withTimezone: true }),
+    createdAt: createdAt(),
+  },
+  (t) => [index("mock_exams_user_idx").on(t.userId, t.createdAt)],
+);

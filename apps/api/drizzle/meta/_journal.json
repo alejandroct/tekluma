@@ -57,6 +57,13 @@
       "when": 1794602161388,
       "tag": "0007_embudo",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1794605678452,
+      "tag": "0008_simulacros",
+      "breakpoints": true
     }
   ]
 }
