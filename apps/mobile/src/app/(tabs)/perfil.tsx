@@ -1,6 +1,7 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Alert, Linking, Platform, Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
+import { hayOpcionesDePrivacidad, mostrarOpcionesDePrivacidad } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { cerrarSesion, eliminarCuenta } from "@/lib/cuenta";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
@@ -15,6 +16,10 @@ export default function Perfil() {
   const t = useTema();
   const { data: sesion } = authClient.useSession();
   const [cupo, setCupo] = useState<EstadoCupo | null>(cupoEnCache);
+  const [privacidadAnuncios, setPrivacidadAnuncios] = useState(false);
+  useEffect(() => {
+    hayOpcionesDePrivacidad().then(setPrivacidadAnuncios);
+  }, []);
 
   useFocusEffect(
     useCallback(() => {
@@ -88,6 +93,11 @@ export default function Perfil() {
       <Pressable onPress={confirmarEliminacion} hitSlop={8} style={{ alignItems: "center", paddingVertical: 8 }}>
         <Text style={{ color: t.textoSuave, fontSize: 14, textDecorationLine: "underline" }}>Eliminar mi cuenta</Text>
       </Pressable>
+      {privacidadAnuncios && (
+        <Pressable onPress={() => mostrarOpcionesDePrivacidad().catch(() => {})} hitSlop={8} style={{ alignItems: "center", paddingVertical: 4 }}>
+          <Text style={{ color: t.textoSuave, fontSize: 14, textDecorationLine: "underline" }}>Privacidad de los anuncios</Text>
+        </Pressable>
+      )}
       {/* Obligatorio en Perú: acceso visible al Libro de Reclamaciones virtual. */}
       <Pressable onPress={() => Linking.openURL("https://tekluma.app/reclamaciones")} hitSlop={8} style={{ alignItems: "center", paddingVertical: 4 }}>
         <Text style={{ color: t.textoSuave, fontSize: 14, textDecorationLine: "underline" }}>Libro de Reclamaciones</Text>

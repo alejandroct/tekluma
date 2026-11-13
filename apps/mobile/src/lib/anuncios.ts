@@ -1,5 +1,14 @@
 import { Platform } from "react-native";
-import MobileAds, { AdEventType, InterstitialAd, RewardedAd, RewardedAdEventType, TestIds } from "react-native-google-mobile-ads";
+import MobileAds, {
+  AdEventType,
+  AdsConsent,
+  AdsConsentPrivacyOptionsRequirementStatus,
+  InterstitialAd,
+  RewardedAd,
+  RewardedAdEventType,
+  TestIds,
+} from "react-native-google-mobile-ads";
+import { getTrackingPermissionsAsync, PermissionStatus, requestTrackingPermissionsAsync } from "expo-tracking-transparency";
 import { acreditarAnuncioDePrueba, obtenerCupo, type TipoRecompensa } from "./cupo";
 import { guardarAjuste, leerAjuste } from "./db";
 
@@ -11,8 +20,37 @@ const ID_INTERSTICIAL = __DEV__
   ? TestIds.INTERSTITIAL
   : (Platform.select({ ios: process.env.EXPO_PUBLIC_ADMOB_INTERSTICIAL_IOS, android: process.env.EXPO_PUBLIC_ADMOB_INTERSTICIAL_ANDROID }) ?? TestIds.INTERSTITIAL);
 
-let iniciado: Promise<unknown> | null = null;
-export const iniciarAnuncios = () => (iniciado ??= MobileAds().initialize());
+let iniciado: Promise<boolean> | null = null;
+
+/**
+ * Antes del primer anuncio: el formulario de consentimiento de Google (UMP; solo aparece donde la ley lo
+ * exige, como la UE o el Reino Unido), luego el permiso de rastreo de iOS (ATT) y recién ahí el SDK.
+ * Devuelve false si no se pueden pedir anuncios. Si UMP falla, se intenta igual con lo que recuerde.
+ */
+async function prepararAnuncios() {
+  const consentimiento = await AdsConsent.gatherConsent().catch(() => AdsConsent.getConsentInfo());
+  if (Platform.OS === "ios") {
+    const { status } = await getTrackingPermissionsAsync();
+    if (status === PermissionStatus.UNDETERMINED) await requestTrackingPermissionsAsync().catch(() => {});
+  }
+  if (!consentimiento.canRequestAds) return false;
+  await MobileAds().initialize();
+  return true;
+}
+
+export const iniciarAnuncios = () => (iniciado ??= prepararAnuncios().catch(() => false));
+
+async function anunciosListos() {
+  if (!(await iniciarAnuncios())) throw new Error("Los anuncios no están disponibles con tus opciones de privacidad.");
+}
+
+/** Si el usuario está donde la ley exige poder cambiar su consentimiento (la UE, por ejemplo), Perfil muestra el enlace. */
+export async function hayOpcionesDePrivacidad() {
+  const info = await AdsConsent.getConsentInfo().catch(() => null);
+  return info?.privacyOptionsRequirementStatus === AdsConsentPrivacyOptionsRequirementStatus.REQUIRED;
+}
+
+export const mostrarOpcionesDePrivacidad = () => AdsConsent.showPrivacyOptionsForm();
 
 /**
  * Muestra un anuncio con recompensa: tarjetas extra para hoy o monedas. En producción AdMob
@@ -20,7 +58,7 @@ export const iniciarAnuncios = () => (iniciado ??= MobileAds().initialize());
  * Devuelve true si el usuario terminó el anuncio (quien llama debe refrescar su estado).
  */
 export async function verAnuncioConRecompensa(usuarioId: string, tipo: TipoRecompensa) {
-  await iniciarAnuncios();
+  await anunciosListos();
   const ganado = await new Promise<boolean>((resolve, reject) => {
     const anuncio = RewardedAd.createForAdRequest(ID_RECOMPENSA, {
       serverSideVerificationOptions: { userId: usuarioId, customData: tipo },
@@ -48,7 +86,7 @@ export async function intersticialAlTerminar(maxPorDia: number, premium: boolean
   const vistos = registro?.dia === hoy ? registro.vistos : 0;
   if (vistos >= maxPorDia) return;
 
-  await iniciarAnuncios();
+  if (!(await iniciarAnuncios())) return;
   const anuncio = InterstitialAd.createForAdRequest(ID_INTERSTICIAL);
   anuncio.addAdEventListener(AdEventType.LOADED, () => {
     guardarAjuste("intersticiales", { dia: hoy, vistos: vistos + 1 });

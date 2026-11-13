@@ -117,11 +117,20 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 - [x] **(código)** Libro de Reclamaciones virtual: formulario en `/reclamaciones` (enlazado en el pie de la web y en Perfil de la app),
       hoja con número correlativo, constancia por correo al consumidor y copia a `hola@tekluma.app`, plazo de 15 días hábiles,
       y vista «Reclamos» en el panel (solo administradores) para responder.
-- [ ] **(código)** Recordatorio diario de la pregunta del día (notificación local; el usuario elige la hora y puede apagarlo).
+- [x] **(código)** Recordatorio diario de la pregunta del día (notificación local; el usuario elige la hora y puede apagarlo),
+      con tutorial de inicio de 4 pantallas antes del login.
+- [x] **(código)** Consentimiento de anuncios de Google (UMP) y permiso de rastreo de iOS (ATT) antes del primer anuncio;
+      enlace «Privacidad de los anuncios» en Perfil donde la ley lo exige. Manifiesto de privacidad de iOS.
+- [ ] **(tú)** En AdMob → **Privacidad y mensajes**: crear el mensaje de **GDPR** y el **mensaje explicativo de IDFA** (iOS),
+      en español. Sin ellos la app usa los textos de prueba de Google.
 - [ ] **(código)** Métricas propias del embudo (instala → primera tarjeta → vuelve al día siguiente → Premium), sin terceros.
 - [ ] **(código)** Registro de errores con Sentry (queda listo; se activa cuando crees el proyecto y me pases el DSN, que no es secreto).
 - [ ] **(código)** Una página web por artículo de la norma (`/normas/e060/21.6.4/`) para que Google las indexe: es el canal gratuito de usuarios.
-- [ ] **(código)** Configuración de compilación con EAS (`eas.json`), íconos y pantallas de arranque finales, número de versión.
+- [x] **(código)** Configuración de compilación con EAS (`apps/mobile/eas.json`: perfiles development, preview y production;
+      el número de compilación lo lleva EAS y sube solo). Íconos y splash ya están.
+- [ ] **(tú)** Crear una cuenta en <https://expo.dev> (a nombre de la empresa) y, en `apps/mobile`, correr `npx eas-cli@latest login`
+      y `npx eas-cli@latest init` para vincular el proyecto. Luego cargar en EAS las variables `EXPO_PUBLIC_ADMOB_*`
+      y `EXPO_PUBLIC_REVENUECAT_*` del perfil production, y los ID de app de AdMob en `app.json`.
 - [ ] **(código)** Textos de las tiendas (nombre, subtítulo, descripción, palabras clave) y capturas desde el simulador.
 
 ### 8. Producción **(tú da el visto bueno)**

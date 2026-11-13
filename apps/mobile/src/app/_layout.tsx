@@ -27,10 +27,14 @@ export default function RootLayout() {
   const conNombre = !!sesion?.user.name;
 
   useEffect(() => {
-    iniciarAnuncios().catch(() => {});
     iniciarSonidos();
     iniciarNotificaciones();
   }, []);
+
+  // Consentimiento y permiso de rastreo recién cuando el usuario ya está dentro, no en el tutorial ni en el login.
+  useEffect(() => {
+    if (conNombre) iniciarAnuncios().catch(() => {});
+  }, [conNombre]);
 
   // Tocar el recordatorio abre su ruta (la pregunta del día) si ya se puede entrar a la app.
   const respuesta = Notifications.useLastNotificationResponse();
