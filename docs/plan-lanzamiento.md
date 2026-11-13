@@ -130,14 +130,15 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 - [ ] **(tú)** Crear la cuenta gratuita en <https://sentry.io> (región EE. UU.) con dos proyectos: `tekluma-app` (React Native)
       y `tekluma-api` (Node.js). En cada proyecto → Settings → Security & Privacy, activar **«Prevent Storing of IP Addresses»**.
       Hecho: proyectos creados, privacidad configurada, `SentryDsn` cargado en producción y el DSN de la app en `eas.json`.
-- [ ] **(tú)** Cuando exista la cuenta de Expo: crear en Sentry un token (Settings → Developer Settings → Organization Tokens)
-      y cargarlo en EAS como variable secreta `SENTRY_AUTH_TOKEN`, para ver el código original en los errores de la app.
+- [x] Token de Sentry cargado en EAS como variable secreta `SENTRY_AUTH_TOKEN` (production y preview).
 - [ ] **(código)** Una página web por artículo de la norma (`/normas/e060/21.6.4/`) para que Google las indexe: es el canal gratuito de usuarios.
 - [x] **(código)** Configuración de compilación con EAS (`apps/mobile/eas.json`: perfiles development, preview y production;
       el número de compilación lo lleva EAS y sube solo). Íconos y splash ya están.
-- [ ] **(tú)** Crear una cuenta en <https://expo.dev> (a nombre de la empresa) y, en `apps/mobile`, correr `npx eas-cli@latest login`
-      y `npx eas-cli@latest init` para vincular el proyecto. Luego cargar en EAS las variables `EXPO_PUBLIC_ADMOB_*`
-      y `EXPO_PUBLIC_REVENUECAT_*` del perfil production, y los ID de app de AdMob en `app.json`.
+- [x] Cuenta de Expo (organización `dcc-ingenieria-y-construccion`), proyecto vinculado (`@dcc-ingenieria-y-construccion/tekluma`)
+      y EAS Update con canales `development`, `preview` y `production`. Permisos limpios: sin micrófono, sin audio en segundo plano
+      ni almacenamiento.
+- [ ] **(tú, cuando existan)** Cargar en EAS las variables `EXPO_PUBLIC_ADMOB_*` y `EXPO_PUBLIC_REVENUECAT_*` del entorno production,
+      y los ID de app reales de AdMob en `app.json`. Los certificados de iOS y la llave de Android los crea EAS en la primera compilación.
 - [x] **(código)** Textos de las tiendas (nombre, subtítulo, descripción, palabras clave) y capturas desde el simulador
       (`docs/fichas-tiendas.md` y `docs/tiendas/`).
 
