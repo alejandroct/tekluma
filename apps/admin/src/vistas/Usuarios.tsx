@@ -1,9 +1,9 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { DIVISIONES, NOMBRES_PROFESION, REGIONES, UNIVERSIDADES, type Profession } from "@tekluma/shared";
-import { api, type FichaUsuario, type ListaUsuarios } from "../api";
+import { api, type AccionSoporte, type FichaUsuario, type ListaUsuarios } from "../api";
 import { MOTIVOS_MONEDAS, ROLES } from "../etiquetas";
 import { IconoBuscar } from "../iconos";
-import { Aviso, EncabezadoPagina, Vacio } from "../ui";
+import { Aviso, confirmar, EncabezadoPagina, Vacio } from "../ui";
 import { Barras, Cifra, numero, porcentaje } from "./graficos";
 
 const fecha = (iso: string) => new Date(iso).toLocaleDateString("es-PE", { timeZone: "America/Lima", day: "2-digit", month: "short", year: "numeric" });
@@ -34,6 +34,8 @@ export function Usuarios() {
   const [lista, setLista] = useState<ListaUsuarios | null>(null);
   const [elegido, setElegido] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Bumped after a support action so the list shows the new coins and plan.
+  const [version, setVersion] = useState(0);
 
   // Searches after a short pause while typing.
   useEffect(() => {
@@ -47,7 +49,7 @@ export function Usuarios() {
   useEffect(() => {
     const p = new URLSearchParams({ orden, filtro, pagina: String(pagina), ...(q.trim() ? { q: q.trim() } : {}) });
     api<ListaUsuarios>(`/editorial/usuarios?${p}`).then(setLista, (e) => setError((e as Error).message));
-  }, [q, orden, filtro, pagina]);
+  }, [q, orden, filtro, pagina, version]);
 
   const paginas = lista ? Math.max(1, Math.ceil(lista.total / lista.porPagina)) : 1;
 
@@ -142,7 +144,7 @@ export function Usuarios() {
         </section>
 
         {elegido ? (
-          <Ficha id={elegido} />
+          <Ficha id={elegido} onCambio={() => setVersion((v) => v + 1)} />
         ) : (
           <section className="panel">
             <Vacio>Elige un usuario para ver su ficha.</Vacio>
@@ -153,14 +155,15 @@ export function Usuarios() {
   );
 }
 
-function Ficha({ id }: { id: string }) {
+function Ficha({ id, onCambio }: { id: string; onCambio: () => void }) {
   const [f, setF] = useState<FichaUsuario | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const cargar = useCallback(() => api<FichaUsuario>(`/editorial/usuarios/${id}`).then(setF, (e) => setError((e as Error).message)), [id]);
   useEffect(() => {
     setF(null);
     setError(null);
-    api<FichaUsuario>(`/editorial/usuarios/${id}`).then(setF, (e) => setError((e as Error).message));
-  }, [id]);
+    void cargar();
+  }, [cargar]);
 
   if (error)
     return (
@@ -255,6 +258,14 @@ function Ficha({ id }: { id: string }) {
           </div>
         </div>
 
+        <AccionesSoporte
+          f={f}
+          onHecho={() => {
+            void cargar();
+            onCambio();
+          }}
+        />
+
         <div className="texto-reclamo">
           <span className="rotulo">Movimientos de monedas</span>
           {f.movimientos.length === 0 ? (
@@ -277,5 +288,143 @@ function Ficha({ id }: { id: string }) {
         </div>
       </div>
     </section>
+  );
+}
+
+type Accion = "dar_monedas" | "quitar_monedas" | "premium" | "quitar_premium";
+const DURACIONES = [7, 30, 90, 365];
+
+/** Coins and Premium by hand, for support. Each action asks for a reason and is logged. */
+function AccionesSoporte({ f, onHecho }: { f: FichaUsuario; onHecho: () => void }) {
+  const premium = esPremium(f.usuario.premiumUntil);
+  const [accion, setAccion] = useState<Accion>("dar_monedas");
+  const [cantidad, setCantidad] = useState(50);
+  const [dias, setDias] = useState(30);
+  const [nota, setNota] = useState("");
+  const [estado, setEstado] = useState<{ tono: "ok" | "error"; texto: string } | null>(null);
+  const [enviando, setEnviando] = useState(false);
+  const nombre = f.usuario.name || f.usuario.email;
+
+  const aplicar = async (e: FormEvent) => {
+    e.preventDefault();
+    const pedidos: Record<Accion, { titulo: string; mensaje: string; ruta: string; body: object; peligro?: boolean }> = {
+      dar_monedas: {
+        titulo: `Dar ${cantidad} monedas`,
+        mensaje: `${nombre} pasará de ${f.monedas} a ${f.monedas + cantidad} monedas.`,
+        ruta: "monedas",
+        body: { monto: cantidad, nota },
+      },
+      quitar_monedas: {
+        titulo: `Quitar ${cantidad} monedas`,
+        mensaje: `${nombre} pasará de ${f.monedas} a ${f.monedas - cantidad} monedas.`,
+        ruta: "monedas",
+        body: { monto: -cantidad, nota },
+        peligro: true,
+      },
+      premium: {
+        titulo: `Dar ${dias} días de Premium`,
+        mensaje: premium
+          ? `Se suman a su Premium actual, que vence el ${fecha(f.usuario.premiumUntil!)}.`
+          : `${nombre} tendrá Premium desde hoy. No se le cobra nada y no se renueva solo.`,
+        ruta: "premium",
+        body: { dias, nota },
+      },
+      quitar_premium: {
+        titulo: "Quitar el Premium regalado",
+        mensaje: "Solo se quita el Premium dado desde el panel. Si pagó una suscripción en la tienda, esa sigue activa.",
+        ruta: "premium/quitar",
+        body: { nota },
+        peligro: true,
+      },
+    };
+    const p = pedidos[accion];
+    if (!(await confirmar({ titulo: p.titulo, mensaje: p.mensaje, accion: "Confirmar", peligro: p.peligro }))) return;
+    setEnviando(true);
+    setEstado(null);
+    try {
+      await api(`/editorial/usuarios/${f.usuario.id}/${p.ruta}`, { body: p.body });
+      setNota("");
+      setEstado({ tono: "ok", texto: `${p.titulo}: listo.` });
+      onHecho();
+    } catch (err) {
+      setEstado({ tono: "error", texto: (err as Error).message });
+    } finally {
+      setEnviando(false);
+    }
+  };
+
+  return (
+    <div className="texto-reclamo">
+      <span className="rotulo">Soporte</span>
+      <form className="soporte" onSubmit={aplicar}>
+        <div className="fila-form">
+          <label className="campo">
+            <span>Acción</span>
+            <select value={accion} onChange={(e) => setAccion(e.target.value as Accion)}>
+              <option value="dar_monedas">Dar monedas</option>
+              <option value="quitar_monedas">Quitar monedas</option>
+              <option value="premium">Dar Premium</option>
+              {premium && <option value="quitar_premium">Quitar Premium regalado</option>}
+            </select>
+          </label>
+          {(accion === "dar_monedas" || accion === "quitar_monedas") && (
+            <label className="campo corto">
+              <span>Monedas</span>
+              <input type="number" min={1} max={10000} value={cantidad} onChange={(e) => setCantidad(Math.max(1, Math.floor(Number(e.target.value) || 1)))} />
+            </label>
+          )}
+          {accion === "premium" && (
+            <label className="campo corto">
+              <span>Duración</span>
+              <select value={dias} onChange={(e) => setDias(Number(e.target.value))}>
+                {DURACIONES.map((d) => (
+                  <option key={d} value={d}>
+                    {d} días
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
+        </div>
+        <label className="campo">
+          <span>Motivo (queda en la bitácora)</span>
+          <input value={nota} onChange={(e) => setNota(e.target.value)} minLength={3} maxLength={300} required placeholder="Ej.: compensación por el pago que no se activó (reclamo 000001-2026)" />
+        </label>
+        <div>
+          <button className="boton primario" disabled={enviando || nota.trim().length < 3}>
+            {enviando ? "Aplicando…" : "Aplicar"}
+          </button>
+        </div>
+      </form>
+      {estado && <Aviso tono={estado.tono}>{estado.texto}</Aviso>}
+      {f.soporte.length > 0 && <Historial acciones={f.soporte} />}
+    </div>
+  );
+}
+
+function Historial({ acciones }: { acciones: AccionSoporte[] }) {
+  const texto = (a: AccionSoporte) =>
+    a.kind === "monedas"
+      ? `${a.coins! > 0 ? "+" : "−"}${Math.abs(a.coins!)} monedas`
+      : a.kind === "premium"
+        ? `Premium hasta el ${fecha(a.premiumUntil!)}`
+        : "Quitó el Premium regalado";
+  return (
+    <div className="tabla-envoltura">
+      <table>
+        <tbody>
+          {acciones.map((a) => (
+            <tr key={a.id}>
+              <td className="nowrap">{fechaHora(a.createdAt)}</td>
+              <td className="nowrap">{texto(a)}</td>
+              <td>
+                {a.note}
+                <span className="nota"> · {a.staff || a.staffEmail || "—"}</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

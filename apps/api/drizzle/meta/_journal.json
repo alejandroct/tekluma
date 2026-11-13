@@ -43,6 +43,13 @@
       "when": 1794524238190,
       "tag": "0005_libro_reclamaciones",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1794600889024,
+      "tag": "0006_soporte",
+      "breakpoints": true
     }
   ]
 }

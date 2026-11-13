@@ -14,6 +14,7 @@ import { compararNumeros } from "../util";
 import { importar, ImportacionError } from "../importacion";
 import { codigoHoja, listarReclamos, ReclamoError, reenviarConstancia, responderReclamo } from "../reclamos";
 import { fichaUsuario, FILTROS, listarUsuarios, metricasGenerales, ORDENES } from "../metricas";
+import { ajustarMonedas, darPremium, historialSoporte, quitarPremium, SoporteError } from "../soporte";
 
 type StaffVars = { Variables: { usuarioId: string; rol: StaffRole } };
 
@@ -40,6 +41,18 @@ const requiereStaff = (...roles: StaffRole[]) =>
     c.set("rol", rol);
     return next();
   });
+
+const notaSoporte = z.string().trim().min(3, "Escribe el motivo (queda en la bitácora)").max(300, "Máximo 300 caracteres");
+
+/** Turns support errors (user not found, balance too low) into HTTP errors. */
+async function soporte<T>(accion: () => Promise<T>) {
+  try {
+    return await accion();
+  } catch (e) {
+    if (e instanceof SoporteError) throw new HTTPException(e.status, { message: e.message });
+    throw e;
+  }
+}
 
 const nombreSchema = z.string().trim().min(2, "Escribe al menos 2 caracteres").max(80, "Máximo 80 caracteres");
 
@@ -451,5 +464,45 @@ export const editorial = new Hono<StaffVars>()
   .get("/usuarios/:id", requiereStaff("admin"), zValidator("param", z.object({ id: z.uuid() })), async (c) => {
     const ficha = await fichaUsuario(c.req.valid("param").id);
     if (!ficha) throw new HTTPException(404, { message: "Usuario no encontrado" });
-    return c.json(ficha);
-  });
+    return c.json({ ...ficha, soporte: await historialSoporte(ficha.usuario.id) });
+  })
+
+  // Support actions: every one needs a reason, which stays in the user's log.
+  .post(
+    "/usuarios/:id/monedas",
+    requiereStaff("admin"),
+    zValidator("param", z.object({ id: z.uuid() })),
+    zValidator(
+      "json",
+      z.object({
+        monto: z.number().int().min(-10_000).max(10_000).refine((n) => n !== 0, "El monto no puede ser 0"),
+        nota: notaSoporte,
+      }),
+    ),
+    async (c) => {
+      const { monto, nota } = c.req.valid("json");
+      return c.json(await soporte(() => ajustarMonedas(c.req.valid("param").id, c.get("usuarioId"), monto, nota)));
+    },
+  )
+
+  .post(
+    "/usuarios/:id/premium",
+    requiereStaff("admin"),
+    zValidator("param", z.object({ id: z.uuid() })),
+    zValidator("json", z.object({ dias: z.number().int().min(1).max(366), nota: notaSoporte })),
+    async (c) => {
+      const { dias, nota } = c.req.valid("json");
+      return c.json(await soporte(() => darPremium(c.req.valid("param").id, c.get("usuarioId"), dias, nota)));
+    },
+  )
+
+  .post(
+    "/usuarios/:id/premium/quitar",
+    requiereStaff("admin"),
+    zValidator("param", z.object({ id: z.uuid() })),
+    zValidator("json", z.object({ nota: notaSoporte })),
+    async (c) => {
+      await soporte(() => quitarPremium(c.req.valid("param").id, c.get("usuarioId"), c.req.valid("json").nota));
+      return c.json({ ok: true });
+    },
+  );

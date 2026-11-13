@@ -34,6 +34,34 @@ export async function sincronizarPremium(userId: string) {
   return true;
 }
 
+/**
+ * Premium given by support. With RevenueCat it is a promotional entitlement (so the store
+ * state and the app agree, and a later sync does not erase it); without it, only the database.
+ */
+export async function darPremiumPromocional(userId: string, hasta: Date) {
+  const clave = process.env.REVENUECAT_SECRET_KEY;
+  if (!clave) return guardarVencimiento(userId, hasta);
+  const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(userId)}/entitlements/${ENTITLEMENT}/promotional`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${clave}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ end_time_ms: hasta.getTime() }),
+  });
+  if (!res.ok) throw new Error(`RevenueCat respondió ${res.status}`);
+  await sincronizarPremium(userId);
+}
+
+/** Removes only what support gave: a store subscription the user paid for stays active. */
+export async function quitarPremiumPromocional(userId: string) {
+  const clave = process.env.REVENUECAT_SECRET_KEY;
+  if (!clave) return guardarVencimiento(userId, null);
+  const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(userId)}/entitlements/${ENTITLEMENT}/revoke_promotionals`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${clave}` },
+  });
+  if (!res.ok) throw new Error(`RevenueCat respondió ${res.status}`);
+  await sincronizarPremium(userId);
+}
+
 /** RevenueCat sends the value configured in its dashboard as the Authorization header. */
 export function webhookAutorizado(header: string | undefined) {
   const secreto = process.env.REVENUECAT_WEBHOOK_SECRET;

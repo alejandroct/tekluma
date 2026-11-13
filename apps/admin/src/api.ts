@@ -161,4 +161,15 @@ export type FichaUsuario = {
   };
   movimientos: { fecha: string; monto: number; motivo: string }[];
   serie: { dia: string; tarjetas: number; activo: boolean }[];
+  soporte: AccionSoporte[];
+};
+export type AccionSoporte = {
+  id: string;
+  kind: "monedas" | "premium" | "quitar_premium";
+  coins: number | null;
+  premiumUntil: string | null;
+  note: string;
+  createdAt: string;
+  staff: string | null;
+  staffEmail: string | null;
 };

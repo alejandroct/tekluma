@@ -429,3 +429,23 @@ export const complaints = pgTable(
   },
   (t) => [index("complaints_created_idx").on(t.createdAt)],
 );
+
+// ───────────── Support actions (admin panel) ─────────────
+
+/** Audit log of what an admin gave or removed from a user by hand (coins, Premium). */
+export const supportActions = pgTable(
+  "support_actions",
+  {
+    id: id(),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    staffId: uuid("staff_id").references(() => users.id, { onDelete: "set null" }),
+    kind: text("kind").$type<"monedas" | "premium" | "quitar_premium">().notNull(),
+    /** Coins given (negative = removed). */
+    coins: integer("coins"),
+    /** Premium granted until this moment. */
+    premiumUntil: timestamp("premium_until", { withTimezone: true }),
+    note: text("note").notNull(),
+    createdAt: createdAt(),
+  },
+  (t) => [index("support_actions_user_idx").on(t.userId)],
+);
