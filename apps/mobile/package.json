@@ -50,7 +50,8 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "iphone": "LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 TEKLUMA_PRUEBA=1 EXPO_PUBLIC_API_URL=https://api.tekluma.app SENTRY_DISABLE_AUTO_UPLOAD=true sh -c 'expo prebuild -p ios --clean && expo run:ios --device --configuration Release'"
   },
   "private": true
 }
