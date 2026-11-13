@@ -23,6 +23,10 @@ declare module "sst" {
       "type": "sst.aws.Router"
       "url": string
     }
+    "AvisosCorreo": {
+      "arn": string
+      "type": "sst.aws.SnsTopic"
+    }
     "BetterAuthSecret": {
       "type": "sst.sst.Secret"
       "value": string
