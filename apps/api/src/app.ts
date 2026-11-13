@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
+import { HTTPException } from "hono/http-exception";
 import { auth, origenesWeb } from "./auth";
 import { catalogo } from "./routes/catalogo";
 import { cuenta } from "./routes/cuenta";
@@ -13,6 +14,7 @@ import { mazosRoutes } from "./routes/mazos";
 import { reclamos } from "./routes/reclamos";
 import { repasos } from "./routes/repasos";
 import { webhooks } from "./routes/webhooks";
+import { reportarError } from "./sentry";
 
 export const app = new Hono()
   .use(logger())
@@ -30,6 +32,15 @@ export const app = new Hono()
   .route("/editorial", editorial)
   .route("/reclamos", reclamos)
   .route("/repasos", repasos)
-  .route("/webhooks", webhooks);
+  .route("/webhooks", webhooks)
+  // Expected errors (4xx with a message) go back as they are; anything else is a bug: report it.
+  .onError((error, c) => {
+    if (error instanceof HTTPException) return error.getResponse();
+    console.error(error);
+    // The auth middlewares leave the user's id in `usuarioId`.
+    const { usuarioId } = c.var as { usuarioId?: string };
+    reportarError(error, { metodo: c.req.method, ruta: c.req.routePath, usuarioId });
+    return c.json({ message: "Algo salió mal. Ya nos llegó el aviso del error." }, 500);
+  });
 
 export type AppType = typeof app;

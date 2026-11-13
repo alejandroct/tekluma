@@ -9,6 +9,7 @@ import { Arranque } from "@/components/Arranque";
 import { iniciarAnuncios } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { iniciarCompras } from "@/lib/compras";
+import { conErrores, usuarioDeErrores } from "@/lib/errores";
 import { iniciarNotificaciones } from "@/lib/recordatorio";
 import { iniciarSonidos } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
@@ -17,7 +18,7 @@ import { useTutorialVisto } from "@/lib/tutorial";
 // El splash nativo se queda hasta saber si hay sesión; luego lo continúa <Arranque />.
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
-export default function RootLayout() {
+function RootLayout() {
   const t = useTema();
   const { data: sesion, isPending } = authClient.useSession();
   const [fuentesListas] = useFonts({ IBMPlexMono_500Medium, IBMPlexMono_600SemiBold });
@@ -52,6 +53,7 @@ export default function RootLayout() {
   // Las compras quedan a nombre del usuario de Tekluma (mismo id en RevenueCat y en la API).
   const usuarioId = sesion?.user.id;
   useEffect(() => {
+    usuarioDeErrores(usuarioId ?? null);
     if (usuarioId) iniciarCompras(usuarioId).catch(() => {});
   }, [usuarioId]);
 
@@ -104,3 +106,5 @@ export default function RootLayout() {
     </>
   );
 }
+
+export default conErrores(RootLayout);

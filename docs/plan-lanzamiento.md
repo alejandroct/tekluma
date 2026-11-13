@@ -124,14 +124,21 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 - [ ] **(tú)** En AdMob → **Privacidad y mensajes**: crear el mensaje de **GDPR** y el **mensaje explicativo de IDFA** (iOS),
       en español. Sin ellos la app usa los textos de prueba de Google.
 - [ ] **(código)** Métricas propias del embudo (instala → primera tarjeta → vuelve al día siguiente → Premium), sin terceros.
-- [ ] **(código)** Registro de errores con Sentry (queda listo; se activa cuando crees el proyecto y me pases el DSN, que no es secreto).
+- [x] **(código)** Registro de errores con Sentry en la app y en la API, sin datos personales (solo el id interno del usuario).
+      Declarado en `/privacidad` y en `docs/fichas-tiendas.md`.
+- [ ] **(tú)** Crear la cuenta gratuita en <https://sentry.io> (región EE. UU.) con dos proyectos: `tekluma-app` (React Native)
+      y `tekluma-api` (Node.js). En cada proyecto → Settings → Security & Privacy, activar **«Prevent Storing of IP Addresses»**.
+      Luego: `npx sst secret set SentryDsn <DSN de tekluma-api> --stage produccion` (y desplegar); en EAS, la variable
+      `EXPO_PUBLIC_SENTRY_DSN` (DSN de tekluma-app) y, para ver el código original en los errores, `SENTRY_AUTH_TOKEN`
+      (secreto), `SENTRY_ORG` y `SENTRY_PROJECT=tekluma-app`.
 - [ ] **(código)** Una página web por artículo de la norma (`/normas/e060/21.6.4/`) para que Google las indexe: es el canal gratuito de usuarios.
 - [x] **(código)** Configuración de compilación con EAS (`apps/mobile/eas.json`: perfiles development, preview y production;
       el número de compilación lo lleva EAS y sube solo). Íconos y splash ya están.
 - [ ] **(tú)** Crear una cuenta en <https://expo.dev> (a nombre de la empresa) y, en `apps/mobile`, correr `npx eas-cli@latest login`
       y `npx eas-cli@latest init` para vincular el proyecto. Luego cargar en EAS las variables `EXPO_PUBLIC_ADMOB_*`
       y `EXPO_PUBLIC_REVENUECAT_*` del perfil production, y los ID de app de AdMob en `app.json`.
-- [ ] **(código)** Textos de las tiendas (nombre, subtítulo, descripción, palabras clave) y capturas desde el simulador.
+- [x] **(código)** Textos de las tiendas (nombre, subtítulo, descripción, palabras clave) y capturas desde el simulador
+      (`docs/fichas-tiendas.md` y `docs/tiendas/`).
 
 ### 8. Producción **(tú da el visto bueno)**
 - [x] **Desplegado el 12/11/2026**: `tekluma.app`, `api.tekluma.app`, `admin.tekluma.app`; migraciones aplicadas y SES con `tekluma.app`

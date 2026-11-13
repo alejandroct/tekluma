@@ -5,6 +5,7 @@
   "dependencies": {
     "@better-auth/expo": "1.7.18",
     "@expo-google-fonts/ibm-plex-mono": "^0.4.1",
+    "@sentry/react-native": "~8.28.0",
     "@tekluma/shared": "workspace:*",
     "better-auth": "1.7.18",
     "expo": "~58.0.25",

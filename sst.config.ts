@@ -47,12 +47,15 @@ export default $config({
       // Cuenta de los revisores de las tiendas: ese correo entra siempre con CodigoRevision (6 dígitos).
       CUENTA_REVISION: new sst.Secret("CuentaRevision", ""),
       CODIGO_REVISION: new sst.Secret("CodigoRevision", ""),
+      // Registro de errores de la API (vacío = desactivado).
+      SENTRY_DSN: new sst.Secret("SentryDsn", ""),
     };
     const environment = {
       // Fuera de producción quedan habilitadas las rutas de prueba (p. ej. /cupo/anuncio-prueba).
       NODE_ENV: produccion ? "production" : "development",
       BETTER_AUTH_URL: `https://api.${dominio}`,
       CORREO_PROVEEDOR: "ses",
+      SENTRY_ENTORNO: produccion ? "produccion" : $app.stage,
       ADMIN_URL: `https://admin.${dominio}`,
       WEB_URL: `https://${dominio}`,
       COOKIE_DOMAIN: dominio,

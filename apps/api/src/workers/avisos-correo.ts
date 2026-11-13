@@ -1,3 +1,4 @@
+import { conSentry } from "../sentry";
 import type { SNSHandler } from "aws-lambda";
 import { enviarCorreo } from "../correo";
 
@@ -16,7 +17,7 @@ type EventoSes = {
 const DESTINO = process.env.CORREO_AVISOS ?? "hola@tekluma.app";
 
 /** Turns each SES bounce or complaint into a readable email: AWS suspends accounts with high rates. */
-export const handler: SNSHandler = async (evento) => {
+export const handler: SNSHandler = conSentry(async (evento) => {
   for (const registro of evento.Records) {
     const e = JSON.parse(registro.Sns.Message) as EventoSes;
     const asuntoOriginal = e.mail.commonHeaders?.subject ?? "(sin asunto)";
@@ -48,4 +49,4 @@ export const handler: SNSHandler = async (evento) => {
       [...detalle, "", `Correo original: «${asuntoOriginal}»`, `Enviado: ${e.mail.timestamp}`, `Destino: ${e.mail.destination.join(", ")}`].join("\n"),
     );
   }
-};
+});

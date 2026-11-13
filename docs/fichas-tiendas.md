@@ -107,6 +107,7 @@ Para eliminar la cuenta: Perfil → «Eliminar mi cuenta».
 | Uso → Interacción con el producto (progreso de estudio) | Funcionalidad de la app | Sí | No |
 | Uso → Datos de publicidad | Publicidad de terceros | No | Sí |
 | Ubicación → Aproximada (la deduce AdMob por la IP) | Publicidad de terceros | No | Sí |
+| Diagnóstico → Datos de fallos (Sentry) | Funcionalidad de la app | Sí (solo el id interno) | No |
 
 ---
 
@@ -150,6 +151,7 @@ Tekluma es gratis, con un cupo diario de tarjetas que puedes ampliar con monedas
 | Historial de compras | Sí | No | Funcionalidad | No |
 | Interacción con la app (progreso) | Sí | No | Funcionalidad, analítica | No |
 | Ubicación aproximada | Sí | Sí (Google AdMob) | Publicidad | No |
+| Registros de fallos y diagnóstico (Sentry) | Sí | No (Sentry trata los datos por encargo) | Funcionalidad, analítica | No |
 
 ---
 
@@ -164,4 +166,4 @@ Tekluma es gratis, con un cupo diario de tarjetas que puedes ampliar con monedas
       de iPad de 13″ y revisa que el diseño se vea bien en tableta. Recomendado para el lanzamiento: solo iPhone.
 - [ ] **(tú)** Cargar los productos de suscripción en ambas tiendas con los mismos nombres y precios que en `premium.tsx`.
 
-Si más adelante se agrega el registro de errores (Sentry), sumar «Diagnóstico → Datos de fallos» en ambas tiendas.
+El registro de errores (Sentry) ya está declarado arriba en ambas tiendas.
