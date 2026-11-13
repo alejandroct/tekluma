@@ -112,7 +112,13 @@
         }
       ],
       "expo-status-bar",
-      "@sentry/react-native"
+      [
+        "@sentry/react-native",
+        {
+          "organization": "dcc-ingenieria-y-construccion",
+          "project": "tekluma-app"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
