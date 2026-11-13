@@ -1,18 +1,20 @@
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { api, auth, ErrorApi, type Yo } from "./api";
 import { ROLES } from "./etiquetas";
-import { IconoCandado, IconoEditar, IconoEquipo, IconoImportar, IconoMazo, IconoNorma, IconoReclamos, IconoSalir } from "./iconos";
+import { IconoCandado, IconoEditar, IconoEquipo, IconoImportar, IconoMazo, IconoMetricas, IconoNorma, IconoReclamos, IconoSalir, IconoUsuarios } from "./iconos";
 import { Dialogo, Logo, pedir } from "./ui";
 import { Equipo } from "./vistas/Equipo";
 import { Importar } from "./vistas/Importar";
 import { Login } from "./vistas/Login";
+import { Metricas } from "./vistas/Metricas";
 import { Mazos } from "./vistas/Mazos";
 import { Normas } from "./vistas/Normas";
 import { Reclamos } from "./vistas/Reclamos";
+import { Usuarios } from "./vistas/Usuarios";
 import "./App.css";
 
 type Sesion = { tipo: "cargando" } | { tipo: "anonimo" } | { tipo: "sin-acceso"; mensaje: string } | { tipo: "staff"; yo: Yo };
-type Vista = "mazos" | "normas" | "equipo" | "importar" | "reclamos";
+type Vista = "mazos" | "normas" | "equipo" | "importar" | "reclamos" | "metricas" | "usuarios";
 
 const NAV: { vista: Vista; etiqueta: string; icono: ReactNode }[] = [
   { vista: "mazos", etiqueta: "Mazos", icono: <IconoMazo /> },
@@ -93,6 +95,8 @@ export default function App() {
     { vista: "importar", etiqueta: "Importar", icono: <IconoImportar /> },
     { vista: "equipo", etiqueta: "Equipo", icono: <IconoEquipo /> },
     { vista: "reclamos", etiqueta: "Reclamos", icono: <IconoReclamos /> },
+    { vista: "metricas", etiqueta: "Métricas", icono: <IconoMetricas /> },
+    { vista: "usuarios", etiqueta: "Usuarios", icono: <IconoUsuarios /> },
   ];
   const enlaces = yo.rol === "admin" ? [...NAV, ...admin] : NAV;
 
@@ -145,6 +149,8 @@ export default function App() {
           {vista === "equipo" && <Equipo />}
           {vista === "importar" && <Importar />}
           {vista === "reclamos" && <Reclamos />}
+          {vista === "metricas" && <Metricas />}
+          {vista === "usuarios" && <Usuarios />}
         </div>
       </div>
     </div>

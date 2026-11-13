@@ -97,3 +97,68 @@ export type Reclamo = {
   respondedAt: string | null;
   createdAt: string;
 };
+
+export type Metricas = {
+  hoy: string;
+  totales: Record<
+    | "usuarios" | "conPerfil" | "premium" | "nuevosHoy" | "nuevos7" | "nuevos30" | "activosHoy" | "activos7" | "activos30"
+    | "tarjetasHoy" | "tarjetas7" | "diariaHoy" | "diariaAciertosHoy" | "duelos7" | "partidas7" | "anuncios7" | "monedasEnCirculacion",
+    number
+  >;
+  serie: { dia: string; nuevos: number; activos: number; tarjetas: number }[];
+  retencion: { cohorte: number; d1: number; d7: number };
+  monedas: { motivo: string; ganadas: number; gastadas: number; movimientos: number }[];
+  profesiones: { valor: string | null; usuarios: number }[];
+  regiones: { valor: string | null; usuarios: number }[];
+  universidades: { valor: string | null; usuarios: number }[];
+};
+
+export type FilaUsuario = {
+  id: string;
+  email: string;
+  name: string;
+  profession: string | null;
+  university: string | null;
+  region: string | null;
+  createdAt: string;
+  premiumUntil: string | null;
+  staffRole: StaffRole | null;
+  monedas: number;
+  tarjetas: number;
+  puntos: number;
+  ultima: string | null;
+};
+export type ListaUsuarios = { usuarios: FilaUsuario[]; total: number; pagina: number; porPagina: number };
+
+export type FichaUsuario = {
+  usuario: {
+    id: string;
+    email: string;
+    name: string;
+    emailVerified: boolean;
+    profession: string | null;
+    university: string | null;
+    region: string | null;
+    staffRole: StaffRole | null;
+    premiumUntil: string | null;
+    createdAt: string;
+  };
+  acceso: { proveedores: string[]; ultimaSesion: string | null; plataforma: string | null; sesionesAbiertas: number };
+  monedas: number;
+  racha: number;
+  cupoHoy: { limite: number; usadas: number; anuncios: number };
+  progreso: { tarjetas: number; dominadas: number; aprendiendo: number; pendientes: number; repasos: number; olvidos: number; ultimoRepaso: string | null };
+  mazos: { mazo: string; tarjetas: number; dominadas: number }[];
+  juego: {
+    diariaJugadas: number;
+    diariaAciertos: number;
+    duelosCreados: number;
+    duelosJugados: number;
+    puntosTotal: number;
+    puntosSemana: number;
+    division: string | null;
+    anuncios: number;
+  };
+  movimientos: { fecha: string; monto: number; motivo: string }[];
+  serie: { dia: string; tarjetas: number; activo: boolean }[];
+};

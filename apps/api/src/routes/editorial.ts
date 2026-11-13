@@ -13,6 +13,7 @@ import { eliminarMazo, eliminarNorma } from "../eliminacion";
 import { compararNumeros } from "../util";
 import { importar, ImportacionError } from "../importacion";
 import { codigoHoja, listarReclamos, ReclamoError, reenviarConstancia, responderReclamo } from "../reclamos";
+import { fichaUsuario, FILTROS, listarUsuarios, metricasGenerales, ORDENES } from "../metricas";
 
 type StaffVars = { Variables: { usuarioId: string; rol: StaffRole } };
 
@@ -426,4 +427,29 @@ export const editorial = new Hono<StaffVars>()
       throw e;
     }
     return c.json({ ok: true });
+  })
+
+  // ───────── Users and metrics (admins only: personal data) ─────────
+
+  .get("/metricas", requiereStaff("admin"), async (c) => c.json(await metricasGenerales()))
+
+  .get(
+    "/usuarios",
+    requiereStaff("admin"),
+    zValidator(
+      "query",
+      z.object({
+        q: z.string().max(100).optional(),
+        orden: z.enum(Object.keys(ORDENES) as [keyof typeof ORDENES, ...(keyof typeof ORDENES)[]]).default("recientes"),
+        filtro: z.enum(FILTROS).default("todos"),
+        pagina: z.coerce.number().int().min(1).default(1),
+      }),
+    ),
+    async (c) => c.json(await listarUsuarios(c.req.valid("query"))),
+  )
+
+  .get("/usuarios/:id", requiereStaff("admin"), zValidator("param", z.object({ id: z.uuid() })), async (c) => {
+    const ficha = await fichaUsuario(c.req.valid("param").id);
+    if (!ficha) throw new HTTPException(404, { message: "Usuario no encontrado" });
+    return c.json(ficha);
   });

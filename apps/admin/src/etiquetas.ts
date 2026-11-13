@@ -1,4 +1,4 @@
-import type { ContenidoTarjeta, Discipline, EditorialStatus, StaffRole, TipoTarjeta } from "@tekluma/shared";
+import type { CoinReason, ContenidoTarjeta, Discipline, EditorialStatus, StaffRole, TipoTarjeta } from "@tekluma/shared";
 
 export const ESTADOS: Record<EditorialStatus, string> = {
   draft: "Borrador",
@@ -69,3 +69,13 @@ export function resumen(c: ContenidoTarjeta): string {
       return c.pregunta;
   }
 }
+
+export const MOTIVOS_MONEDAS: Record<CoinReason, string> = {
+  ad: "Anuncio",
+  purchase: "Compra",
+  extra_cards: "Más tarjetas",
+  daily_question: "Pregunta del día",
+  check_in: "Check-in diario",
+  bonus: "Bono",
+  adjustment: "Ajuste manual",
+};

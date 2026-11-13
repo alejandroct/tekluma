@@ -181,3 +181,21 @@ export const IconoReclamos = (p: Props) => (
     <path d="M12.25 7.25H15M12.25 10H15M5 7.25H7.75" />
   </Icono>
 );
+
+/** Metrics: three bars on a baseline. */
+export const IconoMetricas = (p: Props) => (
+  <Icono {...p}>
+    <path d="M2.75 17.25H17.25" />
+    <path d="M5 14.25V9.75M10 14.25V4.75M15 14.25V7.75" />
+  </Icono>
+);
+
+/** Users: two heads and shoulders. */
+export const IconoUsuarios = (p: Props) => (
+  <Icono {...p}>
+    <circle cx="7.5" cy="6.5" r="2.75" />
+    <path d="M2.75 16.25C2.75 13.5 4.9 11.75 7.5 11.75C10.1 11.75 12.25 13.5 12.25 16.25" />
+    <path d="M12.75 4.1C14.1 4.5 15 5.6 15 6.9C15 8.2 14.1 9.3 12.75 9.7" />
+    <path d="M14.5 11.9C16.1 12.4 17.25 13.9 17.25 16.25" />
+  </Icono>
+);
