@@ -31,10 +31,18 @@ declare module "sst" {
       "type": "sst.sst.Secret"
       "value": string
     }
+    "CodigoRevision": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "Correo": {
       "configSet": string
       "sender": string
       "type": "sst.aws.Email"
+    }
+    "CuentaRevision": {
+      "type": "sst.sst.Secret"
+      "value": string
     }
     "DatabaseUrl": {
       "type": "sst.sst.Secret"
