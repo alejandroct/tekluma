@@ -24,7 +24,7 @@ export default function Tutorial() {
     <Pagina key="repaso" t={t} rotulo="02 · REPETICIÓN ESPACIADA" titulo="Diez minutos al día" texto="Tekluma te devuelve cada tarjeta justo antes de que la olvides. Descarga los mazos y estudia también sin señal, en obra o en el bus.">
       <MuestraRacha t={t} />
     </Pagina>,
-    <Pagina key="colegas" t={t} rotulo="03 · CON TUS COLEGAS" titulo="Mídete con otros ingenieros" texto="Compite sin dejar de estudiar.">
+    <Pagina key="colegas" t={t} rotulo="03 · CON TUS COLEGAS" titulo="Mídete con otros ingenieros" texto="Pon a prueba lo que sabes y gana monedas: la misma pregunta para todos cada día, retos que se comparten por WhatsApp y una liga semanal.">
       <MuestraColegas t={t} />
     </Pagina>,
     <Pagina key="hora" t={t} rotulo="04 · TU HÁBITO" titulo="¿A qué hora repasas?" texto="Te avisamos una vez al día con la pregunta del día. Puedes cambiar la hora o apagarlo desde tu perfil.">
