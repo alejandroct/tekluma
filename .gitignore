@@ -5,6 +5,7 @@ ios/
 android/
 .sst/
 .pglite/
+.correos/
 *.tsbuildinfo
 .DS_Store
 

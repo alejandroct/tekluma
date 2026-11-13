@@ -6,6 +6,7 @@ import { PROFESSIONS } from "@tekluma/shared";
 import { db } from "./db/client";
 import * as schema from "./db/schema";
 import { enviarCorreo } from "./correo";
+import { codigo, nota, parrafo, plantilla, titulo } from "./correo-html";
 
 const { APPLE_CLIENT_ID, APPLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_URL, WEB_URL, COOKIE_DOMAIN } = process.env;
 
@@ -76,7 +77,18 @@ export const auth = betterAuth({
       generateOTP: ({ email }) => (esCuentaRevision(email) ? CODIGO_REVISION : undefined),
       async sendVerificationOTP({ email, otp }) {
         if (esCuentaRevision(email)) return;
-        await enviarCorreo(email, `Tu código de Tekluma: ${otp}`, `Tu código para entrar a Tekluma es ${otp}. Vence en 10 minutos.`);
+        await enviarCorreo(email, `Tu código de Tekluma: ${otp}`, `Tu código para entrar a Tekluma es ${otp}. Vence en 10 minutos.`, {
+          html: plantilla({
+            previa: `${otp} es tu código. Vence en 10 minutos.`,
+            cuerpo:
+              titulo("Tu código para entrar") +
+              parrafo("Escríbelo en la app o en la web para iniciar sesión:") +
+              codigo(otp) +
+              parrafo("Vence en 10 minutos y sirve una sola vez.") +
+              nota("Si no pediste este código, ignora este correo: nadie puede entrar a tu cuenta sin él. No lo compartas con nadie."),
+            pie: "Recibes este correo porque alguien pidió entrar a Tekluma con esta dirección.",
+          }),
+        });
       },
     }),
   ],

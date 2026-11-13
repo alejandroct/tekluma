@@ -3,6 +3,7 @@ import { PLAZO_RECLAMO_DIAS_HABILES, type ReclamoEntrada } from "@tekluma/shared
 import { db } from "./db/client";
 import { complaints } from "./db/schema";
 import { enviarCorreo } from "./correo";
+import { destacado, fichaDatos, nota, parrafo, parrafos, plantilla, rotulo, titulo, type Seccion } from "./correo-html";
 import { fechaLima } from "./cupo";
 
 /** Datos del proveedor que la hoja de reclamación debe mostrar. */
@@ -48,34 +49,94 @@ const fechaHora = (d: Date) =>
 const fechaCorta = (d: Date) => new Intl.DateTimeFormat("es-PE", { timeZone: "America/Lima", dateStyle: "short" }).format(d);
 const soles = (centimos: number) => `S/ ${(centimos / 100).toFixed(2)}`;
 
+/** Contenido de la hoja por secciones: se usa para el texto y para el HTML del correo. */
+export function seccionesHoja(h: Hoja): Seccion[] {
+  return [
+    {
+      titulo: "Proveedor",
+      filas: [
+        ["Razón social", PROVEEDOR.razonSocial],
+        ["RUC", PROVEEDOR.ruc],
+        ["Domicilio", PROVEEDOR.domicilio],
+        ["Producto", "Tekluma (tekluma.app)"],
+      ],
+    },
+    {
+      titulo: "1. Identificación del consumidor",
+      filas: [
+        ["Nombre", h.name],
+        ["Documento", `${h.documentType} ${h.documentNumber}`],
+        ["Domicilio", h.address],
+        ["Teléfono", h.phone],
+        ["Correo", h.email],
+        ...(h.isMinor ? [["Menor de edad", `Sí. Padre, madre o apoderado: ${h.guardian}`] as [string, string]] : []),
+      ],
+    },
+    {
+      titulo: "2. Identificación del bien contratado",
+      filas: [
+        ["Tipo", h.itemType === "producto" ? "Producto" : "Servicio"],
+        ["Descripción", h.itemDescription],
+        ["Monto reclamado", h.amountCents == null ? "—" : soles(h.amountCents)],
+      ],
+    },
+    {
+      titulo: "3. Detalle de la reclamación y pedido del consumidor",
+      filas: [
+        [
+          "Tipo",
+          h.kind === "reclamo"
+            ? "Reclamo (disconformidad con el producto o servicio)"
+            : "Queja (disconformidad no relacionada con el producto o servicio, o con la atención)",
+        ],
+        ["Detalle", h.detail],
+        ["Pedido", h.request],
+      ],
+    },
+  ];
+}
+
 /** Texto de la hoja: es la constancia que recibe el consumidor y la copia que guarda la empresa. */
 export function textoHoja(h: Hoja) {
   return [
     `HOJA DE RECLAMACIÓN N° ${codigoHoja(h)}`,
     `Fecha: ${fechaHora(h.createdAt)} (hora de Lima)`,
-    "",
-    `Proveedor: ${PROVEEDOR.razonSocial} · RUC ${PROVEEDOR.ruc}`,
-    `Domicilio: ${PROVEEDOR.domicilio}`,
-    "Producto: Tekluma (tekluma.app)",
-    "",
-    "1. IDENTIFICACIÓN DEL CONSUMIDOR",
-    `Nombre: ${h.name}`,
-    `Documento: ${h.documentType} ${h.documentNumber}`,
-    `Domicilio: ${h.address}`,
-    `Teléfono: ${h.phone}`,
-    `Correo: ${h.email}`,
-    ...(h.isMinor ? [`Menor de edad. Padre, madre o apoderado: ${h.guardian}`] : []),
-    "",
-    "2. IDENTIFICACIÓN DEL BIEN CONTRATADO",
-    `Tipo: ${h.itemType === "producto" ? "Producto" : "Servicio"}`,
-    `Descripción: ${h.itemDescription}`,
-    `Monto reclamado: ${h.amountCents == null ? "—" : soles(h.amountCents)}`,
-    "",
-    "3. DETALLE DE LA RECLAMACIÓN Y PEDIDO DEL CONSUMIDOR",
-    `Tipo: ${h.kind === "reclamo" ? "Reclamo (disconformidad con el producto o servicio)" : "Queja (disconformidad no relacionada con el producto o servicio, o con la atención)"}`,
-    `Detalle: ${h.detail}`,
-    `Pedido: ${h.request}`,
+    ...seccionesHoja(h).flatMap((sec) => ["", sec.titulo.toUpperCase(), ...sec.filas.map(([etiqueta, valor]) => `${etiqueta}: ${valor}`)]),
   ].join("\n");
+}
+
+/** La hoja en HTML, con su número y fecha arriba. */
+const htmlHoja = (h: Hoja) =>
+  rotulo(`Hoja de reclamación N° ${codigoHoja(h)}`) +
+  nota(`Registrada el ${fechaHora(h.createdAt)} (hora de Lima)`) +
+  fichaDatos(seccionesHoja(h));
+
+const PIE_RECLAMO = "Recibes este correo porque registraste una hoja en el Libro de Reclamaciones de Tekluma.";
+
+/** Constancia para el consumidor (al registrar y al reenviar). */
+function correoConstancia(h: Hoja, intro: string, conPlazo: boolean) {
+  const codigo = codigoHoja(h);
+  const plazo = `Te responderemos a este correo en un plazo máximo de ${PLAZO_RECLAMO_DIAS_HABILES} días hábiles (a más tardar el ${fechaCorta(h.dueAt)}).`;
+  return {
+    asunto: `Constancia de tu ${h.kind} N° ${codigo} · Tekluma`,
+    texto: [`Hola, ${h.name}:`, "", intro, ...(conPlazo ? [plazo] : []), "", textoHoja(h), "", AVISO].join("\n"),
+    html: plantilla({
+      previa: `${intro} N° ${codigo}.`,
+      cuerpo:
+        titulo(`Recibimos tu ${h.kind}`) +
+        parrafo(`Hola, ${h.name}:`) +
+        parrafo(intro) +
+        (conPlazo
+          ? destacado(
+              `Te responderemos a este correo en un plazo máximo de <strong>${PLAZO_RECLAMO_DIAS_HABILES} días hábiles</strong>, a más tardar el <strong>${fechaCorta(h.dueAt)}</strong>.`,
+            )
+          : "") +
+        htmlHoja(h) +
+        `<div style="height:20px"></div>` +
+        nota(AVISO),
+      pie: PIE_RECLAMO,
+    }),
+  };
 }
 
 const AVISO =
@@ -111,21 +172,8 @@ export async function registrarReclamo(e: ReclamoEntrada) {
   const hojaTexto = textoHoja(hoja);
   // La hoja ya quedó guardada: si SES falla, se ve en el panel (sin constancia) y se reenvía desde ahí.
   try {
-    await enviarCorreo(
-      hoja.email,
-      `Constancia de tu ${hoja.kind} N° ${codigo} · Tekluma`,
-      [
-        `Hola, ${hoja.name}:`,
-        "",
-        `Registramos tu ${hoja.kind} en nuestro Libro de Reclamaciones virtual. Esta es tu constancia.`,
-        `Te responderemos a este correo en un plazo máximo de ${PLAZO_RECLAMO_DIAS_HABILES} días hábiles (a más tardar el ${fechaCorta(hoja.dueAt)}).`,
-        "",
-        hojaTexto,
-        "",
-        AVISO,
-      ].join("\n"),
-      { responderA: BUZON },
-    );
+    const c = correoConstancia(hoja, `Registramos tu ${hoja.kind} en nuestro Libro de Reclamaciones virtual. Esta es tu constancia.`, true);
+    await enviarCorreo(hoja.email, c.asunto, c.texto, { responderA: BUZON, html: c.html });
     await db.update(complaints).set({ receiptSentAt: new Date() }).where(eq(complaints.id, hoja.id));
   } catch (error) {
     console.error("Libro de reclamaciones: no se pudo enviar la constancia", codigo, error);
@@ -135,7 +183,19 @@ export async function registrarReclamo(e: ReclamoEntrada) {
       BUZON,
       `[Libro de Reclamaciones] ${hoja.kind === "reclamo" ? "Reclamo" : "Queja"} N° ${codigo} · vence ${fechaCorta(hoja.dueAt)}`,
       `${hojaTexto}\n\nResponde desde el panel (Reclamos) antes del ${fechaCorta(hoja.dueAt)}.`,
-      { responderA: hoja.email },
+      {
+        responderA: hoja.email,
+        html: plantilla({
+          previa: `${hoja.name} · vence el ${fechaCorta(hoja.dueAt)}`,
+          cuerpo:
+            titulo(`Nuevo ${hoja.kind} en el Libro de Reclamaciones`) +
+            destacado(
+              `Respóndelo desde el panel (<a href="${process.env.ADMIN_URL ?? ""}" style="color:#0F1B2D;">Reclamos</a>) antes del <strong>${fechaCorta(hoja.dueAt)}</strong>.`,
+            ) +
+            htmlHoja(hoja),
+          pie: "Copia interna del Libro de Reclamaciones de Tekluma.",
+        }),
+      },
     );
   } catch (error) {
     console.error("Libro de reclamaciones: no se pudo enviar la copia a la empresa", codigo, error);
@@ -163,7 +223,21 @@ export async function responderReclamo(id: string, respuesta: string, usuarioId:
     [`Hola, ${hoja.name}:`, "", respuesta, "", "—", `${PROVEEDOR.razonSocial} · RUC ${PROVEEDOR.ruc}`, "", `Hoja de reclamación N° ${codigo}`, AVISO].join(
       "\n",
     ),
-    { responderA: BUZON },
+    {
+      responderA: BUZON,
+      html: plantilla({
+        previa: `Respuesta a tu ${hoja.kind} N° ${codigo}`,
+        cuerpo:
+          rotulo(`Hoja de reclamación N° ${codigo}`) +
+          titulo(`Respuesta a tu ${hoja.kind}`) +
+          parrafo(`Hola, ${hoja.name}:`) +
+          parrafos(respuesta) +
+          nota(`${PROVEEDOR.razonSocial} · RUC ${PROVEEDOR.ruc}`) +
+          `<div style="height:12px"></div>` +
+          nota(AVISO),
+        pie: PIE_RECLAMO,
+      }),
+    },
   );
   await db
     .update(complaints)
@@ -174,11 +248,7 @@ export async function responderReclamo(id: string, respuesta: string, usuarioId:
 /** Reenvía la constancia (cuando SES falló al registrar). */
 export async function reenviarConstancia(id: string) {
   const hoja = await hojaPorId(id);
-  await enviarCorreo(
-    hoja.email,
-    `Constancia de tu ${hoja.kind} N° ${codigoHoja(hoja)} · Tekluma`,
-    [`Hola, ${hoja.name}:`, "", `Esta es la constancia de tu ${hoja.kind}.`, "", textoHoja(hoja), "", AVISO].join("\n"),
-    { responderA: BUZON },
-  );
+  const c = correoConstancia(hoja, `Esta es la constancia de tu ${hoja.kind}.`, false);
+  await enviarCorreo(hoja.email, c.asunto, c.texto, { responderA: BUZON, html: c.html });
   await db.update(complaints).set({ receiptSentAt: new Date() }).where(eq(complaints.id, id));
 }
