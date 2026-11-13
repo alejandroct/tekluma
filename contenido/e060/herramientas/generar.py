@@ -3888,5 +3888,9 @@ def publicar_norma():
     total = sum(len(v) for v in figuras.values())
     print("norma.json", len(articulos), "artículos,", total, "figuras, versión", version, os.path.getsize(f"{WEB}/norma.json") // 1024, "KB")
 
+    # Páginas estáticas por sección (para Google), el índice del visor y el sitemap.
+    import subprocess
+    subprocess.run(["node", os.path.join(os.path.dirname(os.path.dirname(WEB)), "herramientas", "paginas-norma.mjs")], check=True)
+
 
 publicar_norma()

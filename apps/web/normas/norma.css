@@ -1,0 +1,67 @@
+/* Texto de las normas: compartido por el visor (normas/<código>/) y las páginas por sección.
+   Las páginas por sección las genera herramientas/paginas-norma.mjs. */
+.art { position: relative; padding: var(--e3) var(--e4); margin: 0 calc(-1 * var(--e4)); border-radius: var(--radio); scroll-margin-top: 150px; transition: background 1.2s ease; }
+.art.destacado { background: var(--acento-suave); box-shadow: inset 4px 0 0 var(--ambar); }
+.art .num { font-family: var(--mono); font-weight: 500; color: var(--ambar); font-size: 14px; text-decoration: none; margin-right: var(--e3); }
+.art .epi { font-weight: 700; }
+/* La fuente convierte «(c)» en «©»: en la norma los incisos (a), (b), (c) deben verse tal cual. */
+.art, .resultado { font-feature-settings: "calt" 0, "liga" 0; }
+.art p { margin: 6px 0 0; white-space: pre-line; max-width: 72ch; }
+.art .formula { display: flex; align-items: center; justify-content: space-between; gap: var(--e4); max-width: 72ch; margin: 10px 0 4px; padding: 10px 16px; border: 1px solid var(--linea); border-radius: 6px; background: var(--superficie); font-family: Georgia, "Times New Roman", serif; font-style: italic; font-variant-numeric: lining-nums; font-size: 18px; line-height: 1.45; }
+.art .formula .mj { overflow-x: auto; font-style: normal; font-size: 19px; max-width: 100%; }
+.art .formula .mj svg, .art .tabla .mj svg, .definicion .mj svg { display: block; }
+.art .tabla .mj { font-size: 16px; }
+.sim { font-style: italic; }
+.sim sub { font-size: 0.72em; }
+.definicion { display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: center; max-width: 72ch; padding: 6px 0; border-top: 1px solid var(--linea); font-size: 15px; }
+.definicion .mj { font-size: 18px; }
+.art .formula .eq { font-family: var(--mono); font-style: normal; font-size: 13px; color: var(--ambar); white-space: nowrap; }
+.art .tabla { max-width: 100%; overflow-x: auto; margin: 10px 0 4px; }
+.art .tabla table { border-collapse: collapse; font-size: 15px; line-height: 1.4; min-width: 60%; }
+.art .tabla th, .art .tabla td { border: 1px solid var(--linea); padding: 7px 10px; text-align: left; vertical-align: top; }
+.art .tabla caption { text-align: left; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--tinta-3); padding-bottom: 6px; }
+.art .tabla th { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--tinta-2); background: var(--superficie); }
+.art.seccion { padding-top: var(--e5); }
+.art.seccion .epi { font-size: 19px; font-weight: 800; }
+.chip { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; border: 1px solid var(--linea); border-radius: var(--radio); padding: 3px 8px; background: none; color: var(--tinta-3); cursor: pointer; text-decoration: none; }
+.chip:hover { border-color: var(--ambar); color: var(--tinta); }
+.figura { margin: var(--e3) 0 0; background: #fff; border: 1px solid var(--linea); border-radius: 6px; max-width: 720px; overflow: hidden; cursor: zoom-in; }
+.figura img { display: block; width: 100%; height: auto; }
+.figura figcaption { font-size: 13px; font-style: italic; color: #5b6b85; padding: 8px 12px; }
+mark { background: rgba(255, 138, 31, 0.28); color: inherit; font-weight: 700; border-radius: 2px; }
+.cta-app { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--e3); margin-top: var(--e5); padding: var(--e4) var(--e5); border: 1px solid var(--linea-fuerte); border-radius: 6px; background: var(--superficie); }
+.cta-app p { margin: 0; max-width: 56ch; }
+
+/* ───────── Página de una sección (normas/<código>/<sección>/) ───────── */
+.seccion-norma { padding-top: var(--e5); padding-bottom: var(--e8); max-width: 860px; }
+.seccion-norma .migas { display: flex; flex-wrap: wrap; gap: 6px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--tinta-3); }
+.seccion-norma .migas a { color: var(--tinta-2); text-decoration: none; }
+.seccion-norma .migas a:hover { color: var(--tinta); text-decoration: underline; }
+.seccion-norma h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; letter-spacing: -0.02em; margin: var(--e3) 0 var(--e2); }
+.seccion-norma h1 .n { font-family: var(--mono); font-weight: 500; color: var(--ambar); margin-right: 0.35em; }
+.seccion-norma .ficha { color: var(--tinta-2); font-size: 15px; margin: 0 0 var(--e4); }
+.seccion-norma .art .acciones { display: flex; flex-wrap: wrap; gap: var(--e2); margin-top: var(--e2); }
+.seccion-norma .figura { cursor: default; }
+.seccion-norma h2 { font-size: 22px; letter-spacing: -0.01em; margin: var(--e7) 0 var(--e3); }
+.prueba { border: 1px solid var(--linea); border-radius: 6px; background: var(--superficie); padding: var(--e4); margin-bottom: var(--e3); }
+.prueba > p { margin: 0 0 var(--e3); font-weight: 600; }
+.prueba ol { margin: 0; padding-left: 1.4em; display: grid; gap: 4px; }
+.prueba details { margin-top: var(--e3); }
+.prueba summary { cursor: pointer; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--ambar); }
+.prueba .resp { margin: var(--e2) 0 0; }
+.prueba .cita { margin: var(--e2) 0 0; padding-left: var(--e3); border-left: 3px solid var(--ambar); color: var(--tinta-2); font-size: 15px; }
+.vecinas { display: flex; justify-content: space-between; gap: var(--e3); margin-top: var(--e6); flex-wrap: wrap; }
+.vecinas a { flex: 1 1 240px; border: 1px solid var(--linea); border-radius: 6px; padding: var(--e3) var(--e4); text-decoration: none; color: var(--tinta); }
+.vecinas a:hover { border-color: var(--ambar); }
+.vecinas a span { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--tinta-3); }
+.vecinas a.sig { text-align: right; }
+.lista-secciones { columns: 2 260px; column-gap: var(--e5); padding: 0; list-style: none; margin: 0; }
+.lista-secciones li { break-inside: avoid; padding: 4px 0; }
+.lista-secciones a { text-decoration: none; color: var(--tinta-2); }
+.lista-secciones a:hover { color: var(--tinta); text-decoration: underline; }
+.lista-secciones .n { font-family: var(--mono); color: var(--ambar); margin-right: 0.5em; }
+.lista-secciones .actual a { color: var(--tinta); font-weight: 700; }
+.indice-secciones { padding: var(--e6) 0 var(--e7); }
+.indice-secciones summary { cursor: pointer; font-weight: 700; }
+.indice-secciones h3 { font-size: 16px; margin: var(--e5) 0 var(--e2); }
+.indice-secciones h3 span { font-family: var(--mono); color: var(--ambar); font-weight: 500; margin-right: 0.5em; }
