@@ -129,9 +129,9 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
       Declarado en `/privacidad` y en `docs/fichas-tiendas.md`.
 - [ ] **(tú)** Crear la cuenta gratuita en <https://sentry.io> (región EE. UU.) con dos proyectos: `tekluma-app` (React Native)
       y `tekluma-api` (Node.js). En cada proyecto → Settings → Security & Privacy, activar **«Prevent Storing of IP Addresses»**.
-      Luego: `npx sst secret set SentryDsn <DSN de tekluma-api> --stage produccion` (y desplegar); en EAS, la variable
-      `EXPO_PUBLIC_SENTRY_DSN` (DSN de tekluma-app) y, para ver el código original en los errores, `SENTRY_AUTH_TOKEN`
-      (secreto), `SENTRY_ORG` y `SENTRY_PROJECT=tekluma-app`.
+      Hecho: proyectos creados, privacidad configurada, `SentryDsn` cargado en producción y el DSN de la app en `eas.json`.
+- [ ] **(tú)** Cuando exista la cuenta de Expo: crear en Sentry un token (Settings → Developer Settings → Organization Tokens)
+      y cargarlo en EAS como variable secreta `SENTRY_AUTH_TOKEN`, para ver el código original en los errores de la app.
 - [ ] **(código)** Una página web por artículo de la norma (`/normas/e060/21.6.4/`) para que Google las indexe: es el canal gratuito de usuarios.
 - [x] **(código)** Configuración de compilación con EAS (`apps/mobile/eas.json`: perfiles development, preview y production;
       el número de compilación lo lleva EAS y sube solo). Íconos y splash ya están.
