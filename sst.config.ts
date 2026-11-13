@@ -44,6 +44,9 @@ export default $config({
       REVENUECAT_WEBHOOK_SECRET: new sst.Secret("RevenueCatWebhookSecret", ""),
       // Emails (comma-separated) promoted to admin of the editorial panel on first access.
       ADMIN_EMAILS: new sst.Secret("AdminEmails", ""),
+      // Cuenta de los revisores de las tiendas: ese correo entra siempre con CodigoRevision (6 dígitos).
+      CUENTA_REVISION: new sst.Secret("CuentaRevision", ""),
+      CODIGO_REVISION: new sst.Secret("CodigoRevision", ""),
     };
     const environment = {
       // Fuera de producción quedan habilitadas las rutas de prueba (p. ej. /cupo/anuncio-prueba).

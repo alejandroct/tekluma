@@ -9,6 +9,15 @@ import { enviarCorreo } from "./correo";
 
 const { APPLE_CLIENT_ID, APPLE_CLIENT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ADMIN_URL, WEB_URL, COOKIE_DOMAIN } = process.env;
 
+/**
+ * Cuenta para los revisores de App Store y Google Play, que no pueden leer el correo:
+ * ese correo siempre recibe el mismo código y no se le envía nada. Solo se activa con
+ * los dos secretos configurados y un código de 6 dígitos.
+ */
+const CUENTA_REVISION = process.env.CUENTA_REVISION?.trim().toLowerCase() || undefined;
+const CODIGO_REVISION = /^\d{6}$/.test(process.env.CODIGO_REVISION ?? "") ? process.env.CODIGO_REVISION : undefined;
+export const esCuentaRevision = (email: string) => !!CUENTA_REVISION && !!CODIGO_REVISION && email.toLowerCase() === CUENTA_REVISION;
+
 /** Origins allowed to use cookie-based sessions (the editorial panel). */
 export const origenesPanel = ADMIN_URL ? [ADMIN_URL] : ["http://localhost:5173"];
 
@@ -63,7 +72,10 @@ export const auth = betterAuth({
     emailOTP({
       otpLength: 6,
       expiresIn: 10 * 60,
+      // Devolver undefined deja que Better Auth genere el código al azar.
+      generateOTP: ({ email }) => (esCuentaRevision(email) ? CODIGO_REVISION : undefined),
       async sendVerificationOTP({ email, otp }) {
+        if (esCuentaRevision(email)) return;
         await enviarCorreo(email, `Tu código de Tekluma: ${otp}`, `Tu código para entrar a Tekluma es ${otp}. Vence en 10 minutos.`);
       },
     }),

@@ -87,11 +87,11 @@ Tekluma es un producto de DCC INGENIERIA Y CONSTRUCCION S.A.C. (Perú). No es un
 **Notas para el revisor de Apple** (App Review Information)
 ```
 Tekluma inicia sesión con un código de 6 dígitos que se envía por correo, sin contraseña.
-Cuenta de prueba: [CORREO DE REVISIÓN]. Escriba ese correo y el código [CÓDIGO FIJO]; esta cuenta recibe siempre ese código, sin correo.
+Cuenta de prueba: revision@tekluma.app. Escriba ese correo y el código [CÓDIGO FIJO]; esta cuenta recibe siempre ese código, sin correo.
 La suscripción Premium se ofrece en Perfil → «Hazte Premium».
 Para eliminar la cuenta: Perfil → «Eliminar mi cuenta».
 ```
-Hace falta una cuenta de revisión con código fijo: Apple y Google no pueden recibir el correo. Ver «Pendiente» al final.
+[CÓDIGO FIJO] es el valor del secreto `CodigoRevision` de producción (ver «Pendiente» al final).
 
 ### Privacidad de la app (etiquetas de App Store Connect)
 
@@ -155,8 +155,11 @@ Tekluma es gratis, con un cupo diario de tarjetas que puedes ampliar con monedas
 
 ## Pendiente antes de enviar a revisión
 
-- [ ] **(código)** Cuenta de revisión con código fijo: un correo de revisión (por ejemplo `revision@tekluma.app`) que siempre acepta un
-      código guardado como secreto de producción, sin enviar correo. Apple y Google lo exigen para revisar apps con inicio de sesión.
+- [x] **(código)** Cuenta de revisión con código fijo (`apps/api/src/auth.ts`): ese correo siempre entra con el mismo código y no se le
+      envía nada. Apple y Google la exigen para revisar apps con inicio de sesión.
+- [ ] **(tú)** Configurar sus secretos en producción y desplegar (el código: 6 dígitos al azar, no `000000` ni `123456`):
+      `npx sst secret set CuentaRevision revision@tekluma.app --stage produccion` y
+      `npx sst secret set CodigoRevision <6 dígitos> --stage produccion`. Pegar ese código en las notas para el revisor de ambas tiendas.
 - [ ] **(tú)** Decidir si la app sale **solo para iPhone** (`supportsTablet: false`) o también para iPad. Con iPad, Apple exige capturas
       de iPad de 13″ y revisa que el diseño se vea bien en tableta. Recomendado para el lanzamiento: solo iPhone.
 - [ ] **(tú)** Cargar los productos de suscripción en ambas tiendas con los mismos nombres y precios que en `premium.tsx`.
