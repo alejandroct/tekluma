@@ -1,6 +1,7 @@
 import { Pressable, Text, View } from "react-native";
 import { router, Stack } from "expo-router";
 import { IBMPlexMono_500Medium, IBMPlexMono_600SemiBold, useFonts } from "@expo-google-fonts/ibm-plex-mono";
+import * as Notifications from "expo-notifications";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useCallback, useEffect, useState } from "react";
@@ -8,8 +9,10 @@ import { Arranque } from "@/components/Arranque";
 import { iniciarAnuncios } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { iniciarCompras } from "@/lib/compras";
+import { iniciarNotificaciones } from "@/lib/recordatorio";
 import { iniciarSonidos } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
+import { useTutorialVisto } from "@/lib/tutorial";
 
 // El splash nativo se queda hasta saber si hay sesión; luego lo continúa <Arranque />.
 SplashScreen.preventAutoHideAsync().catch(() => {});
@@ -20,11 +23,23 @@ export default function RootLayout() {
   const [fuentesListas] = useFonts({ IBMPlexMono_500Medium, IBMPlexMono_600SemiBold });
   const [intro, setIntro] = useState(true);
   const terminarIntro = useCallback(() => setIntro(false), []);
+  const tutorialVisto = useTutorialVisto();
+  const conNombre = !!sesion?.user.name;
 
   useEffect(() => {
     iniciarAnuncios().catch(() => {});
     iniciarSonidos();
+    iniciarNotificaciones();
   }, []);
+
+  // Tocar el recordatorio abre su ruta (la pregunta del día) si ya se puede entrar a la app.
+  const respuesta = Notifications.useLastNotificationResponse();
+  useEffect(() => {
+    const url = respuesta?.notification.request.content.data?.url;
+    if (!conNombre || typeof url !== "string" || respuesta?.actionIdentifier !== Notifications.DEFAULT_ACTION_IDENTIFIER) return;
+    router.push(url as never);
+    Notifications.clearLastNotificationResponseAsync().catch(() => {});
+  }, [respuesta, conNombre]);
 
   useEffect(() => {
     if (!isPending && fuentesListas) SplashScreen.hideAsync().catch(() => {});
@@ -48,7 +63,11 @@ export default function RootLayout() {
           contentStyle: { backgroundColor: t.fondo },
         }}
       >
-        <Stack.Protected guard={!sesion}>
+        {/* Sin sesión: primero el tutorial (una vez por dispositivo), luego el login. */}
+        <Stack.Protected guard={!sesion && !tutorialVisto}>
+          <Stack.Screen name="tutorial" options={{ headerShown: false }} />
+        </Stack.Protected>
+        <Stack.Protected guard={!sesion && tutorialVisto}>
           <Stack.Screen name="login" options={{ headerShown: false }} />
         </Stack.Protected>
         {/* Tras el primer login, nombre y profesión antes de entrar. */}

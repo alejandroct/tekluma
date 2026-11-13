@@ -38,7 +38,11 @@ export function guardarAjuste(clave: string, valor: unknown) {
   );
 }
 
+/** Ajustes del dispositivo, no de la cuenta: sobreviven al cerrar sesión. */
+const AJUSTES_DEL_DISPOSITIVO = ["tutorial", "recordatorio"];
+
 /** Deja el dispositivo limpio: progreso, ajustes y los mazos descargados (contenido exclusivo de Tekluma). */
 export function borrarDatosLocales() {
-  db.execSync("delete from estados; delete from ajustes; delete from paquetes;");
+  const conservar = AJUSTES_DEL_DISPOSITIVO.map((c) => `'${c}'`).join(", ");
+  db.execSync(`delete from estados; delete from ajustes where clave not in (${conservar}); delete from paquetes;`);
 }

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Alert, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Linking, Platform, Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
 import { authClient } from "@/lib/auth";
 import { cerrarSesion, eliminarCuenta } from "@/lib/cuenta";
@@ -8,6 +8,8 @@ import { NOMBRES_PROFESION } from "@/lib/profesiones";
 import type { EstadoCupo, Profession } from "@tekluma/shared";
 import { MONO_FUERTE, useTema } from "@/lib/tema";
 import { IconoPremium } from "@/components/Iconos";
+import { SelectorHora } from "@/components/SelectorHora";
+import { activarRecordatorio, apagarRecordatorio, horaTexto, leerRecordatorio, type Recordatorio } from "@/lib/recordatorio";
 
 export default function Perfil() {
   const t = useTema();
@@ -67,6 +69,7 @@ export default function Perfil() {
           {cupo?.premium ? "Premium" : "Gratis"}
         </Text>
       </View>
+      <FilaRecordatorio />
       {!cupo?.premium && (
         <Pressable onPress={() => router.push("/premium")} style={({ pressed }) => [estilos.premium, { backgroundColor: t.ambar, opacity: pressed ? 0.85 : 1 }]}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
@@ -90,6 +93,59 @@ export default function Perfil() {
         <Text style={{ color: t.textoSuave, fontSize: 14, textDecorationLine: "underline" }}>Libro de Reclamaciones</Text>
       </Pressable>
     </ScrollView>
+  );
+}
+
+/** Recordatorio diario: interruptor y, al tocar la hora, el selector para cambiarla. */
+function FilaRecordatorio() {
+  const t = useTema();
+  const [estado, setEstado] = useState<Recordatorio>(leerRecordatorio);
+  const [editando, setEditando] = useState(false);
+  const [hora, setHora] = useState({ hora: estado.hora, minuto: estado.minuto });
+
+  const sinPermiso = () =>
+    Alert.alert("Sin permiso para avisarte", "Activa las notificaciones de Tekluma en la configuración del teléfono.", [
+      { text: "Ahora no", style: "cancel" },
+      { text: "Abrir configuración", onPress: () => Linking.openSettings() },
+    ]);
+
+  const cambiar = async (activo: boolean) => {
+    if (!activo) {
+      await apagarRecordatorio().catch(() => {});
+      setEstado(leerRecordatorio());
+      setEditando(false);
+      return;
+    }
+    if (!(await activarRecordatorio(estado.hora, estado.minuto).catch(() => false))) sinPermiso();
+    setEstado(leerRecordatorio());
+  };
+
+  const guardar = async () => {
+    if (!(await activarRecordatorio(hora.hora, hora.minuto).catch(() => false))) sinPermiso();
+    setEstado(leerRecordatorio());
+    setEditando(false);
+  };
+
+  return (
+    <View style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde, flexDirection: "column", gap: 14 }]}>
+      <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+        <Pressable disabled={!estado.activo} onPress={() => setEditando((e) => !e)} hitSlop={8} style={{ gap: 2 }}>
+          <Text style={{ color: t.texto, fontSize: 16 }}>Recordatorio diario</Text>
+          <Text style={{ color: estado.activo ? t.ambar : t.textoSuave, fontSize: 14, fontFamily: MONO_FUERTE }}>
+            {estado.activo ? `${horaTexto(estado)} · cambiar` : "Apagado"}
+          </Text>
+        </Pressable>
+        <Switch value={estado.activo} onValueChange={cambiar} trackColor={{ true: t.ambar }} accessibilityLabel="Recordatorio diario" />
+      </View>
+      {editando && estado.activo && (
+        <>
+          <SelectorHora valor={hora} onCambio={setHora} />
+          <Pressable onPress={guardar} style={({ pressed }) => [estilos.premium, { backgroundColor: t.primario, opacity: pressed ? 0.85 : 1 }]}>
+            <Text style={{ color: t.sobrePrimario, fontSize: 16, fontWeight: "700" }}>Guardar hora</Text>
+          </Pressable>
+        </>
+      )}
+    </View>
   );
 }
 

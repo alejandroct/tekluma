@@ -54,7 +54,16 @@
       ],
       "expo-audio",
       "expo-sharing",
-      "expo-font"
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#FF8A1F",
+          "defaultChannel": "recordatorios",
+          "enableRemoteNotifications": false
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
