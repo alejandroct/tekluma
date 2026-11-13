@@ -64,6 +64,13 @@
       "when": 1794605678452,
       "tag": "0008_simulacros",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1794607206614,
+      "tag": "0009_partidas_en_vivo",
+      "breakpoints": true
     }
   ]
 }

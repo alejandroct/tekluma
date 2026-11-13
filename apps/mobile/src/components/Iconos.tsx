@@ -136,6 +136,19 @@ export const IconoSimulacro: Icono = ({ tamano = 24, color, acento = color }) =>
     </>,
   );
 
+/** Pantalla con ondas: la partida en vivo proyectada al grupo. */
+export const IconoVivo: Icono = ({ tamano = 24, color, acento = color }) =>
+  lienzo(
+    tamano,
+    <>
+      <Rect x={3} y={6.5} width={18} height={11.5} stroke={color} {...trazo} />
+      <Line x1={9} y1={21} x2={15} y2={21} stroke={color} {...trazo} />
+      <Line x1={12} y1={18} x2={12} y2={21} stroke={color} {...trazo} />
+      <Rect x={10} y={10.25} width={4} height={4} fill={acento} />
+      <Path d="M8.5 3 Q12 1 15.5 3" stroke={acento} {...trazo} />
+    </>,
+  );
+
 /** Cronómetro. */
 export const IconoCronometro: Icono = ({ tamano = 24, color, acento = color }) =>
   lienzo(

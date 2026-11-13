@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Partida en vivo · Tekluma</title>
+    <meta name="description" content="Únete a una partida en vivo del RNE con el código que te dieron. Responde desde tu celular, sin instalar nada." />
+    <meta property="og:title" content="Partida en vivo del RNE · Tekluma" />
+    <meta property="og:description" content="Entra con el código de la sala y responde contra el reloj. Sin instalar nada." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#F6F5F2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F1B2D" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20261110" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="/estilos.css?v=20261114" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
+    <style>
+      .cuenta { height: 6px; background: var(--linea); overflow: hidden; }
+      .cuenta span { display: block; height: 100%; background: var(--ambar); transition: width 0.25s linear; }
+      .cifra-grande { font-family: var(--mono); font-size: clamp(40px, 12vw, 72px); font-weight: 500; letter-spacing: 0.08em; line-height: 1; }
+      .esperando { text-align: center; padding: var(--e6) 0; display: flex; flex-direction: column; gap: var(--e3); align-items: center; }
+      .esperando .etq { display: block; }
+      .veredicto { padding: var(--e5); border: 1px solid var(--linea-fuerte); text-align: center; display: flex; flex-direction: column; gap: 6px; }
+      .veredicto.ok { border-color: var(--verde); background: rgba(31, 157, 85, 0.08); }
+      .veredicto.ko { border-color: var(--rojo); background: rgba(214, 69, 69, 0.06); }
+      .veredicto strong { font-size: 28px; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+      .chips span { border: 1px solid var(--linea-fuerte); padding: 6px 12px; font-weight: 700; background: var(--superficie); animation: entrar 0.3s ease-out; }
+      @keyframes entrar { from { opacity: 0; transform: translateY(6px); } }
+      .reparto { display: flex; flex-direction: column; gap: 8px; }
+      .reparto div { display: grid; grid-template-columns: 2em 1fr 3em; gap: 10px; align-items: center; font-family: var(--mono); }
+      .reparto i { display: block; height: 14px; background: var(--linea-fuerte); }
+      .reparto .bien i { background: var(--verde); }
+      .podio { display: flex; flex-direction: column; gap: 6px; }
+      .podio div { display: grid; grid-template-columns: 2.5em 1fr auto; gap: 10px; padding: 10px 12px; border: 1px solid var(--linea); background: var(--superficie); font-weight: 700; }
+      .podio div.yo { border-left: 3px solid var(--ambar); }
+      .podio .p { font-family: var(--mono); color: var(--ambar); }
+      .podio .pts { font-family: var(--mono); }
+      /* Pantalla proyectada: más grande, a lo ancho. */
+      body.anfitrion .juego-hoja { max-width: 1180px; }
+      body.anfitrion .pregunta { font-size: clamp(30px, 3.6vw, 52px); }
+      body.anfitrion .opcion { font-size: clamp(20px, 2vw, 28px); padding-block: 20px; }
+      body.anfitrion .chips span { font-size: 22px; }
+      body.anfitrion .podio div { font-size: 26px; padding: 14px 18px; }
+      .sala-anfitrion { display: grid; gap: var(--e6); grid-template-columns: 1fr; align-items: center; }
+      @media (min-width: 900px) { .sala-anfitrion { grid-template-columns: 1.3fr 1fr; } }
+      .sala-anfitrion .qr { background: #fff; padding: 14px; justify-self: center; width: min(320px, 70vw); }
+      .sala-anfitrion .qr img, .sala-anfitrion .qr svg { width: 100%; height: auto; display: block; }
+      .barra-anfitrion { display: flex; gap: var(--e3); align-items: center; justify-content: space-between; flex-wrap: wrap; position: sticky; bottom: 0; padding: var(--e3) 0; background: var(--fondo); border-top: 1px solid var(--linea); }
+      .revision-anfitrion { display: grid; gap: var(--e5); }
+      .revision-anfitrion > div { display: flex; flex-direction: column; gap: var(--e3); min-width: 0; }
+      @media (min-width: 900px) { .revision-anfitrion { grid-template-columns: 1.2fr 1fr; align-items: start; } body.anfitrion .revision-anfitrion .pregunta { font-size: clamp(24px, 2.4vw, 34px); } }
+    </style>
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="hoja">
+        <a class="marca" href="/" aria-label="Tekluma, inicio">
+          <picture><source srcset="/logo-oscuro.svg?v=20261110" media="(prefers-color-scheme: dark)" /><img src="/logo.svg?v=20261110" alt="Tekluma" width="105" height="26" /></picture>
+        </a>
+        <nav aria-label="Principal">
+          <span class="etq ref">Partida en vivo</span>
+          <a href="/">Qué es Tekluma</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="juego-hoja">
+      <main class="juego" id="juego" aria-live="polite"><p class="cargando">Cargando…</p></main>
+    </div>
+
+    <script>
+      const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8787" : `https://api.${location.hostname}`;
+      const raiz = document.getElementById("juego");
+      const params = new URLSearchParams(location.search);
+      const codigo = (params.get("c") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6);
+      const clave = params.get("k") || "";
+      const leer = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
+      const escribir = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+      const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      const icono = (id, clase = "") => `<svg class="i ${clase}" aria-hidden="true"><use href="/iconos.svg?v=20261110#${id}"/></svg>`;
+      const figura = (u) => (typeof u === "string" && /^data:image\/(jpeg|png|webp);base64,/.test(u) ? `<figure class="figura"><img src="${u}" alt="Figura de la pregunta" /></figure>` : "");
+      const LETRAS = "ABCDEF";
+      const enlace = `${location.origin}/vivo?c=${codigo}`;
+
+      async function api(ruta, cuerpo) {
+        const r = await fetch(API + ruta, cuerpo ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(cuerpo) } : { cache: "no-store" });
+        if (!r.ok) throw new Error((await r.text()) || "Error");
+        return r.json();
+      }
+
+      // ───────── Entrar ─────────
+      function formulario(error) {
+        raiz.innerHTML = `
+          <span class="etq">Partida en vivo del RNE</span>
+          <h1 class="pregunta">Entra a la sala</h1>
+          <p class="ayuda">Escribe el código que ves en la pantalla y tu nombre. No necesitas cuenta ni instalar nada.</p>
+          ${error ? `<p class="aviso">${esc(error)}</p>` : ""}
+          <div class="campo-grupo"><label class="etq" for="codigo">Código de la sala</label>
+            <input class="campo mono" id="codigo" maxlength="6" autocapitalize="characters" autocomplete="off" placeholder="ABC123" value="${esc(codigo)}" /></div>
+          <div class="campo-grupo"><label class="etq" for="nombre">Tu nombre</label>
+            <input class="campo" id="nombre" maxlength="24" autocomplete="given-name" placeholder="Así te verá el grupo" value="${esc(leer("tekluma:nombre", ""))}" /></div>
+          <button class="btn btn-acento btn-bloque" id="entrar">Entrar ${icono("i-flecha")}</button>`;
+        document.getElementById("entrar").addEventListener("click", async () => {
+          const c = document.getElementById("codigo").value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+          const n = document.getElementById("nombre").value.trim();
+          if (c.length !== 6) return document.getElementById("codigo").classList.add("error");
+          if (n.length < 2) return document.getElementById("nombre").classList.add("error");
+          escribir("tekluma:nombre", n);
+          try {
+            const r = await api(`/vivo/${c}/unirse`, { nombre: n });
+            escribir(`vivo:${c}`, r);
+            location.replace(`/vivo?c=${c}`);
+          } catch (e) {
+            formulario(/existe/.test(e.message) ? "No encontramos esa sala. Revisa el código." : e.message);
+          }
+        });
+      }
+
+      // ───────── Estado compartido (se consulta cada segundo) ─────────
+      let ultimo = "", estado = null, desfase = 0, enviando = false;
+      const restante = () => (estado && estado.inicio ? Math.max(0, estado.segundos - (Date.now() + desfase - estado.inicio) / 1000) : 0);
+
+      async function consultar() {
+        try {
+          const q = clave ? `k=${encodeURIComponent(clave)}` : `j=${encodeURIComponent((leer(`vivo:${codigo}`, {}) || {}).token || "")}`;
+          const e = await api(`/vivo/${codigo}?${q}`);
+          desfase = e.ahora - Date.now();
+          const firma = JSON.stringify({ ...e, ahora: 0 });
+          estado = e;
+          if (firma !== ultimo) { ultimo = firma; pintar(); }
+        } catch (err) {
+          if (/existe/.test(err.message)) { clearInterval(sondeo); formulario("Esa sala ya no existe."); }
+        }
+      }
+      // Cuenta regresiva entre consultas: no depende del ritmo de la red.
+      setInterval(() => {
+        const s = restante();
+        const n = document.getElementById("cuenta-n"), b = document.getElementById("cuenta-b");
+        if (n) n.textContent = Math.ceil(s);
+        if (b && estado) b.style.width = `${(s / estado.segundos) * 100}%`;
+      }, 200);
+
+      function rotulo(e, extra = "") {
+        return `<div class="rotulo-juego">
+          <div><span class="etq">Sala</span><span class="valor">${esc(e.codigo)}</span></div>
+          <div><span class="etq">Norma</span><span class="valor">${esc(e.norma)}</span></div>
+          ${e.indice >= 0 ? `<div><span class="etq">Pregunta</span><span class="valor">${Math.min(e.indice + 1, e.total)} de ${e.total}</span></div>` : ""}
+          ${extra}</div>`;
+      }
+
+      function pintar() {
+        const e = estado;
+        if (e.esAnfitrion) return pintarAnfitrion(e);
+        if (!e.yo) { localStorage.removeItem(`vivo:${codigo}`); return formulario(); }
+        const yo = e.yo;
+        if (e.fase === "sala") {
+          raiz.innerHTML = `${rotulo(e)}<div class="esperando"><span class="etq">Ya estás dentro</span><h1 class="pregunta">${esc(yo.nombre)}</h1>
+            <p class="ayuda">Espera a que el anfitrión empiece. Van ${e.jugadores} en la sala.</p></div>`;
+        } else if (e.fase === "pregunta") {
+          const elegida = yo.elegida;
+          raiz.innerHTML = `${rotulo(e, `<div><span class="etq">Tiempo</span><span class="valor" id="cuenta-n">${Math.ceil(restante())}</span></div>`)}
+            <div class="cuenta"><span id="cuenta-b"></span></div>
+            <p class="pregunta">${esc(e.pregunta.texto)}</p>${figura(e.pregunta.imagenUrl)}
+            ${elegida === null
+              ? `<div class="opciones">${e.pregunta.opciones.map((t, k) => `<button class="opcion" data-k="${k}"><span class="letra">${LETRAS[k]}</span><span class="texto">${esc(t)}</span></button>`).join("")}</div>`
+              : `<div class="esperando"><span class="etq">Respuesta enviada</span><strong>${LETRAS[elegida]}) ${esc(e.pregunta.opciones[elegida])}</strong><p class="ayuda">Espera el resultado… respondieron ${e.respondieron} de ${e.jugadores}.</p></div>`}`;
+          raiz.querySelectorAll(".opcion").forEach((b) => b.addEventListener("click", () => responder(Number(b.dataset.k))));
+        } else if (e.fase === "revision") {
+          const bien = yo.elegida !== null && yo.elegida === e.correcta;
+          raiz.innerHTML = `${rotulo(e)}
+            <div class="veredicto ${bien ? "ok" : "ko"}"><span class="etq">${yo.elegida === null ? "No respondiste a tiempo" : bien ? "¡Correcto!" : "Incorrecto"}</span>
+              <strong>${bien ? `+${yo.ganados}` : "+0"}</strong><span>Vas ${yo.posicion}.º de ${e.jugadores} · ${yo.puntos} puntos</span></div>
+            <p class="pregunta">${esc(e.pregunta.texto)}</p>
+            <div class="opciones">${e.pregunta.opciones.map((t, k) => `<button class="opcion ${k === e.correcta ? "bien" : k === yo.elegida ? "mal" : "apagada"}" disabled><span class="letra">${LETRAS[k]}</span><span class="texto">${esc(t)}</span></button>`).join("")}</div>
+            <p class="ayuda">Espera la siguiente pregunta.</p>`;
+        } else {
+          raiz.innerHTML = `${rotulo(e)}
+            <div class="veredicto ok"><span class="etq">Partida terminada</span><strong>${yo.posicion}.º de ${e.jugadores}</strong><span>${yo.puntos} puntos</span></div>
+            ${podio(e.ranking.slice(0, 10))}
+            <a class="btn btn-acento btn-bloque" href="/">${icono("i-app")}Sigue practicando con Tekluma</a>
+            <p class="nota">En la app: tarjetas de toda la E.060 con la cita del artículo, simulacros con nota y duelos con colegas.</p>`;
+        }
+      }
+
+      async function responder(k) {
+        if (enviando) return;
+        enviando = true;
+        raiz.querySelectorAll(".opcion").forEach((b) => { b.disabled = true; if (Number(b.dataset.k) === k) b.classList.add("elegida"); });
+        try {
+          await api(`/vivo/${codigo}/responder`, { token: leer(`vivo:${codigo}`, {}).token, opcion: k });
+        } catch {}
+        enviando = false;
+        consultar();
+      }
+
+      const podio = (filas) => `<div class="podio">${filas.map((f, i) => `<div class="${f.soyYo ? "yo" : ""}"><span class="p">${i === 0 ? icono("i-podio") : String(i + 1).padStart(2, "0")}</span><span>${esc(f.nombre)}</span><span class="pts">${f.puntos}</span></div>`).join("")}</div>`;
+
+      // ───────── Pantalla del anfitrión (para proyectar) ─────────
+      async function avanzar() {
+        const b = document.getElementById("avanzar");
+        if (b) b.disabled = true;
+        try { await api(`/vivo/${codigo}/avanzar`, { clave }); } catch {}
+        consultar();
+      }
+      const boton = (texto, deshabilitado = false) => `<button class="btn btn-acento" id="avanzar" ${deshabilitado ? "disabled" : ""}>${texto} ${icono("i-flecha")}</button>`;
+
+      function pintarAnfitrion(e) {
+        document.body.classList.add("anfitrion");
+        const pantalla = `<button class="btn btn-linea" id="completa">Pantalla completa</button>`;
+        if (e.fase === "sala") {
+          raiz.innerHTML = `
+            <div class="sala-anfitrion">
+              <div class="juego">
+                <span class="etq">Entra en ${esc(location.host)}/vivo</span>
+                <span class="cifra-grande">${esc(e.codigo)}</span>
+                <p class="ayuda">Escanea el código o entra a la web y escribe el código de la sala. Norma ${esc(e.norma)} · ${e.total} preguntas · ${e.segundos} s cada una.</p>
+              </div>
+              <div class="qr" id="qr"></div>
+            </div>
+            <span class="etq">${e.jugadores} en la sala</span>
+            <div class="chips">${(e.nombres || []).map((n) => `<span>${esc(n)}</span>`).join("")}</div>
+            <div class="barra-anfitrion">${pantalla}${boton("Empezar", e.jugadores === 0)}</div>`;
+          ponerQr();
+        } else if (e.fase === "pregunta") {
+          raiz.innerHTML = `${rotulo(e, `<div><span class="etq">Tiempo</span><span class="valor" id="cuenta-n">${Math.ceil(restante())}</span></div><div><span class="etq">Respondieron</span><span class="valor">${e.respondieron} de ${e.jugadores}</span></div>`)}
+            <div class="cuenta"><span id="cuenta-b"></span></div>
+            <p class="pregunta">${esc(e.pregunta.texto)}</p>${figura(e.pregunta.imagenUrl)}
+            <div class="opciones">${e.pregunta.opciones.map((t, k) => `<button class="opcion" disabled><span class="letra">${LETRAS[k]}</span><span class="texto">${esc(t)}</span></button>`).join("")}</div>
+            <div class="barra-anfitrion">${pantalla}${boton("Cerrar pregunta")}</div>`;
+        } else if (e.fase === "revision") {
+          const max = Math.max(1, ...e.reparto);
+          raiz.innerHTML = `${rotulo(e)}
+            <div class="revision-anfitrion">
+              <div>
+                <p class="pregunta">${esc(e.pregunta.texto)}</p>
+                <div class="opciones">${e.pregunta.opciones.map((t, k) => `<button class="opcion ${k === e.correcta ? "bien" : "apagada"}" disabled><span class="letra">${LETRAS[k]}</span><span class="texto">${esc(t)}</span></button>`).join("")}</div>
+              </div>
+              <div>
+                <span class="etq">Respuestas</span>
+                <div class="reparto">${e.reparto.map((n, k) => `<div class="${k === e.correcta ? "bien" : ""}"><span>${LETRAS[k]}</span><i style="width:${(n / max) * 100}%"></i><span>${n}</span></div>`).join("")}</div>
+                <span class="etq">Ranking</span>${podio(e.ranking.slice(0, 5))}
+              </div>
+            </div>
+            <div class="barra-anfitrion">${pantalla}${boton(e.indice + 1 >= e.total ? "Ver el podio" : "Siguiente pregunta")}</div>`;
+        } else {
+          raiz.innerHTML = `${rotulo(e)}<h1 class="pregunta">${icono("i-podio")} Podio</h1>${podio(e.ranking.slice(0, 10))}
+            <p class="ayuda">Gracias por jugar. Crea otra partida desde la app Tekluma.</p>`;
+        }
+        document.getElementById("avanzar")?.addEventListener("click", avanzar);
+        document.getElementById("completa")?.addEventListener("click", () => document.documentElement.requestFullscreen?.());
+      }
+
+      // El QR de la sala; la librería carga en diferido, así que también se intenta al terminar de cargar.
+      function ponerQr() {
+        const caja = document.getElementById("qr");
+        if (!caja || !window.qrcode || caja.firstChild) return;
+        const q = qrcode(0, "M");
+        q.addData(enlace);
+        q.make();
+        caja.innerHTML = q.createSvgTag({ scalable: true, margin: 0 });
+      }
+      addEventListener("load", ponerQr);
+
+      let sondeo = null;
+      if (!codigo) formulario();
+      else if (!clave && !leer(`vivo:${codigo}`, null)) formulario();
+      else { consultar(); sondeo = setInterval(consultar, 1000); }
+    </script>
+  </body>
+</html>

@@ -486,3 +486,48 @@ export const mockExams = pgTable(
   },
   (t) => [index("mock_exams_user_idx").on(t.userId, t.createdAt)],
 );
+
+// ───────────── Live games ─────────────
+
+/** A live quiz: the host projects it and moves it forward; players answer from their phones. */
+export const liveGames = pgTable("live_games", {
+  id: id(),
+  code: text("code").notNull().unique(),
+  hostId: uuid("host_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  /** Secret that lets the projected screen (web, no session) control the game. */
+  hostKey: text("host_key").notNull(),
+  standardCode: text("standard_code").notNull(),
+  cardIds: jsonb("card_ids").$type<string[]>().notNull(),
+  questionSeconds: integer("question_seconds").notNull(),
+  phase: text("phase").$type<"sala" | "pregunta" | "revision" | "fin">().notNull().default("sala"),
+  questionIndex: integer("question_index").notNull().default(-1),
+  questionStartedAt: timestamp("question_started_at", { withTimezone: true }),
+  createdAt: createdAt(),
+});
+
+export const livePlayers = pgTable(
+  "live_players",
+  {
+    id: id(),
+    gameId: uuid("game_id").notNull().references(() => liveGames.id, { onDelete: "cascade" }),
+    name: text("name").notNull(),
+    /** Secret kept by the player's browser to send answers. */
+    token: text("token").notNull().unique(),
+    score: integer("score").notNull().default(0),
+    createdAt: createdAt(),
+  },
+  (t) => [index("live_players_game_idx").on(t.gameId, t.score)],
+);
+
+export const liveAnswers = pgTable(
+  "live_answers",
+  {
+    playerId: uuid("player_id").notNull().references(() => livePlayers.id, { onDelete: "cascade" }),
+    gameId: uuid("game_id").notNull().references(() => liveGames.id, { onDelete: "cascade" }),
+    questionIndex: integer("question_index").notNull(),
+    option: integer("option").notNull(),
+    points: integer("points").notNull(),
+    createdAt: createdAt(),
+  },
+  (t) => [primaryKey({ columns: [t.playerId, t.questionIndex] }), index("live_answers_game_idx").on(t.gameId, t.questionIndex)],
+);

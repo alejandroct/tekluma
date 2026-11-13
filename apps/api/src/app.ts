@@ -15,6 +15,7 @@ import { mazosRoutes } from "./routes/mazos";
 import { reclamos } from "./routes/reclamos";
 import { simulacros } from "./routes/simulacros";
 import { repasos } from "./routes/repasos";
+import { vivo } from "./routes/vivo";
 import { webhooks } from "./routes/webhooks";
 import { reportarError } from "./sentry";
 
@@ -36,6 +37,7 @@ export const app = new Hono()
   .route("/reclamos", reclamos)
   .route("/simulacros", simulacros)
   .route("/repasos", repasos)
+  .route("/vivo", vivo)
   .route("/webhooks", webhooks)
   // Expected errors (4xx with a message) go back as they are; anything else is a bug: report it.
   .onError((error, c) => {

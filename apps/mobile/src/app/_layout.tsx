@@ -98,6 +98,7 @@ function RootLayout() {
               ),
             }}
           />
+          <Stack.Screen name="vivo" options={{ title: "En vivo", presentation: "modal", headerShadowVisible: false }} />
           <Stack.Screen name="simulacro/index" options={{ title: "Simulacro", presentation: "modal", headerShadowVisible: false }} />
           <Stack.Screen name="simulacro/[id]" options={{ title: "Simulacro", presentation: "fullScreenModal", headerShadowVisible: false }} />
           <Stack.Screen name="duelo/nuevo" options={{ title: "Duelo", presentation: "modal", headerShadowVisible: false }} />
