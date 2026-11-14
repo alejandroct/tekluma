@@ -281,7 +281,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Muro de {H} mm de espesor. ¿Área mínima de refuerzo horizontal por metro de altura (mm²/m)?",
+      "enunciado": "Muro de {H} mm de espesor diseñado con el Capítulo 14. ¿Cuál es el área mínima de refuerzo horizontal por metro de altura (mm²/m)?",
       "variables": {
        "H": {
         "etiqueta": "Espesor",
@@ -396,7 +396,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Muro de carga de h = {H} mm, f′c = 21 MPa, altura libre ℓc = {L} mm y k = 0,8. ¿φPn por metro de muro (kN/m)?",
+      "enunciado": "Muro de carga de espesor h = {H} mm, f′c = 21 MPa, altura libre ℓc = {L} mm y factor de longitud efectiva k = 0,8, diseñado por el método empírico. ¿Cuál es su resistencia axial de diseño φPn por metro de longitud de muro (kN/m)?",
       "variables": {
        "H": {
         "etiqueta": "Espesor",
@@ -533,12 +533,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuál es el espaciamiento máximo del refuerzo en muros?",
+      "pregunta": "¿Cuál es el espaciamiento máximo del refuerzo vertical y horizontal de un muro (t = espesor del muro)?",
       "opciones": [
        "2 t y 300 mm",
        "3 t y 400 mm",
        "5 t y 450 mm",
-       "400 mm"
+       "3 t y 300 mm"
       ],
       "correcta": 1
      },
@@ -552,7 +552,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método empírico: ¿qué k se usa en un muro arriostrado arriba y abajo y restringido al giro?",
+      "pregunta": "En el método empírico de diseño de muros de carga, ¿qué factor de longitud efectiva k corresponde a un muro arriostrado arriba y abajo y restringido contra la rotación en uno o ambos extremos?",
       "opciones": [
        "0,8",
        "1,0",
@@ -564,14 +564,14 @@
      "citas": [
       {
        "articulo": "14.5.2",
-       "extracto": "φPn = 0,55 φ f’c Ag [1 − (k ℓc / 32h)²] (14-1) donde φ = 0,70"
+       "extracto": "(a) Restringidos contra la rotación en uno o ambos extremos (superior y/o inferior)….. 0,8"
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Espesor mínimo de un muro exterior de sótano?",
+      "pregunta": "¿Cuál es el espesor mínimo de un muro exterior de sótano o de cimentación?",
       "opciones": [
        "150 mm",
        "200 mm",
@@ -628,12 +628,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Placas que resisten sismo en su plano: ¿con qué capítulo se diseñan?",
+      "pregunta": "Las placas o muros de corte, que resisten fuerzas sísmicas en su plano, ¿con qué capítulo de la E.060 se diseñan?",
       "opciones": [
-       "Cap. 14",
-       "Cap. 21",
-       "Cap. 11",
-       "Cap. 22"
+       "Capítulo 14 (Muros)",
+       "Capítulo 21 (Disposiciones especiales para el diseño sísmico)",
+       "Capítulo 11 (Cortante y torsión)",
+       "Capítulo 22 (Concreto estructural simple)"
       ],
       "correcta": 1
      },
@@ -647,7 +647,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro de 200 mm con una carga concentrada sobre 300 mm de apoyo y cargas a 2 m entre centros: ¿longitud efectiva?",
+      "pregunta": "Muro de 200 mm de espesor con cargas concentradas separadas 2 m entre centros, cada una sobre una superficie de contacto de 300 mm: ¿qué longitud horizontal de muro se considera efectiva para cada carga?",
       "opciones": [
        "300 mm",
        "700 mm",
@@ -667,12 +667,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuándo debe confinarse con estribos el refuerzo vertical de un muro?",
+      "pregunta": "Según el Capítulo 14, ¿cuándo debe confinarse con estribos el refuerzo vertical distribuido de un muro?",
       "opciones": [
-       "Siempre",
-       "Si su cuantía excede 0,01 del área total",
-       "Si el muro mide más de 200 mm",
-       "Nunca"
+       "En todos los muros de carga",
+       "Cuando su cuantía excede 0,01 del área total de concreto",
+       "Cuando el muro tiene más de 200 mm de espesor",
+       "Cuando su cuantía excede 0,0025"
       ],
       "correcta": 1
      },
@@ -686,12 +686,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Dónde debe caer la resultante de cargas para usar el método empírico en un muro de carga?",
+      "pregunta": "Para diseñar un muro de carga por el método empírico, ¿dónde debe estar la resultante de todas las cargas amplificadas?",
       "opciones": [
-       "En el núcleo central de la sección",
-       "Dentro del tercio central del espesor",
-       "En el eje del muro",
-       "Donde sea"
+       "Dentro de la mitad central del espesor del muro",
+       "Dentro del tercio central del espesor del muro",
+       "Exactamente en el eje del muro",
+       "Dentro del sexto central del espesor del muro"
       ],
       "correcta": 1
      },
@@ -705,7 +705,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método empírico: muro arriostrado arriba y abajo, sin restricción al giro en ambos extremos: ¿k?",
+      "pregunta": "En el método empírico de diseño de muros de carga, ¿qué factor de longitud efectiva k corresponde a un muro arriostrado arriba y abajo, pero no restringido contra la rotación en ambos extremos?",
       "opciones": [
        "0,8",
        "1,0",
@@ -724,7 +724,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método empírico: muro no arriostrado contra desplazamiento lateral: ¿k?",
+      "pregunta": "En el método empírico de diseño de muros de carga, ¿qué factor de longitud efectiva k corresponde a un muro no arriostrado contra el desplazamiento lateral?",
       "opciones": [
        "1,0",
        "1,2",
@@ -743,7 +743,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro de carga de 2,7 m de altura libre y 6 m de largo (método empírico): ¿espesor mínimo?",
+      "pregunta": "Muro de carga diseñado por el método empírico, con 2,7 m de altura entre apoyos laterales y 6 m de longitud: ¿cuál es su espesor mínimo?",
       "opciones": [
        "100 mm",
        "108 mm",
@@ -751,7 +751,7 @@
        "240 mm"
       ],
       "correcta": 1,
-      "explicacion": "2700 / 25 = 108 mm > 100 mm."
+      "explicacion": "1/25 de la menor entre la altura y la longitud: 2700 / 25 = 108 mm, mayor que el mínimo de 100 mm."
      },
      "citas": [
       {
@@ -763,7 +763,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro no portante con 4 m entre apoyos laterales: ¿espesor mínimo?",
+      "pregunta": "Muro no portante (que no es de carga) con 4 m de distancia mínima entre los elementos que le dan apoyo lateral: ¿cuál es su espesor mínimo?",
       "opciones": [
        "100 mm",
        "133 mm",
@@ -783,12 +783,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro usado como viga de cimentación: ¿qué refuerzo mínimo debe tener?",
+      "pregunta": "Un muro empleado como viga de cimentación, ¿qué refuerzo mínimo debe cumplir?",
       "opciones": [
-       "Ninguno",
-       "El de 14.3",
-       "El de vigas (10.5) solamente",
-       "0,0025 en ambas direcciones"
+       "Solo el refuerzo mínimo de vigas",
+       "El refuerzo mínimo de muros (cuantías y espaciamientos de 14.3)",
+       "Solo el refuerzo de retracción y temperatura de losas",
+       "Cuantía 0,0025 en ambas direcciones"
       ],
       "correcta": 1
      },
@@ -802,12 +802,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro de contención: ¿cuándo puede omitirse el refuerzo mínimo de 14.3?",
+      "pregunta": "En un muro de contención, ¿cuándo puede exceptuarse el refuerzo mínimo de muros?",
       "opciones": [
-       "Nunca",
-       "Si el proyectista dispone juntas de contracción y procedimientos que controlen contracción y temperatura",
-       "Si mide menos de 250 mm",
-       "Si está enterrado"
+       "Cuando el muro tiene menos de 250 mm de espesor",
+       "Cuando el Ingeniero Proyectista dispone juntas de contracción y procedimientos constructivos que controlen la contracción y la temperatura",
+       "Cuando el muro queda totalmente enterrado",
+       "Cuando el muro tiene menos de 3 m de altura"
       ],
       "correcta": 1
      },
@@ -821,12 +821,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En un muro de contención grueso, ¿en qué cara puede concentrarse más el acero de temperatura?",
+      "pregunta": "En un muro de contención de 250 mm o más de espesor, ¿en qué cara puede disponerse una mayor proporción del acero de temperatura y contracción?",
       "opciones": [
-       "En la cara contra el suelo",
+       "En la cara en contacto con el suelo",
        "En la cara expuesta",
-       "Por igual siempre",
-       "En el centro"
+       "En el centro del espesor",
+       "En la cara comprimida por flexión"
       ],
       "correcta": 1
      },
@@ -840,12 +840,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muros de contención anclados: ¿qué debe verificarse especialmente?",
+      "pregunta": "En muros de contención anclados, ¿qué verificación exige especial atención?",
       "opciones": [
-       "Solo el volteo",
-       "El punzonamiento por los anclajes y cada etapa de construcción",
-       "La fisuración",
-       "Nada adicional"
+       "El volteo del muro",
+       "El punzonamiento ocasionado por los dispositivos de anclaje",
+       "La fisuración por retracción",
+       "El deslizamiento de la base"
       ],
       "correcta": 1
      },
@@ -859,12 +859,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se consideran las aberturas al calcular la rigidez de un muro?",
+      "pregunta": "¿Deben considerarse las aberturas de un muro en su cálculo?",
       "opciones": [
-       "No",
-       "Sí, en rigideces y resistencias",
-       "Solo en resistencia",
-       "Solo si son mayores de 1 m"
+       "No, se ignoran",
+       "Sí, tanto en las rigideces como en las resistencias",
+       "Solo en las resistencias",
+       "Solo si miden más de 1 m"
       ],
       "correcta": 1
      },

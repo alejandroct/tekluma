@@ -304,7 +304,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Columna con carga de servicio P = {P} kN sobre un suelo con presión admisible de {Q} kPa. ¿Área mínima de la zapata (m²)?",
+      "enunciado": "Columna que transmite una carga de servicio P = {P} kN a un suelo con presión admisible de {Q} kPa. Sin contar el peso propio de la zapata, ¿cuál es el área mínima de la zapata (m²)?",
       "variables": {
        "P": {
         "etiqueta": "P servicio",
@@ -386,7 +386,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Suelo con presión admisible de {Q} kPa. ¿Presión admisible para combinaciones con sismo (kPa)?",
+      "enunciado": "Suelo con presión admisible de {Q} kPa. ¿Hasta qué presión admisible (kPa) puede considerarse en los estados de carga con sismo o viento?",
       "variables": {
        "Q": {
         "etiqueta": "q admisible",
@@ -465,7 +465,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Zapata con presión amplificada qu = {Q} kPa y un volado de {C} m desde la cara de la columna. ¿Mu por metro de ancho (kN·m/m)?",
+      "enunciado": "Zapata con presión amplificada del suelo qu = {Q} kPa y un volado de {C} m medido desde la cara de la columna. ¿Cuánto vale el momento amplificado Mu en la cara de la columna, por metro de ancho (kN·m/m)?",
       "variables": {
        "Q": {
         "etiqueta": "qu",
@@ -513,7 +513,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Zapata de {L} × {B} m (largo × corto). ¿Qué fracción γs del acero corto va en la franja central?",
+      "enunciado": "Zapata rectangular de {L} m (lado largo) × {B} m (lado corto) armada en dos direcciones. ¿Qué fracción γs del refuerzo de la dirección corta debe ir en la franja central de ancho igual al lado corto?",
       "variables": {
        "L": {
         "etiqueta": "Lado largo",
@@ -617,7 +617,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Columna vaciada en obra de {B} × {H} mm. ¿Área mínima de refuerzo que cruza la junta con la zapata (mm²)?",
+      "enunciado": "Columna construida en obra de {B} × {H} mm. ¿Cuál es el área mínima de refuerzo (mm²) que debe cruzar la junta entre la columna y la zapata?",
       "variables": {
        "B": {
         "etiqueta": "b",
@@ -663,12 +663,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se puede usar el Método Directo del Capítulo 13 para zapatas combinadas y losas de cimentación?",
+      "pregunta": "¿Puede usarse el Método Directo de losas en dos direcciones (Capítulo 13) para diseñar zapatas combinadas y losas de cimentación?",
       "opciones": [
-       "Sí, siempre",
+       "Sí, en todos los casos",
        "Sí, si hay tres paños por dirección",
-       "No",
-       "Solo en losas de cimentación"
+       "No debe utilizarse",
+       "Sí, pero solo en losas de cimentación"
       ],
       "correcta": 2
      },
@@ -695,12 +695,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Con qué cargas se dimensiona el área de la zapata?",
+      "pregunta": "¿Con qué cargas se determina el área de la base de una zapata?",
       "opciones": [
-       "Amplificadas",
-       "De servicio",
-       "Solo carga muerta",
-       "Las del sismo"
+       "Con las cargas amplificadas",
+       "Con las cargas de servicio, sin amplificar",
+       "Solo con la carga muerta",
+       "Con las cargas amplificadas divididas entre φ"
       ],
       "correcta": 1
      },
@@ -714,7 +714,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuánto puede aumentar la presión admisible del suelo con sismo o viento?",
+      "pregunta": "¿En qué porcentaje puede incrementarse la presión admisible del suelo en los estados de carga con cargas temporales, como sismo o viento?",
       "opciones": [
        "10 %",
        "20 %",
@@ -733,12 +733,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿A qué porcentaje pueden reducirse las fuerzas sísmicas para verificar el suelo?",
+      "pregunta": "Para determinar los esfuerzos en el suelo o las fuerzas en pilotes, ¿a qué porcentaje pueden reducirse las acciones sísmicas del análisis?",
       "opciones": [
        "50 %",
        "70 %",
        "80 %",
-       "No se reducen"
+       "90 %"
       ],
       "correcta": 2
      },
@@ -752,12 +752,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata con columna de concreto: ¿dónde está la sección crítica por flexión?",
+      "pregunta": "En una zapata que soporta una columna de concreto, ¿dónde está la sección crítica para el momento flector?",
       "opciones": [
-       "En el eje",
+       "En el eje de la columna",
        "En la cara de la columna",
-       "A d de la cara",
-       "A d/2 de la cara"
+       "A una distancia d de la cara de la columna",
+       "A una distancia d/2 de la cara de la columna"
       ],
       "correcta": 1
      },
@@ -771,7 +771,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata de 3,0 × 2,0 m: ¿qué fracción γs del acero corto va en la franja central?",
+      "pregunta": "Zapata rectangular de 3,0 × 2,0 m armada en dos direcciones: ¿qué fracción γs del refuerzo de la dirección corta debe ir en la franja central de ancho igual al lado corto?",
       "opciones": [
        "0,60",
        "0,67",
@@ -779,7 +779,7 @@
        "1,00"
       ],
       "correcta": 2,
-      "explicacion": "β = 1,5 → γs = 2 / 2,5 = 0,80."
+      "explicacion": "β = lado largo / lado corto = 1,5, y γs = 2 / (β + 1) = 2 / 2,5 = 0,80."
      },
      "citas": [
       {
@@ -791,7 +791,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuál es la altura mínima de una zapata sobre el suelo, sobre el refuerzo inferior?",
+      "pregunta": "¿Cuál es la altura mínima, medida sobre el refuerzo inferior, de una zapata apoyada sobre el suelo?",
       "opciones": [
        "200 mm",
        "250 mm",
@@ -829,12 +829,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué refuerzo mínimo cruza la junta columna–zapata en columnas vaciadas en obra?",
+      "pregunta": "En columnas construidas en obra, ¿qué área mínima de refuerzo debe cruzar la junta columna-zapata (Ag = área bruta de la columna)?",
       "opciones": [
        "0,0015 Ag",
        "0,005 Ag",
        "0,01 Ag",
-       "4 barras"
+       "0,0025 Ag"
       ],
       "correcta": 1
      },
@@ -848,12 +848,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si la carga de una zapata es excéntrica y sale tracción en un borde, ¿se cuenta esa tracción con el suelo?",
+      "pregunta": "Si la carga de una zapata es excéntrica y el cálculo elástico daría tracción en un borde, ¿se cuenta con esa tracción entre el suelo y la zapata?",
       "opciones": [
-       "Sí",
-       "No: no se consideran tracciones suelo–zapata",
-       "Solo con sismo",
-       "Solo en roca"
+       "Sí, hasta la presión admisible",
+       "No: no se consideran tracciones entre zapata y suelo",
+       "Solo en combinaciones con sismo",
+       "Solo en suelos cohesivos"
       ],
       "correcta": 1
      },
@@ -867,12 +867,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata sobre pilotes: ¿dónde se supone concentrada la reacción de cada pilote?",
+      "pregunta": "En una zapata sobre pilotes, ¿dónde se supone concentrada la reacción de cada pilote para calcular momentos y cortantes?",
       "opciones": [
-       "En su borde",
+       "En el borde del pilote más cercano a la columna",
        "En el eje del pilote",
-       "Repartida en la zapata",
-       "En la cara de la columna"
+       "Repartida en toda la base de la zapata",
+       "En el borde del pilote más alejado de la columna"
       ],
       "correcta": 1
      },
@@ -886,12 +886,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna con plancha de acero: ¿dónde está la sección crítica por flexión de la zapata?",
+      "pregunta": "En una zapata que soporta una columna con plancha de apoyo de acero, ¿dónde está la sección crítica para el momento flector?",
       "opciones": [
        "En la cara de la columna",
-       "A medio camino entre la cara de la columna y el borde de la plancha",
+       "En el punto medio entre la cara de la columna y el borde de la plancha",
        "En el borde de la plancha",
-       "En el eje"
+       "En el eje de la columna"
       ],
       "correcta": 1
      },
@@ -905,12 +905,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata rectangular en dos direcciones: ¿cómo se reparte el acero de la dirección larga?",
+      "pregunta": "En una zapata rectangular armada en dos direcciones, ¿cómo se distribuye el refuerzo de la dirección larga?",
       "opciones": [
        "Concentrado bajo la columna",
-       "Uniforme en todo el ancho",
-       "Con γs",
-       "En dos franjas"
+       "Uniformemente en el ancho total de la zapata",
+       "Una fracción γs en una franja central",
+       "En dos franjas junto a los bordes"
       ],
       "correcta": 1
      },
@@ -924,14 +924,15 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata de 3,0 × 2,0 m: ¿qué ancho tiene la franja central para el acero corto?",
+      "pregunta": "Zapata rectangular de 3,0 × 2,0 m: ¿qué ancho tiene la franja central donde se concentra el refuerzo de la dirección corta?",
       "opciones": [
        "1,0 m",
        "1,5 m",
-       "2,0 m (el lado corto)",
+       "2,0 m",
        "3,0 m"
       ],
-      "correcta": 2
+      "correcta": 2,
+      "explicacion": "El ancho de la franja es igual a la longitud del lado corto de la zapata."
      },
      "citas": [
       {
@@ -943,12 +944,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Desde dónde se mide la sección crítica por cortante en una zapata con columna de concreto?",
+      "pregunta": "En una zapata con columna de concreto, ¿desde dónde se mide la ubicación de la sección crítica para cortante?",
       "opciones": [
        "Desde el eje de la columna",
        "Desde la cara de la columna, pedestal o muro",
        "Desde el borde de la zapata",
-       "Desde el centro del pilote"
+       "Desde el borde del refuerzo de la columna"
       ],
       "correcta": 1
      },
@@ -962,12 +963,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Pilote con su centro a dp/2 o más hacia el interior de la sección: ¿cuánto cortante produce en ella?",
+      "pregunta": "Un pilote cuyo centro está a medio diámetro (dp/2) o más hacia el lado interior de una sección de la zapata, ¿qué parte de su reacción produce cortante en esa sección?",
       "opciones": [
-       "Todo",
-       "La mitad",
+       "Toda su reacción",
+       "La mitad de su reacción",
        "Nada",
-       "Depende de d"
+       "Un cuarto de su reacción"
       ],
       "correcta": 2
      },
@@ -981,15 +982,15 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Pilote con su centro justo sobre la sección crítica: ¿qué parte de su reacción produce cortante?",
+      "pregunta": "Un pilote cuyo centro coincide exactamente con una sección de la zapata, ¿qué parte de su reacción produce cortante en esa sección?",
       "opciones": [
        "0 %",
        "50 %",
        "100 %",
-       "dp/2"
+       "25 %"
       ],
       "correcta": 1,
-      "explicacion": "A medio camino entre 100 % y 0 %."
+      "explicacion": "Se interpola linealmente entre el 100 % (centro a dp/2 hacia afuera) y 0 % (centro a dp/2 hacia adentro)."
      },
      "citas": [
       {
@@ -1001,12 +1002,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En zapatas, ¿para qué esfuerzos pueden usarse ganchos de anclaje?",
+      "pregunta": "Al desarrollar el refuerzo de una zapata, ¿para qué esfuerzos pueden usarse ganchos como anclaje?",
       "opciones": [
-       "Tracción y compresión",
-       "Solo en tracción",
-       "Solo en compresión",
-       "No se permiten"
+       "Para tracción y compresión",
+       "Solo para tracción",
+       "Solo para compresión",
+       "Solo para barras de 5/8″ y menores"
       ],
       "correcta": 1
      },
@@ -1020,12 +1021,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Además de 300 mm, ¿qué otro requisito condiciona el peralte de una zapata?",
+      "pregunta": "Además de las alturas mínimas, ¿con qué requisito debe ser compatible el peralte de una zapata?",
       "opciones": [
-       "El ancho de la columna",
-       "El anclaje de las armaduras de columnas, pedestales y muros",
-       "La presión admisible",
-       "Nada"
+       "Con el ancho de la columna",
+       "Con el anclaje de las armaduras de las columnas, pedestales y muros que se apoyan en ella",
+       "Con el diámetro del agregado grueso",
+       "Con el espesor del solado"
       ],
       "correcta": 1
      },
@@ -1039,12 +1040,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cómo se transmiten las fuerzas laterales de la columna a la zapata?",
+      "pregunta": "¿Cómo deben transmitirse a la zapata las fuerzas laterales de una columna, muro o pedestal?",
       "opciones": [
-       "Por aplastamiento",
-       "Por cortante por fricción (11.7) u otros medios apropiados",
-       "Solo por los estribos",
-       "No se transmiten"
+       "Por aplastamiento del concreto",
+       "Por cortante por fricción u otros medios apropiados",
+       "Solo por los estribos de la columna",
+       "Por adherencia entre concreto y suelo"
       ],
       "correcta": 1
      },
@@ -1058,12 +1059,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna de 400 × 400 mm vaciada en obra: ¿área mínima de refuerzo que cruza la junta con la zapata?",
+      "pregunta": "Columna de 400 × 400 mm construida en obra: ¿cuál es el área mínima de refuerzo que debe cruzar la junta con la zapata?",
       "opciones": [
        "240 mm²",
        "800 mm²",
        "1600 mm²",
-       "4 barras de 5/8″"
+       "400 mm²"
       ],
       "correcta": 1,
       "explicacion": "0,005 × 160 000 = 800 mm²."
@@ -1078,11 +1079,11 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Pernos de anclaje en elementos prefabricados: ¿qué deben alcanzar antes de fallar el anclaje?",
+      "pregunta": "Los pernos de anclaje y conectores mecánicos de elementos prefabricados apoyados en la cimentación, ¿qué deben alcanzar antes de que falle su anclaje o el concreto que los rodea?",
       "opciones": [
-       "0,5 fy",
+       "La mitad de su fluencia",
        "Su resistencia de diseño",
-       "1,25 fy",
+       "1,25 veces su fluencia",
        "La carga de servicio"
       ],
       "correcta": 1
@@ -1097,11 +1098,11 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata escalonada diseñada como unidad: ¿qué exige la norma?",
+      "pregunta": "¿Qué exige la E.060 para una zapata con pendiente o escalonada que se diseña como una unidad?",
       "opciones": [
-       "Nada",
-       "Construirla para asegurar que trabaje como tal",
-       "Vaciar cada escalón por separado",
+       "Que tenga refuerzo en cada escalón",
+       "Que se construya asegurando su comportamiento como unidad",
+       "Que cada escalón se vacíe por separado",
        "Que no tenga más de dos escalones"
       ],
       "correcta": 1
@@ -1116,12 +1117,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapatas combinadas y losas de cimentación: ¿cómo se define la presión del terreno?",
+      "pregunta": "En zapatas combinadas y losas de cimentación, ¿cómo debe definirse la distribución de la presión del terreno?",
       "opciones": [
        "Siempre uniforme",
-       "Consistente con las propiedades del suelo, de la estructura y la mecánica de suelos",
-       "Triangular",
-       "Con el Método Directo"
+       "De forma consistente con las propiedades del suelo y de la estructura y con la mecánica de suelos",
+       "Siempre triangular",
+       "Con los coeficientes del Método Directo"
       ],
       "correcta": 1
      },
