@@ -279,7 +279,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Columna de {B} × {H} mm. ¿Área máxima que pueden ocupar los ductos embebidos (mm²)?",
+      "enunciado": "Columna de {B} × {H} mm. ¿Cuál es el área máxima (mm²) que pueden ocupar los ductos y tuberías embebidos en ella?",
       "variables": {
        "B": {
         "etiqueta": "b",
@@ -352,7 +352,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Losa maciza de {T} mm de espesor. ¿Diámetro exterior máximo de una tubería embebida (mm)?",
+      "enunciado": "Losa maciza de {T} mm de espesor total. ¿Cuál es la dimensión exterior máxima (mm) de una tubería embebida en ella?",
       "variables": {
        "T": {
         "etiqueta": "Espesor",
@@ -448,12 +448,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Dónde se ubican las juntas de construcción en losas y vigas?",
+      "pregunta": "¿En qué zona del vano de losas y vigas de pisos y techos deben ubicarse las juntas de construcción?",
       "opciones": [
-       "Junto a los apoyos",
-       "En el tercio central del vano",
-       "A d de la cara del apoyo",
-       "Donde lo decida el maestro de obra"
+       "Junto a la cara de los apoyos",
+       "Dentro del tercio central del vano",
+       "A una distancia d de la cara del apoyo",
+       "En los tercios extremos del vano"
       ],
       "correcta": 1
      },
@@ -511,7 +511,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa de 200 mm: ¿diámetro exterior máximo de una tubería embebida?",
+      "pregunta": "En una losa de 200 mm de espesor total, ¿cuál es la dimensión exterior máxima de una tubería embebida?",
       "opciones": [
        "50 mm",
        "66,7 mm",
@@ -531,12 +531,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿A qué distancia mínima entre centros se colocan tuberías embebidas paralelas?",
+      "pregunta": "¿Cuál es el espaciamiento mínimo, de centro a centro, entre tuberías embebidas en una losa, muro o viga?",
       "opciones": [
-       "1 diámetro",
-       "2 diámetros",
-       "3 diámetros",
-       "5 diámetros"
+       "1 vez su diámetro",
+       "2 veces su diámetro",
+       "3 veces su diámetro",
+       "5 veces su diámetro"
       ],
       "correcta": 2
      },
@@ -550,7 +550,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Tubería embebida en contacto con el suelo: ¿recubrimiento mínimo?",
+      "pregunta": "¿Cuál es el recubrimiento mínimo de concreto de una tubería embebida en una superficie en contacto con el suelo o expuesta a la intemperie?",
       "opciones": [
        "20 mm",
        "30 mm",
@@ -588,12 +588,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Antes de desencofrar, ¿a qué pueden equivaler las cargas de construcción?",
+      "pregunta": "Al planificar el desencofrado, ¿qué magnitud pueden alcanzar las cargas de construcción según la E.060?",
       "opciones": [
-       "A la mitad de la carga viva",
-       "A las cargas vivas de diseño",
-       "Solo al peso propio",
-       "A cero"
+       "Hasta la mitad de las cargas vivas de diseño",
+       "Pueden ser tan altas como las cargas vivas de diseño",
+       "Solo el peso propio del elemento",
+       "Hasta un cuarto de las cargas muertas"
       ],
       "correcta": 1
      },
@@ -607,12 +607,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué condición básica deben cumplir los encofrados respecto al mortero?",
+      "pregunta": "¿Qué condición deben cumplir los encofrados respecto al mortero del concreto?",
       "opciones": [
-       "Ser porosos para drenar",
-       "Ser herméticos para impedir su fuga",
-       "Ser de madera",
-       "Estar mojados"
+       "Ser porosos para drenar el agua",
+       "Ser suficientemente herméticos para impedir su fuga",
+       "Ser absorbentes para retenerlo",
+       "Tener juntas abiertas para ventilar"
       ],
       "correcta": 1
      },
@@ -626,12 +626,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Encofrados de elementos preesforzados: ¿qué deben permitir?",
+      "pregunta": "¿Qué deben permitir los encofrados de elementos de concreto preesforzado durante la aplicación de la fuerza de preesforzado?",
       "opciones": [
-       "Que no se mueva nada",
-       "Los movimientos del elemento al aplicar el preesfuerzo sin dañarlo",
-       "Retirarse a las 24 h",
-       "El paso de tuberías"
+       "Que el elemento quede totalmente restringido",
+       "Los movimientos del elemento sin causarle daños",
+       "Su retiro a las 24 horas del vaciado",
+       "El paso de tuberías a través de sus caras"
       ],
       "correcta": 1
      },
@@ -664,12 +664,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿En qué caso no aplican los requisitos de retiro de puntales del 6.2.2?",
+      "pregunta": "¿En qué caso no se exigen los requisitos de la E.060 para el retiro de puntales y el reapuntalamiento de vigas y losas?",
       "opciones": [
-       "Vigas y losas apoyadas sobre el terreno",
-       "Losas de techo",
-       "Vigas de más de 6 m",
-       "Losas postensadas"
+       "Cuando se construyen apoyadas sobre el terreno",
+       "En losas de techo",
+       "En vigas de más de 6 m de luz",
+       "En losas postensadas"
       ],
       "correcta": 0
      },
@@ -703,12 +703,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En una losa maciza, ¿dónde se colocan las tuberías embebidas?",
+      "pregunta": "En una losa maciza, ¿dónde deben colocarse las tuberías embebidas?",
       "opciones": [
-       "Bajo la malla inferior",
+       "Debajo de la capa inferior de refuerzo",
        "Entre las capas de refuerzo superior e inferior",
-       "Sobre la malla superior",
-       "Donde sea más fácil"
+       "Encima de la capa superior de refuerzo",
+       "Adosadas al encofrado"
       ],
       "correcta": 1
      },
@@ -722,12 +722,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si una tubería choca con una barra, ¿qué dice la norma?",
+      "pregunta": "¿Cómo deben instalarse las tuberías y ductos embebidos respecto al refuerzo?",
       "opciones": [
-       "Se corta la barra",
-       "Se dobla la barra",
-       "Las tuberías se instalan sin cortar, doblar ni desplazar el refuerzo",
-       "Se mueve la barra 5 cm"
+       "Cortando las barras que interfieran",
+       "Doblando las barras que interfieran",
+       "Sin cortar, doblar ni desplazar el refuerzo de su posición",
+       "Desplazando las barras hasta 5 cm"
       ],
       "correcta": 2
      },
@@ -741,12 +741,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Quién aprueba un cambio en la ubicación de las juntas de construcción?",
+      "pregunta": "¿Quién debe aprobar cualquier variación en la ubicación de las juntas de construcción?",
       "opciones": [
        "El maestro de obra",
        "La Supervisión",
        "El proveedor de concreto",
-       "Nadie, es libre"
+       "El Ingeniero Residente"
       ],
       "correcta": 1
      },
@@ -760,12 +760,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Con encofrados de vaciado continuo de muros y losas, ¿se puede obviar la espera a que el muro deje de ser plástico?",
+      "pregunta": "Las vigas y losas no se vacían hasta que el concreto de sus columnas o muros de apoyo deje de ser plástico. ¿Puede obviarse esa espera en sistemas de vaciado continuo de muros y losas?",
       "opciones": [
-       "No, nunca",
-       "Sí, si la experiencia demuestra que no se produce el agrietamiento",
-       "Sí, siempre",
-       "Solo en un piso"
+       "No, en ningún caso",
+       "Sí, si la experiencia acumulada demuestra que no se produce el problema",
+       "Sí, sin condiciones",
+       "Sí, pero solo en edificios de un piso"
       ],
       "correcta": 1
      },
@@ -779,10 +779,10 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cómo se construyen las vigas, capiteles y ábacos respecto a la losa?",
+      "pregunta": "¿Cómo deben construirse las vigas, capiteles de columnas y ábacos respecto al sistema de losas?",
       "opciones": [
-       "Por separado",
-       "Monolíticamente con la losa, salvo indicación en planos",
+       "Por separado, dejando una junta",
+       "Monolíticamente con la losa, salvo que los planos indiquen otra cosa",
        "Siempre prefabricados",
        "Después de desencofrar la losa"
       ],
