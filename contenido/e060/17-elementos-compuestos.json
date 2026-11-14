@@ -259,7 +259,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Losa compuesta sobre viga de bv = {B} mm y d = {D} mm, superficie limpia y rugosa, sin estribos. ¿Vnh máximo (kN)?",
+      "enunciado": "Losa vaciada sobre una viga prefabricada (elemento compuesto), con ancho de contacto bv = {B} mm y peralte efectivo d = {D} mm. La superficie de contacto está limpia y rugosa, sin estribos. ¿Cuál es la máxima resistencia nominal al cortante horizontal Vnh (kN)?",
       "variables": {
        "B": {
         "etiqueta": "bv",
@@ -289,12 +289,15 @@
        "articulo": "17.5.3.1",
        "extracto": "…la resistencia al cortante Vnh no debe tomarse mayor a 0,55 bv d."
       }
+     ],
+     "reemplaza": [
+      "feafd520234784d2"
      ]
     },
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Interfaz rugosa (6 mm) con estribos mínimos, ρv = {R}, fy = 420 MPa, bv = 300 mm y d = 500 mm, concreto normal. ¿Vnh (kN)?",
+      "enunciado": "Elemento compuesto con superficie de contacto limpia y rugosa (amplitud de 6 mm) y estribos mínimos, con cuantía de estribos ρv = {R}, fy = 420 MPa, ancho de contacto bv = 300 mm, d = 500 mm y concreto de peso normal. ¿Cuál es la resistencia nominal al cortante horizontal Vnh (kN)?",
       "variables": {
        "R": {
         "etiqueta": "ρv",
@@ -315,6 +318,9 @@
        "articulo": "17.5.3.3",
        "extracto": "Vnh debe tomarse igual a (1,8 + 0,6 ρv fy) λ bv d, pero no mayor que 3,5 bv d."
       }
+     ],
+     "reemplaza": [
+      "908e182a6e63b56d"
      ]
     },
     {
@@ -345,7 +351,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Superficie de contacto limpia y rugosa, sin estribos: ¿Vnh máximo?",
+      "pregunta": "En un elemento compuesto cuya superficie de contacto está limpia y rugosa, pero sin estribos, ¿cuál es la máxima resistencia nominal al cortante horizontal Vnh (bv = ancho de contacto, d = peralte efectivo)?",
       "opciones": [
        "0,35 bv d",
        "0,55 bv d",
@@ -359,12 +365,15 @@
        "articulo": "17.5.3.1",
        "extracto": "…la resistencia al cortante Vnh no debe tomarse mayor a 0,55 bv d."
       }
+     ],
+     "reemplaza": [
+      "941779a67ba83c14"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuál es el tope de Vnh con estribos y rugosidad de 6 mm?",
+      "pregunta": "En un elemento compuesto con estribos mínimos y superficie de contacto rugosa con amplitud de 6 mm, ¿cuál es el valor máximo de la resistencia nominal al cortante horizontal Vnh?",
       "opciones": [
        "1,8 bv d",
        "2,5 bv d",
@@ -378,17 +387,20 @@
        "articulo": "17.5.3.3",
        "extracto": "Vnh debe tomarse igual a (1,8 + 0,6 ρv fy) λ bv d, pero no mayor que 3,5 bv d."
       }
+     ],
+     "reemplaza": [
+      "c94c2e4da8c88e5b"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se distingue entre elementos apuntalados y no apuntalados al calcular la resistencia?",
+      "pregunta": "Al calcular la resistencia de un elemento compuesto, ¿se distingue entre elementos apuntalados y no apuntalados durante la construcción?",
       "opciones": [
-       "Sí",
-       "No",
-       "Solo en cortante",
-       "Solo en flexión"
+       "Sí, en todos los cálculos",
+       "No se hace distinción",
+       "Solo en el cálculo por cortante",
+       "Solo en el cálculo por flexión"
       ],
       "correcta": 1
      },
@@ -397,17 +409,20 @@
        "articulo": "17.2.4",
        "extracto": "En el cálculo de la resistencia de elementos compuestos no debe hacerse distinción entre elementos apuntalados y no apuntalados."
       }
+     ],
+     "reemplaza": [
+      "32ce7c0bd8428255"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué espaciamiento máximo tienen los estribos de cortante horizontal?",
+      "pregunta": "¿Cuál es el espaciamiento máximo de los estribos que transfieren el cortante horizontal en un elemento compuesto?",
       "opciones": [
        "300 mm",
-       "4 veces la menor dimensión del elemento soportado y 600 mm",
-       "d/2",
-       "Ph/8"
+       "4 veces la menor dimensión del elemento soportado, sin exceder 600 mm",
+       "La mitad del peralte efectivo",
+       "2 veces la menor dimensión del elemento soportado, sin exceder 300 mm"
       ],
       "correcta": 1
      },
@@ -416,17 +431,20 @@
        "articulo": "17.6.1",
        "extracto": "…el área de los estribos no debe ser menor que la requerida por 11.5.6.2, y su espaciamiento no debe exceder de cuatro veces la dimensión menor del elemento soportado, ni de 600 mm."
       }
+     ],
+     "reemplaza": [
+      "58bcac540c7cb5a5"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Elemento compuesto con concretos de distinta resistencia: ¿qué propiedades se usan en el diseño?",
+      "pregunta": "En un elemento compuesto cuyas partes tienen distinta resistencia del concreto u otras propiedades, ¿qué propiedades se usan en el diseño?",
       "opciones": [
-       "El promedio",
-       "Las de cada elemento o los valores más críticos",
-       "Siempre las del concreto en sitio",
-       "Las del prefabricado"
+       "El promedio de las propiedades",
+       "Las de cada elemento individual o los valores más críticos",
+       "Siempre las del concreto vaciado en sitio",
+       "Siempre las del elemento prefabricado"
       ],
       "correcta": 1
      },
@@ -435,17 +453,20 @@
        "articulo": "17.2.3",
        "extracto": "deben utilizarse en el diseño las propiedades de los elementos individuales o los valores más críticos."
       }
+     ],
+     "reemplaza": [
+      "b6c3e5d78e7b415c"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Para qué cargas deben diseñarse los elementos antes de volverse compuestos?",
+      "pregunta": "¿Para qué cargas debe diseñarse cada parte de un elemento compuesto, además de las finales?",
       "opciones": [
-       "Ninguna",
-       "Las aplicadas antes de que el compuesto desarrolle su resistencia",
-       "Solo su peso propio",
-       "Las de servicio finales"
+       "Solo para su peso propio",
+       "Para todas las cargas aplicadas antes de que el elemento compuesto desarrolle por completo su resistencia de diseño",
+       "Solo para las cargas de montaje",
+       "Para la mitad de las cargas de servicio finales"
       ],
       "correcta": 1
      },
@@ -454,17 +475,20 @@
        "articulo": "17.2.5",
        "extracto": "Todos los elementos deben diseñarse para resistir las cargas aplicadas antes del completo desarrollo de la resistencia de diseño del elemento compuesto."
       }
+     ],
+     "reemplaza": [
+      "47bed5905a3766b2"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué control de deflexiones deben cumplir los elementos compuestos?",
+      "pregunta": "¿Qué requisitos de control de deflexiones deben cumplir los elementos compuestos?",
       "opciones": [
-       "Ninguno",
-       "El de 9.6",
-       "ℓ/240 siempre",
-       "El del Cap. 18"
+       "No requieren control de deflexiones",
+       "Los generales de control de deflexiones (9.6)",
+       "Un límite fijo de ℓ/240",
+       "Los del concreto preesforzado (Capítulo 18)"
       ],
       "correcta": 1
      },
@@ -473,17 +497,20 @@
        "articulo": "17.2.7",
        "extracto": "Los elementos compuestos deben cumplir con los requisitos de control de deflexiones dados en 9.6."
       }
+     ],
+     "reemplaza": [
+      "4d3d6eaca1ad9ecf"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si todo el elemento compuesto resiste el cortante vertical, ¿cómo se diseña?",
+      "pregunta": "Cuando se considera que todo el elemento compuesto resiste el cortante vertical, ¿cómo se diseña por cortante?",
       "opciones": [
-       "Con 17.5",
-       "Con el Cap. 11, como si fuera monolítico de la misma sección",
-       "Solo con la sección prefabricada",
-       "Con 11.7"
+       "Con las reglas de cortante horizontal",
+       "Con el Capítulo 11, como un elemento monolítico de la misma sección transversal",
+       "Considerando solo la sección prefabricada",
+       "Con las reglas de cortante por fricción"
       ],
       "correcta": 1
      },
@@ -492,17 +519,20 @@
        "articulo": "17.4.1",
        "extracto": "el diseño se hará de acuerdo con los requisitos del Capítulo 11, como si se tratara de un elemento monolítico de la misma sección transversal."
       }
+     ],
+     "reemplaza": [
+      "ef42a46d3233922b"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Puede el refuerzo de cortante vertical tomar también el cortante horizontal?",
+      "pregunta": "En un elemento compuesto, ¿puede el refuerzo para cortante vertical considerarse también como refuerzo para el cortante horizontal?",
       "opciones": [
-       "No",
-       "Sí, si está bien anclado y extendido a lo largo del elemento",
+       "No, deben ser refuerzos separados",
+       "Sí, si está debidamente anclado y extendido a lo largo del elemento",
        "Solo en losas",
-       "Solo con ρv ≥ 0,01"
+       "Solo si su cuantía es al menos 0,01"
       ],
       "correcta": 1
      },
@@ -511,12 +541,15 @@
        "articulo": "17.4.3",
        "extracto": "Se permite considerar el refuerzo para cortante vertical, debidamente anclado y extendido a lo largo del elemento, como refuerzo para tomar el cortante horizontal."
       }
+     ],
+     "reemplaza": [
+      "9634614b19b2193d"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Elemento compuesto preesforzado: ¿qué d mínimo se puede tomar para el cortante horizontal?",
+      "pregunta": "Al verificar el cortante horizontal de un elemento compuesto preesforzado, ¿qué valor mínimo puede tomarse para el peralte efectivo d (h = peralte total)?",
       "opciones": [
        "0,5 h",
        "0,75 h",
@@ -530,12 +563,15 @@
        "articulo": "17.5.2",
        "extracto": "pero no hay necesidad de tomarlo menor de 0,8 h para elementos de concreto preesforzado."
       }
+     ],
+     "reemplaza": [
+      "7622ef8b7ec9b696"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Estribos mínimos y superficie limpia pero NO rugosa: ¿Vnh máximo?",
+      "pregunta": "En un elemento compuesto con estribos mínimos y superficie de contacto limpia, pero no intencionalmente rugosa, ¿cuál es la máxima resistencia nominal al cortante horizontal Vnh?",
       "opciones": [
        "0,35 bv d",
        "0,55 bv d",
@@ -549,17 +585,20 @@
        "articulo": "17.5.3.2",
        "extracto": "Donde se proporcione el mínimo de estribos de acuerdo con 17.6 y las superficies de contacto estén limpias y libres de lechada, pero no se hayan hecho rugosas intencionalmente, Vnh no debe tomarse mayor a 0,55 bv d."
       }
+     ],
+     "reemplaza": [
+      "029c1d5c016840c8"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la ecuación de Vnh con rugosidad de 6 mm, ¿cómo se define ρv?",
+      "pregunta": "En la resistencia al cortante horizontal de elementos compuestos, Vnh = (1,8 + 0,6 ρv fy) λ bv d, ¿cómo se define la cuantía ρv?",
       "opciones": [
-       "As / bd",
+       "As / (b d)",
        "Av / (bv s)",
        "Av / Ag",
-       "0,0025"
+       "As / (bv s)"
       ],
       "correcta": 1
      },
@@ -568,17 +607,20 @@
        "articulo": "17.5.3.3",
        "extracto": "Deben usarse los valores de λ indicados en 11.7.4.3 y ρv es"
       }
+     ],
+     "reemplaza": [
+      "f664e0bf6e058794"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si se usa el método alternativo del 17.5.4, ¿qué área sustituye a bv d?",
+      "pregunta": "Si el cortante horizontal de un elemento compuesto se calcula a partir del cambio de la fuerza de compresión o tracción en un segmento, ¿qué área sustituye a bv d en las expresiones de resistencia?",
       "opciones": [
-       "El área de acero",
+       "El área de los estribos",
        "El área de la superficie de contacto",
-       "El área bruta",
-       "bv h"
+       "El área bruta de la sección",
+       "El área del elemento prefabricado"
       ],
       "correcta": 1
      },
@@ -587,14 +629,17 @@
        "articulo": "17.5.4",
        "extracto": "donde el área de la superficie de contacto debe sustituir a bv d."
       }
+     ],
+     "reemplaza": [
+      "1c874feefe49b96f"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Con el método del 17.5.4, ¿cómo deben distribuirse los estribos?",
+      "pregunta": "Si el cortante horizontal de un elemento compuesto se calcula a partir del cambio de fuerza en un segmento, ¿cómo deben distribuirse los estribos a lo largo del elemento?",
       "opciones": [
-       "Uniformes",
+       "Uniformemente",
        "Aproximadamente según la distribución del esfuerzo de cortante en el elemento",
        "Concentrados en los apoyos",
        "Cada 600 mm"
@@ -606,17 +651,20 @@
        "articulo": "17.5.4.1",
        "extracto": "debe representar aproximadamente la distribución del esfuerzo de cortante en el elemento."
       }
+     ],
+     "reemplaza": [
+      "a918f1190ede13b0"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si hay tracción a través de la superficie de contacto, ¿cuándo se permite transmitir cortante por contacto?",
+      "pregunta": "Si existe tracción a través de la superficie de contacto entre los elementos de una sección compuesta, ¿cuándo se permite transmitir cortante por contacto?",
       "opciones": [
-       "Nunca",
-       "Solo con el mínimo de estribos de 17.6",
-       "Siempre",
-       "Solo si es rugosa"
+       "En ningún caso",
+       "Solo cuando se coloca el mínimo de estribos de conexión",
+       "En cualquier caso",
+       "Solo si la superficie es rugosa"
       ],
       "correcta": 1
      },
@@ -625,17 +673,20 @@
        "articulo": "17.5.5",
        "extracto": "sólo se permitirá la transmisión de cortante por contacto cuando se proporcione el mínimo de estribos de acuerdo con 17.6."
       }
+     ],
+     "reemplaza": [
+      "c4f26aa34a3af137"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué tipos de refuerzo pueden ser estribos de cortante horizontal?",
+      "pregunta": "¿En qué pueden consistir los estribos que resisten el cortante horizontal de un elemento compuesto?",
       "opciones": [
-       "Solo barras dobladas",
-       "Barras individuales, alambres, estribos de ramas múltiples o malla electrosoldada vertical",
-       "Solo conectores de acero",
-       "Solo espirales"
+       "Solo en barras dobladas",
+       "En barras individuales, alambres, estribos de ramas múltiples o ramas verticales de malla electrosoldada",
+       "Solo en conectores de acero estructural",
+       "Solo en espirales"
       ],
       "correcta": 1
      },
@@ -644,17 +695,20 @@
        "articulo": "17.6.2",
        "extracto": "Los estribos que resisten el cortante horizontal deben consistir en barras individuales, alambres, estribos de ramas múltiples o ramas verticales de refuerzo electrosoldado de alambre."
       }
+     ],
+     "reemplaza": [
+      "e688952e93476ea8"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cómo deben anclarse los estribos de cortante horizontal?",
+      "pregunta": "¿Cómo deben anclarse los estribos que resisten el cortante horizontal de un elemento compuesto?",
       "opciones": [
-       "Solo en el prefabricado",
-       "Totalmente dentro de cada elemento conectado (12.13)",
-       "Solo en la sobrelosa",
-       "Con soldadura"
+       "Solo en el elemento prefabricado",
+       "Totalmente dentro de cada uno de los elementos conectados",
+       "Solo en el concreto vaciado en sitio",
+       "Soldados al refuerzo longitudinal"
       ],
       "correcta": 1
      },
@@ -663,6 +717,9 @@
        "articulo": "17.6.3",
        "extracto": "Todos los estribos deben anclarse totalmente dentro de cada uno de los elementos conectados de acuerdo con 12.13."
       }
+     ],
+     "reemplaza": [
+      "22b552d1a76e047e"
      ]
     }
    ]

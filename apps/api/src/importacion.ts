@@ -1,8 +1,8 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import type { Importacion, ResultadoImportacion } from "@tekluma/shared";
 import { db } from "./db/client";
 import { articles, cardCitations, cards, decks, editorialReviews, standards, standardVersions } from "./db/schema";
-import { canonico } from "./util";
+import { canonico, huella } from "./util";
 
 export class ImportacionError extends Error {}
 
@@ -12,6 +12,8 @@ export type EstadoImportado = "in_review" | "draft" | "approved";
  * Bulk import of one file (usually a chapter of a standard), all or nothing.
  * Articles are upserted by number (keeping the literal text and its page); decks by slug;
  * identical cards are skipped so the same file can be imported twice safely.
+ * A corrected card (`reemplaza`) overwrites the old one in place: same id, so users keep their
+ * review progress, and revision + 1, so the app refreshes it once the deck is published again.
  */
 export async function importar(datos: Importacion, usuarioId: string, estado: EstadoImportado): Promise<ResultadoImportacion> {
   return db.transaction(async (tx) => {
@@ -68,19 +70,65 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
       // Re-importing a file also fixes the deck's position in the catalog.
       if (!creado && m.orden !== undefined && m.orden !== mazo.sortOrder) await tx.update(decks).set({ sortOrder: m.orden }).where(eq(decks.id, mazo.id));
 
-      const yaEstan = new Set((await tx.select({ content: cards.content }).from(cards).where(eq(cards.deckId, mazo.id))).map((c) => canonico(c.content)));
+      const enMazo = await tx.select({ id: cards.id, content: cards.content, revision: cards.revision }).from(cards).where(eq(cards.deckId, mazo.id));
+      const porContenido = new Map(enMazo.map((c) => [canonico(c.content), c]));
+      const porHuella = new Map(enMazo.map((c) => [huella(c.content), c]));
+      const citasDe = new Map<string, string[]>();
+      if (enMazo.length) {
+        const filas = await tx
+          .select({ cardId: cardCitations.cardId, number: articles.number, excerpt: cardCitations.excerpt })
+          .from(cardCitations)
+          .innerJoin(articles, eq(articles.id, cardCitations.articleId))
+          .where(inArray(cardCitations.cardId, enMazo.map((c) => c.id)));
+        for (const f of filas) citasDe.set(f.cardId, [...(citasDe.get(f.cardId) ?? []), `${f.number}\n${f.excerpt}`]);
+      }
+      const mismasCitas = (cardId: string, citas: { articulo: string; extracto: string }[]) =>
+        canonico((citasDe.get(cardId) ?? []).sort()) === canonico(citas.map((c) => `${c.articulo}\n${c.extracto}`).sort());
+
+      /** Overwrites an existing card with the file's version, as a new revision in the import state. */
+      const corregir = async (previa: (typeof enMazo)[number], t: (typeof m.tarjetas)[number], comentario: string) => {
+        await tx
+          .update(cards)
+          .set({ content: t.contenido, revision: previa.revision + 1, status: estado, reviewerId: estado === "approved" ? usuarioId : null, updatedAt: new Date() })
+          .where(eq(cards.id, previa.id));
+        await tx.delete(cardCitations).where(eq(cardCitations.cardId, previa.id));
+        await tx.insert(cardCitations).values(t.citas.map((c) => ({ cardId: previa.id, articleId: porNumero.get(c.articulo)!.id, excerpt: c.extracto })));
+        if (estado === "approved") await tx.insert(editorialReviews).values({ cardId: previa.id, reviewerId: usuarioId, approved: true, comment: comentario });
+      };
+
       let nuevas = 0;
       let repetidas = 0;
+      let reemplazadas = 0;
+      let citasActualizadas = 0;
       for (const [i, t] of m.tarjetas.entries()) {
-        const clave = canonico(t.contenido);
-        if (yaEstan.has(clave)) {
-          repetidas++;
-          continue;
-        }
         for (const c of t.citas) {
           if (!porNumero.has(c.articulo)) {
             throw new ImportacionError(`Mazo «${m.slug}», tarjeta ${i + 1}: cita el artículo ${c.articulo}, que no está en el archivo ni en la norma`);
           }
+        }
+        const clave = canonico(t.contenido);
+        const igual = porContenido.get(clave);
+        if (igual) {
+          // Same content: only its citations may have been fixed.
+          if (mismasCitas(igual.id, t.citas)) {
+            repetidas++;
+          } else {
+            await corregir(igual, t, "Citas corregidas al importar por un administrador");
+            igual.revision++;
+            citasDe.set(igual.id, t.citas.map((c) => `${c.articulo}\n${c.extracto}`));
+            citasActualizadas++;
+          }
+          continue;
+        }
+        const previa = t.reemplaza?.map((h) => porHuella.get(h)).find((c) => c !== undefined);
+        if (previa) {
+          await corregir(previa, t, "Corregida al importar por un administrador");
+          porHuella.delete(huella(previa.content));
+          porContenido.delete(canonico(previa.content));
+          porContenido.set(clave, { ...previa, content: t.contenido, revision: previa.revision + 1 });
+          citasDe.set(previa.id, t.citas.map((c) => `${c.articulo}\n${c.extracto}`));
+          reemplazadas++;
+          continue;
         }
         const [tarjeta] = await tx
           .insert(cards)
@@ -90,10 +138,11 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
         if (estado === "approved") {
           await tx.insert(editorialReviews).values({ cardId: tarjeta!.id, reviewerId: usuarioId, approved: true, comment: "Aprobada al importar por un administrador" });
         }
-        yaEstan.add(clave);
+        porContenido.set(clave, { id: tarjeta!.id, content: t.contenido, revision: 1 });
+        citasDe.set(tarjeta!.id, t.citas.map((c) => `${c.articulo}\n${c.extracto}`));
         nuevas++;
       }
-      resultado.push({ slug: m.slug, creado, tarjetasNuevas: nuevas, repetidas });
+      resultado.push({ slug: m.slug, creado, tarjetasNuevas: nuevas, repetidas, reemplazadas, citasActualizadas });
     }
 
     return {

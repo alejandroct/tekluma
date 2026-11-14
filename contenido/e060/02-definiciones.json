@@ -344,7 +344,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "El agregado fino es el que pasa el tamiz de…",
+      "pregunta": "Según la E.060, ¿por qué tamiz debe pasar un agregado para clasificarse como agregado fino?",
       "opciones": [
        "4,75 mm (N.º 4)",
        "9,5 mm (3/8″)",
@@ -358,12 +358,15 @@
        "articulo": "2.2",
        "extracto": "Agregado Fino — Agregado proveniente de la desintegración natural o artificial, que pasa el tamiz 9,5 mm (3/8\")."
       }
+     ],
+     "reemplaza": [
+      "8d198cacc9a5ab14"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "El agregado grueso es el retenido en el tamiz de…",
+      "pregunta": "Según la E.060, ¿en qué tamiz queda retenido el agregado grueso?",
       "opciones": [
        "2,36 mm (N.º 8)",
        "4,75 mm (N.º 4)",
@@ -377,6 +380,9 @@
        "articulo": "2.2",
        "extracto": "Agregado Grueso — Agregado retenido en el tamiz 4,75 mm (Nº 4), proveniente de la desintegración natural o mecánica de las rocas."
       }
+     ],
+     "reemplaza": [
+      "4bf94987a667ec7a"
      ]
     },
     {
@@ -420,7 +426,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Un elemento vertical a compresión de 0,40 × 0,40 m y 1,00 m de altura libre es…",
+      "pregunta": "Un elemento vertical en compresión de 0,40 m × 0,40 m de sección y 1,00 m de altura sin apoyo, ¿cómo se clasifica según las definiciones de la E.060?",
       "opciones": [
        "Una columna",
        "Un pedestal",
@@ -435,6 +441,9 @@
        "articulo": "2.2",
        "extracto": "Pedestal — Elemento vertical en compresión que tiene una relación entre la altura sin apoyo y el promedio de la menor dimensión lateral no mayor a 3."
       }
+     ],
+     "reemplaza": [
+      "e3fb10108b6c8b1b"
      ]
     },
     {
@@ -497,7 +506,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Un concreto estructural con menos refuerzo que el mínimo exigido es…",
+      "pregunta": "¿Cómo clasifica la E.060 a un concreto estructural con menos refuerzo que el mínimo especificado para concreto reforzado?",
       "opciones": [
        "Concreto armado",
        "Concreto simple",
@@ -511,6 +520,9 @@
        "articulo": "2.2",
        "extracto": "Concreto simple — Concreto estructural sin armadura de refuerzo o con menos refuerzo que el mínimo especificado para concreto reforzado."
       }
+     ],
+     "reemplaza": [
+      "d5ff9b0777bfebfa"
      ]
     },
     {
@@ -630,12 +642,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "La resistencia de diseño de un elemento es…",
+      "pregunta": "¿Cómo define la E.060 la «resistencia de diseño» de un elemento?",
       "opciones": [
-       "La resistencia nominal",
-       "La resistencia nominal multiplicada por φ",
-       "La resistencia requerida",
-       "La carga de servicio × 1,4"
+       "La resistencia nominal, sin reducir",
+       "La resistencia nominal multiplicada por el factor de reducción φ",
+       "La resistencia que exigen las cargas amplificadas",
+       "La carga de servicio multiplicada por 1,4"
       ],
       "correcta": 1
      },
@@ -644,17 +656,20 @@
        "articulo": "2.2",
        "extracto": "Resistencia de diseño — Resistencia nominal multiplicada por el factor de reducción de resistencia φ que corresponda."
       }
+     ],
+     "reemplaza": [
+      "aa8b1e59b7b3a355"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "La resistencia requerida es la que se necesita para resistir…",
+      "pregunta": "Según la E.060, ¿qué cargas debe poder resistir un elemento para tener la «resistencia requerida»?",
       "opciones": [
-       "Las cargas de servicio",
-       "Las cargas amplificadas combinadas según la norma",
-       "El peso propio",
-       "La carga de prueba"
+       "Las cargas de servicio, sin amplificar",
+       "Las cargas amplificadas, combinadas según la norma",
+       "Solo el peso propio amplificado",
+       "La carga de una prueba de carga"
       ],
       "correcta": 1
      },
@@ -663,6 +678,9 @@
        "articulo": "2.2",
        "extracto": "Resistencia Requerida — Resistencia que un elemento o una sección transversal debe tener para resistir las cargas amplificadas o los momentos y fuerzas internas correspondientes combinadas según lo estipulado en esta Norma."
       }
+     ],
+     "reemplaza": [
+      "18c48cbb38fc8e0c"
      ]
     },
     {
@@ -687,12 +705,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "El peralte efectivo d se mide desde la fibra extrema en compresión hasta…",
+      "pregunta": "El peralte efectivo d de una sección se mide desde la fibra extrema en compresión, ¿hasta dónde?",
       "opciones": [
-       "La cara inferior de la viga",
-       "El centroide del refuerzo longitudinal en tracción",
-       "El eje neutro",
-       "El estribo inferior"
+       "Hasta la cara opuesta de la sección",
+       "Hasta el centroide del refuerzo longitudinal en tracción",
+       "Hasta el eje neutro",
+       "Hasta el borde exterior del estribo"
       ],
       "correcta": 1
      },
@@ -701,6 +719,9 @@
        "articulo": "2.2",
        "extracto": "Peralte efectivo o Altura útil de la sección (d) — La distancia medida desde la fibra extrema en compresión hasta el centroide del refuerzo longitudinal sometido a tracción."
       }
+     ],
+     "reemplaza": [
+      "ab71bd10b584f93c"
      ]
     },
     {
@@ -744,7 +765,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Una muesca aserrada que crea un plano de debilidad para controlar dónde se fisura el concreto es una…",
+      "pregunta": "¿Cómo se llama la muesca moldeada, aserrada o labrada que crea un plano de debilidad para regular dónde se agrieta el concreto?",
       "opciones": [
        "Junta de expansión",
        "Junta de contracción",
@@ -758,6 +779,9 @@
        "articulo": "2.2",
        "extracto": "Junta de contracción — Muesca moldeada, aserrada o labrada en una estructura de concreto para crear un plano de debilidad y regular la ubicación del agrietamiento…"
       }
+     ],
+     "reemplaza": [
+      "4fbdb4c2f40d5b88"
      ]
     },
     {
@@ -820,12 +844,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué es ρ en la notación de la E.060?",
+      "pregunta": "En la notación de la E.060, ¿qué representa ρ?",
       "opciones": [
-       "Densidad del concreto",
-       "Cuantía de As sobre el área bd",
-       "Radio de giro",
-       "Coeficiente de fricción"
+       "La densidad del concreto",
+       "La cuantía del refuerzo As evaluada sobre el área bd",
+       "El radio de giro de la sección",
+       "El coeficiente de fricción"
       ],
       "correcta": 1
      },
@@ -834,17 +858,20 @@
        "articulo": "2.1",
        "extracto": "ρ = cuantía del refuerzo As evaluada sobre el área bd, Capítulos 11, 13, 21."
       }
+     ],
+     "reemplaza": [
+      "68422a08bba4e011"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué es f′ci?",
+      "pregunta": "En la notación de la E.060, ¿qué resistencia representa f′ci?",
       "opciones": [
-       "La resistencia promedio requerida",
-       "La resistencia del concreto al aplicar el preesfuerzo inicial",
-       "La resistencia a tracción",
-       "La resistencia a los 7 días"
+       "La resistencia promedio requerida para dosificar",
+       "La resistencia especificada del concreto al momento del preesforzado inicial",
+       "La resistencia a tracción por hendimiento",
+       "La resistencia especificada a los 7 días"
       ],
       "correcta": 1
      },
@@ -853,17 +880,20 @@
        "articulo": "2.1",
        "extracto": "f’ci = resistencia especificada a la compresión del concreto al momento del preesforzado inicial, MPa, Capítulos 7, 18."
       }
+     ],
+     "reemplaza": [
+      "579e78aaf59258dd"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué es f′cr?",
+      "pregunta": "En la notación de la E.060, ¿qué resistencia representa f′cr?",
       "opciones": [
-       "La resistencia del concreto liviano",
-       "La resistencia promedio requerida para dosificar",
-       "El módulo de rotura",
-       "La resistencia de un núcleo"
+       "La resistencia especificada del concreto liviano",
+       "La resistencia promedio a la compresión requerida, base para dosificar el concreto",
+       "El módulo de rotura del concreto",
+       "La resistencia de un núcleo extraído"
       ],
       "correcta": 1
      },
@@ -872,17 +902,20 @@
        "articulo": "2.1",
        "extracto": "f’cr = resistencia promedio a la compresión requerida del concreto, empleada como base para la dosificación del concreto…"
       }
+     ],
+     "reemplaza": [
+      "85b03b29e3e93555"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué mide el factor λ?",
+      "pregunta": "En la E.060, ¿con qué propiedad del concreto se relaciona el factor de modificación λ?",
       "opciones": [
-       "La densidad del concreto (liviano o normal)",
-       "La esbeltez",
-       "La ductilidad",
-       "La relación de luces"
+       "Con su densidad (concreto liviano o de peso normal)",
+       "Con su resistencia a la compresión",
+       "Con su edad al recibir carga",
+       "Con su contenido de aire"
       ],
       "correcta": 0
      },
@@ -891,17 +924,20 @@
        "articulo": "2.1",
        "extracto": "λ = factor de modificación relacionado con la densidad del concreto, Capítulos 11, 12, 17-19."
       }
+     ],
+     "reemplaza": [
+      "ad79d15e6031d840"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué es bo?",
+      "pregunta": "En la notación de la E.060, ¿qué representa bo?",
       "opciones": [
-       "Ancho del alma",
-       "Perímetro de la sección crítica por cortante en losas y zapatas",
-       "Ancho del ala",
-       "Base de la zapata"
+       "El ancho del alma de una viga",
+       "El perímetro de la sección crítica para cortante en losas y zapatas",
+       "El ancho efectivo del ala de una viga T",
+       "El ancho de la base de una zapata"
       ],
       "correcta": 1
      },
@@ -910,6 +946,9 @@
        "articulo": "2.1",
        "extracto": "bo = perímetro de la sección crítica para cortante en losas y zapatas, mm, Capítulos 11, 22."
       }
+     ],
+     "reemplaza": [
+      "0419d3657660c4eb"
      ]
     },
     {
@@ -1056,7 +1095,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Este refuerzo, colocado perpendicular al longitudinal para resistir cortante y torsión, se llama…",
+      "pregunta": "¿Cómo se llama este refuerzo, colocado perpendicular o en ángulo respecto al longitudinal para resistir cortante y torsión?",
       "opciones": [
        "Grapa",
        "Estribo",
@@ -1071,6 +1110,9 @@
        "articulo": "2.2",
        "extracto": "Estribo — Refuerzo colocado perpendicularmente o en ángulo con respecto al refuerzo longitudinal, empleado para resistir esfuerzos de cortante y de torsión en un elemento estructural."
       }
+     ],
+     "reemplaza": [
+      "84279dc755615d85"
      ]
     },
     {

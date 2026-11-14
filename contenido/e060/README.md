@@ -38,10 +38,22 @@ Los 22 capítulos tienen mazo (1304 tarjetas: 804 de opción múltiple, la base 
 3. **Figuras**: se recortan del PDF original como JPEG y van embebidas en la tarjeta (`data:image/jpeg;base64,…`): viajan dentro del paquete del mazo y se cifran con él en el dispositivo.
 4. **Fuente**: cada tarjeta cita su artículo con un extracto literal; la app muestra «E.060 · ART. 7.1.2 · PÁG. 46».
 5. **Revisión hoja por hoja**: cada capítulo se revisó leyendo la imagen de cada página contra todas sus tarjetas (noviembre de 2026). `herramientas/chequeo.py` comprueba que los extractos estén en el texto del artículo; las diferencias que quedan son fórmulas transcritas desde la imagen.
+6. **Revisión de redacción** (noviembre de 2026): 765 preguntas reescritas para que se entiendan sin ver la cita y 70 citas corregidas; los 1 304 extractos son ahora literales. Detalle en `docs/revision-e060.md`.
 
 Para un concepto importante hay varias tarjetas de distinto tipo (concepto, opción múltiple, completar, tabla, caso numérico con valores aleatorios, imagen), para que se aprenda desde varios ángulos.
 
 ## Regenerar o seguir con otros capítulos
+
+**Los JSON de esta carpeta son ahora la fuente de las tarjetas.** La revisión de redacción se hizo sobre ellos y no está en `herramientas/generar.py`: volver a generar los capítulos 1 a 22 con ese script deshace las correcciones.
+
+Para corregir tarjetas ya importadas: edita el JSON sin agregar, quitar ni reordenar tarjetas (las nuevas van al final del mazo) y luego marca los reemplazos comparando con la versión que está importada:
+
+```bash
+python3 contenido/e060/herramientas/reemplazos.py main contenido/e060/1*.json   # escribe `reemplaza` en las tarjetas cambiadas
+python3 contenido/e060/herramientas/chequeo.py                                   # los extractos deben seguir siendo literales
+```
+
+Al importar, cada tarjeta con `reemplaza` actualiza a la anterior en su sitio (mismo id, revisión + 1) en lugar de duplicarla. Después hay que publicar de nuevo el mazo.
 
 En `herramientas/` están los scripts (Python 3 + `pymupdf`):
 

@@ -302,7 +302,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Cáscara de {T} mm de espesor con tracción membranal moderada. ¿Espaciamiento máximo del refuerzo (mm)?",
+      "enunciado": "Cáscara delgada de {T} mm de espesor cuya tracción membranal amplificada no supera 0,33 φ √f′c. ¿Cuál es el espaciamiento máximo de su refuerzo (mm)?",
       "variables": {
        "T": {
         "etiqueta": "Espesor",
@@ -324,6 +324,9 @@
        "articulo": "19.4.10",
        "extracto": "…no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "edf5c0566a71864c"
      ]
     },
     {
@@ -367,7 +370,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué f′c mínimo exige una cáscara?",
+      "pregunta": "¿Cuál es la resistencia especificada f′c mínima del concreto de cáscaras y láminas plegadas?",
       "opciones": [
        "17 MPa",
        "21 MPa",
@@ -381,17 +384,20 @@
        "articulo": "19.3.1",
        "extracto": "La resistencia en compresión especificada del concreto f’c a los 28 días no será menor que 21 MPa."
       }
+     ],
+     "reemplaza": [
+      "ade102dc70652914"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué espaciamiento máximo tiene el refuerzo de una cáscara en general?",
+      "pregunta": "¿Cuál es el espaciamiento máximo del refuerzo de una cáscara en cualquier dirección (t = espesor de la cáscara)?",
       "opciones": [
        "300 mm y 3 t",
        "450 mm y 5 t",
-       "600 mm",
-       "2 t"
+       "600 mm y 5 t",
+       "450 mm y 3 t"
       ],
       "correcta": 1
      },
@@ -400,17 +406,20 @@
        "articulo": "19.4.10",
        "extracto": "El refuerzo de la cáscara en cualquier dirección no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "eb9cb3e66cd0c69a"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué traslape mínimo se usa en barras traccionadas de una cáscara?",
+      "pregunta": "¿Cuál es la longitud mínima de un empalme por traslape de barras en tracción en una cáscara?",
       "opciones": [
-       "1,0 ℓd y 300 mm",
-       "1,2 veces el del Cap. 12 y 450 mm",
-       "1,3 ℓd",
-       "600 mm"
+       "La del Capítulo 12, y no menos de 300 mm",
+       "1,2 veces la del Capítulo 12, y no menos de 450 mm",
+       "1,3 veces la del Capítulo 12, y no menos de 300 mm",
+       "1,5 veces la del Capítulo 12, y no menos de 600 mm"
       ],
       "correcta": 1
      },
@@ -419,6 +428,9 @@
        "articulo": "19.4.12",
        "extracto": "…la longitud mínima de empalme por traslape de barras en tracción debe ser 1,2 veces el valor requerido en el Capítulo 12, pero no menor de 450 mm."
       }
+     ],
+     "reemplaza": [
+      "42143b4f18283574"
      ]
     },
     {
@@ -443,12 +455,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué son los elementos auxiliares de una cáscara?",
+      "pregunta": "¿Qué son los «elementos auxiliares» de una cáscara?",
       "opciones": [
-       "Los andamios",
-       "Vigas de borde o nervios que la rigidizan o apoyan",
-       "Las juntas",
-       "Los anclajes"
+       "Los encofrados y andamios",
+       "Las vigas de borde o nervios que la rigidizan, la hacen más resistente o le sirven de apoyo",
+       "Las juntas de construcción",
+       "Los dispositivos de anclaje del refuerzo"
       ],
       "correcta": 1
      },
@@ -457,12 +469,15 @@
        "articulo": "19.1.6",
        "extracto": "Son las vigas de borde o nervios que sirven para rigidizar, hacer más resistente o servir de apoyo a la cáscara."
       }
+     ],
+     "reemplaza": [
+      "27ead6b980522542"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En el análisis elástico de cáscaras, ¿qué módulo de Poisson se puede asumir?",
+      "pregunta": "En el análisis elástico de cáscaras, ¿qué valor puede asumirse para el módulo de Poisson del concreto?",
       "opciones": [
        "0,15",
        "0,20",
@@ -476,6 +491,9 @@
        "articulo": "19.2.1",
        "extracto": "El módulo de Poisson del concreto puede asumirse igual a cero."
       }
+     ],
+     "reemplaza": [
+      "30d327f0b41b3888"
      ]
     },
     {
@@ -500,12 +518,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué porción de la cáscara puede trabajar junto con una viga de borde?",
+      "pregunta": "¿Qué porción de una cáscara puede suponerse que trabaja junto con un elemento auxiliar (viga de borde o nervio)?",
       "opciones": [
-       "Nada",
-       "El ancho de ala de 8.10",
-       "4 veces el espesor",
-       "La mitad de la luz"
+       "Ninguna: trabajan por separado",
+       "Un ancho igual al ancho de ala de las vigas T (8.10)",
+       "Cuatro veces el espesor de la cáscara",
+       "La mitad de la luz de la cáscara"
       ],
       "correcta": 1
      },
@@ -514,17 +532,20 @@
        "articulo": "19.2.9",
        "extracto": "Se puede suponer que una porción de la cáscara igual al ancho del ala especificado en 8.10 actúa conjuntamente con el elemento auxiliar."
       }
+     ],
+     "reemplaza": [
+      "335edd0fc05b4dfc"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué fy máximo se permite en el refuerzo de cáscaras?",
+      "pregunta": "¿Cuál es el esfuerzo de fluencia fy máximo permitido en el refuerzo de cáscaras?",
       "opciones": [
        "280 MPa",
        "420 MPa",
        "550 MPa",
-       "Sin límite"
+       "500 MPa"
       ],
       "correcta": 1
      },
@@ -533,12 +554,15 @@
        "articulo": "19.3.2",
        "extracto": "El esfuerzo de fluencia especificado del acero fy no será mayor de 420 MPa."
       }
+     ],
+     "reemplaza": [
+      "a740501637cc600d"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Refuerzo de membrana por cortante por fricción en concreto normal: ¿μ máximo?",
+      "pregunta": "En cáscaras de concreto de peso normal, cuando el refuerzo de membrana se diseña por cortante por fricción, ¿qué valor máximo puede tener el coeficiente de fricción μ?",
       "opciones": [
        "0,6",
        "0,75",
@@ -552,17 +576,20 @@
        "articulo": "19.4.2",
        "extracto": "El coeficiente de fricción, μ, no debe exceder de 1,0 para concreto de peso normal"
       }
+     ],
+     "reemplaza": [
+      "ceaacb2f1669eae6"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cómo se limita el área de refuerzo en tracción de una cáscara?",
+      "pregunta": "¿Con qué criterio se limita el área de refuerzo en tracción de una cáscara?",
       "opciones": [
-       "No se limita",
-       "Para que fluya antes del aplastamiento o pandeo de la cáscara",
-       "Al 2 %",
-       "A 0,75 ρb"
+       "No tiene límite superior",
+       "Debe ser tal que el refuerzo fluya antes del aplastamiento del concreto o del pandeo de la cáscara",
+       "No debe exceder el 2 % del área de concreto",
+       "No debe exceder 0,75 veces la cuantía balanceada"
       ],
       "correcta": 1
      },
@@ -571,12 +598,15 @@
        "articulo": "19.4.5",
        "extracto": "El área de refuerzo por tracción en la cáscara debe estar limitada de manera tal que el refuerzo fluya antes de que tenga lugar el aplastamiento del concreto en compresión o el pandeo de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "8ea0b727a1eef93f"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si se concentra el refuerzo en zonas de máxima tracción, ¿qué cuantía mínima queda en las demás zonas traccionadas?",
+      "pregunta": "Si el refuerzo de una cáscara se concentra en las zonas de máxima tracción, ¿qué cuantía mínima (sobre el espesor total) debe mantenerse en todas las zonas de tracción?",
       "opciones": [
        "0,0018",
        "0,0025",
@@ -590,17 +620,20 @@
        "articulo": "19.4.8",
        "extracto": "la cuantía de refuerzo en todas las zonas de tracción de la cáscara no será menor de 0,0035, calculado sobre la base del espesor total de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "c13e5ceba2ad505e"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si el análisis pide refuerzo de flexión en una sola cara de la cáscara, ¿qué se coloca?",
+      "pregunta": "Si el análisis de una cáscara indica refuerzo por flexión en una sola cara, ¿qué debe colocarse?",
       "opciones": [
-       "Solo en esa cara",
-       "Cantidades iguales cerca de ambas superficies",
-       "Nada en la otra",
-       "El doble en esa cara"
+       "Refuerzo solo en esa cara",
+       "Cantidades iguales cerca de ambas superficies de la cáscara",
+       "El doble de refuerzo en esa cara",
+       "La mitad del refuerzo en la otra cara"
       ],
       "correcta": 1
      },
@@ -609,12 +642,15 @@
        "articulo": "19.4.9",
        "extracto": "se deben colocar cantidades iguales cerca de ambas superficies de la cáscara, aún cuando el análisis no indique reversión de los momentos de flexión en esa zona."
       }
+     ],
+     "reemplaza": [
+      "4877528de73970a4"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Cáscara de 80 mm con tracción membranal mayor que 0,33 φ √f′c: ¿espaciamiento máximo del refuerzo?",
+      "pregunta": "Cáscara de 80 mm de espesor con tracción membranal amplificada mayor que 0,33 φ √f′c: ¿cuál es el espaciamiento máximo del refuerzo?",
       "opciones": [
        "240 mm",
        "400 mm",
@@ -629,17 +665,20 @@
        "articulo": "19.4.10",
        "extracto": "el refuerzo no debe espaciarse a más de tres veces el espesor de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "caee620a40d64929"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Refuerzo de cáscara que llega a una viga de borde: ¿longitud de desarrollo mínima?",
+      "pregunta": "El refuerzo de una cáscara que se ancla en un elemento auxiliar (viga de borde), ¿qué longitud de desarrollo mínima debe tener?",
       "opciones": [
-       "ℓd",
-       "1,2 ℓd y no menos de 450 mm",
-       "1,3 ℓd",
-       "300 mm"
+       "1,0 ℓd, y no menos de 300 mm",
+       "1,2 ℓd, y no menos de 450 mm",
+       "1,3 ℓd, y no menos de 300 mm",
+       "1,5 ℓd, y no menos de 600 mm"
       ],
       "correcta": 1
      },
@@ -648,16 +687,19 @@
        "articulo": "19.4.11",
        "extracto": "pero no menor de 450 mm."
       }
+     ],
+     "reemplaza": [
+      "a5991356cf74a8ae"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Empalmes en el refuerzo principal de una cáscara: ¿cuánto refuerzo puede empalmarse en una misma sección?",
+      "pregunta": "En el refuerzo principal de tracción de una cáscara, ¿qué fracción máxima del refuerzo puede empalmarse en una misma sección?",
       "opciones": [
        "Todo",
        "La mitad",
-       "No más de un tercio",
+       "Un tercio",
        "Un cuarto"
       ],
       "correcta": 2
@@ -667,17 +709,20 @@
        "articulo": "19.4.12",
        "extracto": "con no más de un tercio del refuerzo empalmado en cualquier sección."
       }
+     ],
+     "reemplaza": [
+      "54d4cb7d266290a8"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si el desencofrado depende de Ec, ¿cómo se obtiene?",
+      "pregunta": "Si el desencofrado de una cáscara depende de alcanzar cierto módulo de elasticidad del concreto, ¿cómo se determina ese módulo?",
       "opciones": [
-       "Con 4700 √f′c",
-       "Con ensayos de flexión en vigas curadas en obra",
-       "Con el certificado del concreto",
-       "Se asume"
+       "Con la fórmula 4700 √f′c",
+       "Con ensayos de flexión en probetas de vigas curadas en condiciones de obra",
+       "Con el certificado del proveedor de concreto",
+       "Con ensayos de compresión de cilindros curados en laboratorio"
       ],
       "correcta": 1
      },
@@ -686,17 +731,20 @@
        "articulo": "19.5.1",
        "extracto": "se determinará a partir de ensayos de flexión en probetas de vigas curadas en condiciones de obra."
       }
+     ],
+     "reemplaza": [
+      "3dd1d0a5f95f4932"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si la forma construida se sale de las tolerancias especificadas, ¿qué se hace?",
+      "pregunta": "Si la forma construida de una cáscara se desvía de la proyectada más que las tolerancias especificadas, ¿qué debe hacerse?",
       "opciones": [
-       "Nada",
-       "Analizar el efecto de las desviaciones y tomar medidas correctivas",
-       "Demoler",
-       "Solo reforzar bordes"
+       "Aceptarla si no hay fisuras visibles",
+       "Analizar el efecto de las desviaciones y tomar las medidas correctivas necesarias",
+       "Demolerla y reconstruirla",
+       "Reforzar únicamente los bordes"
       ],
       "correcta": 1
      },
@@ -705,6 +753,9 @@
        "articulo": "19.5.2",
        "extracto": "se debe hacer un análisis del efecto de las desviaciones y se deben tomar las medidas correctivas necesarias para garantizar un comportamiento seguro."
       }
+     ],
+     "reemplaza": [
+      "ee89cc3caff8ce4d"
      ]
     }
    ]

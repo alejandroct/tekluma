@@ -464,12 +464,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Rige la E.060 una losa de concreto apoyada sobre el suelo que no transmite cargas de la estructura?",
+      "pregunta": "¿Rige la E.060 el diseño de una losa apoyada sobre el suelo que no transmite al suelo cargas de otras partes de la estructura?",
       "opciones": [
-       "Sí, siempre",
-       "No",
-       "Solo si tiene refuerzo",
-       "Solo en zona sísmica 4"
+       "Sí, en todos los casos",
+       "No, queda fuera de la norma",
+       "Sí, cuando la losa lleva refuerzo",
+       "Sí, cuando está en zona sísmica 4"
       ],
       "correcta": 1
      },
@@ -478,17 +478,20 @@
        "articulo": "1.1.6",
        "extracto": "Esta Norma no rige el diseño y la construcción de losas apoyadas en el suelo, a menos que la losa transmita cargas verticales o laterales desde otras partes de la estructura al suelo."
       }
+     ],
+     "reemplaza": [
+      "d9376bb72faee52c"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué parte de los pilotes y cajones de cimentación no controla la E.060 (salvo lo del Cap. 21)?",
+      "pregunta": "¿Qué porción de los pilotes, pilas excavadas y cajones de cimentación queda fuera del control de la E.060 (salvo lo dispuesto en el Capítulo 21)?",
       "opciones": [
-       "La que queda enterrada en el suelo",
-       "El cabezal",
-       "El refuerzo longitudinal",
-       "Ninguna, los controla completos"
+       "La porción que queda enterrada en el suelo",
+       "El cabezal que une los pilotes",
+       "La porción que sobresale del terreno",
+       "El refuerzo longitudinal del pilote"
       ],
       "correcta": 0
      },
@@ -497,16 +500,19 @@
        "articulo": "1.1.5",
        "extracto": "Esta Norma no controla el diseño e instalación de las porciones de pilotes de concreto, pilas excavadas y cajones de cimentación que quedan enterrados en el suelo, excepto en lo dispuesto en el Capítulo 21."
       }
+     ],
+     "reemplaza": [
+      "6f0b703fb76e178a"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Una losa vaciada sobre plancha colaborante de acero considerada compuesta: ¿qué rige la E.060?",
+      "pregunta": "En una losa vaciada sobre plancha colaborante de acero (molde permanente) y considerada compuesta, ¿qué parte rige la E.060?",
       "opciones": [
-       "Todo su diseño",
-       "Solo el concreto usado, según los Caps. 1 a 7",
-       "Nada",
+       "El diseño completo de la losa compuesta",
+       "Solo el concreto usado, según los Capítulos 1 a 7",
+       "Solo la plancha de acero",
        "Solo el refuerzo de temperatura"
       ],
       "correcta": 1
@@ -516,6 +522,9 @@
        "articulo": "1.1.8",
        "extracto": "Esta Norma no rige para el diseño de losas de concreto estructural vaciadas sobre moldes permanentes de acero consideradas como compuestas. El concreto usado en la construcción de tales losas debe estar regido por los Capítulos 1 a 7 de esta Norma…"
       }
+     ],
+     "reemplaza": [
+      "1a43d692959cabff"
      ]
     },
     {
@@ -540,12 +549,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Para silos, chimeneas o tanques, ¿cómo se aplica la E.060?",
+      "pregunta": "¿Cómo se aplica la E.060 a estructuras especiales como silos, chimeneas, tanques o reservorios?",
       "opciones": [
-       "No se aplica",
-       "En lo que sea aplicable",
-       "Solo para el refuerzo",
-       "Solo en la cimentación"
+       "No se aplica a esas estructuras",
+       "Rige en lo que sea aplicable",
+       "Rige solo para su refuerzo",
+       "Rige solo para su cimentación"
       ],
       "correcta": 1
      },
@@ -554,6 +563,9 @@
        "articulo": "1.1.4",
        "extracto": "Para estructuras especiales tales como arcos, tanques, reservorios, depósitos, silos, chimeneas y estructuras resistentes a explosiones, las disposiciones de esta Norma regirán en lo que sean aplicables."
       }
+     ],
+     "reemplaza": [
+      "a062d5ea256e0767"
      ]
     },
     {

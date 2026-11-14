@@ -1,11 +1,12 @@
-import json,glob,re,sys,unicodedata
+import json,glob,os,re,sys,unicodedata
+D=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def norm(s):
     s=unicodedata.normalize("NFC",s)
     for a,b in [("’","'"),("′","'"),("”",'"'),("″",'"'),("“",'"'),("º","°"),("–","-"),("−","-")]: s=s.replace(a,b)
     return re.sub(r"\s+"," ",s.replace("|"," ")).strip()
-A={a['numero']:norm(a['texto']) for a in json.load(open('/Users/alejandrocabreratavara/Documents/tekluma/contenido/e060/00-e060-articulos.json'))['articulos']}
+A={a['numero']:norm(a['texto']) for a in json.load(open(D+'/00-e060-articulos.json'))['articulos']}
 malos=0
-for f in sorted(glob.glob('/Users/alejandrocabreratavara/Documents/tekluma/contenido/e060/[0-2]*.json')):
+for f in sorted(glob.glob(D+'/[0-2]*.json')):
     if f.endswith('00-e060-articulos.json'): continue
     T=json.load(open(f))['mazos'][0]['tarjetas']
     for i,t in enumerate(T):

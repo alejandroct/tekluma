@@ -572,12 +572,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Según la E.060, las cargas de nieve o granizo se consideran como:",
+      "pregunta": "Según la E.060, ¿como qué tipo de carga se consideran en las combinaciones las cargas de nieve o granizo?",
       "opciones": [
-       "Carga muerta",
-       "Carga viva",
-       "Carga de impacto",
-       "Carga ambiental aparte"
+       "Como carga muerta (CM)",
+       "Como carga viva (CV)",
+       "Como carga de viento (CVi)",
+       "Como una carga aparte con factor 1,25"
       ],
       "correcta": 1
      },
@@ -586,6 +586,9 @@
        "articulo": "9.2.8",
        "extracto": "Si fuera necesario incluir en el diseño el efecto de las cargas de nieve o granizo, éstas deberán considerarse como cargas vivas (CV)."
       }
+     ],
+     "reemplaza": [
+      "6547ff58667f7c45"
      ]
     },
     {
@@ -792,7 +795,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué φ se usa en concreto estructural simple (Capítulo 22)?",
+      "pregunta": "¿Qué factor de reducción de resistencia φ se usa en concreto estructural simple (Capítulo 22) para flexión, compresión, cortante y aplastamiento?",
       "opciones": [
        "0,55",
        "0,65",
@@ -806,6 +809,9 @@
        "articulo": "9.3.2.8",
        "extracto": "En el Capítulo 22, concreto estructural simple, φ debe ser 0,65 para flexión, compresión, cortante y aplastamiento."
       }
+     ],
+     "reemplaza": [
+      "e71ef6eeeb73f3ba"
      ]
     },
     {
@@ -959,7 +965,7 @@
      "citas": [
       {
        "articulo": "9.6.2.1",
-       "extracto": "Tabla 9.1: vigas o losas nervadas en una dirección, simplemente apoyadas, h = ℓ/16."
+       "extracto": "Vigas o losas nervadas en una dirección ℓ / 16 ℓ / 18,5 ℓ / 21 ℓ / 8"
       }
      ]
     },
@@ -986,7 +992,7 @@
      "citas": [
       {
        "articulo": "9.6.2.1",
-       "extracto": "Tabla 9.1: vigas o losas nervadas en una dirección, con un extremo continuo, h = ℓ/18,5."
+       "extracto": "Vigas o losas nervadas en una dirección ℓ / 16 ℓ / 18,5 ℓ / 21 ℓ / 8"
       }
      ]
     },
@@ -1116,7 +1122,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Deflexión diferida: con ξ = {X} y cuantía de acero en compresión ρ′ = {R}, ¿cuánto vale λΔ = ξ / (1 + 50 ρ′)?",
+      "enunciado": "Para estimar la deflexión diferida de una viga: con factor de duración de la carga sostenida ξ = {X} y cuantía de acero en compresión ρ′ = {R}, ¿cuánto vale el multiplicador λΔ = ξ / (1 + 50 ρ′)?",
       "variables": {
        "X": {
         "etiqueta": "ξ",
@@ -1146,6 +1152,9 @@
        "articulo": "9.6.2.5",
        "extracto": "λΔ = ξ / (1 + 50 ρ’) (9-15)"
       }
+     ],
+     "reemplaza": [
+      "a9e88f492b148c58"
      ]
     },
     {
@@ -1339,7 +1348,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué φ corresponde a flexión sin carga axial?",
+      "pregunta": "¿Qué factor de reducción de resistencia φ corresponde a flexión sin carga axial?",
       "opciones": [
        "0,70",
        "0,75",
@@ -1353,12 +1362,15 @@
        "articulo": "9.3.2.1",
        "extracto": "Flexión sin carga axial … 0,90"
       }
+     ],
+     "reemplaza": [
+      "32530aff754beedc"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué φ corresponde a cortante y torsión?",
+      "pregunta": "¿Qué factor de reducción de resistencia φ corresponde a cortante y torsión?",
       "opciones": [
        "0,70",
        "0,75",
@@ -1372,12 +1384,15 @@
        "articulo": "9.3.2.3",
        "extracto": "Cortante y torsión … 0,85"
       }
+     ],
+     "reemplaza": [
+      "c7b8037a547a2faa"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna con estribos (no espiral) a compresión: ¿qué φ?",
+      "pregunta": "Columna con estribos (sin espiral) sometida a compresión axial con o sin flexión: ¿qué factor de reducción de resistencia φ le corresponde?",
       "opciones": [
        "0,65",
        "0,70",
@@ -1391,6 +1406,9 @@
        "articulo": "9.3.2.2",
        "extracto": "(b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70"
       }
+     ],
+     "reemplaza": [
+      "b38f56a4d994ce1e"
      ]
     },
     {
@@ -1415,7 +1433,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa maciza simplemente apoyada (fy 420): ¿peralte mínimo sin verificar deflexiones?",
+      "pregunta": "Losa maciza en una dirección, simplemente apoyada, con fy = 420 MPa: ¿qué espesor mínimo fija la Tabla 9.1 para no verificar deflexiones (ℓ = luz)?",
       "opciones": [
        "ℓ/16",
        "ℓ/20",
@@ -1429,12 +1447,15 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)…"
       }
+     ],
+     "reemplaza": [
+      "86eff8d928e05e3c"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Viga en voladizo: ¿peralte mínimo de la Tabla 9.1?",
+      "pregunta": "Viga en voladizo con fy = 420 MPa: ¿qué peralte mínimo fija la Tabla 9.1 para no verificar deflexiones (ℓ = luz del voladizo)?",
       "opciones": [
        "ℓ/8",
        "ℓ/10",
@@ -1448,12 +1469,15 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)…"
       }
+     ],
+     "reemplaza": [
+      "197838826e772db8"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Techo plano sin elementos frágiles: ¿deflexión inmediata máxima por carga viva?",
+      "pregunta": "Techo plano que no soporta ni está ligado a elementos no estructurales susceptibles de dañarse: ¿cuál es la deflexión inmediata máxima admisible por carga viva (Tabla 9.2)?",
       "opciones": [
        "ℓ/180",
        "ℓ/240",
@@ -1467,12 +1491,15 @@
        "articulo": "9.6.2.6",
        "extracto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2"
       }
+     ],
+     "reemplaza": [
+      "d8b1702151b625b6"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué cuantía mínima de temperatura llevan las losas con barras corrugadas de fy 420?",
+      "pregunta": "¿Qué cuantía mínima de refuerzo por retracción y temperatura (área de acero / área total de concreto) llevan las losas con barras corrugadas de fy ≥ 420 MPa?",
       "opciones": [
        "0,0012",
        "0,0015",
@@ -1486,12 +1513,15 @@
        "articulo": "9.7.2",
        "extracto": "Barras lisas 0,0025 Barras corrugadas con fy < 420 MPa 0,0020 Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 MPa 0,0018"
       }
+     ],
+     "reemplaza": [
+      "b60a8b7be601ee65"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Según la curva, ¿qué factor ξ corresponde a 12 meses de carga sostenida?",
+      "pregunta": "Según la curva, ¿qué valor del factor ξ dependiente del tiempo (usado para la deflexión diferida) corresponde a 12 meses de carga sostenida?",
       "opciones": [
        "1,0",
        "1,2",
@@ -1506,12 +1536,15 @@
        "articulo": "9.6.2.5",
        "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"
       }
+     ],
+     "reemplaza": [
+      "364f5014ee281e20"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿A partir de qué peralte de viga se exige armadura superficial en las caras laterales?",
+      "pregunta": "¿A partir de qué peralte h de una viga se exige armadura superficial longitudinal en las caras laterales del alma?",
       "opciones": [
        "600 mm",
        "750 mm",
@@ -1525,17 +1558,20 @@
        "articulo": "9.9.6",
        "extracto": "Si el peralte h de una viga o nervadura excede de 900 mm, se deberá colocar armadura (superficial) longitudinal uniformemente distribuida en ambas caras laterales del alma…"
       }
+     ],
+     "reemplaza": [
+      "185a11bb708b048d"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se combinan sismo y viento simultáneamente?",
+      "pregunta": "¿Deben considerarse las acciones de sismo y de viento actuando simultáneamente?",
       "opciones": [
-       "Sí, siempre",
+       "Sí, en todos los casos",
        "No es necesario",
-       "Solo en edificios altos",
-       "Solo en zona 4"
+       "Solo en edificios de más de 10 pisos",
+       "Solo en zona sísmica 4"
       ],
       "correcta": 1
      },
@@ -1544,12 +1580,15 @@
        "articulo": "9.2.4",
        "extracto": "No será necesario considerar acciones de sismo y de viento simultáneamente."
       }
+     ],
+     "reemplaza": [
+      "88af2a6ed43b3184"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Con sismo, ¿cuál es la combinación de carga gravitacional + sismo de la E.060?",
+      "pregunta": "¿Cuál es la combinación de cargas de gravedad con sismo de la E.060 (CM = muerta, CV = viva, CS = sismo)?",
       "opciones": [
        "U = 1,4 CM + 1,7 CV + CS",
        "U = 1,25 (CM + CV) ± CS",
@@ -1563,12 +1602,15 @@
        "articulo": "9.2.3",
        "extracto": "U = 1,25 (CM + CV) ± CS"
       }
+     ],
+     "reemplaza": [
+      "92a79da1c406f1d0"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué combinación con sismo controla el levantamiento o volteo?",
+      "pregunta": "¿Qué combinación con sismo de la E.060 usa la carga muerta reducida (la que controla el levantamiento o volteo)?",
       "opciones": [
        "U = 0,9 CM ± CS",
        "U = 0,9 CM ± 1,25 CS",
@@ -1582,12 +1624,15 @@
        "articulo": "9.2.3",
        "extracto": "U = 0,9 CM ± CS (9-5)"
       }
+     ],
+     "reemplaza": [
+      "9844a47649ccad20"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro de sótano con empuje de suelo CE: ¿qué factor lleva CE en U = 1,4 CM + 1,7 CV + … CE?",
+      "pregunta": "En la combinación con peso y empuje lateral de suelos, U = 1,4 CM + 1,7 CV + (factor) CE, ¿qué factor de carga lleva el empuje CE?",
       "opciones": [
        "1,4",
        "1,5",
@@ -1601,12 +1646,15 @@
        "articulo": "9.2.5",
        "extracto": "U = 1,4 CM + 1,7 CV + 1,7 CE (9-6)"
       }
+     ],
+     "reemplaza": [
+      "758005fcfd6c5dd8"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si la carga muerta reduce el efecto del empuje lateral, ¿qué combinación se usa?",
+      "pregunta": "Si la carga muerta o la carga viva reducen el efecto del empuje lateral del suelo (CE), ¿qué combinación de cargas se usa?",
       "opciones": [
        "U = 0,9 CM + 1,7 CE",
        "U = 1,4 CM + 1,7 CE",
@@ -1620,12 +1668,15 @@
        "articulo": "9.2.5",
        "extracto": "En el caso en que la carga muerta o la carga viva reduzcan el efecto del empuje lateral, se usará:"
       }
+     ],
+     "reemplaza": [
+      "fd5563b2799405dc"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Tanque con líquido de densidad y altura controladas: ¿qué factor lleva CL?",
+      "pregunta": "En la combinación con presión de líquidos de densidad y altura máxima controladas, U = 1,4 CM + 1,7 CV + (factor) CL, ¿qué factor de carga lleva CL?",
       "opciones": [
        "1,2",
        "1,4",
@@ -1639,17 +1690,20 @@
        "articulo": "9.2.6",
        "extracto": "U = 1,4 CM + 1,7 CV + 1,4 CL (9-8)"
       }
+     ],
+     "reemplaza": [
+      "a3080809ea84d171"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cómo se incluyen las cargas de impacto en la E.060?",
+      "pregunta": "¿Cómo se incluyen las cargas de impacto en las combinaciones de la E.060?",
       "opciones": [
-       "Como carga muerta",
+       "Como carga muerta (CM)",
        "Dentro de la carga viva (CV)",
-       "Con factor 2,0 aparte",
-       "No se consideran"
+       "Como una carga aparte con factor 2,0",
+       "Dentro de la carga de sismo (CS)"
       ],
       "correcta": 1
      },
@@ -1658,12 +1712,15 @@
        "articulo": "9.2.7",
        "extracto": "Si fuera necesario incluir en el diseño el efecto de cargas de impacto, éstas deberán incluirse en la carga viva (CV)."
       }
+     ],
+     "reemplaza": [
+      "f98e11ac7ae2f8b5"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Efectos CT (asentamientos, retracción, temperatura): ¿cuál es una de las combinaciones?",
+      "pregunta": "¿Cuál de estas es una combinación de la E.060 para incluir los efectos CT de asentamientos diferenciales, flujo plástico, retracción o cambios de temperatura?",
       "opciones": [
        "U = 1,05 CM + 1,25 CV + 1,05 CT",
        "U = 1,4 CM + 1,7 CV + 1,7 CT",
@@ -1677,12 +1734,15 @@
        "articulo": "9.2.9",
        "extracto": "U = 1,05 CM + 1,25 CV + 1,05 CT (9-9)"
       }
+     ],
+     "reemplaza": [
+      "e7cadae639ad5dca"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué φ corresponde al aplastamiento del concreto (fuera de anclajes de postensado)?",
+      "pregunta": "¿Qué factor de reducción de resistencia φ corresponde al aplastamiento en el concreto (fuera de las zonas de anclaje de postensado)?",
       "opciones": [
        "0,65",
        "0,70",
@@ -1696,12 +1756,15 @@
        "articulo": "9.3.2.4",
        "extracto": "Aplastamiento en el concreto (excepto para las zonas de anclajes de postensado)…. 0,70"
       }
+     ],
+     "reemplaza": [
+      "cadb48a501a4235f"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué φ se usa en las zonas de anclaje de postensado?",
+      "pregunta": "¿Qué factor de reducción de resistencia φ se usa en las zonas de anclaje de postensado?",
       "opciones": [
        "0,70",
        "0,75",
@@ -1715,17 +1778,20 @@
        "articulo": "9.3.2.5",
        "extracto": "Zonas de anclaje de postensado … 0,85"
       }
+     ],
+     "reemplaza": [
+      "8b658eee96062c88"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Las longitudes de desarrollo del Capítulo 12 llevan factor φ?",
+      "pregunta": "¿Se aplica el factor de reducción de resistencia φ a las longitudes de desarrollo del Capítulo 12?",
       "opciones": [
-       "Sí, 0,90",
-       "Sí, 0,75",
+       "Sí, φ = 0,90",
+       "Sí, φ = 0,75",
        "No requieren factor φ",
-       "Solo en zona sísmica"
+       "Sí, φ = 0,85"
       ],
       "correcta": 2
      },
@@ -1734,6 +1800,9 @@
        "articulo": "9.3.2.7",
        "extracto": "Las longitudes de desarrollo especificadas en el capítulo 12 no requieren de un factor"
       }
+     ],
+     "reemplaza": [
+      "1a8785273d62b3eb"
      ]
     },
     {
@@ -1758,12 +1827,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Para cuál de estos aceros se puede usar fy mayor a 550 MPa en el diseño?",
+      "pregunta": "¿Para cuál de estos refuerzos permite la E.060 usar en el diseño una resistencia a la fluencia mayor de 550 MPa?",
       "opciones": [
        "Barras longitudinales de vigas",
-       "Refuerzo transversal en espiral (10.9.3)",
-       "Barras de columnas",
-       "Mallas de losas"
+       "Refuerzo transversal en espiral de columnas",
+       "Barras longitudinales de columnas",
+       "Refuerzo de flexión de losas"
       ],
       "correcta": 1
      },
@@ -1772,12 +1841,15 @@
        "articulo": "9.5.1",
        "extracto": "excepto para los aceros de preesforzado, para los refuerzos transversales en espiral en 10.9.3, el refuerzo por cortante y torsión (véase 11.5.2 y 11.6.3.4)."
       }
+     ],
+     "reemplaza": [
+      "05503642ab3aa11c"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Con la Tabla 9.1, ¿espesor mínimo de una losa maciza continua en ambos extremos?",
+      "pregunta": "Con la Tabla 9.1 (fy = 420 MPa), ¿cuál es el espesor mínimo de una losa maciza en una dirección, continua en ambos extremos, para no verificar deflexiones (ℓ = luz)?",
       "opciones": [
        "ℓ/20",
        "ℓ/24",
@@ -1792,12 +1864,15 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)"
       }
+     ],
+     "reemplaza": [
+      "a3c2956dfe368813"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Aligerado en voladizo de 2,0 m (fy 420): ¿espesor mínimo sin verificar deflexiones?",
+      "pregunta": "Aligerado (losa nervada en una dirección) en voladizo de 2,0 m, con fy = 420 MPa: ¿espesor mínimo según la Tabla 9.1 para no verificar deflexiones?",
       "opciones": [
        "200 mm",
        "250 mm",
@@ -1813,12 +1888,15 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)"
       }
+     ],
+     "reemplaza": [
+      "8f1d403ba46b9b0e"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si se usa fy = 280 MPa, ¿por cuánto se multiplican los valores de la Tabla 9.1?",
+      "pregunta": "Si el refuerzo tiene fy = 280 MPa, ¿por qué factor se multiplican los peraltes mínimos de la Tabla 9.1 (dados para fy = 420 MPa)?",
       "opciones": [
        "0,67",
        "0,80",
@@ -1833,12 +1911,15 @@
        "articulo": "9.6.2.1",
        "extracto": "(b) Para fy distinto de 420 MPa, los valores de la Tabla deben multiplicarse por (0,4 + fy / 700)."
       }
+     ],
+     "reemplaza": [
+      "fa78f4497781224c"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Concreto liviano de 1450–1900 kg/m³: ¿factor mínimo para los valores de la Tabla 9.1?",
+      "pregunta": "Para concreto liviano con peso unitario wc entre 1450 y 1900 kg/m³, los peraltes mínimos de la Tabla 9.1 se multiplican por (1,65 − 0,0003 wc). ¿Cuál es el valor mínimo de ese factor?",
       "opciones": [
        "1,00",
        "1,09",
@@ -1852,12 +1933,15 @@
        "articulo": "9.6.2.1",
        "extracto": "los valores de la tabla deben multiplicarse por (1,65 – 0,0003 wc), pero no menos de 1,09"
       }
+     ],
+     "reemplaza": [
+      "78349e01d9b035b8"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Concreto liviano en todos sus componentes y sin fct especificado: ¿por cuánto se multiplica fr?",
+      "pregunta": "Al calcular el módulo de rotura fr de un concreto liviano en todos sus componentes, sin resistencia a tracción por hendimiento (fct) especificada, ¿por qué factor se multiplica fr?",
       "opciones": [
        "0,65",
        "0,75",
@@ -1871,12 +1955,15 @@
        "articulo": "9.6.2.3",
        "extracto": "(b) Cuando no se especifique fct, fr debe multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85 para concreto liviano con arena de peso normal."
       }
+     ],
+     "reemplaza": [
+      "f413349d8e9123ca"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Para transformar el acero en compresión al calcular Ie, ¿qué relación modular se puede usar?",
+      "pregunta": "Al calcular el momento de inercia efectivo Ie de una sección con acero en compresión, ¿qué relación modular puede usarse para transformar ese acero a concreto equivalente (n = Es/Ec)?",
       "opciones": [
        "n",
        "1,5 n",
@@ -1890,17 +1977,20 @@
        "articulo": "9.6.2.3",
        "extracto": "cuando exista acero en compresión, se podrá utilizar una relación modular de 2n (n = Es / Ec) para la transformación del acero en compresión a concreto equivalente."
       }
+     ],
+     "reemplaza": [
+      "803b119018e541d3"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Tramo continuo en un solo extremo: ¿cómo se promedia Ie?",
+      "pregunta": "Para la deflexión de un tramo continuo en un solo extremo, ¿cómo se promedia el momento de inercia efectivo (Ie2 = sección del extremo continuo, Ie3 = sección central)?",
       "opciones": [
-       "(Ie1 + Ie2 + 2 Ie3) / 4",
+       "(Ie2 + 2 Ie3) / 4",
        "(Ie2 + 2 Ie3) / 3",
        "(Ie2 + Ie3) / 2",
-       "Ie3"
+       "Se usa solo Ie3"
       ],
       "correcta": 1
      },
@@ -1909,17 +1999,20 @@
        "articulo": "9.6.2.4",
        "extracto": "Ie promedio = ( Ie2 + 2 Ie3 ) / 3 (9-14)"
       }
+     ],
+     "reemplaza": [
+      "0c6a26d16c2e8c43"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Voladizo: ¿qué momento de inercia se usa para su deflexión?",
+      "pregunta": "Para calcular la deflexión de un voladizo, ¿el momento de inercia efectivo de qué sección se usa?",
       "opciones": [
-       "El de la sección central",
+       "El de la sección en el extremo libre",
        "El de la sección en el apoyo del voladizo",
-       "El promedio",
-       "Ig siempre"
+       "El promedio entre el apoyo y el extremo libre",
+       "El de la sección a media luz"
       ],
       "correcta": 1
      },
@@ -1928,12 +2021,15 @@
        "articulo": "9.6.2.4",
        "extracto": "(d) Para elementos en voladizo se usará el momento de inercia calculado para la sección en el apoyo del voladizo."
       }
+     ],
+     "reemplaza": [
+      "9ddf82f45eb5a04f"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Carga sostenida 5 años o más y ρ′ = 0,01: ¿cuánto vale λΔ?",
+      "pregunta": "Viga con cargas sostenidas durante 5 años o más (factor de duración ξ = 2,0) y cuantía de acero en compresión ρ′ = 0,01: ¿cuánto vale el multiplicador de deflexión diferida λΔ = ξ / (1 + 50 ρ′)?",
       "opciones": [
        "1,00",
        "1,33",
@@ -1941,19 +2037,22 @@
        "2,00"
       ],
       "correcta": 1,
-      "explicacion": "ξ = 2,0 y λΔ = 2,0 / (1 + 50 × 0,01) = 1,33."
+      "explicacion": "λΔ = 2,0 / (1 + 50 × 0,01) = 1,33."
      },
      "citas": [
       {
        "articulo": "9.6.2.5",
        "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"
       }
+     ],
+     "reemplaza": [
+      "8a8df8c757b820aa"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la Tabla 9.2, ¿deflexión inmediata máxima por carga viva en pisos sin elementos frágiles?",
+      "pregunta": "Según la Tabla 9.2, ¿cuál es la deflexión inmediata máxima por carga viva en pisos que no soportan ni están ligados a elementos no estructurales susceptibles de dañarse?",
       "opciones": [
        "ℓ/180",
        "ℓ/240",
@@ -1968,12 +2067,15 @@
        "articulo": "9.6.2.6",
        "extracto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2"
       }
+     ],
+     "reemplaza": [
+      "331fb682852873fa"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la Tabla 9.2, piso con elementos no estructurales NO susceptibles de dañarse: ¿límite?",
+      "pregunta": "Según la Tabla 9.2, ¿qué límite tiene la deflexión posterior a la unión de los elementos no estructurales en un piso que soporta elementos NO susceptibles de dañarse con deflexiones grandes?",
       "opciones": [
        "ℓ/180",
        "ℓ/240",
@@ -1988,12 +2090,15 @@
        "articulo": "9.6.2.6",
        "extracto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2"
       }
+     ],
+     "reemplaza": [
+      "e34cb51f6f2be650"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa sin vigas interiores y sin ábacos: ¿espesor mínimo absoluto?",
+      "pregunta": "Losa en dos direcciones sin vigas interiores y sin ábacos: ¿cuál es su espesor mínimo absoluto?",
       "opciones": [
        "90 mm",
        "100 mm",
@@ -2007,12 +2112,15 @@
        "articulo": "9.6.3.2",
        "extracto": "(a) Losas sin ábacos como se definen en 13.2.6 … 125 mm"
       }
+     ],
+     "reemplaza": [
+      "5881d242cfd79290"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la Tabla 9.3, fy = 420 MPa, sin ábacos, panel interior: ¿espesor mínimo?",
+      "pregunta": "Según la Tabla 9.3, ¿cuál es el espesor mínimo de un panel interior de losa en dos direcciones sin vigas interiores y sin ábacos, con fy = 420 MPa (ℓn = luz libre mayor)?",
       "opciones": [
        "ℓn/30",
        "ℓn/33",
@@ -2027,12 +2135,15 @@
        "articulo": "9.6.3.2",
        "extracto": "debe estar de acuerdo con lo requerido en la Tabla 9.3"
       }
+     ],
+     "reemplaza": [
+      "2be44954536508c2"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa con vigas en todos los lados y αfm > 2,0: ¿espesor mínimo absoluto?",
+      "pregunta": "Losa en dos direcciones con vigas entre apoyos en todos sus lados y rigidez relativa promedio viga/losa αfm mayor que 2,0: ¿cuál es su espesor mínimo absoluto?",
       "opciones": [
        "90 mm",
        "100 mm",
@@ -2046,17 +2157,20 @@
        "articulo": "9.6.3.3",
        "extracto": "pero no menor que 90 mm."
       }
+     ],
+     "reemplaza": [
+      "8cf5b5cf3cb66418"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Borde discontinuo sin viga de borde con αf ≥ 0,80: ¿qué se hace?",
+      "pregunta": "En una losa en dos direcciones con vigas, si un borde discontinuo no tiene viga de borde con rigidez relativa αf de al menos 0,80, ¿qué exige la E.060?",
       "opciones": [
-       "Nada",
-       "Aumentar el espesor mínimo al menos 10 % en ese panel",
-       "Duplicar el refuerzo",
-       "Usar ábaco"
+       "Colocar un ábaco a lo largo de ese borde",
+       "Aumentar al menos 10 % el espesor mínimo en el panel con borde discontinuo",
+       "Duplicar el refuerzo del borde",
+       "Aumentar al menos 25 % el espesor mínimo en toda la losa"
       ],
       "correcta": 1
      },
@@ -2065,17 +2179,20 @@
        "articulo": "9.6.3.3",
        "extracto": "o bien aumentar el espesor mínimo requerido por las ecuaciones (9-16) ó (9-17), por lo menos un 10% en el panel que tenga un borde discontinuo."
       }
+     ],
+     "reemplaza": [
+      "c6195f2e3f7a4b1c"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Elemento preesforzado Clase U: ¿qué inercia se permite para sus deflexiones inmediatas?",
+      "pregunta": "Elemento preesforzado a flexión Clase U (no fisurado): ¿qué momento de inercia se permite usar para calcular sus deflexiones inmediatas?",
       "opciones": [
-       "Ie",
-       "Icr",
-       "Ig de la sección total",
-       "0,5 Ig"
+       "El efectivo, Ie",
+       "El de la sección fisurada, Icr",
+       "El de la sección total de concreto, Ig",
+       "La mitad de Ig"
       ],
       "correcta": 2
      },
@@ -2084,12 +2201,15 @@
        "articulo": "9.6.4.1",
        "extracto": "se permite utilizar el momento de inercia de la sección total de concreto, Ig, para los elementos a flexión Clase U"
       }
+     ],
+     "reemplaza": [
+      "242674f13c7336cb"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa con barras lisas: ¿cuantía mínima de retracción y temperatura?",
+      "pregunta": "Losa con barras lisas: ¿qué cuantía mínima de refuerzo por retracción y temperatura le corresponde?",
       "opciones": [
        "0,0018",
        "0,0020",
@@ -2101,14 +2221,17 @@
      "citas": [
       {
        "articulo": "9.7.2",
-       "extracto": "Barras lisas"
+       "extracto": "Barras lisas 0,0025"
       }
+     ],
+     "reemplaza": [
+      "261bcbd09456c401"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Tendones como refuerzo de temperatura (ver figura): ¿qué compresión promedio mínima deben dar?",
+      "pregunta": "Cuando se usan tendones de preesfuerzo como refuerzo de retracción y temperatura (ver figura), ¿qué esfuerzo promedio de compresión mínimo deben producir sobre el área bruta de concreto?",
       "opciones": [
        "0,5 MPa",
        "0,7 MPa",
@@ -2123,12 +2246,15 @@
        "articulo": "9.7.7",
        "extracto": "produzca un esfuerzo promedio de compresión mínimo de 0,7 MPa sobre el área bruta de concreto."
       }
+     ],
+     "reemplaza": [
+      "8854cb72fb809037"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Tendones usados como refuerzo de temperatura: ¿espaciamiento máximo entre ellos?",
+      "pregunta": "Cuando se usan tendones de preesfuerzo como refuerzo de retracción y temperatura, ¿cuál es el espaciamiento máximo entre tendones?",
       "opciones": [
        "1,4 m",
        "1,5 m",
@@ -2142,12 +2268,15 @@
        "articulo": "9.7.7",
        "extracto": "(b) El espaciamiento entre los tendones no debe exceder de 1,8 m."
       }
+     ],
+     "reemplaza": [
+      "d1e5f0afd44a4d33"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa maciza de 200 mm: ¿espaciamiento máximo del refuerzo principal por flexión?",
+      "pregunta": "Losa maciza de 200 mm de espesor: ¿cuál es el espaciamiento máximo entre ejes del refuerzo principal por flexión?",
       "opciones": [
        "300 mm",
        "400 mm",
@@ -2162,12 +2291,15 @@
        "articulo": "9.8.1",
        "extracto": "En muros y losas, exceptuando las losas nervadas, el espaciamiento entre ejes del refuerzo principal por flexión será menor o igual a tres veces el espesor del elemento estructural, sin exceder de 400 mm."
       }
+     ],
+     "reemplaza": [
+      "dc700c0a39bcb873"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Control de fisuración: ¿qué valor máximo puede tener el parámetro Z?",
+      "pregunta": "Para controlar el ancho de las grietas por flexión, la E.060 limita el parámetro Z = fs ∛(dc Act), calculado en condiciones de servicio. ¿Cuál es su valor máximo?",
       "opciones": [
        "20 kN/mm",
        "26 kN/mm",
@@ -2181,17 +2313,20 @@
        "articulo": "9.9.3",
        "extracto": "permita obtener un valor del parámetro Z menor o igual que 26 KN/mm."
       }
+     ],
+     "reemplaza": [
+      "19ac1a2b34e33bce"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la figura, ¿qué representa Act?",
+      "pregunta": "En el parámetro Z de control de fisuración por flexión (ver figura), ¿qué representa Act?",
       "opciones": [
-       "El área de acero",
-       "El área de concreto en tracción alrededor del refuerzo, entre el número de barras",
-       "El área bruta",
-       "El área del ala"
+       "El área total del acero en tracción",
+       "El área efectiva de concreto en tracción que rodea al refuerzo principal, dividida entre el número de barras",
+       "El área bruta de la sección",
+       "El área del ala en compresión"
       ],
       "correcta": 1,
       "imagenUrl": "data:image/jpeg;base64,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ACSQQQACCCAQCSSSSSSSSSSSQASSSSAQSSSSSSSSQCCAQAACSCCSSCCQSSSSSSSSSSSSACSSSQCCSSSSSSSSCCQQQQSSACSQACSSSSSSSSSSSSSQASSSSAQSSSSSSSSSSSSSSSSSCSSSSSSSSSSSSSSSSSSACSSSQCCSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQASSSSAQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSACSSSQCCSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQASSSSAQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSACSSSQCCSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQSCSSCACSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSCCSSCQQCSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQSSAQAQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQCCQQAASSQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQASQCCCCSQCSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSAQCASQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQSCAQSSQSAASSQQSSSSSSSSSSSSSSSSSSSSSSSSSSSSCSSCCCAAACSCSSCSSSSSSSSSSSSSSSSSSSSSSSSSSSSQQCCQQQAQCSQSSSCCSSSSSSSSSSSSSSSSSSSSSSSSSSSSCQSCSQQCSSCSACSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQSSSSSSSSSSQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQSSSSSSQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSCSSQSSSCSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQSSSQSSQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQCSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSQACAAAQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSCSSSSSQSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSf/8QA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"
@@ -2201,17 +2336,20 @@
        "articulo": "9.9.3",
        "extracto": "Act: área efectiva del concreto en tracción (mm²) que rodea al refuerzo principal de tracción"
       }
+     ],
+     "reemplaza": [
+      "1681acce7a779a20"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Bastan los requisitos de Z para un elemento en ambiente agresivo o que debe ser impermeable?",
+      "pregunta": "¿Bastan los requisitos de control de fisuración por el parámetro Z para elementos expuestos a ambientes agresivos o que deben ser impermeables?",
       "opciones": [
-       "Sí",
-       "No: deben tomarse precauciones especiales",
-       "Sí, con Z ≤ 20",
-       "Solo en losas"
+       "Sí, son suficientes",
+       "No: se requieren precauciones especiales",
+       "Sí, si Z no pasa de 20 kN/mm",
+       "Sí, pero solo en losas"
       ],
       "correcta": 1
      },
@@ -2220,17 +2358,20 @@
        "articulo": "9.9.4",
        "extracto": "Las disposiciones del 9.9.3 no son suficientes para elementos expuestos a ambientes agresivos ni para obtener elementos impermeables."
       }
+     ],
+     "reemplaza": [
+      "9c4e92721d455a13"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Ala de viga T en tracción: ¿en qué ancho se distribuye parte del refuerzo de tracción?",
+      "pregunta": "Cuando el ala de una viga T está en tracción, ¿en qué ancho debe distribuirse parte del refuerzo de tracción por flexión?",
       "opciones": [
-       "Solo en el alma",
-       "En el ancho efectivo del ala o ℓ/10, el menor",
-       "En ℓ/4",
-       "En 8 t"
+       "Solo dentro del ancho del alma",
+       "En el ancho efectivo del ala o en 1/10 de la luz del tramo, el menor",
+       "En 1/4 de la luz del tramo",
+       "En 8 veces el espesor del ala a cada lado del alma"
       ],
       "correcta": 1
      },
@@ -2239,17 +2380,20 @@
        "articulo": "9.9.5",
        "extracto": "una parte del refuerzo de tracción por flexión debe distribuirse en el ancho efectivo del ala (véase 8.10) o en un ancho igual a 1/10 de la luz del tramo, el que sea menor."
       }
+     ],
+     "reemplaza": [
+      "63daac357f8bd2ce"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la figura, ¿en qué altura cercana a la armadura de tracción se coloca el refuerzo superficial?",
+      "pregunta": "En vigas con peralte h mayor de 900 mm, ¿en qué altura, medida desde la armadura principal de tracción, se distribuye la armadura superficial de las caras laterales?",
       "opciones": [
        "0,25 h",
        "0,5 h",
-       "Toda la altura",
-       "300 mm"
+       "0,75 h",
+       "Toda la altura h"
       ],
       "correcta": 1,
       "imagenUrl": "data:image/jpeg;base64,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EEkgkkkkkkkgkkgEkkkgAkkAkkkkkkkkkgkkggkkkgggkkEkkkkkkkEkkAkkkgkEkgkkEEEkkkkkEkkEEkkkEEkkgkkkkkkkgkkgEkkgEEkkEkkkkkkkkkgkkgAEkkAgkkkEkkkkkkkEkkAkkAkAEkkkkkkkkkkkkEkkEEkkkAEEkgkkkkkkkgkkggAEkkEkkkkkkkkkkEkkkkggkkkAAmAA0kkkkgAEgAAEEkkkkkQAGkkkkkkkgAggkAEkkkAkUkhkkkkkEgkkAgEkkkAgmkkUkkkkkkkkgkkgAEEkggkkkkkkkkkkkEkkEEkkgEkkkgkkkkkkkkkEkkEEggkAkkkkkkkkkkkgkkgAkkkAEkkkEkkkkkkkkgkkggkkEgAEkkkkkkkkkkEkkAkkkkAkEkgkkkkkkkkkEkkEEkkkAEgAkgEEkkkkgkkgkEkkAEgkkEkkkkkkkkgkkggkkkgAkEgkAgEkkkkEkkEgkkgEgkkgkkkkkkkkkEkkEEkkkAEEkkAgEkkkkgkkgEkkkgkgkkEkkkkkkkkgkkggkkkgAgEkkAAkkkkkEkEAkkkkEkkkkkkkkkkkkkEkkEEkkkAEkkkkkkkkkkgkgAEkkkAEgkkggkkkkkkkgkkggkkkgAkkkkkkkkkkkEkkkAkkkAkEgkgEkkkkkkkEkkEEkkkAEkkkkkkkkkkgkkgEkkkEkmkkEkkkkkkkkgkkggkkkgAkkkkkkkkkkkEkkkEkkkAEEkgkkkkkkkkkEkkEEkkkAEkkkkkkkkkkgkkgkkkkEEgkkEkkkkkkkkgkkggkkkgAkkkkkkkkkkkEkkAkkkkAkEkgkkkkkkkkkEkkEEkkkAEkkkkkkkkkkgkkgEkkkgEkkkEkkkkkkkkgkkggkkkgAkkkkkkkkkkkEkkAkkkkAkEkgkkkkkkkkkEkkAEkkkEEkkkkkkkkkkgkkgkkEkEAAkkEkkkkkkkkgkkgkkkkkgkkkkkkkkkkkEkkEkgggAkkkgkkkkkkkkkgAkgAAAAAEkkkkkkkkkkkAAgAAAAAEAAAkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEkkkkkkkkkkkkkkkEkkkkkEkkkkkkkkkkkkkgkkkkkEkkkkkkkkkkkkkkkgkkEkkgkkkkkkkkkkkkkkEkkkkgkkkkkkkkkkkkkkkkgAEAAEUkkkkkkkkk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"
@@ -2259,12 +2403,15 @@
        "articulo": "9.9.6",
        "extracto": "en una distancia 0,5 h cercana de la armadura principal de tracción por flexión."
       }
+     ],
+     "reemplaza": [
+      "8b554216f326d859"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Espaciamiento máximo absoluto de la armadura superficial en vigas de más de 900 mm?",
+      "pregunta": "¿Cuál es el espaciamiento máximo absoluto de la armadura superficial longitudinal en las caras laterales de vigas con peralte mayor de 900 mm?",
       "opciones": [
        "200 mm",
        "250 mm",
@@ -2278,6 +2425,9 @@
        "articulo": "9.9.6",
        "extracto": "s ≤ 300 mm, s ≤ 380 (250 / fs) – 2,5 Cc (9-20) s ≤ 300 (250 / fs) (9-21)"
       }
+     ],
+     "reemplaza": [
+      "9dd12d695201ebda"
      ]
     }
    ]

@@ -995,12 +995,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué espaciamiento libre entre hélices permite la E.060 en espirales?",
+      "pregunta": "¿Entre qué valores debe estar el espaciamiento libre entre hélices de una espiral?",
       "opciones": [
        "Entre 25 y 75 mm",
        "Entre 40 y 100 mm",
        "Entre 25 y 150 mm",
-       "Máximo 16 db"
+       "Entre 50 y 100 mm"
       ],
       "correcta": 0
      },
@@ -1009,6 +1009,9 @@
        "articulo": "7.10.4.3",
        "extracto": "El espaciamiento libre entre hélices de la espiral no debe exceder de 75 mm ni ser menor de 25 mm."
       }
+     ],
+     "reemplaza": [
+      "d35ee97089471142"
      ]
     },
     {
@@ -1084,12 +1087,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿A qué distancia máxima de la zapata o losa se coloca el primer estribo de una columna?",
+      "pregunta": "¿A qué distancia vertical máxima de la parte superior de la zapata, viga o losa se coloca el primer estribo de una columna?",
       "opciones": [
-       "50 mm",
+       "A 50 mm",
        "A la mitad del espaciamiento entre estribos",
-       "A un espaciamiento completo",
-       "150 mm"
+       "A un espaciamiento completo entre estribos",
+       "A 150 mm"
       ],
       "correcta": 1
      },
@@ -1098,6 +1101,9 @@
        "articulo": "7.10.5.4",
        "extracto": "La distancia vertical entre el primer estribo y la parte superior de la zapata, viga o losa no debe ser mayor a la mitad del espaciamiento entre estribos."
       }
+     ],
+     "reemplaza": [
+      "da07738975dc5408"
      ]
     },
     {
@@ -1180,7 +1186,7 @@
      "citas": [
       {
        "articulo": "7.1.3",
-       "extracto": "(b) Para barras desde 3/4” hasta 1” inclusive, un doblez de 90º más una extensión de 12 db al extremo libre de la barra"
+       "extracto": "(c) Para barras de 1\" y menores, un doblez de 135º más una extensión de 6 db al extremo libre de la barra."
       }
      ]
     },
@@ -1227,7 +1233,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Estribos de 5/8″ o menos: ¿diámetro interior mínimo de doblado?",
+      "pregunta": "En estribos de barras de 5/8″ y menores, ¿cuál es el diámetro interior mínimo de doblado?",
       "opciones": [
        "2 db",
        "4 db",
@@ -1241,6 +1247,9 @@
        "articulo": "7.2.2",
        "extracto": "El diámetro interior de doblado para estribos no debe ser menor que 4 db para barras de 5/8” y menores."
       }
+     ],
+     "reemplaza": [
+      "eb759183aaa8c732"
      ]
     },
     {
@@ -1265,7 +1274,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuántas barras como máximo puede tener un paquete?",
+      "pregunta": "¿Cuántas barras como máximo puede tener un paquete de barras paralelas que trabaja como una unidad?",
       "opciones": [
        "2",
        "3",
@@ -1279,12 +1288,15 @@
        "articulo": "7.6.5.1",
        "extracto": "Los grupos de barras paralelas dispuestas en un paquete para trabajar como una unidad, deben limitarse a un máximo de 4 barras por cada paquete."
       }
+     ],
+     "reemplaza": [
+      "2261cd1dffbc1e38"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata vaciada directamente contra el terreno (expuesta permanentemente a él): ¿recubrimiento mínimo?",
+      "pregunta": "Zapata vaciada directamente contra el suelo y expuesta permanentemente a él: ¿cuál es el recubrimiento mínimo del refuerzo?",
       "opciones": [
        "40 mm",
        "50 mm",
@@ -1298,12 +1310,15 @@
        "articulo": "7.7.1",
        "extracto": "(a) Concreto colocado contra el suelo y expuesto permanentemente a él … 70 mm"
       }
+     ],
+     "reemplaza": [
+      "756139845d823163"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Concreto en contacto permanente con el suelo (no vaciado contra él), barras de 5/8″: ¿recubrimiento mínimo?",
+      "pregunta": "Concreto en contacto permanente con el suelo (pero no vaciado contra él) con barras de 5/8″: ¿cuál es el recubrimiento mínimo del refuerzo?",
       "opciones": [
        "40 mm",
        "50 mm",
@@ -1318,12 +1333,15 @@
        "articulo": "7.7.1",
        "extracto": "Barras de 5/8” y menores, mallas electrosoldadas … 40 mm"
       }
+     ],
+     "reemplaza": [
+      "f10651b78eeabe66"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa interior no expuesta con barras de 1/2″: ¿recubrimiento mínimo?",
+      "pregunta": "Losa interior, no expuesta a la intemperie ni en contacto con el suelo, con barras de 1/2″: ¿cuál es el recubrimiento mínimo del refuerzo?",
       "opciones": [
        "20 mm",
        "25 mm",
@@ -1335,14 +1353,17 @@
      "citas": [
       {
        "articulo": "7.7.1",
-       "extracto": "(a) Concreto colocado contra el suelo y expuesto permanentemente a él … 70 mm"
+       "extracto": "(c) Concreto no expuesto a la intemperie ni en contacto con el suelo: - Losas, muros, viguetas: Barras de 1 11/16\" y 2 1/4\" … 40 mm Barras de 1 3/8\" y menores … 20 mm"
       }
+     ],
+     "reemplaza": [
+      "9f84ea8d2cc8bd33"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna con barras de 5/8″ a la intemperie: ¿recubrimiento mínimo?",
+      "pregunta": "Columna expuesta a la intemperie con barras de 5/8″: ¿cuál es el recubrimiento mínimo del refuerzo?",
       "opciones": [
        "30 mm",
        "40 mm",
@@ -1354,8 +1375,11 @@
      "citas": [
       {
        "articulo": "7.7.1",
-       "extracto": "(a) Concreto colocado contra el suelo y expuesto permanentemente a él … 70 mm"
+       "extracto": "(b) Concreto en contacto permanente con el suelo o la intemperie: Barras de 3/4\" y mayores … 50 mm Barras de 5/8\" y menores, mallas electrosoldadas … 40 mm"
       }
+     ],
+     "reemplaza": [
+      "72f5ccaeb00fc086"
      ]
     },
     {
@@ -1380,7 +1404,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna de 30 × 50 con barras de 3/4″ y estribos de 3/8″: ¿espaciamiento vertical máximo de estribos?",
+      "pregunta": "Columna de 30 × 50 cm con barras longitudinales de 3/4″ (19,1 mm) y estribos de 3/8″ (9,5 mm): ¿cuál es el espaciamiento vertical máximo de los estribos?",
       "opciones": [
        "250 mm",
        "300 mm",
@@ -1388,13 +1412,16 @@
        "456 mm"
       ],
       "correcta": 1,
-      "explicacion": "El menor entre 16 db = 306 mm, 48 dest = 456 mm y la menor dimensión, 300 mm."
+      "explicacion": "El menor entre 16 veces el diámetro de la barra longitudinal (306 mm), 48 veces el diámetro del estribo (456 mm) y la menor dimensión de la columna (300 mm)."
      },
      "citas": [
       {
        "articulo": "7.10.5.2",
        "extracto": "El espaciamiento vertical de los estribos no debe exceder 16 veces el diámetro de las barras longitudinales, 48 veces el diámetro de la barra o alambre de los estribos ni la menor dimensión transversal del elemento sometido a compresión."
       }
+     ],
+     "reemplaza": [
+      "a33936157343ef71"
      ]
     },
     {
@@ -1518,12 +1545,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Barras con óxido y escamas (no preesforzadas): ¿cuándo son aceptables?",
+      "pregunta": "¿Cuándo es aceptable el refuerzo no preesforzado que presenta óxido o escamas?",
       "opciones": [
-       "Nunca",
-       "Si, limpiada con cepillo de alambre, la muestra cumple dimensiones y peso mínimos",
-       "Siempre",
-       "Solo si se pintan con epóxico"
+       "Solo si se reemplaza la zona oxidada",
+       "Si una muestra limpiada a mano con cepillo de alambre cumple las dimensiones mínimas y el peso de la norma",
+       "Si el óxido cubre menos de la mitad de la barra",
+       "Solo si se pinta con epóxico"
       ],
       "correcta": 1
      },
@@ -1532,6 +1559,9 @@
        "articulo": "7.4.2",
        "extracto": "el refuerzo con óxido, escamas o una combinación de ambos, debe considerarse aceptable si las dimensiones mínimas (incluyendo la altura de los resaltes del corrugado) y el peso de una muestra limpiada manualmente utilizando un cepillo de alambre de acero, cumple con las normas aplicables indicadas en 3.5."
       }
+     ],
+     "reemplaza": [
+      "48872b8398fa24fe"
      ]
     },
     {
@@ -1556,7 +1586,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Viga con d = 450 mm: ¿tolerancia de colocación en el peralte efectivo?",
+      "pregunta": "Viga con peralte efectivo d = 450 mm: ¿cuál es la tolerancia de colocación del refuerzo en d?",
       "opciones": [
        "± 6 mm",
        "± 10 mm",
@@ -1570,12 +1600,15 @@
        "articulo": "7.5.2.1",
        "extracto": "d > 200 mm ± 13 mm -13 mm"
       }
+     ],
+     "reemplaza": [
+      "3926c8f0431da880"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuál es la tolerancia para la distancia libre al fondo de los encofrados?",
+      "pregunta": "¿Cuál es la tolerancia de colocación del refuerzo para la distancia libre al fondo de los encofrados?",
       "opciones": [
        "-6 mm",
        "-10 mm",
@@ -1589,12 +1622,15 @@
        "articulo": "7.5.2.1",
        "extracto": "Excepto que la tolerancia para la distancia libre al fondo de los encofrados debe ser -6 mm"
       }
+     ],
+     "reemplaza": [
+      "df88a861a0be3f60"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En extremos discontinuos de ménsulas o cartelas, ¿tolerancia en la ubicación de dobleces y extremos?",
+      "pregunta": "En los extremos discontinuos de ménsulas o cartelas, ¿cuál es la tolerancia para la ubicación longitudinal de los dobleces y extremos del refuerzo?",
       "opciones": [
        "± 13 mm",
        "± 25 mm",
@@ -1608,6 +1644,9 @@
        "articulo": "7.5.2.2",
        "extracto": "excepto en los extremos discontinuos de las ménsulas o cartelas donde la tolerancia debe ser ±13 mm"
       }
+     ],
+     "reemplaza": [
+      "d7eb9d063c2dc655"
      ]
     },
     {
@@ -1632,12 +1671,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Refuerzo en dos capas: ¿cómo se colocan las barras de la capa superior?",
+      "pregunta": "Cuando el refuerzo paralelo se coloca en dos o más capas, ¿cómo deben ubicarse las barras de las capas superiores?",
       "opciones": [
-       "Alternadas con las inferiores",
-       "Exactamente sobre las inferiores, con 25 mm libres entre capas",
-       "Exactamente sobre las inferiores, con 40 mm libres",
-       "Donde quepan"
+       "Alternadas respecto a las de la capa inferior",
+       "Exactamente sobre las inferiores, con al menos 25 mm libres entre capas",
+       "Exactamente sobre las inferiores, con al menos 40 mm libres entre capas",
+       "Desfasadas medio espaciamiento, con 25 mm libres entre capas"
       ],
       "correcta": 1
      },
@@ -1646,17 +1685,20 @@
        "articulo": "7.6.2",
        "extracto": "las barras de las capas superiores deben colocarse exactamente sobre las de las capas inferiores, con una distancia libre entre capas no menor de 25 mm."
       }
+     ],
+     "reemplaza": [
+      "1a4291cc57734f1a"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Para espaciamientos y recubrimientos, ¿cómo se trata un paquete de barras?",
+      "pregunta": "Para aplicar los límites de espaciamiento y recubrimiento basados en el diámetro db, ¿cómo se considera un paquete de barras?",
       "opciones": [
-       "Como la barra mayor del paquete",
-       "Como una sola barra de área igual a la suma de las del paquete",
-       "Como dos barras",
-       "Igual que barras sueltas"
+       "Como la barra de mayor diámetro del paquete",
+       "Como una sola barra de diámetro equivalente al área total del paquete",
+       "Como dos barras del diámetro mayor",
+       "Como barras individuales, una por una"
       ],
       "correcta": 1
      },
@@ -1665,6 +1707,9 @@
        "articulo": "7.6.5.5",
        "extracto": "un paquete de barras debe considerarse como una sola barra de diámetro equivalente correspondiente a la suma de las áreas de las barras del paquete."
       }
+     ],
+     "reemplaza": [
+      "2ba333a25817a1b6"
      ]
     },
     {
@@ -1689,7 +1734,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Con f’ci ≥ 28 MPa, ¿espaciamiento mínimo centro a centro entre torones de 13 mm en el extremo?",
+      "pregunta": "En los extremos de un elemento pretensado cuyo concreto tiene al menos 28 MPa al transferir el preesfuerzo (f′ci), ¿cuál es el espaciamiento mínimo centro a centro entre torones de 13 mm de diámetro?",
       "opciones": [
        "35 mm",
        "45 mm",
@@ -1703,6 +1748,9 @@
        "articulo": "7.6.6.1",
        "extracto": "el espaciamiento mínimo, medido centro a centro, de los torones debe ser 45 mm para torones de 13 mm de diámetro nominal o menores, y de 50 mm para torones de 15 mm de diámetro nominal."
       }
+     ],
+     "reemplaza": [
+      "63f689e6da27cbec"
      ]
     },
     {
@@ -1747,12 +1795,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Paquete de barras en concreto construido contra el suelo: ¿recubrimiento mínimo?",
+      "pregunta": "Paquete de barras en concreto construido contra el suelo y permanentemente expuesto a él: ¿cuál es el recubrimiento mínimo?",
       "opciones": [
+       "40 mm",
        "50 mm",
-       "Su diámetro equivalente",
        "70 mm",
-       "40 mm"
+       "El diámetro equivalente del paquete"
       ],
       "correcta": 2
      },
@@ -1761,12 +1809,15 @@
        "articulo": "7.7.4",
        "extracto": "excepto para concreto construido contra el suelo y permanentemente expuesto a él, caso en el cual el recubrimiento mínimo debe ser de 70 mm."
       }
+     ],
+     "reemplaza": [
+      "da4b3d87009f517e"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Preesforzado Clase T en ambiente corrosivo: ¿cuánto se incrementa el recubrimiento del refuerzo preesforzado?",
+      "pregunta": "En elementos preesforzados clasificados como Clase T (Capítulo 18) y expuestos a medios corrosivos, ¿en cuánto debe incrementarse el recubrimiento mínimo del refuerzo preesforzado?",
       "opciones": [
        "10 %",
        "25 %",
@@ -1780,12 +1831,15 @@
        "articulo": "7.7.5.2",
        "extracto": "el recubrimiento mínimo para el refuerzo preesforzado deberá incrementarse en 50%."
       }
+     ],
+     "reemplaza": [
+      "5da52e1b7eadf50c"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Barra de columna doblada por cambio de sección: ¿para cuántas veces la componente horizontal se diseña su soporte?",
+      "pregunta": "El soporte horizontal de una barra de columna doblada por cambio de sección se diseña para resistir la componente horizontal de la fuerza en el tramo inclinado, multiplicada por un factor. ¿Cuál?",
       "opciones": [
        "1,0",
        "1,25",
@@ -1799,12 +1853,15 @@
        "articulo": "7.8.1.3",
        "extracto": "El soporte horizontal debe diseñarse para resistir 1,5 veces la componente horizontal de la fuerza calculada en la porción inclinada de la barra."
       }
+     ],
+     "reemplaza": [
+      "dd32a3bce1d26ca8"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En una barra doblada por cambio de sección, ¿a qué distancia máxima de los puntos de doblado van los estribos de soporte?",
+      "pregunta": "Los estribos o espirales que dan soporte horizontal a una barra de columna doblada por cambio de sección, ¿a qué distancia máxima de los puntos de doblado deben colocarse?",
       "opciones": [
        "75 mm",
        "100 mm",
@@ -1818,17 +1875,20 @@
        "articulo": "7.8.1.3",
        "extracto": "se deben colocar a una distancia no mayor de 150 mm de los puntos de doblado."
       }
+     ],
+     "reemplaza": [
+      "308a0b0a96fe0c21"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿En qué debe consistir el confinamiento en las conexiones viga–columna?",
+      "pregunta": "¿En qué debe consistir el confinamiento de las conexiones (nudos) viga-columna?",
       "opciones": [
-       "Grapas sueltas",
-       "Estribos cerrados o espirales",
-       "Malla electrosoldada",
-       "No se requiere"
+       "En ganchos suplementarios sueltos",
+       "En estribos cerrados o espirales",
+       "En malla electrosoldada",
+       "En barras longitudinales adicionales"
       ],
       "correcta": 1
      },
@@ -1837,12 +1897,15 @@
        "articulo": "7.9.2",
        "extracto": "El confinamiento en las conexiones debe consistir en estribos cerrados o espirales."
       }
+     ],
+     "reemplaza": [
+      "60a9a37ba5127166"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna zunchada en obra con barras longitudinales de 3/4″: ¿diámetro mínimo de la espiral?",
+      "pregunta": "Columna con espiral construida en obra y barras longitudinales de 3/4″: ¿cuál es el diámetro mínimo de la barra de la espiral?",
       "opciones": [
        "8 mm",
        "3/8″",
@@ -1856,17 +1919,20 @@
        "articulo": "7.10.4.2",
        "extracto": "de 3/8” para barras longitudinales de más de 5/8” hasta 1”"
       }
+     ],
+     "reemplaza": [
+      "53edbd29493262bf"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Empalme por traslape de una espiral de barra corrugada sin recubrimiento: ¿longitud mínima?",
+      "pregunta": "Espiral de barra corrugada sin recubrimiento: ¿cuál es la longitud mínima de su empalme por traslape?",
       "opciones": [
-       "48 db y no menos de 300 mm",
-       "72 db",
-       "30 db",
-       "300 mm, sin importar db"
+       "48 db, y no menos de 300 mm",
+       "72 db, y no menos de 300 mm",
+       "30 db, y no menos de 300 mm",
+       "300 mm, cualquiera sea db"
       ],
       "correcta": 0
      },
@@ -1875,12 +1941,15 @@
        "articulo": "7.10.4.5",
        "extracto": "(a) Empalme por traslape no menor que 300 mm ni menor a lo indicado a continuación: 1) barra o alambre corrugado sin recubrimiento … 48 db"
       }
+     ],
+     "reemplaza": [
+      "f3c96f99d03585e5"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Espiral de barra lisa sin recubrimiento y sin ganchos: ¿longitud de traslape?",
+      "pregunta": "Espiral de barra lisa sin recubrimiento y sin ganchos en sus extremos: ¿cuál es la longitud mínima de su empalme por traslape?",
       "opciones": [
        "48 db",
        "60 db",
@@ -1894,17 +1963,20 @@
        "articulo": "7.10.4.5",
        "extracto": "2) barra o alambre liso sin recubrimiento … 72 db"
       }
+     ],
+     "reemplaza": [
+      "abe8be6330ef2073"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En columnas con capitel, ¿hasta dónde se extiende la espiral?",
+      "pregunta": "En columnas con capitel, ¿hasta qué nivel debe extenderse la espiral?",
       "opciones": [
-       "Hasta el fondo del capitel",
-       "Hasta donde el capitel mide el doble que la columna",
-       "Hasta la mitad del capitel",
-       "Hasta la losa"
+       "Hasta la base del capitel",
+       "Hasta el nivel donde el diámetro o ancho del capitel es el doble del de la columna",
+       "Hasta la mitad de la altura del capitel",
+       "Hasta la cara inferior de la losa"
       ],
       "correcta": 1
      },
@@ -1913,12 +1985,15 @@
        "articulo": "7.10.4.8",
        "extracto": "En columnas con capitel, la espiral debe extenderse hasta un nivel en el cual el diámetro o ancho del capitel sea dos veces el de la columna."
       }
+     ],
+     "reemplaza": [
+      "7fc03a8da83abc01"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna con paquetes de barras: ¿diámetro mínimo de sus estribos?",
+      "pregunta": "Columna con estribos cuyas barras longitudinales están agrupadas en paquetes: ¿cuál es el diámetro mínimo de los estribos?",
       "opciones": [
        "8 mm",
        "3/8″",
@@ -1932,17 +2007,20 @@
        "articulo": "7.10.5.1",
        "extracto": "de 1/2” para barras longitudinales de mayor diámetro y para los paquetes de barras."
       }
+     ],
+     "reemplaza": [
+      "23f52025fbef5140"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si llegan vigas por las cuatro caras de la columna, ¿dónde puede ir el último estribo?",
+      "pregunta": "Si a una columna llegan vigas o ménsulas por sus cuatro caras, ¿dónde se permite colocar el último estribo?",
       "opciones": [
-       "A medio espaciamiento bajo la viga",
-       "A no más de 75 mm bajo el refuerzo más bajo de la viga de menor altura",
-       "Al ras de la losa",
-       "A 150 mm bajo la viga más alta"
+       "A medio espaciamiento por debajo de la viga más alta",
+       "A no más de 75 mm debajo del refuerzo más bajo de la viga o ménsula de menor altura",
+       "Al ras de la cara inferior de la losa",
+       "A no más de 150 mm debajo del refuerzo más bajo de la viga de mayor altura"
       ],
       "correcta": 1
      },
@@ -1951,6 +2029,9 @@
        "articulo": "7.10.5.5",
        "extracto": "se permite colocar el último estribo a no más de 75 mm debajo del refuerzo más bajo de la viga o ménsula de menor altura."
       }
+     ],
+     "reemplaza": [
+      "33848ba1cfc84ff8"
      ]
     },
     {
@@ -2015,12 +2096,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Estribo cerrado de dos piezas unidas por traslape: ¿qué clase de empalme exige la norma?",
+      "pregunta": "Un estribo cerrado formado por dos piezas unidas por traslape, ¿con qué clase de empalme debe unirse?",
       "opciones": [
-       "Clase A (1,0 ℓd)",
-       "Clase B (1,3 ℓd)",
-       "Clase C (1,7 ℓd)",
-       "No se permite"
+       "Empalme por traslape Clase A (1,0 ℓd)",
+       "Empalme por traslape Clase B (1,3 ℓd)",
+       "Traslape de 300 mm",
+       "Traslape de 48 db"
       ],
       "correcta": 1
      },
@@ -2029,17 +2110,20 @@
        "articulo": "7.11.3",
        "extracto": "se deben formar de una o dos piezas unidas mediante un empalme por traslape Clase B"
       }
+     ],
+     "reemplaza": [
+      "dd56bdf1c2d1c5d4"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En viguetas, ¿qué pide la integridad estructural para el refuerzo inferior?",
+      "pregunta": "Para la integridad estructural de un techo de viguetas, ¿qué se exige al refuerzo inferior de cada vigueta?",
       "opciones": [
-       "Nada",
-       "Al menos una barra inferior continua (o empalmada Clase A) con gancho en apoyos no continuos",
-       "Dos barras continuas sin gancho",
-       "Malla adicional"
+       "Dos barras continuas, sin gancho en los apoyos",
+       "Al menos una barra continua (o empalmada con traslape Clase A), con gancho estándar en los apoyos no continuos",
+       "Una barra que cubra solo el tercio central del tramo",
+       "Una malla electrosoldada adicional en los apoyos"
       ],
       "correcta": 1
      },
@@ -2048,17 +2132,20 @@
        "articulo": "7.13.2.1",
        "extracto": "En la construcción de viguetas, al menos una barra de la parte inferior debe ser continua o debe empalmarse por traslape con un empalme por traslape de tracción Clase A"
       }
+     ],
+     "reemplaza": [
+      "145ba7d2faf3ac38"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Vigas perimetrales: ¿dónde se empalma por traslape el refuerzo superior continuo?",
+      "pregunta": "Cuando el refuerzo continuo exigido por integridad estructural en vigas se empalma por traslape, ¿dónde debe empalmarse el refuerzo superior?",
       "opciones": [
-       "En el apoyo",
-       "Cerca de o en la mitad del tramo",
-       "A un tercio de la luz",
-       "En cualquier punto"
+       "Cerca del apoyo o en él",
+       "Cerca de la mitad del tramo o en ella",
+       "A un cuarto de la luz",
+       "A una distancia d de la cara del apoyo"
       ],
       "correcta": 1
      },
@@ -2067,6 +2154,9 @@
        "articulo": "7.13.2.3",
        "extracto": "el refuerzo superior debe ser empalmado por traslape cerca de o en la mitad del tramo y el refuerzo inferior debe ser empalmado por traslape cerca del apoyo o en él."
       }
+     ],
+     "reemplaza": [
+      "d5c03f8b1bbbb40d"
      ]
     }
    ]

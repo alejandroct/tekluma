@@ -267,7 +267,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Losa con CM = {D} kN/m² y CV = {L} kN/m². ¿Carga total mínima de la prueba (kN/m²)?",
+      "enunciado": "Losa de una estructura existente con carga muerta CM = {D} kN/m² y carga viva CV = {L} kN/m². ¿Cuál es la carga total mínima (kN/m²), incluida la carga muerta ya presente, que debe alcanzarse en una prueba de carga?",
       "variables": {
        "D": {
         "etiqueta": "CM",
@@ -297,6 +297,9 @@
        "articulo": "20.3.2",
        "extracto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV)."
       }
+     ],
+     "reemplaza": [
+      "55e18e52e7435f4c"
      ]
     },
     {
@@ -366,7 +369,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Viga de peralte h = {H} mm y luz ℓt = {L} mm en prueba de carga. ¿Deflexión máxima permitida por la ec. 20-1 (mm)?",
+      "enunciado": "Viga de peralte h = {H} mm y luz ℓt = {L} mm sometida a una prueba de carga. ¿Cuál es la deflexión máxima medida Δ1 (mm) admisible según el criterio Δ1 ≤ ℓt² / (20 000 h)?",
       "variables": {
        "H": {
         "etiqueta": "h",
@@ -395,12 +398,15 @@
        "articulo": "20.5.2",
        "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) … donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor."
       }
+     ],
+     "reemplaza": [
+      "4311bfef2e4a059d"
      ]
     },
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "En una prueba de carga se midió una deflexión máxima Δ1 = {D} mm. ¿Deflexión residual máxima aceptable por la ec. 20-2 (mm)?",
+      "enunciado": "En una prueba de carga se midió una deflexión máxima Δ1 = {D} mm. ¿Cuál es la deflexión residual máxima Δr (mm) aceptable tras retirar la carga?",
       "variables": {
        "D": {
         "etiqueta": "Δ1",
@@ -422,6 +428,9 @@
        "articulo": "20.5.2",
        "extracto": "Δr ≤ Δ1 / 4 (20-2)"
       }
+     ],
+     "reemplaza": [
+      "236e26fc590ff925"
      ]
     },
     {
@@ -453,7 +462,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué carga total mínima se aplica en una prueba de carga?",
+      "pregunta": "¿Qué carga total mínima, incluida la carga muerta ya presente, debe aplicarse en una prueba de carga de una estructura existente?",
       "opciones": [
        "1,4 CM + 1,7 CV",
        "0,85 (1,4 CM + 1,7 CV)",
@@ -467,12 +476,15 @@
        "articulo": "20.3.2",
        "extracto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV)."
       }
+     ],
+     "reemplaza": [
+      "8efdd0236f9c9557"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué edad mínima debe tener la estructura para la prueba de carga?",
+      "pregunta": "¿Qué edad mínima debe tener la porción de estructura que se someterá a una prueba de carga?",
       "opciones": [
        "28 días",
        "42 días",
@@ -486,12 +498,15 @@
        "articulo": "20.3.3",
        "extracto": "Una prueba de carga no debe realizarse hasta que la porción de la estructura que se someterá a la carga tenga al menos 56 días."
       }
+     ],
+     "reemplaza": [
+      "d0af1e81977538e4"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿En cuántos incrementos como mínimo se aplica la carga de prueba?",
+      "pregunta": "¿En cuántos incrementos aproximadamente iguales, como mínimo, debe aplicarse la carga en una prueba de carga?",
       "opciones": [
        "2",
        "3",
@@ -505,12 +520,15 @@
        "articulo": "20.4.2",
        "extracto": "La carga de prueba debe aplicarse en no menos de cuatro incrementos aproximadamente iguales."
       }
+     ],
+     "reemplaza": [
+      "62da500dbc85cf49"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuál es la deflexión residual máxima aceptable (ec. 20-2)?",
+      "pregunta": "En una prueba de carga, ¿cuál es la deflexión residual máxima aceptable Δr, en función de la deflexión máxima medida Δ1?",
       "opciones": [
        "Δ1/2",
        "Δ1/3",
@@ -524,12 +542,15 @@
        "articulo": "20.5.2",
        "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) Δr ≤ Δ1 / 4 (20-2)"
       }
+     ],
+     "reemplaza": [
+      "7168bebc600a0f59"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué φ máximo se permite en flexión en una evaluación con propiedades medidas?",
+      "pregunta": "En la evaluación analítica de una estructura existente con dimensiones y propiedades de los materiales medidas, ¿hasta qué valor puede incrementarse el factor de reducción φ para flexión sin carga axial?",
       "opciones": [
        "0,90",
        "0,95",
@@ -543,17 +564,20 @@
        "articulo": "20.2.5",
        "extracto": "…se puede incrementar el valor del coeficiente de reducción de resistencia (φ) con respecto a los valores dados en 9.3, pero este no deberá ser mayor a: - Flexión sin carga axial 1,00… - Cortante o torsión 0,90 - Aplastamiento del concreto 0,85"
       }
+     ],
+     "reemplaza": [
+      "359178ee0fe7bc8b"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Estructura con deterioro que pasa la prueba de carga: ¿qué se exige?",
+      "pregunta": "Si una estructura con deterioro en curso pasa la prueba de carga, ¿en qué condiciones puede seguir en uso?",
       "opciones": [
-       "Nada más",
-       "Mantenerla en servicio un período especificado con reevaluaciones periódicas",
-       "Demolerla",
-       "Reforzarla siempre"
+       "Sin ninguna condición adicional",
+       "Puede mantenerse en servicio por un período especificado, con reevaluaciones periódicas",
+       "Solo si se refuerza de inmediato",
+       "Solo si se reduce la carga viva a la mitad"
       ],
       "correcta": 1
      },
@@ -562,17 +586,20 @@
        "articulo": "20.1.4",
        "extracto": "se permite que la estructura o parte de ella se mantenga en servicio por un período de tiempo especificado. En estos casos deben realizarse reevaluaciones periódicas."
       }
+     ],
+     "reemplaza": [
+      "1e05d8ed0b770d92"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se pueden usar los planos para ubicar el refuerzo en una evaluación?",
+      "pregunta": "En la evaluación de una estructura existente, ¿pueden usarse los planos disponibles para ubicar el refuerzo?",
       "opciones": [
-       "No, nunca",
-       "Sí, con verificaciones puntuales en obra",
-       "Sí, sin verificar",
-       "Solo si son recientes"
+       "No, debe descubrirse todo el refuerzo",
+       "Sí, con verificaciones puntuales que confirmen la información de los planos",
+       "Sí, sin necesidad de verificar",
+       "Solo si los planos tienen menos de 10 años"
       ],
       "correcta": 1
      },
@@ -581,17 +608,20 @@
        "articulo": "20.2.2",
        "extracto": "Para la ubicación del refuerzo se pueden utilizar los planos disponibles siempre que se realicen verificaciones puntuales para confirmar la información de los planos."
       }
+     ],
+     "reemplaza": [
+      "5ea5d8b4c70ed1bf"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cómo se determina la resistencia del concreto existente?",
+      "pregunta": "En la evaluación de una estructura existente, ¿en qué debe basarse la resistencia del concreto?",
       "opciones": [
-       "Con el f′c de planos",
-       "Con probetas de obra confiables o núcleos extraídos (5.6.5)",
-       "Con esclerómetro solamente",
-       "Se asume 21 MPa"
+       "En el f′c indicado en los planos",
+       "En ensayos confiables de probetas tomadas durante la construcción o de núcleos extraídos",
+       "Solo en ensayos con esclerómetro",
+       "En un valor supuesto de 21 MPa"
       ],
       "correcta": 1
      },
@@ -600,12 +630,15 @@
        "articulo": "20.2.3",
        "extracto": "la resistencia del concreto debe basarse en resultados de ensayos confiables de probetas tomadas durante la construcción o de ensayos de núcleos extraídos en la parte de la estructura cuya resistencia está en duda."
       }
+     ],
+     "reemplaza": [
+      "687d18b2fc201929"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Evaluación con propiedades medidas: ¿φ máximo en tracción axial?",
+      "pregunta": "En la evaluación analítica de una estructura existente con propiedades medidas, ¿cuál es el máximo factor de reducción φ para tracción axial con o sin flexión?",
       "opciones": [
        "0,85",
        "0,90",
@@ -619,12 +652,15 @@
        "articulo": "20.2.5",
        "extracto": "- Tracción axial con o sin flexión 1,00"
       }
+     ],
+     "reemplaza": [
+      "9942047c1475ed53"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Evaluación con propiedades medidas: ¿φ máximo en compresión para elementos con estribos (otros elementos)?",
+      "pregunta": "En la evaluación analítica de una estructura existente con propiedades medidas, ¿cuál es el máximo factor de reducción φ para compresión axial en elementos sin refuerzo en espiral?",
       "opciones": [
        "0,70",
        "0,85",
@@ -638,17 +674,20 @@
        "articulo": "20.2.5",
        "extracto": "Otros elementos 0,85"
       }
+     ],
+     "reemplaza": [
+      "c8b8967bb5962dea"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si un solo patrón de carga no maximiza todos los efectos, ¿qué se hace en la prueba?",
+      "pregunta": "En una prueba de carga, si un solo patrón de carga no produce a la vez los valores máximos de todos los efectos que se quieren verificar, ¿qué debe hacerse?",
       "opciones": [
-       "Se usa el más desfavorable",
-       "Más de un patrón de carga",
-       "Se duplica la carga",
-       "Se ensaya solo el patrón principal"
+       "Usar solo el patrón más desfavorable",
+       "Usar más de un patrón de carga",
+       "Duplicar la carga de prueba",
+       "Aumentar 25 % la carga de prueba"
       ],
       "correcta": 1
      },
@@ -657,17 +696,20 @@
        "articulo": "20.3.1",
        "extracto": "Debe usarse más de un patrón de carga si un patrón único no produce simultáneamente valores máximos de los efectos"
       }
+     ],
+     "reemplaza": [
+      "0a7925ca334b414b"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuándo se toman las lecturas iniciales de la prueba de carga?",
+      "pregunta": "¿Cuándo deben tomarse las lecturas iniciales de una prueba de carga?",
       "opciones": [
-       "El día anterior",
-       "No más de una hora antes del primer incremento",
-       "Al colocar el primer incremento",
-       "24 h antes"
+       "El día anterior a la prueba",
+       "No más de una hora antes de aplicar el primer incremento de carga",
+       "Al terminar de colocar el primer incremento",
+       "24 horas antes de la prueba"
       ],
       "correcta": 1
      },
@@ -676,17 +718,20 @@
        "articulo": "20.4.1",
        "extracto": "no más de una hora antes de la aplicación del primer incremento de carga."
       }
+     ],
+     "reemplaza": [
+      "2fc49963f84d5a6a"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Carga repartida de prueba (p. ej. sacos): ¿qué efecto debe evitarse?",
+      "pregunta": "Al aplicar una carga uniformemente repartida en una prueba de carga (por ejemplo, con sacos o bloques), ¿qué efecto debe evitarse?",
       "opciones": [
-       "El de impacto",
-       "El efecto de arco",
+       "El efecto de impacto",
+       "El efecto de arco en la carga aplicada",
        "La vibración",
-       "La humedad"
+       "La dilatación térmica"
       ],
       "correcta": 1
      },
@@ -695,12 +740,15 @@
        "articulo": "20.4.3",
        "extracto": "Debe evitarse el efecto de arco en la carga aplicada."
       }
+     ],
+     "reemplaza": [
+      "1b2eb8460a5daf35"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuánto tiempo se mantiene la carga total de prueba antes de medir?",
+      "pregunta": "En una prueba de carga, ¿cuánto tiempo debe permanecer la carga total sobre la estructura antes de tomar las mediciones de respuesta?",
       "opciones": [
        "1 hora",
        "12 horas",
@@ -714,36 +762,43 @@
        "articulo": "20.4.4",
        "extracto": "después de haber colocado el total de la carga sobre la estructura, por al menos 24 horas."
       }
+     ],
+     "reemplaza": [
+      "e7b6c90f1b144238"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Voladizo de 2 m en prueba de carga: ¿qué ℓt se usa en la ec. 20-1?",
+      "pregunta": "Para el criterio de deflexión Δ1 ≤ ℓt² / (20 000 h) de una prueba de carga, ¿qué luz ℓt se usa en un voladizo de 2 m?",
       "opciones": [
        "1 m",
        "2 m",
        "4 m",
-       "2 m + h"
+       "3 m"
       ],
-      "correcta": 2
+      "correcta": 2,
+      "explicacion": "En voladizos, ℓt es el doble de la distancia del apoyo al extremo: 2 × 2 = 4 m."
      },
      "citas": [
       {
        "articulo": "20.5.2",
        "extracto": "Para voladizos, ℓt deberá considerarse como el doble de la distancia del apoyo al extremo del voladizo."
       }
+     ],
+     "reemplaza": [
+      "0cc1cd88faff8faa"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa en dos direcciones en prueba de carga: ¿qué ℓt se usa?",
+      "pregunta": "Para el criterio de deflexión de una prueba de carga, ¿qué luz ℓt se usa en una losa armada en dos direcciones?",
       "opciones": [
        "La luz mayor",
        "La luz más corta",
-       "El promedio",
-       "La diagonal"
+       "El promedio de ambas luces",
+       "La diagonal del paño"
       ],
       "correcta": 1
      },
@@ -752,17 +807,20 @@
        "articulo": "20.5.2",
        "extracto": "Para losas armadas en dos direcciones, ℓt será la luz mas corta."
       }
+     ],
+     "reemplaza": [
+      "1bb883345ba12abc"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si se repite la prueba de carga, ¿cuál es el criterio de aceptación?",
+      "pregunta": "Si se repite una prueba de carga, ¿qué recuperación de la deflexión hace aceptable la estructura (Δ2 = deflexión máxima de la segunda prueba, Δr = deflexión residual)?",
       "opciones": [
-       "Δr ≤ Δ1/4",
+       "Δr ≤ Δ2/4",
        "Δr ≤ Δ2/5",
-       "Δ2 ≤ ℓt²/20000h",
-       "Δr = 0"
+       "Δr ≤ Δ2/2",
+       "Δr ≤ Δ2/10"
       ],
       "correcta": 1
      },
@@ -771,12 +829,15 @@
        "articulo": "20.5.2",
        "extracto": "La porción de la estructura ensayada en la repetición de la prueba debe considerarse aceptable si la recuperación de la deflexión Δr satisface la condición:"
       }
+     ],
+     "reemplaza": [
+      "009f9a2c5f5d9450"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuánto debe esperarse para repetir una prueba de carga?",
+      "pregunta": "¿Cuánto tiempo debe pasar, como mínimo, desde que se retira la carga de la primera prueba para repetir una prueba de carga?",
       "opciones": [
        "24 horas",
        "48 horas",
@@ -790,17 +851,20 @@
        "articulo": "20.5.2",
        "extracto": "La repetición de la prueba no debe realizarse antes de 72 horas desde la remoción de la carga correspondiente a la primera prueba."
       }
+     ],
+     "reemplaza": [
+      "fc53b77999f90e20"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zona sin refuerzo transversal: ¿qué fisuras deben evaluarse tras la prueba?",
+      "pregunta": "En zonas sin refuerzo transversal de un elemento sometido a prueba de carga, ¿qué fisuras deben evaluarse?",
       "opciones": [
-       "Cualquier fisura",
-       "Inclinadas con proyección horizontal mayor que la altura del elemento",
-       "Verticales finas",
-       "Solo las de más de 1 mm"
+       "Cualquier fisura visible",
+       "Las inclinadas respecto al eje, con proyección horizontal mayor que la altura del elemento",
+       "Las verticales por flexión de menos de 0,3 mm",
+       "Solo las de más de 1 mm de ancho"
       ],
       "correcta": 1
      },
@@ -809,17 +873,20 @@
        "articulo": "20.5.4",
        "extracto": "la aparición de fisuras estructurales inclinadas respecto al eje longitudinal y que tengan una proyección horizontal mayor que la altura del elemento (medida en el punto medio de la fisura) debe ser evaluada."
       }
+     ],
+     "reemplaza": [
+      "72c80f61199ccdd0"
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Pueden las medidas de seguridad interferir con la prueba de carga?",
+      "pregunta": "¿Pueden las medidas de seguridad (como apuntalamientos de resguardo) interferir con una prueba de carga?",
       "opciones": [
-       "Sí, si hay riesgo",
-       "No: no deben interferir ni afectar los resultados",
-       "Solo los puntales",
-       "Solo en voladizos"
+       "Sí, cuando hay riesgo de colapso",
+       "No deben interferir con el procedimiento ni afectar los resultados",
+       "Sí, pero solo los puntales",
+       "Sí, en el caso de voladizos"
       ],
       "correcta": 1
      },
@@ -828,6 +895,9 @@
        "articulo": "20.7.2.1",
        "extracto": "Ninguna medida de seguridad debe interferir en los procedimientos de la prueba de carga ni afectar los resultados."
       }
+     ],
+     "reemplaza": [
+      "77e52b6f81ca1eef"
      ]
     }
    ]
