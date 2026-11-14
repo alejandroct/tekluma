@@ -480,7 +480,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Cimiento corrido de concreto simple, f′c = {FC} MPa, ancho 1000 mm y peralte de cálculo h = {H} mm. ¿φMn por tracción (kN·m/m)?",
+      "enunciado": "Cimiento corrido de concreto simple con f′c = {FC} MPa, 1000 mm de ancho y peralte de cálculo h = {H} mm. ¿Cuál es su resistencia de diseño a flexión φMn cuando controla la tracción (kN·m por metro)?",
       "variables": {
        "FC": {
         "etiqueta": "f′c",
@@ -562,7 +562,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Zapata de concreto simple, f′c = {FC} MPa, sección de 1000 mm de ancho y h = {H} mm. ¿φVn como viga (kN)?",
+      "enunciado": "Zapata de concreto simple con f′c = {FC} MPa, sección de 1000 mm de ancho y peralte de cálculo h = {H} mm. ¿Cuál es su resistencia de diseño al cortante φVn para la acción como viga (kN)?",
       "variables": {
        "FC": {
         "etiqueta": "f′c",
@@ -611,7 +611,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Muro de concreto simple de h = {H} mm, f′c = 14 MPa y altura no apoyada ℓc = {L} mm. ¿φPn por metro (kN/m)?",
+      "enunciado": "Muro de concreto simple de espesor h = {H} mm, f′c = 14 MPa y altura no apoyada ℓc = {L} mm, diseñado por el método empírico. ¿Cuál es su resistencia axial de diseño φPn por metro de longitud (kN/m)?",
       "variables": {
        "H": {
         "etiqueta": "Espesor",
@@ -697,12 +697,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se permite una zapata de concreto simple sobre pilotes?",
+      "pregunta": "¿Se permite usar concreto simple en zapatas apoyadas sobre pilotes?",
       "opciones": [
        "Sí, con φ = 0,65",
-       "Sí, si su espesor es al menos 400 mm",
-       "No",
-       "Solo con pilotes cortos"
+       "Sí, si su espesor es de al menos 400 mm",
+       "No se permite",
+       "Sí, si los pilotes son de concreto simple"
       ],
       "correcta": 2
      },
@@ -786,7 +786,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué f′c mínimo tiene el concreto simple estructural?",
+      "pregunta": "¿Cuál es la resistencia f′c mínima, a los 28 días, del concreto simple para uso estructural?",
       "opciones": [
        "10 MPa",
        "14 MPa",
@@ -805,7 +805,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué φ se usa en concreto simple?",
+      "pregunta": "¿Qué factor de reducción de resistencia φ se usa en el diseño de concreto estructural simple?",
       "opciones": [
        "0,50",
        "0,65",
@@ -824,12 +824,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se permiten columnas de concreto simple?",
+      "pregunta": "¿Permite la E.060 columnas de concreto estructural simple?",
       "opciones": [
-       "Sí",
-       "No",
-       "Solo de un piso",
-       "Solo en zona 1"
+       "Sí, sin restricciones",
+       "No están permitidas",
+       "Solo en edificios de un piso",
+       "Solo en zona sísmica 1"
       ],
       "correcta": 1
      },
@@ -843,12 +843,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En concreto vaciado contra el suelo, ¿cuánto se descuenta del peralte de cálculo?",
+      "pregunta": "En concreto simple vaciado contra el suelo, ¿cuánto menor que la dimensión real se toma el peralte del elemento para el cálculo?",
       "opciones": [
        "25 mm",
        "50 mm",
        "75 mm",
-       "Nada"
+       "100 mm"
       ],
       "correcta": 1
      },
@@ -862,7 +862,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué espesor mínimo tiene una zapata de concreto simple?",
+      "pregunta": "¿Cuál es el espesor mínimo de una zapata de concreto simple estructural?",
       "opciones": [
        "200 mm",
        "250 mm",
@@ -881,7 +881,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué porcentaje máximo de piedra desplazadora lleva el concreto ciclópeo?",
+      "pregunta": "En el concreto ciclópeo, ¿qué porcentaje máximo del volumen total puede ocupar la piedra desplazadora?",
       "opciones": [
        "20 %",
        "25 %",
@@ -900,7 +900,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué tamaño máximo puede tener la piedra del concreto ciclópeo?",
+      "pregunta": "La mayor dimensión de la piedra desplazadora del concreto ciclópeo no debe exceder la mitad de la menor dimensión del elemento. ¿Cuál es, además, su tope absoluto?",
       "opciones": [
        "150 mm",
        "200 mm",
@@ -912,14 +912,14 @@
      "citas": [
       {
        "articulo": "22.10.1",
-       "extracto": "(a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa. (b) La piedra desplazadora no excederá del 30% del volumen total de concreto ciclópeo… (c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm."
+       "extracto": "(c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm."
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué relación altura / menor dimensión no debe pasar un pedestal de concreto simple?",
+      "pregunta": "En un pedestal de concreto simple, ¿cuál es la relación máxima entre su altura no apoyada y su menor dimensión lateral?",
       "opciones": [
        "2",
        "3",
@@ -938,12 +938,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Controla la E.060 el diseño de una vereda o losa sobre el terreno?",
+      "pregunta": "¿Controla la E.060 el diseño de losas apoyadas en el terreno, como veredas o losas sobre el suelo?",
       "opciones": [
-       "Sí, siempre",
-       "No, salvo que transmita cargas verticales o laterales de otras partes de la estructura al suelo",
-       "Solo si es armada",
-       "Solo en zona 3"
+       "Sí, en todos los casos",
+       "No, salvo que transmitan al suelo cargas verticales o laterales de otras partes de la estructura",
+       "Solo si llevan refuerzo",
+       "Solo en zona sísmica 3"
       ],
       "correcta": 1
      },
@@ -957,10 +957,10 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Puede usarse concreto simple en elementos diseñados para disipar energía sísmica?",
+      "pregunta": "¿Puede usarse concreto simple en elementos sometidos a solicitaciones sísmicas determinadas en base a la capacidad de la estructura de disipar energía?",
       "opciones": [
-       "Sí",
-       "No",
+       "Sí, sin restricciones",
+       "No está permitido",
        "Solo en muros",
        "Solo con φ = 0,5"
       ],
@@ -976,12 +976,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si la resistencia requerida excede la de diseño en un elemento de concreto simple, ¿qué se hace?",
+      "pregunta": "Si en un elemento de concreto simple la resistencia requerida excede la resistencia de diseño, ¿qué debe hacerse?",
       "opciones": [
-       "Se aumenta φ",
-       "Se refuerza y se diseña como concreto armado",
-       "Se acepta con juntas",
-       "Se usa ciclópeo"
+       "Aumentar el factor φ",
+       "Proporcionar refuerzo y diseñarlo como concreto armado",
+       "Aceptarlo colocando juntas de contracción",
+       "Cambiarlo por concreto ciclópeo"
       ],
       "correcta": 1
      },
@@ -995,12 +995,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuándo puede contarse con la resistencia a tracción del concreto simple?",
+      "pregunta": "¿Cuándo puede considerarse en el diseño la resistencia a tracción del concreto simple?",
       "opciones": [
-       "Nunca",
-       "Cuando se han seguido las disposiciones de juntas de 22.3",
-       "Siempre",
-       "Solo con f′c ≥ 21 MPa"
+       "En ningún caso",
+       "Cuando se colocan las juntas de contracción o aislamiento que exige la norma",
+       "En cualquier caso",
+       "Solo con f′c de 21 MPa o más"
       ],
       "correcta": 1
      },
@@ -1014,12 +1014,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se supone continuidad a flexión entre elementos adyacentes de concreto simple?",
+      "pregunta": "¿Puede suponerse continuidad a flexión por tracción entre elementos adyacentes de concreto simple?",
       "opciones": [
-       "Sí",
-       "No",
-       "Solo con dowels",
-       "Solo en muros"
+       "Sí, en todos los casos",
+       "No debe suponerse",
+       "Solo si hay dowels",
+       "Solo entre muros"
       ],
       "correcta": 1
      },
@@ -1033,7 +1033,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Flexocompresión en concreto simple, cara traccionada: ¿qué límite tiene Mu/Sm − Pu/Ag?",
+      "pregunta": "En un elemento de concreto simple con flexión y compresión axial, ¿qué límite tiene en la cara de tracción la expresión Mu/Sm − Pu/Ag (Sm = módulo de sección)?",
       "opciones": [
        "0,42 φ √f′c",
        "0,85 φ f′c",
@@ -1045,14 +1045,14 @@
      "citas": [
       {
        "articulo": "22.5.3",
-       "extracto": "y en la cara de tracción:"
+       "extracto": "y en la cara de tracción: Mu/Sm - Pu/Ag ≤ 0,42 φ √f'c (22-7)"
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Concreto simple, cortante en dos direcciones: ¿tope de Vn?",
+      "pregunta": "En concreto simple, ¿cuál es el valor máximo de la resistencia nominal al cortante Vn para la acción en dos direcciones (bo = perímetro de la sección crítica, h = peralte)?",
       "opciones": [
        "0,11 √f′c bo h",
        "0,17 √f′c bo h",
@@ -1064,38 +1064,38 @@
      "citas": [
       {
        "articulo": "22.5.4",
-       "extracto": "para la acción en dos direcciones, pero no mayor que"
+       "extracto": "para la acción en dos direcciones, pero no mayor que 0,22 √f'c bo h."
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Aplastamiento en concreto simple: ¿cómo se calcula Bn?",
+      "pregunta": "En concreto simple, ¿cómo se calcula la resistencia nominal al aplastamiento Bn del área cargada A1?",
       "opciones": [
        "0,60 f′c A1",
-       "0,85 f′c A1 (× √(A2/A1) ≤ 2 si el apoyo es más ancho)",
-       "f′c A1",
-       "0,45 f′c Ag"
+       "0,85 f′c A1, multiplicada por √(A2/A1) ≤ 2 si el apoyo es más ancho por todos los lados",
+       "1,00 f′c A1",
+       "0,45 f′c A1, multiplicada por √(A2/A1) ≤ 2 si el apoyo es más ancho por todos los lados"
       ],
       "correcta": 1
      },
      "citas": [
       {
        "articulo": "22.5.5",
-       "extracto": "excepto cuando la superficie de apoyo es más ancha en todos los lados que el área"
+       "extracto": "Bn = 0,85 f'c A1 (22-12) excepto cuando la superficie de apoyo es más ancha en todos los lados que el área cargada, caso en el cual Bn debe multiplicarse por √(A2/A1), pero no por más de 2."
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro de concreto simple con la resultante fuera del tercio central: ¿cómo se diseña?",
+      "pregunta": "Un muro de concreto simple cuya resultante de cargas cae fuera del tercio central de su espesor, ¿cómo se diseña?",
       "opciones": [
-       "Con 22.6.5 (empírico)",
-       "Con 22.5.3 (flexocompresión)",
-       "Como concreto armado",
-       "No se permite"
+       "Con el método empírico de muros",
+       "Como elemento sometido a flexión y carga axial de compresión",
+       "Obligatoriamente como concreto armado",
+       "No se permite construirlo"
       ],
       "correcta": 1
      },
@@ -1109,7 +1109,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Muro de carga de concreto simple de 3 m de altura y 5 m de largo: ¿espesor mínimo?",
+      "pregunta": "Muro de carga de concreto simple de 3 m de altura no apoyada y 5 m de longitud: ¿cuál es su espesor mínimo?",
       "opciones": [
        "100 mm",
        "125 mm",
@@ -1117,7 +1117,7 @@
        "200 mm"
       ],
       "correcta": 2,
-      "explicacion": "3000/24 = 125 mm, pero el mínimo absoluto es 150 mm."
+      "explicacion": "1/24 de la menor entre la altura y la longitud: 3000 / 24 = 125 mm, pero no menos de 150 mm."
      },
      "citas": [
       {
@@ -1129,12 +1129,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Vanos en muros de concreto simple: ¿qué refuerzo mínimo los rodea?",
+      "pregunta": "¿Qué refuerzo mínimo debe colocarse alrededor de las aberturas de puertas y ventanas en muros de concreto simple?",
       "opciones": [
-       "Ninguno",
-       "Dos barras de 5/8″ prolongadas 600 mm más allá de las esquinas",
-       "Una barra de 1/2″",
-       "Malla"
+       "Una barra de 1/2″ en cada borde",
+       "Dos barras de 5/8″, prolongadas al menos 600 mm más allá de las esquinas",
+       "Una malla electrosoldada",
+       "Dos barras de 3/8″, prolongadas al menos 300 mm más allá de las esquinas"
       ],
       "correcta": 1
      },
@@ -1148,12 +1148,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata de concreto simple, acción como viga: ¿a qué distancia de la carga está la sección crítica?",
+      "pregunta": "En una zapata de concreto simple, para la acción como viga, ¿a qué distancia del borde de la carga concentrada se ubica la sección crítica por cortante (h = peralte de la zapata)?",
       "opciones": [
-       "d",
-       "h",
-       "h/2",
-       "En la cara"
+       "A una distancia h/4",
+       "A una distancia h",
+       "A una distancia h/2",
+       "En el borde de la carga"
       ],
       "correcta": 1
      },
@@ -1167,12 +1167,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Zapata de concreto simple, acción en dos direcciones: ¿qué distancia mínima tiene el perímetro crítico?",
+      "pregunta": "En una zapata de concreto simple, para la acción en dos direcciones, ¿a qué distancia mínima del perímetro de la carga concentrada se ubica la sección crítica por cortante (h = peralte de la zapata)?",
       "opciones": [
-       "d/2",
+       "0,25 h",
        "0,5 h",
-       "h",
-       "No hay"
+       "1,0 h",
+       "En el perímetro de la carga"
       ],
       "correcta": 1
      },
@@ -1186,7 +1186,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Pedestal de concreto simple con menor dimensión de 400 mm: ¿altura no apoyada máxima?",
+      "pregunta": "Pedestal de concreto simple cuya menor dimensión lateral es 400 mm: ¿cuál es su altura no apoyada máxima?",
       "opciones": [
        "800 mm",
        "1000 mm",
@@ -1206,12 +1206,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué carga axial máxima admite un pedestal de concreto simple?",
+      "pregunta": "¿A qué se limita la carga axial amplificada máxima sobre un pedestal de concreto simple?",
       "opciones": [
-       "φPn de 22.5.2",
-       "φBn de aplastamiento (22.5.5)",
-       "0,85 f′c Ag",
-       "Sin límite"
+       "A la resistencia de diseño a compresión con esbeltez, φPn",
+       "A la resistencia de diseño al aplastamiento, φBn",
+       "A 0,85 f′c Ag",
+       "A 0,45 f′c Ag"
       ],
       "correcta": 1
      },
@@ -1225,12 +1225,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Prefabricados de concreto simple: ¿cuándo aplican las limitaciones de 22.2?",
+      "pregunta": "Los límites de uso del concreto simple estructural (elementos con apoyo continuo, arcos en compresión, muros y pedestales), ¿en qué etapas se aplican a un elemento prefabricado de concreto simple?",
       "opciones": [
        "Solo en su condición final",
-       "También durante fabricación, transporte y montaje",
-       "Solo en montaje",
-       "Nunca"
+       "En su condición final y también durante la fabricación, el transporte y el montaje",
+       "Solo durante el montaje",
+       "Solo durante el transporte y el montaje"
       ],
       "correcta": 1
      },
@@ -1244,7 +1244,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Concreto ciclópeo: ¿qué f′c mínimo tiene su matriz?",
+      "pregunta": "¿Cuál es la resistencia mínima f′c del concreto de la matriz en el concreto ciclópeo?",
       "opciones": [
        "7 MPa",
        "10 MPa",
@@ -1263,12 +1263,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Diseño con concreto ciclópeo: ¿qué φ y qué f′c se usan?",
+      "pregunta": "Al calcular las resistencias de elementos de concreto ciclópeo, ¿qué factor φ y qué f′c máximo se usan?",
       "opciones": [
-       "φ = 0,65 y f′c real",
-       "φ = 0,5 y f′c ≤ 10 MPa",
-       "φ = 0,7 y 14 MPa",
-       "φ = 0,9 y 10 MPa"
+       "φ = 0,65 y el f′c real de la matriz",
+       "φ = 0,5 y f′c no mayor de 10 MPa",
+       "φ = 0,7 y f′c no mayor de 14 MPa",
+       "φ = 0,65 y f′c no mayor de 10 MPa"
       ],
       "correcta": 1
      },
