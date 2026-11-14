@@ -507,13 +507,17 @@
     {
      "contenido": {
       "tipo": "completar",
-      "texto": "Con los coeficientes aproximados, el cortante en la cara exterior del primer apoyo interior es {{1,15}} (1/2) wu ℓn."
+      "texto": "Con los coeficientes aproximados, el cortante en la cara exterior del primer apoyo interior es {{1,15}} (1/2) wu ℓn.",
+      "explicacion": "La E.060 imprime «1,15 (1/2) wu ℓn²» y «(1/2) wu ℓn²»: es una errata de la norma. Una fuerza cortante es carga por longitud, wu·ℓn (kN/m × m = kN); con ℓn² saldría un momento. Así figura también en el ACI 318."
      },
      "citas": [
       {
        "articulo": "8.3.4",
        "extracto": "Fuerza Cortante Cara exterior del primer apoyo interior: 1,15 (1/2) wu ℓn"
       }
+     ],
+     "reemplaza": [
+      "81f3c3c30f37c0e9"
      ]
     },
     {
@@ -1411,7 +1415,8 @@
        "wu ℓn / 3",
        "wu ℓn"
       ],
-      "correcta": 0
+      "correcta": 0,
+      "explicacion": "La E.060 imprime «1,15 (1/2) wu ℓn²» y «(1/2) wu ℓn²»: es una errata de la norma. Una fuerza cortante es carga por longitud, wu·ℓn (kN/m × m = kN); con ℓn² saldría un momento. Así figura también en el ACI 318."
      },
      "citas": [
       {
@@ -1420,7 +1425,8 @@
       }
      ],
      "reemplaza": [
-      "4636f46766619645"
+      "4636f46766619645",
+      "1a93925f948bc1d1"
      ]
     },
     {
