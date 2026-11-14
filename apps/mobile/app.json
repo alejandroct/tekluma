@@ -108,7 +108,7 @@
           "icon": "./assets/notification-icon.png",
           "color": "#FF8A1F",
           "defaultChannel": "recordatorios",
-          "enableRemoteNotifications": false
+          "enableRemoteNotifications": true
         }
       ],
       [

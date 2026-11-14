@@ -11,6 +11,7 @@ import { authClient } from "@/lib/auth";
 import { iniciarCompras } from "@/lib/compras";
 import { registrarEvento } from "@/lib/embudo";
 import { conErrores, usuarioDeErrores } from "@/lib/errores";
+import { registrarPush } from "@/lib/push";
 import { iniciarNotificaciones } from "@/lib/recordatorio";
 import { iniciarSonidos } from "@/lib/sonidos";
 import { useTema } from "@/lib/tema";
@@ -58,6 +59,7 @@ function RootLayout() {
     usuarioDeErrores(usuarioId ?? null);
     if (!usuarioId) return;
     registrarEvento("sesion_iniciada");
+    registrarPush().catch(() => {});
     iniciarCompras(usuarioId).catch(() => {});
   }, [usuarioId]);
 

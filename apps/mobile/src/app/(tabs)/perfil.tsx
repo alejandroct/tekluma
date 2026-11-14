@@ -4,6 +4,7 @@ import { router, useFocusEffect } from "expo-router";
 import { hayOpcionesDePrivacidad, mostrarOpcionesDePrivacidad } from "@/lib/anuncios";
 import { authClient } from "@/lib/auth";
 import { cerrarSesion, eliminarCuenta } from "@/lib/cuenta";
+import { guardarAvisos, leerAvisos, permitirAvisos } from "@/lib/push";
 import { cupoEnCache, obtenerCupo } from "@/lib/cupo";
 import { NOMBRES_PROFESION } from "@/lib/profesiones";
 import type { EstadoCupo, Profession } from "@tekluma/shared";
@@ -75,6 +76,7 @@ export default function Perfil() {
         </Text>
       </View>
       <FilaRecordatorio />
+      <FilaAvisoRacha />
       {!cupo?.premium && (
         <Pressable onPress={() => router.push("/premium")} style={({ pressed }) => [estilos.premium, { backgroundColor: t.ambar, opacity: pressed ? 0.85 : 1 }]}>
           <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
@@ -155,6 +157,42 @@ function FilaRecordatorio() {
           </Pressable>
         </>
       )}
+    </View>
+  );
+}
+
+/** Aviso del servidor a las 21:00 si la racha de la pregunta del día está por cortarse. */
+function FilaAvisoRacha() {
+  const t = useTema();
+  const [activo, setActivo] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    leerAvisos()
+      .then((a) => setActivo(a.racha))
+      .catch(() => {});
+  }, []);
+
+  const cambiar = async (valor: boolean) => {
+    setActivo(valor);
+    if (valor && !(await permitirAvisos())) {
+      setActivo(false);
+      Alert.alert("Sin permiso para avisarte", "Activa las notificaciones de Tekluma en la configuración del teléfono.", [
+        { text: "Ahora no", style: "cancel" },
+        { text: "Abrir configuración", onPress: () => Linking.openSettings() },
+      ]);
+      return;
+    }
+    await guardarAvisos(valor).catch(() => setActivo(!valor));
+  };
+
+  if (activo === null) return null;
+  return (
+    <View style={[estilos.fila, { backgroundColor: t.superficie, borderColor: t.borde, alignItems: "center" }]}>
+      <View style={{ flex: 1, gap: 2, paddingRight: 12 }}>
+        <Text style={{ color: t.texto, fontSize: 16 }}>Aviso de racha en riesgo</Text>
+        <Text style={{ color: t.textoSuave, fontSize: 13, lineHeight: 18 }}>A las 21:00, si aún no juegas la pregunta del día.</Text>
+      </View>
+      <Switch value={activo} onValueChange={cambiar} trackColor={{ true: t.ambar }} accessibilityLabel="Aviso de racha en riesgo" />
     </View>
   );
 }

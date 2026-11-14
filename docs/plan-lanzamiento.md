@@ -133,6 +133,11 @@ Las cuentas **de organización** no tienen la prueba obligatoria de 14 días con
 - [x] Token de Sentry cargado en EAS como variable secreta `SENTRY_AUTH_TOKEN` (production y preview).
 - [x] **(código)** Una página web por sección de la norma (218 en la E.060, p. ej. `/normas/e060/7-2/`) con preguntas de práctica,
       `sitemap.xml` y `robots.txt`. Se regeneran solas con `generar.py`.
+- [x] **(código)** Aviso push «tu racha está en riesgo»: tarea diaria a las 21:00 de Lima (`RachaEnRiesgo`), interruptor en Perfil.
+- [ ] **(tú, con la cuenta de Apple Developer)** En la primera compilación con EAS, aceptar que EAS cree la llave de notificaciones push
+      (APNs). Sin ella los avisos no llegan a iPhone.
+- [ ] **(tú, antes de publicar en Android)** Crear un proyecto en Firebase, descargar `google-services.json` para `app.tekluma`
+      y subir a EAS la cuenta de servicio de FCM (expo.dev → Credentials → Android → FCM V1). Sin eso los avisos no llegan a Android.
 - [ ] **(tú, al lanzar en tiendas)** Google Search Console: propiedad de dominio `tekluma.app` (pasarme el TXT para Route 53)
       y enviar `https://tekluma.app/sitemap.xml`. Mientras antes se haga, antes aparecen las páginas en Google.
 - [x] **(código)** Configuración de compilación con EAS (`apps/mobile/eas.json`: perfiles development, preview y production;

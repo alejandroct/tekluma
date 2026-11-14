@@ -95,6 +95,12 @@ export default $config({
       nodejs,
     });
 
+    // Aviso «tu racha está en riesgo»: 21:00 de Lima (02:00 UTC), tres horas antes de que se corte.
+    new sst.aws.Cron("RachaEnRiesgo", {
+      schedule: "cron(0 2 * * ? *)",
+      job: { handler: "apps/api/src/workers/racha.handler", architecture: "arm64", runtime, timeout: "2 minutes", environment, nodejs },
+    });
+
     // Paquetes de mazos e imágenes (se servirán vía CloudFront con URL firmada).
     const mazos = new sst.aws.Bucket("Mazos");
 

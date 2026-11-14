@@ -3,6 +3,7 @@ import { borrarClave } from "./cifrado";
 import { cerrarSesionCompras } from "./compras";
 import { borrarDatosLocales } from "./db";
 import { olvidarPaquetes } from "./mazos";
+import { olvidarPush } from "./push";
 import { sincronizar } from "./repaso";
 
 async function salir() {
@@ -19,6 +20,7 @@ async function salir() {
  */
 export async function cerrarSesion() {
   while ((await sincronizar()) > 0);
+  await olvidarPush().catch(() => {});
   await salir();
 }
 

@@ -6,5 +6,13 @@
  */
 module.exports = ({ config }) =>
   process.env.TEKLUMA_PRUEBA === "1"
-    ? { ...config, name: "Tekluma β", ios: { ...config.ios, bundleIdentifier: "app.tekluma.prueba" } }
+    ? {
+        ...config,
+        name: "Tekluma β",
+        ios: { ...config.ios, bundleIdentifier: "app.tekluma.prueba" },
+        // Un Apple ID gratuito no puede firmar apps con notificaciones push: en esta variante van solo las locales.
+        plugins: config.plugins.map((p) =>
+          Array.isArray(p) && p[0] === "expo-notifications" ? [p[0], { ...p[1], enableRemoteNotifications: false }] : p,
+        ),
+      }
     : config;

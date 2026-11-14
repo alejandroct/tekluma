@@ -61,6 +61,9 @@ export const users = pgTable("users", {
   /** End of the current subscription according to RevenueCat (null = not premium). */
   premiumUntil: timestamp("premium_until", { withTimezone: true }),
   /** League affiliation (codes from @tekluma/shared UNIVERSIDADES / REGIONES). */
+  /** Push «tu racha está en riesgo» (Perfil); and the Lima day it was last sent, so it goes out once a day. */
+  streakAlerts: boolean("streak_alerts").notNull().default(true),
+  streakAlertDay: date("streak_alert_day"),
   university: text("university"),
   region: text("region"),
   createdAt: createdAt(),
@@ -530,4 +533,19 @@ export const liveAnswers = pgTable(
     createdAt: createdAt(),
   },
   (t) => [primaryKey({ columns: [t.playerId, t.questionIndex] }), index("live_answers_game_idx").on(t.gameId, t.questionIndex)],
+);
+
+// ───────────── Push notifications ─────────────
+
+/** Expo push tokens of the user's devices (a user may have several). */
+export const pushTokens = pgTable(
+  "push_tokens",
+  {
+    token: text("token").primaryKey(),
+    userId: uuid("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+    platform: text("platform").notNull(),
+    createdAt: createdAt(),
+    updatedAt: updatedAt(),
+  },
+  (t) => [index("push_tokens_user_idx").on(t.userId)],
 );

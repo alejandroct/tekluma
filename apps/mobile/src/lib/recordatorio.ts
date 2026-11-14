@@ -2,6 +2,7 @@ import { Platform } from "react-native";
 import * as Notifications from "expo-notifications";
 import { AndroidImportance, IosAuthorizationStatus } from "expo-notifications";
 import { guardarAjuste, leerAjuste } from "./db";
+import { registrarPush } from "./push";
 
 /** Recordatorio diario local: no pasa por el servidor ni necesita cuenta. */
 export type Recordatorio = { activo: boolean; hora: number; minuto: number };
@@ -64,6 +65,8 @@ export async function activarRecordatorio(hora: number, minuto: number): Promise
         : { type: Notifications.SchedulableTriggerInputTypes.CALENDAR, hour: hora, minute: minuto, repeats: true },
   });
   guardarAjuste(CLAVE, { activo: true, hora, minuto });
+  // Con el permiso recién dado, el servidor ya puede avisar si la racha está en riesgo.
+  registrarPush().catch(() => {});
   return true;
 }
 
