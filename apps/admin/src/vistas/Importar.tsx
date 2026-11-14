@@ -139,7 +139,8 @@ export function Importar() {
                     <td>
                       {a.resultado ? (
                         <span className="estado estado-approved">
-                          +{a.resultado.mazos.reduce((s, m) => s + m.tarjetasNuevas, 0)} tarjetas · {a.resultado.articulos.creados + a.resultado.articulos.actualizados} art.
+                          +{a.resultado.mazos.reduce((s, m) => s + m.tarjetasNuevas, 0)} tarjetas · {a.resultado.mazos.reduce((s, m) => s + m.reemplazadas + m.citasActualizadas, 0)} corregidas ·{" "}
+                          {a.resultado.articulos.creados + a.resultado.articulos.actualizados} art.
                         </span>
                       ) : a.fallo ? (
                         <span className="estado estado-rechazada" title={a.fallo}>
@@ -173,7 +174,7 @@ export function Importar() {
 
       {archivos.some((a) => a.resultado) && (
         <Aviso tono="ok" titulo="Importación hecha">
-          Los mazos aparecen en «Mazos». Las tarjetas repetidas (mismo contenido) se omiten, así que puedes volver a importar un archivo corregido sin duplicar.
+          Los mazos aparecen en «Mazos». Las tarjetas repetidas (mismo contenido) se omiten y las corregidas reemplazan a su versión anterior sin perder el progreso de repaso. Publica de nuevo cada mazo para que los cambios lleguen a la app.
         </Aviso>
       )}
 

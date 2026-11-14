@@ -9,6 +9,9 @@ import { contenidoTarjetaSchema } from "./tarjetas";
  *   actualizan por número; nunca se pierde la fuente.
  * - `mazos`: se crean o amplían por `slug`. Las tarjetas entran «en revisión» (o como borrador):
  *   pasan por el flujo editorial igual que las escritas a mano y no se publican solas.
+ * - Una tarjeta corregida lleva en `reemplaza` la huella del contenido anterior: al importar, la
+ *   tarjeta vieja se actualiza en su sitio (mismo id, revisión + 1) y conserva el progreso de
+ *   repaso de los usuarios, en lugar de quedar duplicada junto a la nueva.
  * - Las figuras van como `imagenUrl` con una imagen embebida (`data:image/jpeg;base64,…`): viajan
  *   dentro del paquete del mazo y se cifran con él en el dispositivo.
  */
@@ -25,6 +28,11 @@ export const tarjetaImportadaSchema = z.object({
   contenido: contenidoTarjetaSchema,
   /** Cada tarjeta cita al menos un artículo (del archivo o ya cargado) con un extracto literal. */
   citas: z.array(z.object({ articulo: z.string().min(1), extracto: z.string().min(1) })).min(1),
+  /**
+   * Huellas (ver `huella` en la API) de las versiones anteriores de esta tarjeta. Si alguna está en
+   * el mazo, se reemplaza en su sitio. Las escribe `pnpm --filter @tekluma/api reemplazos`.
+   */
+  reemplaza: z.array(z.string().regex(/^[0-9a-f]{16}$/)).optional(),
 });
 
 export const mazoImportadoSchema = z.object({
@@ -55,7 +63,16 @@ export type Importacion = z.infer<typeof importacionSchema>;
 export type ResultadoImportacion = {
   norma: string;
   articulos: { creados: number; actualizados: number };
-  mazos: { slug: string; creado: boolean; tarjetasNuevas: number; repetidas: number }[];
-  /** Estado con el que entraron las tarjetas nuevas. */
+  mazos: {
+    slug: string;
+    creado: boolean;
+    tarjetasNuevas: number;
+    repetidas: number;
+    /** Tarjetas existentes cuyo contenido se cambió por la versión corregida del archivo. */
+    reemplazadas: number;
+    /** Tarjetas con el mismo contenido a las que solo se les corrigieron las citas. */
+    citasActualizadas: number;
+  }[];
+  /** Estado con el que entraron las tarjetas nuevas y las reemplazadas. */
   estado: "in_review" | "draft" | "approved";
 };
