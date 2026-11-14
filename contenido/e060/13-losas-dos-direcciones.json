@@ -1284,6 +1284,9 @@
        "articulo": "13.7.3.2",
        "extracto": "Ca: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección corta."
       }
+     ],
+     "reemplaza": [
+      "92676e25374def97"
      ]
     },
     {
@@ -1620,7 +1623,8 @@
       }
      ],
      "reemplaza": [
-      "6e593c9f8135bbd9"
+      "6e593c9f8135bbd9",
+      "cc8a491cf0461747"
      ]
     },
     {
@@ -2396,7 +2400,8 @@
       }
      ],
      "reemplaza": [
-      "d234eccef0655345"
+      "d234eccef0655345",
+      "ed8a08bfdc34ddaf"
      ]
     },
     {
@@ -2419,7 +2424,8 @@
       }
      ],
      "reemplaza": [
-      "9956270e9a5b0625"
+      "9956270e9a5b0625",
+      "349af82cba870eb1"
      ]
     },
     {
@@ -2442,7 +2448,8 @@
       }
      ],
      "reemplaza": [
-      "6ab857c8c4bb44a8"
+      "6ab857c8c4bb44a8",
+      "d48d2e023208c4e0"
      ]
     }
    ]

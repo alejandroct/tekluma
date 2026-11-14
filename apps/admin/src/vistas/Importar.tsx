@@ -141,6 +141,8 @@ export function Importar() {
                         <span className="estado estado-approved">
                           +{a.resultado.mazos.reduce((s, m) => s + m.tarjetasNuevas, 0)} tarjetas · {a.resultado.mazos.reduce((s, m) => s + m.reemplazadas + m.citasActualizadas, 0)} corregidas ·{" "}
                           {a.resultado.articulos.creados + a.resultado.articulos.actualizados} art.
+                          {a.resultado.mazos.some((m) => m.duplicadasRetiradas > 0) &&
+                            ` · ${a.resultado.mazos.reduce((s, m) => s + m.duplicadasRetiradas, 0)} duplicadas retiradas`}
                         </span>
                       ) : a.fallo ? (
                         <span className="estado estado-rechazada" title={a.fallo}>

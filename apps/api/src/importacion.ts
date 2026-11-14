@@ -1,4 +1,4 @@
-import { and, eq, inArray } from "drizzle-orm";
+import { and, eq, inArray, ne } from "drizzle-orm";
 import type { Importacion, ResultadoImportacion } from "@tekluma/shared";
 import { db } from "./db/client";
 import { articles, cardCitations, cards, decks, editorialReviews, standards, standardVersions } from "./db/schema";
@@ -14,6 +14,8 @@ export type EstadoImportado = "in_review" | "draft" | "approved";
  * identical cards are skipped so the same file can be imported twice safely.
  * A corrected card (`reemplaza`) overwrites the old one in place: same id, so users keep their
  * review progress, and revision + 1, so the app refreshes it once the deck is published again.
+ * If an earlier import missed the `reemplaza` and created the corrected version as a separate card,
+ * the original still takes the new content and that duplicate is retired (`deprecated`).
  */
 export async function importar(datos: Importacion, usuarioId: string, estado: EstadoImportado): Promise<ResultadoImportacion> {
   return db.transaction(async (tx) => {
@@ -70,7 +72,8 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
       // Re-importing a file also fixes the deck's position in the catalog.
       if (!creado && m.orden !== undefined && m.orden !== mazo.sortOrder) await tx.update(decks).set({ sortOrder: m.orden }).where(eq(decks.id, mazo.id));
 
-      const enMazo = await tx.select({ id: cards.id, content: cards.content, revision: cards.revision }).from(cards).where(eq(cards.deckId, mazo.id));
+      const enMazo = await tx.select({ id: cards.id, content: cards.content, revision: cards.revision }).from(cards)
+        .where(and(eq(cards.deckId, mazo.id), ne(cards.status, "deprecated")));
       const porContenido = new Map(enMazo.map((c) => [canonico(c.content), c]));
       const porHuella = new Map(enMazo.map((c) => [huella(c.content), c]));
       const citasDe = new Map<string, string[]>();
@@ -100,6 +103,7 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
       let repetidas = 0;
       let reemplazadas = 0;
       let citasActualizadas = 0;
+      let duplicadasRetiradas = 0;
       for (const [i, t] of m.tarjetas.entries()) {
         for (const c of t.citas) {
           if (!porNumero.has(c.articulo)) {
@@ -108,7 +112,14 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
         }
         const clave = canonico(t.contenido);
         const igual = porContenido.get(clave);
-        if (igual) {
+        const previa = t.reemplaza?.map((h) => porHuella.get(h)).find((c) => c !== undefined && c.id !== igual?.id);
+        if (igual && previa) {
+          // The corrected version already entered as a new card: retire it and correct the original below.
+          await tx.update(cards).set({ status: "deprecated", updatedAt: new Date() }).where(eq(cards.id, igual.id));
+          porContenido.delete(clave);
+          porHuella.delete(huella(igual.content));
+          duplicadasRetiradas++;
+        } else if (igual) {
           // Same content: only its citations may have been fixed.
           if (mismasCitas(igual.id, t.citas)) {
             repetidas++;
@@ -120,7 +131,6 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
           }
           continue;
         }
-        const previa = t.reemplaza?.map((h) => porHuella.get(h)).find((c) => c !== undefined);
         if (previa) {
           await corregir(previa, t, "Corregida al importar por un administrador");
           porHuella.delete(huella(previa.content));
@@ -142,7 +152,7 @@ export async function importar(datos: Importacion, usuarioId: string, estado: Es
         citasDe.set(tarjeta!.id, t.citas.map((c) => `${c.articulo}\n${c.extracto}`));
         nuevas++;
       }
-      resultado.push({ slug: m.slug, creado, tarjetasNuevas: nuevas, repetidas, reemplazadas, citasActualizadas });
+      resultado.push({ slug: m.slug, creado, tarjetasNuevas: nuevas, repetidas, reemplazadas, citasActualizadas, duplicadasRetiradas });
     }
 
     return {
