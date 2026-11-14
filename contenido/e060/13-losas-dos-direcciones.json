@@ -597,7 +597,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Paño de ℓ1 = {L1} m (dirección de análisis) y ℓ2 = {L2} m. ¿Ancho total de la franja de columna (m)?",
+      "enunciado": "Paño de losa en dos direcciones con luz ℓ1 = {L1} m en la dirección de análisis y luz transversal ℓ2 = {L2} m. ¿Cuál es el ancho total de la franja de columna (m), sumando ambos lados del eje?",
       "variables": {
        "L1": {
         "etiqueta": "ℓ1",
@@ -765,7 +765,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Sección crítica de punzonamiento con b1 = {B1} mm y b2 = {B2} mm. ¿Fracción γf transmitida por flexión?",
+      "enunciado": "En una conexión losa-columna, la sección crítica de punzonamiento mide b1 = {B1} mm en la dirección del momento y b2 = {B2} mm en la perpendicular. ¿Qué fracción γf del momento no balanceado se transmite por flexión?",
       "variables": {
        "B1": {
         "etiqueta": "b1",
@@ -876,7 +876,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Paño con qu = {Q} kN/m², ℓ2 = {L2} m y luz libre ℓn = {LN} m. ¿Momento estático total Mo (kN·m)?",
+      "enunciado": "Paño de losa en dos direcciones con carga amplificada qu = {Q} kN/m², luz transversal ℓ2 = {L2} m y luz libre ℓn = {LN} m en la dirección de análisis. ¿Cuánto vale el momento estático total amplificado Mo (kN·m)?",
       "variables": {
        "Q": {
         "etiqueta": "qu",
@@ -963,7 +963,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Paño interior con Mo = {M} kN·m. ¿Momento negativo de diseño (kN·m)?",
+      "enunciado": "Método Directo: paño interior con momento estático total amplificado Mo = {M} kN·m. ¿Cuánto vale el momento negativo amplificado (kN·m)?",
       "variables": {
        "M": {
         "etiqueta": "Mo",
@@ -1277,7 +1277,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Paño cuadrado interior (Caso 2, m = 1) de luz libre A = {A} m con wu = {W} kN/m². ¿Momento negativo Ma en el borde (kN·m/m)?",
+      "enunciado": "Método de Coeficientes: paño cuadrado con sus cuatro bordes continuos (Caso 2, relación de lados m = 1), luz libre A = {A} m y carga amplificada wu = {W} kN/m². ¿Cuánto vale el momento negativo Ma en el borde continuo (kN·m por metro de ancho)?",
       "variables": {
        "A": {
         "etiqueta": "A",
@@ -1338,7 +1338,7 @@
     {
      "contenido": {
       "tipo": "caso_numerico",
-      "enunciado": "Losa con wu = {W} kN/m², A = {A} m, B = 6 m y d = 0,12 m. ¿Cortante por metro de ancho (kN/m)?",
+      "enunciado": "Método de Coeficientes: losa con carga amplificada wu = {W} kN/m², luz libre corta A = {A} m, luz libre larga B = 6 m y peralte efectivo d = 0,12 m. ¿Cuánto vale la fuerza cortante por metro de ancho en la sección crítica (kN/m)?",
       "variables": {
        "W": {
         "etiqueta": "wu",
@@ -1386,12 +1386,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué ancho tiene la franja de columna a cada lado del eje?",
+      "pregunta": "En una losa en dos direcciones, ¿qué ancho tiene la franja de columna a cada lado del eje de columnas (ℓ1 = luz en la dirección de análisis, ℓ2 = luz transversal)?",
       "opciones": [
        "0,25 ℓ1 o 0,25 ℓ2, el menor",
-       "0,5 ℓ1",
+       "0,50 ℓ1 o 0,50 ℓ2, el menor",
        "ℓ2/3",
-       "1,5 h"
+       "0,25 ℓ1 o 0,25 ℓ2, el mayor"
       ],
       "correcta": 0
      },
@@ -1405,12 +1405,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuál es el espaciamiento máximo del refuerzo en losas en dos direcciones?",
+      "pregunta": "En losas en dos direcciones, ¿cuál es el espaciamiento máximo del refuerzo en las secciones críticas (h = espesor de la losa)?",
       "opciones": [
        "1,5 h",
        "2 h",
        "3 h",
-       "400 mm"
+       "2,5 h"
       ],
       "correcta": 1
      },
@@ -1424,7 +1424,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuántos paños continuos por dirección exige el Método Directo?",
+      "pregunta": "¿Cuántos paños continuos en cada dirección exige, como mínimo, el Método Directo para losas en dos direcciones?",
       "opciones": [
        "2",
        "3",
@@ -1443,7 +1443,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Paño interior: ¿qué fracción de Mo va a momento negativo?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, ¿qué fracción de Mo (momento estático total amplificado del paño) se asigna al momento negativo en un paño interior?",
       "opciones": [
        "0,35",
        "0,50",
@@ -1462,9 +1462,9 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Paño extremo con borde exterior no restringido: ¿momento negativo exterior?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, ¿qué momento negativo exterior se asigna a un paño extremo cuyo borde exterior no está restringido (Mo = momento estático total del paño)?",
       "opciones": [
-       "0",
+       "Cero",
        "0,16 Mo",
        "0,26 Mo",
        "0,65 Mo"
@@ -1481,7 +1481,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué momento se transmite entre la losa y una columna de borde en el Método Directo?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, ¿qué momento debe transmitirse entre la losa y una columna de borde (Mo = momento estático total del paño)?",
       "opciones": [
        "0,1 Mo",
        "0,3 Mo",
@@ -1500,7 +1500,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Con b1 = b2, ¿qué fracción γf del momento no balanceado se transmite por flexión?",
+      "pregunta": "En una conexión losa-columna cuya sección crítica de punzonamiento es cuadrada (b1 = b2), ¿qué fracción γf del momento no balanceado se transmite por flexión?",
       "opciones": [
        "0,40",
        "0,50",
@@ -1520,7 +1520,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si αf1 ℓ2/ℓ1 ≥ 1, ¿qué parte del momento de la franja de columna toma la viga?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, si la rigidez relativa de la viga cumple αf1 ℓ2/ℓ1 ≥ 1, ¿qué porcentaje del momento de la franja de columna deben resistir las vigas entre apoyos?",
       "opciones": [
        "50 %",
        "75 %",
@@ -1539,12 +1539,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué peralte mínimo deben tener las vigas para usar el Método de Coeficientes?",
+      "pregunta": "Para usar el Método de Coeficientes en losas en dos direcciones, ¿qué peralte mínimo deben tener las vigas de apoyo (ℓn = luz libre, h = espesor de la losa)?",
       "opciones": [
-       "ℓn/10 o 2 h",
+       "ℓn/10 o 2 h, el mayor",
        "ℓn/15 o 1,5 h, el mayor",
-       "ℓn/20",
-       "3 h"
+       "ℓn/20 o 1,5 h, el mayor",
+       "ℓn/15 o 3 h, el mayor"
       ],
       "correcta": 1
      },
@@ -1558,7 +1558,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Según la Tabla 13.1, paño interior cuadrado (Caso 2, m = 1): ¿Ca para momento negativo?",
+      "pregunta": "Según la Tabla 13.1 del Método de Coeficientes, para un paño cuadrado con sus cuatro bordes continuos (Caso 2, relación de lados m = 1), ¿cuánto vale el coeficiente Ca de momento negativo?",
       "opciones": [
        "0,033",
        "0,045",
@@ -1578,12 +1578,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En bordes discontinuos, ¿qué momento negativo se considera en el Método de Coeficientes?",
+      "pregunta": "En el Método de Coeficientes para losas apoyadas en vigas o muros, ¿qué momento negativo se considera en los bordes discontinuos?",
       "opciones": [
-       "0",
-       "1/3 del positivo",
-       "1/2 del positivo",
-       "Igual al positivo"
+       "Cero",
+       "Un tercio del momento positivo",
+       "La mitad del momento positivo",
+       "Igual al momento positivo"
       ],
       "correcta": 1
      },
@@ -1597,7 +1597,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cuánto debe extenderse como mínimo un ábaco desde el eje del apoyo?",
+      "pregunta": "¿Qué distancia mínima debe extenderse un ábaco en cada dirección desde el eje del apoyo (ℓ = luz a ejes en esa dirección)?",
       "opciones": [
        "ℓ/8",
        "ℓ/6",
@@ -1616,12 +1616,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Cómo se define el área de apoyo efectiva para c1, c2 y ℓn?",
+      "pregunta": "En losas en dos direcciones, ¿cómo se define el área de apoyo efectiva que determina las dimensiones c1, c2 y la luz libre ℓn?",
       "opciones": [
-       "La sección de la columna",
-       "La intersección con el mayor cono, pirámide o cuña a no más de 45° dentro de columna y capitel",
-       "El ábaco completo",
-       "La franja de columna"
+       "Es la sección transversal de la columna, sin el capitel",
+       "Es la intersección de la losa con el mayor cono, pirámide o cuña a no más de 45° inscrito en la columna y su capitel",
+       "Es el área completa del ábaco",
+       "Es el ancho de la franja de columna"
       ],
       "correcta": 1
      },
@@ -1635,7 +1635,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Refuerzo positivo que llega a un borde discontinuo: ¿cuánto debe embeberse en la viga o muro perimetral?",
+      "pregunta": "El refuerzo de momento positivo perpendicular a un borde discontinuo de una losa en dos direcciones, ¿qué longitud mínima debe embeberse en las vigas, muros o columnas perimetrales?",
       "opciones": [
        "50 mm",
        "100 mm",
@@ -1654,12 +1654,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa en voladizo más allá del apoyo: ¿dónde se ancla su refuerzo?",
+      "pregunta": "Cuando una losa en dos direcciones se prolonga en voladizo más allá de su apoyo de borde, ¿dónde se ancla el refuerzo de momento negativo?",
       "opciones": [
        "En la viga de borde",
        "Dentro de la propia losa",
-       "En la columna",
-       "No necesita anclaje"
+       "En la columna de borde",
+       "En un gancho a 90° en el borde del voladizo"
       ],
       "correcta": 1
      },
@@ -1673,12 +1673,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Refuerzo especial de esquina: ¿hasta qué distancia desde la esquina se coloca?",
+      "pregunta": "El refuerzo especial de las esquinas exteriores de losas con vigas, ¿hasta qué distancia desde la esquina debe colocarse en cada dirección?",
       "opciones": [
-       "1/4 de la luz menor",
-       "1/5 de la luz mayor",
-       "1/3 de la luz mayor",
-       "1,5 m"
+       "1/4 de la luz menor del paño",
+       "1/5 de la luz mayor del paño",
+       "1/3 de la luz mayor del paño",
+       "1/5 de la luz menor del paño"
       ],
       "correcta": 1
      },
@@ -1692,12 +1692,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Para calcular el refuerzo de la losa, ¿qué espesor del ábaco bajo la losa se puede considerar como máximo?",
+      "pregunta": "Al calcular el refuerzo de una losa con ábaco, ¿qué espesor máximo del ábaco bajo la losa puede considerarse?",
       "opciones": [
-       "Todo",
-       "1/4 de la distancia del extremo del ábaco a la cara de la columna",
-       "h/2",
-       "1/6 de la luz"
+       "Todo su espesor",
+       "Un cuarto de la distancia desde el extremo del ábaco hasta la cara de la columna o capitel",
+       "La mitad del espesor de la losa",
+       "Un sexto de la luz"
       ],
       "correcta": 1
      },
@@ -1711,7 +1711,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la figura, losa sin ábacos: ¿hasta dónde llega el 50 % del refuerzo superior de la franja de columnas?",
+      "pregunta": "Según la figura de longitudes mínimas del refuerzo en losas sin vigas y sin ábacos, ¿hasta qué distancia de la cara del apoyo debe llegar el 50 % del refuerzo superior de la franja de columna (ℓn = luz libre)?",
       "opciones": [
        "0,20 ℓn",
        "0,22 ℓn",
@@ -1731,7 +1731,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la figura, ¿hasta dónde se prolonga el refuerzo superior de la franja central?",
+      "pregunta": "Según la figura de longitudes mínimas del refuerzo en losas sin vigas, ¿hasta qué distancia de la cara del apoyo debe prolongarse el refuerzo superior de la franja central (ℓn = luz libre)?",
       "opciones": [
        "0,15 ℓn",
        "0,20 ℓn",
@@ -1751,12 +1751,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Con luces adyacentes distintas, ¿con qué luz se define la prolongación del refuerzo negativo?",
+      "pregunta": "En losas sin vigas con luces adyacentes distintas, ¿con qué luz se define la prolongación del refuerzo de momento negativo más allá de la cara del apoyo?",
       "opciones": [
-       "La menor",
-       "La mayor",
-       "El promedio",
-       "La del paño exterior"
+       "Con la luz menor",
+       "Con la luz mayor",
+       "Con el promedio de ambas",
+       "Con la luz del paño exterior"
       ],
       "correcta": 1
      },
@@ -1770,12 +1770,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Losa sin vigas: ¿cuántas barras inferiores de la franja de columna deben pasar por el núcleo de la columna?",
+      "pregunta": "En losas sin vigas, ¿cuántas barras inferiores de la franja de columna deben pasar por el núcleo de la columna?",
       "opciones": [
-       "Ninguna",
-       "Al menos una",
+       "Al menos una en cada dirección",
        "Al menos dos en cada dirección",
-       "Todas"
+       "Al menos cuatro en cada dirección",
+       "Todas las de la franja de columna"
       ],
       "correcta": 2
      },
@@ -1789,10 +1789,10 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Abertura en la zona común de una franja de columna y una central: ¿cuánto refuerzo puede interrumpir?",
+      "pregunta": "En losas sin vigas, una abertura en la zona común de una franja de columna y una franja central, ¿qué fracción máxima del refuerzo de cada franja puede interrumpir?",
       "opciones": [
        "1/8",
-       "1/4 de cada franja",
+       "1/4",
        "1/3",
        "1/2"
       ],
@@ -1808,12 +1808,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿En qué ancho se transmite γf Mu por flexión?",
+      "pregunta": "¿En qué ancho de losa se considera transmitida por flexión la fracción γf del momento no balanceado entre losa y columna (c2 = ancho de la columna, h = espesor de la losa o ábaco)?",
       "opciones": [
-       "Franja de columna",
-       "c2 + 3h (1,5 h a cada lado de la columna)",
-       "c2 + 2d",
-       "ℓ2/2"
+       "En toda la franja de columna",
+       "En c2 + 3 h (1,5 h a cada lado de la columna)",
+       "En c2 + 2 d",
+       "En la mitad de la luz transversal"
       ],
       "correcta": 1
      },
@@ -1827,12 +1827,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Apoyo de borde con momento paralelo al borde: ¿cuándo puede llevarse γf hasta 1,0?",
+      "pregunta": "En un apoyo de borde con momento no balanceado alrededor de un eje paralelo al borde, ¿cuándo se permite aumentar hasta 1,0 la fracción γf transmitida por flexión?",
       "opciones": [
-       "Si Vu ≤ 0,75 φVc",
-       "Si Vu ≤ 0,4 φVc",
-       "Siempre",
-       "Nunca"
+       "Si Vu no excede 0,75 φVc",
+       "Si Vu no excede 0,4 φVc",
+       "Si Vu no excede φVc",
+       "Si Vu no excede 0,5 φVc"
       ],
       "correcta": 0
      },
@@ -1846,12 +1846,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Se puede ajustar γf en losas preesforzadas?",
+      "pregunta": "¿Se permite ajustar la fracción γf del momento no balanceado transmitida por flexión en sistemas de losas preesforzadas?",
       "opciones": [
        "Sí, hasta 1,0",
-       "Sí, hasta 25 %",
-       "No",
-       "Solo en esquinas"
+       "Sí, hasta en 25 %",
+       "No se permite",
+       "Sí, pero solo en columnas de esquina"
       ],
       "correcta": 2
      },
@@ -1865,12 +1865,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método Directo: ¿cuánto pueden desalinearse las columnas?",
+      "pregunta": "Para usar el Método Directo, ¿cuánto pueden estar desalineadas las columnas respecto al eje entre columnas sucesivas?",
       "opciones": [
-       "5 % de la luz",
-       "10 % de la luz",
-       "15 % de la luz",
-       "No pueden"
+       "Hasta 5 % de la luz",
+       "Hasta 10 % de la luz",
+       "Hasta 15 % de la luz",
+       "Hasta 20 % de la luz"
       ],
       "correcta": 1
      },
@@ -1884,31 +1884,31 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método Directo con vigas en todos los lados: ¿qué rango debe cumplir αf1 ℓ2² / (αf2 ℓ1²)?",
+      "pregunta": "Para usar el Método Directo en un paño con vigas en todos sus lados, ¿entre qué valores debe estar la relación de rigideces relativas (αf1 ℓ2²) / (αf2 ℓ1²)?",
       "opciones": [
        "0,5 a 2,0",
        "0,2 a 5,0",
        "1,0 a 3,0",
-       "Sin límite"
+       "0,1 a 10,0"
       ],
       "correcta": 1
      },
      "citas": [
       {
        "articulo": "13.6.1.6",
-       "extracto": "Para un paño con vigas entre los apoyos en todos los lados, debe satisfacerse la condición (13-2) para las dos direcciones perpendiculares."
+       "extracto": "0,2 ≤ (αf1 ℓ2²) / (αf2 ℓ1²) ≤ 5,0 (13-2)"
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Paños a ambos lados con distinta luz transversal: ¿qué ℓ2 se usa en Mo?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, si las luces transversales de los paños a ambos lados del eje de apoyos son distintas, ¿qué valor de ℓ2 se usa para calcular Mo?",
       "opciones": [
-       "La mayor",
-       "La menor",
-       "El promedio de las adyacentes",
-       "La del paño crítico"
+       "La mayor de las dos",
+       "La menor de las dos",
+       "El promedio de las luces transversales adyacentes",
+       "La del paño más cargado"
       ],
       "correcta": 2
      },
@@ -1922,12 +1922,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Columna circular en el Método Directo: ¿cómo se trata para ℓn?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, ¿cómo se trata un apoyo circular para determinar la luz libre ℓn?",
       "opciones": [
-       "Como su diámetro",
+       "Como un apoyo cuadrado de lado igual a su diámetro",
        "Como un apoyo cuadrado de la misma área",
-       "Como un punto",
-       "Como 0,8 del diámetro"
+       "Como un apoyo puntual",
+       "Como un apoyo cuadrado de lado 0,8 veces su diámetro"
       ],
       "correcta": 1
      },
@@ -1941,7 +1941,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la tabla, paño extremo de losa con vigas entre todos los apoyos: ¿fracción de Mo para momento positivo?",
+      "pregunta": "Según la tabla del Método Directo para paños extremos, en una losa con vigas entre todos los apoyos, ¿qué fracción del momento estático total Mo corresponde al momento positivo?",
       "opciones": [
        "0,50",
        "0,52",
@@ -1961,7 +1961,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la tabla, losa sin vigas interiores y con viga de borde: ¿negativo exterior?",
+      "pregunta": "Según la tabla del Método Directo para paños extremos, en una losa sin vigas interiores pero con viga de borde, ¿cuánto vale el momento negativo exterior (Mo = momento estático total)?",
       "opciones": [
        "0,16 Mo",
        "0,26 Mo",
@@ -1981,12 +1981,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En un apoyo común a dos paños con negativos distintos, ¿para qué momento se diseña?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, si los momentos negativos de los dos paños que comparten un apoyo interior son distintos, ¿para cuál se diseña la sección?",
       "opciones": [
-       "El menor",
-       "El mayor de los dos",
-       "El promedio",
-       "La suma"
+       "Para el menor de los dos",
+       "Para el mayor de los dos",
+       "Para el promedio",
+       "Para la suma de ambos"
       ],
       "correcta": 1
      },
@@ -2000,7 +2000,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "ℓ2/ℓ1 = 2 y αf1 ℓ2/ℓ1 ≥ 1: ¿fracción del negativo interior en la franja de columna?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, con relación de luces ℓ2/ℓ1 = 2 y vigas rígidas (αf1 ℓ2/ℓ1 ≥ 1), ¿qué fracción del momento negativo interior resiste la franja de columna?",
       "opciones": [
        "0,45",
        "0,60",
@@ -2012,14 +2012,14 @@
      "citas": [
       {
        "articulo": "13.6.4.1",
-       "extracto": "Debe interpolarse linealmente entre los valores dados."
+       "extracto": "Las franjas de columna deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado interior: ℓ2/ℓ1 0,50 1,00 2,00 (αf1 ℓ2/ℓ1) = 0 0,75 0,75 0,75 (αf1 ℓ2/ℓ1) ≥ 1,0 0,90 0,75 0,45"
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Negativo exterior sin vigas (αf1 = 0) y βt ≥ 25: ¿qué fracción toma la franja de columna?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, en una losa sin vigas entre apoyos (αf1 = 0) y con una viga de borde muy rígida a torsión (βt ≥ 25), ¿qué fracción del momento negativo exterior resiste la franja de columna?",
       "opciones": [
        "0,60",
        "0,75",
@@ -2038,12 +2038,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Apoyos (columnas o muros) de ancho ≥ 0,75 ℓ2: ¿cómo se reparten los negativos?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, cuando los apoyos son columnas o muros que se extienden al menos 0,75 ℓ2, ¿cómo se distribuyen los momentos negativos?",
       "opciones": [
-       "Todo a la franja de columna",
-       "Uniformes a lo largo de ℓ2",
-       "75 % a la franja de columna",
-       "Como en 13.6.4.1"
+       "Todo en la franja de columna",
+       "Uniformemente a lo largo de ℓ2",
+       "75 % en la franja de columna",
+       "60 % en la franja de columna"
       ],
       "correcta": 1
      },
@@ -2057,15 +2057,15 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "αf1 ℓ2/ℓ1 = 0,5: ¿qué fracción del momento de la franja de columna toman las vigas?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, si la rigidez relativa de la viga da αf1 ℓ2/ℓ1 = 0,5, ¿qué fracción del momento de la franja de columna resisten las vigas?",
       "opciones": [
        "0",
        "0,425",
        "0,85",
-       "1,0"
+       "0,50"
       ],
       "correcta": 1,
-      "explicacion": "A medio camino entre 0 y 1,0: 0,85 × 0,5 = 0,425."
+      "explicacion": "Se interpola linealmente entre 0 (para αf1 ℓ2/ℓ1 = 0) y 0,85 (para 1,0): 0,85 × 0,5 = 0,425."
      },
      "citas": [
       {
@@ -2077,12 +2077,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Franja central junto a un borde apoyado en un muro: ¿para qué se diseña?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, ¿para qué momento se diseña una franja central adyacente y paralela a un borde apoyado en un muro?",
       "opciones": [
-       "La mitad",
-       "El doble del momento de su mitad de franja",
-       "Lo mismo",
-       "No lleva refuerzo"
+       "Para la mitad del momento asignado a la mitad de franja central del primer eje de apoyos interiores",
+       "Para el doble del momento asignado a la mitad de franja central del primer eje de apoyos interiores",
+       "Para el mismo momento que la franja de columna",
+       "Para el momento asignado a la mitad de franja central, sin modificar"
       ],
       "correcta": 1
      },
@@ -2096,12 +2096,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método Directo: ¿cuánto se pueden modificar los momentos positivo y negativo?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, ¿en qué porcentaje pueden modificarse los momentos positivo y negativo amplificados, manteniendo el momento estático total del paño?",
       "opciones": [
-       "5 %",
-       "10 %, sin bajar el Mo requerido",
-       "20 %",
-       "No se pueden"
+       "Hasta 5 %",
+       "Hasta 10 %",
+       "Hasta 20 %",
+       "Hasta 15 %"
       ],
       "correcta": 1
      },
@@ -2115,7 +2115,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "¿Qué coeficiente lleva la ec. 13-7 para el momento en columnas de un apoyo interior?",
+      "pregunta": "En el Método Directo para losas en dos direcciones, el momento que deben resistir las columnas de un apoyo interior es M = (coeficiente) [(qDu + 0,5 qLu) ℓ2 ℓn² − q′Du ℓ′2 (ℓ′n)²]. ¿Cuánto vale ese coeficiente?",
       "opciones": [
        "0,05",
        "0,07",
@@ -2127,19 +2127,19 @@
      "citas": [
       {
        "articulo": "13.6.9.2",
-       "extracto": "En un apoyo interior, los elementos de apoyo arriba y abajo de la losa deben resistir el momento amplificado especificado por la ecuación (13-7) en proporción directa a sus rigideces"
+       "extracto": "M = 0,07 [(qDu + 0,5 qLu) ℓ2 ℓn² - q'Du ℓ'2 (ℓ'n)²] (13-7)"
       }
      ]
     },
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método de Coeficientes: ¿cuánto pueden diferir luces contiguas?",
+      "pregunta": "Para usar el Método de Coeficientes, ¿cuánto pueden diferir como máximo las longitudes de paños contiguos en cada dirección?",
       "opciones": [
-       "10 %",
-       "20 %",
+       "Un décimo de la luz mayor",
+       "Un quinto de la luz mayor",
        "Un tercio de la luz mayor",
-       "La mitad"
+       "La mitad de la luz mayor"
       ],
       "correcta": 2
      },
@@ -2153,12 +2153,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método de Coeficientes: ¿qué ancho tiene la franja central?",
+      "pregunta": "En el Método de Coeficientes para losas apoyadas en vigas o muros, ¿qué ancho tiene la franja central?",
       "opciones": [
-       "0,25 ℓ",
+       "Un cuarto del paño",
        "La mitad del paño",
        "Un tercio del paño",
-       "ℓ2 − c2"
+       "Dos tercios del paño"
       ],
       "correcta": 1
      },
@@ -2172,12 +2172,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Método de Coeficientes: ¿cómo varían los momentos en las franjas de columnas?",
+      "pregunta": "En el Método de Coeficientes para losas apoyadas en vigas o muros, ¿cómo se asume que varían los momentos en las franjas de columnas?",
       "opciones": [
-       "Constantes",
-       "Del total junto a la franja central a un tercio en el borde del paño",
-       "A cero en el borde",
-       "Al doble"
+       "Son constantes e iguales a los de la franja central",
+       "Varían del valor total, junto a la franja central, a un tercio de ese valor en el borde del paño",
+       "Varían del valor total a cero en el borde del paño",
+       "Varían del valor total a la mitad en el borde del paño"
       ],
       "correcta": 1
      },
@@ -2191,12 +2191,12 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Si el negativo a un lado del apoyo es menor que el 80 % del otro, ¿qué se hace?",
+      "pregunta": "En el Método de Coeficientes para losas apoyadas en vigas o muros, si el momento negativo a un lado de un apoyo es menor que el 80 % del momento al otro lado, ¿qué se hace con la diferencia?",
       "opciones": [
-       "Se usa el mayor",
-       "Se reparte la diferencia según rigideces de las losas",
-       "Se promedian",
-       "Se ignora"
+       "Se diseña con el mayor y se ignora la diferencia",
+       "Se distribuye en proporción a las rigideces relativas de las losas",
+       "Se promedian ambos momentos",
+       "Se asigna íntegra a la viga de apoyo"
       ],
       "correcta": 1
      },
@@ -2210,7 +2210,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "Cortante en losa con un borde continuo opuesto a uno discontinuo: ¿qué aumento?",
+      "pregunta": "En el Método de Coeficientes para losas apoyadas en vigas o muros, ¿en qué porcentaje se incrementa la fuerza cortante en la losa cuando hay un borde continuo opuesto a uno discontinuo?",
       "opciones": [
        "10 %",
        "15 %",
@@ -2229,7 +2229,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la Tabla 13.1, Caso 2 con m = 0,80: ¿Ca para momento negativo?",
+      "pregunta": "En la Tabla 13.1 del Método de Coeficientes (momentos negativos), para el Caso 2 (cuatro bordes continuos) con relación de lados m = A/B = 0,80, ¿cuánto vale el coeficiente Ca de la dirección corta?",
       "opciones": [
        "0,045",
        "0,055",
@@ -2249,7 +2249,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la Tabla 13.2 (carga muerta), Caso 1 con m = 1,00: ¿Ca positivo?",
+      "pregunta": "En la Tabla 13.2 del Método de Coeficientes (momentos positivos por carga muerta), para el Caso 1 (cuatro bordes discontinuos) con relación de lados m = A/B = 1,00, ¿cuánto vale el coeficiente Ca?",
       "opciones": [
        "0,018",
        "0,027",
@@ -2269,7 +2269,7 @@
     {
      "contenido": {
       "tipo": "opcion_multiple",
-      "pregunta": "En la Tabla 13.3 (carga viva), Caso 2 con m = 1,00: ¿Ca positivo?",
+      "pregunta": "En la Tabla 13.3 del Método de Coeficientes (momentos positivos por carga viva), para el Caso 2 (cuatro bordes continuos) con relación de lados m = A/B = 1,00, ¿cuánto vale el coeficiente Ca?",
       "opciones": [
        "0,018",
        "0,027",
