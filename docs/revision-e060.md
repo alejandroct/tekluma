@@ -67,11 +67,18 @@ No se encontró ninguna tarjeta cuya **respuesta** contradijera el texto de la n
 - Cap. 7: se preguntaba por estribos de dos piezas y por empalmes de vigas perimetrales con condiciones que el artículo no pone; se ajustaron a 7.11.3 y 7.13.2.3.
 - Cap. 11: el Vc mínimo con tracción axial se reformuló sin dar a entender un signo de Nu que la norma no fija.
 
-## Pendiente de revisión por un ingeniero
+## Cierre de los pendientes (14/11/2026)
 
-- **Figuras y tablas en imagen**: las 118 tarjetas con figura se revisaron por su texto, no mirando la imagen. Conviene verlas una vez en el panel.
-- **8.3.4, fuerza cortante del método de coeficientes**: en `norma.json` figura «1,15 (1/2) wu ℓn²» y «(1/2) wu ℓn²». Dimensionalmente debe ser wu ℓn (así lo dicen las tarjetas). Falta confirmar en el PDF si es errata de la norma o de la transcripción.
-- **12.2.4, nota de la Tabla 12.2**: la E.060 escribe «el producto Ψt Ψs no necesita considerarse mayor que 1,7»; en el ACI 318 ese tope es para ψt ψe. La tarjeta sigue a la E.060 y lo advierte.
+- **Figuras y tablas en imagen**: se revisaron las 118 tarjetas con figura mirando la imagen junto a la pregunta, las opciones y la cita. Todas las respuestas coinciden con lo que muestra la figura o tabla (incluidas las Tablas 13.1–13.3, leídas celda por celda). Dos ajustes:
+  - Cap. 11, estribos contra el punzonamiento (11.12.3.3): el recorte de la Fig. 11.12.3.a cortaba los rótulos «sección crítica…» y dejaba fuera la sección A-A; se recortó de nuevo desde el PDF (pág. 111).
+  - Cap. 9, Act del parámetro Z (9.9.3): la respuesta dice «dividida entre el número de barras», pero el extracto de la cita terminaba antes; ahora incluye esa frase. (La figura de la norma rotula Act = 2 ys b, sin dividir; la definición del texto es la que manda.)
+- **8.3.4, fuerza cortante del método de coeficientes**: confirmado en el PDF oficial (pág. 58): la propia E.060 imprime «1,15 (1/2) wu ℓn²» y «(1/2) wu ℓn²». Es una errata de la norma, no de la transcripción: una cortante es wu·ℓn (como en el ACI 318). Las dos tarjetas de cortante lo explican ahora en su `explicacion`.
+- **12.2.4, nota de la Tabla 12.2**: confirmado en el PDF (pág. 116): «El producto: Ψt Ψs no necesita considerarse mayor que 1,7». La tarjeta sigue a la E.060 y ya advierte que en el ACI 318 el tope es para ψt ψe; no cambia.
+
+Las tarjetas modificadas llevan `reemplaza`; la cita ampliada entra como «cita actualizada». Al importar `08`, `09` y `11` debe salir «+0 tarjetas · 4 corregidas» en total (2 + 1 + 1).
+
+## Notas
+
 - Tres tarjetas citan un artículo de otro capítulo (9.3.2.4 desde el mazo del cap. 10; 9.3.2.3 y 2.1 desde el del cap. 11). Ya pasaba con una del cap. 2. Funciona porque toda la norma está cargada; en una base vacía hay que importar antes `00-e060-articulos.json`.
 
 ## Cómo llegan las correcciones a la base de datos

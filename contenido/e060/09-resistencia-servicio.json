@@ -2334,7 +2334,7 @@
      "citas": [
       {
        "articulo": "9.9.3",
-       "extracto": "Act: área efectiva del concreto en tracción (mm²) que rodea al refuerzo principal de tracción"
+       "extracto": "Act: área efectiva del concreto en tracción (mm²) que rodea al refuerzo principal de tracción y cuyo centroide coincide con el de dicho refuerzo, dividida entre el número de barras."
       }
      ],
      "reemplaza": [
