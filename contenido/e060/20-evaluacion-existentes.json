@@ -297,6 +297,9 @@
        "articulo": "20.3.2",
        "extracto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV)."
       }
+     ],
+     "reemplaza": [
+      "55e18e52e7435f4c"
      ]
     },
     {
@@ -395,6 +398,9 @@
        "articulo": "20.5.2",
        "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) … donde h es el peralte del elemento y ℓt la distancia a ejes de los apoyos o la luz libre entre apoyos más el peralte del elemento, la que sea menor."
       }
+     ],
+     "reemplaza": [
+      "4311bfef2e4a059d"
      ]
     },
     {
@@ -422,6 +428,9 @@
        "articulo": "20.5.2",
        "extracto": "Δr ≤ Δ1 / 4 (20-2)"
       }
+     ],
+     "reemplaza": [
+      "236e26fc590ff925"
      ]
     },
     {
@@ -467,6 +476,9 @@
        "articulo": "20.3.2",
        "extracto": "La carga total de la prueba (incluyendo la carga muerta ya presente) no debe ser menor que 0,85 (1,4CM + 1,7CV)."
       }
+     ],
+     "reemplaza": [
+      "8efdd0236f9c9557"
      ]
     },
     {
@@ -486,6 +498,9 @@
        "articulo": "20.3.3",
        "extracto": "Una prueba de carga no debe realizarse hasta que la porción de la estructura que se someterá a la carga tenga al menos 56 días."
       }
+     ],
+     "reemplaza": [
+      "d0af1e81977538e4"
      ]
     },
     {
@@ -505,6 +520,9 @@
        "articulo": "20.4.2",
        "extracto": "La carga de prueba debe aplicarse en no menos de cuatro incrementos aproximadamente iguales."
       }
+     ],
+     "reemplaza": [
+      "62da500dbc85cf49"
      ]
     },
     {
@@ -524,6 +542,9 @@
        "articulo": "20.5.2",
        "extracto": "Δ1 ≤ ℓt² / 20000 h (20-1) Δr ≤ Δ1 / 4 (20-2)"
       }
+     ],
+     "reemplaza": [
+      "7168bebc600a0f59"
      ]
     },
     {
@@ -543,6 +564,9 @@
        "articulo": "20.2.5",
        "extracto": "…se puede incrementar el valor del coeficiente de reducción de resistencia (φ) con respecto a los valores dados en 9.3, pero este no deberá ser mayor a: - Flexión sin carga axial 1,00… - Cortante o torsión 0,90 - Aplastamiento del concreto 0,85"
       }
+     ],
+     "reemplaza": [
+      "359178ee0fe7bc8b"
      ]
     },
     {
@@ -562,6 +586,9 @@
        "articulo": "20.1.4",
        "extracto": "se permite que la estructura o parte de ella se mantenga en servicio por un período de tiempo especificado. En estos casos deben realizarse reevaluaciones periódicas."
       }
+     ],
+     "reemplaza": [
+      "1e05d8ed0b770d92"
      ]
     },
     {
@@ -581,6 +608,9 @@
        "articulo": "20.2.2",
        "extracto": "Para la ubicación del refuerzo se pueden utilizar los planos disponibles siempre que se realicen verificaciones puntuales para confirmar la información de los planos."
       }
+     ],
+     "reemplaza": [
+      "5ea5d8b4c70ed1bf"
      ]
     },
     {
@@ -600,6 +630,9 @@
        "articulo": "20.2.3",
        "extracto": "la resistencia del concreto debe basarse en resultados de ensayos confiables de probetas tomadas durante la construcción o de ensayos de núcleos extraídos en la parte de la estructura cuya resistencia está en duda."
       }
+     ],
+     "reemplaza": [
+      "687d18b2fc201929"
      ]
     },
     {
@@ -619,6 +652,9 @@
        "articulo": "20.2.5",
        "extracto": "- Tracción axial con o sin flexión 1,00"
       }
+     ],
+     "reemplaza": [
+      "9942047c1475ed53"
      ]
     },
     {
@@ -638,6 +674,9 @@
        "articulo": "20.2.5",
        "extracto": "Otros elementos 0,85"
       }
+     ],
+     "reemplaza": [
+      "c8b8967bb5962dea"
      ]
     },
     {
@@ -657,6 +696,9 @@
        "articulo": "20.3.1",
        "extracto": "Debe usarse más de un patrón de carga si un patrón único no produce simultáneamente valores máximos de los efectos"
       }
+     ],
+     "reemplaza": [
+      "0a7925ca334b414b"
      ]
     },
     {
@@ -676,6 +718,9 @@
        "articulo": "20.4.1",
        "extracto": "no más de una hora antes de la aplicación del primer incremento de carga."
       }
+     ],
+     "reemplaza": [
+      "2fc49963f84d5a6a"
      ]
     },
     {
@@ -695,6 +740,9 @@
        "articulo": "20.4.3",
        "extracto": "Debe evitarse el efecto de arco en la carga aplicada."
       }
+     ],
+     "reemplaza": [
+      "1b2eb8460a5daf35"
      ]
     },
     {
@@ -714,6 +762,9 @@
        "articulo": "20.4.4",
        "extracto": "después de haber colocado el total de la carga sobre la estructura, por al menos 24 horas."
       }
+     ],
+     "reemplaza": [
+      "e7b6c90f1b144238"
      ]
     },
     {
@@ -734,6 +785,9 @@
        "articulo": "20.5.2",
        "extracto": "Para voladizos, ℓt deberá considerarse como el doble de la distancia del apoyo al extremo del voladizo."
       }
+     ],
+     "reemplaza": [
+      "0cc1cd88faff8faa"
      ]
     },
     {
@@ -753,6 +807,9 @@
        "articulo": "20.5.2",
        "extracto": "Para losas armadas en dos direcciones, ℓt será la luz mas corta."
       }
+     ],
+     "reemplaza": [
+      "1bb883345ba12abc"
      ]
     },
     {
@@ -772,6 +829,9 @@
        "articulo": "20.5.2",
        "extracto": "La porción de la estructura ensayada en la repetición de la prueba debe considerarse aceptable si la recuperación de la deflexión Δr satisface la condición:"
       }
+     ],
+     "reemplaza": [
+      "009f9a2c5f5d9450"
      ]
     },
     {
@@ -791,6 +851,9 @@
        "articulo": "20.5.2",
        "extracto": "La repetición de la prueba no debe realizarse antes de 72 horas desde la remoción de la carga correspondiente a la primera prueba."
       }
+     ],
+     "reemplaza": [
+      "fc53b77999f90e20"
      ]
     },
     {
@@ -810,6 +873,9 @@
        "articulo": "20.5.4",
        "extracto": "la aparición de fisuras estructurales inclinadas respecto al eje longitudinal y que tengan una proyección horizontal mayor que la altura del elemento (medida en el punto medio de la fisura) debe ser evaluada."
       }
+     ],
+     "reemplaza": [
+      "72c80f61199ccdd0"
      ]
     },
     {
@@ -829,6 +895,9 @@
        "articulo": "20.7.2.1",
        "extracto": "Ninguna medida de seguridad debe interferir en los procedimientos de la prueba de carga ni afectar los resultados."
       }
+     ],
+     "reemplaza": [
+      "77e52b6f81ca1eef"
      ]
     }
    ]

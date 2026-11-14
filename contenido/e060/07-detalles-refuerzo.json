@@ -1009,6 +1009,9 @@
        "articulo": "7.10.4.3",
        "extracto": "El espaciamiento libre entre hélices de la espiral no debe exceder de 75 mm ni ser menor de 25 mm."
       }
+     ],
+     "reemplaza": [
+      "d35ee97089471142"
      ]
     },
     {
@@ -1098,6 +1101,9 @@
        "articulo": "7.10.5.4",
        "extracto": "La distancia vertical entre el primer estribo y la parte superior de la zapata, viga o losa no debe ser mayor a la mitad del espaciamiento entre estribos."
       }
+     ],
+     "reemplaza": [
+      "da07738975dc5408"
      ]
     },
     {
@@ -1241,6 +1247,9 @@
        "articulo": "7.2.2",
        "extracto": "El diámetro interior de doblado para estribos no debe ser menor que 4 db para barras de 5/8” y menores."
       }
+     ],
+     "reemplaza": [
+      "eb759183aaa8c732"
      ]
     },
     {
@@ -1279,6 +1288,9 @@
        "articulo": "7.6.5.1",
        "extracto": "Los grupos de barras paralelas dispuestas en un paquete para trabajar como una unidad, deben limitarse a un máximo de 4 barras por cada paquete."
       }
+     ],
+     "reemplaza": [
+      "2261cd1dffbc1e38"
      ]
     },
     {
@@ -1298,6 +1310,9 @@
        "articulo": "7.7.1",
        "extracto": "(a) Concreto colocado contra el suelo y expuesto permanentemente a él … 70 mm"
       }
+     ],
+     "reemplaza": [
+      "756139845d823163"
      ]
     },
     {
@@ -1318,6 +1333,9 @@
        "articulo": "7.7.1",
        "extracto": "Barras de 5/8” y menores, mallas electrosoldadas … 40 mm"
       }
+     ],
+     "reemplaza": [
+      "f10651b78eeabe66"
      ]
     },
     {
@@ -1337,6 +1355,9 @@
        "articulo": "7.7.1",
        "extracto": "(c) Concreto no expuesto a la intemperie ni en contacto con el suelo: - Losas, muros, viguetas: Barras de 1 11/16\" y 2 1/4\" … 40 mm Barras de 1 3/8\" y menores … 20 mm"
       }
+     ],
+     "reemplaza": [
+      "9f84ea8d2cc8bd33"
      ]
     },
     {
@@ -1356,6 +1377,9 @@
        "articulo": "7.7.1",
        "extracto": "(b) Concreto en contacto permanente con el suelo o la intemperie: Barras de 3/4\" y mayores … 50 mm Barras de 5/8\" y menores, mallas electrosoldadas … 40 mm"
       }
+     ],
+     "reemplaza": [
+      "72f5ccaeb00fc086"
      ]
     },
     {
@@ -1395,6 +1419,9 @@
        "articulo": "7.10.5.2",
        "extracto": "El espaciamiento vertical de los estribos no debe exceder 16 veces el diámetro de las barras longitudinales, 48 veces el diámetro de la barra o alambre de los estribos ni la menor dimensión transversal del elemento sometido a compresión."
       }
+     ],
+     "reemplaza": [
+      "a33936157343ef71"
      ]
     },
     {
@@ -1532,6 +1559,9 @@
        "articulo": "7.4.2",
        "extracto": "el refuerzo con óxido, escamas o una combinación de ambos, debe considerarse aceptable si las dimensiones mínimas (incluyendo la altura de los resaltes del corrugado) y el peso de una muestra limpiada manualmente utilizando un cepillo de alambre de acero, cumple con las normas aplicables indicadas en 3.5."
       }
+     ],
+     "reemplaza": [
+      "48872b8398fa24fe"
      ]
     },
     {
@@ -1570,6 +1600,9 @@
        "articulo": "7.5.2.1",
        "extracto": "d > 200 mm ± 13 mm -13 mm"
       }
+     ],
+     "reemplaza": [
+      "3926c8f0431da880"
      ]
     },
     {
@@ -1589,6 +1622,9 @@
        "articulo": "7.5.2.1",
        "extracto": "Excepto que la tolerancia para la distancia libre al fondo de los encofrados debe ser -6 mm"
       }
+     ],
+     "reemplaza": [
+      "df88a861a0be3f60"
      ]
     },
     {
@@ -1608,6 +1644,9 @@
        "articulo": "7.5.2.2",
        "extracto": "excepto en los extremos discontinuos de las ménsulas o cartelas donde la tolerancia debe ser ±13 mm"
       }
+     ],
+     "reemplaza": [
+      "d7eb9d063c2dc655"
      ]
     },
     {
@@ -1646,6 +1685,9 @@
        "articulo": "7.6.2",
        "extracto": "las barras de las capas superiores deben colocarse exactamente sobre las de las capas inferiores, con una distancia libre entre capas no menor de 25 mm."
       }
+     ],
+     "reemplaza": [
+      "1a4291cc57734f1a"
      ]
     },
     {
@@ -1665,6 +1707,9 @@
        "articulo": "7.6.5.5",
        "extracto": "un paquete de barras debe considerarse como una sola barra de diámetro equivalente correspondiente a la suma de las áreas de las barras del paquete."
       }
+     ],
+     "reemplaza": [
+      "2ba333a25817a1b6"
      ]
     },
     {
@@ -1703,6 +1748,9 @@
        "articulo": "7.6.6.1",
        "extracto": "el espaciamiento mínimo, medido centro a centro, de los torones debe ser 45 mm para torones de 13 mm de diámetro nominal o menores, y de 50 mm para torones de 15 mm de diámetro nominal."
       }
+     ],
+     "reemplaza": [
+      "63f689e6da27cbec"
      ]
     },
     {
@@ -1761,6 +1809,9 @@
        "articulo": "7.7.4",
        "extracto": "excepto para concreto construido contra el suelo y permanentemente expuesto a él, caso en el cual el recubrimiento mínimo debe ser de 70 mm."
       }
+     ],
+     "reemplaza": [
+      "da4b3d87009f517e"
      ]
     },
     {
@@ -1780,6 +1831,9 @@
        "articulo": "7.7.5.2",
        "extracto": "el recubrimiento mínimo para el refuerzo preesforzado deberá incrementarse en 50%."
       }
+     ],
+     "reemplaza": [
+      "5da52e1b7eadf50c"
      ]
     },
     {
@@ -1799,6 +1853,9 @@
        "articulo": "7.8.1.3",
        "extracto": "El soporte horizontal debe diseñarse para resistir 1,5 veces la componente horizontal de la fuerza calculada en la porción inclinada de la barra."
       }
+     ],
+     "reemplaza": [
+      "dd32a3bce1d26ca8"
      ]
     },
     {
@@ -1818,6 +1875,9 @@
        "articulo": "7.8.1.3",
        "extracto": "se deben colocar a una distancia no mayor de 150 mm de los puntos de doblado."
       }
+     ],
+     "reemplaza": [
+      "308a0b0a96fe0c21"
      ]
     },
     {
@@ -1837,6 +1897,9 @@
        "articulo": "7.9.2",
        "extracto": "El confinamiento en las conexiones debe consistir en estribos cerrados o espirales."
       }
+     ],
+     "reemplaza": [
+      "60a9a37ba5127166"
      ]
     },
     {
@@ -1856,6 +1919,9 @@
        "articulo": "7.10.4.2",
        "extracto": "de 3/8” para barras longitudinales de más de 5/8” hasta 1”"
       }
+     ],
+     "reemplaza": [
+      "53edbd29493262bf"
      ]
     },
     {
@@ -1875,6 +1941,9 @@
        "articulo": "7.10.4.5",
        "extracto": "(a) Empalme por traslape no menor que 300 mm ni menor a lo indicado a continuación: 1) barra o alambre corrugado sin recubrimiento … 48 db"
       }
+     ],
+     "reemplaza": [
+      "f3c96f99d03585e5"
      ]
     },
     {
@@ -1894,6 +1963,9 @@
        "articulo": "7.10.4.5",
        "extracto": "2) barra o alambre liso sin recubrimiento … 72 db"
       }
+     ],
+     "reemplaza": [
+      "abe8be6330ef2073"
      ]
     },
     {
@@ -1913,6 +1985,9 @@
        "articulo": "7.10.4.8",
        "extracto": "En columnas con capitel, la espiral debe extenderse hasta un nivel en el cual el diámetro o ancho del capitel sea dos veces el de la columna."
       }
+     ],
+     "reemplaza": [
+      "7fc03a8da83abc01"
      ]
     },
     {
@@ -1932,6 +2007,9 @@
        "articulo": "7.10.5.1",
        "extracto": "de 1/2” para barras longitudinales de mayor diámetro y para los paquetes de barras."
       }
+     ],
+     "reemplaza": [
+      "23f52025fbef5140"
      ]
     },
     {
@@ -1951,6 +2029,9 @@
        "articulo": "7.10.5.5",
        "extracto": "se permite colocar el último estribo a no más de 75 mm debajo del refuerzo más bajo de la viga o ménsula de menor altura."
       }
+     ],
+     "reemplaza": [
+      "33848ba1cfc84ff8"
      ]
     },
     {
@@ -2029,6 +2110,9 @@
        "articulo": "7.11.3",
        "extracto": "se deben formar de una o dos piezas unidas mediante un empalme por traslape Clase B"
       }
+     ],
+     "reemplaza": [
+      "dd56bdf1c2d1c5d4"
      ]
     },
     {
@@ -2048,6 +2132,9 @@
        "articulo": "7.13.2.1",
        "extracto": "En la construcción de viguetas, al menos una barra de la parte inferior debe ser continua o debe empalmarse por traslape con un empalme por traslape de tracción Clase A"
       }
+     ],
+     "reemplaza": [
+      "145ba7d2faf3ac38"
      ]
     },
     {
@@ -2067,6 +2154,9 @@
        "articulo": "7.13.2.3",
        "extracto": "el refuerzo superior debe ser empalmado por traslape cerca de o en la mitad del tramo y el refuerzo inferior debe ser empalmado por traslape cerca del apoyo o en él."
       }
+     ],
+     "reemplaza": [
+      "d5c03f8b1bbbb40d"
      ]
     }
    ]

@@ -878,6 +878,9 @@
        "articulo": "18.3.3",
        "extracto": "(a) Clase U: ft ≤ 0,62 √f’c"
       }
+     ],
+     "reemplaza": [
+      "af860769d23c3549"
      ]
     },
     {
@@ -944,6 +947,9 @@
        "articulo": "18.4.1",
        "extracto": "(a) Esfuerzo en la fibra extrema en compresión… 0,60 f’ci"
       }
+     ],
+     "reemplaza": [
+      "513de9fe10ebfaee"
      ]
     },
     {
@@ -1054,6 +1060,9 @@
        "articulo": "18.5.1",
        "extracto": "(a) Debido a la fuerza del gato de preesforzado… 0,94 fpy pero no mayor que el mínimo entre 0,80 fpu…"
       }
+     ],
+     "reemplaza": [
+      "b7a0a824c9ecbf9d"
      ]
     },
     {
@@ -1122,6 +1131,9 @@
        "articulo": "18.6.2.1",
        "extracto": "Ppx = Ppj (1 + K ℓpx + μp αpx)^−1 (18-2)"
       }
+     ],
+     "reemplaza": [
+      "334979a4dda2550f"
      ]
     },
     {
@@ -1206,6 +1218,9 @@
        "articulo": "18.7.2",
        "extracto": "fps = fpu (1 − γp/β1 [ρp fpu/f’c + d/dp (ω − ω’)]) (18-3)"
       }
+     ],
+     "reemplaza": [
+      "8f644f10f3edf173"
      ]
     },
     {
@@ -1257,6 +1272,9 @@
        "articulo": "18.9.2",
        "extracto": "As = 0,004 Act (18-6)"
       }
+     ],
+     "reemplaza": [
+      "67b6607542a646bb"
      ]
     },
     {
@@ -1435,6 +1453,9 @@
        "articulo": "18.3.3",
        "extracto": "(a) Clase U: ft ≤ 0,62 √f’c (b) Clase T: 0,62 √f’c < ft ≤ 1,0 √f’c Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como Clase U, con ft ≤ 0,50 √f’c."
       }
+     ],
+     "reemplaza": [
+      "33d8b5bb4eb39a75"
      ]
     },
     {
@@ -1454,6 +1475,9 @@
        "articulo": "18.4.1",
        "extracto": "(a) Esfuerzo en la fibra extrema en compresión… 0,60 f’ci (b) Esfuerzo en la fibra extrema en tracción, salvo lo permitido en (c)… 0,25 √f’ci (c) …en los extremos de elementos simplemente apoyados… 0,50 √f’ci"
       }
+     ],
+     "reemplaza": [
+      "1c6ed282c8a8bdd8"
      ]
     },
     {
@@ -1473,6 +1497,9 @@
        "articulo": "18.4.2",
        "extracto": "(a) Esfuerzo en la fibra extrema en compresión debido al preesforzado y a las cargas sostenidas en el tiempo… 0,45 f’c (b) …debida al preesforzado y al total de las cargas… 0,60 f’c"
       }
+     ],
+     "reemplaza": [
+      "0d8c36ef069dafe6"
      ]
     },
     {
@@ -1492,6 +1519,9 @@
        "articulo": "18.5.1",
        "extracto": "(a) Debido a la fuerza del gato de preesforzado… 0,94 fpy pero no mayor que el mínimo entre 0,80 fpu… (b) Inmediatamente después de la transferencia del preesfuerzo… 0,82 fpy pero no mayor que 0,74 fpu (c) Tendones de postensado, en anclajes y acoples… 0,70 fpu"
       }
+     ],
+     "reemplaza": [
+      "7d7781e02794ff27"
      ]
     },
     {
@@ -1511,6 +1541,9 @@
        "articulo": "18.9.2",
        "extracto": "…el área mínima del refuerzo adherido debe calcularse mediante As = 0,004 Act (18-6)"
       }
+     ],
+     "reemplaza": [
+      "8de5fd1e10e08f8c"
      ]
     },
     {
@@ -1530,6 +1563,9 @@
        "articulo": "18.18.3.3",
        "extracto": "La relación agua cemento no debe exceder de 0,45 en peso."
       }
+     ],
+     "reemplaza": [
+      "a7c9bffa3ceacbe6"
      ]
     },
     {
@@ -1549,6 +1585,9 @@
        "articulo": "18.21.1",
        "extracto": "Los anclajes y conectores para tendones adheridos y no adheridos deben desarrollar al menos el 95% de la resistencia a la rotura especificada para el acero de preesforzado…"
       }
+     ],
+     "reemplaza": [
+      "d87d5a9c663ccb1e"
      ]
     },
     {
@@ -1568,6 +1607,9 @@
        "articulo": "18.20.4",
        "extracto": "La pérdida total de presfuerzo debida al acero de preesforzado roto que no es reemplazado no debe exceder del 2% del presfuerzo total."
       }
+     ],
+     "reemplaza": [
+      "7fc32e1b95050db5"
      ]
     },
     {
@@ -1587,6 +1629,9 @@
        "articulo": "18.17.2",
        "extracto": "Los ductos inyectados para un solo alambre, un torón o una barra deben tener un diámetro interior al menos 6 mm mayor que el diámetro del acero de preesforzado."
       }
+     ],
+     "reemplaza": [
+      "7bba1d38babbd742"
      ]
     },
     {
@@ -1607,6 +1652,9 @@
        "articulo": "18.1.3",
        "extracto": "Las siguientes disposiciones de esta Norma no deben aplicarse al concreto preesforzado, excepto cuando esté específicamente señalado: 6.4.4, 8.10.2, 8.10.3, 8.10.4, 8.11, 9.8.1, 10.5, 10.6, 10.9.1, 10.9.2, Capítulo 13, 14.3, 14.5 y 14.6."
       }
+     ],
+     "reemplaza": [
+      "e0f1f9cd30c2db77"
      ]
     },
     {
@@ -1626,6 +1674,9 @@
        "articulo": "18.2.6",
        "extracto": "debe considerarse el efecto de la pérdida de área debida a los ductos abiertos."
       }
+     ],
+     "reemplaza": [
+      "a552eb2382b3151e"
      ]
     },
     {
@@ -1645,6 +1696,9 @@
        "articulo": "18.3.3",
        "extracto": "(b) Clase T: 0,62 √f'c < ft ≤ 1,0 √f'c"
       }
+     ],
+     "reemplaza": [
+      "143027641cff5528"
      ]
     },
     {
@@ -1664,6 +1718,9 @@
        "articulo": "18.3.3",
        "extracto": "Los sistemas de losas preesforzadas en dos direcciones deben ser diseñadas como Clase U, con ft ≤ 0,50 √f'c."
       }
+     ],
+     "reemplaza": [
+      "3c04215ea7e0aea6"
      ]
     },
     {
@@ -1683,6 +1740,9 @@
        "articulo": "18.4.1",
        "extracto": "(c) Esfuerzo en la fibra extrema en tracción en los extremos de elementos simplemente apoyados … 0,50 √f'ci"
       }
+     ],
+     "reemplaza": [
+      "0d0575fcbba4a706"
      ]
     },
     {
@@ -1702,6 +1762,9 @@
        "articulo": "18.4.2",
        "extracto": "(b) Esfuerzo en la fibra extrema en compresión debida al preesforzado y al total de las cargas … 0,60 f'c"
       }
+     ],
+     "reemplaza": [
+      "433e5dd6c2efc158"
      ]
     },
     {
@@ -1721,6 +1784,9 @@
        "articulo": "18.4.4.1",
        "extracto": "se debe usar un recubrimiento mayor que el indicado en 7.7.2 y se deben reducir los esfuerzos de tracción en el concreto para controlar la fisuración bajo cargas de servicio."
       }
+     ],
+     "reemplaza": [
+      "3574bf067399acc1"
      ]
     },
     {
@@ -1740,6 +1806,9 @@
        "articulo": "18.5.1",
        "extracto": "0,82 fpy pero no mayor que 0,74 fpu"
       }
+     ],
+     "reemplaza": [
+      "8f10adac4bead2ae"
      ]
     },
     {
@@ -1759,6 +1828,9 @@
        "articulo": "18.5.1",
        "extracto": "(c) Tendones de postensado, en anclajes y acoples, inmediatamente después de la transferencia … 0,70 fpu"
       }
+     ],
+     "reemplaza": [
+      "b321014df423f0d2"
      ]
     },
     {
@@ -1778,6 +1850,9 @@
        "articulo": "18.6.2.3",
        "extracto": "En los planos de diseño se deben colocar los valores de K y"
       }
+     ],
+     "reemplaza": [
+      "4cab0803e5877e3b"
      ]
     },
     {
@@ -1798,6 +1873,9 @@
        "articulo": "18.6.2.2",
        "extracto": "En la Tabla 18.1 se muestran rangos de valores comunes para estos coeficientes."
       }
+     ],
+     "reemplaza": [
+      "42df1bb6012ec0ca"
      ]
     },
     {
@@ -1818,6 +1896,9 @@
        "articulo": "18.6.2.2",
        "extracto": "En la Tabla 18.1 se muestran rangos de valores comunes para estos coeficientes."
       }
+     ],
+     "reemplaza": [
+      "e8dadedb914e854b"
      ]
     },
     {
@@ -1837,6 +1918,9 @@
        "articulo": "18.7.2",
        "extracto": "γp es 0,55 para fpy/fpu entre 0,80 y 0,85; 0,40 para fpy/fpu entre 0,85 y 0,90 y 0,28 para fpy/fpu mayor que 0,90."
       }
+     ],
+     "reemplaza": [
+      "54ea56ea2de93101"
      ]
     },
     {
@@ -1856,6 +1940,9 @@
        "articulo": "18.7.2",
        "extracto": "pero fps en la ecuación (18-4) no debe tomarse mayor que fpy ni que (fse + 420)."
       }
+     ],
+     "reemplaza": [
+      "d372f63c458a5a68"
      ]
     },
     {
@@ -1875,6 +1962,9 @@
        "articulo": "18.7.2",
        "extracto": "pero fps en la ecuación (18-5) no debe tomarse mayor que fpy ni que (fse + 210)."
       }
+     ],
+     "reemplaza": [
+      "9c453d1240220e84"
      ]
     },
     {
@@ -1894,6 +1984,9 @@
        "articulo": "18.8.1",
        "extracto": "no sea mayor de 0,36 β1."
       }
+     ],
+     "reemplaza": [
+      "1cb8c1bbeac238ac"
      ]
     },
     {
@@ -1913,6 +2006,9 @@
        "articulo": "18.8.3",
        "extracto": "(a) Losas en dos direcciones con postensado no adherido."
       }
+     ],
+     "reemplaza": [
+      "092786137290416c"
      ]
     },
     {
@@ -1932,6 +2028,9 @@
        "articulo": "18.9.3.1",
        "extracto": "No se requiere refuerzo adherido en las zonas de momento positivo donde el esfuerzo de tracción en la fibra extrema en tracción de la zona de tracción precomprimida al nivel de cargas de servicio, ft (después de considerar todas la pérdidas de preesforzado), no excede 0,17 √f'c."
       }
+     ],
+     "reemplaza": [
+      "a8015283cd97bec4"
      ]
     },
     {
@@ -1951,6 +2050,9 @@
        "articulo": "18.9.3.3",
        "extracto": "Deben colocarse por lo menos 4 barras o alambres en cada dirección. El espaciamiento del refuerzo adherido no debe exceder de 300 mm."
       }
+     ],
+     "reemplaza": [
+      "b0260b36da3b1ae9"
      ]
     },
     {
@@ -1970,6 +2072,9 @@
        "articulo": "18.9.4.1",
        "extracto": "En zonas de momento positivo, la longitud del refuerzo adherido debe ser como mínimo un tercio de la luz libre"
       }
+     ],
+     "reemplaza": [
+      "51f43715a93f3e09"
      ]
     },
     {
@@ -1989,6 +2094,9 @@
        "articulo": "18.10.3",
        "extracto": "(con un factor de amplificación de 1,0)"
       }
+     ],
+     "reemplaza": [
+      "ef7c42e0b6d84e57"
      ]
     },
     {
@@ -2008,6 +2116,9 @@
        "articulo": "18.11.2.2",
        "extracto": "(b) Los estribos laterales deben ser por lo menos de 3/8” o formarse con refuerzo electrosoldado de alambre de área equivalente y tener un espaciamiento vertical que no exceda de 48 veces el diámetro de la barra o del alambre ni la menor dimensión del elemento a compresión."
       }
+     ],
+     "reemplaza": [
+      "b0d82c1c50b19adb"
      ]
     },
     {
@@ -2027,6 +2138,9 @@
        "articulo": "18.12.4",
        "extracto": "El espaciamiento de los tendones debe proveer un presfuerzo promedio mínimo efectivo de 0,9 MPa sobre la sección de losa tributaria al tendón o grupo de tendones."
       }
+     ],
+     "reemplaza": [
+      "165022ef110a7645"
      ]
     },
     {
@@ -2046,6 +2160,9 @@
        "articulo": "18.12.4",
        "extracto": "Debe proporcionarse un mínimo de dos tendones en cada dirección a través de la sección crítica de cortante sobre las columnas."
       }
+     ],
+     "reemplaza": [
+      "34d41b0595e8f16f"
      ]
     },
     {
@@ -2065,6 +2182,9 @@
        "articulo": "18.13.4.2",
        "extracto": "la resistencia nominal a compresión del concreto en la zona general debe limitarse a 0,7 λ f'ci."
       }
+     ],
+     "reemplaza": [
+      "1266c5dac04cc90e"
      ]
     },
     {
@@ -2084,6 +2204,9 @@
        "articulo": "18.13.4.3",
        "extracto": "sea al menos 28 MPa para torones de varios alambres o de a lo menos 17 MPa para los tendones de un cable o para barras."
       }
+     ],
+     "reemplaza": [
+      "b4bb6c5982180feb"
      ]
     },
     {
@@ -2103,6 +2226,9 @@
        "articulo": "18.13.5.5",
        "extracto": "debe proporcionarse refuerzo adherido para transferir, al menos, 0,35Ppu a la sección de concreto que queda detrás del anclaje."
       }
+     ],
+     "reemplaza": [
+      "b0133df62103f948"
      ]
     },
     {
@@ -2122,6 +2248,9 @@
        "articulo": "18.13.5.7",
        "extracto": "con una resistencia nominal a la tracción igual al 2% de cada fuerza de preesforzado amplificada, con el objeto de evitar el descascaramiento."
       }
+     ],
+     "reemplaza": [
+      "6c1a2ceaa451b460"
      ]
     },
     {
@@ -2141,6 +2270,9 @@
        "articulo": "18.14.2.2",
        "extracto": "Se deben disponer dos barras horizontales de diámetro no menor a 1/2”, paralelas al borde de la losa."
       }
+     ],
+     "reemplaza": [
+      "15fe7506fde81d12"
      ]
     },
     {
@@ -2160,6 +2292,9 @@
        "articulo": "18.14.2.3",
        "extracto": "Si el espaciamiento, medido centro a centro, de los dispositivos de anclaje es de 300 mm o menos, los dispositivos de anclaje se deben considerar como agrupados."
       }
+     ],
+     "reemplaza": [
+      "31d5d0c1382423f0"
      ]
     },
     {
@@ -2180,6 +2315,9 @@
        "articulo": "18.14.2.3",
        "extracto": "se deben proporcionar n + 1 barras en horquilla o estribos cerrados al menos de diámetro 3/8”"
       }
+     ],
+     "reemplaza": [
+      "215213fa297f58c0"
      ]
     },
     {
@@ -2199,6 +2337,9 @@
        "articulo": "18.18.2.4",
        "extracto": "No debe emplearse cloruro de calcio."
       }
+     ],
+     "reemplaza": [
+      "309849672fdfcdb9"
      ]
     },
     {
@@ -2218,6 +2359,9 @@
        "articulo": "18.18.3.4",
        "extracto": "No debe añadirse agua con el objeto de aumentar la fluidez cuando esta haya disminuido por demora en el uso del mortero de inyección."
       }
+     ],
+     "reemplaza": [
+      "cb71112b0cac1d4e"
      ]
     },
     {
@@ -2237,6 +2381,9 @@
        "articulo": "18.18.4.2",
        "extracto": "hasta que los cubos de 50 mm fabricados con el mismo mortero de inyección y curados en la obra logren una resistencia mínima a la compresión de 5,5 MPa."
       }
+     ],
+     "reemplaza": [
+      "cee0c5622f8a54a5"
      ]
     },
     {
@@ -2257,6 +2404,9 @@
        "articulo": "18.20.1",
        "extracto": "que exceda del 5% en los elementos pretensados o de un 7% para las construcciones postensadas."
       }
+     ],
+     "reemplaza": [
+      "180ebf4a2e1e429a"
      ]
     },
     {
@@ -2276,6 +2426,9 @@
        "articulo": "18.21.1",
        "extracto": "se desarrolle al 100% en las secciones críticas, después que el acero de preesforzado esté adherido al elemento."
       }
+     ],
+     "reemplaza": [
+      "c09f0c51bf7d088a"
      ]
     },
     {
@@ -2295,6 +2448,9 @@
        "articulo": "18.22.3",
        "extracto": "se mantenga la excentricidad deseada entre los tendones y el centroide del concreto para todo el rango de deflexiones previstas del elemento."
       }
+     ],
+     "reemplaza": [
+      "4845e96ee14a9b3f"
      ]
     }
    ]

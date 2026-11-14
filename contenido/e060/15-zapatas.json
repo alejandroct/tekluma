@@ -335,6 +335,9 @@
        "articulo": "15.2.2",
        "extracto": "El área de la zapata debe determinarse a partir de la resistencia admisible del suelo…"
       }
+     ],
+     "reemplaza": [
+      "7937b7321602adc9"
      ]
     },
     {
@@ -408,6 +411,9 @@
        "articulo": "15.2.4",
        "extracto": "Se podrá considerar un incremento del 30% en el valor de la presión admisible del suelo…"
       }
+     ],
+     "reemplaza": [
+      "41361a14373836eb"
      ]
     },
     {
@@ -495,6 +501,9 @@
        "articulo": "15.4.1",
        "extracto": "El momento flector en cualquier sección de una zapata debe determinarse pasando un plano vertical a través de la zapata, y calculando el momento de las fuerzas que actúan sobre el área total de la zapata que quede a un lado de dicho plano vertical."
       }
+     ],
+     "reemplaza": [
+      "5abd41aba05932e0"
      ]
     },
     {
@@ -541,6 +550,9 @@
        "articulo": "15.4.4.2",
        "extracto": "γs = 2 / (β + 1) (15-1) donde β es la relación del lado largo al lado corto de la zapata."
       }
+     ],
+     "reemplaza": [
+      "ccb42d846bf27952"
      ]
     },
     {
@@ -646,6 +658,9 @@
        "articulo": "15.8.2.1",
        "extracto": "Para columnas y pedestales construidos en obra, el área de refuerzo a través de la junta no debe ser menor de 0,005 Ag, donde Ag es el área bruta del elemento soportado."
       }
+     ],
+     "reemplaza": [
+      "316191a992507477"
      ]
     },
     {
@@ -677,6 +692,9 @@
        "articulo": "15.10.2",
        "extracto": "El Método Directo de Diseño del Capítulo 13 no debe utilizarse para el diseño de zapatas combinadas y losas de cimentación."
       }
+     ],
+     "reemplaza": [
+      "d4af9f8726c11eef"
      ]
     },
     {
@@ -709,6 +727,9 @@
        "articulo": "15.2.2",
        "extracto": "El área de la base de la zapata o el número y distribución de pilotes debe determinarse a partir de las fuerzas y momentos no amplificados (en servicio) transmitidos al suelo… a partir de la resistencia admisible del suelo…"
       }
+     ],
+     "reemplaza": [
+      "d69b6f8c3df6aadd"
      ]
     },
     {
@@ -728,6 +749,9 @@
        "articulo": "15.2.4",
        "extracto": "Se podrá considerar un incremento del 30% en el valor de la presión admisible del suelo para los estados de cargas en los que intervengan cargas temporales, tales como sismo o viento."
       }
+     ],
+     "reemplaza": [
+      "42fe309a80317c18"
      ]
     },
     {
@@ -747,6 +771,9 @@
        "articulo": "15.2.5",
        "extracto": "Para determinar los esfuerzos en el suelo o las fuerzas en pilotes, las acciones sísmicas podrán reducirse al 80% de los valores provenientes del análisis…"
       }
+     ],
+     "reemplaza": [
+      "8cdfbfa2ab3c1660"
      ]
     },
     {
@@ -766,6 +793,9 @@
        "articulo": "15.4.2",
        "extracto": "(a) Para zapatas que soporten una columna, pedestal o muro de concreto, en la cara de la columna, pedestal o muro. (b) Para zapatas que soporten muros de albañilería, en el punto medio entre el eje central y el borde del muro. (c) …en el punto medio entre la cara de la columna y el borde de la plancha de acero"
       }
+     ],
+     "reemplaza": [
+      "e2bd96310a0f8320"
      ]
     },
     {
@@ -786,6 +816,9 @@
        "articulo": "15.4.4.2",
        "extracto": "…una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja… cuyo ancho sea igual a la longitud del lado corto de la zapata… γs = 2 / (β + 1) (15-1) donde β es la relación del lado largo al lado corto de la zapata."
       }
+     ],
+     "reemplaza": [
+      "5e020a6aa61f129e"
      ]
     },
     {
@@ -805,6 +838,9 @@
        "articulo": "15.7",
        "extracto": "La altura de las zapatas, medida sobre el refuerzo inferior no debe ser menor de 300 mm para zapatas apoyadas sobre el suelo, ni menor de 400 mm en el caso de zapatas apoyadas sobre pilotes."
       }
+     ],
+     "reemplaza": [
+      "e13a548a7892549b"
      ]
     },
     {
@@ -843,6 +879,9 @@
        "articulo": "15.8.2.1",
        "extracto": "Para columnas y pedestales construidos en obra, el área de refuerzo a través de la junta no debe ser menor de 0,005 Ag, donde Ag es el área bruta del elemento soportado."
       }
+     ],
+     "reemplaza": [
+      "b1cb4d393b799f92"
      ]
     },
     {
@@ -862,6 +901,9 @@
        "articulo": "15.2.3",
        "extracto": "En el cálculo de las presiones de contacto entre las zapatas y el suelo no se deberán considerar las tracciones."
       }
+     ],
+     "reemplaza": [
+      "ebfd05e0dd50627c"
      ]
     },
     {
@@ -881,6 +923,9 @@
        "articulo": "15.2.7",
        "extracto": "puede basarse en la suposición que la reacción de cualquier pilote está concentrada en el eje del mismo."
       }
+     ],
+     "reemplaza": [
+      "1260e41150256143"
      ]
     },
     {
@@ -900,6 +945,9 @@
        "articulo": "15.4.2",
        "extracto": "(c) Para zapatas que soporten una columna con plancha de apoyo de acero, en el punto medio entre la cara de la columna y el borde de la plancha de acero"
       }
+     ],
+     "reemplaza": [
+      "48628641aff5405b"
      ]
     },
     {
@@ -919,6 +967,9 @@
        "articulo": "15.4.4.1",
        "extracto": "El refuerzo en la dirección larga debe distribuirse uniformemente en el ancho total de la zapata."
       }
+     ],
+     "reemplaza": [
+      "c225e251db36df60"
      ]
     },
     {
@@ -939,6 +990,9 @@
        "articulo": "15.4.4.2",
        "extracto": "una porción del refuerzo total, γs As, debe distribuirse en forma uniforme sobre una franja (centrada con respecto al eje de la columna o pedestal) cuyo ancho sea igual a la longitud del lado corto de la zapata."
       }
+     ],
+     "reemplaza": [
+      "6b10f8faea5e5054"
      ]
     },
     {
@@ -958,6 +1012,9 @@
        "articulo": "15.5.2",
        "extracto": "La ubicación de la sección crítica para cortante de acuerdo con el Capítulo 11 debe medirse desde la cara de la columna, pedestal o muro."
       }
+     ],
+     "reemplaza": [
+      "114610f8e43599c5"
      ]
     },
     {
@@ -977,6 +1034,9 @@
        "articulo": "15.5.3.2",
        "extracto": "Se debe considerar que la reacción de cualquier pilote con su centro localizado dp/2 o más hacia el lado interior de la sección no produce cortante en dicha sección."
       }
+     ],
+     "reemplaza": [
+      "fe76906421ba259f"
      ]
     },
     {
@@ -997,6 +1057,9 @@
        "articulo": "15.5.3.3",
        "extracto": "debe basarse en una interpolación lineal entre el valor total a dp/2 hacia afuera de la sección y el valor cero correspondiente a dp/2 hacia adentro de la sección."
       }
+     ],
+     "reemplaza": [
+      "7f27e4f25391a86a"
      ]
     },
     {
@@ -1016,6 +1079,9 @@
        "articulo": "15.6.2",
        "extracto": "ganchos (sólo en tracción)"
       }
+     ],
+     "reemplaza": [
+      "4548bc74782d664e"
      ]
     },
     {
@@ -1035,6 +1101,9 @@
        "articulo": "15.7",
        "extracto": "El peralte de la zapata deberá ser compatible con los requerimientos de anclaje de las armaduras de las columnas, pedestales y muros que se apoyen en la zapata."
       }
+     ],
+     "reemplaza": [
+      "0cf5488062a73738"
      ]
     },
     {
@@ -1054,6 +1123,9 @@
        "articulo": "15.8.1.4",
        "extracto": "Las fuerzas laterales deben transmitirse a la zapata de acuerdo con las disposiciones de cortante por fricción de 11.7, o mediante otros medios apropiados."
       }
+     ],
+     "reemplaza": [
+      "27d8baedb3525180"
      ]
     },
     {
@@ -1074,6 +1146,9 @@
        "articulo": "15.8.2.1",
        "extracto": "el área de refuerzo a través de la junta no debe ser menor de 0,005 Ag"
       }
+     ],
+     "reemplaza": [
+      "bfca5b29d2e805ba"
      ]
     },
     {
@@ -1093,6 +1168,9 @@
        "articulo": "15.8.3.3",
        "extracto": "Los pernos de anclaje y los conectores mecánicos deben diseñarse para alcanzar su resistencia de diseño antes de que se presente la falla de anclaje o la falla del concreto que los circunda."
       }
+     ],
+     "reemplaza": [
+      "fbe1ea818bc15bbb"
      ]
     },
     {
@@ -1112,6 +1190,9 @@
        "articulo": "15.9.2",
        "extracto": "Las zapatas con pendiente o escalonadas que se diseñen como una unidad, deben construirse para asegurar su comportamiento como tal."
       }
+     ],
+     "reemplaza": [
+      "633343705a803573"
      ]
     },
     {
@@ -1131,6 +1212,9 @@
        "articulo": "15.10.3",
        "extracto": "debe ser consistentes con las propiedades del suelo y la estructura y con los principios establecidos de mecánica de suelos."
       }
+     ],
+     "reemplaza": [
+      "309d0a3b5135d851"
      ]
     }
    ]

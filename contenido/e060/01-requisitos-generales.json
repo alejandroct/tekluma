@@ -478,6 +478,9 @@
        "articulo": "1.1.6",
        "extracto": "Esta Norma no rige el diseño y la construcción de losas apoyadas en el suelo, a menos que la losa transmita cargas verticales o laterales desde otras partes de la estructura al suelo."
       }
+     ],
+     "reemplaza": [
+      "d9376bb72faee52c"
      ]
     },
     {
@@ -497,6 +500,9 @@
        "articulo": "1.1.5",
        "extracto": "Esta Norma no controla el diseño e instalación de las porciones de pilotes de concreto, pilas excavadas y cajones de cimentación que quedan enterrados en el suelo, excepto en lo dispuesto en el Capítulo 21."
       }
+     ],
+     "reemplaza": [
+      "6f0b703fb76e178a"
      ]
     },
     {
@@ -516,6 +522,9 @@
        "articulo": "1.1.8",
        "extracto": "Esta Norma no rige para el diseño de losas de concreto estructural vaciadas sobre moldes permanentes de acero consideradas como compuestas. El concreto usado en la construcción de tales losas debe estar regido por los Capítulos 1 a 7 de esta Norma…"
       }
+     ],
+     "reemplaza": [
+      "1a43d692959cabff"
      ]
     },
     {
@@ -554,6 +563,9 @@
        "articulo": "1.1.4",
        "extracto": "Para estructuras especiales tales como arcos, tanques, reservorios, depósitos, silos, chimeneas y estructuras resistentes a explosiones, las disposiciones de esta Norma regirán en lo que sean aplicables."
       }
+     ],
+     "reemplaza": [
+      "a062d5ea256e0767"
      ]
     },
     {

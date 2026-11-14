@@ -318,6 +318,9 @@
        "articulo": "16.1.2",
        "extracto": "Las disposiciones de este Capítulo no cubren los requerimientos específicos para el diseño de pórticos y muros prefabricados que conformen el sistema sismorresistente de edificaciones ubicadas en las zonas de alto riesgo sísmico (zonas 2 y 3 de la NTE E.030)."
       }
+     ],
+     "reemplaza": [
+      "4972fa97baccd60b"
      ]
     },
     {
@@ -396,6 +399,9 @@
        "articulo": "16.5.1.3",
        "extracto": "(a) Las columnas prefabricadas deben tener una resistencia nominal a tracción no menor a 1,5 Ag en Newtons."
       }
+     ],
+     "reemplaza": [
+      "f373e5a5feceefd5"
      ]
     },
     {
@@ -513,6 +519,9 @@
        "articulo": "16.6.2.2",
        "extracto": "…al menos ℓn/180, pero no menos que… Para vigas o elementos en forma de T … 75 mm"
       }
+     ],
+     "reemplaza": [
+      "0581838e74c3c7e1"
      ]
     },
     {
@@ -546,6 +555,9 @@
        "articulo": "16.6.2.2",
        "extracto": "…la distancia desde el borde del apoyo al extremo del elemento prefabricado en la dirección de la luz sea al menos ℓn/180, pero no menos que: Para losas sólidas o alveolares … 50 mm Para vigas o elementos en forma de T … 75 mm"
       }
+     ],
+     "reemplaza": [
+      "4493b1c4741c3d8b"
      ]
     },
     {
@@ -566,6 +578,9 @@
        "articulo": "16.6.2.2",
        "extracto": "…la distancia desde el borde del apoyo al extremo del elemento prefabricado en la dirección de la luz sea al menos ℓn/180, pero no menos que: Para losas sólidas o alveolares … 50 mm Para vigas o elementos en forma de T … 75 mm"
       }
+     ],
+     "reemplaza": [
+      "2e52307918737747"
      ]
     },
     {
@@ -586,6 +601,9 @@
        "articulo": "16.5.2.4",
        "extracto": "Los amarres alrededor del perímetro de cada piso o techo, dentro de 1,2 m del borde, deben proporcionar una resistencia nominal a tracción no menor a 75 kN."
       }
+     ],
+     "reemplaza": [
+      "bbf9abe2fdc1e381"
      ]
     },
     {
@@ -605,6 +623,9 @@
        "articulo": "16.5.1.3",
        "extracto": "(a) Las columnas prefabricadas deben tener una resistencia nominal a tracción no menor a 1,5 Ag en Newtons… (b) Los paneles de muro prefabricados deben tener un mínimo de dos amarres por panel, con una resistencia nominal a la tracción no menor a 45 kN por amarre."
       }
+     ],
+     "reemplaza": [
+      "76a26d160d757a0f"
      ]
     },
     {
@@ -624,6 +645,9 @@
        "articulo": "16.5.1.4",
        "extracto": "No se deben usar detalles de conexión que dependan solamente de la fricción producida por las cargas gravitacionales."
       }
+     ],
+     "reemplaza": [
+      "95e09b39d9a38351"
      ]
     },
     {
@@ -643,6 +667,9 @@
        "articulo": "16.1.2",
        "extracto": "En este caso, los sistemas constructivos prefabricados serán considerados “no convencionales”. Véase 1.3."
       }
+     ],
+     "reemplaza": [
+      "86f38bcd6b75e2fa"
      ]
     },
     {
@@ -662,6 +689,9 @@
        "articulo": "16.2.3",
        "extracto": "Deben especificarse las tolerancias tanto para los elementos prefabricados como para los vaciados en sitio y los elementos de conexión."
       }
+     ],
+     "reemplaza": [
+      "3783b21b86e8f477"
      ]
     },
     {
@@ -681,6 +711,9 @@
        "articulo": "16.3.2.2",
        "extracto": "Cuando se produzcan fuerzas de tracción, debe proporcionarse una trayectoria continua de refuerzo de acero."
       }
+     ],
+     "reemplaza": [
+      "3f9e10dcb297f28f"
      ]
     },
     {
@@ -700,6 +733,9 @@
        "articulo": "16.4.1",
        "extracto": "se permite que los requisitos de refuerzo por retracción y temperatura de 9.7 en la dirección normal al refuerzo por flexión sean omitidos."
       }
+     ],
+     "reemplaza": [
+      "18ebcf96a1dfd0f3"
      ]
     },
     {
@@ -719,6 +755,9 @@
        "articulo": "16.4.2",
        "extracto": "El espaciamiento del refuerzo no debe exceder de 5 veces el espesor del muro ni 750 mm para muros interiores o 450 mm para muros exteriores."
       }
+     ],
+     "reemplaza": [
+      "769b736cd8b4b28b"
      ]
     },
     {
@@ -738,6 +777,9 @@
        "articulo": "16.5.1.2",
        "extracto": "deben tener una resistencia nominal a la tracción no menor que 4,5 kN por metro lineal."
       }
+     ],
+     "reemplaza": [
+      "f04a83323d92d14b"
      ]
     },
     {
@@ -757,6 +799,9 @@
        "articulo": "16.5.1.3",
        "extracto": "se permite emplear un área efectiva reducida Ag basada en la sección transversal requerida, pero no menor a la mitad del área total."
       }
+     ],
+     "reemplaza": [
+      "55250f3a91ea902f"
      ]
     },
     {
@@ -776,6 +821,9 @@
        "articulo": "16.5.1.3",
        "extracto": "(c) Cuando las fuerzas de diseño no generen tracción en la base, se permite que los amarres requeridos por 16.5.1.3 (b) sean anclados en una losa de concreto apoyada sobre el terreno, apropiadamente reforzada."
       }
+     ],
+     "reemplaza": [
+      "3ce9f102def1f457"
      ]
     },
     {
@@ -795,6 +843,9 @@
        "articulo": "16.5.2.1",
        "extracto": "Los amarres deben estar ubicados en o dentro de 600 mm del plano del sistema de piso o techo."
       }
+     ],
+     "reemplaza": [
+      "2cffbe530d8d89e9"
      ]
     },
     {
@@ -814,6 +865,9 @@
        "articulo": "16.5.2.3",
        "extracto": "deben tener un espaciamiento no mayor al espaciamiento de los muros de carga."
       }
+     ],
+     "reemplaza": [
+      "98176dd7ca95ada2"
      ]
     },
     {
@@ -834,6 +888,9 @@
        "articulo": "16.5.2.5",
        "extracto": "Deben proporcionarse amarres verticales de tracción en todos los muros y deben ser continuos en toda la altura de la edificación."
       }
+     ],
+     "reemplaza": [
+      "ee3ecba5243c05a8"
      ]
     },
     {
@@ -853,6 +910,9 @@
        "articulo": "16.6.1.1",
        "extracto": "Cuando el cortante sea la principal carga impuesta, se permite usar las disposiciones de 11.7."
       }
+     ],
+     "reemplaza": [
+      "99d4462022161f6c"
      ]
     },
     {
@@ -873,6 +933,9 @@
        "articulo": "16.6.2.2",
        "extracto": "(b) Los dispositivos de soporte en bordes no reforzados deben desplazarse un mínimo de 13 mm desde la cara del apoyo"
       }
+     ],
+     "reemplaza": [
+      "3d755aaf38f94c7b"
      ]
     },
     {
@@ -892,6 +955,9 @@
        "articulo": "16.6.2.3",
        "extracto": "pero al menos un tercio de dicho refuerzo debe extenderse hasta el centro del apoyo"
       }
+     ],
+     "reemplaza": [
+      "cf4e9a35be396d8e"
      ]
     },
     {
@@ -911,6 +977,9 @@
        "articulo": "16.7.1.1",
        "extracto": "No se requiera que los elementos embebidos sean enganchados o amarrados al refuerzo dentro del concreto."
       }
+     ],
+     "reemplaza": [
+      "987ff4d45940ff14"
      ]
     },
     {
@@ -930,6 +999,9 @@
        "articulo": "16.8.2",
        "extracto": "Las marcas de identificación deben corresponder con las de los planos de montaje."
       }
+     ],
+     "reemplaza": [
+      "7892cc809d0ad175"
      ]
     },
     {
@@ -949,6 +1021,9 @@
        "articulo": "16.9.2",
        "extracto": "Las estructuras y elementos prefabricados deben estar adecuadamente apoyados y arriostrados durante el montaje para asegurar el adecuado alineamiento e integridad estructural hasta que se completen las conexiones permanentes."
       }
+     ],
+     "reemplaza": [
+      "ecf3692d6ad1afcb"
      ]
     },
     {
@@ -968,6 +1043,9 @@
        "articulo": "16.10.1.1",
        "extracto": "Las cargas de ensayo deben ser aplicadas sólo cuando los cálculos indiquen que para el elemento prefabricado aislado no es crítica la compresión o el pandeo."
       }
+     ],
+     "reemplaza": [
+      "0d6e74f3a0d73d23"
      ]
     }
    ]

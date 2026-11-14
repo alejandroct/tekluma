@@ -324,6 +324,9 @@
        "articulo": "19.4.10",
        "extracto": "…no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "edf5c0566a71864c"
      ]
     },
     {
@@ -381,6 +384,9 @@
        "articulo": "19.3.1",
        "extracto": "La resistencia en compresión especificada del concreto f’c a los 28 días no será menor que 21 MPa."
       }
+     ],
+     "reemplaza": [
+      "ade102dc70652914"
      ]
     },
     {
@@ -400,6 +406,9 @@
        "articulo": "19.4.10",
        "extracto": "El refuerzo de la cáscara en cualquier dirección no debe espaciarse a más de 450 mm, ni más de cinco veces el espesor de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "eb9cb3e66cd0c69a"
      ]
     },
     {
@@ -419,6 +428,9 @@
        "articulo": "19.4.12",
        "extracto": "…la longitud mínima de empalme por traslape de barras en tracción debe ser 1,2 veces el valor requerido en el Capítulo 12, pero no menor de 450 mm."
       }
+     ],
+     "reemplaza": [
+      "42143b4f18283574"
      ]
     },
     {
@@ -457,6 +469,9 @@
        "articulo": "19.1.6",
        "extracto": "Son las vigas de borde o nervios que sirven para rigidizar, hacer más resistente o servir de apoyo a la cáscara."
       }
+     ],
+     "reemplaza": [
+      "27ead6b980522542"
      ]
     },
     {
@@ -476,6 +491,9 @@
        "articulo": "19.2.1",
        "extracto": "El módulo de Poisson del concreto puede asumirse igual a cero."
       }
+     ],
+     "reemplaza": [
+      "30d327f0b41b3888"
      ]
     },
     {
@@ -514,6 +532,9 @@
        "articulo": "19.2.9",
        "extracto": "Se puede suponer que una porción de la cáscara igual al ancho del ala especificado en 8.10 actúa conjuntamente con el elemento auxiliar."
       }
+     ],
+     "reemplaza": [
+      "335edd0fc05b4dfc"
      ]
     },
     {
@@ -533,6 +554,9 @@
        "articulo": "19.3.2",
        "extracto": "El esfuerzo de fluencia especificado del acero fy no será mayor de 420 MPa."
       }
+     ],
+     "reemplaza": [
+      "a740501637cc600d"
      ]
     },
     {
@@ -552,6 +576,9 @@
        "articulo": "19.4.2",
        "extracto": "El coeficiente de fricción, μ, no debe exceder de 1,0 para concreto de peso normal"
       }
+     ],
+     "reemplaza": [
+      "ceaacb2f1669eae6"
      ]
     },
     {
@@ -571,6 +598,9 @@
        "articulo": "19.4.5",
        "extracto": "El área de refuerzo por tracción en la cáscara debe estar limitada de manera tal que el refuerzo fluya antes de que tenga lugar el aplastamiento del concreto en compresión o el pandeo de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "8ea0b727a1eef93f"
      ]
     },
     {
@@ -590,6 +620,9 @@
        "articulo": "19.4.8",
        "extracto": "la cuantía de refuerzo en todas las zonas de tracción de la cáscara no será menor de 0,0035, calculado sobre la base del espesor total de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "c13e5ceba2ad505e"
      ]
     },
     {
@@ -609,6 +642,9 @@
        "articulo": "19.4.9",
        "extracto": "se deben colocar cantidades iguales cerca de ambas superficies de la cáscara, aún cuando el análisis no indique reversión de los momentos de flexión en esa zona."
       }
+     ],
+     "reemplaza": [
+      "4877528de73970a4"
      ]
     },
     {
@@ -629,6 +665,9 @@
        "articulo": "19.4.10",
        "extracto": "el refuerzo no debe espaciarse a más de tres veces el espesor de la cáscara."
       }
+     ],
+     "reemplaza": [
+      "caee620a40d64929"
      ]
     },
     {
@@ -648,6 +687,9 @@
        "articulo": "19.4.11",
        "extracto": "pero no menor de 450 mm."
       }
+     ],
+     "reemplaza": [
+      "a5991356cf74a8ae"
      ]
     },
     {
@@ -667,6 +709,9 @@
        "articulo": "19.4.12",
        "extracto": "con no más de un tercio del refuerzo empalmado en cualquier sección."
       }
+     ],
+     "reemplaza": [
+      "54d4cb7d266290a8"
      ]
     },
     {
@@ -686,6 +731,9 @@
        "articulo": "19.5.1",
        "extracto": "se determinará a partir de ensayos de flexión en probetas de vigas curadas en condiciones de obra."
       }
+     ],
+     "reemplaza": [
+      "3dd1d0a5f95f4932"
      ]
     },
     {
@@ -705,6 +753,9 @@
        "articulo": "19.5.2",
        "extracto": "se debe hacer un análisis del efecto de las desviaciones y se deben tomar las medidas correctivas necesarias para garantizar un comportamiento seguro."
       }
+     ],
+     "reemplaza": [
+      "ee89cc3caff8ce4d"
      ]
     }
    ]

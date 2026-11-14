@@ -999,6 +999,9 @@
        "articulo": "11.1.3.2",
        "extracto": "Para elementos de concreto preesforzado, se permite diseñar las secciones localizadas a una distancia menor que h/2… para la fuerza cortante Vu calculada a la distancia h/2 de la cara del apoyo."
       }
+     ],
+     "reemplaza": [
+      "22e827934b512ab6"
      ]
     },
     {
@@ -1066,6 +1069,9 @@
        "articulo": "11.3.1.1",
        "extracto": "Vc = 0,17 √f’c bw d (11-3)"
       }
+     ],
+     "reemplaza": [
+      "eb3e12da6fca7f2e"
      ]
     },
     {
@@ -1101,6 +1107,9 @@
        "articulo": "11.3.1.2",
        "extracto": "Para elementos sometidos a compresión axial Nu: Vc = 0,17 (1 + Nu / 14 Ag) √f'c bw d (11-4) La cantidad Nu/Ag debe expresarse en MPa."
       }
+     ],
+     "reemplaza": [
+      "c97187e57e2c4342"
      ]
     },
     {
@@ -1120,6 +1129,9 @@
        "articulo": "11.3.1.3",
        "extracto": "Para elementos sometidos a tracción axial significativa, Vc debe tomarse como cero a menos que se haga un análisis más detallado usando 11.3.2.3."
       }
+     ],
+     "reemplaza": [
+      "81f6f421a1806a3f"
      ]
     },
     {
@@ -1228,6 +1240,9 @@
        "articulo": "11.5.5.3",
        "extracto": "Donde Vs sobrepase 0,33 √f’c bw d, las separaciones máximas dadas en 11.5.5.1 y 11.5.5.2 se deben reducir a la mitad."
       }
+     ],
+     "reemplaza": [
+      "a835e682e1d1560a"
      ]
     },
     {
@@ -1256,6 +1271,9 @@
        "articulo": "11.5.5.1",
        "extracto": "…no debe exceder de d/2 en elementos de concreto no preesforzado… ni de 600 mm en ambos casos."
       }
+     ],
+     "reemplaza": [
+      "544866d619abe1db"
      ]
     },
     {
@@ -1318,6 +1336,9 @@
        "articulo": "11.5.6.2",
        "extracto": "Av min = 0,062 √f’c bw s / fyt (11-13) Pero no debe ser menor que 0,35 bw s / fyt."
       }
+     ],
+     "reemplaza": [
+      "5b2df48fcd7f41c3"
      ]
     },
     {
@@ -1374,6 +1395,9 @@
        "articulo": "11.5.7.2",
        "extracto": "Vs = Av fyt d / s (11-15)"
       }
+     ],
+     "reemplaza": [
+      "d1268a60c7452106"
      ]
     },
     {
@@ -1428,6 +1452,9 @@
        "articulo": "11.5.7.9",
        "extracto": "En ningún caso se debe considerar Vs mayor que 0,66 √f’c bw d."
       }
+     ],
+     "reemplaza": [
+      "d0d9de11226f5d70"
      ]
     },
     {
@@ -1498,6 +1525,9 @@
        "articulo": "11.5.8.2",
        "extracto": "φ Ah fy ≥ Vu hs / hp … y φ = 0,85."
       }
+     ],
+     "reemplaza": [
+      "fba01f0231fa1534"
      ]
     },
     {
@@ -1553,6 +1583,9 @@
        "articulo": "11.6.1",
        "extracto": "(a) en elementos no preesforzados: φ 0,083 √f’c (Acp² / Pcp)"
       }
+     ],
+     "reemplaza": [
+      "29bac56590c78de0"
      ]
     },
     {
@@ -1614,6 +1647,9 @@
        "articulo": "11.6.2.2",
        "extracto": "(a) En elementos no preesforzados, en las secciones descritas en 11.6.2.4: φ 0,33 √f’c (Acp² / Pcp)"
       }
+     ],
+     "reemplaza": [
+      "543d10b6fae9f862"
      ]
     },
     {
@@ -1689,6 +1725,9 @@
        "articulo": "11.6.3.6",
        "extracto": "Tn = (2 Ao At fyt / s) cot θ (11-21) Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh."
       }
+     ],
+     "reemplaza": [
+      "a169e5ba3f322fb5"
      ]
     },
     {
@@ -1762,6 +1801,9 @@
        "articulo": "11.6.6.1",
        "extracto": "…no debe exceder el menor valor entre Ph/8 y 300 mm."
       }
+     ],
+     "reemplaza": [
+      "ee2708f9bf215023"
      ]
     },
     {
@@ -1840,6 +1882,9 @@
        "articulo": "11.7.4.1",
        "extracto": "Vn = Avf fy μ (11-25)"
       }
+     ],
+     "reemplaza": [
+      "e6fccef776b44b56"
      ]
     },
     {
@@ -1884,6 +1929,9 @@
        "articulo": "11.8.3",
        "extracto": "La resistencia al corte Vn para elementos de gran peralte a flexión no será mayor que: Vn ≤ 0,83 √f’c bw d (11-27)"
       }
+     ],
+     "reemplaza": [
+      "78231ea017765f85"
      ]
     },
     {
@@ -1931,6 +1979,9 @@
        "articulo": "11.8.8",
        "extracto": "…Av, no debe ser menor de 0,0025 bw s…"
       }
+     ],
+     "reemplaza": [
+      "a632c2e84ac37785"
      ]
     },
     {
@@ -2012,6 +2063,9 @@
        "articulo": "11.10.5",
        "extracto": "Vc = Acw (αc √f'c) (11-30) donde el coeficiente αc es 0,25 para hm/ℓm ≤ 1,5"
       }
+     ],
+     "reemplaza": [
+      "7e0d96747c6e55bb"
      ]
     },
     {
@@ -2088,6 +2142,9 @@
        "articulo": "11.10.10.2",
        "extracto": "La cuantía de refuerzo horizontal para cortante no debe ser menor que 0,0025…"
       }
+     ],
+     "reemplaza": [
+      "7011e0446461b314"
      ]
     },
     {
@@ -2221,6 +2278,9 @@
        "articulo": "11.12.2.1",
        "extracto": "(c) Vc = 0,33 √f’c bo d (11-35)"
       }
+     ],
+     "reemplaza": [
+      "4795055ad833a7fe"
      ]
     },
     {
@@ -2253,6 +2313,9 @@
        "articulo": "9.3.2.3",
        "extracto": "Cortante y torsión … 0,85"
       }
+     ],
+     "reemplaza": [
+      "eb3d98fcfb3f1a35"
      ]
     },
     {
@@ -2272,6 +2335,9 @@
        "articulo": "11.3.1.1",
        "extracto": "Para elementos sometidos únicamente a cortante y flexión: Vc = 0,17 √f’c bw d (11-3)"
       }
+     ],
+     "reemplaza": [
+      "b15d572fdc362c76"
      ]
     },
     {
@@ -2292,6 +2358,9 @@
        "articulo": "11.1.3.1",
        "extracto": "Para elementos no preesforzados, se permite diseñar las secciones localizadas a una distancia menor a d, medida desde la cara del apoyo, para la fuerza cortante Vu calculada a la distancia d de la cara del apoyo (figuras 11.1.3.1 a y b)."
       }
+     ],
+     "reemplaza": [
+      "9f9a7a06dca37330"
      ]
     },
     {
@@ -2312,6 +2381,9 @@
        "articulo": "11.1.3",
        "extracto": "Se permiten diseñar las secciones ubicadas entre la cara del apoyo y la sección crítica… cuando se cumplan las tres condiciones siguientes…"
       }
+     ],
+     "reemplaza": [
+      "d9fa87e819166f3f"
      ]
     },
     {
@@ -2331,6 +2403,9 @@
        "articulo": "11.5.5.1",
        "extracto": "El espaciamiento del refuerzo de cortante colocado perpendicularmente al eje del elemento no debe exceder de d/2 en elementos de concreto no preesforzado, de 0,75h en elementos preesforzados, ni de 600 mm en ambos casos."
       }
+     ],
+     "reemplaza": [
+      "020a921e365f06e3"
      ]
     },
     {
@@ -2350,6 +2425,9 @@
        "articulo": "11.5.6.1",
        "extracto": "Debe colocarse un área mínima de refuerzo para cortante, Av min… donde Vu exceda de 0,5 φVc, excepto en: (a) Losas y zapatas. (b) Losas nervadas y aligerados… (c) Vigas con un peralte h menor o igual que el mayor de los siguientes valores: 250 mm, 2,5 veces el espesor del ala y 0,5 veces el ancho del alma."
       }
+     ],
+     "reemplaza": [
+      "1f2e80c0067c5faf"
      ]
     },
     {
@@ -2369,6 +2447,9 @@
        "articulo": "11.5.7.9",
        "extracto": "En ningún caso se debe considerar Vs mayor que 0,66 √f’c bw d."
       }
+     ],
+     "reemplaza": [
+      "8e68936ce7cb4bf0"
      ]
     },
     {
@@ -2388,6 +2469,9 @@
        "articulo": "11.5.2",
        "extracto": "Los valores de fy y fyt usados en el diseño del refuerzo de cortante no deben exceder 420 MPa."
       }
+     ],
+     "reemplaza": [
+      "3b26ea78c45e83c6"
      ]
     },
     {
@@ -2407,6 +2491,9 @@
        "articulo": "11.6.4.2",
        "extracto": "El refuerzo transversal para torsión debe estar anclado mediante ganchos estándar de 135°."
       }
+     ],
+     "reemplaza": [
+      "fffd96e1f43c1461"
      ]
     },
     {
@@ -2426,6 +2513,9 @@
        "articulo": "11.6.6.1",
        "extracto": "El espaciamiento del refuerzo transversal para torsión no debe exceder el menor valor entre Ph/8 y 300 mm."
       }
+     ],
+     "reemplaza": [
+      "1f29a60daecc79bf"
      ]
     },
     {
@@ -2446,6 +2536,9 @@
        "articulo": "11.6.3.6",
        "extracto": "Tn = (2 Ao At fyt / s) cot θ (11-21) Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh."
       }
+     ],
+     "reemplaza": [
+      "76f7a145b14eaaa0"
      ]
     },
     {
@@ -2466,6 +2559,9 @@
        "articulo": "11.6.2.1",
        "extracto": "Si el momento torsor amplificado Tu (figura 11.6.2.1) en un elemento es indispensable para mantener el equilibrio del sistema (torsión de equilibrio)… el elemento debe ser diseñado para soportar el íntegro de Tu…"
       }
+     ],
+     "reemplaza": [
+      "82f2fe5b299317c7"
      ]
     },
     {
@@ -2485,6 +2581,9 @@
        "articulo": "11.7.4.3",
        "extracto": "Para concreto colocado monolíticamente … 1,4λ … Concreto colocado contra concreto endurecido con la superficie de contacto intencionalmente rugosa… 1,0λ … no intencionalmente rugosa … 0,6λ"
       }
+     ],
+     "reemplaza": [
+      "cb9bf26a458f0c35"
      ]
     },
     {
@@ -2505,6 +2604,9 @@
        "articulo": "11.7.4.2",
        "extracto": "Vn = Avf fy (μ sen α + cos α) (11-26)"
       }
+     ],
+     "reemplaza": [
+      "34a6b0cf24627241"
      ]
     },
     {
@@ -2524,6 +2626,9 @@
        "articulo": "11.10.5",
        "extracto": "Vc = Acw (αc √f'c) (11-30) donde el coeficiente αc es 0,25 para hm/ℓm ≤ 1,5; 0,17 para hm/ℓm ≥ 2,0 y varía linealmente entre 0,25 y 0,17 para hm/ℓm entre 1,5 y 2,0."
       }
+     ],
+     "reemplaza": [
+      "89bbd46c34f64f64"
      ]
     },
     {
@@ -2543,6 +2648,9 @@
        "articulo": "11.10.10.2",
        "extracto": "La cuantía de refuerzo horizontal para cortante no debe ser menor que 0,0025 y su espaciamiento no debe exceder tres veces el espesor del muro ni de 400 mm."
       }
+     ],
+     "reemplaza": [
+      "e8ceb6fbd1f6f035"
      ]
     },
     {
@@ -2562,6 +2670,9 @@
        "articulo": "11.10.10.5",
        "extracto": "Cuando el espesor del muro sea mayor que 200 mm deberá distribuirse el refuerzo horizontal y vertical por cortante en las dos caras del muro."
       }
+     ],
+     "reemplaza": [
+      "56927c82205060a1"
      ]
     },
     {
@@ -2582,6 +2693,9 @@
        "articulo": "11.12.1.2",
        "extracto": "…pero no necesita estar más cerca de d/2 desde: (a) los bordes o las esquinas de las columnas, cargas concentradas, o áreas de reacción…"
       }
+     ],
+     "reemplaza": [
+      "82bd729e8cb1d46d"
      ]
     },
     {
@@ -2602,6 +2716,9 @@
        "articulo": "11.12.2.1",
        "extracto": "Vc debe ser el menor entre (a), (b) y (c): (a) Vc = 0,17 (1 + 2/β) √f’c bo d (11-33)… Vc = 0,083 (αs d / bo + 2) √f’c bo d (11-34)… Vc = 0,33 √f’c bo d (11-35)"
       }
+     ],
+     "reemplaza": [
+      "8f85ab08cb759164"
      ]
     },
     {
@@ -2621,6 +2738,9 @@
        "articulo": "11.12.2.1",
        "extracto": "donde αs es 40 para columnas interiores, 30 para columnas de borde, y 20 para columnas en esquina."
       }
+     ],
+     "reemplaza": [
+      "ac0c7bbe77268c78"
      ]
     },
     {
@@ -2640,6 +2760,9 @@
        "articulo": "11.12.3",
        "extracto": "Se permite emplear refuerzo de cortante… en losas y zapatas con un peralte efectivo, d, mayor o igual a 150 mm, pero no menor de 16 veces el diámetro de la barra de refuerzo por cortante."
       }
+     ],
+     "reemplaza": [
+      "53f82a90ef466d50"
      ]
     },
     {
@@ -2660,6 +2783,9 @@
        "articulo": "11.5.8.2",
        "extracto": "El refuerzo de suspensión estará constituido por estribos cerrados de altura total y deberán proveer una resistencia en tracción en la cara de apoyo de acuerdo con: φ Ah fy ≥ Vu hs / hp"
       }
+     ],
+     "reemplaza": [
+      "8799acdff5c7940b"
      ]
     },
     {
@@ -2679,6 +2805,9 @@
        "articulo": "11.2.1.2",
        "extracto": "Cuando el valor fct no esté especificado, todos los valores de √f'c deben multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85 para concreto liviano con arena de peso normal."
       }
+     ],
+     "reemplaza": [
+      "0621dfb0a631554e"
      ]
     },
     {
@@ -2699,6 +2828,9 @@
        "articulo": "11.3.3",
        "extracto": "Se permite asumir que el peralte efectivo de la sección de concreto equivale a 0,80 veces el diámetro de la sección de concreto."
       }
+     ],
+     "reemplaza": [
+      "829b723b2c8d44d7"
      ]
     },
     {
@@ -2718,6 +2850,9 @@
        "articulo": "11.3.2.3",
        "extracto": "pero no menor que cero, donde Nu es la fuerza de tracción y Nu/Ag debe expresarse en MPa."
       }
+     ],
+     "reemplaza": [
+      "e3c294d8e7afcc80"
      ]
     },
     {
@@ -2737,6 +2872,9 @@
        "articulo": "11.4.2",
        "extracto": "pero no es necesario considerar Vc menor que 0,17 √f'c bw d. Sin embargo, Vc no debe tomarse mayor que 0,42 √f'c bw d"
       }
+     ],
+     "reemplaza": [
+      "41870c0eb66511c0"
      ]
     },
     {
@@ -2756,6 +2894,9 @@
        "articulo": "11.4.4",
        "extracto": "que se supone de 50 veces el diámetro en torones (strand) y de 100 veces el diámetro en alambres individuales."
       }
+     ],
+     "reemplaza": [
+      "94e20c1b86b2e325"
      ]
     },
     {
@@ -2775,6 +2916,9 @@
        "articulo": "11.5.1.2",
        "extracto": "(b) Barras dobladas, consistentes en refuerzo longitudinal con una parte doblada que forme un ángulo de 30º o más con el refuerzo longitudinal de tracción."
       }
+     ],
+     "reemplaza": [
+      "03dce8a266dc3f03"
      ]
     },
     {
@@ -2794,6 +2938,9 @@
        "articulo": "11.5.4",
        "extracto": "deben extenderse hasta una distancia d medida desde la fibra extrema en compresión"
       }
+     ],
+     "reemplaza": [
+      "ff061f3c2113b425"
      ]
     },
     {
@@ -2813,6 +2960,9 @@
        "articulo": "11.5.5.1",
        "extracto": "de 0,75h en elementos preesforzados, ni de 600 mm en ambos casos."
       }
+     ],
+     "reemplaza": [
+      "f7285c99294fb3ec"
      ]
     },
     {
@@ -2832,6 +2982,9 @@
        "articulo": "11.5.7.3",
        "extracto": "Av debe tomarse como dos veces el área de la barra en un estribo circular o espiral con un espaciamiento s"
       }
+     ],
+     "reemplaza": [
+      "28c420632eadc9fd"
      ]
     },
     {
@@ -2851,6 +3004,9 @@
        "articulo": "11.5.7.5",
        "extracto": "Vs = Av fyt sen α (11-17) pero no mayor que 0,25 √f'c bw d"
       }
+     ],
+     "reemplaza": [
+      "617167facbf492ec"
      ]
     },
     {
@@ -2870,6 +3026,9 @@
        "articulo": "11.5.8.4",
        "extracto": "el área del refuerzo de suspensión, Ah, se calculará independientemente para cada cara de la viga principal, y se deberá disponer la mayor de las áreas requeridas para cada cara."
       }
+     ],
+     "reemplaza": [
+      "5b4018d9c6c57494"
      ]
     },
     {
@@ -2890,6 +3049,9 @@
        "articulo": "11.5.8.5",
        "extracto": "El refuerzo longitudinal inferior de la viga secundaria deberá colocarse por encima del refuerzo longitudinal inferior de la viga principal"
       }
+     ],
+     "reemplaza": [
+      "a451bb9f26441451"
      ]
     },
     {
@@ -2909,6 +3071,9 @@
        "articulo": "11.5.9",
        "extracto": "se suministrarán estribos adicionales en la viga, calculados para que transmitan por tracción la carga a la viga."
       }
+     ],
+     "reemplaza": [
+      "123b208c29851eef"
      ]
     },
     {
@@ -2929,6 +3094,9 @@
        "articulo": "11.6.1.1",
        "extracto": "el ancho sobresaliente del ala utilizado para calcular Acp y Pcp debe cumplir con 13.2.5 (ver figura 11.6.1)"
       }
+     ],
+     "reemplaza": [
+      "d3efe066d8f05ba0"
      ]
     },
     {
@@ -2948,6 +3116,9 @@
        "articulo": "11.6.2.4",
        "extracto": "deben ser diseñadas por lo menos para el valor de Tu calculado a una distancia d."
       }
+     ],
+     "reemplaza": [
+      "84470dc6f8b0191d"
      ]
     },
     {
@@ -2967,6 +3138,9 @@
        "articulo": "11.6.3.6",
        "extracto": "θ no debe tomarse menor a 30° ni mayor que 60°."
       }
+     ],
+     "reemplaza": [
+      "8f829e5b71a00945"
      ]
     },
     {
@@ -2986,6 +3160,9 @@
        "articulo": "11.6.3.6",
        "extracto": "(b) 37.5° para elementos preesforzados con una fuerza efectiva de preesforzado no menor a un 40% de la resistencia a tracción del refuerzo longitudinal (Aps fpu)."
       }
+     ],
+     "reemplaza": [
+      "933f85bff78cb918"
      ]
     },
     {
@@ -3005,6 +3182,9 @@
        "articulo": "11.6.3.8",
        "extracto": "dado que las ramas interiores no son efectivas para torsión."
       }
+     ],
+     "reemplaza": [
+      "694f9a0708260c74"
      ]
     },
     {
@@ -3025,6 +3205,9 @@
        "articulo": "11.6.6.2",
        "extracto": "Las barras longitudinales deben tener un diámetro de al menos 0,042 veces el espaciamiento entre estribos, pero no menos de 3/8”."
       }
+     ],
+     "reemplaza": [
+      "33fdc61e64b08e3c"
      ]
     },
     {
@@ -3044,6 +3227,9 @@
        "articulo": "11.6.6.2",
        "extracto": "El refuerzo longitudinal requerido para torsión debe estar distribuido a lo largo del perímetro del estribo cerrado con un espaciamiento máximo de 300 mm."
       }
+     ],
+     "reemplaza": [
+      "ea4450800e6edf85"
      ]
     },
     {
@@ -3063,6 +3249,9 @@
        "articulo": "11.7.4.3",
        "extracto": "Concreto colocado contra concreto endurecido con la superficie de contacto no intencionalmente rugosa … 0,6λ"
       }
+     ],
+     "reemplaza": [
+      "1971775494afd209"
      ]
     },
     {
@@ -3082,6 +3271,9 @@
        "articulo": "11.7.10",
        "extracto": "el acero debe estar limpio y sin pintura."
       }
+     ],
+     "reemplaza": [
+      "5416efc287a19808"
      ]
     },
     {
@@ -3101,6 +3293,9 @@
        "articulo": "11.8.4",
        "extracto": "La sección crítica para fuerza cortante se considerará situada a una distancia del paño del apoyo igual a 0,15"
       }
+     ],
+     "reemplaza": [
+      "e72edf761cdaa049"
      ]
     },
     {
@@ -3120,6 +3315,9 @@
        "articulo": "11.8.9",
        "extracto": "y su espaciamiento, s2, no debe exceder el menor de d/5 ó 300 mm."
       }
+     ],
+     "reemplaza": [
+      "d2da5ffc624a5c89"
      ]
     },
     {
@@ -3140,6 +3338,9 @@
        "articulo": "11.9.1",
        "extracto": "(a) av / d, no es mayor que 1, y (b) La fuerza amplificada horizontal de tracción, Nuc, no es mayor que Vu."
       }
+     ],
+     "reemplaza": [
+      "bfb67651d5ae8393"
      ]
     },
     {
@@ -3160,6 +3361,9 @@
        "articulo": "11.9.4",
        "extracto": "El área Ah debe distribuirse uniformemente dentro de los (2/3) d adyacentes al refuerzo principal de tracción."
       }
+     ],
+     "reemplaza": [
+      "d2e60a7135ee9504"
      ]
     },
     {
@@ -3179,6 +3383,9 @@
        "articulo": "11.9.5",
        "extracto": "La cuantía Asc / bd no debe ser menor que 0,04 (f’c / fy)."
       }
+     ],
+     "reemplaza": [
+      "f8f14e2c0ea7cb7e"
      ]
     },
     {
@@ -3198,6 +3405,9 @@
        "articulo": "11.10.6",
        "extracto": "se multiplicará por el factor (1– 0,29 Nu/Ag) ≥ 0"
       }
+     ],
+     "reemplaza": [
+      "3e052e1f89ea7606"
      ]
     },
     {
@@ -3217,6 +3427,9 @@
        "articulo": "11.10.9",
        "extracto": "a menos que su cuantía referida al área total de concreto exceda de 0,01."
       }
+     ],
+     "reemplaza": [
+      "72d9ee3c47c8679a"
      ]
     },
     {
@@ -3236,6 +3449,9 @@
        "articulo": "11.10.10.6",
        "extracto": "φ Vn = φ μ (Nu + Av fy) con φ = 0.85"
       }
+     ],
+     "reemplaza": [
+      "e2a58ae6a7172343"
      ]
     },
     {
@@ -3255,6 +3471,9 @@
        "articulo": "11.11.2",
        "extracto": "Este requisito podrá obviarse cuando el nudo esté confinado en sus lados por vigas o losas de aproximadamente igual peralte."
       }
+     ],
+     "reemplaza": [
+      "44eee511fd2f5931"
      ]
     },
     {
@@ -3275,6 +3494,9 @@
        "articulo": "11.12.3.3",
        "extracto": "La distancia entre la cara de la columna y la primera línea de las ramas de los estribos que rodean la columna no debe exceder a 0,5d."
       }
+     ],
+     "reemplaza": [
+      "eb021670325427f4"
      ]
     },
     {
@@ -3294,6 +3516,9 @@
        "articulo": "11.12.3.3",
        "extracto": "El espaciamiento entre las ramas adyacentes de los estribos en la primera línea de refuerzo para cortante no debe exceder los 2d medidos en una dirección paralela a la cara de la columna."
       }
+     ],
+     "reemplaza": [
+      "8c08d08587896e2e"
      ]
     },
     {
@@ -3313,6 +3538,9 @@
        "articulo": "11.12.5",
        "extracto": "Cuando las aberturas de las losas están situadas a una distancia de la zona de carga concentrada o de reacción menor a diez veces el peralte de la losa"
       }
+     ],
+     "reemplaza": [
+      "c103455adfbc8a8c"
      ]
     },
     {
@@ -3333,6 +3561,9 @@
        "articulo": "11.12.5.1",
        "extracto": "no debe considerarse efectiva aquella parte del perímetro de la sección crítica que esté circunscrita por líneas rectas que se proyectan desde el centroide de la columna"
       }
+     ],
+     "reemplaza": [
+      "c29f5ca5a191728f"
      ]
     },
     {
@@ -3352,6 +3583,9 @@
        "articulo": "11.12.2.2",
        "extracto": "En cada dirección fpc no debe ser menor que 0,9 MPa, ni tomarse mayor que 3,5 MPa."
       }
+     ],
+     "reemplaza": [
+      "c9cdab3f810a5107"
      ]
     },
     {
@@ -3372,6 +3606,9 @@
        "articulo": "11.12.6.2",
        "extracto": "El esfuerzo cortante que resulta de la transferencia de momento por excentricidad del cortante debe suponerse que varía linealmente alrededor del centroide de las secciones críticas definidas en 11.12.1.2."
       }
+     ],
+     "reemplaza": [
+      "86c0f11eae41f3fd"
      ]
     }
    ]

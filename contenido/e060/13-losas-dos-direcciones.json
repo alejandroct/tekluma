@@ -626,6 +626,9 @@
        "articulo": "13.2.2",
        "extracto": "…un ancho a cada lado del eje de la columna igual a 0,25 ℓ2 ó 0,25 ℓ1, el que sea menor."
       }
+     ],
+     "reemplaza": [
+      "9520eceb29fb03fc"
      ]
     },
     {
@@ -794,6 +797,9 @@
        "articulo": "13.5.3.1",
        "extracto": "γf = 1 / (1 + (2/3) √(b1/b2)) (13-1)"
       }
+     ],
+     "reemplaza": [
+      "5243b2939f4b14d8"
      ]
     },
     {
@@ -913,6 +919,9 @@
        "articulo": "13.6.2.2",
        "extracto": "Mo = qu ℓ2 ℓn² / 8 (13-4)"
       }
+     ],
+     "reemplaza": [
+      "50b808723fb0e178"
      ]
     },
     {
@@ -985,6 +994,9 @@
        "articulo": "13.6.3.2",
        "extracto": "Momento negativo amplificado … 0,65 Mo"
       }
+     ],
+     "reemplaza": [
+      "d316fb838da36363"
      ]
     },
     {
@@ -1308,6 +1320,9 @@
        "articulo": "13.7.3.2",
        "extracto": "Ma = Ca wu A² (13-8)"
       }
+     ],
+     "reemplaza": [
+      "3db3d146e2ffd553"
      ]
     },
     {
@@ -1368,6 +1383,9 @@
        "articulo": "13.7.4",
        "extracto": "V = w (A/2 − d) (1,0 − 0,5 A/B) (13-10)"
       }
+     ],
+     "reemplaza": [
+      "43d8da2aaca9fc48"
      ]
     },
     {
@@ -1400,6 +1418,9 @@
        "articulo": "13.2.2",
        "extracto": "Una franja de columna es una franja de diseño con un ancho a cada lado del eje de la columna igual a 0,25 ℓ2 ó 0,25 ℓ1, el que sea menor. Las franjas de columna incluyen las vigas, si las hubiera."
       }
+     ],
+     "reemplaza": [
+      "1760c9ad0c57b7ab"
      ]
     },
     {
@@ -1419,6 +1440,9 @@
        "articulo": "13.3.2",
        "extracto": "El espaciamiento del refuerzo en las secciones críticas no deberá exceder de dos veces el espesor de la losa."
       }
+     ],
+     "reemplaza": [
+      "247b4e34867768fc"
      ]
     },
     {
@@ -1438,6 +1462,9 @@
        "articulo": "13.6.1.1",
        "extracto": "Deben existir un mínimo de tres paños continuos en cada dirección."
       }
+     ],
+     "reemplaza": [
+      "42aba8534045c586"
      ]
     },
     {
@@ -1457,6 +1484,9 @@
        "articulo": "13.6.3.2",
        "extracto": "En cada paño interior, el momento estático total, Mo, debe distribuirse como se indica a continuación: Momento negativo amplificado … 0,65 Mo Momento positivo amplificado … 0,35 Mo"
       }
+     ],
+     "reemplaza": [
+      "ca13dc8da8538b56"
      ]
     },
     {
@@ -1476,6 +1506,9 @@
        "articulo": "13.6.3.3",
        "extracto": "En cada paño extremo, el momento estático amplificado total, Mo, debe distribuirse como se indica en la tabla a continuación"
       }
+     ],
+     "reemplaza": [
+      "bd04fd5f6f31dec7"
      ]
     },
     {
@@ -1495,6 +1528,9 @@
        "articulo": "13.6.3.6",
        "extracto": "El momento a ser transmitido entre la losa y una columna de borde de acuerdo con 13.5.3 debe ser 0,3 Mo."
       }
+     ],
+     "reemplaza": [
+      "7bc186fe65ba5621"
      ]
     },
     {
@@ -1515,6 +1551,9 @@
        "articulo": "13.5.3.1",
        "extracto": "Una fracción del momento no balanceado, dada por γf Mu, deberá considerarse transmitida por flexión sobre una franja de losa cuyo ancho efectivo esté comprendido entre ejes localizados a una y media veces el espesor de la losa o del ábaco (1,5 h) fuera de las caras opuestas de la columna… γf = 1 / (1 + (2/3) √(b1/b2)) (13-1)"
       }
+     ],
+     "reemplaza": [
+      "e9437fc891dc461b"
      ]
     },
     {
@@ -1534,6 +1573,9 @@
        "articulo": "13.6.5.1",
        "extracto": "Las vigas entre los apoyos deben ser diseñadas para resistir el 85% de los momentos de la franja de columna si (αf1 ℓ2/ℓ1) es igual o mayor que uno."
       }
+     ],
+     "reemplaza": [
+      "530b6b7bc82ddbd1"
      ]
     },
     {
@@ -1553,6 +1595,9 @@
        "articulo": "13.7.1.1",
        "extracto": "Cada paño de losa debe estar apoyado en todo su perímetro sobre vigas peraltadas o sobre muros. El peralte de las vigas será como mínimo 1/15 de la luz libre o 1,5 veces el espesor de la losa, el que sea mayor."
       }
+     ],
+     "reemplaza": [
+      "db96276f00b2586a"
      ]
     },
     {
@@ -1573,6 +1618,9 @@
        "articulo": "13.7.3.2",
        "extracto": "Ma = Ca wu A² (13-8) Mb = Cb wu B² (13-9) Donde: A: Luz libre del tramo en la dirección corta. B: Luz libre del tramo en la dirección larga."
       }
+     ],
+     "reemplaza": [
+      "6e593c9f8135bbd9"
      ]
     },
     {
@@ -1592,6 +1640,9 @@
        "articulo": "13.7.3.5",
        "extracto": "En los bordes discontinuos se considerará un momento negativo igual a un tercio del momento positivo."
       }
+     ],
+     "reemplaza": [
+      "51dfd8cccddec61f"
      ]
     },
     {
@@ -1611,6 +1662,9 @@
        "articulo": "13.2.6",
        "extracto": "…el ábaco debe proyectarse bajo la losa al menos un cuarto del espesor de la losa fuera del ábaco y debe extenderse en cada dirección desde la línea central de apoyo una distancia no menor a un sexto de la longitud del vano…"
       }
+     ],
+     "reemplaza": [
+      "36987e695aa57a65"
      ]
     },
     {
@@ -1630,6 +1684,9 @@
        "articulo": "13.2.1",
        "extracto": "con el mayor cono circular recto, pirámide recta o cuña, cuyas superficies estén localizadas dentro de la columna y el capitel o ménsula, y que estén orientadas a un ángulo no mayor de 45° con respecto al eje de la columna."
       }
+     ],
+     "reemplaza": [
+      "ff689cd80d3a83b4"
      ]
     },
     {
@@ -1649,6 +1706,9 @@
        "articulo": "13.3.3",
        "extracto": "de por lo menos 150 mm en las vigas, muros o columnas perimetrales."
       }
+     ],
+     "reemplaza": [
+      "5591658e89514dec"
      ]
     },
     {
@@ -1668,6 +1728,9 @@
        "articulo": "13.3.5",
        "extracto": "se hará el anclaje del refuerzo dentro de la propia losa."
       }
+     ],
+     "reemplaza": [
+      "6a6cf3a0d98e85be"
      ]
     },
     {
@@ -1687,6 +1750,9 @@
        "articulo": "13.3.6.3",
        "extracto": "El refuerzo especial deberá colocarse a partir de la esquina hasta una distancia en cada dirección igual a 1/5 de la longitud de la luz mayor del paño."
       }
+     ],
+     "reemplaza": [
+      "1560142bda5ab828"
      ]
     },
     {
@@ -1706,6 +1772,9 @@
        "articulo": "13.3.7",
        "extracto": "el espesor del ábaco bajo la losa no deberá considerarse mayor a un cuarto de la distancia desde el extremo del ábaco a la cara de la columna o de su capitel."
       }
+     ],
+     "reemplaza": [
+      "5b8efd089167c9ec"
      ]
     },
     {
@@ -1726,6 +1795,9 @@
        "articulo": "13.3.8.1",
        "extracto": "Además de los otros requisitos de 13.3, el refuerzo en las losas sin vigas debe tener como mínimo las longitudes indicadas en la Fig. 13.3.8."
       }
+     ],
+     "reemplaza": [
+      "68b0d42e5732d2b8"
      ]
     },
     {
@@ -1746,6 +1818,9 @@
        "articulo": "13.3.8.1",
        "extracto": "Además de los otros requisitos de 13.3, el refuerzo en las losas sin vigas debe tener como mínimo las longitudes indicadas en la Fig. 13.3.8."
       }
+     ],
+     "reemplaza": [
+      "8f3130d4f9834d20"
      ]
     },
     {
@@ -1765,6 +1840,9 @@
        "articulo": "13.3.8.2",
        "extracto": "debe basarse en los requisitos de la luz mayor."
       }
+     ],
+     "reemplaza": [
+      "27d0990f08d5f910"
      ]
     },
     {
@@ -1777,13 +1855,16 @@
        "Al menos cuatro en cada dirección",
        "Todas las de la franja de columna"
       ],
-      "correcta": 2
+      "correcta": 1
      },
      "citas": [
       {
        "articulo": "13.3.8.4",
        "extracto": "Al menos dos barras o alambres inferiores de la franja de columna, en cada dirección, deben pasar a través del núcleo de la columna y deben anclarse en los apoyos exteriores."
       }
+     ],
+     "reemplaza": [
+      "e98f694836d8068b"
      ]
     },
     {
@@ -1803,6 +1884,9 @@
        "articulo": "13.4.2.3",
        "extracto": "las aberturas no deben interrumpir más de la cuarta parten del refuerzo en cada franja."
       }
+     ],
+     "reemplaza": [
+      "3622383af148d218"
      ]
     },
     {
@@ -1822,6 +1906,9 @@
        "articulo": "13.5.3.1",
        "extracto": "comprendido entre ejes localizados a una y media veces el espesor de la losa o del ábaco (1,5 h) fuera de las caras opuestas de la columna o el capitel"
       }
+     ],
+     "reemplaza": [
+      "3195694cfbf9f931"
      ]
     },
     {
@@ -1841,6 +1928,9 @@
        "articulo": "13.5.3.2",
        "extracto": "se permite que el valor de γf dado en la ecuación (13-1) sea incrementado hasta 1,0 siempre que Vu en apoyos de borde no exceda 0,75 φVc"
       }
+     ],
+     "reemplaza": [
+      "6dd2a27c11e0829a"
      ]
     },
     {
@@ -1860,6 +1950,9 @@
        "articulo": "13.5.3.2",
        "extracto": "No se permiten ajustes a γf en sistemas de losas preesforzadas."
       }
+     ],
+     "reemplaza": [
+      "2f45decc07d44643"
      ]
     },
     {
@@ -1879,6 +1972,9 @@
        "articulo": "13.6.1.4",
        "extracto": "Las columnas pueden estar desalineadas hasta 10% de la luz"
       }
+     ],
+     "reemplaza": [
+      "d3105a61651538bc"
      ]
     },
     {
@@ -1898,6 +1994,9 @@
        "articulo": "13.6.1.6",
        "extracto": "0,2 ≤ (αf1 ℓ2²) / (αf2 ℓ1²) ≤ 5,0 (13-2)"
       }
+     ],
+     "reemplaza": [
+      "6e4b6932ee8b6e33"
      ]
     },
     {
@@ -1917,6 +2016,9 @@
        "articulo": "13.6.2.3",
        "extracto": "se debe tomar como el promedio de las luces transversales adyacentes."
       }
+     ],
+     "reemplaza": [
+      "c530285028a2fbdd"
      ]
     },
     {
@@ -1936,6 +2038,9 @@
        "articulo": "13.6.2.5",
        "extracto": "Los apoyos circulares o en forma de polígono regular deben tratarse como apoyos cuadrados que tengan la misma área."
       }
+     ],
+     "reemplaza": [
+      "bb247c8087555591"
      ]
     },
     {
@@ -1956,6 +2061,9 @@
        "articulo": "13.6.3.3",
        "extracto": "En cada paño extremo, el momento estático amplificado total, Mo, debe distribuirse como se indica en la tabla a continuación:"
       }
+     ],
+     "reemplaza": [
+      "de615f68dad47046"
      ]
     },
     {
@@ -1976,6 +2084,9 @@
        "articulo": "13.6.3.3",
        "extracto": "En cada paño extremo, el momento estático amplificado total, Mo, debe distribuirse como se indica en la tabla a continuación:"
       }
+     ],
+     "reemplaza": [
+      "e49e57810d9ec178"
      ]
     },
     {
@@ -1995,6 +2106,9 @@
        "articulo": "13.6.3.4",
        "extracto": "deben diseñarse para resistir el mayor de los dos momentos amplificados negativos interiores"
       }
+     ],
+     "reemplaza": [
+      "44838f35338e52b5"
      ]
     },
     {
@@ -2014,6 +2128,9 @@
        "articulo": "13.6.4.1",
        "extracto": "Las franjas de columna deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado interior: ℓ2/ℓ1 0,50 1,00 2,00 (αf1 ℓ2/ℓ1) = 0 0,75 0,75 0,75 (αf1 ℓ2/ℓ1) ≥ 1,0 0,90 0,75 0,45"
       }
+     ],
+     "reemplaza": [
+      "bf12794004c51ac5"
      ]
     },
     {
@@ -2033,6 +2150,9 @@
        "articulo": "13.6.4.2",
        "extracto": "Las franjas de columnas deben ser diseñadas para resistir las siguientes fracciones del momento negativo amplificado exterior:"
       }
+     ],
+     "reemplaza": [
+      "0171f5918e30293e"
      ]
     },
     {
@@ -2052,6 +2172,9 @@
        "articulo": "13.6.4.3",
        "extracto": "los momentos negativos deben considerarse uniformemente distribuidos a lo largo de"
       }
+     ],
+     "reemplaza": [
+      "148fb2e4a50f4bab"
      ]
     },
     {
@@ -2072,6 +2195,9 @@
        "articulo": "13.6.5.2",
        "extracto": "debe obtenerse por interpolación lineal entre 0,85 y 0 respectivamente."
       }
+     ],
+     "reemplaza": [
+      "d4a0c5d889d395bc"
      ]
     },
     {
@@ -2091,6 +2217,9 @@
        "articulo": "13.6.6.3",
        "extracto": "debe ser diseñada para resistir el doble del momento asignado a la mitad de la franja central correspondiente al primer eje de apoyos interiores."
       }
+     ],
+     "reemplaza": [
+      "e56ccb9cc7a8bd45"
      ]
     },
     {
@@ -2110,6 +2239,9 @@
        "articulo": "13.6.7",
        "extracto": "Se permite que los momentos positivo y negativo amplificados sean modificados hasta en un 10%"
       }
+     ],
+     "reemplaza": [
+      "8e7070ec646b8758"
      ]
     },
     {
@@ -2129,6 +2261,9 @@
        "articulo": "13.6.9.2",
        "extracto": "M = 0,07 [(qDu + 0,5 qLu) ℓ2 ℓn² - q'Du ℓ'2 (ℓ'n)²] (13-7)"
       }
+     ],
+     "reemplaza": [
+      "726bfbc82ca69a2d"
      ]
     },
     {
@@ -2148,6 +2283,9 @@
        "articulo": "13.7.1.3",
        "extracto": "no deben diferir en más de un tercio de la luz mayor."
       }
+     ],
+     "reemplaza": [
+      "dd4e86c55c711cf9"
      ]
     },
     {
@@ -2167,6 +2305,9 @@
        "articulo": "13.7.2.1",
        "extracto": "Se denomina Franja Central a aquella de ancho igual a la mitad del paño o tablero"
       }
+     ],
+     "reemplaza": [
+      "ca4eaf327c90c77a"
      ]
     },
     {
@@ -2186,6 +2327,9 @@
        "articulo": "13.7.3.3",
        "extracto": "desde el valor total en el borde de la franja central hasta un tercio de este valor en el borde del paño."
       }
+     ],
+     "reemplaza": [
+      "15a06d0214cefe76"
      ]
     },
     {
@@ -2205,6 +2349,9 @@
        "articulo": "13.7.3.4",
        "extracto": "la diferencia será distribuida en proporción a las rigideces relativas de las losas."
       }
+     ],
+     "reemplaza": [
+      "b0b99eed74abefd8"
      ]
     },
     {
@@ -2224,6 +2371,9 @@
        "articulo": "13.7.4",
        "extracto": "Cuando exista un borde continuo opuesto a uno discontinuo, la fuerza cortante se incrementará en 15%."
       }
+     ],
+     "reemplaza": [
+      "2df1920a670d261b"
      ]
     },
     {
@@ -2244,6 +2394,9 @@
        "articulo": "13.7.3.2",
        "extracto": "Ca: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección corta."
       }
+     ],
+     "reemplaza": [
+      "d234eccef0655345"
      ]
     },
     {
@@ -2264,6 +2417,9 @@
        "articulo": "13.7.3.2",
        "extracto": "Ca: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección corta."
       }
+     ],
+     "reemplaza": [
+      "9956270e9a5b0625"
      ]
     },
     {
@@ -2284,6 +2440,9 @@
        "articulo": "13.7.3.2",
        "extracto": "Ca: Coeficiente de momentos indicado en las Tablas 13.1, 13.2 y 13.3, para la dirección corta."
       }
+     ],
+     "reemplaza": [
+      "6ab857c8c4bb44a8"
      ]
     }
    ]

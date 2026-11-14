@@ -659,6 +659,9 @@
        "articulo": "12.2.2",
        "extracto": "(fy ψt ψe λ / 2,6 √f’c) db"
       }
+     ],
+     "reemplaza": [
+      "52b98e8565905e72"
      ]
     },
     {
@@ -694,6 +697,9 @@
        "articulo": "12.2.4",
        "extracto": "Ψt Barras superiores.* 1,3 … * Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas."
       }
+     ],
+     "reemplaza": [
+      "8638ffae268b30d6"
      ]
     },
     {
@@ -727,6 +733,9 @@
        "articulo": "12.2.2",
        "extracto": "Barras mayores de 3/4” … (fy ψt ψe λ / 2,1 √f’c) db"
       }
+     ],
+     "reemplaza": [
+      "d90690234dce0e80"
      ]
     },
     {
@@ -865,6 +874,9 @@
        "articulo": "12.3.2",
        "extracto": "…el mayor entre (0,24 fy / √f’c) db y (0,043 fy) db…"
       }
+     ],
+     "reemplaza": [
+      "956d3271f3b938ff"
      ]
     },
     {
@@ -884,6 +896,9 @@
        "articulo": "12.3.3",
        "extracto": "(b) El refuerzo está confinado con una espiral… o dentro de estribos 1/2” de acuerdo con 7.10.5, y espaciados a distancias no mayores que 100 mm medidos entre centros … 0,75"
       }
+     ],
+     "reemplaza": [
+      "fcffbaebcb1a0a25"
      ]
     },
     {
@@ -986,6 +1001,9 @@
        "articulo": "12.5.2",
        "extracto": "ℓdg debe ser (0,24 Ψe λ fy / √f’c) db"
       }
+     ],
+     "reemplaza": [
+      "9dc0a4997e4029fc"
      ]
     },
     {
@@ -1124,6 +1142,9 @@
        "articulo": "12.12.3",
        "extracto": "…no menor que d, 12 db ó ℓn/16, la que sea mayor."
       }
+     ],
+     "reemplaza": [
+      "9aa351b55ffbd907"
      ]
     },
     {
@@ -1155,6 +1176,9 @@
        "articulo": "12.14.2.1",
        "extracto": "Para las barras mayores de 1 3/8” no se deben utilizar empalmes por traslape, excepto para los casos indicados en 12.16.2."
       }
+     ],
+     "reemplaza": [
+      "e54a982e3a597e87"
      ]
     },
     {
@@ -1284,6 +1308,9 @@
        "articulo": "12.15.1",
        "extracto": "Empalme por traslape Clase B … 1,3 ℓd"
       }
+     ],
+     "reemplaza": [
+      "3c79ce2b69fd7b11"
      ]
     },
     {
@@ -1324,6 +1351,9 @@
        "articulo": "12.16.1",
        "extracto": "…debe ser de 0,071 fy db, para fy igual a 420 MPa o menor… pero no debe ser menor que 300 mm."
       }
+     ],
+     "reemplaza": [
+      "08d6d1d2c18b586b"
      ]
     },
     {
@@ -1381,6 +1411,9 @@
        "articulo": "12.2.1",
        "extracto": "La longitud de desarrollo para barras corrugadas y alambre corrugado en tracción, ℓd, debe determinarse a partir de 12.2.2 ó 12.2.3, pero no debe ser menor que 300 mm."
       }
+     ],
+     "reemplaza": [
+      "a12e28bd6791d578"
      ]
     },
     {
@@ -1400,6 +1433,9 @@
        "articulo": "12.2.4",
        "extracto": "Ψt Barras superiores.* 1,3 … * Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas."
       }
+     ],
+     "reemplaza": [
+      "a3bbdab9991e94e1"
      ]
     },
     {
@@ -1419,6 +1455,9 @@
        "articulo": "12.2.4",
        "extracto": "Ψe Barras o alambres con tratamiento superficial epóxico y recubrimiento menor que 3db o espaciamiento libre menor que 6 db. 1,5"
       }
+     ],
+     "reemplaza": [
+      "fc00104c3204a099"
      ]
     },
     {
@@ -1438,6 +1477,9 @@
        "articulo": "12.2.4",
        "extracto": "Ψs Barras de 3/4\" y menores. 0,8"
       }
+     ],
+     "reemplaza": [
+      "54a6c8adb6024388"
      ]
     },
     {
@@ -1457,6 +1499,9 @@
        "articulo": "12.3.1",
        "extracto": "La longitud de desarrollo para barras corrugadas y alambre a compresión, ℓdc, se debe calcular a partir de 12.3.2 y de los factores de modificación de 12.3.3, pero no debe ser menor de 200 mm."
       }
+     ],
+     "reemplaza": [
+      "2b24eec73ff751fc"
      ]
     },
     {
@@ -1476,6 +1521,9 @@
        "articulo": "12.4.1",
        "extracto": "…debe ser aquella de la barra individual incrementada en 20% para un paquete de tres barras y en 33% para un paquete de cuatro barras."
       }
+     ],
+     "reemplaza": [
+      "2c23cfeb5f0da671"
      ]
     },
     {
@@ -1495,6 +1543,9 @@
        "articulo": "12.4.1",
        "extracto": "…debe ser aquella de la barra individual incrementada en 20% para un paquete de tres barras y en 33% para un paquete de cuatro barras."
       }
+     ],
+     "reemplaza": [
+      "1aabf273e81ca7eb"
      ]
     },
     {
@@ -1515,6 +1566,9 @@
        "articulo": "12.5.2",
        "extracto": "Fig. 12.5.2 Longitud de anclaje con gancho estándar en tracción."
       }
+     ],
+     "reemplaza": [
+      "0ecf5797e11d2ee0"
      ]
     },
     {
@@ -1535,6 +1589,9 @@
        "articulo": "12.5.3",
        "extracto": "(a) Para barras de 1 3/8” y menores, ganchos con recubrimiento lateral (normal al plano del gancho) no menor de 65 mm y para ganchos de 90º adicionalmente con recubrimiento en la extensión de la barra más allá del gancho no menor de 50 mm … 0,7"
       }
+     ],
+     "reemplaza": [
+      "0aeef8947750ecc2"
      ]
     },
     {
@@ -1555,6 +1612,9 @@
        "articulo": "12.5.3",
        "extracto": "(b) Para ganchos de 90° de barras 1 3/8\" y menores que se encuentran confinados por estribos perpendiculares a la barra que se está desarrollando, espaciados a lo largo de ℓdg a no más de 3 db"
       }
+     ],
+     "reemplaza": [
+      "abc32563dc7750eb"
      ]
     },
     {
@@ -1574,6 +1634,9 @@
        "articulo": "12.5.4",
        "extracto": "Los ganchos no deben considerarse efectivos para el desarrollo de barras en compresión."
       }
+     ],
+     "reemplaza": [
+      "4d30cc37998f963c"
      ]
     },
     {
@@ -1593,6 +1656,9 @@
        "articulo": "12.10.3",
        "extracto": "El refuerzo se debe extender, más allá del punto en el que ya no es necesario para resistir flexión, una distancia igual a d ó 12 db, la que sea mayor, excepto en los apoyos de vigas simplemente apoyadas y en el extremo libre de los voladizos."
       }
+     ],
+     "reemplaza": [
+      "e0728a6570a7a750"
      ]
     },
     {
@@ -1612,6 +1678,9 @@
        "articulo": "12.11.1",
        "extracto": "Por lo menos 1/3 del refuerzo para momento positivo se debe prolongar a lo largo de la misma cara del elemento hasta el apoyo. En las vigas, dicho refuerzo se debe prolongar por lo menos 150 mm dentro del apoyo."
       }
+     ],
+     "reemplaza": [
+      "aef90cc43fe384c6"
      ]
     },
     {
@@ -1631,6 +1700,9 @@
        "articulo": "12.15.1",
        "extracto": "Empalme por traslape Clase A … 1,0 ℓd Empalme por traslape Clase B … 1,3 ℓd donde ℓd se calcula de acuerdo con 12.2 para desarrollar fy sin el factor de modificación de 12.2.5."
       }
+     ],
+     "reemplaza": [
+      "261f137beb8abcfa"
      ]
     },
     {
@@ -1650,6 +1722,9 @@
        "articulo": "12.15.2",
        "extracto": "Tabla 12.3 EMPLAMES POR TRASLAPE EN TRACCIÓN … Igual o mayor que 2 Clase A Clase B Menor que 2 Clase B Clase B"
       }
+     ],
+     "reemplaza": [
+      "7f759e1f1d7b400e"
      ]
     },
     {
@@ -1669,6 +1744,9 @@
        "articulo": "12.16.1",
        "extracto": "La longitud de un empalme por traslape en compresión, ℓdc, debe ser de 0,071 fy db, para fy igual a 420 MPa o menor, ó (0,13 fy -24) db para fy mayor que 420 MPa, pero no debe ser menor que 300 mm. Para f’c menor que 21 MPa, la longitud del empalme por traslape debe multiplicarse por 1,3."
       }
+     ],
+     "reemplaza": [
+      "efc71eda6b8dca6e"
      ]
     },
     {
@@ -1688,6 +1766,9 @@
        "articulo": "12.14.3.2",
        "extracto": "Un empalme mecánico debe desarrollar en tracción o compresión, según sea requerido, al menos 1,25 fy de la barra."
       }
+     ],
+     "reemplaza": [
+      "6922efc13599cde0"
      ]
     },
     {
@@ -1708,6 +1789,9 @@
        "articulo": "12.2.2",
        "extracto": "Para barras corrugadas o alambres corrugados, ℓd se calculará de acuerdo a la Tabla 12.1."
       }
+     ],
+     "reemplaza": [
+      "1e3ada11b9ba10da"
      ]
     },
     {
@@ -1728,6 +1812,9 @@
        "articulo": "12.2.2",
        "extracto": "Para barras corrugadas o alambres corrugados, ℓd se calculará de acuerdo a la Tabla 12.1."
       }
+     ],
+     "reemplaza": [
+      "fa4b1a861ce9ea3d"
      ]
     },
     {
@@ -1747,6 +1834,9 @@
        "articulo": "12.2.3",
        "extracto": "Se permite usar Ktr = 0, como una simplificación de diseño, aún si hay refuerzo transversal presente."
       }
+     ],
+     "reemplaza": [
+      "70b5d16cd943ca27"
      ]
     },
     {
@@ -1766,6 +1856,9 @@
        "articulo": "12.2.5",
        "extracto": "excepto en los casos en los cuales se requiere específicamente el anclaje para desarrollar fy o cuando se trate de elementos con responsabilidad sísmica."
       }
+     ],
+     "reemplaza": [
+      "2c9fa407b014a558"
      ]
     },
     {
@@ -1786,6 +1879,9 @@
        "articulo": "12.2.4",
        "extracto": "Los factores indicados en la Tabla 12.1, que afectan la longitud de desarrollo o empalmes de barras y alambres corrugados en tracción, se indican en la Tabla 12.2"
       }
+     ],
+     "reemplaza": [
+      "c9746d5a33541c89"
      ]
     },
     {
@@ -1806,6 +1902,9 @@
        "articulo": "12.2.4",
        "extracto": "Los factores indicados en la Tabla 12.1, que afectan la longitud de desarrollo o empalmes de barras y alambres corrugados en tracción, se indican en la Tabla 12.2"
       }
+     ],
+     "reemplaza": [
+      "badf8248db9118bb"
      ]
     },
     {
@@ -1825,6 +1924,9 @@
        "articulo": "12.2.4",
        "extracto": "* Se consideran barras superiores aquellas que tienen 300 mm o más de concreto fresco por debajo de ellas."
       }
+     ],
+     "reemplaza": [
+      "57d48360a564aa81"
      ]
     },
     {
@@ -1844,6 +1946,9 @@
        "articulo": "12.4.2",
        "extracto": "un paquete de barras debe ser tratado como una barra de un diámetro que reproduzca el área total del paquete."
       }
+     ],
+     "reemplaza": [
+      "a62f7e91d55606b6"
      ]
     },
     {
@@ -1863,6 +1968,9 @@
        "articulo": "12.5.1",
        "extracto": "pero no debe ser menor que el menor valor entre 8 db y 150 mm."
       }
+     ],
+     "reemplaza": [
+      "07730ddce1e56dbb"
      ]
     },
     {
@@ -1882,6 +1990,9 @@
        "articulo": "12.5.2",
        "extracto": "con Ψe igual a 1,2 para refuerzo con recubrimiento epóxico y λ igual a 1,3 para concretos livianos."
       }
+     ],
+     "reemplaza": [
+      "35371a4d3cbe7f36"
      ]
     },
     {
@@ -1902,6 +2013,9 @@
        "articulo": "12.5.3",
        "extracto": "(c) Ganchos de 180º en barras de 1 3/8” y menores que se encuentran confinados con estribos perpendiculares a la barra que se está desarrollando, espaciados a no más de 3 db a lo largo de"
       }
+     ],
+     "reemplaza": [
+      "5a204b4403556e4f"
      ]
     },
     {
@@ -1921,6 +2035,9 @@
        "articulo": "12.5.3",
        "extracto": "El primer estribo debe envolver la parte doblada del gancho a una distancia no mayor que 2 db, medida desde el borde exterior del gancho."
       }
+     ],
+     "reemplaza": [
+      "5a3460b9b3856ca7"
      ]
     },
     {
@@ -1940,6 +2057,9 @@
        "articulo": "12.6.2",
        "extracto": "La efectividad de los anclajes mecánicos debe comprobarse con resultados de ensayos o certificados del fabricante que muestren que tales dispositivos mecánicos son adecuados."
       }
+     ],
+     "reemplaza": [
+      "7663eed7cb465cfe"
      ]
     },
     {
@@ -1959,6 +2079,9 @@
        "articulo": "12.7.1",
        "extracto": "pero ℓd no debe ser menor a 200 mm, excepto para el cálculo de los empalmes por traslape de acuerdo con 12.18."
       }
+     ],
+     "reemplaza": [
+      "657f34416f7d6226"
      ]
     },
     {
@@ -1978,6 +2101,9 @@
        "articulo": "12.8",
        "extracto": "Se debe considerar que la resistencia a la fluencia del refuerzo electrosoldado de alambre liso se desarrolla mediante el embebido en el concreto de 2 alambres transversales, con el alambre transversal más próximo a no menos de 50 mm de la sección crítica."
       }
+     ],
+     "reemplaza": [
+      "866c2c546d079638"
      ]
     },
     {
@@ -1997,6 +2123,9 @@
        "articulo": "12.9.4",
        "extracto": "se debe duplicar ℓd especificada en 12.9.1."
       }
+     ],
+     "reemplaza": [
+      "e63d7584e6c61389"
      ]
     },
     {
@@ -2016,6 +2145,9 @@
        "articulo": "12.10.4",
        "extracto": "el refuerzo que continúa deberá tener una longitud de anclaje mayor o igual a la longitud de desarrollo ℓd más allá del punto donde el refuerzo que se ha cortado o doblado no es necesario por cálculo."
       }
+     ],
+     "reemplaza": [
+      "310919d571dad0fe"
      ]
     },
     {
@@ -2035,6 +2167,9 @@
        "articulo": "12.10.5",
        "extracto": "(b) Para barras 1 3/8\" y menores, en las que el refuerzo que continúa proporciona el doble del área requerida por la flexión en el punto terminal y Vu no excede (3/4) φVn."
       }
+     ],
+     "reemplaza": [
+      "201ffbe06104ca89"
      ]
     },
     {
@@ -2054,6 +2189,9 @@
        "articulo": "12.11.1",
        "extracto": "En las vigas, dicho refuerzo se debe prolongar por lo menos 150 mm dentro del apoyo."
       }
+     ],
+     "reemplaza": [
+      "5b40ca41e947e675"
      ]
     },
     {
@@ -2073,6 +2211,9 @@
        "articulo": "12.11.3",
        "extracto": "Se permite aumentar el valor de Mn / Vu en un 30% cuando los extremos del refuerzo estén confinados por una reacción de compresión."
       }
+     ],
+     "reemplaza": [
+      "b43f3e799bd1f739"
      ]
     },
     {
@@ -2093,6 +2234,9 @@
        "articulo": "12.12.3",
        "extracto": "no menor que d, 12 db ó ℓn/16, la que sea mayor."
       }
+     ],
+     "reemplaza": [
+      "0bfe80784004b722"
      ]
     },
     {
@@ -2112,6 +2256,9 @@
        "articulo": "12.13.4",
        "extracto": "En elementos con un peralte efectivo de al menos 450 mm, los empalmes con Ab fyt no mayor que 40 kN por rama se pueden considerar adecuados si las ramas de los estribos se prolongan a lo largo de la altura total disponible del elemento."
       }
+     ],
+     "reemplaza": [
+      "04caa9684ca0e416"
      ]
     },
     {
@@ -2131,6 +2278,9 @@
        "articulo": "12.14.2.2",
        "extracto": "No deben empalmarse por traslape paquetes enteros."
       }
+     ],
+     "reemplaza": [
+      "fa17232630239c9f"
      ]
     },
     {
@@ -2150,6 +2300,9 @@
        "articulo": "12.15.4",
        "extracto": "se permiten para barras de 5/8” y menores solo si cumplen con 12.15.4.1 a 12.15.4.3."
       }
+     ],
+     "reemplaza": [
+      "3a5ef1a36a613097"
      ]
     },
     {
@@ -2169,6 +2322,9 @@
        "articulo": "12.15.4.1",
        "extracto": "Los empalmes deben estar escalonados a distancias no menores de 600 mm."
       }
+     ],
+     "reemplaza": [
+      "c81196df280029bf"
      ]
     },
     {
@@ -2188,6 +2344,9 @@
        "articulo": "12.15.1",
        "extracto": "pero no menor que 300 mm"
       }
+     ],
+     "reemplaza": [
+      "da8500f48cb28d3b"
      ]
     },
     {
@@ -2207,6 +2366,9 @@
        "articulo": "12.15.5",
        "extracto": "Los empalmes en elementos en tracción se deben hacer con un empalme soldado o mecánico completo, de acuerdo con 12.14.3.2 ó 12.14.3.4, y los empalmes en las barras adyacentes deben estar escalonados a distancias no menores de 750 mm."
       }
+     ],
+     "reemplaza": [
+      "3d35fc982e738f2f"
      ]
     },
     {
@@ -2226,6 +2388,9 @@
        "articulo": "12.16.1",
        "extracto": "Para f’c menor que 21 MPa, la longitud del empalme por traslape debe multiplicarse por 1,3."
       }
+     ],
+     "reemplaza": [
+      "a8896830db0fabf7"
      ]
     },
     {
@@ -2245,6 +2410,9 @@
        "articulo": "12.16.1",
        "extracto": "ó (0,13 fy -24) db para fy mayor que 420 MPa"
       }
+     ],
+     "reemplaza": [
+      "e0b5ce491a7b0423"
      ]
     },
     {
@@ -2264,6 +2432,9 @@
        "articulo": "12.16.2",
        "extracto": "la longitud del empalme por traslape debe ser la mayor de ℓdc de la barra de mayor diámetro o la longitud del empalme por traslape de la barra de diámetro menor."
       }
+     ],
+     "reemplaza": [
+      "9c99037f818bb93d"
      ]
     },
     {
@@ -2283,6 +2454,9 @@
        "articulo": "12.16.4.2",
        "extracto": "con una tolerancia de 1,5º"
       }
+     ],
+     "reemplaza": [
+      "7655bb15350b697d"
      ]
     },
     {
@@ -2302,6 +2476,9 @@
        "articulo": "12.17.2.3",
        "extracto": "Cuando el esfuerzo en las barras debido a las cargas amplificadas es mayor que 0,5 fy en tracción, los empalmes por traslape por tracción deben ser Clase B."
       }
+     ],
+     "reemplaza": [
+      "8d88ac41ebf61914"
      ]
     },
     {
@@ -2321,6 +2498,9 @@
        "articulo": "12.17.2.5",
        "extracto": "En elementos sometidos a compresión con espirales, se permite multiplicar la longitud del empalme por traslape de las barras dentro de la espiral por 0,75 pero dicha longitud no debe ser menor de 300 mm."
       }
+     ],
+     "reemplaza": [
+      "49a18fd12e601fe5"
      ]
     },
     {
@@ -2340,6 +2520,9 @@
        "articulo": "12.17.4",
        "extracto": "no menor que 0,25 fy veces el área del refuerzo vertical en esa cara."
       }
+     ],
+     "reemplaza": [
+      "450ad0b8bc45b6d8"
      ]
     },
     {
@@ -2359,6 +2542,9 @@
        "articulo": "12.18.1",
        "extracto": "no debe ser menor que la mayor de 1,3 ℓd y 200 mm."
       }
+     ],
+     "reemplaza": [
+      "4cb9eea2292ca65a"
      ]
     },
     {
@@ -2378,6 +2564,9 @@
        "articulo": "12.19.2",
        "extracto": "no debe ser menor que la mayor de 1,5 ℓd y 50 mm"
       }
+     ],
+     "reemplaza": [
+      "602d6965d093dbee"
      ]
     }
    ]

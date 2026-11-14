@@ -302,6 +302,9 @@
        "articulo": "14.3.1",
        "extracto": "(a) La cuantía de refuerzo horizontal no será menor que 0,002."
       }
+     ],
+     "reemplaza": [
+      "94e597dcc36dafb0"
      ]
     },
     {
@@ -426,6 +429,9 @@
        "articulo": "14.5.2",
        "extracto": "φPn = 0,55 φ f’c Ag [1 − (k ℓc / 32h)²] (14-1) donde φ = 0,70"
       }
+     ],
+     "reemplaza": [
+      "95521918c1fed377"
      ]
     },
     {
@@ -547,6 +553,9 @@
        "articulo": "14.3.3",
        "extracto": "El refuerzo vertical y el horizontal no debe estar espaciados a más de tres veces el espesor del muro, ni de 400 mm."
       }
+     ],
+     "reemplaza": [
+      "8b4c80a65f091f7f"
      ]
     },
     {
@@ -566,6 +575,9 @@
        "articulo": "14.5.2",
        "extracto": "(a) Restringidos contra la rotación en uno o ambos extremos (superior y/o inferior)….. 0,8"
       }
+     ],
+     "reemplaza": [
+      "955d25192055795f"
      ]
     },
     {
@@ -585,6 +597,9 @@
        "articulo": "14.5.3.2",
        "extracto": "El espesor de los muros exteriores de sótanos y cimentaciones no debe ser menor que 200 mm."
       }
+     ],
+     "reemplaza": [
+      "6f4f366b05a603c0"
      ]
     },
     {
@@ -642,6 +657,9 @@
        "articulo": "14.1",
        "extracto": "provenientes de las acciones sísmicas, denominados placas o muros de corte, se diseñarán de acuerdo a las disposiciones del Capítulo 21."
       }
+     ],
+     "reemplaza": [
+      "42eda7b5f3866958"
      ]
     },
     {
@@ -662,6 +680,9 @@
        "articulo": "14.2.5",
        "extracto": "no deberá exceder la distancia centro a centro entre cargas ni la longitud de la superficie de contacto más dos veces el espesor del muro a cada lado"
       }
+     ],
+     "reemplaza": [
+      "166a9a60a341b0ba"
      ]
     },
     {
@@ -681,6 +702,9 @@
        "articulo": "14.3.4",
        "extracto": "El refuerzo vertical distribuido no necesita estar confinado por estribos a menos que su cuantía exceda de 0,01 del área total de concreto"
       }
+     ],
+     "reemplaza": [
+      "e729ddb3a087377a"
      ]
     },
     {
@@ -700,6 +724,9 @@
        "articulo": "14.5.1",
        "extracto": "cuando la resultante de todas las cargas amplificadas esté localizada dentro del tercio central del espesor total del muro"
       }
+     ],
+     "reemplaza": [
+      "ecfa1487c6b17f77"
      ]
     },
     {
@@ -719,6 +746,9 @@
        "articulo": "14.5.2",
        "extracto": "No restringidos contra la rotación en ambos extremos"
       }
+     ],
+     "reemplaza": [
+      "717facb48d32a7d0"
      ]
     },
     {
@@ -738,6 +768,9 @@
        "articulo": "14.5.2",
        "extracto": "Para muros no arriostrados con el fin de evitar el desplazamiento lateral"
       }
+     ],
+     "reemplaza": [
+      "b3fdb0816ae41448"
      ]
     },
     {
@@ -758,6 +791,9 @@
        "articulo": "14.5.3.1",
        "extracto": "El espesor de los muros de carga no debe ser menor de 1/25 de la altura entre elementos que le proporcionen apoyo lateral o de la longitud del muro, la que sea menor, ni tampoco debe ser menor que 100 mm."
       }
+     ],
+     "reemplaza": [
+      "dbbfdefe94e8576f"
      ]
     },
     {
@@ -778,6 +814,9 @@
        "articulo": "14.6.1",
        "extracto": "El espesor de los muros que no sean de carga no debe ser menor de 100 mm, ni menor de 1/30 de la distancia mínima entre elementos que le proporcionen apoyo lateral."
       }
+     ],
+     "reemplaza": [
+      "ce7f39c34fd856e7"
      ]
     },
     {
@@ -797,6 +836,9 @@
        "articulo": "14.7.2",
        "extracto": "El refuerzo de los muros empleados como vigas de cimentación debe cumplir con los requisitos de 14.3."
       }
+     ],
+     "reemplaza": [
+      "e54e5c96be693d3d"
      ]
     },
     {
@@ -816,6 +858,9 @@
        "articulo": "14.8.2",
        "extracto": "Este requisito podrá exceptuarse cuando el Ingeniero Proyectista disponga juntas de contracción y señale procedimientos constructivos que controlen los efectos de contracción y temperatura."
       }
+     ],
+     "reemplaza": [
+      "947acae2bb18fccf"
      ]
     },
     {
@@ -835,6 +880,9 @@
        "articulo": "14.8.3",
        "extracto": "Este refuerzo podrá disponerse en mayor proporción en la cara expuesta del muro."
       }
+     ],
+     "reemplaza": [
+      "958266a22024377b"
      ]
     },
     {
@@ -854,6 +902,9 @@
        "articulo": "14.9.1",
        "extracto": "deberá prestarse especial atención en la verificación de los esfuerzos de punzonamiento ocasionados por los dispositivos de anclaje."
       }
+     ],
+     "reemplaza": [
+      "d56334d9b3b6b241"
      ]
     },
     {
@@ -873,6 +924,9 @@
        "articulo": "14.10.2",
        "extracto": "La presencia de aberturas debe considerarse en el cálculo de rigideces y resistencias."
       }
+     ],
+     "reemplaza": [
+      "23ec2d1f70fccafa"
      ]
     }
    ]

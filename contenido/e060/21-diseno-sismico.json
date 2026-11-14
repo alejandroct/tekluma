@@ -1149,6 +1149,9 @@
        "articulo": "21.2.11",
        "extracto": "Las disposiciones contenidas en este capítulo no son obligatorias para los edificios de la categoría C y D (edificaciones comunes y menores) ubicadas en la Zona Sísmica 1, definida en la NTE E.030 Diseño Sismorresistente."
       }
+     ],
+     "reemplaza": [
+      "8fe3e2a2ccb84592"
      ]
     },
     {
@@ -1221,6 +1224,9 @@
        "articulo": "21.3.4.2",
        "extracto": "Los empalmes mecánicos Tipo 1 no deben usarse dentro de una distancia igual al doble del peralte del elemento medida desde la cara de la viga o columna, o donde sea probable que se produzca fluencia del refuerzo… Se pueden usar empalmes mecánicos Tipo 2 en cualquier ubicación."
       }
+     ],
+     "reemplaza": [
+      "2e5874d2885f16c8"
      ]
     },
     {
@@ -1297,6 +1303,9 @@
        "articulo": "21.4.3",
        "extracto": "(a) La suma del cortante asociado con el desarrollo de los momentos nominales (Mn) del elemento en cada extremo restringido de la luz libre y el cortante isostático calculado para las cargas de gravedad tributarias amplificadas."
       }
+     ],
+     "reemplaza": [
+      "7a724304ed97eceb"
      ]
     },
     {
@@ -1353,6 +1362,9 @@
        "articulo": "21.4.3",
        "extracto": "En los elementos en flexocompresión los momentos nominales en los extremos de la luz libre del elemento, estarán asociados a la fuerza axial Pu que dé como resultado el mayor momento nominal posible."
       }
+     ],
+     "reemplaza": [
+      "d022f6ce7659afbc"
      ]
     },
     {
@@ -1600,6 +1612,9 @@
        "articulo": "21.4.5.3",
        "extracto": "La longitud Lo no debe ser menor que el mayor entre (d), (e) y (f): (d) Una sexta parte de la luz libre del elemento; (e) La mayor dimensión de la sección transversal del elemento; (f) 500 mm."
       }
+     ],
+     "reemplaza": [
+      "d27a08ece0bfdbec"
      ]
     },
     {
@@ -1620,6 +1635,9 @@
        "articulo": "21.4.5.3",
        "extracto": "El espaciamiento So no debe exceder al menor entre (a), (b) y (c): (a) Ocho veces el diámetro de la barra longitudinal confinada de menor diámetro; (b) La mitad de la menor dimensión de la sección transversal del elemento; (c) 100 mm."
       }
+     ],
+     "reemplaza": [
+      "c16f01d18c7fde20"
      ]
     },
     {
@@ -1823,6 +1841,9 @@
        "articulo": "21.5.4.1",
        "extracto": "…resistencias probables en flexión (Mpr = 1,25 Mn) en los extremos de la luz libre del elemento y la fuerza cortante isostática calculada para las cargas de gravedad tributarias amplificadas."
       }
+     ],
+     "reemplaza": [
+      "b7186168ff3e054d"
      ]
     },
     {
@@ -1910,6 +1931,9 @@
        "articulo": "21.6.2.2",
        "extracto": "ΣMnc ≥ 1,2 ΣMnv (21-1)"
       }
+     ],
+     "reemplaza": [
+      "21477069eac1cebd"
      ]
     },
     {
@@ -1983,6 +2007,9 @@
        "articulo": "21.6.4.1",
        "extracto": "Ash = 0,09 s bc f’c / fyh (21-4)"
       }
+     ],
+     "reemplaza": [
+      "f01f63207d50f0aa"
      ]
     },
     {
@@ -2008,6 +2035,9 @@
        "articulo": "21.6.4.1",
        "extracto": "ρs = 0,12 f’c / fyt (21-2) y no debe ser menor que la requerida en 10.9.3 por la ecuación (10-5)."
       }
+     ],
+     "reemplaza": [
+      "221356b6f2c97138"
      ]
     },
     {
@@ -2127,6 +2157,9 @@
        "articulo": "21.7.2.4",
        "extracto": "…la dimensión de la columna paralela al refuerzo de la viga no debe ser menor que 20 veces el diámetro de la barra longitudinal de mayor diámetro de la viga, para concretos de peso normal."
       }
+     ],
+     "reemplaza": [
+      "2ebd9608b71a3d9a"
      ]
     },
     {
@@ -2234,6 +2267,9 @@
        "articulo": "21.7.4.1",
        "extracto": "Para nudos confinados en las cuatro caras: 1,7 √f’c Aj"
       }
+     ],
+     "reemplaza": [
+      "3053fa091fec6666"
      ]
     },
     {
@@ -2289,6 +2325,9 @@
        "articulo": "21.7.4.3",
        "extracto": "El cortante en el nudo, Vu, se calculará por equilibrio de las fuerzas horizontales que concurren al nudo, como se indica en la figura a continuación."
       }
+     ],
+     "reemplaza": [
+      "192e7a244c71e55a"
      ]
     },
     {
@@ -2414,6 +2453,9 @@
        "articulo": "21.9.5.3",
        "extracto": "Vu ≥ Vua (Mn / Mua) (21-5)"
       }
+     ],
+     "reemplaza": [
+      "1c6871999497380a"
      ]
     },
     {
@@ -2474,6 +2516,9 @@
        "articulo": "21.9.7.4",
        "extracto": "c ≥ ℓm / [600 (δu / hm)] (21-6)… El cociente δu / hm en la ecuación (21-6) no debe tomarse menor que 0,005."
       }
+     ],
+     "reemplaza": [
+      "f0a2e540eb7b7669"
      ]
     },
     {
@@ -2648,6 +2693,9 @@
        "articulo": "21.3.2.1",
        "extracto": "La resistencia especificada a la compresión del concreto, f’c, no debe ser menor que 21 MPa."
       }
+     ],
+     "reemplaza": [
+      "979e909e4a17b9a0"
      ]
     },
     {
@@ -2667,6 +2715,9 @@
        "articulo": "21.3.3",
        "extracto": "Se permite el empleo de acero de refuerzo ASTM A 615M, grados 280 y 420, en estos elementos siempre y cuando: (a) La resistencia real a la fluencia… no sea mayor que el esfuerzo de fluencia especificado fy, en más de 125 MPa; (b) La relación entre la resistencia de tracción (fu) y el esfuerzo de fluencia (fy)… no sea menor de 1,25."
       }
+     ],
+     "reemplaza": [
+      "0dcc14deb3dd1a81"
      ]
     },
     {
@@ -2686,6 +2737,9 @@
        "articulo": "21.2.5",
        "extracto": "Las disposiciones contenidas en 21.5, 21.6 y 21.7 son aplicables a las vigas, columnas y nudos de los edificios cuyo sistema resistente a fuerzas laterales… sea: (a) Pórticos (R = 8) (b) Dual Tipo II (R = 7)."
       }
+     ],
+     "reemplaza": [
+      "e62ed45b28045592"
      ]
     },
     {
@@ -2706,6 +2760,9 @@
        "articulo": "21.4.4.4",
        "extracto": "En ambos extremos del elemento deben disponerse estribos cerrados de confinamiento en longitudes iguales a dos veces el peralte del elemento… El primer estribo cerrado de confinamiento debe estar situado a no más de 100 mm de la cara del elemento de apoyo."
       }
+     ],
+     "reemplaza": [
+      "fe45928a52b66096"
      ]
     },
     {
@@ -2725,6 +2782,9 @@
        "articulo": "21.4.4.4",
        "extracto": "En ambos extremos del elemento deben disponerse estribos cerrados de confinamiento en longitudes iguales a dos veces el peralte del elemento… El primer estribo cerrado de confinamiento debe estar situado a no más de 100 mm de la cara del elemento de apoyo."
       }
+     ],
+     "reemplaza": [
+      "64d7f23494fe748e"
      ]
     },
     {
@@ -2744,6 +2804,9 @@
        "articulo": "21.5.3.2",
        "extracto": "El primer estribo cerrado de confinamiento debe estar situado a no más de 50 mm de la cara del elemento de apoyo."
       }
+     ],
+     "reemplaza": [
+      "7c7866cedc51ccb6"
      ]
     },
     {
@@ -2764,6 +2827,9 @@
        "articulo": "21.4.5.3",
        "extracto": "El espaciamiento So no debe exceder al menor entre (a), (b) y (c): (a) Ocho veces el diámetro de la barra longitudinal confinada de menor diámetro; (b) La mitad de la menor dimensión de la sección transversal del elemento; (c) 100 mm."
       }
+     ],
+     "reemplaza": [
+      "0f3a7090dceedf4c"
      ]
     },
     {
@@ -2783,6 +2849,9 @@
        "articulo": "21.4.5.3",
        "extracto": "La longitud Lo no debe ser menor que el mayor entre (d), (e) y (f): (d) Una sexta parte de la luz libre del elemento; (e) La mayor dimensión de la sección transversal del elemento; (f) 500 mm."
       }
+     ],
+     "reemplaza": [
+      "62c0831c6d9df6b0"
      ]
     },
     {
@@ -2803,6 +2872,9 @@
        "articulo": "21.6.2.2",
        "extracto": "Las resistencias a flexión de las columnas en las caras de los nudos deben satisfacer la ecuación (21-1) ΣMnc ≥ 1,2 ΣMnv (21-1)"
       }
+     ],
+     "reemplaza": [
+      "2683e1cc59185967"
      ]
     },
     {
@@ -2823,6 +2895,9 @@
        "articulo": "21.5.4.1",
        "extracto": "La fuerza cortante de diseño, Vu, de los elementos en flexión, deberá determinarse a partir de la suma de las fuerzas cortantes asociadas con el desarrollo de las resistencias probables en flexión (Mpr = 1,25 Mn) en los extremos de la luz libre del elemento y la fuerza cortante isostática calculada para las cargas de gravedad tributarias amplificadas."
       }
+     ],
+     "reemplaza": [
+      "a596946cd3a87d7d"
      ]
     },
     {
@@ -2843,6 +2918,9 @@
        "articulo": "21.7.4.1",
        "extracto": "Para nudos confinados en las cuatro caras: 1,7 √f’c Aj Para nudos confinados en tres caras o en dos caras opuestas: 1,2 √f’c Aj Para otros casos 1,0 √f’c Aj"
       }
+     ],
+     "reemplaza": [
+      "3d651f80832e0cb3"
      ]
     },
     {
@@ -2863,6 +2941,9 @@
        "articulo": "21.7.2.4",
        "extracto": "…la dimensión de la columna paralela al refuerzo de la viga no debe ser menor que 20 veces el diámetro de la barra longitudinal de mayor diámetro de la viga, para concretos de peso normal."
       }
+     ],
+     "reemplaza": [
+      "7b5eb15df5aa8824"
      ]
     },
     {
@@ -2883,6 +2964,9 @@
        "articulo": "21.6.4.3",
        "extracto": "La distancia, centro a centro, transversal al eje del elemento, entre las ramas de estribos cerrados de confinamiento múltiples o entre las grapas suplementarias, hx, no deben exceder 350 mm medidos centro a centro."
       }
+     ],
+     "reemplaza": [
+      "41d64a26662a12b1"
      ]
     },
     {
@@ -2902,6 +2986,9 @@
        "articulo": "21.8.2",
        "extracto": "(a) El número máximo de pisos será de cinco, sin exceder de 18 m. (b) En ambas direcciones principales deberán existir muros de corte capaces de absorber como mínimo el 80% del cortante sísmico de cada entrepiso… (c) La deriva máxima de entrepiso no deberá exceder de 0,005. (d) Deberán existir vigas peraltadas de borde en todo el perímetro del edificio…"
       }
+     ],
+     "reemplaza": [
+      "ba34b6fc03787c4d"
      ]
     },
     {
@@ -2921,6 +3008,9 @@
        "articulo": "21.9.3.2",
        "extracto": "salvo para los sistemas estructurales de muros de ductilidad limitada, para los cuales el espesor mínimo del alma no deberá ser menor de 100 mm."
       }
+     ],
+     "reemplaza": [
+      "abba430060016ac9"
      ]
     },
     {
@@ -2940,6 +3030,9 @@
        "articulo": "21.9.4.3",
        "extracto": "En un muro deben emplearse cuando menos dos capas de refuerzo cuando: (a) El espesor del muro sea mayor o igual de 200 mm. (b) O cuando la fuerza cortante Vu exceda 0,17 Acv √f’c"
       }
+     ],
+     "reemplaza": [
+      "1e47786222820a88"
      ]
     },
     {
@@ -2960,6 +3053,9 @@
        "articulo": "21.9.7.4",
        "extracto": "(a) Los elementos de borde en las zonas de compresión deben ser confinados cuando la profundidad del eje neutro exceda de: c ≥ ℓm / [600 (δu / hm)] (21-6)"
       }
+     ],
+     "reemplaza": [
+      "19efe4ded7382255"
      ]
     },
     {
@@ -2979,6 +3075,9 @@
        "articulo": "21.10.1",
        "extracto": "(a) La resistencia a la compresión del concreto será como mínimo de 17 Mpa, salvo en los sistemas de transferencia donde deberá usarse como mínimo 28 Mpa."
       }
+     ],
+     "reemplaza": [
+      "c443c0fd4e44bbe8"
      ]
     },
     {
@@ -2998,6 +3097,9 @@
        "articulo": "21.11.4",
        "extracto": "Las losas de concreto y las losas compuestas que sirven como diafragmas estructurales usadas para transmitir fuerzas sísmicas deben tener un espesor mínimo de 50 mm."
       }
+     ],
+     "reemplaza": [
+      "aeda01200d2ec480"
      ]
     },
     {
@@ -3017,6 +3119,9 @@
        "articulo": "21.12.3.2",
        "extracto": "…la menor dimensión transversal sea igual o mayor que el espacio libre entre columnas conectadas dividido por 20, pero no necesita ser mayor a 400 mm. Se deben proporcionar estribos cerrados con un espaciamiento que no exceda al menor de: la menor dimensión de la sección transversal, 300 mm ni de 16 db."
       }
+     ],
+     "reemplaza": [
+      "742c591774cd04c4"
      ]
     },
     {
@@ -3037,6 +3142,9 @@
        "articulo": "21.1",
        "extracto": "Un estribo cerrado de diámetro no menor de 8 mm."
       }
+     ],
+     "reemplaza": [
+      "4807fbebbb0d9c34"
      ]
     },
     {
@@ -3057,6 +3165,9 @@
        "articulo": "21.1",
        "extracto": "Los ganchos deben tener una extensión de 8 veces el diámetro de la barra, pero no menor a 75 mm"
       }
+     ],
+     "reemplaza": [
+      "58c1934a4fb55873"
      ]
     },
     {
@@ -3076,6 +3187,9 @@
        "articulo": "21.1",
        "extracto": "Consiste en un doblez de 135º o más."
       }
+     ],
+     "reemplaza": [
+      "84ea3840e9827732"
      ]
     },
     {
@@ -3096,6 +3210,9 @@
        "articulo": "21.1",
        "extracto": "Los elementos de borde no requieren necesariamente un incremento del espesor del muro o del diafragma."
       }
+     ],
+     "reemplaza": [
+      "173fca5d863f51cf"
      ]
     },
     {
@@ -3115,6 +3232,9 @@
        "articulo": "21.1",
        "extracto": "Por lo menos el 80% del cortante en la base actúa sobre las columnas de los pórticos"
       }
+     ],
+     "reemplaza": [
+      "c02d815d24ca912e"
      ]
     },
     {
@@ -3134,6 +3254,9 @@
        "articulo": "21.1",
        "extracto": "Los pórticos deberán ser diseñados para tomar por lo menos 25% del cortante en la base."
       }
+     ],
+     "reemplaza": [
+      "fa84e65b7a4f08f0"
      ]
     },
     {
@@ -3153,6 +3276,9 @@
        "articulo": "21.1",
        "extracto": "cuando en la base de la estructura, la fuerza cortante inducida por el sismo en los muros sea mayor o igual al 60% del cortante total y menor o igual al 80%."
       }
+     ],
+     "reemplaza": [
+      "6ea0b792e2895942"
      ]
     },
     {
@@ -3172,6 +3298,9 @@
        "articulo": "21.2.3",
        "extracto": "El diseño de estos elementos se hará según lo dispuesto en la NTE E.070 Albañilería."
       }
+     ],
+     "reemplaza": [
+      "8bf31b49a42ae914"
      ]
     },
     {
@@ -3191,6 +3320,9 @@
        "articulo": "21.3.2.2",
        "extracto": "La resistencia especificada a la compresión del concreto, f’c, no debe ser mayor que 55 MPa."
       }
+     ],
+     "reemplaza": [
+      "808f7920f2859471"
      ]
     },
     {
@@ -3210,6 +3342,9 @@
        "articulo": "21.3.4.2",
        "extracto": "Se pueden usar empalmes mecánicos Tipo 2 en cualquier ubicación."
       }
+     ],
+     "reemplaza": [
+      "717597b7b1e154e5"
      ]
     },
     {
@@ -3229,6 +3364,9 @@
        "articulo": "21.4.2",
        "extracto": "Cuando Pu sea mayor, los detalles del refuerzo del elemento deben cumplir con 21.4.5."
       }
+     ],
+     "reemplaza": [
+      "f474334e365c829d"
      ]
     },
     {
@@ -3248,6 +3386,9 @@
        "articulo": "21.4.3",
        "extracto": "con un factor de amplificación para los valores del sismo igual a 2,5."
       }
+     ],
+     "reemplaza": [
+      "3b7471e9e5e670cd"
      ]
     },
     {
@@ -3268,6 +3409,9 @@
        "articulo": "21.4.4.4",
        "extracto": "(a) d/4, pero no es necesario que el espaciamiento sea menor de 150 mm;"
       }
+     ],
+     "reemplaza": [
+      "6bcf901e79489c3b"
      ]
     },
     {
@@ -3287,6 +3431,9 @@
        "articulo": "21.4.5.4",
        "extracto": "En todo el elemento la separación de los estribos, no será mayor que la requerida por fuerza cortante ni de 300 mm."
       }
+     ],
+     "reemplaza": [
+      "af7df30266b6c542"
      ]
     },
     {
@@ -3306,6 +3453,9 @@
        "articulo": "21.5.1.4",
        "extracto": "una distancia a cada lado del elemento de apoyo igual a las tres cuartas partes del peralte del elemento en flexión."
       }
+     ],
+     "reemplaza": [
+      "c69ce23b28e8b114"
      ]
     },
     {
@@ -3325,6 +3475,9 @@
        "articulo": "21.5.3.2",
        "extracto": "El primer estribo cerrado de confinamiento debe estar situado a no más de 50 mm de la cara del elemento de apoyo."
       }
+     ],
+     "reemplaza": [
+      "532ec61acc8de2b6"
      ]
     },
     {
@@ -3344,6 +3497,9 @@
        "articulo": "21.5.2.3",
        "extracto": "El espaciamiento del refuerzo transversal que envuelve las barras traslapadas no debe exceder el menor de d/4 ó 150 mm."
       }
+     ],
+     "reemplaza": [
+      "b22577a159a15248"
      ]
     },
     {
@@ -3363,6 +3519,9 @@
        "articulo": "21.5.3.3",
        "extracto": "En las zonas de confinamiento, la distancia horizontal entre las ramas verticales del refuerzo transversal (estribos cerrados y/o grapas suplementarias) no deberá exceder de 300 mm."
       }
+     ],
+     "reemplaza": [
+      "ba12d74bc6b97c39"
      ]
     },
     {
@@ -3382,6 +3541,9 @@
        "articulo": "21.5.3.4",
        "extracto": "Fuera de las zonas de confinamiento, deben colocarse estribos cerrados con ganchos sísmicos en ambos extremos, espaciados a no más de d/2 en toda la longitud del elemento."
       }
+     ],
+     "reemplaza": [
+      "8a41bdb358a4187d"
      ]
     },
     {
@@ -3401,6 +3563,9 @@
        "articulo": "21.6.2.2",
        "extracto": "debe suponerse que el refuerzo de la losa dentro del ancho efectivo definido en 8.10 contribuye a"
       }
+     ],
+     "reemplaza": [
+      "c8a836baf0914910"
      ]
     },
     {
@@ -3421,6 +3586,9 @@
        "articulo": "21.6.4.2",
        "extracto": "(c) 100 mm."
       }
+     ],
+     "reemplaza": [
+      "c6eda5f06e13d018"
      ]
     },
     {
@@ -3440,6 +3608,9 @@
        "articulo": "21.6.4.1",
        "extracto": "debe colocarse refuerzo transversal adicional con un espaciamiento no mayor a 300 mm."
       }
+     ],
+     "reemplaza": [
+      "b003c6075913fdb2"
      ]
     },
     {
@@ -3460,6 +3631,9 @@
        "articulo": "21.6.4.4",
        "extracto": "La longitud Lo no debe ser menor que la mayor de (a), (b) y (c)."
       }
+     ],
+     "reemplaza": [
+      "b69f4316e35b4487"
      ]
     },
     {
@@ -3479,6 +3653,9 @@
        "articulo": "21.7.2.3",
        "extracto": "El refuerzo longitudinal de una viga que termine en una columna, debe prolongarse hasta la cara más distante del núcleo confinado de la columna"
       }
+     ],
+     "reemplaza": [
+      "be1ea74cc78dff06"
      ]
     },
     {
@@ -3498,6 +3675,9 @@
        "articulo": "21.7.4.1",
        "extracto": "Se considera que un elemento (viga) proporciona confinamiento al nudo si al menos las tres cuartas partes de la cara lateral del nudo está cubierta por el elemento que llega al nudo."
       }
+     ],
+     "reemplaza": [
+      "a839ed5a6f245cda"
      ]
     },
     {
@@ -3517,6 +3697,9 @@
        "articulo": "21.7.4.2",
        "extracto": "no debe exceder de las tres cuartas partes de los límites señalados en 21.7.4.1."
       }
+     ],
+     "reemplaza": [
+      "89c6ad5e6567d298"
      ]
     },
     {
@@ -3536,6 +3719,9 @@
        "articulo": "21.8.2",
        "extracto": "Cuando se utilicen losas nervadas estas contarán con una zona maciza adyacente a cada columna de por lo menos 2,5 veces el espesor de la losa"
       }
+     ],
+     "reemplaza": [
+      "2c51176bdb26e0bd"
      ]
     },
     {
@@ -3555,6 +3741,9 @@
        "articulo": "21.8.2",
        "extracto": "se supondrá una viga de ancho efectivo igual al ancho de la columna más 1,5 veces el espesor de la losa a cada lado de la columna o del capitel o del ábaco, centrada con respecto al eje de la columna."
       }
+     ],
+     "reemplaza": [
+      "595db2a376da7eb2"
      ]
     },
     {
@@ -3574,6 +3763,9 @@
        "articulo": "21.9.3.4",
        "extracto": "el espesor mínimo en los sótanos será de 200 mm."
       }
+     ],
+     "reemplaza": [
+      "095bcc14d25a221b"
      ]
     },
     {
@@ -3593,6 +3785,9 @@
        "articulo": "21.9.4.5",
        "extracto": "las longitudes de desarrollo del refuerzo longitudinal debe ser 1,25 veces los valores calculados para fy en tracción."
       }
+     ],
+     "reemplaza": [
+      "362a863ef4e3d545"
      ]
     },
     {
@@ -3612,6 +3807,9 @@
        "articulo": "21.9.6.3",
        "extracto": "debe extenderse desde la cara del alma una distancia igual al menor valor entre la mitad de la distancia al alma de un muro adyacente y el 10% de la altura total del muro."
       }
+     ],
+     "reemplaza": [
+      "d0c79b4c8e680024"
      ]
     },
     {
@@ -3631,6 +3829,9 @@
        "articulo": "21.9.6.5",
        "extracto": "Deberá proveerse del refuerzo longitudinal necesario para garantizar una resistencia de diseño a flexocompresión del muro por lo menos igual al momento de agrietamiento de la sección."
       }
+     ],
+     "reemplaza": [
+      "1bf8f24c36f31750"
      ]
     },
     {
@@ -3651,6 +3852,9 @@
        "articulo": "21.9.7.6",
        "extracto": "(a) El elemento de borde se debe extender horizontalmente desde la fibra extrema en compresión hasta una distancia no menor que el mayor valor"
       }
+     ],
+     "reemplaza": [
+      "380b6974f368b213"
      ]
     },
     {
@@ -3670,6 +3874,9 @@
        "articulo": "21.9.7.6",
        "extracto": "se deben extender por lo menos 300 mm dentro del alma."
       }
+     ],
+     "reemplaza": [
+      "7a9542dccd45afe6"
      ]
     },
     {
@@ -3689,6 +3896,9 @@
        "articulo": "21.9.7.6",
        "extracto": "(e) El espaciamiento no debe exceder al menor entre los siguientes valores: - Diez veces el diámetro de la barra longitudinal confinada de menor diámetro. - La menor dimensión de la sección transversal del elemento de borde. - 250 mm."
       }
+     ],
+     "reemplaza": [
+      "7a44c1814aa894b9"
      ]
     },
     {
@@ -3708,6 +3918,9 @@
        "articulo": "21.9.8",
        "extracto": "La fuerza normal (Nu) se calculará como 0,9 veces la carga muerta."
       }
+     ],
+     "reemplaza": [
+      "e9ef2e2f5092a5e6"
      ]
     },
     {
@@ -3727,6 +3940,9 @@
        "articulo": "21.9.9.2",
        "extracto": "Las vigas de acoplamiento con una relación de aspecto (ln / h) ≥ 2 deben cumplir con los requisitos indicados en 21.5.2, 21.5.3, 21.5.4."
       }
+     ],
+     "reemplaza": [
+      "605c849f616f6e96"
      ]
     },
     {
@@ -3747,6 +3963,9 @@
        "articulo": "21.9.9.5",
        "extracto": "(b) Cada grupo de barras colocado diagonalmente debe consistir en un mínimo de cuatro barras colocadas en dos o más capas."
       }
+     ],
+     "reemplaza": [
+      "7ecb23bb3d8d9ff1"
      ]
     },
     {
@@ -3767,6 +3986,9 @@
        "articulo": "21.9.9.5",
        "extracto": "con un espaciamiento que no exceda de seis veces el diámetro de las barras diagonales ni de 150 mm"
       }
+     ],
+     "reemplaza": [
+      "6d3d5ff8a4eceef9"
      ]
     },
     {
@@ -3786,6 +4008,9 @@
        "articulo": "21.10.2.11",
        "extracto": "la longitud de empalme deberá ser como mínimo dos veces la longitud de desarrollo."
       }
+     ],
+     "reemplaza": [
+      "1c15e44f65449d1c"
      ]
     },
     {
@@ -3805,6 +4030,9 @@
        "articulo": "21.10.2.12",
        "extracto": "igual al empleado en el edificio (R) dividido entre 1,5."
       }
+     ],
+     "reemplaza": [
+      "d17f13b2c8b706e2"
      ]
     },
     {
@@ -3824,6 +4052,9 @@
        "articulo": "21.10.3",
        "extracto": "de 600 mm o dos veces el espesor de la losa, el que sea mayor."
       }
+     ],
+     "reemplaza": [
+      "df3e42a328838c6b"
      ]
     },
     {
@@ -3843,6 +4074,9 @@
        "articulo": "21.11.4",
        "extracto": "deben tener un espesor no menor que 65 mm."
       }
+     ],
+     "reemplaza": [
+      "f754f3aa373238f0"
      ]
     },
     {
@@ -3862,6 +4096,9 @@
        "articulo": "21.11.5.3",
        "extracto": "con esfuerzos de compresión que excedan 0,25 f’c en cualquier sección deben tener refuerzo transversal a lo largo del elemento"
       }
+     ],
+     "reemplaza": [
+      "35f4d65764ae744f"
      ]
     },
     {
@@ -3881,6 +4118,9 @@
        "articulo": "21.12.2.2",
        "extracto": "el refuerzo longitudinal que resiste la flexión debe tener ganchos de 90 grados cerca del fondo de la cimentación, con el extremo libre de las barras orientado hacia el centro de la columna."
       }
+     ],
+     "reemplaza": [
+      "d699921e53850626"
      ]
     },
     {
@@ -3900,6 +4140,9 @@
        "articulo": "21.12.4.4",
        "extracto": "En la parte superior del elemento en por lo menos cinco veces la dimensión transversal del elemento, pero no menos de 1,8 m por debajo de la parte inferior del cabezal del pilote;"
       }
+     ],
+     "reemplaza": [
+      "66d72a15cc50d7ef"
      ]
     }
    ]

@@ -586,6 +586,9 @@
        "articulo": "9.2.8",
        "extracto": "Si fuera necesario incluir en el diseño el efecto de las cargas de nieve o granizo, éstas deberán considerarse como cargas vivas (CV)."
       }
+     ],
+     "reemplaza": [
+      "6547ff58667f7c45"
      ]
     },
     {
@@ -806,6 +809,9 @@
        "articulo": "9.3.2.8",
        "extracto": "En el Capítulo 22, concreto estructural simple, φ debe ser 0,65 para flexión, compresión, cortante y aplastamiento."
       }
+     ],
+     "reemplaza": [
+      "e71ef6eeeb73f3ba"
      ]
     },
     {
@@ -1146,6 +1152,9 @@
        "articulo": "9.6.2.5",
        "extracto": "λΔ = ξ / (1 + 50 ρ’) (9-15)"
       }
+     ],
+     "reemplaza": [
+      "a9e88f492b148c58"
      ]
     },
     {
@@ -1353,6 +1362,9 @@
        "articulo": "9.3.2.1",
        "extracto": "Flexión sin carga axial … 0,90"
       }
+     ],
+     "reemplaza": [
+      "32530aff754beedc"
      ]
     },
     {
@@ -1372,6 +1384,9 @@
        "articulo": "9.3.2.3",
        "extracto": "Cortante y torsión … 0,85"
       }
+     ],
+     "reemplaza": [
+      "c7b8037a547a2faa"
      ]
     },
     {
@@ -1391,6 +1406,9 @@
        "articulo": "9.3.2.2",
        "extracto": "(b) Carga axial de compresión con o sin flexión: Elementos con refuerzo en espiral según 10.9.3 … 0,75 Otros elementos … 0,70"
       }
+     ],
+     "reemplaza": [
+      "b38f56a4d994ce1e"
      ]
     },
     {
@@ -1429,6 +1447,9 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)…"
       }
+     ],
+     "reemplaza": [
+      "86eff8d928e05e3c"
      ]
     },
     {
@@ -1448,6 +1469,9 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)…"
       }
+     ],
+     "reemplaza": [
+      "197838826e772db8"
      ]
     },
     {
@@ -1467,6 +1491,9 @@
        "articulo": "9.6.2.6",
        "extracto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2"
       }
+     ],
+     "reemplaza": [
+      "d8b1702151b625b6"
      ]
     },
     {
@@ -1486,6 +1513,9 @@
        "articulo": "9.7.2",
        "extracto": "Barras lisas 0,0025 Barras corrugadas con fy < 420 MPa 0,0020 Barras corrugadas o malla de alambre (liso o corrugado) de intersecciones soldadas, con fy ≥ 420 MPa 0,0018"
       }
+     ],
+     "reemplaza": [
+      "b60a8b7be601ee65"
      ]
     },
     {
@@ -1506,6 +1536,9 @@
        "articulo": "9.6.2.5",
        "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"
       }
+     ],
+     "reemplaza": [
+      "364f5014ee281e20"
      ]
     },
     {
@@ -1525,6 +1558,9 @@
        "articulo": "9.9.6",
        "extracto": "Si el peralte h de una viga o nervadura excede de 900 mm, se deberá colocar armadura (superficial) longitudinal uniformemente distribuida en ambas caras laterales del alma…"
       }
+     ],
+     "reemplaza": [
+      "185a11bb708b048d"
      ]
     },
     {
@@ -1544,6 +1580,9 @@
        "articulo": "9.2.4",
        "extracto": "No será necesario considerar acciones de sismo y de viento simultáneamente."
       }
+     ],
+     "reemplaza": [
+      "88af2a6ed43b3184"
      ]
     },
     {
@@ -1563,6 +1602,9 @@
        "articulo": "9.2.3",
        "extracto": "U = 1,25 (CM + CV) ± CS"
       }
+     ],
+     "reemplaza": [
+      "92a79da1c406f1d0"
      ]
     },
     {
@@ -1582,6 +1624,9 @@
        "articulo": "9.2.3",
        "extracto": "U = 0,9 CM ± CS (9-5)"
       }
+     ],
+     "reemplaza": [
+      "9844a47649ccad20"
      ]
     },
     {
@@ -1601,6 +1646,9 @@
        "articulo": "9.2.5",
        "extracto": "U = 1,4 CM + 1,7 CV + 1,7 CE (9-6)"
       }
+     ],
+     "reemplaza": [
+      "758005fcfd6c5dd8"
      ]
     },
     {
@@ -1620,6 +1668,9 @@
        "articulo": "9.2.5",
        "extracto": "En el caso en que la carga muerta o la carga viva reduzcan el efecto del empuje lateral, se usará:"
       }
+     ],
+     "reemplaza": [
+      "fd5563b2799405dc"
      ]
     },
     {
@@ -1639,6 +1690,9 @@
        "articulo": "9.2.6",
        "extracto": "U = 1,4 CM + 1,7 CV + 1,4 CL (9-8)"
       }
+     ],
+     "reemplaza": [
+      "a3080809ea84d171"
      ]
     },
     {
@@ -1658,6 +1712,9 @@
        "articulo": "9.2.7",
        "extracto": "Si fuera necesario incluir en el diseño el efecto de cargas de impacto, éstas deberán incluirse en la carga viva (CV)."
       }
+     ],
+     "reemplaza": [
+      "f98e11ac7ae2f8b5"
      ]
     },
     {
@@ -1677,6 +1734,9 @@
        "articulo": "9.2.9",
        "extracto": "U = 1,05 CM + 1,25 CV + 1,05 CT (9-9)"
       }
+     ],
+     "reemplaza": [
+      "e7cadae639ad5dca"
      ]
     },
     {
@@ -1696,6 +1756,9 @@
        "articulo": "9.3.2.4",
        "extracto": "Aplastamiento en el concreto (excepto para las zonas de anclajes de postensado)…. 0,70"
       }
+     ],
+     "reemplaza": [
+      "cadb48a501a4235f"
      ]
     },
     {
@@ -1715,6 +1778,9 @@
        "articulo": "9.3.2.5",
        "extracto": "Zonas de anclaje de postensado … 0,85"
       }
+     ],
+     "reemplaza": [
+      "8b658eee96062c88"
      ]
     },
     {
@@ -1734,6 +1800,9 @@
        "articulo": "9.3.2.7",
        "extracto": "Las longitudes de desarrollo especificadas en el capítulo 12 no requieren de un factor"
       }
+     ],
+     "reemplaza": [
+      "1a8785273d62b3eb"
      ]
     },
     {
@@ -1772,6 +1841,9 @@
        "articulo": "9.5.1",
        "extracto": "excepto para los aceros de preesforzado, para los refuerzos transversales en espiral en 10.9.3, el refuerzo por cortante y torsión (véase 11.5.2 y 11.6.3.4)."
       }
+     ],
+     "reemplaza": [
+      "05503642ab3aa11c"
      ]
     },
     {
@@ -1792,6 +1864,9 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)"
       }
+     ],
+     "reemplaza": [
+      "a3c2956dfe368813"
      ]
     },
     {
@@ -1813,6 +1888,9 @@
        "articulo": "9.6.2.1",
        "extracto": "Los peraltes o espesores mínimos para no verificar deflexiones, que se señalan en la Tabla 9.1 pueden utilizarse como referencia en elementos armados en una dirección (aligerados, losas macizas y vigas)"
       }
+     ],
+     "reemplaza": [
+      "8f1d403ba46b9b0e"
      ]
     },
     {
@@ -1833,6 +1911,9 @@
        "articulo": "9.6.2.1",
        "extracto": "(b) Para fy distinto de 420 MPa, los valores de la Tabla deben multiplicarse por (0,4 + fy / 700)."
       }
+     ],
+     "reemplaza": [
+      "fa78f4497781224c"
      ]
     },
     {
@@ -1852,6 +1933,9 @@
        "articulo": "9.6.2.1",
        "extracto": "los valores de la tabla deben multiplicarse por (1,65 – 0,0003 wc), pero no menos de 1,09"
       }
+     ],
+     "reemplaza": [
+      "78349e01d9b035b8"
      ]
     },
     {
@@ -1871,6 +1955,9 @@
        "articulo": "9.6.2.3",
        "extracto": "(b) Cuando no se especifique fct, fr debe multiplicarse por 0,75 para concreto liviano en todos sus componentes, y por 0,85 para concreto liviano con arena de peso normal."
       }
+     ],
+     "reemplaza": [
+      "f413349d8e9123ca"
      ]
     },
     {
@@ -1890,6 +1977,9 @@
        "articulo": "9.6.2.3",
        "extracto": "cuando exista acero en compresión, se podrá utilizar una relación modular de 2n (n = Es / Ec) para la transformación del acero en compresión a concreto equivalente."
       }
+     ],
+     "reemplaza": [
+      "803b119018e541d3"
      ]
     },
     {
@@ -1909,6 +1999,9 @@
        "articulo": "9.6.2.4",
        "extracto": "Ie promedio = ( Ie2 + 2 Ie3 ) / 3 (9-14)"
       }
+     ],
+     "reemplaza": [
+      "0c6a26d16c2e8c43"
      ]
     },
     {
@@ -1928,6 +2021,9 @@
        "articulo": "9.6.2.4",
        "extracto": "(d) Para elementos en voladizo se usará el momento de inercia calculado para la sección en el apoyo del voladizo."
       }
+     ],
+     "reemplaza": [
+      "9ddf82f45eb5a04f"
      ]
     },
     {
@@ -1948,6 +2044,9 @@
        "articulo": "9.6.2.5",
        "extracto": "ξ, el factor dependiente del tiempo para cargas sostenidas, igual a: … 5 años o más … 2,0 … 12 meses … 1,4 … 6 meses … 1,2 … 3 meses … 1,0"
       }
+     ],
+     "reemplaza": [
+      "8a8df8c757b820aa"
      ]
     },
     {
@@ -1968,6 +2067,9 @@
        "articulo": "9.6.2.6",
        "extracto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2"
       }
+     ],
+     "reemplaza": [
+      "331fb682852873fa"
      ]
     },
     {
@@ -1988,6 +2090,9 @@
        "articulo": "9.6.2.6",
        "extracto": "La deflexión calculada de acuerdo con 9.6.2.2 a 9.6.2.5 no debe exceder los límites establecidos en la Tabla 9.2"
       }
+     ],
+     "reemplaza": [
+      "e34cb51f6f2be650"
      ]
     },
     {
@@ -2007,6 +2112,9 @@
        "articulo": "9.6.3.2",
        "extracto": "(a) Losas sin ábacos como se definen en 13.2.6 … 125 mm"
       }
+     ],
+     "reemplaza": [
+      "5881d242cfd79290"
      ]
     },
     {
@@ -2027,6 +2135,9 @@
        "articulo": "9.6.3.2",
        "extracto": "debe estar de acuerdo con lo requerido en la Tabla 9.3"
       }
+     ],
+     "reemplaza": [
+      "2be44954536508c2"
      ]
     },
     {
@@ -2046,6 +2157,9 @@
        "articulo": "9.6.3.3",
        "extracto": "pero no menor que 90 mm."
       }
+     ],
+     "reemplaza": [
+      "8cf5b5cf3cb66418"
      ]
     },
     {
@@ -2065,6 +2179,9 @@
        "articulo": "9.6.3.3",
        "extracto": "o bien aumentar el espesor mínimo requerido por las ecuaciones (9-16) ó (9-17), por lo menos un 10% en el panel que tenga un borde discontinuo."
       }
+     ],
+     "reemplaza": [
+      "c6195f2e3f7a4b1c"
      ]
     },
     {
@@ -2084,6 +2201,9 @@
        "articulo": "9.6.4.1",
        "extracto": "se permite utilizar el momento de inercia de la sección total de concreto, Ig, para los elementos a flexión Clase U"
       }
+     ],
+     "reemplaza": [
+      "242674f13c7336cb"
      ]
     },
     {
@@ -2103,6 +2223,9 @@
        "articulo": "9.7.2",
        "extracto": "Barras lisas 0,0025"
       }
+     ],
+     "reemplaza": [
+      "261bcbd09456c401"
      ]
     },
     {
@@ -2123,6 +2246,9 @@
        "articulo": "9.7.7",
        "extracto": "produzca un esfuerzo promedio de compresión mínimo de 0,7 MPa sobre el área bruta de concreto."
       }
+     ],
+     "reemplaza": [
+      "8854cb72fb809037"
      ]
     },
     {
@@ -2142,6 +2268,9 @@
        "articulo": "9.7.7",
        "extracto": "(b) El espaciamiento entre los tendones no debe exceder de 1,8 m."
       }
+     ],
+     "reemplaza": [
+      "d1e5f0afd44a4d33"
      ]
     },
     {
@@ -2162,6 +2291,9 @@
        "articulo": "9.8.1",
        "extracto": "En muros y losas, exceptuando las losas nervadas, el espaciamiento entre ejes del refuerzo principal por flexión será menor o igual a tres veces el espesor del elemento estructural, sin exceder de 400 mm."
       }
+     ],
+     "reemplaza": [
+      "dc700c0a39bcb873"
      ]
     },
     {
@@ -2181,6 +2313,9 @@
        "articulo": "9.9.3",
        "extracto": "permita obtener un valor del parámetro Z menor o igual que 26 KN/mm."
       }
+     ],
+     "reemplaza": [
+      "19ac1a2b34e33bce"
      ]
     },
     {
@@ -2201,6 +2336,9 @@
        "articulo": "9.9.3",
        "extracto": "Act: área efectiva del concreto en tracción (mm²) que rodea al refuerzo principal de tracción"
       }
+     ],
+     "reemplaza": [
+      "1681acce7a779a20"
      ]
     },
     {
@@ -2220,6 +2358,9 @@
        "articulo": "9.9.4",
        "extracto": "Las disposiciones del 9.9.3 no son suficientes para elementos expuestos a ambientes agresivos ni para obtener elementos impermeables."
       }
+     ],
+     "reemplaza": [
+      "9c4e92721d455a13"
      ]
     },
     {
@@ -2239,6 +2380,9 @@
        "articulo": "9.9.5",
        "extracto": "una parte del refuerzo de tracción por flexión debe distribuirse en el ancho efectivo del ala (véase 8.10) o en un ancho igual a 1/10 de la luz del tramo, el que sea menor."
       }
+     ],
+     "reemplaza": [
+      "63daac357f8bd2ce"
      ]
     },
     {
@@ -2259,6 +2403,9 @@
        "articulo": "9.9.6",
        "extracto": "en una distancia 0,5 h cercana de la armadura principal de tracción por flexión."
       }
+     ],
+     "reemplaza": [
+      "8b554216f326d859"
      ]
     },
     {
@@ -2278,6 +2425,9 @@
        "articulo": "9.9.6",
        "extracto": "s ≤ 300 mm, s ≤ 380 (250 / fs) – 2,5 Cc (9-20) s ≤ 300 (250 / fs) (9-21)"
       }
+     ],
+     "reemplaza": [
+      "9dd12d695201ebda"
      ]
     }
    ]

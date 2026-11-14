@@ -685,6 +685,9 @@
        "articulo": "4.2.2",
        "extracto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta."
       }
+     ],
+     "reemplaza": [
+      "3fa973b1edb1f86e"
      ]
     },
     {
@@ -704,6 +707,9 @@
        "articulo": "4.3.1",
        "extracto": "El concreto que va a estar expuesto a soluciones o suelos que contengan sulfatos debe cumplir con los requisitos de la Tabla 4.4."
       }
+     ],
+     "reemplaza": [
+      "bbf494a42687125f"
      ]
     },
     {
@@ -723,6 +729,9 @@
        "articulo": "4.4.1",
        "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días… no deben exceder los límites de la Tabla 4.5."
       }
+     ],
+     "reemplaza": [
+      "1d225402690fd7e7"
      ]
     },
     {
@@ -742,6 +751,9 @@
        "articulo": "4.4.1",
        "extracto": "…las concentraciones máximas de iones cloruro solubles en agua en el concreto endurecido a edades que van de 28 a 42 días… no deben exceder los límites de la Tabla 4.5."
       }
+     ],
+     "reemplaza": [
+      "ce9c3cbfadb27cbb"
      ]
     },
     {
@@ -761,6 +773,9 @@
        "articulo": "4.2.1",
        "extracto": "La tolerancia en el contenido total de aire incorporado debe ser de ±1,5%."
       }
+     ],
+     "reemplaza": [
+      "64cbabfc6f657b95"
      ]
     },
     {
@@ -780,6 +795,9 @@
        "articulo": "4.3.2",
        "extracto": "El cloruro de calcio no debe emplearse como aditivo en concretos sometidos a exposición a sulfatos severa o muy severa, tal como se definen en la Tabla 4.4."
       }
+     ],
+     "reemplaza": [
+      "bc105008f7b6d833"
      ]
     },
     {
@@ -799,6 +817,9 @@
        "articulo": "4.2.2",
        "extracto": "Los concretos expuestos a las condiciones especiales de exposición señaladas en la Tabla 4.2 deben cumplir con las relaciones máximas agua-material cementante y con la resistencia mínima f’c señaladas en ésta."
       }
+     ],
+     "reemplaza": [
+      "567804e3a4bc0cab"
      ]
     },
     {
@@ -819,6 +840,9 @@
        "articulo": "4.2.1",
        "extracto": "Los concretos de peso normal y los de pesos livianos expuestos a condiciones de congelamiento y deshielo o a productos químicos descongelantes deben tener aire incorporado, con el contenido total de aire indicado en la Tabla 4.1."
       }
+     ],
+     "reemplaza": [
+      "2ec7cc38e2be4b7f"
      ]
     },
     {
@@ -840,6 +864,9 @@
        "articulo": "4.2.1",
        "extracto": "Para concretos con f’c mayor de 35 MPa, se puede reducir el aire incorporado indicado en la Tabla 4.1 en 1%."
       }
+     ],
+     "reemplaza": [
+      "24e3148bb270fc10"
      ]
     },
     {
@@ -899,6 +926,9 @@
        "articulo": "4.2.3",
        "extracto": "…el peso máximo de las cenizas volantes, otras puzolanas, microsílice o las escorias incluidas en el concreto, no debe exceder los porcentajes respecto al peso total de materiales cementantes dados en la Tabla 4.3."
       }
+     ],
+     "reemplaza": [
+      "47ae66e762449adf"
      ]
     },
     {
@@ -919,6 +949,9 @@
        "articulo": "4.2.3",
        "extracto": "…el peso máximo de las cenizas volantes, otras puzolanas, microsílice o las escorias incluidas en el concreto, no debe exceder los porcentajes respecto al peso total de materiales cementantes dados en la Tabla 4.3."
       }
+     ],
+     "reemplaza": [
+      "d93b57caf3af82e9"
      ]
     },
     {
@@ -939,6 +972,9 @@
        "articulo": "4.3.1",
        "extracto": "El concreto que va a estar expuesto a soluciones o suelos que contengan sulfatos debe cumplir con los requisitos de la Tabla 4.4."
       }
+     ],
+     "reemplaza": [
+      "f95ea1336de23fd3"
      ]
     },
     {
@@ -958,6 +994,9 @@
        "articulo": "4.3.1",
        "extracto": "El concreto debe estar hecho con un cemento que proporcione resistencia a los sulfatos y que tenga una relación agua-material cementante máxima y un f’c mínimo según la Tabla 4.4."
       }
+     ],
+     "reemplaza": [
+      "afb76ca745b4d714"
      ]
     },
     {
@@ -997,6 +1036,9 @@
        "articulo": "4.4.1",
        "extracto": "…no deben exceder los límites de la Tabla 4.5."
       }
+     ],
+     "reemplaza": [
+      "07b81fda505a8d11"
      ]
     },
     {
@@ -1016,6 +1058,9 @@
        "articulo": "4.4.2",
        "extracto": "…deben cumplirse los requisitos de la Tabla 4.2 para la máxima relación agua-material cementante y valor mínimo de f’c, y los requisitos de recubrimiento mínimo del concreto de 7.7."
       }
+     ],
+     "reemplaza": [
+      "341d9f29c01498f2"
      ]
     }
    ]

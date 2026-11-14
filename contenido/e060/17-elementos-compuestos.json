@@ -289,6 +289,9 @@
        "articulo": "17.5.3.1",
        "extracto": "…la resistencia al cortante Vnh no debe tomarse mayor a 0,55 bv d."
       }
+     ],
+     "reemplaza": [
+      "feafd520234784d2"
      ]
     },
     {
@@ -315,6 +318,9 @@
        "articulo": "17.5.3.3",
        "extracto": "Vnh debe tomarse igual a (1,8 + 0,6 ρv fy) λ bv d, pero no mayor que 3,5 bv d."
       }
+     ],
+     "reemplaza": [
+      "908e182a6e63b56d"
      ]
     },
     {
@@ -359,6 +365,9 @@
        "articulo": "17.5.3.1",
        "extracto": "…la resistencia al cortante Vnh no debe tomarse mayor a 0,55 bv d."
       }
+     ],
+     "reemplaza": [
+      "941779a67ba83c14"
      ]
     },
     {
@@ -378,6 +387,9 @@
        "articulo": "17.5.3.3",
        "extracto": "Vnh debe tomarse igual a (1,8 + 0,6 ρv fy) λ bv d, pero no mayor que 3,5 bv d."
       }
+     ],
+     "reemplaza": [
+      "c94c2e4da8c88e5b"
      ]
     },
     {
@@ -397,6 +409,9 @@
        "articulo": "17.2.4",
        "extracto": "En el cálculo de la resistencia de elementos compuestos no debe hacerse distinción entre elementos apuntalados y no apuntalados."
       }
+     ],
+     "reemplaza": [
+      "32ce7c0bd8428255"
      ]
     },
     {
@@ -416,6 +431,9 @@
        "articulo": "17.6.1",
        "extracto": "…el área de los estribos no debe ser menor que la requerida por 11.5.6.2, y su espaciamiento no debe exceder de cuatro veces la dimensión menor del elemento soportado, ni de 600 mm."
       }
+     ],
+     "reemplaza": [
+      "58bcac540c7cb5a5"
      ]
     },
     {
@@ -435,6 +453,9 @@
        "articulo": "17.2.3",
        "extracto": "deben utilizarse en el diseño las propiedades de los elementos individuales o los valores más críticos."
       }
+     ],
+     "reemplaza": [
+      "b6c3e5d78e7b415c"
      ]
     },
     {
@@ -454,6 +475,9 @@
        "articulo": "17.2.5",
        "extracto": "Todos los elementos deben diseñarse para resistir las cargas aplicadas antes del completo desarrollo de la resistencia de diseño del elemento compuesto."
       }
+     ],
+     "reemplaza": [
+      "47bed5905a3766b2"
      ]
     },
     {
@@ -473,6 +497,9 @@
        "articulo": "17.2.7",
        "extracto": "Los elementos compuestos deben cumplir con los requisitos de control de deflexiones dados en 9.6."
       }
+     ],
+     "reemplaza": [
+      "4d3d6eaca1ad9ecf"
      ]
     },
     {
@@ -492,6 +519,9 @@
        "articulo": "17.4.1",
        "extracto": "el diseño se hará de acuerdo con los requisitos del Capítulo 11, como si se tratara de un elemento monolítico de la misma sección transversal."
       }
+     ],
+     "reemplaza": [
+      "ef42a46d3233922b"
      ]
     },
     {
@@ -511,6 +541,9 @@
        "articulo": "17.4.3",
        "extracto": "Se permite considerar el refuerzo para cortante vertical, debidamente anclado y extendido a lo largo del elemento, como refuerzo para tomar el cortante horizontal."
       }
+     ],
+     "reemplaza": [
+      "9634614b19b2193d"
      ]
     },
     {
@@ -530,6 +563,9 @@
        "articulo": "17.5.2",
        "extracto": "pero no hay necesidad de tomarlo menor de 0,8 h para elementos de concreto preesforzado."
       }
+     ],
+     "reemplaza": [
+      "7622ef8b7ec9b696"
      ]
     },
     {
@@ -549,6 +585,9 @@
        "articulo": "17.5.3.2",
        "extracto": "Donde se proporcione el mínimo de estribos de acuerdo con 17.6 y las superficies de contacto estén limpias y libres de lechada, pero no se hayan hecho rugosas intencionalmente, Vnh no debe tomarse mayor a 0,55 bv d."
       }
+     ],
+     "reemplaza": [
+      "029c1d5c016840c8"
      ]
     },
     {
@@ -568,6 +607,9 @@
        "articulo": "17.5.3.3",
        "extracto": "Deben usarse los valores de λ indicados en 11.7.4.3 y ρv es"
       }
+     ],
+     "reemplaza": [
+      "f664e0bf6e058794"
      ]
     },
     {
@@ -587,6 +629,9 @@
        "articulo": "17.5.4",
        "extracto": "donde el área de la superficie de contacto debe sustituir a bv d."
       }
+     ],
+     "reemplaza": [
+      "1c874feefe49b96f"
      ]
     },
     {
@@ -606,6 +651,9 @@
        "articulo": "17.5.4.1",
        "extracto": "debe representar aproximadamente la distribución del esfuerzo de cortante en el elemento."
       }
+     ],
+     "reemplaza": [
+      "a918f1190ede13b0"
      ]
     },
     {
@@ -625,6 +673,9 @@
        "articulo": "17.5.5",
        "extracto": "sólo se permitirá la transmisión de cortante por contacto cuando se proporcione el mínimo de estribos de acuerdo con 17.6."
       }
+     ],
+     "reemplaza": [
+      "c4f26aa34a3af137"
      ]
     },
     {
@@ -644,6 +695,9 @@
        "articulo": "17.6.2",
        "extracto": "Los estribos que resisten el cortante horizontal deben consistir en barras individuales, alambres, estribos de ramas múltiples o ramas verticales de refuerzo electrosoldado de alambre."
       }
+     ],
+     "reemplaza": [
+      "e688952e93476ea8"
      ]
     },
     {
@@ -663,6 +717,9 @@
        "articulo": "17.6.3",
        "extracto": "Todos los estribos deben anclarse totalmente dentro de cada uno de los elementos conectados de acuerdo con 12.13."
       }
+     ],
+     "reemplaza": [
+      "22b552d1a76e047e"
      ]
     }
    ]

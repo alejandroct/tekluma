@@ -358,6 +358,9 @@
        "articulo": "2.2",
        "extracto": "Agregado Fino — Agregado proveniente de la desintegración natural o artificial, que pasa el tamiz 9,5 mm (3/8\")."
       }
+     ],
+     "reemplaza": [
+      "8d198cacc9a5ab14"
      ]
     },
     {
@@ -377,6 +380,9 @@
        "articulo": "2.2",
        "extracto": "Agregado Grueso — Agregado retenido en el tamiz 4,75 mm (Nº 4), proveniente de la desintegración natural o mecánica de las rocas."
       }
+     ],
+     "reemplaza": [
+      "4bf94987a667ec7a"
      ]
     },
     {
@@ -435,6 +441,9 @@
        "articulo": "2.2",
        "extracto": "Pedestal — Elemento vertical en compresión que tiene una relación entre la altura sin apoyo y el promedio de la menor dimensión lateral no mayor a 3."
       }
+     ],
+     "reemplaza": [
+      "e3fb10108b6c8b1b"
      ]
     },
     {
@@ -511,6 +520,9 @@
        "articulo": "2.2",
        "extracto": "Concreto simple — Concreto estructural sin armadura de refuerzo o con menos refuerzo que el mínimo especificado para concreto reforzado."
       }
+     ],
+     "reemplaza": [
+      "d5ff9b0777bfebfa"
      ]
     },
     {
@@ -644,6 +656,9 @@
        "articulo": "2.2",
        "extracto": "Resistencia de diseño — Resistencia nominal multiplicada por el factor de reducción de resistencia φ que corresponda."
       }
+     ],
+     "reemplaza": [
+      "aa8b1e59b7b3a355"
      ]
     },
     {
@@ -663,6 +678,9 @@
        "articulo": "2.2",
        "extracto": "Resistencia Requerida — Resistencia que un elemento o una sección transversal debe tener para resistir las cargas amplificadas o los momentos y fuerzas internas correspondientes combinadas según lo estipulado en esta Norma."
       }
+     ],
+     "reemplaza": [
+      "18c48cbb38fc8e0c"
      ]
     },
     {
@@ -701,6 +719,9 @@
        "articulo": "2.2",
        "extracto": "Peralte efectivo o Altura útil de la sección (d) — La distancia medida desde la fibra extrema en compresión hasta el centroide del refuerzo longitudinal sometido a tracción."
       }
+     ],
+     "reemplaza": [
+      "ab71bd10b584f93c"
      ]
     },
     {
@@ -758,6 +779,9 @@
        "articulo": "2.2",
        "extracto": "Junta de contracción — Muesca moldeada, aserrada o labrada en una estructura de concreto para crear un plano de debilidad y regular la ubicación del agrietamiento…"
       }
+     ],
+     "reemplaza": [
+      "4fbdb4c2f40d5b88"
      ]
     },
     {
@@ -834,6 +858,9 @@
        "articulo": "2.1",
        "extracto": "ρ = cuantía del refuerzo As evaluada sobre el área bd, Capítulos 11, 13, 21."
       }
+     ],
+     "reemplaza": [
+      "68422a08bba4e011"
      ]
     },
     {
@@ -853,6 +880,9 @@
        "articulo": "2.1",
        "extracto": "f’ci = resistencia especificada a la compresión del concreto al momento del preesforzado inicial, MPa, Capítulos 7, 18."
       }
+     ],
+     "reemplaza": [
+      "579e78aaf59258dd"
      ]
     },
     {
@@ -872,6 +902,9 @@
        "articulo": "2.1",
        "extracto": "f’cr = resistencia promedio a la compresión requerida del concreto, empleada como base para la dosificación del concreto…"
       }
+     ],
+     "reemplaza": [
+      "85b03b29e3e93555"
      ]
     },
     {
@@ -891,6 +924,9 @@
        "articulo": "2.1",
        "extracto": "λ = factor de modificación relacionado con la densidad del concreto, Capítulos 11, 12, 17-19."
       }
+     ],
+     "reemplaza": [
+      "ad79d15e6031d840"
      ]
     },
     {
@@ -910,6 +946,9 @@
        "articulo": "2.1",
        "extracto": "bo = perímetro de la sección crítica para cortante en losas y zapatas, mm, Capítulos 11, 22."
       }
+     ],
+     "reemplaza": [
+      "0419d3657660c4eb"
      ]
     },
     {
@@ -1071,6 +1110,9 @@
        "articulo": "2.2",
        "extracto": "Estribo — Refuerzo colocado perpendicularmente o en ángulo con respecto al refuerzo longitudinal, empleado para resistir esfuerzos de cortante y de torsión en un elemento estructural."
       }
+     ],
+     "reemplaza": [
+      "84279dc755615d85"
      ]
     },
     {

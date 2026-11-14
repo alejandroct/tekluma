@@ -511,6 +511,9 @@
        "articulo": "22.5.1",
        "extracto": "Mn = 0,42 √f’c Sm (22-2) si controla la tracción"
       }
+     ],
+     "reemplaza": [
+      "92c2350df060a66f"
      ]
     },
     {
@@ -593,6 +596,9 @@
        "articulo": "22.5.4",
        "extracto": "Vn = 0,11 √f’c bw h (22-9) para la acción como viga"
       }
+     ],
+     "reemplaza": [
+      "eed962890bd883ab"
      ]
     },
     {
@@ -641,6 +647,9 @@
        "articulo": "22.6.5.2",
        "extracto": "Pn = 0,45 f’c Ag [1 − (ℓc / 32h)²] (22-14)"
       }
+     ],
+     "reemplaza": [
+      "5b53230f3434ec0e"
      ]
     },
     {
@@ -711,6 +720,9 @@
        "articulo": "22.7.3",
        "extracto": "No se permite el uso del concreto simple para zapatas sobre pilotes."
       }
+     ],
+     "reemplaza": [
+      "83af52ae5c99e519"
      ]
     },
     {
@@ -800,6 +812,9 @@
        "articulo": "22.2.4",
        "extracto": "La resistencia especificada del concreto simple para ser usado con fines estructurales medida a los 28 días no debe ser menor de 14 MPa."
       }
+     ],
+     "reemplaza": [
+      "fabbaa6bf1b32bde"
      ]
     },
     {
@@ -819,6 +834,9 @@
        "articulo": "22.4.2",
        "extracto": "El factor de reducción de resistencia será de 0,65 como se indica en 9.3.2.9."
       }
+     ],
+     "reemplaza": [
+      "9bc48cb7b07560ef"
      ]
     },
     {
@@ -838,6 +856,9 @@
        "articulo": "22.2.2",
        "extracto": "(a) Elementos que están apoyados de manera continua sobre el suelo… (b) Elementos en los cuales el efecto de arco genera compresión bajo todas las condiciones de carga; (c) Muros y pedestales… No está permitido el uso de columnas de concreto estructural simple."
       }
+     ],
+     "reemplaza": [
+      "05c6f10cd8ec9445"
      ]
     },
     {
@@ -857,6 +878,9 @@
        "articulo": "22.4.8",
        "extracto": "…excepto para el concreto vaciado contra el suelo en donde la altura o peralte del elemento deberá tomarse 50 mm menor que la dimensión real."
       }
+     ],
+     "reemplaza": [
+      "d1c36f09d5ae77d9"
      ]
     },
     {
@@ -876,6 +900,9 @@
        "articulo": "22.7.4",
        "extracto": "El espesor de las zapatas de concreto simple estructural no debe ser menor que 300 mm."
       }
+     ],
+     "reemplaza": [
+      "81780a872d4d7463"
      ]
     },
     {
@@ -895,6 +922,9 @@
        "articulo": "22.10.1",
        "extracto": "(a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa. (b) La piedra desplazadora no excederá del 30% del volumen total de concreto ciclópeo… (c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm."
       }
+     ],
+     "reemplaza": [
+      "4052f7757d5a9e1a"
      ]
     },
     {
@@ -914,6 +944,9 @@
        "articulo": "22.10.1",
        "extracto": "(c) La mayor dimensión de la piedra desplazadora no excederá de la mitad de la menor dimensión del elemento ni será mayor de 250 mm."
       }
+     ],
+     "reemplaza": [
+      "0d6daab0ee2b4396"
      ]
     },
     {
@@ -933,6 +966,9 @@
        "articulo": "22.8.2",
        "extracto": "La relación entre la altura no apoyada y la menor dimensión lateral de pedestales de concreto simple no debe exceder de 3."
       }
+     ],
+     "reemplaza": [
+      "ffae63c9e3955202"
      ]
     },
     {
@@ -952,6 +988,9 @@
        "articulo": "22.1.2",
        "extracto": "no está controlado por esta Norma, a menos que ellas transmitan cargas verticales o fuerzas laterales desde otras partes de la estructura al suelo."
       }
+     ],
+     "reemplaza": [
+      "0a2a7726208fced8"
      ]
     },
     {
@@ -971,6 +1010,9 @@
        "articulo": "22.2.2",
        "extracto": "No está permitido el empleo de concreto simple en elementos estructurales sometidos a solicitaciones sísmicas que hayan sido determinadas en base a la capacidad de la estructura de disipar energía."
       }
+     ],
+     "reemplaza": [
+      "027db1093ea51283"
      ]
     },
     {
@@ -990,6 +1032,9 @@
        "articulo": "22.4.3",
        "extracto": "debe proporcionarse refuerzo y el elemento debe diseñarse como uno de concreto armado de acuerdo con los requisitos pertinentes de esta Norma."
       }
+     ],
+     "reemplaza": [
+      "ea149db64bd1b279"
      ]
     },
     {
@@ -1009,6 +1054,9 @@
        "articulo": "22.4.5",
        "extracto": "se puede considerar la resistencia a tracción del concreto cuando se han seguido las disposiciones de 22.3."
       }
+     ],
+     "reemplaza": [
+      "fa1d438c2061dcce"
      ]
     },
     {
@@ -1028,6 +1076,9 @@
        "articulo": "22.4.7",
        "extracto": "No se debe suponer continuidad a la flexión debida a tracción entre elementos adyacentes de concreto simple estructural."
       }
+     ],
+     "reemplaza": [
+      "fbd678738d12c73c"
      ]
     },
     {
@@ -1047,6 +1098,9 @@
        "articulo": "22.5.3",
        "extracto": "y en la cara de tracción: Mu/Sm - Pu/Ag ≤ 0,42 φ √f'c (22-7)"
       }
+     ],
+     "reemplaza": [
+      "e88a9d240b1888f7"
      ]
     },
     {
@@ -1066,6 +1120,9 @@
        "articulo": "22.5.4",
        "extracto": "para la acción en dos direcciones, pero no mayor que 0,22 √f'c bo h."
       }
+     ],
+     "reemplaza": [
+      "3b49b2f197fc16f2"
      ]
     },
     {
@@ -1085,6 +1142,9 @@
        "articulo": "22.5.5",
        "extracto": "Bn = 0,85 f'c A1 (22-12) excepto cuando la superficie de apoyo es más ancha en todos los lados que el área cargada, caso en el cual Bn debe multiplicarse por √(A2/A1), pero no por más de 2."
       }
+     ],
+     "reemplaza": [
+      "be887c215bc8b75b"
      ]
     },
     {
@@ -1104,6 +1164,9 @@
        "articulo": "22.6.3",
        "extracto": "En caso contrario, los muros deben diseñarse de acuerdo con 22.5.3."
       }
+     ],
+     "reemplaza": [
+      "58f7c60c47b83923"
      ]
     },
     {
@@ -1124,6 +1187,9 @@
        "articulo": "22.6.6.2",
        "extracto": "el espesor de muros de carga no debe ser menor que un 1/24 de la longitud o altura no apoyada, la que sea menor, ni que 150 mm."
       }
+     ],
+     "reemplaza": [
+      "6a844cc5ff4d3785"
      ]
     },
     {
@@ -1143,6 +1209,9 @@
        "articulo": "22.6.6.5",
        "extracto": "Se deben proporcionar no menos de dos barras de diámetro 5/8” alrededor de todas las aberturas de ventanas y puertas."
       }
+     ],
+     "reemplaza": [
+      "5fa2d17d3cf579ae"
      ]
     },
     {
@@ -1162,6 +1231,9 @@
        "articulo": "22.7.6.2",
        "extracto": "ubicada a una distancia h del borde de la carga concentrada o área de reacción."
       }
+     ],
+     "reemplaza": [
+      "8abfb26a9af276cd"
      ]
     },
     {
@@ -1181,6 +1253,9 @@
        "articulo": "22.7.6.2",
        "extracto": "pero no necesita estar más cerca que 0,5h del perímetro de la carga concentrada o área de carga."
       }
+     ],
+     "reemplaza": [
+      "b23c0e71fb8e4e5b"
      ]
     },
     {
@@ -1201,6 +1276,9 @@
        "articulo": "22.8.2",
        "extracto": "La relación entre la altura no apoyada y la menor dimensión lateral de pedestales de concreto simple no debe exceder de 3."
       }
+     ],
+     "reemplaza": [
+      "446163e0ab3473c5"
      ]
     },
     {
@@ -1220,6 +1298,9 @@
        "articulo": "22.8.3",
        "extracto": "no debe exceder la resistencia de diseño al aplastamiento, φBn, dada en 22.5.5."
       }
+     ],
+     "reemplaza": [
+      "7bdc49535259b0b9"
      ]
     },
     {
@@ -1239,6 +1320,9 @@
        "articulo": "22.9.2",
        "extracto": "no sólo en su condición final sino también durante la fabricación, transporte y montaje."
       }
+     ],
+     "reemplaza": [
+      "0ad6f733c084600d"
      ]
     },
     {
@@ -1258,6 +1342,9 @@
        "articulo": "22.10.1",
        "extracto": "(a) La resistencia mínima del concreto de la matriz será f’c = 10 MPa."
       }
+     ],
+     "reemplaza": [
+      "5320b6f993851b7a"
      ]
     },
     {
@@ -1277,6 +1364,9 @@
        "articulo": "22.10.2.3",
        "extracto": "En el calculo de las resistencias según 22.5 se utilizará un factor φ = 0,5 y se utilizará, para el diseño, un valor de f’c no mayor a 10 MPa."
       }
+     ],
+     "reemplaza": [
+      "8915362be17586b5"
      ]
     }
    ]
