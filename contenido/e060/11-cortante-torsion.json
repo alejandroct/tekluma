@@ -1099,7 +1099,7 @@
      "citas": [
       {
        "articulo": "11.3.1.2",
-       "extracto": "Para elementos sometidos a compresión axial Nu: Vc = 0,17 √f’c (1 + Nu / 14 Ag) bw d (11-4) La cantidad Nu/Ag debe expresarse en MPa."
+       "extracto": "Para elementos sometidos a compresión axial Nu: Vc = 0,17 (1 + Nu / 14 Ag) √f'c bw d (11-4) La cantidad Nu/Ag debe expresarse en MPa."
       }
      ]
     },
@@ -1638,8 +1638,8 @@
      },
      "citas": [
       {
-       "articulo": "11.6.3",
-       "extracto": "Fig. 11.6.3 Definición de Aoh (área sombreada)."
+       "articulo": "2.1",
+       "extracto": "Aoh = área encerrada por el eje del refuerzo transversal cerrado más externo dispuesto para resistir la torsión, mm2, Capítulo 11."
       }
      ]
     },
@@ -1652,7 +1652,7 @@
      "citas": [
       {
        "articulo": "11.6.3.6",
-       "extracto": "Tn = 2 Ao At fyt cot θ / s (11-21) Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh. θ no debe tomarse menor a 30° ni mayor que 60°. Se puede tomar θ igual a: (a) 45° en elementos no preesforzados…"
+       "extracto": "Tn = (2 Ao At fyt / s) cot θ (11-21) Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh. θ no debe tomarse menor a 30° ni mayor que 60°."
       }
      ]
     },
@@ -1687,7 +1687,7 @@
      "citas": [
       {
        "articulo": "11.6.3.6",
-       "extracto": "Tn = 2 Ao At fyt cot θ / s (11-21) Ao… se puede asumir igual a 0,85 Aoh."
+       "extracto": "Tn = (2 Ao At fyt / s) cot θ (11-21) Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh."
       }
      ]
     },
@@ -1700,7 +1700,7 @@
      "citas": [
       {
        "articulo": "11.6.3.8",
-       "extracto": "(A(v+t)/s) total = Av/s + 2 (At/s) En los estribos con más de dos ramas para cortante, sólo las ramas adyacentes a los lados de la viga deben ser incluidas en la suma…"
+       "extracto": "(A(v+t) / s) total = Av / s + 2 (At / s) En los estribos con más de dos ramas para cortante, sólo las ramas adyacentes a los lados de la viga deben ser incluidas en la suma"
       }
      ]
     },
@@ -1967,7 +1967,7 @@
      "citas": [
       {
        "articulo": "11.10.5",
-       "extracto": "Vc = Acw (αc √f’c) (11-30) donde el coeficiente αc es 0,25 para [hm/ℓm] ≤ 1,5; 0,17 para [hm/ℓm] ≥ 2,0 y varia linealmente entre 0,25 y 0,17 para [hm/ℓm] entre 1,5 y 2,0."
+       "extracto": "Vc = Acw (αc √f'c) (11-30) donde el coeficiente αc es 0,25 para hm/ℓm ≤ 1,5; 0,17 para hm/ℓm ≥ 2,0 y varía linealmente entre 0,25 y 0,17 para hm/ℓm entre 1,5 y 2,0."
       }
      ]
     },
@@ -2010,7 +2010,7 @@
      "citas": [
       {
        "articulo": "11.10.5",
-       "extracto": "Vc = Acw (αc √f’c) (11-30) donde el coeficiente αc es 0,25 para [hm/ℓm] ≤ 1,5"
+       "extracto": "Vc = Acw (αc √f'c) (11-30) donde el coeficiente αc es 0,25 para hm/ℓm ≤ 1,5"
       }
      ]
     },
@@ -2112,7 +2112,7 @@
      "citas": [
       {
        "articulo": "11.12.1",
-       "extracto": "La resistencia a cortante de losas y zapatas en la cercanía de las columnas… está regida por la más severa de las siguientes dos condiciones: 11.12.1.1 Comportamiento como viga… 11.12.1.2 Comportamiento en dos direcciones…"
+       "extracto": "La resistencia a cortante de losas y zapatas en la cercanía de las columnas, de las cargas concentradas o de las reacciones está regida por la más severa de las siguientes dos condiciones:"
       }
      ]
     },
@@ -2444,7 +2444,7 @@
      "citas": [
       {
        "articulo": "11.6.3.6",
-       "extracto": "Tn = 2 Ao At fyt cot θ / s (11-21) Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh. θ no debe tomarse menor a 30° ni mayor que 60°. Se puede tomar θ igual a: (a) 45° en elementos no preesforzados…"
+       "extracto": "Tn = (2 Ao At fyt / s) cot θ (11-21) Ao debe determinarse por análisis o se puede asumir igual a 0,85 Aoh."
       }
      ]
     },
@@ -2522,7 +2522,7 @@
      "citas": [
       {
        "articulo": "11.10.5",
-       "extracto": "Vc = Acw (αc √f’c) (11-30) donde el coeficiente αc es 0,25 para [hm/ℓm] ≤ 1,5; 0,17 para [hm/ℓm] ≥ 2,0 y varia linealmente entre 0,25 y 0,17 para [hm/ℓm] entre 1,5 y 2,0."
+       "extracto": "Vc = Acw (αc √f'c) (11-30) donde el coeficiente αc es 0,25 para hm/ℓm ≤ 1,5; 0,17 para hm/ℓm ≥ 2,0 y varía linealmente entre 0,25 y 0,17 para hm/ℓm entre 1,5 y 2,0."
       }
      ]
     },

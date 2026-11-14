@@ -2287,7 +2287,7 @@
      "citas": [
       {
        "articulo": "21.7.4.3",
-       "extracto": "Vu en el plano xx = 1,25 fy (As1 + As2) - Vcol"
+       "extracto": "El cortante en el nudo, Vu, se calculará por equilibrio de las fuerzas horizontales que concurren al nudo, como se indica en la figura a continuación."
       }
      ]
     },

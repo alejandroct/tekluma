@@ -968,7 +968,7 @@
      "citas": [
       {
        "articulo": "10.5.2",
-       "extracto": "As min = 0,22 √f’c bw d / fy (10-3)"
+       "extracto": "As min = (0,22 √f'c / fy) bw d (10-3)"
       }
      ]
     },
@@ -1198,7 +1198,7 @@
      "citas": [
       {
        "articulo": "10.9.3",
-       "extracto": "ρs = 0,45 (Ag / Ach − 1) f’c / fyt (10-5)"
+       "extracto": "ρs = 0,45 (Ag / Ach - 1) (f'c / fyt) (10-5)"
       }
      ]
     },
@@ -1319,7 +1319,7 @@
      "citas": [
       {
        "articulo": "10.11.4.2",
-       "extracto": "…si el índice de estabilidad del entrepiso, Q = ΣPu Δo / (Vus he) (10-6) es menor o igual a 0,06."
+       "extracto": "si el índice de estabilidad del entrepiso, Q: Q = (ΣPu Δo) / (Vus he) (10-6) es menor o igual a 0,06."
       }
      ]
     },
@@ -1363,7 +1363,7 @@
      "citas": [
       {
        "articulo": "10.11.4.2",
-       "extracto": "Q = ΣPu Δo / (Vus he) (10-6) … es menor o igual a 0,06."
+       "extracto": "si el índice de estabilidad del entrepiso, Q: Q = (ΣPu Δo) / (Vus he) (10-6) es menor o igual a 0,06."
       }
      ]
     },
@@ -1402,7 +1402,7 @@
      "citas": [
       {
        "articulo": "10.12.2",
-       "extracto": "k ℓu / r ≤ 34 − 12 (M1/M2) (10-7) En la ecuación 10-7, el término [34 − 12(M1/M2)] no debe tomarse mayor que 40."
+       "extracto": "k ℓu / r ≤ 34 - 12 (M1 / M2) (10-7) En la ecuación 10-7, el término [34 - 12 (M1/M2)] no debe tomarse mayor que 40."
       }
      ]
     },
@@ -1415,7 +1415,7 @@
      "citas": [
       {
        "articulo": "10.12.3",
-       "extracto": "Mc = δns M2 (10-8) donde: δns = Cm / (1 − Pu / 0,75 Pc) ≥ 1,0 (10-9) Pc = π² EI / (k ℓu)² (10-10)"
+       "extracto": "Mc = δns M2 (10-8) donde: δns = Cm / [1 - Pu / (0,75 Pc)] ≥ 1,0 (10-9) Pc = π² EI / (k ℓu)² (10-10)"
       }
      ]
     },
@@ -1449,7 +1449,7 @@
      "citas": [
       {
        "articulo": "10.12.3",
-       "extracto": "δns = Cm / (1 − Pu / 0,75 Pc) ≥ 1,0 (10-9)"
+       "extracto": "δns = Cm / [1 - Pu / (0,75 Pc)] ≥ 1,0 (10-9)"
       }
      ]
     },
@@ -1475,7 +1475,7 @@
      "citas": [
       {
        "articulo": "10.12.3.1",
-       "extracto": "Cm = 0,6 + 0,4 (M1/M2) ≥ 0,4 (10-13)"
+       "extracto": "Cm = 0,6 + 0,4 (M1 / M2) ≥ 0,4 (10-13)"
       }
      ]
     },
@@ -1511,7 +1511,7 @@
      "citas": [
       {
        "articulo": "10.12.3.2",
-       "extracto": "M2,min = Pu (15 + 0,03h) (10-14) … donde 15 y h están en mm."
+       "extracto": "M2,min = Pu (15 + 0,03 h) (10-14) alrededor de cada eje separadamente, donde 15 y h están en mm."
       }
      ]
     },
@@ -1775,7 +1775,7 @@
      "citas": [
       {
        "articulo": "10.18",
-       "extracto": "…para valores menores de la carga axial Pu, se usará la siguiente ecuación: Mux/φMnx + Muy/φMny ≤ 1.0 (10-23)"
+       "extracto": "para valores menores de la carga axial Pu, se usará la siguiente ecuación: Mux / φMnx + Muy / φMny ≤ 1,0 (10-23)"
       }
      ]
     },
@@ -1985,7 +1985,7 @@
      "citas": [
       {
        "articulo": "10.12.2",
-       "extracto": "k ℓu / r ≤ 34 − 12 (M1/M2) (10-7) En la ecuación 10-7, el término [34 − 12(M1/M2)] no debe tomarse mayor que 40."
+       "extracto": "k ℓu / r ≤ 34 - 12 (M1 / M2) (10-7) En la ecuación 10-7, el término [34 - 12 (M1/M2)] no debe tomarse mayor que 40."
       }
      ]
     },
@@ -2004,7 +2004,7 @@
      "citas": [
       {
        "articulo": "10.11.4.2",
-       "extracto": "…si el índice de estabilidad del entrepiso, Q = ΣPu Δo / (Vus he) (10-6) es menor o igual a 0,06."
+       "extracto": "si el índice de estabilidad del entrepiso, Q: Q = (ΣPu Δo) / (Vus he) (10-6) es menor o igual a 0,06."
       }
      ]
     },
