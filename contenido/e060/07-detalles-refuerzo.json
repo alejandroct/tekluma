@@ -633,6 +633,9 @@
        "articulo": "7.2.1",
        "extracto": "El diámetro de doblado, medido en la cara interior de la barra… no debe ser menor que lo indicado en la Tabla 7.1."
       }
+     ],
+     "reemplaza": [
+      "1f9241ec2e1c7120"
      ]
     },
     {
@@ -1208,6 +1211,9 @@
        "articulo": "7.2.1",
        "extracto": "El diámetro de doblado, medido en la cara interior de la barra… no debe ser menor que lo indicado en la Tabla 7.1."
       }
+     ],
+     "reemplaza": [
+      "3f2dddd95cdc86da"
      ]
     },
     {
@@ -1228,6 +1234,9 @@
        "articulo": "7.2.1",
        "extracto": "El diámetro de doblado, medido en la cara interior de la barra… no debe ser menor que lo indicado en la Tabla 7.1."
       }
+     ],
+     "reemplaza": [
+      "be747ada13256a71"
      ]
     },
     {

@@ -72,6 +72,8 @@ export type ResultadoImportacion = {
     reemplazadas: number;
     /** Tarjetas con el mismo contenido a las que solo se les corrigieron las citas. */
     citasActualizadas: number;
+    /** Copias de una tarjeta corregida que una importación anterior creó como nuevas; se retiran. */
+    duplicadasRetiradas: number;
   }[];
   /** Estado con el que entraron las tarjetas nuevas y las reemplazadas. */
   estado: "in_review" | "draft" | "approved";
