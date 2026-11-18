@@ -37,7 +37,7 @@ T = [
      "L: largo, B: ancho, P: perímetro medio del anillo."),
  om("Según la E.050, ¿qué relación entre la profundidad Df y el ancho B define a una cimentación superficial?",
     "Df/B menor o igual a 5", ["Df/B menor o igual a 3", "Df/B menor o igual a 10", "Df/B menor que 1"],
-    ("5.26", "Cimentación Superficial.- Aquella en la cual la relación Profundidad/Ancho (Df/B) es menor o igual a 5")),
+    ("5.26", "Cimentación Superficial.- Aquella en la cual la relación Profundidad/Ancho (Df / B) es menor o igual a 5")),
  om("Según el glosario de la E.050, ¿qué diámetro separa un pilote de un pilar?",
     "90 cm: el pilote tiene diámetro menor o igual a 90 cm y el pilar, mayor",
     ["60 cm: el pilote tiene diámetro menor o igual a 60 cm y el pilar, mayor", "1,20 m: el pilote tiene diámetro menor o igual a 1,20 m y el pilar, mayor", "50 cm: el pilote tiene diámetro menor o igual a 50 cm y el pilar, mayor"],

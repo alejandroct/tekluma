@@ -1,7 +1,7 @@
 """Texto por página de la E.050 con los símbolos de la fuente «Symbol» traducidos.
 Uso: E050_PDF=ruta.pdf E050_TRABAJO=carpeta python -I extraer.py"""
-import pymupdf, os, collections
-F=os.environ.get("E050_PDF","/Users/alejandrocabreratavara/Downloads/Norma E.050 Suelos y cimentaciones.pdf")
+import pymupdf, os, collections, re
+F=os.environ.get("E050_PDF","/Users/alejandrocabreratavara/Downloads/E.050 Suelos y Cimentaciones 2018.pdf")
 S=os.environ["E050_TRABAJO"]
 griego="αβχδεφγηιϕκλμνοπθρστυϖωξψζ"; GRIEGO="ΑΒΧΔΕΦΓΗΙϑΚΛΜΝΟΠΘΡΣΤΥςΩΞΨΖ"
 SYMBOL={chr(0x61+i):griego[i] for i in range(26)}|{chr(0x41+i):GRIEGO[i] for i in range(26)}|{
@@ -32,5 +32,6 @@ for i,p in enumerate(doc):
         lineas.append("")
     texto="\n".join(lineas)
     for a,b in LIGADURAS.items(): texto=texto.replace(a,b)
+    texto=re.sub(r"(f[il]) (?=[a-záéíóúñ])", r"\1", texto)   # El Peruano parte «fi»/«fl»: «Edifi caciones»
     open(f"{S}/texto/p{i+1:03}.txt","w").write(texto)
 print("símbolos:",simbolos.most_common()); print("desconocidos:",desconocidos.most_common(15))

@@ -9,7 +9,7 @@ T = [
     ("23.2", "Son cimentaciones superficiales las zapatas aisladas, conectadas y combinadas; las cimentaciones continuas (cimientos corridos) y las plateas de cimentación.")),
  om("Una cimentación tiene profundidad Df = 4,0 m y ancho B = 1,0 m. ¿Cómo la clasifica la E.050?",
     "Como superficial, porque Df/B = 4 es menor o igual a 5", ["Como profunda, porque Df/B = 4 es mayor que 3", "Como profunda, porque Df supera 3 m", "Como superficial, porque Df/B es menor que 10"],
-    ("23.1", "Son aquellas en las cuales la relación Profundidad / ancho (Df/ B) es menor o igual a cinco (5)")),
+    ("23.1", "Son aquellas en las cuales la relación Profundidad / ancho (Df / B) es menor o igual a cinco (5)")),
  om("¿Cómo trata la E.050 una zapata de forma no rectangular para calcular la presión aplicada?",
     "Se asimila a otra similar con la misma área y el mismo momento de inercia respecto al eje del momento resultante",
     ["Se usa el rectángulo circunscrito a la zapata", "Se toma la mitad de su área como área efectiva", "Se reemplaza por un círculo del mismo perímetro"],

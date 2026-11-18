@@ -1,6 +1,6 @@
 """Páginas como imagen para leer tablas, fórmulas y figuras: python -I render.py 12 13 [--dpi 130]"""
 import os, sys, pymupdf
-F=os.environ.get("E050_PDF","/Users/alejandrocabreratavara/Downloads/Norma E.050 Suelos y cimentaciones.pdf")
+F=os.environ.get("E050_PDF","/Users/alejandrocabreratavara/Downloads/E.050 Suelos y Cimentaciones 2018.pdf")
 S=os.environ["E050_TRABAJO"]; os.makedirs(f"{S}/paginas",exist_ok=True)
 doc=pymupdf.open(F)
 dpi=int(os.environ.get("DPI","110"))

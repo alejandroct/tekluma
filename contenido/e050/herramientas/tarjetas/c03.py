@@ -13,7 +13,7 @@ T = [
     ("17.3", "se puede descontar de la carga total de la estructura (carga muerta más sobrecarga más el peso de losa de cimentación) el peso del suelo excavado para la construcción de los sótanos, si el PR lo considera necesario.")),
  om("¿Según qué norma se obtiene la carga para calcular el asentamiento de cimentaciones sobre suelos granulares y cohesivos?",
     "La Norma E.020 Cargas", ["La Norma E.030 Diseño Sismorresistente", "La Norma E.060 Concreto Armado", "La Norma E.070 Albañilería"],
-    ("17.2", "se considera la Carga obtenida de acuerdo a la Norma Técnica de Edificación E.020 Cargas.")),
+    ("17.2", "se considera la Carga obtenida de acuerdo a la Norma Técnica de Edificación E .020 Cargas.")),
  comp("Todo EMS debe indicar el {{asentamiento tolerable}} que se ha considerado para la edificación o estructura motivo del estudio.",
       ("19.1", "Todo EMS debe indicar el asentamiento tolerable que se ha considerado para la edificación o estructura motivo del estudio.")),
  om("En suelos granulares, ¿qué fracción del asentamiento total puede tomarse como estimación del asentamiento diferencial, según la E.050?",
