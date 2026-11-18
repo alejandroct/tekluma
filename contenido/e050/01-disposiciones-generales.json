@@ -1,0 +1,1395 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.050",
+  "titulo": "Suelos y Cimentaciones",
+  "disciplina": "structures",
+  "dispositivo": "RM N° 406-2018-VIVIENDA",
+  "publicadaEn": "2018-11-30"
+ },
+ "fuente": "Norma E.050 Suelos y Cimentaciones (RM N° 406-2018-VIVIENDA), edición digital del SENCICO (diciembre de 2020), 82 páginas",
+ "articulos": [
+  {
+   "numero": "1",
+   "epigrafe": "Objeto",
+   "texto": "El objeto de esta Norma es establecer los requisitos mínimos para la ejecución de Estudios de Mecánica de Suelos (EMS), con fines de cimentación de edificaciones y otras obras indicadas en esta Norma. Los EMS se ejecutan con la finalidad de asegurar la estabilidad y permanencia de las obras y para promover la utilización racional de los recursos.",
+   "pagina": 7
+  },
+  {
+   "numero": "2",
+   "epigrafe": "Finalidad",
+   "texto": "Finalidad",
+   "pagina": 7
+  },
+  {
+   "numero": "2.1",
+   "texto": "Asegurar la continuidad de los servicios básicos y edificaciones esenciales según lo establecido en la Norma E.030.",
+   "pagina": 7
+  },
+  {
+   "numero": "2.2",
+   "texto": "Minimizar los daños al proyecto y estructuras o vías colindantes.",
+   "pagina": 7
+  },
+  {
+   "numero": "3",
+   "epigrafe": "Ámbito de aplicación",
+   "texto": "El ámbito de aplicación de la presente Norma comprende todo el territorio nacional, en concordancia a lo establecido en la norma G.010 Consideraciones Básicas del Reglamento Nacional de Edificaciones (RNE).",
+   "pagina": 7
+  },
+  {
+   "numero": "4",
+   "epigrafe": "Consideraciones generales",
+   "texto": "En concordancia con la finalidad de la presente norma, se establecen las siguientes consideraciones respecto al comportamiento del suelo o roca:",
+   "pagina": 7
+  },
+  {
+   "numero": "4.1",
+   "texto": "En el caso de cimentaciones debe tomar en cuenta las cargas generadas por las estructuras que se proyecte edificar (materia del EMS), los sismos u otras solicitaciones (viento, agua, etc.) de tal manera que las deformaciones que se generen en el suelo o roca causen una distorsión angular menor que la permitida por la presente norma y produzcan presiones menores que las admisibles (considerando el estado límite del suelo y el Factor de Seguridad correspondiente).",
+   "pagina": 7
+  },
+  {
+   "numero": "4.2",
+   "texto": "En el caso de excavaciones o cortes del terreno el diseño del sistema de sostenimiento debe tomar en cuenta además del procedimiento constructivo, todas las solicitaciones actuantes en el talud a contener (sismos, sobrecargas, efectos generados por el flujo de agua, etc.). Asimismo, el diseño debe garantizar la estabilidad global de la excavación contemplando los factores de seguridad establecidos en la presente norma. Se debe minimizar el efecto de la excavación en las estructuras y vías contiguas colindantes con el perímetro del terreno en el que se edifica la obra motivo del EMS, garantizando que los esfuerzos y deformaciones que se producen en el suelo o roca a sostener cumplan con lo establecido en el numeral 4.1.",
+   "pagina": 7
+  },
+  {
+   "numero": "4.3",
+   "texto": "Las exigencias de esta Norma se consideran mínimas.",
+   "pagina": 7
+  },
+  {
+   "numero": "4.4",
+   "texto": "La presente Norma no toma en cuenta los efectos de los fenómenos de geodinámica externa y no se aplica en los casos que haya evidencia y presunción de la existencia de ruinas arqueológicas; galerías u oquedades subterráneas de origen natural o artificial. En ambos casos deben efectuarse estudios específicamente orientados a confirmar y solucionar dichos problemas por un profesional competente de especialidad diferente del PR, pudiendo ser arqueólogo o geólogo.",
+   "pagina": 7
+  },
+  {
+   "numero": "5",
+   "epigrafe": "Definiciones",
+   "texto": "Definiciones",
+   "pagina": 7
+  },
+  {
+   "numero": "5.1",
+   "texto": "Anclaje.- Elemento estructural instalado en suelo o roca que se utiliza para transmitir al terreno una carga de tracción aplicada.",
+   "pagina": 7
+  },
+  {
+   "numero": "5.2",
+   "texto": "Anclaje Activo.- Anclaje instalado y tensado posteriormente a su instalación, introduciendo una fuerza adicional al suelo o a la estructura en una magnitud y dirección determinada por el PRS.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.3",
+   "texto": "Asentamiento Diferencial.- Máxima diferencia de nivel entre dos cimentaciones adyacentes unidos por un elemento estructural, que pertenecen a la misma estructura.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.4",
+   "texto": "Asentamiento Diferencial Tolerable.- Máximo asentamiento diferencial entre dos elementos adyacentes unidos por un elemento estructural, que pertenecen a la misma estructura, que al ocurrir no produce daños visibles ni causa problemas.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.5",
+   "texto": "Bulbo.- Es el elemento estructural de acero fijado al suelo o roca mediante un material cementante. El bulbo recibe la carga del cabezal del anclaje a través del tramo libre y la transmite al suelo circundante.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.6",
+   "texto": "Bulbo de Presiones.- También conocido como bulbo de esfuerzos, es la zona situada bajo la superficie cargada, donde los esfuerzos verticales son más importantes. Este corresponde a la zona bajo la cimentación comprendida dentro del contorno de la isóbara igual al 10 % de la presión de contacto.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.7",
+   "texto": "Cabezal.- Es el elemento de fijación mecánica de la carga aplicada a través del tendón a la pantalla o muro estructural que se transmite al bulbo del anclaje.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.8",
+   "texto": "Cajón (caisson).- Elemento prefabricado de cimentación que se construye inicialmente hueco, pudiendo ser rellenado después de colocado en su posición final.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.9",
+   "texto": "Capacidad de Carga.- Presión requerida para producir la falla del suelo por corte que sirve de apoyo a la cimentación (sin factor de seguridad).",
+   "pagina": 8
+  },
+  {
+   "numero": "5.10",
+   "texto": "Carga Admisible.- Sinónimo de presión admisible.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.11",
+   "texto": "Carga de Servicio.- Carga viva más carga muerta más cargas inducidas por los sismos (sin factores de ampliación).",
+   "pagina": 8
+  },
+  {
+   "numero": "5.12",
+   "texto": "Carga de Trabajo.- Sinónimo de Presión Admisible.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.13",
+   "texto": "Carga Muerta.- Ver NTE E.020 Cargas.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.14",
+   "texto": "Carga Viva.- Ver NTE E.020 Cargas.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.15",
+   "texto": "Carga Inducida por Sismo.- Ver NTE E.030.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.16",
+   "texto": "Cimentación.- Elemento que transmite al suelo las cargas de la estructura.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.17",
+   "texto": "Cimentación Continua.- Cimentación superficial en la que el largo L es mayor que diez veces el ancho B.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.18",
+   "texto": "Cimentación Cuadrada.- Cimentación superficial en la que el largo L es igual al ancho B.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.19",
+   "texto": "Cimentación Rectangular.- Cimentación superficial en la que el largo L es igual o menor que diez veces el ancho B.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.20",
+   "texto": "Cimentación Circular.- Cimentación superficial en la que el diámetro es B.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.21",
+   "texto": "Cimentación Anular Continua.- Cimentación superficial en la que el perímetro medio P es mayor o igual a diez veces el ancho B.",
+   "pagina": 8
+  },
+  {
+   "numero": "5.22",
+   "texto": "Cimentación por Pilares.- Cimentación profunda, en la cual la relación Profundidad / Ancho (Df/B) es mayor o igual que 5, siendo Df la profundidad enterrada y B el ancho enterrada del pilar. El pilar es excavado y vaciado en el sitio.",
+   "pagina": 9
+  },
+  {
+   "numero": "5.23",
+   "texto": "Cimentación por Pilotes.- Cimentación profunda en la cual la relación Profundidad / Ancho (d/b) es mayor o igual a 10, siendo d la longitud enterrada del pilote y b el ancho o diámetro del pilote.",
+   "pagina": 9
+  },
+  {
+   "numero": "5.24",
+   "texto": "Cimentación por Platea o Losa de Cimentación.- Cimentación constituida por una losa rígida sobre la cual se apoyan varias columnas o placas.",
+   "pagina": 9
+  },
+  {
+   "numero": "5.25",
+   "texto": "Cimentación Profunda.- Aquella que transmite cargas a capas del suelo mediante pilotes, pilares u otros elementos que transmitan las cargas no comprendidas en el numeral 5.26.",
+   "pagina": 9
+  },
+  {
+   "numero": "5.26",
+   "texto": "Cimentación Superficial.- Aquella en la cual la relación Profundidad/Ancho (Df/B) es menor o igual a 5, siendo Df la profundidad de la cimentación y B el ancho o diámetro de la misma.",
+   "pagina": 9
+  },
+  {
+   "numero": "5.27",
+   "texto": "CRR.- Se define como el menor esfuerzo cortante cíclico resistente mínimo normalizado por la presión efectiva de tapada σ′vo que produce licuación para un valor dado de (N1)60, el porcentaje de finos (% < 75 μ m) y para un valor de magnitud momento (Mw) igual a 7.5.\n(N1)60 = CN N60    N60 = CR CB CS CE    CN = (100kPa / σ′vo)^0.5\nDonde: (N1)60 es la medida de la resistencia a la penetración estándar de un suelo bajo una presión efectiva de 1 kg/cm2. CR = corrección por longitud corta de barras CB = corrección por diámetro de la perforación CS = corrección por muestreador no estándar CE = corrección por energía",
+   "pagina": 9
+  },
+  {
+   "numero": "5.28",
+   "texto": "CRRM .- Se define como el valor de CRR modificado por el valor de la magnitud momento (Mw) diferente de 7.5 CRRM = FSM × CRR7.5",
+   "pagina": 9
+  },
+  {
+   "numero": "5.29",
+   "texto": "CSR.- Se define como el esfuerzo cortante promedio τav actuante en un estrato generado por el sismo, normalizado por el esfuerzo efectivo de sobre tapada σ’vo.\nDonde: σvo : presión total de tapada σ’vo : presión efectiva de tapada amax/g : aceleración máxima normalizada rd : factor de corrección rígido-deformable",
+   "pagina": 9
+  },
+  {
+   "numero": "5.30",
+   "texto": "Ensayos de Arrancamiento.- Ensayos realizados antes de construir los anclajes previstos en el proyecto, practicados en anclajes construidos solo para pruebas. El objetivo de los ensayos es encontrar el valor de la resistencia cortante en la interfase suelo - material cementante.",
+   "pagina": 9
+  },
+  {
+   "numero": "5.31",
+   "texto": "Estabilidad Global.- Es el análisis de estabilidad de un talud que incluye todas las cargas adicionales diferentes a las producidas por los materiales que conforman el talud y que afecten el equilibrio estático y pseudo-dinámico.",
+   "pagina": 9
+  },
+  {
+   "numero": "5.32",
+   "texto": "Estrato Típico.- Estrato de suelo con características tales que puede ser representativo de otros iguales o similares en un terreno dado.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.33",
+   "texto": "Estudio de Mecánica de Suelos (EMS).- Conjunto de exploraciones e investigaciones de campo, ensayos de laboratorio y análisis de gabinete que tienen por objeto estudiar el comportamiento de los suelos y sus respuestas ante las solicitaciones estáticas y dinámicas de una edificación. Que debe ser obligatoriamente considerado en el diseño: estructural y del sostenimiento de las excavaciones y durante la construcción del proyecto.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.34",
+   "texto": "FSM.- Es el factor de corrección del CRR para considerar el esfuerzo cortante cíclico resistente mínimo normalizado para un sismo de magnitud momento (Mw) diferente de 7.5.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.35",
+   "texto": "Geodinámica Externa.- Conjunto de fenómenos geológicos de carácter dinámico, que pueden actuar sobre el terreno materia del Estudio de Mecánica de Suelos, tales como: erupciones volcánicas, inundaciones, huaycos, avalanchas, tsunamis, activación de fallas geológicas.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.36",
+   "texto": "Informe Técnico de Suelos (ITS).- Informe técnico sin la rigurosidad técnica del EMS y comprende la realización de no menos de 3 puntos de exploración a 3 m de profundidad, ensayos de laboratorio y análisis de gabinete que tienen por objeto estimar el comportamiento de los suelos y sus respuestas ante las solicitaciones estáticas y dinámicas de una edificación con un número de pisos no mayor a 3, cuya área en planta de primer piso sea menor a 500 m2, sin sótanos y que no requiera Platea o Solado de Cimentación. Debe incluir la Hoja de Resumen establecida en el Anexo I. Que debe ser obligatoriamente considerado en el diseño: estructural y del sostenimiento de las excavaciones y durante la construcción del proyecto.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.37",
+   "texto": "Licuación.- Fenómeno causado por la vibración de los sismos en los suelos granulares sumergidos y que produce el incremento de la presión del agua dentro del suelo con la consecuente reducción de la tensión efectiva. La licuación reduce la capacidad de carga y la rigidez del suelo. Dependiendo del estado del suelo granular saturado al ocurrir la licuación se produce el hundimiento y colapso de las estructuras cimentadas sobre dicho suelo.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.38",
+   "texto": "Longitud Libre (Tramo libre).- Es la zona del elemento estructural de acero (cables o barras) comprendida entre el cabezal y el bulbo, convenientemente protegida del intemperismo y agentes agresivos con una tubería plástica flexible, interiormente llena de grasa para evitar fricción con el suelo o roca, de manera que permita la transferencia de la carga del cabezal al bulbo.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.39",
+   "texto": "Material Cementante.- Es el relleno dispuesto en toda la longitud del bulbo, que recubre el acero de refuerzo del anclaje. Usualmente es lechada de cemento con aditivos, resinas o algún otro producto químico que garantice la fijación del anclaje. Este material será el considerado en el diseño presentado por el PRS.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.40",
+   "texto": "Nivel Freático.- Nivel superior del agua subterránea en el momento de la exploración. El nivel se puede dar respecto a la superficie del terreno o a una cota de referencia.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.41",
+   "texto": "Obra Definitiva.- Obra cuya duración se extiende por un período mayor a dos (02) años.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.42",
+   "texto": "Pilar.- Elemento de cimentación profunda (con diámetros mayores a 90 cm) en el cual la relación Profundidad/ Ancho (Df/B) es mayor a 5.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.43",
+   "texto": "Pilote.- Elemento de cimentación profunda (con diámetros menores o iguales a 90 cm) en el cual la relación Profundidad/Ancho (Df/B) es mayor a 5.",
+   "pagina": 10
+  },
+  {
+   "numero": "5.44",
+   "texto": "Pilotes de Carga por Fricción.- Aquellos que transmiten la carga a lo largo de su cuerpo por fricción con el suelo que los circunda.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.45",
+   "texto": "Pilotes de Carga por Punta.- Aquellos que transmiten la carga a un estrato resistente ubicado bajo la punta.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.46",
+   "texto": "Pilotes para Densificación.- Aquellos que se instalan para mejorar las propiedades físico - mecánicas de los suelos en los que se instalan.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.47",
+   "texto": "Presión Admisible.- Máxima presión que la cimentación puede transmitir al terreno sin que ocurran asentamientos excesivos (mayores que el admisible) ni el factor de seguridad frente a una falla por corte sea menor que el valor indicado en el artículo 21.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.48",
+   "texto": "Presión Admisible por Asentamiento.- Presión que al ser aplicada por la cimentación adyacente a una estructura, ocasiona un asentamiento diferencial igual al asentamiento admisible. En este caso no es aplicable el concepto de factor de seguridad, ya que se trata de asentamientos.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.49",
+   "texto": "Presión Aplicada o Presión de Contacto (qap).- Carga transmitida por las estructuras al terreno en el nivel de cimentación. Valor de la presión uniforme aplicada por el área efectiva de la zapata (definida como B´ x L´) sobre el suelo en el plano de apoyo de la cimentación.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.50",
+   "texto": "Presión de Trabajo.- Sinónimo de Presión Admisible.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.51",
+   "texto": "Profesional Responsable (PR).- Ingeniero Civil, registrado y habilitado por el Colegio de Ingenieros del Perú.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.52",
+   "texto": "Profesional Responsable del Diseño del Sostenimiento (PRS).- Ingeniero Civil, registrado y habilitado por el Colegio de Ingenieros del Perú, con experiencia en diseño de sistemas de sostenimiento.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.53",
+   "texto": "Profundidad Activa.- Es la que corresponde a la zona del suelo ubicada entre el nivel de cimentación y la isóbara (línea de igual presión) correspondiente al 10% de la presión aplicada por la cimentación. Esta profundidad presupone que el suelo continúa por debajo de ella sin la presencia de rellenos no controlados.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.54",
+   "texto": "Profundidad de Cimentación (Df).- Profundidad a la que se encuentra el nivel de fondo o desplante de la cimentación de una estructura, medida respecto al nivel de terreno natural o al nivel de piso terminado, el que resulte menor. En el caso de sótanos es la profundidad desde el nivel de piso terminado del sótano más profundo al fondo de cimentación.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.55",
+   "texto": "Provisional.- Se refiere a las obras con una duración no mayor a dos (02) años contados a partir del inicio de las obras de excavación. En el eventual caso que la obra se extienda por un plazo mayor, el contratista debe tomar las medidas del caso para que el sistema de sostenimiento pase a ser definitivo y se rediseñe y construya con un F.S. mínimo de 1.50 en condición estática y 1.25 en condición pseudodinámica.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.56",
+   "texto": "Punto de Exploración.- Lugar en el que se ejecuta cualquiera de las Técnicas de Exploración indicadas en el numeral 14.2.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.57",
+   "texto": "Relleno Controlado o de Ingeniería.- Son aquellos que se construyen con Material Seleccionado, compactado y controlado de acuerdo a lo indicado en el numeral 25.4.",
+   "pagina": 11
+  },
+  {
+   "numero": "5.58",
+   "texto": "Relleno No Controlado.- Depósitos artificiales descritos en el numeral 25.5 y que deben ser eliminados y reemplazados en su totalidad de acuerdo en lo indicado en el numeral 25.5 antes de iniciar las obras de cimentación.",
+   "pagina": 12
+  },
+  {
+   "numero": "5.59",
+   "texto": "Roca.- Material sólido de origen natural formado por minerales y otras sustancias endurecidas, que a diferencia del suelo fundamentalmente cuaternario, no pueden ser disgregados o excavados con herramientas manuales. Las rocas adecuadas para servir de apoyo a las cimentaciones deben presentar una alteración menor al 10% del área de la cimentación. Las rocas blandas o aquellas que puedan ser disgregadas o excavadas con herramientas manuales, deben ser tratadas como suelo para efectos de cálculos geotécnicos.",
+   "pagina": 12
+  },
+  {
+   "numero": "5.60",
+   "texto": "Solicitante.- Persona natural o jurídica con quien el PR contrata el EMS o el ITS.",
+   "pagina": 12
+  },
+  {
+   "numero": "5.61",
+   "texto": "Suelo Colapsable.- Suelos que al ser humedecidos sufren un asentamiento o colapso relativamente rápido, que pone en peligro a las estructuras cimentadas sobre ellos.",
+   "pagina": 12
+  },
+  {
+   "numero": "5.62",
+   "texto": "Suelo Expansivo.- Suelos que al ser humedecidos sufren una expansión que pone en peligro a las estructuras cimentadas sobre ellos.",
+   "pagina": 12
+  },
+  {
+   "numero": "5.63",
+   "texto": "Suelo Orgánico.- Suelo de color oscuro que presenta una variación mayor al 25% entre los límites líquidos de la muestra secada al aire y la muestra secada al horno a una temperatura de 110 °C ± 5 °C durante 24 horas.",
+   "pagina": 12
+  },
+  {
+   "numero": "5.64",
+   "texto": "Superficie Crítica de Falla.- Lugar geométrico de los puntos resultantes de un análisis de estabilidad en la que existe la mayor probabilidad de deslizamiento de la masa de suelo, es decir es la superficie que posee el menor factor de seguridad en la estabilidad local o global.",
+   "pagina": 12
+  },
+  {
+   "numero": "5.65",
+   "texto": "Tierra de Cultivo.- Suelo superficial sometido a labores de labranza para propósitos agrícolas o jardinería.",
+   "pagina": 12
+  },
+  {
+   "numero": "6",
+   "epigrafe": "Obligatoriedad de los Estudios",
+   "texto": "Obligatoriedad de los Estudios",
+   "pagina": 12
+  },
+  {
+   "numero": "6.1",
+   "texto": "Todo proyecto de edificación debe contar con EMS o ITS según sea el caso.",
+   "pagina": 12
+  },
+  {
+   "numero": "6.2",
+   "epigrafe": "Casos donde existe obligatoriedad de un EMS",
+   "texto": "Casos donde existe obligatoriedad de un EMS",
+   "pagina": 12
+  },
+  {
+   "numero": "6.2.1",
+   "texto": "Los casos donde existe obligatoriedad de un EMS son los siguientes:\na) Edificaciones en general, que alojen gran cantidad de personas, equipos costosos o peligrosos, tales como: colegios, universidades, hospitales y clínicas, estadios, cárceles, auditorios, templos, salas de espectáculos, museos, centrales telefónicas, estaciones de radio y televisión, estaciones de bomberos, archivos y registros públicos, centrales de generación de electricidad, sub-estaciones eléctricas, silos, tanques de agua (incluyendo reservorios enterrados y tanques elevados), casetas de estaciones de bombeo de pozos (superficiales y subterráneas), estaciones de expendio de combustible, tanques y reservorios de combustible. Cuando las excavaciones para las siguientes obras: redes de agua y alcantarillado, instalaciones eléctricas, gas y telecomunicaciones requieran una excavación mayor a 1.50 m. Empresas prestadoras de servicios públicos, entidades públicas y privadas e instalaciones militares y policiales en general.\nb) Cualquier edificación no mencionada en a) de uno a tres pisos, que ocupen individual o conjuntamente más de 500 m2 de área techada en planta.\nc) Cualquier edificación no mencionada en a) de cuatro o más pisos de altura, cualquiera que sea su área.\nd) Edificaciones industriales, fábricas, talleres o similares.\ne) Edificaciones especiales cuya falla, además del propio colapso, represente peligros adicionales importantes, tales como: reactores atómicos, grandes hornos, depósitos de materiales inflamables, corrosivos o combustibles, torres de soporte para sistemas eléctricos, torres de telecomunicaciones, paneles de publicidad de grandes dimensiones cuyos soportes tengan un diámetro mayor o igual a 0,20 m y otros de similar riesgo.\nf) Cualquier edificación con sótanos o que requiera el uso de pilotes, pilares, plateas de fundación o cualquier tipo de cimentación profunda.\ng) Muros de contención con alturas mayores a 2.00 m y cercos perimétricos ubicados en terrenos que no tengan EMS.\nh) Cualquier edificación adyacente a taludes o suelos que puedan poner en peligro su estabilidad.",
+   "pagina": 12
+  },
+  {
+   "numero": "6.2.2",
+   "texto": "En los casos en que es obligatorio efectuar un EMS, de acuerdo a lo indicado en este numeral, el informe del EMS correspondiente es firmado por un Profesional Responsable (PR).",
+   "pagina": 13
+  },
+  {
+   "numero": "6.2.3",
+   "texto": "Es obligatorio incluir en el EMS una hoja con el “Resumen de las Condiciones de Cimentación” (Ver sub numeral 16.2.1), la misma que es transcrita obligatoriamente en el plano de cimentación. En el Anexo I se adjunta el formato obligatorio de la hoja de resumen de las condiciones de cimentación que se debe emplear en los EMS.",
+   "pagina": 13
+  },
+  {
+   "numero": "6.3",
+   "texto": "Caso donde existe obligatoriedad de elaborar un ITS.",
+   "pagina": 13
+  },
+  {
+   "numero": "6.3.1",
+   "texto": "Se aplica a lugares con condiciones de cimentación conocida debidas a depósitos de suelos uniformes tanto vertical como horizontalmente, sin los problemas especiales de cimentación indicados en el Capítulo VI, con áreas techadas en planta de primer piso menores que 500 m2, de hasta tres pisos y sin sótano, el PR puede asumir los valores de la Presión Admisible del Suelo, profundidad de cimentación y cualquier otra consideración concerniente a la Mecánica de Suelos, basándose en la ejecución de no menos de 3 puntos de exploración hasta la profundidad mínima de 3 m. Estos datos, incluyendo los perfiles de suelos, plano de ubicación de los puntos de exploración deben figurar en el ITS elaborado por el PR.",
+   "pagina": 13
+  },
+  {
+   "numero": "6.3.2",
+   "texto": "En caso que la estimación indique la necesidad de usar cimentación especial, profunda o por platea, se debe efectuar un EMS de acuerdo a los artículos 15 y 16.",
+   "pagina": 13
+  },
+  {
+   "numero": "6.3.3",
+   "texto": "En los casos en que es obligatorio efectuar un ITS, de acuerdo a lo indicado en este numeral, el informe del ITS correspondiente es firmado por un Profesional Responsable (PR).",
+   "pagina": 13
+  },
+  {
+   "numero": "6.3.4",
+   "texto": "Es obligatorio incluir en el ITS una hoja con el “Resumen de las Condiciones de Cimentación” (Ver sub numeral 16.2.1), la misma que es transcrita obligatoriamente en el plano de cimentación.",
+   "pagina": 13
+  },
+  {
+   "numero": "7",
+   "epigrafe": "Estudios de Mecánica de Suelos (EMS)",
+   "texto": "Estudios de Mecánica de Suelos (EMS)",
+   "pagina": 13
+  },
+  {
+   "numero": "7.1",
+   "texto": "Son aquellos que cumplen con todos los requisitos de la presente Norma, con el Programa de Exploración descrito en el artículo 15 y que se plasman en un informe técnico (EMS) según lo indicado en el artículo 16.",
+   "pagina": 13
+  },
+  {
+   "numero": "7.2",
+   "texto": "Los Estudios de Mecánica de Suelos se realizan con fines de:\na. Diseño de Cimentaciones\nb. Diseño de Pavimentos\nc. Estabilidad de Taludes\nd. Diseño de instalaciones sanitarias de agua y alcantarillado\ne. Cualquier combinación de los cuatro anteriores.",
+   "pagina": 13
+  },
+  {
+   "numero": "8",
+   "epigrafe": "Alcance del EMS",
+   "texto": "Alcance del EMS",
+   "pagina": 14
+  },
+  {
+   "numero": "8.1",
+   "texto": "La información del EMS es válida solamente para el área y tipo de obra indicadas en el informe firmado por el PR.",
+   "pagina": 14
+  },
+  {
+   "numero": "8.2",
+   "texto": "Los resultados y exploraciones de campo y laboratorio, así como el análisis, conclusiones y recomendaciones del EMS, sólo se aplican al terreno y edificaciones comprendidas en el mismo. No se emplean en otros terrenos, para otras edificaciones, o para otro tipo de obra. En el caso que se trate de la verificación de un EMS, el PR puede optar por validar los resultados de la exploración de campo y laboratorio, si lo considera pertinente, asumiendo la responsabilidad indicada en el artículo 9.",
+   "pagina": 14
+  },
+  {
+   "numero": "9",
+   "epigrafe": "Responsabilidad profesional por el EMS",
+   "texto": "Todo EMS es firmado por el PR, quien asume la responsabilidad del contenido y de las conclusiones del informe. No está permitido que el PR delegue a terceros dicha responsabilidad.",
+   "pagina": 14
+  },
+  {
+   "numero": "10",
+   "epigrafe": "Responsabilidad por aplicación de la norma",
+   "texto": "Las entidades encargadas de otorgar la ejecución de las obras y la Licencia de Edificación son las responsables de hacer cumplir esta Norma. Dichas entidades no autorizan la ejecución de las obras, si el proyecto no cuenta con un EMS o ITS en el caso del numeral 6.3 para el área y tipo de obra específico. Las entidades encargadas de hacer cumplir estas normas no pueden exigir al PR o al PRS la ejecución de trabajos o ensayos que no se encuentren indicados en esta Norma.",
+   "pagina": 14
+  },
+  {
+   "numero": "11",
+   "epigrafe": "Interpretación de la norma",
+   "texto": "Corresponde al Ingeniero Civil, colegiado y habilitado, la aplicación, el cumplimiento y la interpretación de la presenta Norma Técnica, cuando interviene en calidad de cualquier actor de los procesos de edificación, conforme lo dispuesto en la Norma Técnica G.030 – Derechos y Responsabilidades.",
+   "pagina": 14
+  },
+  {
+   "numero": "12",
+   "epigrafe": "Obligaciones del solicitante",
+   "texto": "Proporcionar la información indicada en el artículo 13 y garantizar el libre acceso al terreno para efectuar la exploración del campo.",
+   "pagina": 14
+  },
+  {
+   "numero": "Anexo I",
+   "epigrafe": "Formato obligatorio de la hoja de resumen de las condiciones de cimentación",
+   "texto": "Nombre del solicitante ESTUDIO DE MECÁNICA SUELOS PARA DISEÑO DE LA CIMENTACIÓN Nombre del proyecto Distrito – Provincia – Departamento De conformidad con la Norma Técnica E.050 “Suelos y Cimentaciones” la siguiente información deberá transcribirse literalmente en los planos de cimentación. Esta información no es limitativa, deberá cumplir con todo lo especificado en el presente Estudio de Mecánica de Suelos (EMS) y con el Reglamento Nacional de Edificaciones (RNE). RESUMEN DE LAS CONDICIONES DE CIMENTACIÓN Profesional Responsable (PR): Ing. Civil CIP: Tipo de Cimentación: Estrato de apoyo de la cimentación: Profundidad de la Napa Freática: Fecha: Parámetros de Diseño de la Cimentación Profundidad de Cimentación: Presión Admisible: Factor de Seguridad por Corte (Estático, Dinámico) Asentamiento Diferencial Máximo Aceptable: Parámetros Sísmicos del suelo (De acuerdo a la Norma E.030) Zona Sísmica: Tipo de perfil del suelo: Factor del suelo (S): Periodo TP (s): Periodo TL (s): Agresividad del Suelo a la Cimentación: (En caso de suelos agresivos se debe indicar tipo de agresión, tipo de cemento portland, relación a/c y f´c mínimo, recubrimiento mínimo y otros) Problemas Especiales de cimentación Licuación: Colapso: expansión: Indicaciones Adicionales: Fecha: Nombre del PR Ingeniero Civil CIP xxxxxx Sello y firma",
+   "pagina": 74
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e050-c01-disposiciones-generales",
+   "titulo": "E.050 · Cap. 1 · Disposiciones generales",
+   "descripcion": "Objeto y alcance, definiciones del glosario (tipos de cimentación, presiones, profundidad activa, ITS), obligatoriedad del EMS y del ITS, responsabilidades.",
+   "acceso": "free",
+   "orden": 201,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la E.050, ¿qué estudio debe tener todo proyecto de edificación?",
+      "opciones": [
+       "Un ITS en todos los casos; el EMS solo si lo pide la municipalidad",
+       "Un EMS en todos los casos, sin excepción",
+       "Solo un estudio de peligro sísmico del terreno",
+       "Un Estudio de Mecánica de Suelos (EMS) o un Informe Técnico de Suelos (ITS), según el caso"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "6.1",
+       "extracto": "Todo proyecto de edificación debe contar con EMS o ITS según sea el caso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Con qué fines se ejecutan los Estudios de Mecánica de Suelos (EMS), según el objeto de la E.050?",
+      "opciones": [
+       "Reemplazar el diseño estructural de la cimentación",
+       "Fijar el costo de la cimentación y del movimiento de tierras",
+       "Clasificar el terreno para el impuesto predial",
+       "Asegurar la estabilidad y permanencia de las obras y promover la utilización racional de los recursos"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "1",
+       "extracto": "Los EMS se ejecutan con la finalidad de asegurar la estabilidad y permanencia de las obras y para promover la utilización racional de los recursos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué fenómenos y situaciones quedan fuera del alcance de la E.050?",
+      "respuesta": "Los fenómenos de geodinámica externa, y los terrenos donde haya evidencia o presunción de ruinas arqueológicas, galerías u oquedades subterráneas naturales o artificiales.",
+      "explicacion": "En esos casos se hacen estudios específicos a cargo de un profesional de otra especialidad (arqueólogo o geólogo)."
+     },
+     "citas": [
+      {
+       "articulo": "4.4",
+       "extracto": "La presente Norma no toma en cuenta los efectos de los fenómenos de geodinámica externa y no se aplica en los casos que haya evidencia y presunción de la existencia de ruinas arqueológicas; galerías u oquedades subterráneas de origen natural o artificial."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si en el terreno hay evidencia de galerías u oquedades subterráneas, ¿quién debe hacer los estudios orientados a confirmar y solucionar ese problema?",
+      "opciones": [
+       "El PRS, responsable del diseño del sostenimiento",
+       "Un profesional competente de especialidad diferente del PR (Profesional Responsable del EMS), como un arqueólogo o un geólogo",
+       "El mismo PR, como parte del EMS",
+       "El ingeniero estructural del proyecto"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "4.4",
+       "extracto": "deben efectuarse estudios específicamente orientados a confirmar y solucionar dichos problemas por un profesional competente de especialidad diferente del PR, pudiendo ser arqueólogo o geólogo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Las exigencias de la E.050 se consideran {{mínimas}}."
+     },
+     "citas": [
+      {
+       "articulo": "4.3",
+       "extracto": "Las exigencias de esta Norma se consideran mínimas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué fenómenos considera la E.050 «geodinámica externa»?",
+      "opciones": [
+       "Asentamientos diferenciales por consolidación de arcillas",
+       "Ataque químico de sulfatos y cloruros al concreto",
+       "Erupciones volcánicas, inundaciones, huaycos, avalanchas, tsunamis y activación de fallas geológicas",
+       "Colapso y expansión de suelos al humedecerse"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.35",
+       "extracto": "tales como: erupciones volcánicas, inundaciones, huaycos, avalanchas, tsunamis, activación de fallas geológicas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según las definiciones de la E.050, ¿cuándo una cimentación superficial de largo L y ancho B se considera continua?",
+      "opciones": [
+       "Cuando L es mayor que 10 B",
+       "Cuando L es mayor que 5 B",
+       "Cuando L es mayor que 20 B",
+       "Cuando L es igual o mayor que 3 B"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "5.17",
+       "extracto": "Cimentación Continua.- Cimentación superficial en la que el largo L es mayor que diez veces el ancho B."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según las definiciones de la E.050, ¿qué condición debe cumplir el perímetro medio P de una cimentación anular continua de ancho B?",
+      "opciones": [
+       "P menor que 10 B",
+       "P mayor o igual a 10 B",
+       "P mayor o igual a 5 B",
+       "P mayor o igual a 2π B"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.21",
+       "extracto": "Cimentación Anular Continua.- Cimentación superficial en la que el perímetro medio P es mayor o igual a diez veces el ancho B."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Cimentaciones superficiales según su forma (definiciones de la E.050)",
+      "columnas": [
+       "Condición"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Cuadrada",
+        "valores": [
+         "L = B"
+        ]
+       },
+       {
+        "etiqueta": "Rectangular",
+        "valores": [
+         "L ≤ 10 B"
+        ]
+       },
+       {
+        "etiqueta": "Continua",
+        "valores": [
+         "L > 10 B"
+        ]
+       },
+       {
+        "etiqueta": "Anular continua",
+        "valores": [
+         "P ≥ 10 B"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      },
+      "explicacion": "L: largo, B: ancho, P: perímetro medio del anillo."
+     },
+     "citas": [
+      {
+       "articulo": "5.19",
+       "extracto": "Cimentación Rectangular.- Cimentación superficial en la que el largo L es igual o menor que diez veces el ancho B."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la E.050, ¿qué relación entre la profundidad Df y el ancho B define a una cimentación superficial?",
+      "opciones": [
+       "Df/B menor o igual a 3",
+       "Df/B menor o igual a 10",
+       "Df/B menor que 1",
+       "Df/B menor o igual a 5"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "5.26",
+       "extracto": "Cimentación Superficial.- Aquella en la cual la relación Profundidad/Ancho (Df/B) es menor o igual a 5"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según el glosario de la E.050, ¿qué diámetro separa un pilote de un pilar?",
+      "opciones": [
+       "50 cm: el pilote tiene diámetro menor o igual a 50 cm y el pilar, mayor",
+       "1,20 m: el pilote tiene diámetro menor o igual a 1,20 m y el pilar, mayor",
+       "60 cm: el pilote tiene diámetro menor o igual a 60 cm y el pilar, mayor",
+       "90 cm: el pilote tiene diámetro menor o igual a 90 cm y el pilar, mayor"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "5.42",
+       "extracto": "Pilar.- Elemento de cimentación profunda (con diámetros mayores a 90 cm)"
+      },
+      {
+       "articulo": "5.43",
+       "extracto": "Pilote.- Elemento de cimentación profunda (con diámetros menores o iguales a 90 cm)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué es una cimentación por platea o losa de cimentación, según la E.050?",
+      "opciones": [
+       "Un elemento prefabricado hueco que se hunde por su propio peso",
+       "Una zapata aislada de gran tamaño bajo una sola columna",
+       "Un cimiento corrido bajo un muro portante",
+       "Una losa rígida sobre la cual se apoyan varias columnas o placas"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "5.24",
+       "extracto": "Cimentación por Platea o Losa de Cimentación.- Cimentación constituida por una losa rígida sobre la cual se apoyan varias columnas o placas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "La E.050 define el bulbo de presiones como la zona bajo la cimentación limitada por cierta isóbara. ¿Qué porcentaje de la presión de contacto corresponde a esa isóbara?",
+      "opciones": [
+       "25 %",
+       "10 %",
+       "20 %",
+       "5 %"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.6",
+       "extracto": "comprendida dentro del contorno de la isóbara igual al 10 % de la presión de contacto."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Entre qué niveles se mide la profundidad activa de una cimentación, según la E.050?",
+      "opciones": [
+       "Entre la superficie del terreno y el nivel freático",
+       "Entre la superficie del terreno y el estrato de roca",
+       "Entre el nivel de cimentación y la isóbara del 10 % de la presión aplicada por la cimentación",
+       "Entre el nivel de cimentación y una profundidad igual a 1,5 veces el ancho B"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.53",
+       "extracto": "Es la que corresponde a la zona del suelo ubicada entre el nivel de cimentación y la isóbara (línea de igual presión) correspondiente al 10% de la presión aplicada por la cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una edificación sin sótano, ¿desde qué nivel se mide la profundidad de cimentación Df, según la definición de la E.050?",
+      "opciones": [
+       "Siempre desde el nivel de terreno natural",
+       "Siempre desde el nivel de piso terminado",
+       "Desde el nivel de terreno natural o el de piso terminado, el que resulte mayor",
+       "Desde el nivel de terreno natural o el de piso terminado, el que resulte menor"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "5.54",
+       "extracto": "medida respecto al nivel de terreno natural o al nivel de piso terminado, el que resulte menor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "En una edificación con sótanos, ¿cómo se mide la profundidad de cimentación Df?",
+      "respuesta": "Desde el nivel de piso terminado del sótano más profundo hasta el fondo de la cimentación."
+     },
+     "citas": [
+      {
+       "articulo": "5.54",
+       "extracto": "En el caso de sótanos es la profundidad desde el nivel de piso terminado del sótano más profundo al fondo de cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué es la capacidad de carga de un suelo, según el glosario de la E.050?",
+      "opciones": [
+       "La presión requerida para producir la falla del suelo por corte, sin factor de seguridad",
+       "La presión que produce el asentamiento admisible",
+       "La presión de falla por corte dividida entre el factor de seguridad",
+       "La carga de servicio dividida entre el área de la zapata"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "5.9",
+       "extracto": "Capacidad de Carga.- Presión requerida para producir la falla del suelo por corte que sirve de apoyo a la cimentación (sin factor de seguridad)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué dos condiciones limitan la presión admisible de una cimentación, según la definición de la E.050?",
+      "opciones": [
+       "Que el asentamiento total sea menor que 25 mm y que Df sea mayor que 0,80 m",
+       "Que la presión no supere el 10 % de la capacidad de carga y que no haya agua",
+       "Que no ocurran asentamientos mayores que el admisible y que el factor de seguridad frente a falla por corte no baje del mínimo de la norma",
+       "Que no haya tracciones bajo la zapata y que el suelo no sea orgánico"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.47",
+       "extracto": "Máxima presión que la cimentación puede transmitir al terreno sin que ocurran asentamientos excesivos (mayores que el admisible) ni el factor de seguridad frente a una falla por corte sea menor que el valor indicado en el artículo 21."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué cargas forman la «carga de servicio» según la E.050?",
+      "opciones": [
+       "Carga muerta más el 25 % de la carga viva",
+       "Carga viva más carga muerta más cargas inducidas por los sismos, sin factores de amplificación",
+       "Carga muerta más carga viva amplificadas por 1,4 y 1,7",
+       "Solo la carga muerta, sin la carga viva"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.11",
+       "extracto": "Carga de Servicio.- Carga viva más carga muerta más cargas inducidas por los sismos (sin factores de ampliación)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En la E.050, «carga admisible», «carga de trabajo» y «presión de trabajo» son sinónimos de {{presión admisible}}."
+     },
+     "citas": [
+      {
+       "articulo": "5.10",
+       "extracto": "Carga Admisible.- Sinónimo de presión admisible."
+      },
+      {
+       "articulo": "5.50",
+       "extracto": "Presión de Trabajo.- Sinónimo de Presión Admisible."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué alteración máxima puede tener una roca para servir de apoyo a una cimentación, según la E.050?",
+      "opciones": [
+       "Menor al 25 % del área de la cimentación",
+       "Menor al 5 % del área de la cimentación",
+       "Menor al 10 % del área de la cimentación",
+       "Menor al 50 % del área de la cimentación"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.59",
+       "extracto": "Las rocas adecuadas para servir de apoyo a las cimentaciones deben presentar una alteración menor al 10% del área de la cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la E.050, ¿cómo deben tratarse en los cálculos geotécnicos las rocas blandas que pueden excavarse con herramientas manuales?",
+      "opciones": [
+       "Como roca sana, con su resistencia a la compresión",
+       "Como material expansivo",
+       "Como relleno no controlado, que debe eliminarse",
+       "Como suelo"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "5.59",
+       "extracto": "Las rocas blandas o aquellas que puedan ser disgregadas o excavadas con herramientas manuales, deben ser tratadas como suelo para efectos de cálculos geotécnicos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "La E.050 identifica un suelo orgánico comparando el límite líquido de la muestra secada al aire con el de la secada al horno. ¿Qué variación entre ambos lo define?",
+      "opciones": [
+       "Una variación mayor al 50 %",
+       "Una variación mayor al 25 %",
+       "Una variación mayor al 10 %",
+       "Una variación mayor al 5 %"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.63",
+       "extracto": "presenta una variación mayor al 25% entre los límites líquidos de la muestra secada al aire y la muestra secada al horno"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Para identificar un suelo orgánico, la muestra se seca al horno a {{110 °C ± 5 °C}} durante 24 horas."
+     },
+     "citas": [
+      {
+       "articulo": "5.63",
+       "extracto": "secada al horno a una temperatura de 110 °C ± 5 °C durante 24 horas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según el glosario de la E.050, ¿qué duración máxima tiene una obra «provisional», contada desde el inicio de las excavaciones?",
+      "opciones": [
+       "Un año",
+       "Dos años",
+       "Cinco años",
+       "Seis meses"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "5.55",
+       "extracto": "Provisional.- Se refiere a las obras con una duración no mayor a dos (02) años contados a partir del inicio de las obras de excavación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si una obra con sostenimiento provisional se extiende más allá de dos años, el sostenimiento debe rediseñarse como definitivo. ¿Con qué factores de seguridad mínimos?",
+      "opciones": [
+       "1,25 en condición estática y 1,00 en condición pseudodinámica",
+       "2,0 en condición estática y 1,5 en condición pseudodinámica",
+       "3,0 en condición estática y 2,5 en condición pseudodinámica",
+       "1,50 en condición estática y 1,25 en condición pseudodinámica"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "5.55",
+       "extracto": "se rediseñe y construya con un F.S. mínimo de 1.50 en condición estática y 1.25 en condición pseudodinámica."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién puede ser el Profesional Responsable (PR) de un EMS según la E.050?",
+      "opciones": [
+       "Cualquier profesional con experiencia en laboratorio de suelos",
+       "Un geólogo colegiado",
+       "Un ingeniero civil registrado y habilitado por el Colegio de Ingenieros del Perú",
+       "Un ingeniero civil con maestría en geotecnia"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "5.51",
+       "extracto": "Profesional Responsable (PR).- Ingeniero Civil, registrado y habilitado por el Colegio de Ingenieros del Perú."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es el PRS y qué requisito adicional al PR tiene?",
+      "respuesta": "Es el Profesional Responsable del Diseño del Sostenimiento: un ingeniero civil registrado y habilitado en el CIP que, además, tiene experiencia en diseño de sistemas de sostenimiento."
+     },
+     "citas": [
+      {
+       "articulo": "5.52",
+       "extracto": "Profesional Responsable del Diseño del Sostenimiento (PRS).- Ingeniero Civil, registrado y habilitado por el Colegio de Ingenieros del Perú, con experiencia en diseño de sistemas de sostenimiento."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Puede el PR delegar a terceros la responsabilidad del contenido y las conclusiones de un EMS?",
+      "opciones": [
+       "Sí, si el solicitante lo autoriza por escrito",
+       "Sí, al ingeniero estructural que usa el EMS",
+       "Sí, al laboratorio que ejecutó los ensayos",
+       "No; el PR firma el EMS y asume esa responsabilidad sin poder delegarla"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "9",
+       "extracto": "Todo EMS es firmado por el PR, quien asume la responsabilidad del contenido y de las conclusiones del informe. No está permitido que el PR delegue a terceros dicha responsabilidad."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En cuál de estos casos es obligatorio un Estudio de Mecánica de Suelos (EMS) y no basta un ITS?",
+      "opciones": [
+       "Una vivienda de tres pisos, sin sótano, con 400 m² techados en el primer piso, en un terreno uniforme conocido",
+       "Una vivienda de dos pisos con un sótano y 300 m² techados",
+       "Una vivienda de un piso, sin sótano, con 150 m² techados, en un terreno uniforme conocido",
+       "Una vivienda de dos pisos, sin sótano, con 300 m² techados en el primer piso, en un terreno uniforme conocido"
+      ],
+      "correcta": 1,
+      "explicacion": "Cualquier sótano obliga a hacer un EMS. Las otras tres cumplen las condiciones del ITS: hasta tres pisos, menos de 500 m² en el primer piso y sin sótano."
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "f) Cualquier edificación con sótanos o que requiera el uso de pilotes, pilares, plateas de fundación o cualquier tipo de cimentación profunda."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para una edificación común (no esencial ni industrial) de uno a tres pisos, ¿a partir de qué área techada en planta es obligatorio el EMS?",
+      "opciones": [
+       "Más de 1000 m²",
+       "Más de 300 m²",
+       "Más de 500 m²",
+       "Más de 250 m²"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "b) Cualquier edificación no mencionada en a) de uno a tres pisos, que ocupen individual o conjuntamente más de 500 m2 de área techada en planta."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para una edificación común (no esencial ni industrial), ¿desde cuántos pisos es obligatorio el EMS, cualquiera que sea su área?",
+      "opciones": [
+       "Desde tres pisos",
+       "Desde dos pisos",
+       "Desde cinco pisos",
+       "Desde cuatro pisos"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "c) Cualquier edificación no mencionada en a) de cuatro o más pisos de altura, cualquiera que sea su área."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué profundidad de excavación hace obligatorio el EMS en obras de redes de agua, alcantarillado, electricidad, gas o telecomunicaciones?",
+      "opciones": [
+       "Más de 1,50 m",
+       "Más de 2,00 m",
+       "Más de 3,00 m",
+       "Más de 1,00 m"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "Cuando las excavaciones para las siguientes obras: redes de agua y alcantarillado, instalaciones eléctricas, gas y telecomunicaciones requieran una excavación mayor a 1.50 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Desde qué altura un muro de contención requiere obligatoriamente un EMS?",
+      "opciones": [
+       "Más de 3,00 m",
+       "Más de 2,00 m",
+       "Más de 1,50 m",
+       "Más de 1,00 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "g) Muros de contención con alturas mayores a 2.00 m"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Los paneles de publicidad de grandes dimensiones requieren EMS cuando sus soportes tienen cierto diámetro. ¿Cuál es ese diámetro?",
+      "opciones": [
+       "0,50 m o más",
+       "0,30 m o más",
+       "0,20 m o más",
+       "0,10 m o más"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "6.2.1",
+       "extracto": "paneles de publicidad de grandes dimensiones cuyos soportes tengan un diámetro mayor o igual a 0,20 m"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué hoja es obligatorio incluir en el EMS (y en el ITS) y dónde debe transcribirse?",
+      "respuesta": "La hoja de «Resumen de las Condiciones de Cimentación», con el formato obligatorio del Anexo I; se transcribe obligatoriamente en el plano de cimentación."
+     },
+     "citas": [
+      {
+       "articulo": "6.2.3",
+       "extracto": "Es obligatorio incluir en el EMS una hoja con el “Resumen de las Condiciones de Cimentación” (Ver sub numeral 16.2.1), la misma que es transcrita obligatoriamente en el plano de cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuántos puntos de exploración y hasta qué profundidad exige como mínimo un Informe Técnico de Suelos (ITS)?",
+      "opciones": [
+       "No menos de 3 puntos, hasta 3 m de profundidad",
+       "No menos de 2 puntos, hasta 3 m de profundidad",
+       "No menos de 1 punto, hasta 1,5 m de profundidad",
+       "No menos de 3 puntos, hasta 6 m de profundidad"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "6.3.1",
+       "extracto": "basándose en la ejecución de no menos de 3 puntos de exploración hasta la profundidad mínima de 3 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Condiciones para que baste un Informe Técnico de Suelos (ITS)",
+      "columnas": [
+       "Límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Número de pisos",
+        "valores": [
+         "Hasta 3"
+        ]
+       },
+       {
+        "etiqueta": "Área techada del primer piso",
+        "valores": [
+         "Menor que 500 m²"
+        ]
+       },
+       {
+        "etiqueta": "Sótanos",
+        "valores": [
+         "Ninguno"
+        ]
+       },
+       {
+        "etiqueta": "Puntos de exploración",
+        "valores": [
+         "No menos de 3, hasta 3 m"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "6.3.1",
+       "extracto": "con áreas techadas en planta de primer piso menores que 500 m2, de hasta tres pisos y sin sótano"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Una edificación de dos pisos sin sótano, con 350 m² en el primer piso, se proyecta con ITS. Si el ITS indica que hace falta una platea de cimentación, ¿qué debe hacerse?",
+      "opciones": [
+       "Basta el ITS firmado también por el ingeniero estructural",
+       "Basta el ITS con un punto de exploración adicional",
+       "Un EMS completo, según los artículos 15 y 16",
+       "Una prueba de carga en lugar del EMS"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "6.3.2",
+       "extracto": "En caso que la estimación indique la necesidad de usar cimentación especial, profunda o por platea, se debe efectuar un EMS de acuerdo a los artículos 15 y 16."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Para qué terrenos y obras es válida la información de un EMS?",
+      "opciones": [
+       "Para cualquier obra del mismo distrito durante cinco años",
+       "Para terrenos colindantes con el mismo tipo de suelo",
+       "Solo para el área y el tipo de obra indicados en el informe firmado por el PR",
+       "Para cualquier obra en el mismo terreno, aunque cambie el proyecto"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "8.1",
+       "extracto": "La información del EMS es válida solamente para el área y tipo de obra indicadas en el informe firmado por el PR."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quiénes son responsables de hacer cumplir la E.050?",
+      "opciones": [
+       "El solicitante del EMS",
+       "El laboratorio de mecánica de suelos",
+       "Las entidades que otorgan la ejecución de las obras y la Licencia de Edificación",
+       "El Colegio de Ingenieros del Perú"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "10",
+       "extracto": "Las entidades encargadas de otorgar la ejecución de las obras y la Licencia de Edificación son las responsables de hacer cumplir esta Norma."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Puede una municipalidad exigir al PR ensayos que no estén indicados en la E.050?",
+      "opciones": [
+       "Sí, si el proyecto tiene más de cuatro pisos",
+       "No; las entidades no pueden exigir trabajos o ensayos que no figuren en la norma",
+       "Sí, siempre que los pague el solicitante",
+       "Sí, si el terreno está en zona sísmica 4"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "10",
+       "extracto": "no pueden exigir al PR o al PRS la ejecución de trabajos o ensayos que no se encuentren indicados en esta Norma."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué obligaciones tiene el solicitante del EMS según la E.050?",
+      "opciones": [
+       "Definir la presión admisible del suelo",
+       "Firmar el EMS junto con el PR",
+       "Ejecutar los ensayos de laboratorio",
+       "Proporcionar la información previa requerida y garantizar el libre acceso al terreno para la exploración"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "12",
+       "extracto": "Proporcionar la información indicada en el artículo 13 y garantizar el libre acceso al terreno para efectuar la exploración del campo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Para cuál de estos fines NO se menciona el EMS entre los fines de la E.050?",
+      "opciones": [
+       "Tasación comercial del terreno",
+       "Estabilidad de taludes",
+       "Diseño de instalaciones sanitarias de agua y alcantarillado",
+       "Diseño de pavimentos"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "7.2",
+       "extracto": "Los Estudios de Mecánica de Suelos se realizan con fines de: a. Diseño de Cimentaciones b. Diseño de Pavimentos c. Estabilidad de Taludes d. Diseño de instalaciones sanitarias de agua y alcantarillado"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué puede hacer el PR cuando se trata de la verificación de un EMS hecho por otro?",
+      "respuesta": "Puede validar los resultados de la exploración de campo y de laboratorio del estudio original, si lo considera pertinente, asumiendo la responsabilidad del EMS."
+     },
+     "citas": [
+      {
+       "articulo": "8.2",
+       "extracto": "En el caso que se trate de la verificación de un EMS, el PR puede optar por validar los resultados de la exploración de campo y laboratorio, si lo considera pertinente"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
