@@ -1,0 +1,1046 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.050",
+  "titulo": "Suelos y Cimentaciones",
+  "disciplina": "structures",
+  "dispositivo": "RM N° 406-2018-VIVIENDA",
+  "publicadaEn": "2018-12-03"
+ },
+ "fuente": "Norma E.050 Suelos y Cimentaciones (RM N° 406-2018-VIVIENDA), publicada en Normas Legales de El Peruano el 3 de diciembre de 2018 (págs. 22 a 68)",
+ "articulos": [
+  {
+   "numero": "21.1",
+   "texto": "Para cargas estáticas: 3,0",
+   "pagina": 18
+  },
+  {
+   "numero": "31",
+   "epigrafe": "Definición",
+   "texto": "Definición",
+   "pagina": 22
+  },
+  {
+   "numero": "31.1",
+   "texto": "Son aquellas en las que la relación profundidad / ancho (Df / B) es mayor a cinco (5), siendo Df la profundidad de la cimentación y B el ancho o diámetro de la misma.",
+   "pagina": 22
+  },
+  {
+   "numero": "31.2",
+   "texto": "Son cimentaciones profundas: los pilotes y micropilotes, los pilotes para densificación, los pilares, los cajones de cimentación y cualquier otro tipo de elemento estructural que transmita las cargas de la estructura a estratos profundos.",
+   "pagina": 22
+  },
+  {
+   "numero": "31.3",
+   "texto": "La cimentación profunda es usada cuando las cimentaciones superficiales generen una capacidad de carga que no permita obtener los factores de seguridad indicados en el artículo 20 o cuando los asentamientos generen asentamientos diferenciales mayores a los indicados en el artículo 18. Las cimentaciones profundas se pueden usar también para anclar estructuras contra fuerzas de levantamiento y para colaborar con la resistencia de fuerzas laterales y de volteo. Las cimentaciones profundas pueden además ser requeridas para situaciones especiales tales como suelos expansivos, colapsables, licuables o erosionables.",
+   "pagina": 22
+  },
+  {
+   "numero": "31.4",
+   "texto": "Algunas de las condiciones que hacen obligatorio el uso de cimentaciones profundas, se indican a continuación:\na) Cuando el estrato o estratos superiores del suelo son altamente compresibles y de baja resistencia, las estructuras deben transmitir sus cargas a un estrato más profundo resistente.\nb) Cuando las estructuras están sometidas a fuerzas horizontales que no puedan ser tomadas por las cimentaciones superficiales.\nc) Cuando existen suelos expansivos, colapsables, licuables o suelos sujetos a erosión que impiden cimentar las obras por medio de cimentaciones superficiales.\nd) Las cimentaciones de algunas estructuras, como torres de transmisión, estructuras en el mar, ríos o lagos, y losas de sótanos debajo del nivel freático, están sometidas a fuerzas de levantamiento.",
+   "pagina": 22
+  },
+  {
+   "numero": "32",
+   "epigrafe": "Cimentación por pilotes",
+   "texto": "Cimentación por pilotes",
+   "pagina": 22
+  },
+  {
+   "numero": "32.1",
+   "texto": "Los pilotes son elementos estructurales con diámetros menores o iguales a 90 cm, hechos de concreto, acero o madera y son usados para construir cimentaciones en los casos en que sea necesario apoyar la cimentación en estratos ubicados a una mayor profundidad que el usual para cimentaciones superficiales. Los pilotes deben diseñarse para absorber los esfuerzos que generen las cargas por gravedad, sísmicas, viento, etc.",
+   "pagina": 22
+  },
+  {
+   "numero": "32.2",
+   "epigrafe": "Programa de exploración para pilotes",
+   "texto": "El programa de exploración para cimentaciones por pilotes se sujeta a lo indicado en el artículo 15.B",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3",
+   "epigrafe": "Estimación de la longitud y de la capacidad de carga del pilote",
+   "texto": "Los pilotes se dividen en dos categorías principales, dependiendo de sus longitudes y del mecanismo de transferencia de carga al suelo, como se indica a continuación:",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.1",
+   "texto": "Si los registros de la perforación establecen la presencia de roca dentro de la zona Df de la figura 2 (C-2), los pilotes se apoyan en el material rocoso que el PR considere adecuado. En este caso la capacidad última de los pilotes depende por completo de la capacidad de carga de este material.",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.2",
+   "texto": "En el caso de suelos granulares resistentes, el PR debe determinar la longitud de los pilotes que garanticen la carga última del pilote que se expresa como:\nQu = Qp + Σ Qf\nDonde: Qu = Capacidad última del pilote. Qp = Capacidad última tomada por la punta del pilote. Σ Qf = Capacidad última tomada por la fricción superficial desarrollada en los lados del pilote, por los estratos que intervienen en el efecto de fricción.\nSi Σ Qf es muy pequeña: Qu = Qp",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.3",
+   "texto": "En el caso de suelos finos, el PR debe determinar la longitud de los pilotes que garanticen la carga última del pilote que se expresa como\nQu = Qp + Σ Qf\nDonde: Qu = Capacidad última del pilote Qp = Capacidad última tomada por la punta del pilote. Σ Qf = Capacidad última tomada por la fricción superficial desarrollada en los lados del pilote, por los estratos que intervienen en el efecto de fricción.\nSin embargo, si el valor de Qp es pequeño: Qu = Σ Qf\nÉstos se denominan pilotes de fricción porque la mayor parte de la resistencia se deriva de la fricción lateral. La longitud de estos pilotes depende de la resistencia cortante del suelo, de la carga aplicada y del tamaño del pilote.",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.4",
+   "epigrafe": "Procedimientos teóricos para el análisis del pilote",
+   "texto": "Procedimientos teóricos para el análisis del pilote",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.4 a)",
+   "epigrafe": "Consideraciones en el cálculo de capacidad de carga",
+   "texto": "Dentro de los cálculos de la capacidad de carga de los pilotes, no se consideran los estratos licuables, aquellos de muy baja resistencia, suelos orgánicos ni turbas ni los suelos sujetos a erosión. Los pilotes deben diseñarse para absorber los esfuerzos que generen las cargas por gravedad, sísmicas, viento, etc.",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.4 b)",
+   "epigrafe": "Capacidad de carga del grupo de pilotes",
+   "texto": "b-1) En el caso de un grupo de pilotes de fricción hincados en arcilla, se analiza el efecto de grupo.\nb-2) En el caso de pilotes de punta apoyados sobre un estrato resistente de poco espesor, debajo del cual se tiene un suelo menos resistente, se analiza la capacidad de carga por punzonamiento de dicho suelo.\nb-3) En el caso de pilotes perforados, el PR analiza el efecto del grupo.",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.4 c)",
+   "epigrafe": "Factores de seguridad",
+   "texto": "c-1) En pilotes, para el cálculo de la capacidad de carga admisible, mediante métodos estáticos, a partir de la carga última, se utilizan los factores de seguridad estipulados siguientes:\n- En pilotes individuales FS≥2.0;\n- En grupos de pilotes: para cargas estáticas FS≥3.0 y para cargas dinámicas FS≥2.5\nc-2) En pilotes hincados, para el cálculo mediante fórmulas dinámicas, se utiliza el factor de seguridad correspondiente a la fórmula utilizada. En ningún caso el factor de seguridad en pilotes individuales es menor de 2.",
+   "pagina": 23
+  },
+  {
+   "numero": "32.3.4 d)",
+   "epigrafe": "Espaciamiento de pilotes",
+   "texto": "d-1) El espaciamiento mínimo entre pilotes es el indicado en las Tabla 9.\nd-2) Para el caso de pilotes por fricción, este espaciamiento no es menor de 1.20 m.\nd-3) En casos especiales el PR propone y sustenta mediante un análisis un espaciamiento distinto al indicado en la Tabla 9.",
+   "pagina": 24
+  },
+  {
+   "numero": "Tabla 9",
+   "epigrafe": "Espaciamiento mínimo entre pilotes",
+   "texto": "LONGITUD (m) | ESPACIAMIENTO ENTRE EJES\nL < 10 | 3b\n10 ≤ L < 25 | 4b\nL ≥ 25 | 5b\nDonde b = diámetro o mayor dimensión del pilote.\nRef.: Tomlinson (1977)",
+   "pagina": 24
+  },
+  {
+   "numero": "32.3.4 e)",
+   "epigrafe": "Fricción negativa",
+   "texto": "e-1) La fricción negativa es una fuerza de arrastre hacia abajo ejercida sobre el pilote por el suelo que lo rodea, la cual se presenta bajo las siguientes condiciones:\n- Si un relleno de suelo arcilloso se coloca sobre un estrato de suelo granular en el que se ejecuta un pilote, el relleno se consolida gradualmente, ejerciendo una fuerza de arrastre hacia abajo sobre el pilote durante el período de consolidación.\n- Si un relleno de suelo granular se coloca sobre un estrato de arcilla blanda, induce el proceso de consolidación en el estrato de arcilla y ejerce una fuerza de arrastre hacia abajo sobre el pilote.\n- Si existe un suelo orgánico por encima del estrato donde está cimentado el pilote, el suelo orgánico se consolida gradualmente, debido a la alta compresibilidad propia de este material, ejerciendo una fuerza de arrastre hacia abajo sobre el pilote.\n- El descenso del nivel freático incrementa el esfuerzo vertical efectivo sobre el suelo a cualquier profundidad, lo que induce asentamientos por consolidación en la arcilla. Si un pilote se localiza en el estrato de arcilla, queda sometido a una fuerza de arrastre hacia abajo.\ne-2) Este efecto incrementa la carga que actúa en el pilote y es generado por el desplazamiento relativo hacia abajo del suelo con respecto al pilote; se toma en cuenta cuando se efectúa pilotaje en suelos compresibles.",
+   "pagina": 24
+  },
+  {
+   "numero": "32.3.4 f)",
+   "epigrafe": "Análisis del efecto de la fricción negativa",
+   "texto": "f-1) Para analizar el efecto de la fricción lateral negativa se utilizan los métodos estáticos, considerando únicamente en ellos la fricción lateral suelo – pilote, actuando hacia abajo.\nf-2) La fricción negativa se considera como una carga adicional a la que trasmite la estructura.",
+   "pagina": 24
+  },
+  {
+   "numero": "32.3.5",
+   "epigrafe": "Asentamientos",
+   "texto": "Los asentamientos se determinan utilizando las fórmulas aceptadas por la mecánica de suelos a partir de parámetros obtenidos mediante los ensayos in situ indicados en la Tabla 3 o los ensayos de laboratorio indicados en la Tabla 5.\na) Se estima primero el asentamiento tolerable por la estructura y luego se calcula el asentamiento del pilote aislado o grupo de pilotes para luego compararlos.\nb) En el cálculo del asentamiento del pilote aislado se consideran: el asentamiento debido a la deformación axial del pilote, el asentamiento generado por la acción de punta y el asentamiento generado por la carga transmitida por fricción.\nc) En el caso de pilotes en suelos granulares, el asentamiento del grupo está en función del asentamiento del pilote aislado. El asentamiento del pilote aislado puede determinarse preliminarmente mediante las fórmulas aceptadas por la mecánica de suelos y luego de la prueba de carga debe verificarse el asentamiento empleando los resultados obtenidos de ella.\nd) En el caso de pilotes en suelo cohesivo, el principal componente del asentamiento del grupo proviene de la consolidación de la arcilla. Para estimar el asentamiento, en este caso, puede reemplazarse al grupo de pilotes por una zapata imaginaria ubicada a 2/3 de la profundidad del grupo de pilotes, de dimensiones iguales a la sección del grupo y que aplica la carga transmitida por la estructura.",
+   "pagina": 24
+  },
+  {
+   "numero": "Figura 6",
+   "epigrafe": "Transferencia de carga al suelo, de un grupo de pilotes",
+   "texto": "Ampliación de carga 1:4 (Horizontal:Vertical) | Arcilla Blanda | Base de cimiento flotante equivalente | 2/3 D\nTransferencia de Carga al suelo, de un grupo de pilotes\n(a) Grupo de pilotes soportados mayormente por fricción lateral.\n(b) Grupo de pilotes que atraviesa arcilla blanda hasta un suelo granular denso usando pilotes de fricción lateral y de punta.\n(c) Grupo de pilotes de punta sobre estrato rocoso.",
+   "pagina": 24
+  },
+  {
+   "numero": "32.4",
+   "epigrafe": "Consideraciones durante la ejecución de la obra",
+   "texto": "Durante la ejecución de la obra, se efectúan pruebas de carga y la capacidad de carga es verificada por una fórmula adecuada al sistema de instalación del pilote.",
+   "pagina": 25
+  },
+  {
+   "numero": "32.4.1",
+   "epigrafe": "Pruebas de carga",
+   "texto": "a) Se deben efectuar pruebas de carga estáticas de compresión axial según lo indicado en la Norma ASTM D 1143, pruebas de carga estáticas de tracción axial según lo indicado en la Norma ASTM D 3689 o mediante pruebas de carga dinámicas a gran escala según lo indicado en la Norma ASTM D 4945.\nb) En caso que el PR lo indique se deben efectuar pruebas estándar para cimientos profundos bajo carga lateral según lo indicado en la Norma ASTM D3966. El PR debe indicar el número mínimo de pruebas a ejecutar.\nc) El número de pruebas de carga es de una por cada lote o grupos de pilotes, con un mínimo de una prueba por cada cincuenta pilotes.\nd) Las pruebas se efectúan en zonas con el perfil de suelo previamente conocido y el más desfavorable.",
+   "pagina": 25
+  },
+  {
+   "numero": "32.4.2",
+   "epigrafe": "Pruebas de integridad",
+   "texto": "Se debe efectuar la verificación del buen estado físico al 100% de los pilotes instalados mediante la ejecución de pruebas de integridad de bajo impacto según lo indicado en la Norma ASTM D 5882.",
+   "pagina": 25
+  },
+  {
+   "numero": "32.4.3",
+   "epigrafe": "Tolerancias constructivas",
+   "texto": "El pilote debe ser ejecutado considerando las siguientes exigencias mínimas:\na) Desplazamiento del eje en planta del pilote instalado con respecto al eje del pilote en el plano ≤ a 0.10 m.\nb) Inclinación del eje del pilote instalado respecto a la inclinación del eje indicado en el plano ≤ a 2°.\nReferencia: NAVFAC DM7.2 ( a y b)\nc) En el eventual caso que se incumpla lo indicado en los literales a) y b), el Supervisor de la Obra y el ingeniero estructural que diseñó la cimentación decidirán las acciones que debe tomar el contratista que ejecutó la instalación de los pilotes para corregir, si se requiere, el problema generado por el cumplimiento, de manera que la ubicación final de los pilotes no genere esfuerzos que no sean tolerados por la cimentación.",
+   "pagina": 25
+  },
+  {
+   "numero": "33",
+   "epigrafe": "Cimentación por pilares",
+   "texto": "Cimentación por pilares",
+   "pagina": 25
+  },
+  {
+   "numero": "33.1",
+   "texto": "Los pilares son elementos estructurales de concreto, vaciados “in situ” con diámetro mayor a 0.90 m, con o sin refuerzo de acero y con o sin fondo ampliado.",
+   "pagina": 25
+  },
+  {
+   "numero": "33.2",
+   "epigrafe": "Capacidad de carga",
+   "texto": "La capacidad de carga de un pilar es evaluada de acuerdo a los mismos métodos estáticos utilizados en el cálculo de pilotes. Se toma en cuenta los efectos por punta y/o fricción de acuerdo al tipo de suelo en el cual son instalados.",
+   "pagina": 25
+  },
+  {
+   "numero": "33.3",
+   "epigrafe": "Factor de seguridad",
+   "texto": "La capacidad admisible se obtiene dividiendo la capacidad última por el factor de seguridad. Se utilizan los factores estipulados en el artículo 21.",
+   "pagina": 25
+  },
+  {
+   "numero": "33.4",
+   "epigrafe": "Acampanamiento en la base del pilar",
+   "texto": "Se puede acampanar el pilar mediante el ensanchamiento de su base a fin de incrementar la capacidad de carga del pilar, siempre y cuando no exista peligro de derrumbes.",
+   "pagina": 25
+  },
+  {
+   "numero": "33.5",
+   "epigrafe": "Aflojamiento del suelo circundante",
+   "texto": "El aflojamiento del suelo circundante se controla mediante:",
+   "pagina": 25
+  },
+  {
+   "numero": "33.5.1",
+   "texto": "Una rápida excavación y vaciado del concreto.",
+   "pagina": 25
+  },
+  {
+   "numero": "33.5.2",
+   "texto": "El uso de un forro en la excavación.",
+   "pagina": 25
+  },
+  {
+   "numero": "33.5.3",
+   "texto": "La aplicación del Lodo Bentonítico.",
+   "pagina": 25
+  },
+  {
+   "numero": "33.6",
+   "epigrafe": "Asentamientos",
+   "texto": "Los asentamientos se determinan utilizando lo indicado en el sub numeral 32.3.5",
+   "pagina": 25
+  },
+  {
+   "numero": "34",
+   "epigrafe": "Cajones de cimentación",
+   "texto": "Cajones de cimentación",
+   "pagina": 25
+  },
+  {
+   "numero": "34.1",
+   "texto": "Los cajones de cimentación son elementos estructurales de concreto armado que se construyen sobre el terreno y luego son introducidos en el mismo por su propio peso al excavarse el suelo ubicado en su interior. El PR indica el valor de la fricción lateral del suelo para determinar el peso requerido por el cajón para su instalación.",
+   "pagina": 25
+  },
+  {
+   "numero": "34.2",
+   "epigrafe": "Capacidad de carga",
+   "texto": "La capacidad de carga de un cajón de cimentación es evaluada de acuerdo a los mismos métodos estáticos utilizados en el cálculo de zapatas o pilares y depende de la relación profundidad /ancho (Df / B). Si es menor o igual a cinco (5) se diseña como cimentación superficial, si es mayor a cinco (5) se diseña como un pilar.",
+   "pagina": 25
+  },
+  {
+   "numero": "34.3",
+   "epigrafe": "Factor de seguridad",
+   "texto": "La capacidad admisible se obtiene dividiendo la capacidad de carga última entre el factor de seguridad. Se utilizan los factores estipulados en el artículo 21.",
+   "pagina": 25
+  },
+  {
+   "numero": "34.4",
+   "epigrafe": "Asentamientos",
+   "texto": "Los asentamientos de un cajón de cimentación se estiman de acuerdo a los mismos métodos utilizados en el cálculo de los asentamientos de las zapatas o pilares y depende de la relación profundidad /ancho (Df / B). Si es menor o igual a cinco (5) se estima el asentamiento como si se tratara de una cimentación superficial, si es mayor a cinco (5) se estima el asentamiento como si se tratara de un pilar.",
+   "pagina": 25
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e050-c05-cimentaciones-profundas",
+   "titulo": "E.050 · Cap. 5 · Cimentaciones profundas",
+   "descripcion": "Definición, pilotes (capacidad, factores de seguridad, espaciamiento de la Tabla 9, fricción negativa, asentamientos, pruebas y tolerancias), pilares y cajones.",
+   "acceso": "free",
+   "orden": 205,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué relación entre la profundidad Df y el ancho B define una cimentación profunda según el artículo 31 de la E.050?",
+      "opciones": [
+       "Df/B mayor que 1",
+       "Df/B mayor que 10",
+       "Df/B mayor que 5",
+       "Df/B mayor que 3"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "31.1",
+       "extracto": "Son aquellas en las que la relación profundidad / ancho (Df / B) es mayor a cinco (5)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estos elementos NO es una cimentación profunda según la E.050?",
+      "opciones": [
+       "Una platea de cimentación",
+       "Un cajón de cimentación",
+       "Un micropilote",
+       "Un pilote para densificación"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "31.2",
+       "extracto": "Son cimentaciones profundas: los pilotes y micropilotes, los pilotes para densificación, los pilares, los cajones de cimentación"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En cuál de estas situaciones la E.050 hace obligatoria una cimentación profunda?",
+      "opciones": [
+       "Cuando los estratos superiores son altamente compresibles y de baja resistencia",
+       "Cuando la edificación tiene más de ocho pisos",
+       "Cuando el nivel freático está a más de 10 m",
+       "Cuando el suelo superficial es grava densa"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "31.4",
+       "extracto": "a) Cuando el estrato o estratos superiores del suelo son altamente compresibles y de baja resistencia, las estructuras deben transmitir sus cargas a un estrato más profundo resistente."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "Además de transmitir cargas verticales a estratos profundos, ¿para qué otros fines pueden usarse las cimentaciones profundas según la E.050?",
+      "respuesta": "Para anclar estructuras contra fuerzas de levantamiento, para colaborar con la resistencia a fuerzas laterales y de volteo, y en suelos expansivos, colapsables, licuables o erosionables."
+     },
+     "citas": [
+      {
+       "articulo": "31.3",
+       "extracto": "Las cimentaciones profundas se pueden usar también para anclar estructuras contra fuerzas de levantamiento y para colaborar con la resistencia de fuerzas laterales y de volteo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué diámetro máximo tiene un pilote según el artículo 32 de la E.050?",
+      "opciones": [
+       "50 cm",
+       "1,20 m",
+       "90 cm",
+       "60 cm"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "32.1",
+       "extracto": "Los pilotes son elementos estructurales con diámetros menores o iguales a 90 cm"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿De qué materiales pueden ser los pilotes según la E.050?",
+      "opciones": [
+       "Concreto, acero o madera",
+       "Solo acero",
+       "Concreto o mampostería",
+       "Solo concreto armado"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "32.1",
+       "extracto": "hechos de concreto, acero o madera"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "La capacidad última de un pilote se expresa como Qu = Qp + {{Σ Qf}}, suma de la capacidad por punta y la de fricción lateral."
+     },
+     "citas": [
+      {
+       "articulo": "32.3.2",
+       "extracto": "Qu = Qp + Σ Qf"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si los registros de perforación muestran roca dentro de la profundidad Df de los pilotes, ¿de qué depende por completo la capacidad última de los pilotes según la E.050?",
+      "opciones": [
+       "Del número de golpes SPT del primer estrato",
+       "De la fricción lateral en los estratos superiores",
+       "De la capacidad de carga del material rocoso",
+       "Del peso propio del pilote"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "32.3.1",
+       "extracto": "En este caso la capacidad última de los pilotes depende por completo de la capacidad de carga de este material."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo se llaman los pilotes en suelos finos cuya capacidad viene casi toda de la fricción lateral, de modo que Qu = Σ Qf?",
+      "opciones": [
+       "Pilotes para densificación",
+       "Pilotes de punta",
+       "Micropilotes",
+       "Pilotes de fricción"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "32.3.3",
+       "extracto": "Éstos se denominan pilotes de fricción porque la mayor parte de la resistencia se deriva de la fricción lateral."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Al calcular la capacidad de carga de un pilote, ¿qué estratos indica la E.050 no considerar?",
+      "opciones": [
+       "Los primeros 3 m de cualquier perfil",
+       "Los licuables, los de muy baja resistencia, los orgánicos, las turbas y los sujetos a erosión",
+       "Los estratos bajo el nivel freático, cualquiera que sea su tipo",
+       "Los estratos de grava densa"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 a)",
+       "extracto": "Dentro de los cálculos de la capacidad de carga de los pilotes, no se consideran los estratos licuables, aquellos de muy baja resistencia, suelos orgánicos ni turbas ni los suelos sujetos a erosión."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Pilotes de punta apoyados en un estrato resistente delgado, con un suelo menos resistente debajo: ¿qué debe analizarse según la E.050?",
+      "opciones": [
+       "Solo la capacidad estructural del pilote",
+       "La capacidad de carga por punzonamiento del suelo inferior",
+       "Solo la fricción negativa",
+       "La licuación del estrato resistente"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 b)",
+       "extracto": "b-2) En el caso de pilotes de punta apoyados sobre un estrato resistente de poco espesor, debajo del cual se tiene un suelo menos resistente, se analiza la capacidad de carga por punzonamiento de dicho suelo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Al calcular por métodos estáticos la carga admisible de un pilote individual, ¿qué factor de seguridad mínimo exige la E.050?",
+      "opciones": [
+       "3,0",
+       "2,5",
+       "2,0",
+       "1,5"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 c)",
+       "extracto": "En pilotes individuales FS≥2.0;"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Al calcular por métodos estáticos la carga admisible de un grupo de pilotes bajo cargas estáticas, ¿qué factor de seguridad mínimo exige la E.050?",
+      "opciones": [
+       "1,5",
+       "3,0",
+       "2,0",
+       "2,5"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 c)",
+       "extracto": "En grupos de pilotes: para cargas estáticas FS≥3.0"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Al calcular por métodos estáticos la carga admisible de un grupo de pilotes bajo cargas dinámicas, ¿qué factor de seguridad mínimo exige la E.050?",
+      "opciones": [
+       "1,25",
+       "2,5",
+       "3,0",
+       "2,0"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 c)",
+       "extracto": "para cargas dinámicas FS≥2.5"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Factores de seguridad mínimos para pilotes (métodos estáticos)",
+      "columnas": [
+       "FS mínimo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Pilote individual",
+        "valores": [
+         "2,0"
+        ]
+       },
+       {
+        "etiqueta": "Grupo de pilotes, cargas estáticas",
+        "valores": [
+         "3,0"
+        ]
+       },
+       {
+        "etiqueta": "Grupo de pilotes, cargas dinámicas",
+        "valores": [
+         "2,5"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 c)",
+       "extracto": "En grupos de pilotes: para cargas estáticas FS≥3.0 y para cargas dinámicas FS≥2.5"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Un pilote individual tiene una capacidad última calculada por métodos estáticos Qu = {Q} kN. Con el factor de seguridad mínimo de la E.050 para pilotes individuales, ¿cuál es su carga admisible máxima (kN)?",
+      "variables": {
+       "Q": {
+        "etiqueta": "Qu",
+        "valores": [
+         800,
+         1200,
+         1500,
+         2000
+        ],
+        "unidad": "kN"
+       }
+      },
+      "formula": "Q/2",
+      "unidadResultado": "kN",
+      "tolerancia": 0.02
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 c)",
+       "extracto": "En pilotes individuales FS≥2.0;"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En pilotes hincados cuya capacidad se calcula con fórmulas dinámicas, ¿qué factor de seguridad se usa según la E.050?",
+      "opciones": [
+       "Siempre 3,0",
+       "El de la fórmula, sin mínimo",
+       "El de la fórmula utilizada, pero nunca menor de 2 en pilotes individuales",
+       "Siempre 1,5"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 c)",
+       "extracto": "c-2) En pilotes hincados, para el cálculo mediante fórmulas dinámicas, se utiliza el factor de seguridad correspondiente a la fórmula utilizada. En ningún caso el factor de seguridad en pilotes individuales es menor de 2."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 9 · Espaciamiento mínimo entre ejes de pilotes",
+      "columnas": [
+       "Espaciamiento entre ejes"
+      ],
+      "filas": [
+       {
+        "etiqueta": "L < 10 m",
+        "valores": [
+         "3b"
+        ]
+       },
+       {
+        "etiqueta": "10 m ≤ L < 25 m",
+        "valores": [
+         "4b"
+        ]
+       },
+       {
+        "etiqueta": "L ≥ 25 m",
+        "valores": [
+         "5b"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      },
+      "explicacion": "L: longitud del pilote; b: diámetro o mayor dimensión del pilote."
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 9",
+       "extracto": "10 ≤ L < 25 | 4b"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 9 de la E.050, ¿qué espaciamiento mínimo entre ejes deben tener pilotes de 30 m de longitud y diámetro b?",
+      "opciones": [
+       "4b",
+       "5b",
+       "3b",
+       "2,5b"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 9",
+       "extracto": "L ≥ 25 | 5b"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Pilotes de {L} m de longitud y {D} m de diámetro. Según la Tabla 9 de la E.050 (L < 10 m: 3b; 10 ≤ L < 25 m: 4b; L ≥ 25 m: 5b), ¿cuál es el espaciamiento mínimo entre ejes (m)?",
+      "variables": {
+       "L": {
+        "etiqueta": "Longitud",
+        "valores": [
+         12,
+         15,
+         18,
+         20
+        ],
+        "unidad": "m"
+       },
+       "D": {
+        "etiqueta": "b",
+        "valores": [
+         0.4,
+         0.5,
+         0.6
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "4*D",
+      "unidadResultado": "m",
+      "tolerancia": 0.02,
+      "explicacion": "Todas las longitudes de este caso están entre 10 y 25 m, así que corresponde 4b."
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 9",
+       "extracto": "10 ≤ L < 25 | 4b"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Además de la Tabla 9, ¿qué espaciamiento mínimo absoluto exige la E.050 entre pilotes de fricción?",
+      "opciones": [
+       "1,50 m",
+       "1,20 m",
+       "2,00 m",
+       "0,90 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 d)",
+       "extracto": "d-2) Para el caso de pilotes por fricción, este espaciamiento no es menor de 1.20 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estas situaciones genera fricción negativa sobre un pilote según la E.050?",
+      "opciones": [
+       "Un sismo que produce cargas laterales en la cabeza del pilote",
+       "La compactación de un relleno granular antes de hincar el pilote en grava",
+       "La colocación de un pilote de punta en roca sana",
+       "El descenso del nivel freático en un estrato de arcilla que rodea al pilote"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 e)",
+       "extracto": "El descenso del nivel freático incrementa el esfuerzo vertical efectivo sobre el suelo a cualquier profundidad, lo que induce asentamientos por consolidación en la arcilla. Si un pilote se localiza en el estrato de arcilla, queda sometido a una fuerza de arrastre hacia abajo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo considera la E.050 la fricción negativa en el diseño de un pilote?",
+      "opciones": [
+       "Como una carga adicional a la que transmite la estructura",
+       "No se considera si el pilote es de punta",
+       "Como un aumento de la capacidad por fricción",
+       "Como una reducción del factor de seguridad a 1,5"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 f)",
+       "extracto": "f-2) La fricción negativa se considera como una carga adicional a la que trasmite la estructura."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué es la fricción negativa en un pilote?",
+      "respuesta": "Una fuerza de arrastre hacia abajo que el suelo circundante ejerce sobre el pilote cuando se desplaza hacia abajo respecto de él (por ejemplo, al consolidarse un relleno o una arcilla blanda)."
+     },
+     "citas": [
+      {
+       "articulo": "32.3.4 e)",
+       "extracto": "e-1) La fricción negativa es una fuerza de arrastre hacia abajo ejercida sobre el pilote por el suelo que lo rodea"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para estimar el asentamiento de un grupo de pilotes en suelo cohesivo, la E.050 permite reemplazar el grupo por una zapata imaginaria. ¿A qué profundidad se ubica?",
+      "opciones": [
+       "En la punta de los pilotes",
+       "En el nivel del cabezal",
+       "A 2/3 de la profundidad del grupo de pilotes",
+       "A 1/3 de la profundidad del grupo de pilotes"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "32.3.5",
+       "extracto": "puede reemplazarse al grupo de pilotes por una zapata imaginaria ubicada a 2/3 de la profundidad del grupo de pilotes"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "La figura muestra la transferencia de carga de grupos de pilotes al suelo. En el caso (a), de pilotes que trabajan sobre todo por fricción, ¿dónde se ubica la base del cimiento equivalente?",
+      "imagenUrl": "data:image/jpeg;base64,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1nenlyLWaKvFaVYVEZFSbo1ryLXcu4fV93xLqf4HpGJqzVA6s2BuxQM9AxYokdOIZSBgc37MM1QMc2KJGAoz8MM2jP7lj/8AKgKBJWaABptINTTDkyAtOGbFhCqqpg1Iww7XRC0qPY5EHpszLjKcVL0mrPWnpzY6045OT8BoSWKEGoqHQkXVyDsuTdsdFrSD2s9Q6c3bemrJvAANMXUUIP8AxsWMPv0EZ04qLUaJENSmnNrUMVIqA4Vb6VSl55EONSrKLktaEpsFylCp7HRNiSEkknm0zBPUqgxctaKUVhIpkHJMpNFpBZvtNUXi3k1oSRVUlAVcnEKgUWUqp4mpYjGmo7Gu/NPZRwyGlpKukPrRgRUENeixEltObRpqZFJaa2/ESqlOVHGb0lVtxFGhcYFVNAjKK2lRJZkSUp+DdapyyWi1CQaetr3icsu1qO7woSOx4KCVhaQcHMSqMBCrRg4cQn4lp7XETbZIaUGYf7h/8sCgBRCsXEnAESXK9LVDZGMMF1zaKxoRasHpLSkhICK9QOKnAqg6UUU5VItoohxVCapUa47WtJAuttBuzdI7bafJz35LVVyLJqkGyP1NYCUEKkuuriHcrEXEhV35OUIjSqsYza0JtIVbjXYzgmu+u+yjUhIRS8nNoiWBQDOv/RxrTqQ1mHBSmI89rvTGkHa7LBbWtGggUSmvSwDGKDJ2FPTsZSIxQ5tUKekFJDtsBwxZBQMWkWDpyaqRjqzdI00d27FWd2m2rXIrqJVd6nfuxc09I6cux+yDsWmoYSYxQZOqoxVq6R1ZukaaBqIQMc2UbsWllNgoTiwN2MDX7XelAu/2LJbnTk4797YY/D3mn+q3ukW2v+5vt5hstctt6jacTg7hvN3Z1XDn/wDWOlHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHmelHm/wBxf//EACwQAQACAgIBAgUEAwEBAQAAAAERACExQVFhcdGBofGRsfDBEEAg4TBQYHD/2gAIAQEAAT8h/wDxObP8yf8ACf8ACf8AGbJ3/wDBT/E1afkgd/0U56RrCXvV2S0MRUV2YSVODkPwqieiTPUzquZTL4DHVYyEMuSBxFU8CeZknVdW4YgD63a4TPGGMWdQYZBqf2ulwmn7YvGVuy0vlfWhn4U2EFCcSUhUXNC/H7ZsUaoSFEYKNEGrC5UibjsvUzJqOcWfN7a+fpey4eupmfjdk9Fyu6Th0+5jksvzZDKOZpqlOEzErYWgw0NM680gnCGXCVUFGTz04uSyqdIk2zslre4/uv8AcP5WzYwHy1144R91hVfwfOqmZ8Ij7VIBnKdzTwMXJzctCIKZpQ4wwTxM3QvI6J1QMIJ4nBNFtziYwY1NypYeen0rhEYw2MxbCUx1ZkkpQ5GgB0cnJ5qsWE7GKQxzwE6ea+QjMLObLgDAsNma6EMzY+TBHsaCLmET1VKiziUS66rv1I0LGnSF6dXM7Vdp7qAggI5O6WIEmVqZihDChgLiKCTKkzpoUImSO92AlhxnlIaHPowi8c4s0OCmWkTVkJUna/8AnzR/5zU5S2t32tHK/kvrkfb7UwR8U/xft/082bx/7OaVrL1TWbD/AMcfxiRfG00MR75HvYb9YMfzv+Hp/wAWx/yKEf5T/gf+A/zNk7sndh2few7KIqMFn0Har5aPL/Ck/Xrk96+KiOh9QXD+4pwfcWUn5i8vzN6fuLB76/V1wYMUZT/Ur9MV1PQHVdPh4XmySmHturfGCU/BcCKMkeBdx8h739Q+9z9r70Ws3p979Ne9+jnvf1J+9j9t736Qe9i9g96f6s97g/a916/0PWz/AKH5v6j3X9R7qxEVCIg+dH9rcsfL1mV4KaEXK11P8JAnEmHxZLRH4v4gsGKzhreq/wAQ0vTboSj/AKHfom/Sdl9hfoS+d9llk4DpZkbvZLEMB1M3WCTqBzUJ4NyOLBM4vDZqBSf02s8OKD4lhD7VDy7oXazSXiW5T3MHhQB65s9L96y7hZyuLicgmPD5FEnEaHPn4rJRMX6Nfolj4fa+H9r4X2vifaicF8a+BY6Fg6LDosHRYOrBQGUdGdWSgKRfju2o3QymQ7+PFwYCwSzcawP0xXQYTxHikY3cfFbEaQI0tCxYz/jH+B/hFwnYE71mjk9vIvlFjK8k8B8lZhmD4kHixlkkdXizpXLYzx0WUG4AR+pzVJh9BeKf4P8AjH860CIB7P4+UuGKwpI+qqJW6W+koIjjWNk5UUfvdeKe8zPIdjxW+C5/kj+g0wGFhvxPWmiBPNgZ9c1BLZRZBwlBTwPD9d1IGjxv13UT7vBRCjuF9o1mA0c+tQlggHRWVHYcFEyR+q5UJGyVQQDwXRxAbByVx7wnJNCKAcqvN9W5vSfMTmkqIO1e1YY1sBppxvYsh3ZIc2fbdQAzSk888EWCCkSx8TwqyZykMe3YFnoSfawyZ8sc+ismugjEc+dhGMRYHmDukkQkdPmhMAxKN/ew1vMHzraotGHzrQw2xh87L8QdPnSho54J+dWKM/TmqFE/kPvS1coXL51PcXr7qmElA2PnVGFh8n3p48SZ91V43y915Ww2XzqvhzJh86orJAcrLMbTIePFR+OcOi4e5ibLQUJzuLio6KVPD6FQHE/sPYXtMKp68iOKS3lMKulg8aLYs4NJvSSF5ZjkDVJIV42GKpgVAMiDGjlF9lfikBG80/mEhuFHIKjT1JOD8qk02O/XVllQ+H5VniaxZ9R5qqjuIUWEjUl80cse4/ap8kcOh71OdixsP6bYkz09NnncynUqLd9v72F2Yhya+dkEvI+R83jL9I+90acScPVXidnx4bC9WS0OqWA3lcMEE5z01ohOF0emtBCfUYsM5+EapHNh34qYzoXarSwEzxqzBD+qXTX36GrpT4Ujb6UNj5vhK+by09FV61YQGxdcXAoNOvq+nxcM5hc+LENBiZ9qy13Bbffpd5kT91HRN/IV0Mn+0eakcjj5MLEUNi+Kc4nePFsYHxwqf0Nj7WYwfpVNRl4DspeDZU+Kmu0E4e7+1/j3uGIegK0xF0eMFzaig4emuznNwOmkDB6cYuFkw0W8YP61ZPLd0+SxaVeby9LJiNxWQXOIq8lU8vkeKPc++A1ikH2h2Vfwcl77LEzmAbK1AfZHso0K8H5KTlZgn1uEkMtCNlSBOw8eFn/NfxZTYgQecVhOWD8lj2HzC8f9MVpIPrljxlE7A1UyaD5awgoIeTsvmZ7Dr3FyeB2VmmwvyUlneDZf2kse9PWv6bYOfGEdlAGGB2oUij9ACqJgmuMZrq+ZyN58Pp+HrSLn5Ls80/UJSp0snRmKII4uWJKZHimJ62fI+aBwIfOKekGDQ7HG3yNCWEw4VgQjsfSk/P8Aph8V3CrD+DXMr58qFm+qHzVghpJx6qFIyY9FX0cITCPxYUA+B6bDTONosxJhfA6vinUMmyhCBWXN7GpHN/a7gkqVPKZ+RZVj19ZoHsofCzphm48NIIazwOm5u+nri9Bi9XnxSmzKjt8EPIqkoQCj2ZchtUXm+EHvf0zopXOGCiUUx+UoSibmc1CQkgSySW9R58Uzc8v38UjDbP8An0rdi0cva8tcpGMwV0+TxcvWfodXagHGaS+PP7iqKBJGUsFE5uJFhD8ijFQKIFFwxV5A5wOyoMwS8BxQcRFLjFWJbJ07KsP4np2WW10HDiuhb/AdldYB4nksnQUX21NZ8nTsqZSp+cliRDw1cdKpx5FWKUw8eSi3JZPi6OCe39QRBBIua9PsBrDJQGdsOGxv/s51cqww/ku+zkOC8Tnoj3qspTh/JYzi0M8ou7GMz62HcsfH9768+6vL4vTfmijmQWqTyTgXtWXBkdp03WrsPOKkxI4fii1URP8APYsff7K8YydVwlZvkaMYSPnVBOXmG8Cy4XjJ6ap0wPiJvgxGxN8Mkd+Fz4FInEkIaojjoryh+/01dqWDdI7/ABnssLdfgRXok2E2NajgN+Ky0Q7/AAs1CBVYMkmNnx9LHcsb1db7tXmqxfkoNJZg2NVn9gi8Vb1n3rYSTyysDoXnCNXaHA142OlpsUFmXj9/xYguefPj0pAp0PdnHE9U4k1f9711Lc+lwfOh39qnpwi5oU9osKYOftTbgJKzj8E1M1Z1Pu1H4sMYzQm4W+dZLPEQQ243TZGYP1qv6rWM7KbAEzgY/gtYpwAebyVhqDm8aZMEjxeKvL+1RHJ9x6UJuE2pFPjbyVLysnx5LBiUj/TaYzvFsbK2ZAOEGa+mR6nspqyk72lflDnA7KhJVh+Ypd2YPD3ZvGe+D2WePD5A6XIuRrACRz4NSIXTz5K5U/YYsRsYO66kcfj72B5JYeGra5PxXQfhfe4BkxwPDRhK4DtpSYBZ4Hqnx4XasKncTjFyxGHBEriOJFzVWd8PHTYKM4eD1ZRhgbaoD0UeJ4rcAd4HTYtI8NTEZTvf00lAUhPW6j+kV2fyv+1bRwk2urvgJPoqSDHpnpscUxwmikKwdvr0r+BRHftV5kfFOysCUw/ko8CX7FEDGeA3is9Ie9wz5PIo01JmCFMVp614PV68ThUuqvNy8+KMJOQ/KjiwEa/KpDfI0mci928XEL8jxULS+EjYgZMjdPSvb9avaL+/2qF1BTyqCsM9NQnZb8X7VlCPu6s7YqfhimPJG3n7XHaPok2Zzf7VicZXPl7XD5pCpLg5PONaDLBnv7XC7N4k82No4TivaWz+vFPTkB+tXqw3/J4pcDoP6bekrRvyoEe+PBi9EH+cUp96M2xmxPbAw03f5ijwV+X36VwGbu5sCoSHzLhHAaviVX0BLhrAD7A+LK6TkcauKXsbPNYRQ9MXDlk786ysg6T0sjPlB73NN6aPvQi0XI1hc7w/Ya0wQ8Iu2vzCxu9/DNOFKAExsDdPzBJOymXn6S06x2d0jCVJs1efl00T23wem6W44V1nDHeWq7GRA4xXQz7Y9lbD+D96A9BeBrFPoDxa9Gmn+WPTTVQTYGzc4Enrd+wVPz5Tp2UkAx7FdXYHDfiNuh70LYU+WLOKLnP0BK/AUcHpuddo+mr/AEQENzcDmPkUbgCC5HqLmfH8TUfbjsuHcBOP9UXyBPmz18N/C6BKXigUwAOqmgQh4caujAOBXKVO3kWAdcu8asZvxJXwew5c6wA71i6Kg4FjbAYefD0rDCVg84VpFGKGJMsL8jXRmj14NgIHtBsa8rT29qGwedhpjyH9Nu5hk1SVJQY5QfKx55wc/wCqqE/sEz6UAB+8xqeeLTe9zSAiN+nIJQfi+FP9arellqzk+5Xdgnq+1GQjkOGtwlGMJGy4BQB81mhc8B8U5wdng9lnoJty1ugMysnxdDD6I97HHrh8FhAQDFIO+inzYFmHc6oneDGsK6cihcK784qwJ6uHfrWEYEeV70EKPJHmm1CpHCS+dYiSsrdBE4DceKCnqdeLVEB1ZM2c+GUExjdhTHPCox/JHsuEBiWI8WAdotkhdh+VaPTSc0g4f3NXJlm+f9bv7Kjaj5piz9OHr8lcMlk9lLPMMaEX9WPsVl4SOytiUhvw04hNTgdNzrhhtq4ABYy00no+PdfeGTJSjP8AoZrEYCE5s/BmIqZKof5Gs0D5empIZGdU1rzbdNRCEx0dU5wiV2asCYCeDHNM4OjR6bN4ILtTVECBL8KUb5I9NlKCI3KuPH+LWkYHWgdVceHiNbI/Q28M9jB6akIHya80AgOP3vFYwiJ2f1EvnCeKfNSuMLMdlO+/tROrD2MXBcIIFgSicDbVfch7qjjNI21+9GK4Pe6aSE4WPvYd4A4FlSVj8VpQM9j0qlklMKkFyB+ek+ME09H6KSCiQ+YolkHPEaSA83vC5Wkvf5LwULvpuFd4oxZDMb34aq4t2NiWBH8AD3qCd1cOzzTE4aLQ3IY0n71T+BD3qqQ4t5U1MMJw9VJgROe80wsiPxuSWwc+fpY2ozxrgGyFo43ZqlZ9Lx5s7I3hNNzQmF4OmrYAxPObAI7mLHKZ8X7WKoIsP2pJHkkdlVlpHHkoUNj8KakUO1htn7f3sDSFCO1ZGDt58NAmLXBcB7c/Mb4LHb4aIxchwK1nxfa6rlBPYmx7xaHkqbhRtK5HmZfw3IHoVxAomzFmyLJ8rQQGy96obAE/aiuUbjyu8qQKDyQPmUnIwr+GzyFJOB5oDRyL9tIqfphsHpHih73qbhEyVu5MPz5Pd4yPQHVNhvAM+q686D+m0YXQ4z1dS9XgwxUsmdNxfI6fPG6chzp4dVnA7bNx+I+mxnBoOHJdYFIQAYIj4laxBfQ9N+8yIbDN1chjVmYcrkeebcnifV9rlZeH4WbzVefJUMjofmKcoCQR8KGFrlx8VOmRxvJcORafCn50E6SCzJFxfkrfJEkNssLYPpj3sI5cwpPLEeiwrAsjw+PrVn4APeqMMLgWeST9VppMeYPGqR0XT9arACjkb/1qrwUJ6VPDt3J3XIy/D/3pjEZjldUwAQl7mrJ47wem6rzTigDWB8rjW968XtUxw7PFm9FfUY3cHCYbHN1VPpCwElfD+9dTBPs0ihHIuSzWBGrPkKfazSmbAWR6QqVdwmfBsDBPNeGj0DZ2wd7FcSlrEB/YOPzVWJHtFcvnB4JMUKv2oxqvxN45FT3T6yTz5ojET3JKqk0uRV9ctS8+HzZFljR6aHcFzxZGT82gRPTw79b+oUpF5Hbw6fN0/wDgxXaUS7D+m7pSGRJs5knAPehMI9AdVHcQ7A0+ErHZ6agwH2D1TBk3aVTg9eJ8N0qB46SLqVJ1kpjpC63x631eS0LifdntRzZuogOHpWEG44fDZ31abVj3Dt9LiOshYukz8+TxcByo+BT4aHvUGo/29lklPAjVbzBmWxhZ2IWHgdlC3iLeaeDbI8Njceh0LjaTw/O5wyBk2NILn6Q964P5ce9QfMKbU80F3Ib+en6OvX+hqxwgg8YrGZefFImLrgdlkSwVqh+g/mptz46/DVSOO9OmuCMI6cVlb6yva7KxD9aqHEx8ONlg+8Y2ebHTvO8NUYR6A8VwYUAIZw/ex1AmPBdC8oQTN38Xglw1FNo2SuqsOrw9aSFFODK87t5a/jPvRzmqzoRT6VpgDxY/mqsXwY97gz2mxkxQtfi1GvWw08Ph71nZnB1Z1RIB3quhlfh/eooCr4rgPH7e4fn2XZZF2AcXz5LpXuLkOfJR1zhNlKrK36Pv/UtZomp6BIo7agzZY+t8vrVfIv0xda01cNmYqhePDVBSxxJ8UKThD3XIMO35fW4/pMKLyKMnDZ8C3fpmgLEZd4shbImqRcC8+HzXOxRhwrLku/Sgaqo/A9L2Vvf4pok+B6KUBL5P4jwRGHht1krD0LDeDNgADO0XVvJYjpn71OKqS+ReNMksQclA80XvCB6XbdxGxodfk/8Ae43Qx5zQTFSj6UciqPxnxZxxK8+HxRnYAelZ5yHasIc0ifhnD2WW6B7E5rPEmE2NkIVm+ZYuTHtXoADeKJyX4f11U4DJ8ihO9OoSUYvmLn0PKDdNxI5jcSVEIcc3LIlgGuLgHHMjOboUnSlR8efKo/kITWp5AOqOSXpHI1xhJ4R72I7qoKJAgcMV0M/SPvYs3zQUyMfKxemXwn3uDZ09bpzc3WS/GU+HvXBwVF81wE/IMKIgI+kq9ETwvJZ0BviXf4Jk8e6yLKH8lGJtR4us0PL+m2XAUpMNQaHA5IZKhnwnlWNX4Cfuqo5fhD3siMPJ1YhsivVahPyXjzfww4aUxLkedLPagj/JQSDk5SoyHAOjG7lr8Aq82fuL3r8zNPw97CZ/uxc1JMH2U59Mm+Ltl+ouzLHlGZlOXfr0rO2M/auRi5+EFxdp+/2vwSCSowCaePZdfFnoUanaDasIBm4jyVczvG8l2YBINquTo+eJ581CAgKHnFCh8QXVnUcDfK2M/qYvRVJUyV3Jv6bvkekX9C7u/f2z3uJJWH2etPSRnysVL46MaaYYOONQYkkXwstnhrv5WcbmPPmopFYfnLDFJjp9+b4fCrl8d1VLmjGLkLttY6szYOIVz28UqBUOd9So+BSvMtPReT/NJS+aElEg13ThkQemyhkTIDau/D4Ckufkb8HZRjiYR4aYrPho2EoRJuJKZZFktqhwwfQL04b5LGrfRHuiw2ej2Xa1T+eUY86HFdkkTPXosxISHHkrZyUj/TbxjZXKuTXJ0MFnYaD8lbiSQbGtTw8Qs/JuDk7PNkURmWpzj7UX+xnvZOxkOfJXPeN+iuNBmdHxUiaH8xT3CS+FJMRod2Zg9PzHmxbZr5uX6eLHSf1vrUaRgJx4bO3KiXwrVw8eHTYUA8E3h2N8GKjvxwIMWLtmfFmgAy59i7zUdMN9NvseRQJ0BuwQ0jHCOKgIJrg9l2loXHkv7wldREBAz6WUUD4Dpu2DyC83jEjPi/GXYeGnpLLxcaEM+fiuWAiOGbh41Oh2VHg/Seta2ElIfhXHn14ja/gC56bMptDaioYifid1/JDc8PNfOxLz8vSxNFHzSmFPcbOK8lpEGm+rTk8ix3h1AoAxqeB2WcJLdTOysmyAd2eE0uh2VFTmP5igu3yoNxjHAjZViESX5K00qH3LOKJkdkUSpXBx4VwXKAvP9D4llpKQ+RSizmPZUnc7/ReXG9T2UfeA+L1Jr8+S7KjJ+fpYKAzwqwv9odlABof03dMRigPmqlb6xTQgDHj2V2GE9MzZLHIcPdFDBn9wonbGFmHJYiZwPh8WEgO3B7uLT9JY2KPAarGDz0dlPHp/UYpA4EDa7KlFH2D2XSQ+l5Kh0+wcYvHZrodlWFv/AH7iaF2awVE5L7LWjtPj00ZyCX2pN0PTsDAxTeB4eB1YNniCyAhgrMu/FQCBnk5qXuKW4saZN/elD8MXAFcnC+3sroEfEs7pvyP4LOEXtD5uqg74HqyMjIt6peoCA+1v5qM8UCDMrfrRPskRxmxbPQFRgDvg9lP67qxACSCajkLOT6NUEjNxnFNAAhkxcrGQbn7UAiOQp8bb8+niwx5EtvFXjkyr0krfmx7VZL5y4Bbw9PAlBxnsovsRMcFjQkqMCah07LGrDklHxikCDycDsqrMDo42WZZkT2MFcGCzPHsso855PFnJV4BkoNR8nA7LMoxF85ZssFK81qgmVyd12pX/AF9LFAyO7xRVMFP1q55FtfrqxBXP6WqSnMcp/Ta1lHpd6QEOUGfSxth4CzSWkftT53liTxl2VoFiht3qBAfbYWJNd9Z4reKWGMu7P4p+yvQsTA5e15lgRz8TivXBId43WMyRnqkYogTlQV6qfK+IGPSwIQZM483F0ykfiK1tpJ1hVxGSY0ybQm/iaMoNC8l0gkijgsb7fsD5ov4GH00kc6dyU5VMh4uLlMzJGywCouNA8h3xBTd2k81TSGryM0k8Izg1XKCKCCDSU1pIZR6K5TFszZE7ZDB1XYXAKzfXwcImtzmPP2V3gjbFV50c9OXFAHSIMYbsmwZEqozoK9FYrQU1FRvN4RG5UZgziy+lgnXVgRnO8ibBFGU5wfrV6Rf908VlsJ/L9KZwhApE2IqMtdb9niwY9NEtzCoklUT5e1j6ZHaqzxD05MljFok3hu6SYFf4XPu7D1SiDSTLRe/B4rS48nPkpOIB1+CtD8x2GVlX61ZAKM/yelf6CUN9OqguCMlv9dUooIm/6bfkEgemnm4+lguplP3+1gtZyoRv6m1hMrj279LsdEqI9hp+tUKQSOOXtXPK4vwUxuYdURmU77+1xxykOos8Yq/Iuxy/r6XsrgdUCXZk+FO5qX9GrhE8LivVQRD0UElUH5KOAXZxWW9DKSyvlAaSCw/F8Boh5nbodPmpgi+B6arA4S7G4ZFSemP3pMdqPkqdlPnRcL/qtMBcXMtEJiNPwuwJXMDTOLKchx6/EcNYPIGyzMxxOq2KMfvWQLOmgUKWZG/oPksKLRfao4wrFnx8vxZfgTwZzn7VZIJyzXHzyUsi5ThrnKlylJECEaDR2D9MWPs2P4oHGMtzRtA+X4plANSJr6nPn0rIMj9/tVsGUqMMp6Sg4Jerl7VEYimPUqRRXd1Fkc5SP1cU4QYoOs0gJIufuXtFN939qjkMn6UhEyLikESvh7e1gi+CHVgGjHBaaRdl8jYkNd6dNgGYN4pwhQBx/TaeCNjU9UsDMHgIMNVseXseSgVles69LzMW7QtKfn0pB5Nl2f2snfDrdPixmgkXGHXD4L+oT8fFGwYrF8QNvCpA++1QN4a8XGkcvxqY4TD8LrcLgUERKmv11WuCnnvCyLFSvk0KpMl8ipHLAnOrrK5J5wUKdntRz61OJ8+rU72fL60SAF3Fm4ci59aDsLC4eVxwRDwz3TjrEcJ8USw+aruHp+FE52rSWBTXLdxbgTstaCyLljbF38CywfqblN4W9kphwT+UuMnGb4WBKMa81xDci6PcE9TSpRBz1SmXJOG5FFNlh6PgqIDZxeNcGX0J6p1y4f5PSsgtfgOmxkoVNqah4Ty6sNn3D49Lt4hUhOBCpQ+tAjTd9NLj/VkSV8YFRvHrrHN5LkOLlQiPPhZAk06cmLEfwLVPA0/A9KkQZUdsLBnGOFZqSw3yNVGD5Hpv3uIFBpRHC8N/YTbpskLM9H+m7p4krB1y/RTHrYm4/DXUNJuPWpi4Dc+1lJAeudNgl5FxSDq87v2qZ8DfTpsk+UX7LLqYBOHpvES7+DUy4NfeFCIg7ovNXGdfj1YbIELsa+eqelClzenTYh54JoyxFHwKn+sNdDTmSzlYZwyugs0tqDNDD0C4v7UEHILnyeaXiMpGxuEWmxemF5lM0pAIYhqBWeMGazEuQ7OosJ9AOru/riokwOy5hgd9VTZ5li7MNSraHS7Pn+amSQ4TfuSi/oHZSY06vhUi+IpOhd32vHIJ/Ox3cWcFEpMAnpYCoEvVmVgMT3YC8BPd0QPoDqkjl6k6axLsHytMOE5HZNEWVMNboMN8j4sYTUHDqz0jUiGU70abNGJh58NRjjk4ZLqNC8Ic1sQf29XUZb7Gr8RJfEq9fh+mnMDTgMWBwqpOF9l6bJjHwT5qdOwfhpuGPQ1NlMcpX5PhPw1T/TbOB+Ny7bueVRaaen96nHLp/XN4VgJxWI5L+VA9i8OmlpM+QWe7Zfw1A+/ywoUBpA1ZIzwvPhoggI1jeKEwUR9K9TC+UNBaYhOPmh3IvxRilIX8NSIgZ8eqi0ybpgs5EC7bPVDwcOrhxCLwzSDTYjnBmwDRh9isSfVSAdG/C+UaUYR0D4bslRdfTZMEi9BcySe/JZwYi7MiBzvi4NNkDXGlUxOrtSXnAtq3QSdJDQGIzlZacIJfm/eIN35Jgb8B+8VaTEG/FRqwZG7OpHqxU5LZGYmKqMSOo7rlKdr6lqoFwMD3QbrTSVYX5HzeJjPAPNkCQkE09WSxJrYTpsMBBoeaxRvwFTI/7MX7plRUHATWKLV/0I2MvZ+aE4iCeIqlrhXh6bOarhzukyLZPiU4i738NQCC/DzUuJtp3uzfhqgZ+BFXCaStqk5q9saU1f1/NMrSbdFNIEZ/qF+NZ5qAWI7zspVkXkNq8FezQ97Pi6L5jzcqYDZok28+HzdbSeIdUhoohdq+jj8aGaYY+PvY4n3KsNsfNiOao6B8Dd8EjYGrcQjtOmxqB+NE1C7NqkkLs58PmjFM+wXFiKisUp9yoMRLm+NZMIzHwKpvLy79el23F9x+jVaIL4DsuAPMOJptsH5lnQhjUUznBprSWHwXYoNL1oaZaFrAJootcIQTi4oAIa0mZPZU3Bsa9eoWWELA81JwQeSjnLWdLqkYhPiVKpnBnJdbjIC6PFhHVEGPKbUO5YAU2GSgN6WOKepRHYlPSqwnKHdAZNu+R83W/wCBFSnKbyGdNwPSGbOnD0hcDlSbw2GvCKA9BAdI03N28grCaMzgkxXpsCeotXEScvarlUU7DpuT6X0JMV6RpK4bJbIrnGmplBFO1NA0A7P90PLn4fr1rnInDo9+tQH70bnjt365v7dhXJVOQ/pt4h3Ha8VPyLZSIWdB0HHhdUDh8r8mQB2WQlyh+SxnRwlSE09L702SR4z70O8+ZCsKPhZ97O1c9vk8145f4ayMBVeMj0h73JvjTyq5OX4racuupf6rsa8rgJehQTgwWhVkyxJw3cIA3E6ssWQPGIxedBkfjxZkTnj5GniRmbbprDWWGHyWe0V+/wDagGYPLVA3jWPanH9rsX18SsQkHH6XRkTM6sDFA0ab62wjHVpzXKdjTsoD3SjdMp2/NVJTgzZgXO99QvXAmfSqBtzLEFmwDQPhWgLL91CiGM0SAY5Oa0NWnu/bhG6cZnUtyYXCk8vW9/pRpZhWwWKBAWJyuKXBxGC8TUYh/uy1cASFT1akfF4dBdeb78oA3I4UfFuwy4Zc2qzH8EthhQIVgWgAmN3En7fvSr51gluo4Q8Jp3Iow+uztnkT1FhmuJSr8KEy9In4NY8jncFi1vDO4n57/ptBwVDcebKlVFyUa3maOynLwBlPsvUZjZVIQcv30sWJBfjpyCLhTI9lDjRgpw8UOFhGqZvTYJ7Xi8VGvDuzpQel82Y2weDmzvkb+FgIi8H+1RR5ySstD4cNnwGQc+fWqM8PIk8XhgAmB72HWXwvvVFCMZjNDfJi0vVhl8ofe4jynw9X0q159NEuv8Hw+9xo33isNkGlWCR8hv8AqLTBIQYKkKcKDSVEc7zc1J0lRBXrJxPmjsQhLuGTXqqgKJMs06RYAhi47I9jcMekuaiCYKzUnlgLHikRhyxioTMgwO7BsQYhEXpV3cUDLUPIVyDdgSUidXkVEC+BliCwlyjmB+NMsqwQsFtIBgaOpdED4UehwOKxinP24UaBqxmM0ZJOEqVzvRgL4Z1RYhMHuK0jwFCT0uIoCYH7U1KOFhHXd0B2ZgfaoS0REfaLip2FA+1nmqCErylwNB8aGpvvdTONkGfxXEnCGX40/qtmCSXiqpFz3uywNz4azghxwDsua6fXdni6H4ey9cn1OyhxyMHPv0o9gLyw1P4InspMKZPjyWL0M7SqYflj2WeoJHjyV8+6hZXE8PXuo1L08+SkUkOTcjSuI1GjQrV5H8lEqkcLlddj6A8UKlE/vF9VJGxp955fD3q8cvonv1rwwSE4qTca5Q6sehd7ej4rGJDW13Bsu/5pJ4HC+hGYpTuD/Q377QPqu2COVnRHcoIyw20c5PGd0ciYcT3SSKMIptiTHpWCAwzKqSCGmyhYzxeLshzRINOSgVJyVYlRE+FiQBkjqiSirbT+Ig55huBDpwqU8OX9qjF75r8KKy/vnVgcnlh8ru9hiPnZrPQHL92syyyTkazsAsVqyLrL9t12YYyvCkRB2JOYohLTX+goss0CaBPKLpUkTp+Ebs1IXDQ2TMPZg+LfA+BT+uxS1qmA46frVjIPVj2eLvhf9bVjHY68+l48oz5+1jR2T/WqAThJ+tWYzK/v9r6fYtXgTC7fJWUi8Xzelhn9zDedJOh2VkarI8+y/B6QNVGbJx5FGDYLjyXyZeA2dPhPTunWrk/mL4yA2q9YQw9O6kNXj+YobMjk9q4RfZD3rSdOrQ7PNlgDx1QzMaxTlrMOnrKbJlQcrAAk+FmClY62RxSc1pzYv22mSMy8WEYmBetVQjhM0gDUmKC4c/GwPYMURGTg1cpSkOVKq5lPFWsTmuRc0Se0UlAzJ9qhp+RvJM58WS4SOGngLf8AiqnPg+dfJY4zq+tyBPGPtT8j2GbCidT+mpPheP5VVo/J9DdY2CdGkRiOp4Kwt3Ga/qh7WUfuv3XHeWi3VxA3cqcICcx+HVj+1FRmFAOqLAI7GjoBxWJwiVGkghGkzg6JsK4GJMSWfkEI0pJxSzURvAmKoQmOquBJTE3MipU6qDGZuLich1Sez+SxRQIwDu5VBK0lgkJiwWyTFzoKXyWHNMYRZi6QIeGwSLi3JKOWtQpCJHdhyE5N/ZScV8Cuwp65s2MCHwF+EGf5KDMHk/kP4yTBPdcfxF5n53n/AAj/ACKfxkVA80SnUSNh6j1bAuOfPr/Hw2YZsFiwWLH8z/40WP6EWLq9YwzVIYO2S/fB4vFDoJrM8js9dLnQ/S4si2wB/ZsJY68I8+awziwb67uhCZ7DxXIre6a/FkHoEmZHVTM3qYfWjCZASYZeK70LisQmynicAxPpUUNxZcMUiBY7ZsQJllMP+EOI7bkGS/7GWACPRscV8Erss+F9iw+hwFixY/4gi5/9psWKl0GzZOiVlCs8nOxMkJxzZ3XQwQNLFamCz2O6vh1dG6yrOBDugY1CMw8VLakuWXh+azzOHJzEfvcCcCco6ryRyDnIvanx8QWVgUtKqTp/DAkHSUVILXLEWObH/wAK/wDCLjngiwgaUB4jNCxYSEGXR+t1uMTgmRPUWFdOACEEnFxAYi40cRj80QgAKMXfFHSSZ0gPi7DKMODFmeZTDOf2UBV0gnKx6vI3nTJQ4iMxCLD5uUQ0ox7MX1sFb/8Agj/o/wCK0gppTVQCAaHSsNexGRTUHwVU8+3Luwwb2DLQbp1sKjdngywmfvYkk3pv7ItVadO0KsBU06WclnZe1WmRykZpgAODj/gDP8Sd/wDnT/DXcrQnl6Ly6Y4bO/8ACP8AA/yP8ywAEtU0MEE/Gzid5Bq70a/pJ/Ia4JahBy6gHbSgGwuHFb+YRPef/N1ZJjdg2jKBy3NFomaczOv6xkEoqYIxlkIKysJ8NijpQA/oT/Ocpx/Bt4mKvjc9we6tS1ZNtD6Aj+Wqf/KikTBcr/xaf8N0/wAT+H/m6vP8NO/4P/WnxTX+EAmFDFZzV54odWcnEjLhHrZ48xYQiGfvXgNl0QfjRElLxnBMzPys1udF4Hea6UbCFfSp8kB5HVxoSwKQ+N6zHQmyNiBCR8JrsJvHXmrEaU0Hz4roSUhD5ruLOERT1mkWXGRInmr24k4u/XFQCbZ8Gy4OT3fc5qRkDA7N/arpYuhBuaHuZHv71VkMNLzWZVZYkBLFYkMJfrSocfvIsQsVOiV7sNAnIP7XoHYSIPWkHPQGMfGwNo3nidVoBEmvqsZ6HIB1n97qSi6ihZZxKEPxpZms3ACxfi+OVJu5vMaATxE5soIVAj/I8/8Agr/CbOP8Z/wTeP4Zxd13/AGDCQlAgCqNgEnOed2cDmT+yvA4NuTVnUEts0BTrdVbI/fulWBxQ0sMKfnukgpwVKRSTt3Y4OEVAbjHkU3BsdvGrOEweA8z+119cmd2ACPK6mSny4uIiMeixWBjbJSyG+0xNiZMQpZdgAy1URqoS79azZMI9FkYJRO+NUpaUo5pFg4YbIzmlydGmNGPzs7CEHGLBV12SZjMZ361xEWHcFaCJCM7sGuT4ndSqCMR4KCxllJb2XUWAmkr5ucjVNhr+Zi7/gyLOWMFP4SE/wATYUuKTRPNmzZp/Qa14JOdFX6Lk5N3PQcPZuoxn+Uv9rlZ+6Az7WQIuPqQ/egORIAmWCL8dGcsJceRAnGfFCOBDDJUhqvwbtButjLzRgeKmHdiuTU7fGyaKSRs+dBMYykRmyV5KB6FJCkRBElWSiADA6oDV8oTH3uAPRFChx3W4zJzWfNlZRO4kbNGBMc1OAGEPBOaiMZLGhNSQUBj5YD1rGMTYTnVYYhWDC0brJkqSBE3zToinQUYPBgczqn6ipESVIsgyGN1hfogPhWSW5YZsVsfyxGxNiCWevq+1RiCAxMRSZ3noxqisEAbMbL8saGWbuH6TlKKsijGnzTsVkx9qitp7M1FRR4YuqxLLGS5/wA7FIcVBhFd2K7JZDfHixjFGcC0cggk9KNYxfOKeIjZgaCmk8ekDTGIrZmKB96OXVEQxQOBl7WFCATWPFchhoWcsXbAGJ9XFzv+fSkiA5NyN0cnsj0K4r1MkfO6bAHBLxclzyJzAtaSMpWck0Z5xZypKDcgxFkxf/s1W4IEySTuk1FYM8fm5CUvMp/F8iE/0GkFkg7Vkh0LitgGLq6upgJ92q1smPGfe+gCrEj+1ZpAGOmcUmhJ+FTbAlogj+ay4MQSSC4w0jUXFASdsO+VGl9MbCk2ITLh+LJyoqQOaPMYkB8muTYPCyJ6A3K2BUNXFphsYckUvEmUGIZLIutoEMveqAz8DpGqBFgxLe5u4shYMCQuZIilFsMhliyWUy6XzwLESdZyVuQTFQ79aYS3sfOw34NJpu43KQfhXy6ukmqw2XCkGcI/yJlp3VGZuNleFwhydUEY9eLEiQWXKasXkOWUomnIX1WFADMzgfSshr0MfC4RBAIXGrm+CvbFwo4I54d08qwN/mh/XuaAY7duO6PGwi1iAIE8Y3Sm7hCnPm+lazSIHynxUahiMuFs7Rg/VIgKAXpqt7ZdtLIYA28as8hZC1HEHyOqsgNsbHF7TNDy4bhekbOLmQSlZd9xTAoJ5c7qU8gkrkVUVmO3NjSJJS4mkKWbnZVJTq7eChcko5dNmAjQy196IBx/T2QxcgNpYE9aTMwJAkWY+FgZSpoRjeN2QlsTYzRUQ7JRJ1PjuxWRaCUKm8wGyy9z70XjaHtTWryDlMPhuY4cefOqGCAn+X/i6sf5ND/B/wAd3i8ysZ3FUxpnHVSIcTmd2PDCzSg+B3echQf2VyvII+BYEZaCJ92zAw6sJLN4Ah6P2rZJ0eGa0zDmXAmg3LRFD8NzYXDifKnTnA3aagvZQYfgdzelbLScUCzZBOCc4Tf3omYQue37XVA2/BihGLORMz0mPhOrFLQSTPkJqkaYQ+mFUuT5DPE/O4dlkb0q51ADMyTUtLKGelgZH9WNTfIUiRHmcUKYA1M9cFhkM0/ZrRqYIfyD+ubIB5bIADtoiY1VlMgLy3M5tLlqpXUNlDhiJG41TyIXoPdASTw7mqBZT5Vz7swhMCOqGAGSHFdQjtHNP+M/5T/BAuBYp/lGf8Wu4RKWUGd8fpqts0zlqqIiGYw04uOVhm+AQKzp0SazU9kiCRcqR9mrpdfLdwEhHFXKmI5O6vJQE2c0dDHtm+DR0ll65qb5CxE5ovkfpmlHyAlh1fRY8WERBXEhxixAI1fRY8WEaoYoOqI/rOrMLQHcVkJQLYOaykn4S9djlK8eK+PP1cGfakq7hAKDFojYdURQoSwSxLUu1EywNRI7g8wWPiL9S1ekIcG66jDJDksMEqXEv3rQibJkPUqpygb4O7ilFK14q39wlVzGngWr8MiLapSXySUmopITzGOuaAa5nDDqjaoLkhZiigGdTK0uR4qCPypDLOZDDi9ewjhazLB15a3mZhOBQrmzZIwSyY9f+Tf8vASJdQ/6oYjdDqB+9UyCwMspzimfPgSHwuZuPmAka816DMpy3JGGJzBuzmPFh0xcp15M+CLBYkhmJHwq6MNJ4opEUhGLQNEnwOrquBO3o/ewTCy4jLnVgjPp54A8WJckz+FYAym7I/C8bk0mZpr/AMFqs4ZjyOygRnbcS04epG3mpkmgzQweVATLQ5m8A6uqkMxihTjkM5i4nyY4kuwRDzrSQ5fW8dnPi3EpRmMu7D/LmpIeSKZBHlK8spnzQQIg/G3cAMIYoMA6OrwXGpBEAD4oUDEjzq6RPDQQkxQA5Eqz0nDtoJQIZ+Vbhdqf8D+D/sAEAB/MEzGf/Hj+OU545U9eU2XXdfMdHzLM/KqfWDT/AFViSMIMHjx9msBYwpOZquA92P8AGP4g/iLFj+IsWP8ACLH97P8AM2X/AMSLCxYWLCx/4Ef04/ufVHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHtfqj2v1R7X6o9r9Ue1+qPa/VHt/9F//2gAMAwEAAgADAAAAEJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJAAAAAAAAAAAAAAAAJJJJJJJJJJJJJIBIIAABIJJABAAJBAAJBMhAJMAkhJBBIBAhhIAABIBBJJJJJJIBJJAAJAJAIBABIAIJBItBBNoNNJBJBJAAkIBAABAAJJJJJJJABAABBBJIIIAIAAJJAAAIJANIMJBJJIAIkhAAAAAABJJJJJJAAAAABIABAIAAJIIFsBBIAAIIBJJAAJBIAIJAAIBAAJJJJJJJIIJIJABJJBJBJAAIghAJIJBBJIJBBABJJABAAJAABBJJJJJJNklktgIJABBJItttsJJIIABIAEkttIBIAJBIJltgJIJJJJJJIpIJJMAAAJIIIEBBAIBBJABIIAgMIBBBIAAJBJAEABJJJJJJJIsIslttgEtkAksshhJAJAAFpBIkktkAMlthAttsAABJJJJJJIBIJBNJAJgJhMEBINAABBJFEBABIBNMEJBghAhJJAIJJJJJJJBAtAAkkoFNlJpgBEpAIJAJFoIAAJIohEgEFNMBJBJJJJJJJJJBJJFtIABApBoBFJJJBIoABAJJBAJIMBBAJFIAAAJJJJJJJJJIIAAlgBIIFBEgNpJIIBBJJBIJIJBEApABMJBFBBJJJJJJJJJIAlIIEMIEBpIAFJIAJAAAJFtJBIABAINNIgoJoAJJJJJJJJJJAMBAJohEBFIAIAJIAJBAAAghAJIBJAJsAIkABIABJJJJJJJJJBNIFshIAopMhNkJsAIBJBBABJ/1oIIElAopBoIJJIJJJJJJJBABBgpBBMNJIhpgIJBJAIJJBIHLFJJIoAMNANJBBJBJJJJJJIJIBMFpBkhhNpEkIMIAAIAJsIJbUoNgBkJtIJpIAJJJJJJJJJJNoIsogBJMIBogJAoAJJJAggBJBAABJIAABIABJJJJJJJJJJJAMBMgMBJAhJFFJINIJAJANFJBBgNskBIAJIApIIJJJJJJJJJAEosFpgIgAhFIspBINBMIkIJIJIBAAJBBABAEIBJJJJJJJJJJJkIJJABBAJJBANBBAhJBNAIIJgIIBABBJJIJoIIJJJJJJJJJIBJBJJAEINIAApJJFlBIBJJJAAIBJsAIIJAJEAABJJJJJJJJIBABIIAAEBgEoEIBABgJIAJIAJIIAMIJBABBIoJABIJJJJJJJAJBAJMpBMNIABshFhNBtIJAIAJJIJlANgAIAEJIJIBJJJJJJJJJAJNNIgIpBgMkIJhpBhBABBAJJJJIMgJAAJABBJBJJJJJJJBJMBgggMhNIskIoJNhIsAIIJAAAJpBAkgEFFNBJJJJJJJJJJJAFEMoEJJhgBNNAlJAIJBIJIAJJBIAIJJBJBAJBJBJJJJJJJJJFJIIAoIMFJAosIpIJIJBBIIJIIIIhJBIAIAJpBJJJJJJJJJJIIAJIJBBIIBBBAAIIIBAAAJAABJABJIIJJIBJBJJJJJJJJJJBBJBIJJAAJBBIBJAIJAAIIAAAAABBBJJBpIIJJJJJJJJJJJJJIABBJJBAJJBABAJIJJJIIIIIIAAIABBIIBABBBJJJJJJJJJJJAAIJJAJJJJBAIBBAIIBAIAIAMlJAJJIIAAIIAJJJJJJJJJJJJJIAAAAAIAAIAJAJJIBIhALBBkgJAIJAAAIBJJJJJJJJJJJJJJJAAAAJIABAAIAJBJBJME9YJBoJBIABJIABJJJBJJJJJJJJJJJJBBJIABBIIJIJAJBIAhDKBIIAAIJIAJAABJAJJJJJJJJJJAJAIAAIAJJIJAAJBAAJAJAAAAAJABIJJBBABIABJJIJJJJJJJJJABIJJIIIJAJBJJIBIBBAAABAAABBAAAJIABJAAJBJJJJJJIBJIABAABJB2JpMpPWBMhJzBIJJsAhJIAAJABIAAAAJJJJJJJAJAAJJJAIBG4oNtC34hEorCBJJhkoMAIJJBIBBAAABJJJJJJAABJJJgLQJJNJkNFpBkAJELEmkPFFsBGsgY3J9AJJIJJJJJJJIIBvEEkbYkpNhAAtkJsoABBI+0QJJIHZARs4MXABAJJJJJJJJIIkpBsDQEBBIkgBMAktAJBAHVrs1JIesgw7I3JBIIJJJJJJJBBNcNIAABAJJJIJJIIJJAIJIIJECYIJIAgIgJEJJJJJJJJJJAABgIIAAAAIBAAIIABIJJJJBNthk2AABAFlslsIJJJJJJJJJJJBJAAFBIJktm1HAJkNpIIIAJMgNtpBIAJJJJJJJJJJJJJJJJJIJJJJtBIJls+J4IMsgAIJIABJEkkJJABJJJJJJJJJJJJJJJJIAABFkgAAAAAAAAABIhABIAAIAIBAAIAAAIIAIAIAJJJJJJJJJJBBAJJJJJJJJJJJJIBAABJBJJJJAIAIAJABJJJJBJJJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJP/8QAIREBAAECBgMBAAAAAAAAAAAAAQARIBBgITBAUDFBgKD/2gAIAQMBAT8Q/VV7zFX9BVcvkcwvwqRh4jDZMlmyYDxGGyYeu5NY8g0jru0srg2msdLiNlYyllecYbDDoSMNoYRxfGDCe7CPLIwvr0VMG00i2sI2UjK2U5pgMvkeycgEYRhl0jCMPsP/xAAhEQADAAIDAAMBAQEAAAAAAAABEQAgEDBAUCFgMUGAcP/aAAgBAgEBPxD/ALgpZKW1KXMjohfRHPJz2DOPM/haJf1/+xh/yA/SD0B6h6g4T0B2R2z1Xg5znpSlLalKUtqWnOc+dSyc5znPSwUpSlLBSnOc+uMxmOE+EdDM6Hivb84+eeE8J8A+eeE8J4R1z5AzHCcz0h0hmdDujMaOZ7I0egMzod0YPS08HgdrFYLmeb4hmfGOY0eE9f8AnGMz3xiNrBS2dueD6SlwOe1LBzwfgDoHM9IcAj+eweY9IcAj+ZnyB2TmPoI7JzGY4T9BOZ+tHM8J+kqWZ4Fg57O1LpueCl5Y0czwnM9seQtrN4Hb43PBz6K0pcKlivDOI0fZPYHMNH/UgEoj6ofiHzxOc/qhhH9gIAJRHxiBIRH1Qw05jOeLn/gkbOIjiI7H01S2JSlKP7COhKWhgJYKWIlKUpSj6L41Oc5wM9MzMr8h8y09D4jp4Oex86GLngtLFeD8IfMdmEpYiUtqUpS2pSjDnN+Iw4RmMz2/nfGP7p6E54gzntznPBznoTnPkUPjX5Phc5z21p+AdDoCUR5JhznX9xPbOh25+SYc51/fGAZiMgbOBhHMR5nHBzn6g/YmHEc9COZjD96B9YbXXUukpf5G/8QALBABAAICAgIBBAIDAAMBAQEAAREAITFBUWFxgaGRELHB8CBA0TDh8VBgcP/aAAgBAQABPxD/APtJs2T8Sd2f9STuydlk7snZZOyydlh2few7LJ2WTssHJ97J2WTssnZZDaWTssndk7KB0n3shyWTssnZYdlkdJZJiSydlk7LDs+9E0PvZOyydlk7KI6T/d1v8Nj8TmPyzxd1sLYv6/EXVmjP4bP+B+JhvFz+V6p2szUBQBhh82P8asvLcYhFkpzanBNmISmvxhyREYyMTUgucxNEH/xxUBkmSuYYHUT5xZaZP08oeW/FGFVcKAIMonvMvVzQrt91h5ObiJRlv4ZZFUA7UpUoAUuNsaKHPEzs3LGMI92fzNgAIOHlzFi145YpBw1LVTMRLTQMkudRZ+qOmVA6GJrPcLX5mcfFQTOEzNKPXE92EqfRkBA+9eSGXXTHu8vCKvhYn3iw/NmUATmnPFXIsYQ0w5GKY62ZecAIdDikysa0YTENazUP1OMasGfJWwyOKDxEY33XnTnidNQVIQ+LGQKMcLZG3VMGEFCERnWIiuQaSyzD9iQ8WN0SYiSSDsMRxfYJ/lv61s/4H53/AIZp/wCfSmiz+Tf5aXn8KWLmmq6uOSbps5/GP8my5rZoBvNOPNenJsiaWDYNt5VB2KIL5QH2ugqg32itSUziW4dkcVlQALPEAfpT1RqDaVE8z96MsUDtfsrQAQSEsBlGtRWcOBZApYNEtgrgQh0zTFwSBsnoRPqOLL9BeyCSRzMFCjskjKZI5JqlRPkEJInhSlgEfO5jKXNEBKUKukgj9nzZPzg7JyMlZmpqO0ZNstScmQ6PhLgNCiezGapknw1nB83qKoh093DSBIbZCxKgDJdBUiJ9G6kYaOcNHkNbYl1JT2nlrDkbQdv33FBEUcRnAOoqSPW7AQB1io5IyMZJkdzmnxhcTHk+Ci2kJNBGB7G5A7FgEG2IQZqmz5tqRcuFrM4TmEcVoR+Wn4afmT8H/nfxz/m/h1fPH5Z4osXibCJsmPr/AIla/h1ugxnNhqLmeUrB/ei7YSPhyZ+UUdKmRR93A8H3oUycf62BwR7p5qxuzZxcufbui2Y21auKyBZs9Wfw1Yz1RRyw1kxRNOLkM80cFXNZn8Q1Hi5iw2H8AzYZphs/4lf8Y/Bt/wDM/ifxv/J/L1UZxMUcvpYRipHEVlhoDghoTBquCl3+M8WXmrfmuHizHqx3flT+Dy1sEYTneR/L7WPxiTHwjih4xYJzmoLe6xQJwUhccXNASXN5xQJqijdFd/kIvNxzZnTUVy4snoLCJdtdLOHhv1ozxEWZMXLur3WCDvimo55/K+PdiSldTZxLundn5vFPxBM80nM/j1c0uvwf+bafFGY9TmzDMkWC7IviV602DdHH9YsEzI50GWzGCMRR9MVPmn+mrByv9uKjy/7dWWQP1/xukD/r1fCP9uLK2ev+VjZcv99V3ov78XbQf14oisX9dXlTdFTmc7sqM9p/v0fGihdiYl9Vu/W2QJnP7c10COQ36KIIOph+7RZq4DtHPo3Rxy8NjAM7H4KvkgMR0k4KFAhOKEDEAc2ZjJ5sXgw1goyF9NprkmGbqlYz4qguVfwopOEG4SReMJ9yUMAm9UwRmnqiDDJ1FFR1UVUBY0zTshJOf+lyODng+takGBq/a7hrRj62dsfHF0yncDFYy2NwPLi6xt/pmgB7H/srGwj/AE5qEpXn/pVIc/Oj61hy+mNH3sTKJ/Tm7YXb/wBlC+oWhajmpihvdcMwHn/nREQ+/wDhR2MR8n0o2j/t1WbZC/8AyoqpkkoHIwVUAzICfWM0yBOCiXjFQPXgFecYaxBFAibPnG/FykoYST5rVxZsU/8AMsllJKy08EDLimWZqpGmBtU+yvuaSSunGR3J4oI6QEkyCziNTUvMpJHzEjIRLKztLAD3JJyPL++EiFATBytmEEBtWnpEI5plZx0xzWjNZxM5b2fYXFgvhSRB/C9HthSSc/pV8/RWUmP1XQwes0Ux8heL4ouOPpWXP0KGYD4oBpWLRYpagyOzUf3NJfAmDFyZcQFad00xEZwl7Voa5CwSdcR1e8BOHg8cl8R5MARYWGSWnNERmIMpx58fFKDQ5g73ugmQfMVDomoMiFoE5M2CZ/EHWfw8c2K9lHNiwFikKxBumJ05jmth5Qgj5Th3HiuIdAlQgJrcV/0Qjd+9AW6MSTmXiYpjGYHA4S3ZzZVGIEzyMYg34Vk1QIgzATLHMxcwUi4ChmbrNEz1SALMcYsTQAjVAPdg4CwSSWAnwzBdQgiJKnNyx8v1Sg/B8TOPK7peUR4Svnht0WVECAjrDZVUEhLEcjrwc4sofkxFXQwXjiuyYgnPwa/6QzZ4fYh3A5yxY2kTKDmHmSes0CwIljIjYXl+26q4QMijBjDn7rtdD5g4h5YyrnFiyM6huIxwZxu5Y1Cg+kjioGGSJk0IxxFUYRVjLn1WThCGDcsRQ5RaTOWT3DU9l0uyCX0c04Iy79hRLRIwO4683JmpLA80BWGxzevdVQQJHE7DqhHmVAUlCDLMfOcWLKpAzDs8ea9D8uk95smmMOSeUz6sRyolZd5xcLLnTRB35aMWnt5Zk5wMVcVVMq0BPLkrim5nGeY+p6jzcsxOyR2CdcfNLZADhGUZyQj5szeM0fhScZTuwWd2UNkkihj4OzMBFnNCbiO49a8OYUn4WGYpVikZ1hDLEx3xY0+x4idk5UAwpWdPWVAPEClWiKFeyEQOv4WCULcYKnMTiPgpdUpYg2P2WZ6AwJw0oQAYEkqeZRISN5rAi4aDqsOQvMJPOTFaHBv/ACWJRIcXDWRNfEvD+6AQimcsNBqTdPBRIkcteu/FjDUHHOdZ+6J8V4vxjOGN83DT4CLOJd0TwFyF5P4pAj5L2PUVLRqsModHNkkoH/i+lQZURQm6AAyQkqJ1QsLI/T990pZpIkHLNJ9LQGJgxnFGAHWYd434rjVMESgDFSdFcXYjG8mKv7YlMnvGPVaFNdJwOzVmYjYO2QeSUIJbcVJpNGgqrQZN9lTIABGXKe4+9AG9MnZw4h4q2BlQFMnsfC464ADkQceVa8XmiDh/09q1gmHW8SPFyWXBDHg8wElLkYYdByUowM5059Bo6UYwMtdQ+tihxTQPP/rVqoqfDyI4SohxeZ+n4aQOB2Dl5WIbAGA0HMmaAyBEAh8c8WFv5P8A6K7sMj4QZv3K0YTiYxEvB5p+CktHt4bhcxKCfU80jEytJNSaCEY6HxY5b5r2drhosRKMzGE/FPIJiwkrQe8/khz5Hho3biEqmR6qJ0GyCIP3umvpyoz8PF3REMsn3GYeLCOtlIJt2P8AyqWqFkJp7TGXxTrZhyhxDntQKruDjLPY4GmU8ZeRyVNrJHEf6vNys96JkE7rDmpGCUBdqDI4d+jzYaQh8vk8nmozhRZjCz7Ni5C4Tp6s228v6zH7106Pdl3081HAyYGYgX5X3U7eB16stdn4Bw+eqzV2GUyjUjw9YYwfHvVLcbf5XYPfFGRDHCp/RjDWGIISOWF8PdjIdyXGntWKwkax9QrLBkkp0+p6sRzHVSd0hIwkjDYFTkL2/wACvCNyl4EaFBUk0P7Ru5S+7jL7lfkSCAEfFPSuyet4PF8WcCX+yWB0K7P7itjwaaKOzycVgUhlf9PZ4sdyhPLg+fFjjTCXCx/y5F0Zyf8APkqfNTkJz+bmyzAzSGVYd/8Ar5rpUxECO+LG/duac0VCchdnXNxIEPQBPXVCTBCI/pJqdrhd+HvxVMEBPLwjsS4Dxg0D5XjuUBxTaI/Mf6AmmHPgjL+JZLKeA4T8/wA0juCY7Z57LMrFsNgO82DYBkH/AMSUy87LScuv2+9ThMkdfqn1rgsEyO114akQtsSJPzgs3IFE8ZKFg8rKj7jcdzGgFw3ArAVNMiX9nilEiRngrKgk9uH48NakYWkek/mpkIA4SOKTXmcVX9A3KUQ9H9FmOHrAD8UOa1iJHJ4ebD0uFjZLs80BrW0pz9PFcgdImQpdHbNlPVCPY/4NKcSPy+Tp7s9I3J4ScjvuKyDQCDZ7rBa+gBOqJydESsn58uKbIG+z/I0KxofQOTkfpUkSjNbD4anEpHObW0QH2yfXugxTJioRunNLjNlEIomVLA/aiOwslP8Ao2F30sgOH5E+1fXHSTkSk7sakcp7HhLA3AxfBejyc8UiUETbn+kUDmKOoPOSzxwHl9Hw184ZDWX3iiGd4BlcNAQjLlbR/JSQk28+Oy1cZlizJ07qCIU3NzSoywCSR0+O7BCUl/1KRm4jyt5Dnw4pPATU/wDQ8Umy4hwJx42xpkJgRlfXiw/vzA8fHij8ZRo8dw2ICAFMYOxVxp25gc8jzTIGj4l2H1ueGkbWQcTcjAAFRiwTiEGGwd0/T7U/JIn/ANZVWct1sF7KJYmRntXJ4q99bE4/fspHyq00sFPiAvH9QK8wQkvYuuygIBISr/ni71BeR7uSq+mi+R9+KKoU3L4R4SxKhgxHh/02m/oE05jhriC2tkxfOSzm4G97j+S56GTpcVfGTZUSUHajr77OaIQi5Z9jwjUMEWU9n05GpZKRZeE+zrqzePGcINbEJpYrObHCxe44YAMpWVMD6j0OEpx5IUgSieTwvXRXmCfT1TkyIscgTY12EdMkGE7KHqoxoDMeWgcDci+ROyyYDOS3jw6aEkMlHxusSSGAR8lbCkbh/vDQiQs6Yy87sKPHjkY60Q+64EaWT9LenW6uhlIYi+AMZ7TuhAM8O1uTzw2KB0ZkXbwcVXPeQg54maBIEWHDrkuDRCESp7/uKQyM7p4mNjT5zkshHJyVfqaCEyTE8xQmDgY6ScJTMobU8n0HTcuMiktMcVWr2B28UVayT5Ll6tLdswNunzXOEiEDyULbnqdffZzQ7Zh+0ciVBcGoyu2gwAy+Ga9Jx9rPHZAjqpw0ULMvmXruvKhuullezT3QKBJWTqP5rqRRmVPH8nFH+eBc7XPVhJxthOTs6bEXATGJO3o80M9JNJPXYpgAEtIO+w2Vy1YNm0o9koUS8xxTWCIpMmiophWSptDt9L4AnljB6bIQYU2W2PFB6pTy8Z/rFkG3nBe3kbg8deM4J1Z0Cs6GPSxLNY+j2rFAk/8A7QpY2hys5Pgo1x8oP8jzYCCOjHzEV4CdlhBuoGXOzLgY2PJTmRcQ+ew8VcwkG27BQqwNC6nspgiwOT9wfpXoAAlfJ/xSyAB0n+ntFOhf0osUHaUlEUCdzHxc6SiytvxdlD+mZOGT6ti1PP8ALuR5s8UWS+N12UmJATzwD11VnZjo/wCiUmGwGvxcmdFdSVokkk71c2ADIhceTqqCCeJ58x1zSGtMnKSj00dk2BJwYnvxQtwZEHioYhpBCWxOE1ZjiSS8Y06QSZYOb/2rqIBOhfIbEoMHtkgYCeurFf7YLLz5ue4fSm+qoSbzhcnk76r0IzHoHsli4NbUqxLxv/lXLrKFZ6F4nYVSQ2Wxy1/D2VDK2H9BP51VZIFBCUXtCjEPJPldw6ni6ivLLdjOzyYsemWOU3v+ou1jimE8nFhIZF/XZMm00B466WIQKPjkLpKMTTNkRisgsHQS+DzdDQ9nmPJ5rA3icpYfKsMEswE3/TR47l6Scj9LM/RwvH2cnNUpUW4xynFIurrEKcPCTrdgkAQTHR9NjZfUOvSndlQrJmLt4nibHgE/cl77uOJMbL/5Y7hcmbR9AaOoKDwBNdigwKEwnNRJtDMtL15oNXnODx2KKXJTKbCGXe/FjpCQy23OuiyLEaUAgTqpvFg8Lydrh+9JlUkcqbP67rxFAalh8WDJP8w7eTpqJMgTav2vpVlkwjMJhEWbzZWdJPrisTTAzS8Pl3xc1S48+iiRJhvvj96II96ZufbXim5r5AiNY2NmKKYdSCuZDMFW5/vFcjBDz0obG6It/b+R7uUDL21vNgCXfjzmNqqFfIY+ot0gaaDB/qJEJNj0w5O6foWMXOdHGLBNJIMDjsH6UDmd4Jn6anq+rPUnvsaY0fAjjsGuQXeUOnlz1VTCKkQwnfqj3yIi8Oy+Jh0Dqq3hWWYjJRmGphOz281GfbtKWO6NeQxoWCA9lhwB4hyefFh4Uxg418991SUYTCMYaFJvLyPp4VSDgmHioXGTIlQInssPKwcAv2o75oogALT4fJ3V6gEnkQcWS1AgyaB7pgHRKaiRjOSwroZ5jvpK1pEPkf1PXqwYnRIx7+9milhOCkJI0x6H48OqCgRCPI8D3xYR2TZXpx08PNLact4OHZec3B2JPfqyTw18o/sUy3IsHgppo4gcMiWYS0jmrHU+dNIUPbj+YXSwZLTk7OmxU0gJCcJ8XdVm65+SiELDuOLvGhTELxrT71myRjlMMj3dVPGe905KS16gxDFik2w5w7cjUlIiH7dD02PcBlY53k6e6lcQxx6H/wBWTpURL/VuwsJQFADfhPdfUj9iRnjuiiZOT/ZETrm48tDMDpOm9mQxQ7O+jZbxV2K5GbHodvFGcJ3q/wCdNnRdQAyzuKDpjl4e75IepdnY96qP2VByCeqExoLOnLw2ZNoKFd+nhrmEaOXLl4sXK3aY5fDfJzHLnHXTVmXRmVh+SpKmAHtAvFwhGVk9nJVox0Jl2dPDSqJ6P6Ggp8VlkTrzUsqc7M3D+nVJib+GexrfuzSfD/pvPRG6D4QVyeSyREMqo8/dSLBlMDpeVQMARYViDtRSznhpUoXnj0tiYBbgC4NkFO4ZWExs8NS2IYJsjygbHUcu2xp8qIMkVmpzRWtjCFlOfLvilOz/AJeJ9PPij/IIshk6sEsBJGMg5jrmgbMDeeJXdcAwDELH/KhG3JEjGfSwCDDOXwnVxvD++Dx2LBDjjd2zJdDT/CUN9Q2BJ+L9j1TyygMRYfuuThzYKIUeyLigfgQX5ARZCuczHQOlXETA15HIKPohJl/MVXJNBlafAYuciB4TkTuuqfvfDceHmgi2U6D6NHcSASP3PJYQO00JfZ20hOdOU69n7owsfBjft6oyHLPRoARH6Z+jSqiBWD9L55ojgD3hrqSSOpaAjxCEq99+fFLWKcyf9GuSwAjWEvVjNBRLIMffZYknTOXhHhGzay/GX57Lx7BDky7cPVOIDQkKb9JTqo068ebruoQGmmBlOHp7owxAHHSTiiErSIFcBL3UKWBmDW5aMYfmh4E15fJxS7nCfZ1eG4Lk7ZXT4pjJCSDG7oBtif0/DVKB4nRamBdJmSpD7tFus22Ps9NBlQLW6RQIWKhZy9PFxsxcFMHg1RoMkvK93DQpBlgmQl6BGLKwzxTxaov/ALVw8RQLkNsOkrWQjDii3AcnyD+LMfkcI8w3BNZzB11vXdKWC5QP7iGzmTgOQD+zYnTmytdfycUFQEiSI/6b5qMJ6uD2OqNtUZ7g65GN1O0FTK38/pei7mcV8NdqpfwK+kaaQAiczzLEybhohAJeCWU8HHqvBEwzjEexfWqyOWzJ9g81E6aOHFo+CNOcOv5rpSZMzddY92NxOpxPM1OCITlIzBzX4mj5bsnJ3XmzuziO7MKIY3njxYqpOlXV12UzhJnPd7Oq0ggPSB+1ltEDfcOG7ckAOf4ErxAonmgPksStBcNnkfWxjw4MoS+EFx4rscQt8P8A6KwIb1Oo6X0KtCPInDXZ3SkxFo0BB1l2fwe6TmkFHQThLC5zVNpuPDYHikcQjTVDgiedgI9J5ShPsrZV2JxRPUHDIHD3QpyhwTbonAJMhzCcJUedhEvrmhp+RjKJkPhxmlEVCZfXI7GiA6dyjs7/AEqDZR0kfRQqpO9zHYOfVXs07C6++z5sh0oMnj4SuuTTDBZT/lQmjnSeKmgIJo6EcJRarjH9rhjXdRsuAYXWO6WXZTSWfZ15rgHOGPO7sFIcrHMH/tM5hEvzUdjRkJtyE7+zhrHJp8Isnhsr08KWo/m6Rax8Ru7OLAoJIbTn/wAuD6FmQGE4uEI+cp+2dPxQGDGTgwzzTtxBcONc4qOd7eHrukSscgyYn1T3NR3/AC1/DJCQeG76oSxDsQcnl5rvgzHUyVVhAI5+g/uhYKxMOk/SvNKQRfPSV4q5CQcftOaZUDiOBcnvzZdYGJJyDijskJWUOv8AUYBwPg9jwt3tsm9tfWKZwa7l8iVyzgxKozPDUWBOIEnY8PDVgFnkPjHXmhZHhuTm88P/AKrftSMBlH7Q92LtEh5XSXAs7ZBin1SpYIsQv6NRfmQtDI0kSdOCUr0VOngExp8NCbii+p2NFRPR23JScIUZOQ78VjnG1h9QaY+WFM3i/ZT1Ty4TBD1YCehOJXPbyVksfpl32UlyHKN41C4wRGFA941Zo270kQ/yHOOqH1hLIYT4i4uhP0l4clAzFGinMWaotQwmJR4w1dyQph7PEKcBkMscj10bLoZKhfInCXIuQMpjQyxIqVCYfDVs4x68nfRr3EVJR5PavKFRhIwzdM4DHidlliphYA5PCnyJQgEyjh7mkBGpgXBoJAYOR9jz5pzcDcv+R4bCEYJgDiVe4qt8g9jVjqTqaTsplW0XuR1Zd8baVo2D5MeCcj34sQyZVgA2fL5vBobniTyNglrEFQ77fNiygJpnNJoP68I8Narrhoee3zYpQmaOg+emx2SCGachw2ILGLAVMB3RwkcDpcPmgmCQkF2JwjTLAyDKht7oQI8CRKK9uVANicNzCQzO4Nx38M9Ll56sswk7V48JZN3iMcBcD61pbg2UgeaGjlDHQeRmi5kCwQZ6ofe4hmsGWJIoLmgwVH0Sg4/S/S+albEeJcKjAguTX8olRfiaXEnHtumBA8PQTvzQONChOn/T1fujoeFNRyVrzKIlCBfCPpUjDpNHYeemz+B4ilBE36rRph//AA+mtmPkmO2/ikAg4wgMjOnFMOZcouG4YMTuKFUgke4nvGKbYzqOUlDR/mGwsb9dKYGMjo5A+emtOhxhHINlOI8BljCe3zc1EtP7QsDV34Qenux5mniww31BIHh7KcGz+mFbsGyADAsn1pFKVm4OPdxpAh19anritEhM8kyg4uRQb4WWtJk7f0nNaacHgSEdxGQ8WVEZXKXImrIuP8Mn3ZUDW4xkPcRNL5R5MLk6SlnhiaAcdYcc0TMDdH6R0aqQ0XiZBxQOoC+CRM/9qQPNPQ6ey+UswPJ2u9WBYMThGo25y3/zxTo5j/2XcIAsJOFOy5J751H6Nd9cnvr+NocgY9fWDzWtigskEysE2llc5/lRAGmNeHtWbRKmyInJU57ZClwOjnmuXCa8JKlYRS0dq7OSsABSQmp3t6KmyckwTB2z0VgPS6YTs9WQJWWkwARK4p6NjAiTxUWF0rl5+ScWKi1fI9+aJkihJExhPVASmCTEDS/02dimF0DZ5Cs8JiMpWPZYqjhUQx4HVjDM24H6rXY4AAUcNOzFMZAzLw+9RoYzpBzHTj5sFYaRCpyJw2F9MjlSor4cz64eFWEtnCB9EaDzwOygKSAg8Hok35phEKPC+PSfSjjHMeAv58UQ27B7+bxzRcIc4icPhPpXcO44OF/Tm5cPt/wj/wA/0+7BcIKADL82XqonCk8HB9qDYroYHbwvCsa0NfDDV2oRclsfJSG6Zv6tPOriK0+BRI5c0IiGNCXHhOKTRJDYHf0+9HDndGGjbC02SN+EsIBJpA4+HFNOQgjbmjvjgOY34qNk5OWv7JrzW+FzjQbTyBhI4swyRyt5fo1xFWBiHbw1JZmGk0eK4x0crH6ZooO0AvnppJmuhME5mzDUyhwXkd9UN4DMK5ETjxSqJEngI+h6WH6xsro/ZYA0nIF92ThWHjzHfqg3CO4Mw9nRuiWBRuAZIeEaJieFwfAv6O6cSDMDFlOaM1IRDlZ8ZizJ5P24oxGZxI/UVQRNyBjkpRsrSe1HVhJ/ap0ibGz0eMfJvNC0wDngPOqe4OOwticOqWUI5D6B02bQUhnD7WPUseSej3YY0FytdPk/a7xIhyIigSyxLcS5jne7JtXkPj9dhQAEjKSsI/ux7KRgAgD5h+KV3ggCYB+6DevEDxhPPdWMwEnBzO+JqYc5AHBEgVSziQGTgdNcZTCsAbeHuu9+Uk7Tt8U0Q5/9ckbGoj1E2P1FSikkI0T1VOmXZIZHhKWECRMLh/qaAJqzmIG5OQokzAhHuyQYSb4a8eFNeFx7DDeFggwrCnks+4yMIL+Bs+a94dgAjXyf9oyVDEqiHocEFpPPZYVVmnyL9lJ2gMZfCNjeS2D4nns2Vf3bP2XfdNhA2q4TpH7Vm5lPYNT5/wBPb4qYTPAvIOpqXHj0FO7I7ZBgf6SuxgkZJIHpGbLqdLhch0+tdwRkGX09I0ECoyRDA9pNRhKAPvjp+puKELI7B+kaD8ZFyiB+lU2f55GS7PrT8MOZDIjwjWuiJNhHg0uggF1ZDz1Q6YNGcG+oGtvgNDyddi72ZHvDIeagQFE5eRNiVRmKrK3k+hrVAItOopqH8EdYw8JTanRMycv6itYIkCMkwrJSRXMs0XVEBQyp/L6VwzeSykfiGfiz1BOI+sFHJzduTmDizYKahaT9PiiY9MAfuTZQ2Ayy4+/FfwQL+wdJTMVfHF+FJBvm0lJ4ksuK4b2A6/mrU8OStcL1wNUkTLDxEM0xpBLhh0w8PFUT/Tya8f3FlHIgyKzh87rg5kjlfsrPIxC4DT6cWaidJhTYHTXbh92xrN0BNuCX3d0uTRGW+OuqWaAc6pPVVsCkcnR8uaQKV4g1DsoEyJmUuvrssca7mRTIUrJ+7doyQiq4IzW2RLIFZiJHGSzHqXRZEdCo6LoRjoIkPLYgHlMARF4KzqkZxP0ugmLmyTG/SdxuimCTGVGx8OGyhJD9493PEmDhi7/dzKCP2DpGiKTJvWT57qwf0EqQ+Qn7WahytPk8jVOxZYa5HvsrcRZdonkw028H1JR7OqWajfhRJ57o4QNY0E2KYKE2XEGl6NyI5XfZ+WAiVrkOu7Cuzbr4RvJM4IDvsVavfBdlx5KHs8XIk/6bhOrDPQFjgI3GLLHEDk8wE1oC50H+Y5os2f4TBnhJrzeGntnk5K4GWJjqunPZVNNckJKhwiKnRizGOmelVSX7E9x9bFrB9wAPu0thAMQd9vNQP0lnPi6OQoYCS7zrFIbwiOCo2BObDoo35nZT+Hmt35lV7w5qPBZHATkKPMVAyuQ4S4Wa70OCkNxJgi/t1QUyt7zEfzVyxmzImUuuq4tkB8k90fZuRX/HhpgJQzIMD5oZ4sUAAeFjZsYo66wjhcJ02C2kE3cOw5Os1OzlHlvUovq/0QIEn+KqBGwex+OuaOI2Jzj9mofMrlKCwTHJNB9SNNfQgw/oBooSEdoojxSBj+JZP359fyPDUUx3I9Xg9Vxg1w6FQjtMNH+nuaK8pjwDs8O68yRBk6R4sQLnALBOPDXLBQOuVYxSIwICPhzmwC5AkUw8BbF3HWluhwTZQzAg4GcKd4aLEKp4IGpchycVgCXIEDh6rmoE8hDHlFudoKSmsvI9pY4mACRQB6oATsWp/RKlIcHL8H1TI8zQh5rxrS1yf7JwzXIsiTLo67LgULnmXFfqFZDR2fxeBpajsu+6DJjHGLPzQ4yN4xJjyfzVTyApn0cHZYc5WRIzibDOwl0XIVSX1UA+OSxkkj5I4bMUJNhvFmgJI0ZM3F080pEbGXxs8VIiLYB+oNUTyxZZboe+K5LyEeruPDw+tDRyAIA0Hj/T+L+bgoYyXNx8d2JWsnlYkfivEg1ODXF+zi7DpgyVA41KeKSI72XqPjVFOBlcB97zeAQoBRF0RmlRwE8lpXdhaVX0+HnxWtqBJPuWVGhpQJPZOyzJWbj60Nfkgr5SU91KXEDAYTuhWLhiO0UY8vrTvyVEDZXLjEUyMlrcf0UlmwuZaHQ7udxQZkEj5IpjpHYBdeY4qmBIBr654peeA0B4Wfq5LPJOux5mquoCe0vf0+aH1Pb/ACdOYaab31Cjws1+yMiYFWDalZdo6qR/9mU/aOz5olZq0uJJ36oFJbJj9B+qOEBcR91mZXgYyJk83U0uJDigIXZ5HKXnzV2EpQwkbw+kQuzrzXRwZ4R27GoPMax6eHijLojMV5fFJmJJZbpn+KIptmP6ibMUMSb0TUHZijEDgzJi6xte3AKJ53TcbIWdMoYzTa8oTJiOKBgUfLGAXhTviz3EwDO4ex5KwEfpPdBEoq/yPBptJBySdnJ4vdjpPw7Huv2qhbc+LspgIBiVbEjZY2Jro/Z3ShOATNz8UUo27FyJ7pX0Jf8A3Q/ubAJAksuNrqJGZUPuX6FNAvB44syFae2ajC0ShRI/uymjHT6odnE1IGbLcrr05oKG7Zix9ZT5oDQn/wBqikbHOqRkuu7M5kY1DuxI442ItOxqycCzye3jz4sTKfVpdlKaXCx35XdVr9fK/T9L5Oxo9PK+tESRiQLzHXr/AE4zPVlJyhLdj4ucHLpyEPlriw6Gb59lDKUAAJ+iZdVHySovE9dli95AcIghkmaOPHMyTtLnzWResoXiflXS9kfEGd1ywQWSZclmu4mVIyE4/S6AEx/NI8jmxdrQwnhHF174EXGHPFAqQ1eveTuxPEJEibE5K7t5AcQz6sKdPiUZx5KNqNAg9k5qESIaMtVg78TlQjJONWTQEKEXClsOeavO65kIM/NGAaGxjV5KMWDA4YT7yO48UI+oEpPqnX6a5aQZDML4harYJOY9Hir9JLHaTsSSLnTaSaM//Kzw3CAVjqYbDgAg7DEdfzRuwk5YMxYU1M5FObP5kM5HhPNJHYSQBz5vNPjCaHukkEHWuit4aAEzhPMaKYBKM5+7nwignuzMa3V18kJ2IEovFIlox6onVW4MdaSUfW45HLaIWIkJMVS6UAMT67KEulmYyln7VqkpRyuDylVmWzr9LwD2MPWtU6zAEXksaaWNKAWfG6QsMZiWBfFGOu3k69qYPPL5OzlcNI5UCJW8D6i5ZW6YUyNLmSTG9yXPBpHM+x9V7sr8CT9ki5VJldK5x4aEpdbWP68UWXNgvfTUWpH/AKQawQ0dzwj176oYs9cnj06avoTpdsPDSy2AQnwExYXjN6uPh5Ob4Yhlh9hSlLRwEzQEjKML0+GmtBG4n+VYZTGYp0n6GlJDPEP0Nyx9yz+R4bOOCG011/WLBKxByb/wSaf+blxjdjSLTigFYngJcSP2uNi8hyr/AC+lkHZZhF88j1WDRAnJwOxpB4e7Th5c9YoJzdVPHkdNHAvbDiQ7VKdDGU/Pt9KDoVGLbioBQTmo2djU47eZm78mwaRw4h881NmZm0/YrCEoZezz4/WmM8vHpPVYgMpBxDivZe0TXZRoTKOV3PXijnBs5JkpVfCnjV45ObjSETZ5eEaFYKLLhB8mrNsA2GjB2Zq5hVhnZ8JY0pz4wk6fWbjxRGv66K8IYmOm2TBSyQkI+bjAF3JCJ91uLChwlMTzMR8t4lFdeM/WgJphig77pSVOkeVU3KCBz96plnUEJPZzcqBMelEeAPLMqUvXueBszYoENu5rH4KRe2CZwMTSrQDCkjFjGcMvdE0XvzlP0sKA5eapwQwuCBYvTCG8grjNSFxlaEcUxF17zcMkBYNd9ni6yESJPuvSIZIjXeFGV6rUVXQB8uyslN/cnZ02CJ8G/A9qy0LuUdeqEW/YQdDtbKc3A6lb+T9rrIYU2TjNJpv2QjJ2NxatrJkzj+ikfJPRYZqVar2Dxd4Z1tT+X0+ad+E20KJ6xR9xkkmTZ/VHj3k54npOPE063OHykexFLEbjdHGSjsILmfh8qogu7HY8Pd1FD2epKsBYdMnTfqjBFpxzdg0l+JWXpOvPNiwASAdR/pv7UhtwT5jxYDmhYfkNxYiXYXlBWQZXzPy/TqmR35aHMPY0W2Ge5wA5XdDznmRWaf6iuUGga+sKiRWFyMfpsShRCWIOLxWFToucHsXVKhCVqSJ8jUUBllEpJ6r3IaONZXY0YFd69cjw1MYaYrLl4p2pFTDAwvVAhj9l+unhsLPOi3nwvpYU6s8D+nupAnjhSMPYnNTD3zeQ/dPmzPAnD1VuSVwJEw8x/NlpJpqZIHQj3NhHJDpD9I10KY4ADm/03cFGIX3RMAURIGairkoRYcPKU2uOJAMJ7LGLEZACRQyow54spQRzjT4qhoYXOWvN5mQBh3ZWQMsh/NbGpJ/tXGQCLbUNyZ2Mb7LuoRnHTgurTDeVnipMQTlNkZZyk6xQ8ouJ15KyhbrThpuaRcAaiCp8EBcXiYgS1PwTRRowoBGYrJTGkJf5oJH4fiTTRbsUgBNFTLgEHKeJsrCKLnmQ0NiMgN5P0U1ff3AlE+WJAfHnqvjDGSmUZq57yHDt2qU4LweNxyPHii0BAkADD6fqwaxT6nsGjK75ena7oPore0Hjxc33tEYSdihdJDeR+nhuWrIZUk+ObDoh8pkeEmkBLG6nxyWZSM5Um36UAwSqNUTSpGDcrqOqoWYyZOm64JrXhI3j+hmy+lkjLyJZF6in3u63MTHBuoVsdJkgyf6ei5l6uE8nmxtAGYWw6gBdPRBYB491FAK59fIO5qXrk5k0nXTWwAw5t9w2KgOaXOOrFt1hOw6eH4u8TYOIvsWJA4HyzxQVwJtxhvPFKkrBo/WGhCbw5KyWsnSY8J7q2BsjXZ8NDehf5RYexMKxpH3uJQJwsLFm7XmHs80W4pGYMRY2wg24lfY2ZL+dHvyJYgEyckJivnGFrDw/FiOs6HkDuD66/U+gRq6c9lmoWaJafCNK9LiOT5O6UvOWZ/kQHzXERhGKZCOdapCyoggi+VCayUJ8nQVxlNVax6DsYmhESqQHDKqgrCuY90VmIshIpVyfPZ8YCJ3FaADJ5x483KDqICqEZiH76lFBx4ni48/hc8xQJRsNRNpBZIl0KfGZmY84zRodBJuKNxQqAfL7mPmiUClAmzB3DS+0D2eiosjy4LWnbKSPGseCBK0UAoaE0OXmk/NFzyB3W7nDJOrddUaUJjdB7sFh4JEyRVzmoTPhPo6qBKxobJdljwIYmpXIfet5SLmGbrpqlLBqHfmGmgOryR4a2TyBqJjwa0Gghx3v7i5eEgw5w0/wJHAsU+4ihnKw8cndNhaxvJLimaAHIxBGrioiHUef4OrnnAPPMCvJCF/ZuyhijdYOp7bKDwtnoTut/mZ10/fE0kQcdf6YlNVF4I+tHkpAUHnGFEdJFk+rJ11TSnXIaA9h0rzSoGX0nCVwSIzoeE76qSA8NH1bxePiZnoftix+onBe6qwwkRy1eqEUeWLGE4hzNkzA13VO+Kb8JCcmG5GACD0j+K9DZb4M/RruyNJLr/qglCIm54XwHUDw3ZxXmhANdruvqSPy1UdRp8qZh8ZxWH80vPLsaEbfCMH7leAELO0eKvnNfPIPkprzMHBMI/ms/gQ4TODh77rQ2SHMMO/TQpeRUom3lPtURcKigVnYEw8UUaYKqACE+QuTCEQ7JM4oPnYDKq9STBrQ9UySMMBF59WBKDvwYoZBCBJ4sCncCou/nNRWzMkWc132CVgy7l2BwiPVqmbFBgFeO2oIpUnYn6rEGKQSEJPWLISOApGWV+lSki9gjDKe7PfkOfN+7Db7RkGQVyIpkRs6KTGayfG60JJCMe8U8i6dnkeGxm2+wko6YdJ6X/VNB2GOZHdhf3Qo8G8as2erQyyeLPLyAyuRKVAUXM4wnXTUMNXHc51wQMqMWE+s1sIA+c+b9VOM3iG8eebtSSNYP5+tcC/Yn9iuQ3Dg5E/3mlFXTOGiRSBGvN+qTEpHCyfDVm8iC9ImxGKGZHhbAHTD/Q9UvgYTA36SqoPD9OE7/dyVBk0Tc/ysQOxcIbHpmviimUsBBL/pu7IzRwMNx97APq+BMHZTIVPmuPDZBpNOw/PTmlBCQNDi+rxRhkOTp/hGkcEtM8N0j5uJP7rbz02U5AuCa8JcnuCCeKpVmMIMynhXLIkz/QJTMrD3Px5UmAy3EMj7svo+xCemzfkrfF5LLQ7DD2DzYjAj2gPSNXN2Rg8N0+tiDBtPtU6xUycmEfE2JKxsy4TrpoSJMgy45nmjnaXIjJZXolcyJk9uOqJzNHPCPqcYKWhtP/sPNdwg85dg4qJCdDDDPmoBAOaI+Xequm1KkHE8V1FfbM9k1go/M5HAzVospkKC6pQbEsmblntBgwP2iwOAEaMdUs7mBjy81T2DSbvZZQvgSZ75uBjREWdczIqIScDG8fqt2vJQOU+xSAoBgYOCgNilGBM4uxRhRI3LjWLru4I105qUywssZDw+Skt4GI+0boDKiRCQzFLgkmSyu/dOoMu6w8QXuTIeY1XwJo2zmek7qihpx/Cf01xCEcPk+emsOkn5QOyjcUx0cuLpiolgfD5OGnSEFYRkTukBgMNhPdOtrhAHydWLfH7ck48XJGIcu2dxxTDmSNAqP11Zv0vwienq+A+XonsJojjiztB51HqucBhMlwnCViHFqAWTuvQJDE4QHuhWEFwv8Dis8JhNhpNTv0H2EDp3UCAIZ/8AiRsweoxQGh/qasBMGeB79+arMCYQiaf9NQlcBUI3E5Vjrx5A67ezzQEVkGE7HvvuxlMG3406bhaBlxw077KHqUJInVw992VImN5cI8I0XJElMe/p1zZAiCeV8DhpxhEmN6VnFBepf1F0SCePPgfWn5ab1lho0EAIFjXux/w48ckf5UuwEU8g5k4RpoqEwPNGDha4ezz+6OMCw0LfpKJQBbfJQAcDANJ35u7AH5LYnCNIVPokR5PiwYFU4GQd9NWCAics2iyHO1pv0nh4qM5IMmFzdR96il4nx05m5Ie0YykvUKkwKQxwyS81bpBRZjOvi5jjSQxqivCbDUM/azchC8GVNnKOX8r2OTbjfm8+AlDqhEx7LDY0jaAYyO6LuPIhQLEGWOM+ax+D7RO62LSGG2zEUZNasgS5sM4E0HTZaAs/qpfIfBH8qSrTCcxL+KLPRJjkqoIoiyeM8XDAaEcLc+aowxGJ+6owChRC2Ao3HqcyMHlRzjvjhIhGtlYggNMtUR2NlEl1J4u8w07K5Dvpq4YwswY3E0NHgCBmFzvNbs5ORxK9XOAckkbPKIrUBg72AMz45vLVpvD8PVmBObEg7wUjAiGF4RAFLrIpCWctQJEVQIn17og8ETJrLC+s0d6QOjJNGPmmdZuEwCF8WRfgFh5nn0uYoUQLiR2WDUB/E4ctfCQoJ5AYoUSMSMmSAiLLESdkPuagGVAlH+mlOKAkvhGmIwlyoQD6KXZSzB/Y9VFciqRvNiefVjryHS9kzQn/AGWg9M/el2lDidnOu6bYIp1SDhoHQxJ5GTsxS901QK961cuMYDHp6M0jE2RgHQqhrTjkMgOfVlsKcZ6BdJx1cVLnCOz3ThgVjCcnVPiNIA4TnCarDGMRBH77KvdUFjx0CaUosA7bxVGA0MIRzw1W6XEei5joaerlVZSGSJ3ixUEDDgH3IH5rCWwj0uY6TuqEE4CexeaDQXbpmkbrp4qb1Cblrt4ilY6SKySIEareKioke7CiQDGs55pJns4D/vWTarkNCLWxyRlMkr9aqDDJS9mgmAzLMcDS5MMa2oJHgIqGafGvLJDnzM2XjpyKj6oTGU8eaCSVGQP3KGLMg4mcPMV3LWQhRcpYIWDS1y61RAwEBRJw6YQ7PF4ijFR0B5qhzjGUT7rN2HMEg2C3DkJOWrMaAmBXMzQmk1EIxQ/gVFuLpkXNIYFHnS5gZiZ5rm2GGkyZiX71k5Fk8siH5r4HDMJ1MfqvwADjywQe91vEN0WUGJDPdOwivtsEfuu6R0ueYhPhV3RVTHARyKUltywMqI4pshMufraiCRBoExA5czWiNHUhiGm+Ni5PXJsnzSYhlecTLJ+KEikiQZjUp7uO6cDHv0KdIJRCOnb7JTpGSle8xU3jzCeU/wAXn/q7WOZpTlp7xd5k34uyx7/J5x76eqswaBlfcGtSUp5Uc/uFEdl7K+Hp0llkHkkGoDkq0eZD/YnqvLIZ8NHrvug0FgZj6osNqyz6/HmgTRx6yI/soeAzjH6RXmLcx5HvsrBpwpC8M2bBCSodTua55+v4XD33ca4QrteGbEikKjvHnssFUBSE7PheaQs4nngR4ZuBgTgEb8uylV8NmD6b33RgoMSjhJ0lhxJIoA4fC4kxP2U6Gc0FEO3bkSzzYg5Ly7KHMQTo3nt4VGziht1HdByt8uHZMos2JUBiJuQAOXQ+LOeowfYeOjQcAAGRNkq8oIibXs+aC2EjGfEV0n1dnqlwPEGEO604YgEFNPnETPkrsIxgfdQnbXQZwR96YYBEMk8D8UeGjAyx3cIcJutSAjCOrBoBY8tLowyDknVm9Nw6gmPmrM6XiO79CeiOLGSHju93AwS1Y1UmkJgYOI8VYwBFMHR7s23MqV4Ug+gp4HGC2w6qczYK9HJ+9P41ETKcomsFLjiHc1kuypEPEuDwULQxRQRI8+qoDMLO+x+S2Hz6CWOT/NUwLwDCHD5s2fi8WPL9KUpsoR8FD+6GEaxXMg2nzbfKrzwZGmpcoWaRtnP6Mv3ogQ4JdP8AWaolF8rY9jBcU4530hyirE4nZJ9R1xxSS9hCcwxtdUQUYfA0I5GoxOKu/k8vpSufx0va5L5CSZ5DlUkQWC5meXu4snOykL/kdJ5u0tno/UG5fCClbw/hZ/Wk/aI2eKYouH/xFgt6LLcXXZYH2Zs9w9eKWeoPRx4Gyl2ibuz48lF28xnuHfxYnxwmuj57LvWUaTs+PJSpqmD8oe7EJnEg6h+7LNtzPV559WYwH4sJ00KwOoj+EMTWvAfRK4H1usqnRfIndXTCiBmVCmWEBzcmpPO/NlLIFL9PXzSUC5iRJie6wQVTQqQyDrPNCD1gcR3DiwBXgPqO/NUVTTkcDydNdHm7KwgfmzSmUnM+rJNOGSCfFzUmWhhx8iGkFFIiFh6sYw0HRrL8WMHHXR4Y+9aNK0gGMWKKpQxxWbCTB1RmeEgeqnNkyAAia+8wEQvuuaIIOndQNokiI9XijPnzOo/KHVg6o+pBCN/b62aKEPGbVn60iVmVxug/lY71hy9u2hrihZNQDepsrVZZx9EaStFsYDAkctTiyYz2oK4xLZjFOEytEqf1AxxZkQ3elP0vY0By2x/BIPixBiMAmXNusyVhgJ8xRl6hpeJaerEINWLFANf66Hig9FMIvRjZ7pfzgEiUoUqBouH+okMOxjZ4aiRgEiPFdxsiY+WoJqB2Rwxs8NDA5khHih4AgpA6lzR8AJlQkIxs91GFRCjCdNbE0JmF6nVlKwGhXxx4r4ACGbuW0lSTME6PFV2nAoPksURZHZVnMTMC2hx8UZbAao9mY8VgYwhnmr3FR6FZY6o61QVEd5KsQBHiy0lYVJd09QLKiGkSsgJPOa09PqPJQRkmbKIx6pXDgJspIM1BM+0x8RceBw6rymyzZzM8UBjJD5pKW3o9Kb9NAEX9D4teyjVyRZsHj45uHHfHdGBjP6oErFJJJQMMsasBNJXOPTU7jIb5pDiJiO3qht02CIKHIZ5oDP8AFAaPzP4gFfvQRjFESLNXEmuZsRuBeFFSOCY9tY6DQpIfQ+IowjyuX2tr7oGu+qY3B0MOpoUAQFhEWaJNWFAaI/L9TFNf7EUPNix+IsZmxnNw4qZml5stg7LtYoEzYzNg6sYibHVihj8RO6lgd/mJLBanVzMGDAnszTwMlRj5z9aWHbsT+s3QpYYeklqAIX0fQTZo+cSpHbsfesgd4iQ6PNmY0wRhQhiCYDiydmgP1w051dho7J5Jhg3DPFZOs4ApMEy5VkMeYASQTISSzzWVihhgFmGWRBUlCchQAfR3NWebMTeBGSDdPIOJAwxGT4qkmERlDR26oVCI1Jw4x3NmvQmDwPJ/gNf2Cg8v0J/5SDJDENKynHJAa94NSZ2Lg+1LJrsQ+mPpSmFgICgx4rhE0qMV/HP+EVSUjx1TX+5Nn8Y5uOPxq8/mf85vF22fxzX8OsUwZq5ozvdExDpvafpeHingAGJKm6mKfa5uohpdtc4sw1WzH5HXBndQ7GVC8ScR4ieZqIVvmcMO/mKGDcyAVBPEv3r9gDERYEdxz4LoJ+SKZdYLIijBZuU+1innJw3S+IWKGS0xV2VeMWUk+MxCB4yFzgSEKDScNfxujU5WgkDXmgx58/gjwQEL5AgCbNZMz3ckwnuKR1Yjz/iVz+Gh/wDhuLE2Pwv4WjZJu9f5Ga/ho4/Dq8fzRPw25ocv4mzNevwL21ChIDOvNaOIRWLMMRBrOaqJkwAMhPE78sAXILSuTQgMEwh96usxTUgMJymuaYlhoGAIATmZOyIr9v7BsGUqeErqBGgVGcsoO6n4XPYyHGOLCDGODJwjZcnFMmx6wkiE7Nz8WPKRoRCJEY9Q+atoEwXpGNJnfFURM28rsQTrImdWcDNCYAYHjKbgD8c1HFin+Ulf8Of/AMJvFNWfw0LPiyWQmiEs4oj+J/Ajp/BsTUpNazF4vqv5Wqa80Ia2Rp+R0AstxWceoicpDU1YTIKEOpTVjsKiRuNccS/evxcZgE/7YK9EjGmjbzq7pugfQxilmJJjiCiUhc9UMSpFAkd8fe5WI9H7erl5GXNPcxdOKaH4dVMICCGRpe2zNDlXhOM3FVIOD0D/ABbg5q9ZoErM/hJhE2Sd0frT/A/xP9Vp/wCCfyuKxNUaJWZpEBFSLxctS4xY2Iydzc57efy0hnmlazxr/BP5UrZaVpLYfwnsp6gonEhCAmBO1TMVByMIIAonmZ+aO6TYRlB/n8Gvy13Tmlbmk2Lz/g0GJsRgqMXfhvQFab9al+Depr5xjYEmT5K/92nuCB+lPxNmo2Gn5P8AM2/605/ButNfhAYrg4o3XPh1KUgQ3JSmQrIYRSik0nlvP+HF5ptr/hinNKsNfdG8NjpoCVCpIXBgRJAZMWGFqQJAgJxgD4p7x66CCz/hz+fdP8MfhaZRWuCkyBjkjM/hRIIpxOKvERSCD6aUsznCxLk6DilgHAeKXE3wqCYjPP8Amtn/AAWGn/nf84/LY82ZPJYnDYasHIOKmhEfk/HFO35pq7uPeuLs54sfl1spOIUP3e8vnxYzL82NvsUNixGbFklOmGiODUWKMmX4o1swBM9eKFn8ZsXVm746s5bmeWl5Ex/FUuEHdlknm5fFipihcWB4LPFMT1epuHVxT/Cf/Af+d/zilWLM4qmovGMt4rAUSZn4pMXYNVSOJzFXjm6qzqhnmRihMWdnMpAJwE/dyGBoqQ5XKWSIxG2vFTy4QJYZ9Iiz3PSTxiXPlnxWw304O1ZZOHO6j9fUkyBzXHJGd0oVEwMwiE2SjxTaaJpyJTB4wzQB2hODGEHmfhoZS01VhLrBNbEjJjCsQPGp+aNy/gSM4fumpEFOCdSR4pGFwTIbFPO5PVASISIwqNDPzSteEAzlMLOwPmtqyYEYDIAR79UhyfBGN91ro7chjB2AiMkeqRnUIxlbagYx7uEaagREJYM6lshyd6DDE1HTONNGAvSZRZAkmOzdFIMaIFCTnz3urdODIaLh6z4o3eSRczJR4p7aWFIUkCuaXsX3AAWc56HXNcmdLSiEqziqOxdkaIFyxnLkJVk+WaNdcnOTIEn1JV4KWVA4EJMenmvSSwynJJTZUAS5h7H9LJEyDFwISWDuidiDFmBPKJP5olk4gCc7KCMyTOiySBBSI8isPiWuvxjX4WZCZoQrnx+GkxlpXxSpY6p+XX5P/MsXdcE2GfdcZkju64SzyCaKlzc1nxRe/i+YsxoaOcxE58VScGM+KYlG6MqmGKJKPbduqEG6QamyymIN04MkknbcUUKrB2EcuaP1CeUEi/cH2okLQSV2JmcVjMFBRMkOBiY5iajm5JT4ozzRirZL9RUP8KU1qQYY81YASMv7Mz1Q7EJmCNQ7qeCBGSHMzM+Zo8w5WRNRmoTagiycZ/iqgsolJVKy8XawPT0BEfdWQ1H0RzQmKuHJkpIcMOb4LxzKCTPgK4pCBVFMpC4J4KQYOZSCoKvEtHUGpLsbczHNlgy8qDsM4+LHN8Q4GJeHFg8EIUxgSU6nVOeSZy+nbV5KOTs52eGhOIo5GpqaCSTZlKRpdBcq+ZE+hs/rCkCUZkZ41YA8hz4BCJPDNZniIsQmkTI+qxIfEy7OU2F5hEwPCzRTpDLDTK/S8DsRRElSM5fN0qgYHRBs92J3ymMajOI6IsPyrArK7VWWo6wBmxxEhB0lllTzOuKCSwc4pAeUYxZy1Xiu5gKuB8+q6kaCKIGSpj+awFdFhxEPdnDkHzVHU0JCHkmq2HDSZ6rh6s4NPzEWU94umf8AzRYsIzdHFuLFj7tP3KBJCUHRIT21NlRcqgPmGiGotYygjw90JkKAh1th+yhVpVA1ge5FgkRJbMBjKm0srwlGAopMSccWDDcQJo4s8jU0SdieDnCx80Cw0FLYOZhfFI8kgSBQhLrfPir0sMeMzrvkoA9DrEJOzviaDThWFISJ+ElYOpYQaOUX4uLKeg+aZ3jVlBHGXRNzx1cMpKGA7fuMUrTPMAGQPLmxSooZERChkcMWKKRBh1HDjur4/EEKcsxEeayWBRhEocMba5xOL83yPU2HEagcwCZ1qTNY5qgSpBzstamqZTu3GfdM/Vop9QHFEj8/qEw47oQixxyLLxzQeKVpiwy4WcfxZFnFSb4UfvYjFVCJhCv0syQRx7IL9YrEMYEBw4WkOvNENhYuqaeEewkpGBw/zM+A1rCj7jMMEvaNIaXQwTgvfcUIAbDhpTJ8UmQZDI8Hlg1Vsy/MQSPU/Ni/nSE4WI3xZT0CUGAhzmsK/wBnTmEwRPzZG4lIQTP/AKpMM1T4iSTOqSBDpDFcIN9Z8WFNmIwEX0NJcpEplA8gTnMXa9vzmZjR6s0BLqQlk8y6rrnESMXHbNDLfIkMZgn7FHFBpQBGHJvVgoIjNkRYJlwY+ZuRalKpg+U/usWTAneO9U3mgNQARBmGXPEc0gRJLLmQAe9+K0HPAwJwBnMEzBU10wkrws17gSAZBGod2fERXBMgvWCsSRuCnjAn3T0cSEUPhidVUT1OseCCAxEtITQzAUDEYndNRUbeSWI1RjOMS3GVIfiz7WIgEv3P8VKn7JzyhA51mmEWxIkkjCe0lfVEKgtOCNO89XFkRfd/oZlEiuVhgTHmQqf8JNkp96HQHRkEQH2Cs5uXuiJIZWSiFMSHaflxXZk4UEJCc/VZFuKDKAwzkMtj3eSJjQDQfWy4dBAACd6VWXwNKTsBbCRLg2EngkJP1Yx84AAKD7LUdLjgphjt82CYP44A2cDiloj0M9kJT397y5oAR4JJoiBBImsrO4nMeaF0JjNwzvSY7mngCsxuR3xutEmAkuB9OBownJgZCY2y8zNA/rQQwEIiIWLnsSWNEjGKilBwEYfsVuUICNKk+9IxZZsKW+cXgLtK2OsNIJ/6HgDRmqFF0GFkCw2o6I7iBEqjzahIIjAgn6WKlGAcxgfEHFIUOVJMagWdADScJZCUjV5Qqk+Iy+bJKQAvj8LG6YPyfclA7KlQgRc1JJ7pRBABks/cxL4sIeAuGHTsq8pBIplKs4asWgZAGSQYbHNHqDqRMI7aCTASKCJJRPmLClahAuGWR82YMKMg5Icx5uElSUQogREo4IahfWZmd0kVBChDQJhjzYYzTiFNOHD5L5rtFcFmdzhpxoAJAjURqxUxoYDkmZFmebBaDcEtkDOcc0aMACaSNZ3806VAIlgBlMzEe7K9cgGUqImd1UTPK82ZnzO7LwdSTk+iS1EhpZSdkzKNkxRoAhTgMMNg2gDRiEkdeGshPIKs2w9qESBBLiENVFyISJE/RWynEmo56X/5UINNiDOZShfiyCIgg2kbzK6sCVSTYgb0BXEZDAI0oML5uIlg5m0EwTSLtUseihUCzBEgDAxoueBhY5AFgJ6rGgDgwqHaFd09QAH+g+KmZzEXRihZDBBiYaYlhQphYIfEfNnICLAkpOoESGbPBmgzAA2cmWKyAlkok1nJjEJKljzXC1SjkPJVHK2UJZCWPu0E8d6ohXRvg+FARjYFJOZEfBJ7o1JljosEJJ5a/wBlopTGMl+nqgUpRZRjmiOvxpQRJJe//AJRRdEdf4qG7lrdQSTjf+AGn0u9UK6u8XBCiJOSEScSGdxU0L0lKMGT6V1ZFHgshnX9bPGbDGzGphxzXJNaWj2hP0pHUrlAlMmQnifFQIFBiUZNGJ7KMvdMQIDAmKHtlyQ0gaesPdNGZKCy4RnM1cwJQKxEIMzi7KHzlIsM+MBVlVoAy6RhxmoYsgL9gPM9WAQBgLSQI8i1Dk6kgFgRSw1ZDICAiOcIr+CniSYkgpj5Nlw9vDvYhJiCeKaAqIxCA5LLsIqMhs6lZgKyDgqbC0VINBky5iv5ihlFAAun5VdmZIMw+8WD7y6hRYQxvNffEqqSlgWPNgi8hGNSAiXpipIUDQjSEgw5mJ9UZIZqsWRKR7JuRIJ8sqSAw+7LvFPKoJzInfz/AKj+FjdS42yAV0EkqQFALFEyVkpajTpr4lxAlDX7bqDTojvJVligsDydRLYEeQOJPlC2ZHADHJ961aIDDga+1YbkFptOffks7ZSNLZR5yEbHW63JBfIEV4yk2TsshtLJ3ZOyydlk7sndk7sOyydlksnf4k7LCYk+9k7LDhAe3V9q/ibNaITMzo6pPLP4mKAXSwe+BKe8pispD28Rczz0K4cQBgm1vaTIlqZf1YrvNCXMA8c1jCAoFid2TBTxRQxHdUCYQORlJcTqi9VMp/fdhWIwEhlH9aJjQAhQzHi8yuym4eLmSxBHyPreMcso7p4uCEBDj4q7LIFywSfclgRnyxCYmPtW3JaGHi5A5MI+T60yYwmWN0MmOM60/wBmwRO3BegjiLNQifIRPqFBwRpioSI76pmPbHikohDuQzYARGaBUhnoozAj4/1v7RVbMc6cA97cVIAc1IiEYM8Wa1FZWEh7g/Vi9kWAC4KME6rPhACRGqzvCpOC9YCJDlzUd9ys8Ij3O+OqZcEzZzOiZ1ZFPMSEUPjU/NGBoUJoYJieqZsKU8BJnO949VaaealJcd4wTcEbEALsdMd4a6DJoIaFX7sZrUCyWCJNmXwtaPcKcQtWEKQEvZn3j1T+ILzjQyZ82aDBDkEHfgsaK+WWwcwyfaxUJlSIiujSTL6vHoEossJPqKEB+EsURzPfXmhCDaohjTcb9YsmigNQEjoczVhsgoCKkSzUCRQBKBK5nvFQozM0HCSU3GnJNIqhxGQJiWc6jPZZZudpo5nWqwO0zGCi7nXRSdijZYC32mPw/l1+WmU8WeK6rNQ48yLHzU/5dQjxI24Vcgqs8R0DGctnkTCoiK4fFMydnMCKRE5ZeKMpfO3nRNnjS5BQ4KMPxSR5XllQqExM8aszQ2KO4YPMrSkOvlymcpF6im9kqnMjPmsMWC5SEn3FLG7cECQRxHdRnhp95h+rWbFLhPAZT9OKKW7KAkI2cYzTGDmeQBZidmqfVzULiM4jP3oJ7x3SYiNQ7ur1/wDg64j5oPGyTEST7UJIskhsYsCgBUwZmXy2eETAX7Gj4sw+wnHY55amo0JhkJmZNVZ44MT0k4rwLIzEeKGEgmzRnc3MLyk5hOd7qSCJkcT5x6sZaPkntPDWHBFiTubDgpG6PeJ/VYZ8gVV7ZzY6wXbt3jRW7Wczn7uPioWNC5IERMOrE0Tnz2Mu4zRGxRnDQdzZJQQJYiZjfd3OfBPgjJVt5dxHeTP3udqlCBow68UuBkIYJqaBCSRGX5rIZDLCO8asovDnympZmkrJn4NM7nyWAARTjoZ3WqdmI49cUTMhY/xSklU1oLBYLB1YOrBY/CFgsFgsWBIS+PMBBYsWJACIWM2CxYOrB1/+Ek7sOqhFj53RSniKqUwQ4ZAMbxxuaLHS5L4xIMZSll275XvlY0nEzMXOGXt2BJOcKU22t+QgMS7lMUoFgSCQx5sOrB1YLB1YLDqwdXwWDqw6sOrDqwdWHVhMxYdWDqwREYsHVh1YdWDr/PHf+AZsWPzNmfxOLP8Agfma2ZcRZ/ITjFGbMWZs1f8Axz/qR5qmyxiLg1Y583RzFIf7UWPxFix+Ef4R+Y/MWPzFixYsJsH4ihHLYsfiLFj/AMUU/wD9JYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixYsWLFixY//2Q==",
+      "respuesta": "A 2/3 de la longitud D de los pilotes, con una ampliación de la carga de 1:4 (horizontal:vertical)."
+     },
+     "citas": [
+      {
+       "articulo": "32.3.5",
+       "extracto": "puede reemplazarse al grupo de pilotes por una zapata imaginaria ubicada a 2/3 de la profundidad del grupo de pilotes"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué componentes del asentamiento de un pilote aislado deben considerarse según la E.050?",
+      "respuesta": "El debido a la deformación axial del pilote, el generado por la acción de punta y el generado por la carga transmitida por fricción."
+     },
+     "citas": [
+      {
+       "articulo": "32.3.5",
+       "extracto": "b) En el cálculo del asentamiento del pilote aislado se consideran: el asentamiento debido a la deformación axial del pilote, el asentamiento generado por la acción de punta y el asentamiento generado por la carga transmitida por fricción."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuántas pruebas de carga exige como mínimo la E.050 en una obra con pilotes?",
+      "opciones": [
+       "Una por cada 10 pilotes",
+       "Una por cada lote o grupo de pilotes, con un mínimo de una por cada 50 pilotes",
+       "Una por obra, cualquiera que sea el número de pilotes",
+       "Una por cada 100 pilotes"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "32.4.1",
+       "extracto": "c) El número de pruebas de carga es de una por cada lote o grupos de pilotes, con un mínimo de una prueba por cada cincuenta pilotes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En qué zona de la obra deben hacerse las pruebas de carga de pilotes según la E.050?",
+      "opciones": [
+       "En la zona más accesible para el equipo",
+       "En el centro geométrico del terreno",
+       "En la zona con el mejor suelo, para no sobrestimar asentamientos",
+       "En zonas con el perfil de suelo previamente conocido y el más desfavorable"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "32.4.1",
+       "extracto": "d) Las pruebas se efectúan en zonas con el perfil de suelo previamente conocido y el más desfavorable."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Según qué norma se hacen las pruebas de carga estática de compresión axial en pilotes, de acuerdo con la E.050?",
+      "opciones": [
+       "ASTM D 3689",
+       "ASTM D 5882",
+       "ASTM D 4945",
+       "ASTM D 1143"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "32.4.1",
+       "extracto": "Se deben efectuar pruebas de carga estáticas de compresión axial según lo indicado en la Norma ASTM D 1143"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A qué porcentaje de los pilotes instalados deben hacerse pruebas de integridad de bajo impacto (ASTM D 5882) según la E.050?",
+      "opciones": [
+       "Al 10 %",
+       "Al 25 %",
+       "Al 100 %",
+       "Al 50 %"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "32.4.2",
+       "extracto": "Se debe efectuar la verificación del buen estado físico al 100% de los pilotes instalados mediante la ejecución de pruebas de integridad de bajo impacto"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué desplazamiento máximo en planta tolera la E.050 entre el eje de un pilote instalado y el eje del plano?",
+      "opciones": [
+       "0,05 m",
+       "0,10 m",
+       "0,25 m",
+       "0,15 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "32.4.3",
+       "extracto": "a) Desplazamiento del eje en planta del pilote instalado con respecto al eje del pilote en el plano ≤ a 0.10 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué desviación máxima de inclinación tolera la E.050 entre el eje de un pilote instalado y el indicado en el plano?",
+      "opciones": [
+       "1°",
+       "5°",
+       "0,5°",
+       "2°"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "32.4.3",
+       "extracto": "b) Inclinación del eje del pilote instalado respecto a la inclinación del eje indicado en el plano ≤ a 2°."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según el artículo 33 de la E.050, ¿qué diámetro tiene un pilar?",
+      "opciones": [
+       "Mayor a 0,60 m",
+       "Mayor a 0,90 m",
+       "Entre 0,30 y 0,90 m",
+       "Mayor a 1,50 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "33.1",
+       "extracto": "Los pilares son elementos estructurales de concreto, vaciados “in situ” con diámetro mayor a 0.90 m"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué factores de seguridad mínimos se aplican a la capacidad de un pilar para obtener su capacidad admisible?",
+      "opciones": [
+       "2,0 como en los pilotes individuales",
+       "Los mismos de las cimentaciones superficiales: 3,0 para cargas estáticas y 2,5 para sismo o viento",
+       "3,0 para cualquier tipo de carga",
+       "1,5 en todos los casos"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "33.3",
+       "extracto": "La capacidad admisible se obtiene dividiendo la capacidad última por el factor de seguridad. Se utilizan los factores estipulados en el artículo 21."
+      },
+      {
+       "articulo": "21.1",
+       "extracto": "Para cargas estáticas: 3,0"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Con qué fin permite la E.050 acampanar (ensanchar) la base de un pilar?",
+      "opciones": [
+       "Para reducir la fricción negativa",
+       "Para facilitar el vaciado del concreto",
+       "Para incrementar su capacidad de carga, siempre que no exista peligro de derrumbes",
+       "Para disminuir el número de pruebas de carga"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "33.4",
+       "extracto": "Se puede acampanar el pilar mediante el ensanchamiento de su base a fin de incrementar la capacidad de carga del pilar, siempre y cuando no exista peligro de derrumbes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estas medidas NO menciona la E.050 para controlar el aflojamiento del suelo alrededor de un pilar?",
+      "opciones": [
+       "Una rápida excavación y vaciado del concreto",
+       "La aplicación de lodo bentonítico",
+       "Vibrar el suelo circundante antes de excavar",
+       "El uso de un forro en la excavación"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "33.5.1",
+       "extracto": "Una rápida excavación y vaciado del concreto."
+      },
+      {
+       "articulo": "33.5.2",
+       "extracto": "El uso de un forro en la excavación."
+      },
+      {
+       "articulo": "33.5.3",
+       "extracto": "La aplicación del Lodo Bentonítico."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un cajón de cimentación tiene una relación Df/B = 4. ¿Cómo se diseña según la E.050?",
+      "opciones": [
+       "Como un pilote de fricción",
+       "Como cimentación superficial",
+       "Como un muro de contención",
+       "Como un pilar"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "34.2",
+       "extracto": "Si es menor o igual a cinco (5) se diseña como cimentación superficial, si es mayor a cinco (5) se diseña como un pilar."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se instala un cajón de cimentación y qué dato debe dar el PR para ello?",
+      "respuesta": "Se construye sobre el terreno y se introduce en él por su propio peso a medida que se excava el suelo interior. El PR indica la fricción lateral del suelo para determinar el peso requerido."
+     },
+     "citas": [
+      {
+       "articulo": "34.1",
+       "extracto": "se construyen sobre el terreno y luego son introducidos en el mismo por su propio peso al excavarse el suelo ubicado en su interior. El PR indica el valor de la fricción lateral del suelo para determinar el peso requerido por el cajón para su instalación."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

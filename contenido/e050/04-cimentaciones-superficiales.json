@@ -1,0 +1,946 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.050",
+  "titulo": "Suelos y Cimentaciones",
+  "disciplina": "structures",
+  "dispositivo": "RM N° 406-2018-VIVIENDA",
+  "publicadaEn": "2018-12-03"
+ },
+ "fuente": "Norma E.050 Suelos y Cimentaciones (RM N° 406-2018-VIVIENDA), publicada en Normas Legales de El Peruano el 3 de diciembre de 2018 (págs. 22 a 68)",
+ "articulos": [
+  {
+   "numero": "23",
+   "epigrafe": "Definición",
+   "texto": "Definición",
+   "pagina": 18
+  },
+  {
+   "numero": "23.1",
+   "texto": "Son aquellas en las cuales la relación Profundidad / ancho (Df / B) es menor o igual a cinco (5), siendo Df la profundidad de la cimentación y B el ancho o diámetro de la misma.",
+   "pagina": 18
+  },
+  {
+   "numero": "23.2",
+   "texto": "Son cimentaciones superficiales las zapatas aisladas, conectadas y combinadas; las cimentaciones continuas (cimientos corridos) y las plateas de cimentación.",
+   "pagina": 18
+  },
+  {
+   "numero": "23.3",
+   "texto": "Las zapatas y plateas deberán tener una forma regular: cuadrada, rectangular, continua o circular como las mostradas a continuación. Las cimentaciones no rectangulares podrán asimilarse a otras similares conservando la misma área y el mismo momento de inercia respecto al eje del momento resultante. Calculadas esas dimensiones equivalentes, se obtiene el valor de la presión uniforme aplicada definida como:\nqap = Q / (B′ L′)\nB´ y L´ se calcularán de acuerdo a lo indicado en 4.5\nRef. Código Técnico de Edificación Español 314/2006\nZapata | Dimensiones\nCuadrada | L = B\nRectangular | L ≤ 10 B\nCircular | Diámetro = B\nContinua | L > 10 B\nCombinada | L ≤ 10 B\nAnillo continuo | Perímetro medio P ≥ 10 B\nNota: El peralte de la cimentación (h) debe ser determinado por el ingeniero que efectúa el diseño estructural del proyecto.\nRef. Donald P. Coduto (1994) Foundation design: Principles and Practices. Englewood Cliffs, NS: Prentice-Hall",
+   "pagina": 18
+  },
+  {
+   "numero": "24",
+   "epigrafe": "Suelos no permitidos para apoyar las cimentaciones",
+   "texto": "No se cimienta sobre los siguientes tipos de materiales: turba, suelo orgánico, tierra vegetal, relleno de desmonte o rellenos sanitario o industrial, ni Rellenos No Controlados. Estos materiales no permitidos tienen que ser removidos en la totalidad del terreno, antes de ejecutar cualquier tipo de obra en el terreno y ser reemplazados con materiales que cumplan lo indicado en el numeral 25.4.",
+   "pagina": 20
+  },
+  {
+   "numero": "25",
+   "epigrafe": "Rellenos",
+   "texto": "Rellenos",
+   "pagina": 20
+  },
+  {
+   "numero": "25.1",
+   "texto": "Los rellenos por su origen pueden ser naturales si son formados por la naturaleza y artificiales si son formados por la acción del hombre.",
+   "pagina": 20
+  },
+  {
+   "numero": "25.2",
+   "texto": "Los rellenos artificiales de acuerdo al material que lo constituye pueden ser:",
+   "pagina": 20
+  },
+  {
+   "numero": "25.2.1",
+   "texto": "Materiales seleccionados: todo tipo de suelo compactable, con partículas no mayores de 7,5 cm (3”), con 30% o menos de material retenido en la malla ¾”, con un contenido de material que pasa la malla 200 menor al 50%, con IP no mayor a 6 y sin elementos distintos de los suelos naturales.",
+   "pagina": 20
+  },
+  {
+   "numero": "25.2.2",
+   "texto": "Materiales no seleccionados: todo aquél que no cumpla con la condición anterior.",
+   "pagina": 20
+  },
+  {
+   "numero": "25.3",
+   "texto": "Los rellenos artificiales por las condiciones bajo las que son colocados pueden ser:\na) Controlados.\nb) No Controlados.",
+   "pagina": 20
+  },
+  {
+   "numero": "25.4",
+   "epigrafe": "Rellenos Controlados o de Ingeniería",
+   "texto": "Rellenos Controlados o de Ingeniería",
+   "pagina": 20
+  },
+  {
+   "numero": "25.4.1",
+   "texto": "Los Rellenos Controlados son aquellos que se construyen con Material Seleccionado, tienen las mismas condiciones de apoyo que las cimentaciones superficiales. Los métodos empleados en su conformación, compactación y control, dependen principalmente de las propiedades físicas del material. Las cimentaciones pueden apoyarse sobre este tipo de Relleno Controlado o de Ingeniería.",
+   "pagina": 20
+  },
+  {
+   "numero": "25.4.2",
+   "texto": "El Material Seleccionado con el que se construye el Relleno Controlado es compactado de la siguiente manera:\na) Si tiene más de 12% de finos, se compacta a una densidad mayor o igual del 90% de la máxima densidad seca del método de ensayo Proctor Modificado, NTP 339.141, en todo su espesor.\nb) Si tiene igual o menos de 12% de finos, se compacta a una densidad no menor del 95% de la máxima densidad seca del método de ensayo Proctor Modificado, NTP 339.141, en todo su espesor.",
+   "pagina": 20
+  },
+  {
+   "numero": "25.4.3",
+   "texto": "En los Rellenos Controlados o de Ingeniería es obligatorio realizar controles de compactación en cada una de las capas compactadas, necesariamente a razón, de un control por cada 250 m2 o fracción, con un mínimo de tres controles por capa. En áreas pequeñas (igual o menores a 25 m2) un ensayo como mínimo. En cualquier caso, el espesor máximo a controlar es de 0,30 m de espesor.",
+   "pagina": 20
+  },
+  {
+   "numero": "25.5",
+   "epigrafe": "Rellenos No Controlados",
+   "texto": "Los Rellenos No Controlados son aquellos que no cumplen con el numeral 25.4.1 Las cimentaciones superficiales no se deben apoyar sobre estos Rellenos No Controlados, los cuales deben ser reemplazados en su totalidad en todo el terreno, objeto del EMS, por materiales seleccionados debidamente compactados, como se indica en el numeral 25.4.1 antes de iniciar cualquier tipo de obra en el terreno.",
+   "pagina": 20
+  },
+  {
+   "numero": "26",
+   "epigrafe": "Profundidad de cimentación",
+   "texto": "Profundidad de cimentación",
+   "pagina": 20
+  },
+  {
+   "numero": "26.1",
+   "texto": "La profundidad de cimentación de zapatas y cimientos corridos, es la distancia desde el nivel de la superficie del terreno a la base de la cimentación, excepto en el caso de edificaciones con sótano, en que la profundidad de cimentación está referida al nivel del piso terminado del sótano más profundo. En el caso de plateas o losas, la profundidad de cimentación es la distancia del fondo de la losa a la superficie del terreno natural.",
+   "pagina": 20
+  },
+  {
+   "numero": "26.2",
+   "texto": "La profundidad de cimentación es definida por el PR y está condicionada por la estratigrafía del suelo, a cambios de volumen por humedecimiento-secado, hielo-deshielo o condiciones particulares de uso de la estructura, no siendo menor de 0,80 metros en cualquier tipo de cimentación de elementos portantes o no portantes no arriostrados lateralmente. En el caso de cimentación sobre roca, el PR define la profundidad de cimentación, pudiendo en este caso ser menor a 0,80 metros. La profundidad de cimentación de las losas o plateas se verá en el párrafo siguiente.",
+   "pagina": 20
+  },
+  {
+   "numero": "26.3",
+   "texto": "Las plateas de cimentación son losas rígidas de concreto armado con acero en dos direcciones, apoyadas en toda su extensión sobre un Relleno Controlado con una viga perimetral confinante de concreto armado. El fondo de la viga debe llegar hasta el nivel de la sub-rasante, con un peralte mínimo de 0,40 metros, en el caso de viviendas de interés social con altura no mayor a dos pisos el ingeniero estructural podrá reducir el espesor de 0.40 m. bajo su responsabilidad diseñando dicha losa para que su comportamiento garantice la rigidez de la cimentación con un mínimo de tres veces el espesor de la platea. En el caso que el Relleno Controlado tuviera un espesor mayor de 0,80 metros la viga debe tener un peralte mínimo de 0,80 metros. La necesidad de incluir vigas interiores rigidizantes adicionales a las perimetrales, el espesor de la losa y el peralte de las vigas, son determinados por el proyectista estructural, para garantizar la rigidez de la cimentación.",
+   "pagina": 21
+  },
+  {
+   "numero": "26.4",
+   "texto": "Si para una estructura se plantean varias profundidades de cimentación, deben determinarse la carga admisible y el asentamiento diferencial para cada caso. Deben evitarse la interacción entre las zonas de influencia de los cimientos adyacentes, de lo contrario es necesario tenerla en cuenta en el dimensionamiento de los nuevos cimientos.",
+   "pagina": 21
+  },
+  {
+   "numero": "26.5",
+   "texto": "Cuando la edificación tenga sus cimientos adyacentes a los de las edificaciones vecinas deberán tomarse las provisiones necesarias en el diseño de las cimentaciones, para evitar afectar a los cimientos existentes ya sea por incremento de carga vertical que generen una reducción en el factor de seguridad o un incremento de las deformaciones. Estas consideraciones deberán ser evaluadas durante y después del proceso constructivo de la edificación.",
+   "pagina": 21
+  },
+  {
+   "numero": "26.6",
+   "texto": "Cuando una cimentación quede por debajo del nivel de desplante de una cimentación vecina existente, el PR analiza el requerimiento de sostenimiento de la cimentación vecina, según lo indicado en el numeral 39.8.",
+   "pagina": 21
+  },
+  {
+   "numero": "27",
+   "epigrafe": "Presión admisible",
+   "texto": "Se determina según lo indicado en el Capítulo III.",
+   "pagina": 21
+  },
+  {
+   "numero": "28",
+   "epigrafe": "Cargas excéntricas",
+   "texto": "Cargas excéntricas",
+   "pagina": 21
+  },
+  {
+   "numero": "28.1",
+   "texto": "En el caso de cimentaciones superficiales que transmiten al terreno una carga vertical Q y dos momentos Mx y My que actúan simultáneamente según los ejes x e y respectivamente, el sistema formado por estas tres solicitaciones es estáticamente equivalente a una carga vertical excéntrica de valor Q, ubicada en el punto (ex, ey) siendo:\nex = Mx / Q    ey = My / Q",
+   "pagina": 21
+  },
+  {
+   "numero": "28.2",
+   "texto": "El ancho (B) o largo (L), se corrige por excentricidad reduciéndolo en dos veces la excentricidad para ubicar la carga en el centro de gravedad del «área efectiva = B’L’»\nB′ = B − 2ex    L′ = L − 2ey",
+   "pagina": 21
+  },
+  {
+   "numero": "28.3",
+   "texto": "El centro de gravedad del «área efectiva» coincide con la posición de la carga excéntrica y sigue el contorno más próximo de la base real con la mayor precisión posible. Su forma es rectangular, aún en el caso de cimentaciones circulares. (Ver Figura 5). Las cimentaciones no rectangulares se dimensionan de acuerdo a lo indicado en el numeral 23.3.",
+   "pagina": 21
+  },
+  {
+   "numero": "Figura 5",
+   "epigrafe": "Cimientos cargados excéntricamente",
+   "texto": "Ref.: NAVFAC DM 7\nA) CARGAS EQUIVALENTES: e = M / Q. La fuerza resultante actúa en el centroide del área reducida.\nB) ÁREA REDUCIDA – CIMIENTO RECTANGULAR: Para cimientos rectangulares se reducen las dimensiones siguientes: L' = L – 2e1, e1 = M1 / Q; B' = B – 2e2, e2 = M2 / Q\nC) ÁREA REDUCIDA – CIMIENTO CIRCULAR: Para un cimiento circular de radio R, el área efectiva, A'e = 2 x (Área del segmento circular ADC), considerar A'e como un rectángulo con L’ y B’ (L’ > B’). e = M / Q; A'e = 2S = B'L'; L' = (2S √((R + e2)/(R – e2)))^(1/2); B' = L' √((R – e2)/(R + e2)); S = πR²/2 – [e2 √(R² – e2²) + R² Sen⁻¹(e2/R)]; e2 = M2 / Q; O'B = O'D; R = OD\nLas cimentaciones no rectangulares podrán asimilarse a otras similares conservando la misma área y el mismo momento de inercia respecto al eje del momento resultante. Calculadas esas dimensiones equivalentes, se obtiene el valor de la presión uniforme aplicada definida de acuerdo a 23.3.",
+   "pagina": 21
+  },
+  {
+   "numero": "29",
+   "epigrafe": "Cargas inclinadas",
+   "texto": "La carga inclinada modifica la configuración de la superficie de falla, por lo que la ecuación de capacidad de carga es calculada tomando en cuenta su efecto.",
+   "pagina": 21
+  },
+  {
+   "numero": "30",
+   "epigrafe": "Cimentaciones superficiales en taludes o en su cercanía",
+   "texto": "Cimentaciones superficiales en taludes o en su cercanía",
+   "pagina": 21
+  },
+  {
+   "numero": "30.1",
+   "texto": "En el caso de cimientos ubicados en terrenos próximos a taludes o sobre taludes o en terreno inclinado, la ecuación de capacidad de carga es calculada teniendo en cuenta la inclinación de la superficie y la inclinación de la base de la cimentación, si la hubiera.",
+   "pagina": 21
+  },
+  {
+   "numero": "30.2",
+   "texto": "Adicionalmente, se debe analizar la estabilidad global del talud, considerando las cargas que genera la presencia de la estructura.",
+   "pagina": 21
+  },
+  {
+   "numero": "30.3",
+   "texto": "El factor de seguridad mínimo del talud, en consideraciones estáticas debe ser 1,5 y en condiciones sísmicas 1,25.",
+   "pagina": 21
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e050-c04-cimentaciones-superficiales",
+   "titulo": "E.050 · Cap. 4 · Cimentaciones superficiales",
+   "descripcion": "Definición y formas, suelos no permitidos, rellenos controlados y su compactación, profundidad mínima, plateas, cargas excéntricas y cimentaciones en taludes.",
+   "acceso": "free",
+   "orden": 204,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué elementos son cimentaciones superficiales según la E.050?",
+      "opciones": [
+       "Los pilotes, los pilares y los cajones de cimentación",
+       "Las zapatas y los micropilotes",
+       "Las zapatas aisladas, conectadas y combinadas, los cimientos corridos y las plateas de cimentación",
+       "Solo las zapatas aisladas"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "23.2",
+       "extracto": "Son cimentaciones superficiales las zapatas aisladas, conectadas y combinadas; las cimentaciones continuas (cimientos corridos) y las plateas de cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Una cimentación tiene profundidad Df = 4,0 m y ancho B = 1,0 m. ¿Cómo la clasifica la E.050?",
+      "opciones": [
+       "Como superficial, porque Df/B es menor que 10",
+       "Como superficial, porque Df/B = 4 es menor o igual a 5",
+       "Como profunda, porque Df/B = 4 es mayor que 3",
+       "Como profunda, porque Df supera 3 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "23.1",
+       "extracto": "Son aquellas en las cuales la relación Profundidad / ancho (Df / B) es menor o igual a cinco (5)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cómo trata la E.050 una zapata de forma no rectangular para calcular la presión aplicada?",
+      "opciones": [
+       "Se reemplaza por un círculo del mismo perímetro",
+       "Se usa el rectángulo circunscrito a la zapata",
+       "Se asimila a otra similar con la misma área y el mismo momento de inercia respecto al eje del momento resultante",
+       "Se toma la mitad de su área como área efectiva"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "23.3",
+       "extracto": "Las cimentaciones no rectangulares podrán asimilarse a otras similares conservando la misma área y el mismo momento de inercia respecto al eje del momento resultante."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Una zapata transmite una carga Q = {Q} kN. Su área efectiva, corregida por excentricidad, mide B′ = {B} m por L′ = {L} m. Con qap = Q / (B′ L′), ¿cuál es la presión aplicada qap (kPa)?",
+      "variables": {
+       "Q": {
+        "etiqueta": "Q",
+        "valores": [
+         600,
+         900,
+         1200
+        ],
+        "unidad": "kN"
+       },
+       "B": {
+        "etiqueta": "B′",
+        "valores": [
+         1.6,
+         2.0,
+         2.4
+        ],
+        "unidad": "m"
+       },
+       "L": {
+        "etiqueta": "L′",
+        "valores": [
+         2.0,
+         2.5,
+         3.0
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "Q/(B*L)",
+      "unidadResultado": "kPa",
+      "tolerancia": 0.02
+     },
+     "citas": [
+      {
+       "articulo": "23.3",
+       "extracto": "qap = Q / (B′ L′)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Formas de zapata según la E.050 (art. 23.3)",
+      "columnas": [
+       "Dimensiones"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Cuadrada",
+        "valores": [
+         "L = B"
+        ]
+       },
+       {
+        "etiqueta": "Rectangular",
+        "valores": [
+         "L ≤ 10 B"
+        ]
+       },
+       {
+        "etiqueta": "Continua",
+        "valores": [
+         "L > 10 B"
+        ]
+       },
+       {
+        "etiqueta": "Combinada",
+        "valores": [
+         "L ≤ 10 B"
+        ]
+       },
+       {
+        "etiqueta": "Anillo continuo",
+        "valores": [
+         "Perímetro medio P ≥ 10 B"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "23.3",
+       "extracto": "Continua | L > 10 B"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Quién debe determinar el peralte h de una zapata, según la nota del artículo 23.3 de la E.050?",
+      "opciones": [
+       "El ingeniero que efectúa el diseño estructural del proyecto",
+       "El PR que firma el EMS",
+       "El PRS del sostenimiento",
+       "El constructor en obra"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "23.3",
+       "extracto": "Nota: El peralte de la cimentación (h) debe ser determinado por el ingeniero que efectúa el diseño estructural del proyecto."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Sobre cuál de estos materiales prohíbe cimentar la E.050?",
+      "opciones": [
+       "Rellenos controlados compactados según la norma",
+       "Grava arenosa densa",
+       "Roca con alteración menor al 10 % del área de la cimentación",
+       "Rellenos no controlados"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "24",
+       "extracto": "No se cimienta sobre los siguientes tipos de materiales: turba, suelo orgánico, tierra vegetal, relleno de desmonte o rellenos sanitario o industrial, ni Rellenos No Controlados."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si en el terreno hay turba, suelo orgánico o rellenos no controlados, ¿qué exige la E.050 antes de ejecutar cualquier obra?",
+      "opciones": [
+       "Compactarlos en el sitio con rodillo",
+       "Profundizar las zapatas 0,50 m dentro de ese material",
+       "Removerlos en la totalidad del terreno y reemplazarlos con relleno controlado",
+       "Removerlos solo bajo las zapatas"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "24",
+       "extracto": "Estos materiales no permitidos tienen que ser removidos en la totalidad del terreno, antes de ejecutar cualquier tipo de obra en el terreno y ser reemplazados con materiales que cumplan lo indicado en el numeral 25.4."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para que un suelo sea «material seleccionado» de relleno según la E.050, ¿qué tamaño máximo de partícula puede tener?",
+      "opciones": [
+       "10 cm (4″)",
+       "5 cm (2″)",
+       "1,9 cm (3/4″)",
+       "7,5 cm (3″)"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "25.2.1",
+       "extracto": "Materiales seleccionados: todo tipo de suelo compactable, con partículas no mayores de 7,5 cm (3”)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para que un suelo sea «material seleccionado» de relleno según la E.050, ¿qué índice de plasticidad máximo puede tener?",
+      "opciones": [
+       "IP no mayor a 10",
+       "IP no mayor a 15",
+       "IP no mayor a 6",
+       "IP no mayor a 4"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "25.2.1",
+       "extracto": "con IP no mayor a 6"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Material seleccionado para rellenos (art. 25.2.1)",
+      "columnas": [
+       "Requisito"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Tamaño máximo de partícula",
+        "valores": [
+         "7,5 cm (3″)"
+        ]
+       },
+       {
+        "etiqueta": "Retenido en la malla 3/4″",
+        "valores": [
+         "30 % o menos"
+        ]
+       },
+       {
+        "etiqueta": "Pasante de la malla N° 200",
+        "valores": [
+         "Menor al 50 %"
+        ]
+       },
+       {
+        "etiqueta": "Índice de plasticidad",
+        "valores": [
+         "No mayor a 6"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "25.2.1",
+       "extracto": "con 30% o menos de material retenido en la malla ¾”, con un contenido de material que pasa la malla 200 menor al 50%, con IP no mayor a 6"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un relleno controlado se construye con material seleccionado que tiene 18 % de finos. ¿A qué densidad mínima debe compactarse según la E.050?",
+      "opciones": [
+       "90 % de la máxima densidad seca del Proctor modificado",
+       "85 % de la máxima densidad seca del Proctor modificado",
+       "95 % de la máxima densidad seca del Proctor modificado",
+       "100 % de la máxima densidad seca del Proctor estándar"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "25.4.2",
+       "extracto": "a) Si tiene más de 12% de finos, se compacta a una densidad mayor o igual del 90% de la máxima densidad seca del método de ensayo Proctor Modificado, NTP 339.141, en todo su espesor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un relleno controlado se construye con material seleccionado que tiene 8 % de finos. ¿A qué densidad mínima debe compactarse según la E.050?",
+      "opciones": [
+       "100 % de la máxima densidad seca del Proctor modificado",
+       "95 % de la máxima densidad seca del Proctor modificado",
+       "95 % de la máxima densidad seca del Proctor estándar",
+       "90 % de la máxima densidad seca del Proctor modificado"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "25.4.2",
+       "extracto": "b) Si tiene igual o menos de 12% de finos, se compacta a una densidad no menor del 95% de la máxima densidad seca del método de ensayo Proctor Modificado"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "En los rellenos controlados, el porcentaje de finos que separa la exigencia de compactación del 90 % de la del 95 % del Proctor modificado es {{12 %}}."
+     },
+     "citas": [
+      {
+       "articulo": "25.4.2",
+       "extracto": "a) Si tiene más de 12% de finos"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En un relleno controlado, ¿con qué frecuencia mínima deben hacerse controles de compactación en cada capa?",
+      "opciones": [
+       "Uno por cada 100 m², con un mínimo de cinco por capa",
+       "Uno por cada 250 m² o fracción, con un mínimo de tres por capa",
+       "Uno por cada 1000 m² o fracción, sin mínimo por capa",
+       "Uno por cada 500 m², con un mínimo de dos por capa"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "25.4.3",
+       "extracto": "un control por cada 250 m2 o fracción, con un mínimo de tres controles por capa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Un relleno controlado ocupa {A} m² en planta. Según la E.050 (un control por cada 250 m² o fracción, mínimo tres por capa), ¿cuántos controles de compactación deben hacerse en cada capa?",
+      "variables": {
+       "A": {
+        "etiqueta": "Área de la capa",
+        "valores": [
+         750,
+         1000,
+         1250,
+         1500
+        ],
+        "unidad": "m²"
+       }
+      },
+      "formula": "A/250",
+      "unidadResultado": "controles",
+      "tolerancia": 0.02
+     },
+     "citas": [
+      {
+       "articulo": "25.4.3",
+       "extracto": "un control por cada 250 m2 o fracción, con un mínimo de tres controles por capa."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En los controles de compactación de un relleno controlado, ¿qué espesor máximo de capa puede controlarse con cada ensayo?",
+      "opciones": [
+       "0,15 m",
+       "0,30 m",
+       "0,50 m",
+       "0,20 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "25.4.3",
+       "extracto": "En cualquier caso, el espesor máximo a controlar es de 0,30 m de espesor."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En un relleno controlado de área pequeña (25 m² o menos), ¿cuántos ensayos de compactación por capa exige como mínimo la E.050?",
+      "opciones": [
+       "Uno",
+       "Dos",
+       "Ninguno si el relleno es de arena",
+       "Tres"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "25.4.3",
+       "extracto": "En áreas pequeñas (igual o menores a 25 m2) un ensayo como mínimo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es la profundidad mínima de cimentación que exige la E.050 para elementos portantes, o no portantes sin arriostre lateral, cuando no se cimienta sobre roca?",
+      "opciones": [
+       "1,00 m",
+       "0,80 m",
+       "1,50 m",
+       "0,60 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "26.2",
+       "extracto": "no siendo menor de 0,80 metros en cualquier tipo de cimentación de elementos portantes o no portantes no arriostrados lateralmente."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Cuando se cimienta sobre roca, ¿puede la profundidad de cimentación ser menor que 0,80 m?",
+      "opciones": [
+       "Solo si lo autoriza la municipalidad",
+       "Solo en viviendas de un piso",
+       "No; 0,80 m es un mínimo absoluto",
+       "Sí; en ese caso la define el PR y puede ser menor a 0,80 m"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "26.2",
+       "extracto": "En el caso de cimentación sobre roca, el PR define la profundidad de cimentación, pudiendo en este caso ser menor a 0,80 metros."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una platea de cimentación, ¿desde dónde se mide la profundidad de cimentación según el artículo 26 de la E.050?",
+      "opciones": [
+       "Desde el fondo de la losa hasta la superficie del terreno natural",
+       "Desde la parte superior de la losa hasta el nivel de piso terminado",
+       "Desde el fondo de la viga perimetral hasta el nivel freático",
+       "Desde el fondo de la losa hasta el nivel de piso terminado del primer piso"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "26.1",
+       "extracto": "En el caso de plateas o losas, la profundidad de cimentación es la distancia del fondo de la losa a la superficie del terreno natural."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una platea de cimentación apoyada sobre un relleno controlado de hasta 0,80 m, ¿qué peralte mínimo debe tener la viga perimetral confinante?",
+      "opciones": [
+       "0,30 m",
+       "0,60 m",
+       "0,40 m",
+       "0,80 m"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "26.3",
+       "extracto": "El fondo de la viga debe llegar hasta el nivel de la sub-rasante, con un peralte mínimo de 0,40 metros"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si el relleno controlado bajo una platea de cimentación tiene más de 0,80 m de espesor, ¿qué peralte mínimo debe tener la viga perimetral?",
+      "opciones": [
+       "0,40 m",
+       "0,60 m",
+       "0,80 m",
+       "1,20 m"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "26.3",
+       "extracto": "En el caso que el Relleno Controlado tuviera un espesor mayor de 0,80 metros la viga debe tener un peralte mínimo de 0,80 metros."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿En qué caso puede reducirse el peralte mínimo de 0,40 m de la viga perimetral de una platea?",
+      "respuesta": "En viviendas de interés social de no más de dos pisos: el ingeniero estructural puede reducirlo bajo su responsabilidad, diseñando la losa para garantizar la rigidez de la cimentación."
+     },
+     "citas": [
+      {
+       "articulo": "26.3",
+       "extracto": "en el caso de viviendas de interés social con altura no mayor a dos pisos el ingeniero estructural podrá reducir el espesor de 0.40 m. bajo su responsabilidad"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Sobre qué debe apoyarse en toda su extensión una platea de cimentación, según la E.050?",
+      "opciones": [
+       "Directamente sobre el terreno natural, sin viga perimetral",
+       "Sobre un relleno controlado, con una viga perimetral confinante de concreto armado",
+       "Sobre una capa de concreto ciclópeo de 0,30 m",
+       "Sobre pilotes de fricción"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "26.3",
+       "extracto": "Las plateas de cimentación son losas rígidas de concreto armado con acero en dos direcciones, apoyadas en toda su extensión sobre un Relleno Controlado con una viga perimetral confinante de concreto armado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "Si una estructura tiene varias profundidades de cimentación, ¿qué debe determinarse?",
+      "respuesta": "La carga admisible y el asentamiento diferencial para cada caso; y debe evitarse la interacción entre las zonas de influencia de cimientos adyacentes o, si no, tenerla en cuenta."
+     },
+     "citas": [
+      {
+       "articulo": "26.4",
+       "extracto": "Si para una estructura se plantean varias profundidades de cimentación, deben determinarse la carga admisible y el asentamiento diferencial para cada caso."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Una zapata recibe una carga vertical Q y momentos Mx y My. ¿Cómo calcula la E.050 las excentricidades?",
+      "opciones": [
+       "ex = Mx / Q y ey = My / Q",
+       "ex = Mx / (B L) y ey = My / (B L)",
+       "ex = 6 Mx / Q y ey = 6 My / Q",
+       "ex = Q / Mx y ey = Q / My"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "28.1",
+       "extracto": "ex = Mx / Q    ey = My / Q"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para una zapata con carga excéntrica, ¿cuánto se reduce el ancho B para obtener el ancho efectivo B′?",
+      "opciones": [
+       "Una vez la excentricidad: B′ = B − e",
+       "Seis veces la excentricidad: B′ = B − 6e",
+       "La mitad de la excentricidad: B′ = B − e/2",
+       "Dos veces la excentricidad: B′ = B − 2e"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "28.2",
+       "extracto": "El ancho (B) o largo (L), se corrige por excentricidad reduciéndolo en dos veces la excentricidad"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Una zapata de B = {B} m de ancho recibe una carga vertical Q = {Q} kN y un momento M = {M} kN·m en la dirección de B. ¿Cuál es el ancho efectivo B′ (m) según la E.050?",
+      "variables": {
+       "B": {
+        "etiqueta": "B",
+        "valores": [
+         2.0,
+         2.5,
+         3.0
+        ],
+        "unidad": "m"
+       },
+       "Q": {
+        "etiqueta": "Q",
+        "valores": [
+         800,
+         1000,
+         1200
+        ],
+        "unidad": "kN"
+       },
+       "M": {
+        "etiqueta": "M",
+        "valores": [
+         80,
+         120,
+         150
+        ],
+        "unidad": "kN·m"
+       }
+      },
+      "formula": "B - 2*M/Q",
+      "unidadResultado": "m",
+      "tolerancia": 0.02,
+      "explicacion": "e = M/Q; B′ = B − 2e."
+     },
+     "citas": [
+      {
+       "articulo": "28.1",
+       "extracto": "ex = Mx / Q"
+      },
+      {
+       "articulo": "28.2",
+       "extracto": "B′ = B − 2ex"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "La figura muestra el área reducida de un cimiento rectangular con carga excéntrica. ¿Dónde actúa la carga resultante?",
+      "imagenUrl": "data:image/jpeg;base64,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gAAAEkgAEBgEggAAAAgAAgEggAEgAAAEkgAgAAggEAAAkAAEgEEkAEAEgAEkgAkAgggAAkkAAAkEAkAAAAAAAEkgAAggEAAAEkAAAkgkgAAAAAgAEkgAAkgkAAEkgEAgEEAgAAAAEgAEkgAAEgkAAAkkggEEoAkAAAAAAAEkgAAEkkEAFsthlspsAEAAAAAAAEkgAAAgkkEAggkAAAMksAAAAAAAEkgAEAAlgAAEAkgkEkgAAAAAAEgEkgAgEghAAkEEEksgMEkAAAkgAAEkgAgAggAAgAggggEkEkAAAEgAAEkggEgAkEgEkEogggIAgEAkkkAAEkkggkklAgFEAgEEkMAAAkkMkAgEkggAAggEkAAggEEgEggAAAgAAEkkkkkgkAEElEkEEFgIEEAAAEAAAEkgAAAAggkAAgkgAEgEkAAAEAAAgkgAAAgBgAAkEggAkskAkAAAAAAkkgAAEghEgEkAgkggAEkkAAAgAAEkgAAkgkgEgkEAAAAgAggAAAAAAEkgAkAAgAgkkEEAAEEkEgAAAAAAEkgAEAgEgkAkEIAAkgkkAAgAAAAEkgAAAgAAAAggAAAkIAkAAAAAAAEkgAAgAAgAgkEEgAAAEkAkAAAAAEkgAAgAgAAEAAAAEgAAEAgAAAAAEkgAAggkAAEkAkAAgAkgAAAAAAAEkgAAAgggAEAEEAkgAgMAAAAAAAEkgAAAkgkkkggggggkEgAAAAAAAEkgAAEgEMMlItJAgggAAAAAAAAAEkgAAEAgkEEkEEEkAkAAAAAAAAAEkgAAAAAAAEkkgEEAkAAAAAAAAAEkgAAAAAAAgEkgAAEgAAAAAAAAAEkgAAAAAAAAlkkgkBEAAAAAAgAAEkgAAAAAAAAAEAsAAgAAAAAAAEAEkgAAAAAAAAAEAEAAgAAAAAAAgAEkgAAAAAkAAAEAEAEAAAAAAAAAAgkgAAgAAAAAAEAgAAAAAAAAAAAAkkgAAgAAAAAAkAAAAAAAAAAAAAAEkgAAAAAAAAAAAAAAAAAAAAAAAAEkgAAAAAAAAAggAAAAAAAAAAAEAEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk//8QAFxEAAwEAAAAAAAAAAAAAAAAAEZAA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",
+      "respuesta": "En el centroide del área reducida (efectiva) B′ × L′, que se obtiene restando dos veces cada excentricidad: B′ = B − 2e2 y L′ = L − 2e1."
+     },
+     "citas": [
+      {
+       "articulo": "Figura 5",
+       "extracto": "La fuerza resultante actúa en el centroide del área reducida."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué forma tiene el «área efectiva» de una zapata circular con carga excéntrica, según la E.050?",
+      "opciones": [
+       "Semicircular",
+       "Rectangular",
+       "Circular, de radio reducido",
+       "Triangular"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "28.3",
+       "extracto": "Su forma es rectangular, aún en el caso de cimentaciones circulares."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para una cimentación superficial sobre un talud o cerca de él, ¿qué factor de seguridad mínimo del talud exige la E.050 en condiciones estáticas?",
+      "opciones": [
+       "1,25",
+       "2,5",
+       "1,5",
+       "3,0"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "30.3",
+       "extracto": "El factor de seguridad mínimo del talud, en consideraciones estáticas debe ser 1,5 y en condiciones sísmicas 1,25."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para una cimentación superficial sobre un talud o cerca de él, ¿qué factor de seguridad mínimo del talud exige la E.050 en condiciones sísmicas?",
+      "opciones": [
+       "1,5",
+       "1,25",
+       "1,0",
+       "2,5"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "30.3",
+       "extracto": "en condiciones sísmicas 1,25."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "Además de la capacidad de carga, ¿qué debe analizarse cuando una cimentación superficial está en un talud o cerca de él?",
+      "respuesta": "La estabilidad global del talud, considerando las cargas que genera la estructura. La capacidad de carga se calcula teniendo en cuenta la inclinación de la superficie y la de la base, si la hay."
+     },
+     "citas": [
+      {
+       "articulo": "30.2",
+       "extracto": "Adicionalmente, se debe analizar la estabilidad global del talud, considerando las cargas que genera la presencia de la estructura."
+      },
+      {
+       "articulo": "30.1",
+       "extracto": "la ecuación de capacidad de carga es calculada teniendo en cuenta la inclinación de la superficie y la inclinación de la base de la cimentación, si la hubiera."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

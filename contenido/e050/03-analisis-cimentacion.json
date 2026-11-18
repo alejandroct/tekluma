@@ -1,0 +1,822 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.050",
+  "titulo": "Suelos y Cimentaciones",
+  "disciplina": "structures",
+  "dispositivo": "RM N° 406-2018-VIVIENDA",
+  "publicadaEn": "2018-12-03"
+ },
+ "fuente": "Norma E.050 Suelos y Cimentaciones (RM N° 406-2018-VIVIENDA), publicada en Normas Legales de El Peruano el 3 de diciembre de 2018 (págs. 22 a 68)",
+ "articulos": [
+  {
+   "numero": "17",
+   "epigrafe": "Cargas a utilizar",
+   "texto": "Para la elaboración de las conclusiones del EMS, y en caso de contar con la información de las cargas de la edificación, se consideran:",
+   "pagina": 16
+  },
+  {
+   "numero": "17.1",
+   "texto": "Para el cálculo del factor de seguridad de cimentaciones: se utilizan como cargas aplicadas a la cimentación, las Cargas de Servicio que se utilizan para el diseño estructural de las columnas del nivel más bajo de la edificación.",
+   "pagina": 16
+  },
+  {
+   "numero": "17.2",
+   "texto": "Para el cálculo del asentamiento de cimentaciones apoyadas sobre suelos granulares y cohesivos: se considera la Carga obtenida de acuerdo a la Norma Técnica de Edificación E .020 Cargas.",
+   "pagina": 16
+  },
+  {
+   "numero": "17.3",
+   "texto": "Para el cálculo de asentamientos, en el caso de edificaciones con sótanos en las cuales se emplee plateas o losas de cimentación, se puede descontar de la carga total de la estructura (carga muerta más sobrecarga más el peso de losa de cimentación) el peso del suelo excavado para la construcción de los sótanos, si el PR lo considera necesario.",
+   "pagina": 16
+  },
+  {
+   "numero": "18",
+   "epigrafe": "Asentamientos",
+   "texto": "Los asentamientos se estiman utilizando las fórmulas aceptadas por la mecánica de suelos a partir de parámetros obtenidos mediante los ensayos in situ indicados en la Tabla 3 o los ensayos de laboratorio indicados en la Tabla 5.",
+   "pagina": 16
+  },
+  {
+   "numero": "19",
+   "epigrafe": "Asentamiento tolerable",
+   "texto": "Asentamiento tolerable",
+   "pagina": 16
+  },
+  {
+   "numero": "19.1",
+   "texto": "Todo EMS debe indicar el asentamiento tolerable que se ha considerado para la edificación o estructura motivo del estudio. El Asentamiento Diferencial (Figura 4) no debe ocasionar una distorsión angular mayor que la indicada en la Tabla 8.",
+   "pagina": 16
+  },
+  {
+   "numero": "19.2",
+   "texto": "En el caso de suelos granulares el asentamiento diferencial se puede estimar como el 75% del asentamiento total.",
+   "pagina": 16
+  },
+  {
+   "numero": "Figura 4",
+   "epigrafe": "Asentamiento Diferencial",
+   "texto": "Distorsión Angular (α) = δ / L\nδTA = Asentamiento Total de A\nδTB = Asentamiento Total de B\nδ = Asentamiento Diferencial",
+   "pagina": 17
+  },
+  {
+   "numero": "Tabla 8",
+   "epigrafe": "Distorsión angular = α",
+   "texto": "α = δ/L | DESCRIPCIÓN\n1/150 | Límite en el que se debe esperar daño estructural en edificios convencionales.\n1/250 | Límite en que la pérdida de verticalidad de edificios altos y rígidos puede ser visible.\n1/300 | Límite en que se debe esperar dificultades con puentes grúas.\n1/300 | Límite en que se debe esperar las primeras grietas en paredes.\n1/500 | Límite seguro para edificios en los que no se permiten grietas.\n1/500 | Límite para cimentaciones rígidas circulares o para anillos de cimentación de estructuras rígidas, altas y esbeltas.\n1/650 | Límite para edificios rígidos de concreto cimentados sobre un solado con espesor aproximado de 1,20 m.\n1/750 | Límite donde se esperan dificultades en maquinaria sensible a asentamientos.\nRef.: NAVFAC DM 7",
+   "pagina": 17
+  },
+  {
+   "numero": "20",
+   "epigrafe": "Capacidad de carga",
+   "texto": "Capacidad de carga",
+   "pagina": 17
+  },
+  {
+   "numero": "20.1",
+   "texto": "La capacidad de carga (qd) es la presión última o de falla por corte del suelo y se determina utilizando las fórmulas aceptadas por la mecánica de suelos a partir de parámetros determinados mediante los ensayos in situ indicados en la Tabla 3 o los ensayos de laboratorio indicados en la Tabla 5.",
+   "pagina": 17
+  },
+  {
+   "numero": "20.2",
+   "texto": "En suelos cohesivos (arcilla, arcilla limosa y limo-arcilloso), se emplea un ángulo de fricción interna (φ) igual a cero.\nqd = sc ic c Nc",
+   "pagina": 17
+  },
+  {
+   "numero": "20.3",
+   "texto": "En suelos friccionantes (gravas, arenas y gravas-arenosas), se emplea una cohesión (c) igual a cero.\nqd = iq γ1 Df Nq + 0,5 sγ iγ γ2 B´ Nγ",
+   "pagina": 17
+  },
+  {
+   "numero": "20.4",
+   "texto": "Para las ecuaciones indicadas en los numerales 20.2 y 20.3 se tiene:\nNq = ε^(π tan φ′) tan² (45 + φ′/2)\nNc = (Nq − 1) cot φ′\nNγ = (Nq − 1) tan(1,4 φ′)\nSc = 1 + 0,2 B/L\nic = iq = (1 − α°/90°)²\nSγ = 1 − 0,2 B/L\niγ = (1 − α°/φ°)²\nDonde: c = cohesión del suelo ubicado bajo la zapata. ic = coeficiente de corrección por inclinación de la carga correspondiente a la cohesión iq = coeficiente de corrección por inclinación de la carga correspondiente a la sobre carga (γDf) sc = coeficiente de corrección por la forma de la cimentación correspondiente a la cohesión sγ = coeficiente de corrección por la forma de la cimentación correspondiente a la fricción iγ = coeficiente de corrección por inclinación de la carga correspondiente a la fricción γ1 = peso unitario volumétrico de suelo ubicado sobre el nivel de cimentación. γ2 = peso unitario volumétrico efectivo de suelo ubicado bajo el nivel de cimentación. Nc = coeficiente de capacidad de carga correspondiente a la cohesión = 5.14 Nq = coeficiente de capacidad de carga correspondiente a la sobre carga (γDf) Nγ = coeficiente de capacidad de carga correspondiente a la fricción B’ = ancho del “área efectiva” α° = ángulo en grados que hace la carga con la vertical\nReferencia: Bowles, Joseph E. (1996) Foundation Analysis and Design. New York: Mc Graw – Hill Book Co.",
+   "pagina": 17
+  },
+  {
+   "numero": "21",
+   "epigrafe": "Factor de seguridad frente a una falla por corte",
+   "texto": "Los factores de seguridad mínimos que deben tener las cimentaciones son los siguientes:",
+   "pagina": 18
+  },
+  {
+   "numero": "21.1",
+   "texto": "Para cargas estáticas: 3,0",
+   "pagina": 18
+  },
+  {
+   "numero": "21.2",
+   "texto": "Para solicitación máxima de sismo o viento (la que sea más desfavorable): 2,5",
+   "pagina": 18
+  },
+  {
+   "numero": "22",
+   "epigrafe": "Presión admisible",
+   "texto": "Presión admisible",
+   "pagina": 18
+  },
+  {
+   "numero": "22.1",
+   "texto": "La determinación de la Presión Admisible, se efectúa tomando en cuenta los siguientes factores:\na) Profundidad de cimentación.\nb) Dimensión de los elementos de la cimentación.\nc) Características físico – mecánicas de los suelos ubicados dentro de la zona activa de la cimentación.\nd) Ubicación del Nivel Freático, considerando su probable variación durante la vida útil de la edificación\ne) Probable modificación de las características físico – mecánicas de los suelos, como consecuencia de los cambios en el contenido de humedad.\nf) Asentamiento tolerable de la edificación",
+   "pagina": 18
+  },
+  {
+   "numero": "22.2",
+   "texto": "La presión admisible es la menor de la que se obtenga mediante:",
+   "pagina": 18
+  },
+  {
+   "numero": "22.2.1",
+   "texto": "La aplicación de las ecuaciones de capacidad de carga por corte afectada por el factor de seguridad correspondiente (Ver artículo 20).",
+   "pagina": 18
+  },
+  {
+   "numero": "22.2.2",
+   "texto": "La presión que cause el asentamiento admisible.",
+   "pagina": 18
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e050-c03-analisis-cimentacion",
+   "titulo": "E.050 · Cap. 3 · Análisis de las condiciones de cimentación",
+   "descripcion": "Cargas a utilizar, asentamientos, distorsión angular (Tabla 8), capacidad de carga, factores de seguridad y presión admisible.",
+   "acceso": "free",
+   "orden": 203,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para calcular el factor de seguridad de una cimentación, ¿qué cargas indica la E.050 aplicar a la cimentación?",
+      "opciones": [
+       "Las cargas últimas amplificadas de la E.060",
+       "Las cargas de servicio usadas para el diseño estructural de las columnas del nivel más bajo de la edificación",
+       "El 80 % de las cargas sísmicas de la E.030",
+       "Solo la carga muerta de la edificación"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "17.1",
+       "extracto": "se utilizan como cargas aplicadas a la cimentación, las Cargas de Servicio que se utilizan para el diseño estructural de las columnas del nivel más bajo de la edificación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una edificación con sótanos cimentada sobre platea, ¿qué permite descontar la E.050 de la carga total al calcular asentamientos?",
+      "opciones": [
+       "El peso propio de la platea",
+       "La subpresión del agua, siempre",
+       "El peso del suelo excavado para construir los sótanos, si el PR lo considera necesario",
+       "El 25 % de la carga viva"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "17.3",
+       "extracto": "se puede descontar de la carga total de la estructura (carga muerta más sobrecarga más el peso de losa de cimentación) el peso del suelo excavado para la construcción de los sótanos, si el PR lo considera necesario."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Según qué norma se obtiene la carga para calcular el asentamiento de cimentaciones sobre suelos granulares y cohesivos?",
+      "opciones": [
+       "La Norma E.030 Diseño Sismorresistente",
+       "La Norma E.060 Concreto Armado",
+       "La Norma E.020 Cargas",
+       "La Norma E.070 Albañilería"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "17.2",
+       "extracto": "se considera la Carga obtenida de acuerdo a la Norma Técnica de Edificación E .020 Cargas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "Todo EMS debe indicar el {{asentamiento tolerable}} que se ha considerado para la edificación o estructura motivo del estudio."
+     },
+     "citas": [
+      {
+       "articulo": "19.1",
+       "extracto": "Todo EMS debe indicar el asentamiento tolerable que se ha considerado para la edificación o estructura motivo del estudio."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En suelos granulares, ¿qué fracción del asentamiento total puede tomarse como estimación del asentamiento diferencial, según la E.050?",
+      "opciones": [
+       "50 %",
+       "75 %",
+       "25 %",
+       "100 %"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "19.2",
+       "extracto": "En el caso de suelos granulares el asentamiento diferencial se puede estimar como el 75% del asentamiento total."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Una cimentación sobre suelo granular tiene un asentamiento total estimado de {S} mm. Con el criterio simplificado de la E.050, ¿qué asentamiento diferencial (mm) puede estimarse?",
+      "variables": {
+       "S": {
+        "etiqueta": "Asentamiento total",
+        "valores": [
+         20,
+         25,
+         32,
+         40
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "0.75*S",
+      "unidadResultado": "mm",
+      "tolerancia": 0.02
+     },
+     "citas": [
+      {
+       "articulo": "19.2",
+       "extracto": "En el caso de suelos granulares el asentamiento diferencial se puede estimar como el 75% del asentamiento total."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "En la figura, dos zapatas A y B separadas una distancia L se asientan distinto. ¿Cómo se define la distorsión angular α?",
+      "imagenUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAyADIAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQkKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wgARCAIpA0gDAREAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAEEBQMCBv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAfuAAAAAAAAAACCCQAAAAAAAAAAQegAAAACASCCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZJnnsgkAkgAkAAgkEAkAH0QAAAAAAAAAAAAAABABIAAAAAAAAAAAAAAAAAAAAAAMQ0TmQSAAASAASAAAWDCPoQACCQAAQCQAAAACCQADyYxpFkAAAAAAAAAAAAAAAAAAEEgAAGIaJ88aoIJABAAAAAAOB3Kp9CAeTHLBZJPZ6ByPB7OpJQL5BBJWLQIKpaK5YPQIPmzRNUAAAAAAAAAAAAAAAAAAAAAAGKaBkm+SCASAAACACQQViiVj6EAgwTgUyCycj0eDscjub58eaRxJL5nnEsm+Yx4LRbKZ7NkyS6WwAAAAAAAAAAAAAAAAAAAAAAYhpGQb5IAAAAAAAAKpRKx9ASDyZB3OQIJOpwPRJYPR0KJ5MU2j0cjuaJjAg1CwCDJNY9AAAAAAAAAAAAAAAAAAAAAAAxDSMk3wAAAAAAAACqUSsfQgAAAAAAAAgEgAAEEgHkyS+WQAAAAAAAAAAAAAAAAAAAAAAYZpGSfQAAAAAAAAAFUolY+hAAAAAAAAAAAAAAAIBIAAAAAAAAAAAAAAAAAAAAAABhmmZB9AAAAAAAAAAVSkVT6EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGIaJkm+SAAAAAAAACqUiqfQgAAAAAAAAAAAAAAAgkAAAAAAAAAAAAAAAAAAAAAAAwzUMc3yQAAAAAAAAVCkVj6EA4lIgtFgkg5HgsAEHg9gHE7g4nUGSWy4cjocTucDuCmXSQAAAAAAAAAAACCQAAACASAAYZpmSb4AAAAAAAABUKRWPoQDPMs6GiVjyQcCuVzqQWyidDmWDmSeT0dDXKp0KZSPRrFczC0bp8efcHskAAAAAAAAAAAAAAAAAAAAwzTMk3wAAAAAAAACmVCqfQgFM4EHY8F8gpnMqnQ9FkzzodDoczydTmcTVOJJUKx2L5VOR7LB1BaJAAAAAAAAAAAAAAAAAAAAMM0zIN8AAkgAAAAAAqFQqn0IAIBJABJBJAAAAAAJIBJAABJAJAAAAAAAAAAAAAAAAAAAAAMM0z5otkkAAAAAEkAkgHI0ymfQgHkkAAAAAAAgkAAAgkAAAAkAAAAAAAAAAAAAAAAAAAAAwjWOoBIIBIAIBIAABAMA+hAKRnEncunk9lY5no9kng4Fk4nQ8HY4nI7l4wy+CuWDoCqWiDLN86AAAAAAAAAAAAAAAAAAAAAwjWPmC4AAACSAACAADmahRPoQDFOJ7IILZ3Mg4lI6A1TMIOpYKJ6Ox6OZtlcgqGcdTdKBkls2DBPrCyAAAAAAAAAAAAAAAAAAAADBNcxzeABIAAAAAABTKpUPoQDwQeST0eiCCDyD0DyD0AeT0QQdCAeSCDoeCSD2cjuSAAAAAAAAAAAAAAAAAAAADCNUxzfJAAAAAAAABTKpUPoQAAAAQCQAAAAAAAAAAAAAAAAAAAAAAAAAAQCQAAAAAYJrmObxIAAAAAAAAKZVKh9CACCqWiQQeSD0SCCD0CDweyTyeiCudDydSSQCDyezweyQAAAAAAAAAAAAAAAAAAADBNYyDfAAAAAAAAAKZUKp9CADyfKn1J6Mk7lE5Hg9kHQrnY4nc5ns5ng7muYpyKxcOgIOx4PZXLZtEgAAAAAAAAAAAAAAAAAAAGEaxjm+CCQAAAAAAAUyqVD6EAHgwTePRwPRmHIqnU9l4yTodjsVT0djmczWMo9norFgg5l0pHsomwahIAAAAAAAAAAAAIJAAAAAAIMM1jHN8EEgAAAAAAAplUqH0IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAME1jIN4kAAAAAAAAFMqlQ+hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgmsZBvEgAAAAAAAAplUqH0IAAAAAAAAAAAAAABBIAAAAAAAAAAAAAAAAAAAAAABBhGsZBvEgAAAAAAAAplUqH0BIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgGwY5vEgAAAAAAAApFYqH0IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAME1zHN4kAAAAAAEEgFMqlQ+hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgmuY5vEgAAAAAAgkAplUqH0IAAAAAAAAAAAIJAAAAAAAAAAAAAAAAAAAAAAAAAAAME1zHN4kAAAAAAAAFIrFQ+hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIJBAAMI1zGN8kEAkEEgAAAAFIrFQ+gJAAIBIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABXKhBIAMg0jMNgEgEgAAAAAAqnArG0SAAdS0SAAAAAAAAAAAAAAAAAAAAAAAAAAAAQSAAQSAAADBNcxjfBIAAIJAIAAAKRWKpvgAAHoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwTXMY3igaIAAAIBIAABSKpVNozTVPZIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIJME1jHLx86fYnsAAAAgEggkFIrFQvGMfQFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHg8kmEbJjGkez2WCQQSAAAAeCAUziUjYMw1zuAAACCQAAAAAAAAAAAAAAAAAAAAAAAAAAAACCuezoSD5o6kg2zFIBxPpSQAAAAAYhWPZ5NgzzgCofWEgg4no6EgAAAAAAAgkAAAAAAAAAAAAAAAAAAAEAElMyC4WQdzAOpJAB6BXPpiQAAAAAYR5OhBIAM0+qKxJ5M47GuSAAAAAAAAAAAAAAAAAAAAAAAAAAADycj2ej0UyoawIJPJ5BiGqZBtkknQkAAAAAHM5AqnArmuSejsQDgZpsnokAAAAAAAAAAAAAAAAAAAAAAAAAAAFIwzoah7LhSL5BIIIJMc1DLNckgkkAAAAAEEgqFcqG6SAAQUS8CQAAAAAAAAAAAAAAAAAAAAAAAAAAAZpVB3OBtFEvEkkGCcy0Z59IfOF8rHs3iQAQeSSSQAACqVyubQABAKJfAAAAAAAAAAAAAAAAAAAAAAAAAAABBJBAAPBmHYug9Hzxtnk9ng9ng9mGfQkAAgzzoXz0AAAUiuUz6EAAEFEvkAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgzygaxAOpWPBwO5XO5XLB7LJwABXKRrFwkAAAqnErGyAACCiXiCCSSQAAAAAAAAAAAAAAAAAAAAAAAAAAACDyeDqAACSAAAASAcyoXiQAAAUisUz6IAAAoFw+eO55LhpEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg4FgAAAAgpF4AAAAqHIrGyAAAZ5dPlzSPRjH1p7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBTLoAAABBRPR5Lp6AABSKxTPoSQACCiXyAQSSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUy6AAAAQUimeDcJAABUORWNgkAAFAvgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFIugAAAEFE6gskgAApHAqm6SAACgXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkXQAAACCkXgAAcjkeikeika5IO5IBQL4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIKhcAAAAIKJ3O4ABhgtFc1CieD0ZJ9WACgWTsSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCoXAQSAACoY5eO4AOhnnk5Fkqloqloyz6gqEnkzS4apIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTLgIJAABUKxqAAAggAAAEkgrFI1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCQAAAAQVC4AAAAQCQACCSCSDidiSCQAQCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUy6AAAAAAACCQAUi4SAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUi6AAAQSAAAAAAUi4SAACCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCmXQAAAAAAAAACkXCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUy6AAAAAAAAAAUi4SAAACCQAAACCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCmXQAAAAAAAAACkXCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkXQAAAAAAAAACkXCSCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUy6AAAAQSAAAAAUi4SAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCmXQAAACsdz0AAAACkXCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCQAAAAAAAQUy2SSAAAZJpHokkAAAFItnoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg8mcdy2ACQAVSqaZJJAJIABRBeJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBmFI0wSQAACQCAAAAeDKNU0CQAQCQAAAAAAAAAAAAAAAAAAAAAAAAAAAQSAAAAAAADkeCwAACCSCQAAAADieDuegAAAAAAAAAAAAAAAQSAAAAAAAAAAAAAAAAAAAAAAACCQAAAQSAAAAAQSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//EADAQAAEDAQYEBgIDAQEBAAAAAAMCAQQAFAUTMxIRNBVgQCA1MFAQMkQhMSMiJCWQ/9oACAEBAAEFAuvrxIsYUinKTgTqwZ1YM6sGdWDPrBnVgz6wZ9YM+sGdWDOrCnVhT6wp9YU+sKfWFPrCn1hT6wp9Yc+sOfUYp2mdIXpkAyXlBZ7WCrUCrUCrUCrUCrUCrUCrUCrUCrSCrSGrSGrSGrSGrSGrSGrSGrSGrSGrQGkqZVN5t7BLItBA6sP269MkeREjjOXl8euXx65fHrl8euXx65eCuXgrl4K5eCuXx65fHrl4K5eCuXx65fHrl8euXR65fHrl8ejQQJFdnCp828C56UkHKQVI160EIw0M7O1b0RehGKzCGvER8WobyPAUyRv8sZKjUYrCbfwK0ueAykx/br0yRZF25nZyci7OFT5t4IW1pP8AqYrEUFWlUZKNZCKWJigWgTE0hQzyVLUsaNCgKMvDFu7IM7yJOIsDlC4kx1bm1aklVrU+szJRhBjE0QtZkxWZZIENTqi6zUhRtVO51LE5Nvbr0yRZF25nZyci7OFT5t4HgtrHDGhLwUbNCHoeCzs0JGgsZJEtCTsuEz00JGGuOldSAsdGGlxChIEs0famEojkhMojQkMmwNSIiUu7bsAWmrAzoIFYwBHhj+Rcd7feuSPIu3M7OTkXZwqfNfYCQ3WYI3Gj269ckeRdmZ2cnIuzhU+bdIXrkjyLt+/Zyci7OET5t0heuSPIu3M7OTkXZwqfNukL1yR5N25nZyci7OFR5r8kWyEolpd7aKgmSXwEIw0BKkyN/AhbEb43oZGJ8qIzKrf9KniS4JCTfCCJJW9CKxPgZWJ8pkDUb2u9clGTdv37OVkXZwqfNfmYTDELWE0r9TDrYA4BsREha2IAhFFvIraoRGQTEIl1mWQ7lO4NBBnFuOIEy2ktjKj/ANolEkESJBSoL/c8ZbKVKGxjihFc0e8GqYtSaUxQGCpxxhlW0i78teJIkpIsIQkKxZBMIKVsikqZSfar1ykZN2/fs5XD3ZwqfNfk4mMgUbSssXEKQOIpMZkm+Ex0pKaIgpOXs9Lh7kaGnSoDObl/6RC2K0ROAuMy6VDS40RNlWVrOuHqVYdqENhoOFjPIAxkjibLe7mpMH/ccTBQWLqI0BLCHEdiSAY7EClaI4sEftV65SMm7fv2cnIuzhU+a9IXrlIyhENHXbjVbjVby1by1by1by1by1by1by1by1zAlcwJXMCVzAlcwXXMV1zFdcxXXMV0Wcsg7uS6YyPNekL1yhZfbI81+ZLrSMJDLbXJx0SMOhkQSscTUgqF1MM4RQzuUNtDqLKEJ1SRJQmYJbAmoUIUsRVW6PumYFahn2QKUItW4G5JqWkqmASvfdMgksTpWsSESwrqPNStA5YivFI5UFkiC8aUxECkiKqYRQo6jShjGrUj2q9cpOUERZJLCarCarCarCarCarCerCerCerCerCerCerCerDIqwyKsMirDJqwyasMirFJokWShEBalxkea/N5OrSFmtylp5hNz7v3xFR1u4RKG52XJl6Vxj6tDPu0hLf1ES1tZaWjof/rShuXlQzKMhWCn9nZDcsXsxwkEiNASpMWf9p/6dakFlpIlMZL/APVAydSBS33eOL9yLy4VbRsGPvg+1Xtlpybt+3ZyuHu3hUea/Lsz0yWTWGinGl6ZLN8slmp0s9YaGdxpVWhq0tvhophIatDbaWrS2yRpTWhOzjS9OJDvTpZ6dLOyUJTWEimEhqZLNShpVTDSzJGhNKSymwRt7ZeuUnJu37dnK4e7eFR5r0he2W2Vdn27OXw928KjzTw2gWpvA6mSyVMpvAz7+BlMr53/AH8OcTVqTpcqGSz7t4dTb1qbf2q9stOVdv27OVw928KjzTwP/DqZlJ/aaVJWygGUSryJ+oBcNI5hlKLMW5XmkcLGka4xTIihlkxrXJw0yTsu1YYhzFsS1ScJazPMaTJIkBcYUUAzFV/zGXiEVbFvTzSLSqWZl25dnRJOkrSZBKSZ8e2mTUf9zPar1ymyrt+3ZyuHu3hUeaeBbaktFMwktpTWCOkjSmrI5JJITsZUM66XDKgtjJoWFSpFkkYSIhsZMQlkLHWp1wVqEOKV1tGI0IkY2IkEoaI4sEKQyxLaIR2RFIz2Mo1DiLQo8VePZCuEoFrKwJQmeIbexyNIArQf2q9cpOVdv27OVw928KjzTpC9ctsq7ft2crh7t4UfmnSF7ZbZV2/bs5fD3bwiPNOkL2y2yrs/ns5fD3bwqPNOkL2y2yrs/ns5fD3bwo/NOkL2y2yrt/ns5fD3bwo/NOkL2y2yrs/ns5fD3bwo/NOkL2y2yrt+3Zy+Hu3hR+adIXtltlXb9uzl8PdvCj806JKRhtbEVbEVbEVbEVbEVbEVeMhJENLQw4J0oe2Dq2Dq2Dq1iq1iq2Cq1iq1iq1iq1iq2Cq1hq1hq1hq2Bq2Bq2Bq2Bq2BqRKCoECQJEdBxteNsBVsBVsBVsBVsBVsBQzoK/RN7ZbZV2fbstql8PdvCo808G3Rl7ZbZV2fagSkGX2Mvh7t4QfmhSMIbXiJ6ZW7dG3tltlXZ9pxMMCd462fduwl8PdvCj81n8KRMp4kV2cHRTuzVrTWpNXs7ONsq7XZlEGMiypGYYmZKPVd9q1NWpqlu1nu3hUP8A+oZKSjsKdkMlKehXJsXW2r5vJtcjlia5YmuWJ32/y92pdXLWrlrVAZ0TPVvR3aMm73Unlz092vUcTBGeDil5cquXKrCVHmeBa9DupmpvflmZKjSd5AloHVoTVoRQ1surxVokczRXM0VzQdczRXNB1zNFczHUBeJN9W9uGReImRzINcyDXMQVzIFcyDXMQ0syZE53ZmtIqtIqtIqlSUM4Vj1N7y9JWlVb03wZyUkbDleB2Z60JrQmr0Q2hkJwruQ2+GisNFMlk+spLKbAFWAKpAEYMOOlgJjf9+AGsAVMEaXratqK7pS4tJNvepbpYINlLMBCJSUJiojHxh0ri/HeJVDRv/iAVRH7OU+wICnVGQtXMfGfM96nBUUSRELIOkqpUpKy0AZAyaVxfgnlMkui8KOmXuSNNNW3+Ex5olgaZu7XjvBOZZ/Fqbf0ZDagwkOMCBO0/wAZ8z3/AFJajmSiQH+daa1ppnZ6nKZMtiodrQKsUe2OKsRG2MKsRDNEdnvDfatTVqatTVqatSakESgot1qb0JfD3dwo/M/HIzPfz4bUiO1pwB1Zx1Zx0hCUUeMM9JhhSjlsamhhYfLY1WMOFy2NSoYVDBEEB1jSSrKKrMOrMOrMOiiCNNm/uaOhn9CRtgwmQ0dCR27xyMz3/Zq0Nr7J0s7k4j0ZfD3bwiPNPHIzKOR2OZjJSHGw0zBv0Lr/ALfSLn+jI2wYbocCHHbvHIzH/jZOEbdEGMtNjZncbfx0H+T6Rc+QVxIjlUT0JnD3dwo/NPHIzK2b42rZuhfyfSLnzlO64moZvHJVoDDXiAQXed45GZ0T+T6Rc8oUFYQkibxy2d48BLpjDQrmPjPmdE/k+kTiPEpTIbHFWKjTJOjBgqdcZJtM9ijd3KhnYqFeE+Z0T+T6RM/FbX4b14dF3BdDwhOLloKENIkFgiMsd3hQokAJFuBMe8PBIzMRtXRDcT6KyKSox1rMJ3G2KusZdYyqxlUgilPeaFKBGklXTzjM4JSyVbi0KSRabcWkSVqEyiSJqn2bHVWOqsdVSZClLC+jon8n0Ta3rCYZfU28RteyhshfRP5PakXp6T/J7WR0n+T2sjpP8ntZHSf5PayOk/ye1kdJtxXayOk/yu1kdJ/k+iYjCT6cnpP8n0bxyG/j0pHSW9LIwzh1v6JwsZCIelXpSXpK1FX0gZkJcUd3PZ01Z01Z01Zk1Z01Z2qzpqzJqztVmTVmTVnTVnarM1WZqszVZmqzNVmarM1OBLMseK7RktTdIOltTI/s7RaGWyx6v/iV/8QAFBEBAAAAAAAAAAAAAAAAAAAAwP/aAAgBAwEBPwFlt//EABQRAQAAAAAAAAAAAAAAAAAAAMD/2gAIAQIBAT8BZbf/xAA6EAABAwEEBggGAwABBQEAAAABAgARAxIhMXEyM0FyIhNgUUAwgSA0kRCSUKFCYVIEIxRiguFDU5D/2gAIAQEABj8C6fSgwWCK71z1z1z1z1r1r1r1r1r1r1r1r1r1j1j1gesD1gesD1gesesfKrGeHoiM2nJwaiQXrUvWpetS9al61L1iXrEvWJesS9Yl6xL1iXrA9Yl6xL1iXrEvWJesS9YHINz/AO36Dp2BsLFsgnrH08ZsZOrzBN70HovRei9F6L0XovRei9F6L0Xg9EvRL0XovRaiBewzu+VSLClWcYainEYpdqCM3aVg5+JVBMPmHB2oj48n8vKkH8vIaYxGJ+AKpgny1v8AkC+OFi14T9PGbGTrZ9kXkwzu+X+zm1WP/mZdK8qTfIBvdQBa+E4HY00LZCQmXWohZIEQepoKVqVaxEuqkKqA2dFWxppKWQkJdeiFmE4F0V8xRK8ZLUovm2Fcy1M/p0QlZCVJvh16aVkgYS6axVUSTfe/7Mm4OiSZ/wBC1m1UURgU4P8ArJtkWsSHEkwMS11vyJf/ACOZf1M87SIlpL/93yh3835R8CLFEkft/wCoSMvp4zYydbPsi8mGd3yqUlaxaMm9qAmVDEtNlSgpOBakkklWJYharQ/JqSSeLEtIvBTokNVpSipQiWmyopUNoak3yrFTpz+Dsq63y/xiGlQJ4XVWkWlL2OmEpqXH8sGpaVqTa0oaEyYSZagKigg4gOmZP+eHwqf11p4NhdgrPL6mpCSpZXdk0p6vJWyH1BObGTrZ9kXkwzu/QTUTVUmepwVWs/p6c2MnWz7IvJhnd6IpzYydbPsi8mGd3oinNjJ1s+yLyYzZ3eiKd5jJ1s+yLyYZ3fIVFkEFMCb2L8cGbOzyFasA7ScPLKDI8hibj8Qkm8/Ei+5mzN3X8DYM/A2dhj4Ks/j8TSB4h9MTvMZOtn2ReTDO75Ddam6GmnVhSF/Z/wBcBqqbWUqMlL4TU8ESwFFfihopXxiqHUpIkA3ptP8A0qVUmcdjWJqwn+DSLSkqtxL5ZqqIUkskVSmVw0JCqlk/za63PXKTcJdFXNUbeIcAqlVQhi+qUnG2GuvzlcMwHSVbN6ZZrc5SeppWrF0rvzDRTpmyVHFoRzlKC+trXzCJLSAuoUnG21n/AKy1oFQoSnqdW+VFcS0QaqgcbYalFpq8XMtcRhgjb9LTvMZOtn2ReTDO75CksLWsrIwlipzFCzg0kqN2x8xKjl8VVCZUevY0rkiz1bXBqqKeplVOopE4w0JtHhMvmTshxzVYyP001FVVKIZo2jB2unKjwOxJ0rQU7S6qlmNrNG0YO1oUFlNkRmyE1SEHFLCU4BpkxZMvGCMC7dRZWRhLjmnGQxUVVUSGUgzJl8ynUKCcYakFZMmZaV1KpVZwaQVEAH3ZRAhhFoqz+lp3mMnWz7IvJhnd6Ip3mMnUikTJfpy/Tl6gvUF+nL9OX6cv05eoL1BeoU9Qp6hT1CnqFP06n6dT9Op+nUynkKvYChDO70RRvNOXZzu+Qmni1FCwsbP0xS5ibxM2XH9jS2OUGXBqJ93wKBycp0jcHK9IYuzacKVe0rKuE7WbCsBLK6hiC4SpxbdlKr2pdVYgGGbKsHFtpp7Nrsld7lLHEi8xgyr+ytPgzZVg1qWQIdlCr2SrYohxUVe6i1kWQcXCFXtS0YhiqoosnYwrrH0tG8/BrisRBfqC/UP1D9Q9e/UP1D9Q9e/UP1D9Q/UP1D9Q/UP1L9Q/Usq/5GDBUZLO75EfxtcT/wAdCze03/i6UGHW236TnmfZmVS7NMwEbWU1OMVBfDHLVav1ZDq2lmn4OjcYNTa7h+BdkC+3iRg0cdv9w18N5L/rQGCJjmmXcsruxhrMX3ulN3A1oqJ4+poCsXS3nSURKAb3T5IwxudmzKrXVg6fHbyDO8XU5+3AtZTNm26UVLZHUGpiwpRqNFrGPpaN5+Dq59kXkwzu+S98IAeiHeA7rvjc73NkS+IAvBzteiHckOIueDiLnwgBxFzEgXOSkTl8L3BfCAHoj2egPZ3PiSDm4CRD4UgZOCJdyE+30xG8xk6ufZF5MM7vRGnvPwdXPsi2Gd3zWeYLXV5ZODkXjy3eS4z8Y+MFYdqeF2ioQ7vNE3/CJ+lo3n4Orn2RbDO75irl2qFrH9sR8CIT7s2gPAtFGYtHFrpTas4Q8UY3pakoKE2f5NBSBaKrJZpVAmSmQQyoWTxwJYpqKFT/ABZqhKLAaOalNlbJSlIJWQ7NQoMi6yzVsosBoUIizMM1aaU2BsOLSvrdbmInidWmL0WJguiAlEbAzyuWEp63T5KRKut8o2AraS1GAVpVDQmslML6mpdJCbA69rWeXBsS0lXLv2B1sh9LRvPwdXPsi2Gd3ykdb5HDy5mWB1fDQT7PhSBkGqpWAKdgaV/14RsLCVJpj/qGLUqmlCwr+Wx09GQqSwvZEOxwwFSL8WhZShMfxa6V1ol0ojhf42guQ7S000QMEtdG60ZdNSIuTBZpIslB2lpR1OoadiFGb3UVUINRSYdGY4MWoIp01JOBVsdE8PDizVppQucQpkQgKKgYDom6EYtVOlZKScS18WKIlpAp0xG3ra1qjiA+lo3n4Orn2RbSzu9EUbz8HVz7IvJpZ3eiNPefg6ufZF5NLO70Rp7z8HVz7Ithnd6I095+Dq59kW0s7vRGnvPwdXPsi2lnd6I095+Dq59kW0s5dEae8/B1c+yLaWrLojT3n4Orn2RbSzl0Kky9FTwU8FPBTwU8FezRE6Ti/B1Jm8va9r2vb7P/AMP/AMPH7PH7PH7PH7PH7PS+z0npPSel9npPSek1AKvYClXs1LXDD0/s9P7PT+z0/s9P7PT+z4DPQqnvPwdXPsi2Gd3ojT3n4Orn8ChOI7EtpZ3WVnAO8KH7cjDodT3n4OrmzGJuDpL5akgaX7c9hW0s7rXk+Kzy4vaCnCOhd70g9INEH8n4OrJ2tKlK0WUKIhhIMx317xDxDXeGlq3WUE3Fwa6iOphKdnQZKOt2Z4vJSRJEvWKesU71kuGSFkS9Yp6xTq07RISO+uO1g85V4evU9cWEB8wVCkvXqfqFOknmFU+VI/kYcbfr8QWjlzMEZPaVbS8D7Pb7O50lwSB1PVLeqW9Wt6pb1a3q1vVrdZYBAUO+/wC5gX3B7Xte17Xte10TT2OS9L7PS+z0vs6dkyQrB2lqlZ/WH1vhM+SKYvO3qdPrsmT5bw8A9ENFlP5PRGDqSna9EPRDuEd9ChIerS9Wn2arFMWmObTFrJn/AC/zh6tPs9Wn2chAB8nAmS6Kl3rK7/rZtGGadRJprUm49booAuON7qKB4cXawO0fCnunuEFP8n4Opa2HsiyOpptYspm6MO4o7/1vgxBloqLFkIDQtKOFLRTA4DpNcA2FfCnunyoRSI4npIY5Kk4bWBVKIlx+mrlFEFnmlOF0O4oa6daJSNnnjb3Sg0gn2ZqSMO4ob/QDENBxuLt1Fi0fs9Ie70h7u4uiSyQoQHppdq0IesS7VoQ9NPu5tCHXgyCPhiHiHiHpPEOkSet21nJPcryaWrLuKO/0A0LSzgGi2ASQbnoB6Aei+EMcwTDNMJ4VY3vRPuzTA4Xon3fKjheifdimQbI/bmmC+J4F7fd7fd7fdyZyl0zU/LY5v9+5VauDTyzKWSFccYdxR3+gIXtHY73R8e6Xk0tWXcUd/wCFlVUpvuOxqqc4wBdDRWNRShtDGN+F3QWx+u7o+PdKtCQ08sQGRZ4ox7ijv/Cohaf9Sq52VaVmHkHTCSVG1oMdBPDu6XiwQJZtpiO4Xk0tW73FHf8ALh0F8O7peLp0fxXi10JlA29wpTSqIaqcDDHuKO/0KOXd0vF8b4dvcLAxaQoNSoujuKO/0KO73dLx88qMB6wO1aENVhYnY0k3lqSpXDDgKDgqDgKHlo7/AEKO73dLxdgY+bxYPFh1sU74D/JhCMA7aplhQtSGVG1JdAIm/wAtHeYTt6End7qBTJaE00G07qKyesvUrepW9St6lbvpqTmxYTN7smiRAeoLVapEQHqC1E0iIeoLUvlGRgHSXyyAlzE5PUVHqavs9RU9nTTTpqtg4F6mrJ2noSd3uoRd1l0gkXX9jhHv1OjEk2rz0KO72Yfvomd3syM+iZ3ezIz6Jnd7MjPomd3syM+iZ3ezIz6Jnd7MjPomd3syM+iZ3e6k94jPomd3uvHvEZ9EyT/Fla9v49zZJIyYPOWe7ST1vhuQNvX0RvKrRwALJqqVajrwekv5npL+Z6VT5npVPmelU+Z6VT5np1PmenU+Z6dT5np1PmenU+Z6dT5np1PmenU+d6dT53p1PnenU+d6dT53p1PmenU+ZyalT5mOJfKnacXpVPm6IzF7t7SI7LChLT+v/wASv//EAC0QAAIBAgMHBAMBAQEBAAAAAAEAESExQWFR8RChMGCRIHHwQFCBsdHB4XCA/9oACAEBAAE/IfqJZ3lnmjeOgQKWGGmkI3MOyz7xRtL7Zcj3cj3fZL7ZfaLlu7lO7le7le7tJ2k7UdtO0nKJisYhYS+hln7C8WiYMX+ImREFVFXd4ADEG2UBCKv+WfiT5FuAUWpE5pmch+xPs80VO+XMuYcw5ru5ru5ru5ru5zu5zu57u57u53u7YdsOY7uc7uc7p04APHeUggcUQSzQQ1LoxQGlCbHoRsTQ2LMYsPZYOBCYGKYUNEwRVjBMDqzTcKzsu5ItM9mbssj9UCjNWWZRjk7kDlQJGCAIkW8BFSYgYICAiphgE/YfT8b/AJxnkI+1xTBMBgPRKC1RirJiqT1Rq9+rUoSalJWRSdwQcZ6MRZI/0M5QpjFIhQ1KioSJySAoIcJDixY3/ClTOMzIkEC1YLIoc4G5KEXAk2ZEDETmxGVVEAmUR1Rm0oSepUpY+SiS628QozOk2X6SHkmCGqRK4CUc2NqOeDhT+k0gdFpz0N73nH+UzStAQPSgE1WJ2tTVx2tTVitjgSqyZSYOOWct1FQ3fIGWSC2JLo5pOoQ1LGiNchlMYqomQD/AmLzYCUYRoqdkcWfSgmRNoro6UUqmQoslI9ITAOKYzBOsTBHQNGZOQGcCALg4o3GrSDocG7jifm7HiYSiJgyKlr0MG3zj+qZkdzjf/BZGbhrno2lnOL8SIjQJcd6gE35Tai6DI5lBog7pzTYayMnqx3JZSaXYZAGJDLKYVbZqRlmXG6HiLQZqmEkoBWiyNIQxQZRxBgYSX9QZYgmU+GJBZ3Sirw+lPzi3U43xwJRqIKeQClOxAAFK/iyKQAPXFOKionVhwQzgYgPOATCQRGAMEJILCQiYxOSScPdiJr6pR4A4JDKG9STajVkij1wSMIa1JwA0ASTTGk0sk5KQCpAEWQMAS6EIvvKoomoI1WiYRgMgDRyJJREBCT+xERJCGCQgDBJVCA1Lwf8AESzTQOiOjlIExF10OAwwX6oDJcSIQkWDbNUJQQW0MEjoJt0OL8anzGM6MGARpMnEWAA0Q2kIKZigRWIhF2yYpapIo4EoJdmaMiNI4m6nUnFDjKQUMKsAYZVFTmJOAjDSiowYM0vKaWIBcOQDQ6sDNVEUa0ihnK/oNj4TiSEEIkCRkguGHHr0GAYIoNCkw2ggQwgBKmfCqNRv1KbguFhxHMwICJwRCKCzAIAxQ+ralOI5ed8sssss7u4ny6POPCORHlA3Qwwwwx9b1bY3XkEQzBM7J3Xst2M7GdjOynZ7sV2Kn/iuxWE+QizJYeLSyyyzvllllllllllnfO6WWWWWWUllllnoPAHi1kz+kpaxZBLMMBUhSUgg9ZsCFIIC9bJOMhoUTIhbgkpqGhhMowWKYhBRC4wDm+rMAQ9cHUlmQ0CN7SfxuSaFimxXwYnzg0LX4GVkkFYJgpGJBMwgabas0iBq1sgJgGRQtQYDBw6mBCEJhUmWbG+CSgUyBjuZkGRQWCEujCyjHqdDCIIolO6QUCrQ6KkfWZSChENxGec855z/AD5JZsGyHjfIws5y48aAhBOE0RytwtpcpiBKUxpDGGhGchdL6AOEE4CmNEOJr5jFBck1RRJEDO0T85XFLKGcgyGQQLcGwMkLiCckY2oSpsgEAx9EzaAcTMDJoKBIA9EIyZB0QASCq5ritykeEyppixAZxMVJ1cAFi1hrb+3GkTNsoGsUNBGtL805kpAyYBZ0dzFEJ1ATCaaIAEBtA9W7JF4IbONGisRAE3ZdKz9Y1j4s8IuN8aGkACDqjoAZBJDNTWEnJ3qETAgMhuhkCAE3gJYEJjVEQDqhPAwmoSUAQpalnCRmSYEGA3EXbE/QODskM8SFLUa6CWEMnVLwHA2VqRYJDJb1FRSGPgDFmJIINwQ8F0NA499TDRRQGAA9GDpNoSkgAriGVJs3hDAEGaCKBYfXUPj4gcf1RSx+AeL8uKQz1WJs3ymBYDFACgli/jwAEkCMt8wz0UDBjfESESbbyBAEXq4RhcygQQ7Gbo5CkG0b5Z3CfFDDcCmISLjoF1fC+b4wCJsLocwJks2CYIsIkJRUo6gkABjMQHUFKwQVJOdYIHBcRQjuhjF5xM6fAG34Q5xnoCJwhIhRFapQkBM4EHNBa6lAVQxCIcHNGqIxLA03Imb1hjYUGRwiOQIYLLME0Tuc2FXx4ayEiSteEaaWLz6M8GmQgKDibBpkKHFjKDxtFBzQsDEqYKprdkTYMAmkjilkv6I6AuXwvm+yXQnnqLWHKFCbJIZJz6UnM/eg0EBAjPBi1IMJhhSAc4OzoAo1VE0foEUIr9wSUjBQ46mLFvhBBYdkEjCoNEv4ma5MFuwzYzqxN0EN3TJmlS2BYMl19IKhx9hDPzJCX/E/8waBsmApCtm44GfxCc/wxZgwuZoDCAAEY81ayhAaoSKHWqkyzGmYMTXgRVwAofmRzz8Qfj4PC9KLutf+zjhMskByheA6pfaH4TpYMu0fD4DqkNIXgPlh56OUXwnSmkCoR+Lnn8B0ZngcXo7Bdluy3ZTs7dwFAMYg0InRZt9aDk9r7Yc3sc5M4rMKzizizyzyza9wn3AX3AX2wX2yfbBfbBfbBZx5C0FD9AZFpCHfBch3PsE+wTke5yPc5DuTQdl0WtfPDhhhhjcAfg3MXQNGBowNGBow0YGiB0YoqKyYuy2Ys/C4TwjYIYEIcQoiGaS6RWWfJuGpTtEhkIQgsRyx5cDvRf5zACioC8ImCCoB6LKVAepan+jthhMOVzHAEJxolGgSzgDNhzgujmguAB2s7WShXBruQBMYUf8AoEgv5W4iEmYgIAB6GoTUSWemxQjcUsNCgxvAKIjgZhAiG0R4UWMRH4+fhHNr+BIsU6A7sIEE+RStSAzpA0G/s1f0otvKEteAlJESsGyv3xcZPQNKyEyirUGVKL7tZTB5l+QmnIVg7LdnpFcbS/wZ7EdnOwm0hSR6I5srRMAm2JgFnI7Xag+4HMl6Ob2Ne/YzlRQaerbQH2CfYJxZd6e630HRAL1oKz7k4E4NjSGjCakJTjO6IKxuQyFTzTxsgXZTsxAvmgN2kyJEdFkh2e7PbdehHNjw0Cj/AIG5B4aNSAjPVpqRAhD06Tvl4UCmIDFGOg7MdAxop7DB/wCcCMcQEfcznhhGrRgIA26pJEWJVOAqoJsxZCOmg4PvuXINjEwNGqXqQRkNxO4fAIQQQjMROpMOPkb3WRSj7kCECNA4tMeYE3KKybpm6WIyVBCB2NOOrg++5M7yhfjqCJxMaeaDdmZKQyoUR1aEqyHFDm47hwYpCzqoI8ZSMJVWDMck48gSLlG2JGqQlNHTE15HuMj9zPhFN0JIgiOhLNsUwANywqPABs03mUApH0KYCADUlLVXDLt5mMIlJl0u458omX1pEAQysZTkCgEfhIXEB287edvOS7u0kYUwbPRoHGdZs5OHNeUqR5H22R6AEgkMAXQzmGMKD0dmOxHJ9kLYTpEwKpnW4IkQyMmrEFkwy1zEvpKwzpipMgBOpRAAkxWjtBy0y0y0gAZJgBcUS1lfaiGhWEKDkCYTo1KFM2Z6TyJ77Itkuc23D7smqQJCTmWiBzI8xIhMWeM/TlC6qryZ9tkdxuSmQuBj8yQhBdUJfDwHBFAzboSU4auXxX6cqEhIKiUjUGgSAyjicj22RRM4vCZnEyoScmo8Wn4YCsUDkgNkjRapeA6E/wA+Xx/6JEJEgN6srgzPJTHjkh7bI7qkwJSAbiUBaAwWDoXF6eXxf6JSEC4TBCikFhyCBgCQLFpsosE0RjQryPbZHoocDy+L/REgFrEYJQBM3E8gCMkGLwUEwhjxyPfZHoocJy+N/TzjgzN2kckmxcNrYU7uoUkP6hZQxwEseYjCU1LHADx99keihwnKLx/6MtwhXfLLWFcKbVRCUZQlTer7hQgQhrUqULLwJNSwBtAp44VGT6+Pt8ikc2vCEV6I4JytYDkICAJlgpJcF3ZDsB2K7HYmE1BFhDAmEwBm4nAtFxMoM0W2hemme6jzF+QSkpQkpCykMFsEf12E/rsF/UZHJALpp1Lwh/UW6IHAb48wjOJfgCCJQMj+MfOGGBoGGPRhhoEBj0RvlpZJuUKSJ61Oihw3Khjl4XdCLbsfGGB0UOG+Neg6SHCfHo6SHCdUwcJ1TBw3xr0HSXAvjX70o6PHBfGv6TRw3KzVoM1HLu6AT8McMhHI/Q/baqjlX9JBDUOnagDFlExh0BBZZZZZZZTbPCsQsDHJncAYQdJAkT4vNBOAQmP9mti6ydpnbV2ldtXb12xdoXbl2hdoXbF2/drna52udrna52vdr02CAXM0peAASlAAAIDCaEADxPRZ4HIbHRCDmYBDD4tCJohABSbHSUcmOZDH/wBw/wD/2gAMAwEAAgADAAAAEJIAAAAAAAABJBJJJAJJJJJBAAAAABABAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAIRIAIKAAIBAIAAAAAAAAAAAAAAAAIAAAJJJJJJJJJJJIAAAAAAAABJIBJJBJIAAAAAABAAAJAAAAABAABIAABJJJJJJJJJJJAAAAAIAAAJCBAAJJJIAAAIAJJAJBBABJIBJJAJIAAJJJJJJJJJJJIAAAAAAAAAIIBIAAABJAIJAABKYSTYCCJCQDBIJAABJJJJJJJJJJJAAAAAAAAAIJAAAAAAAAABJAJAIJJAAADBABABIAAAJJJJJJJJJJJIAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAJAAABABIAABJJJJJJJJJJJAAAAAAAAAJAAAAAAAAAABIAAAAAAAAAAAAAAAJAAAJJJJJJJJJJJIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAABJAAAAAAAAAAKAAAAAAAAAAAAAAABAAAJJJJJJJJJJJIAAAAAAAABBIAAAAAAAAAJQAIAJJBJBJJJJJABAIBBJJJJJJJJJJJBAAAABIAAIAAAAAAAAAABAAAAAICbZTZaaZISZLYZJJJJJJJJJJJIAAAAAAAAAIAAAAAAAAABBABIABBAIIJBIBIIBABIBJJJJJJJJJJJAAAAAAAAAJIIBBABBJJJIIABIIAIJJJJJJBIJJIJAJJJJJJJJJJJIAAAAAAAAAIYJBbJJALQJYABAAIAIBABBJJBAABIABJJJJJJJJJJJAAAAAAAAAIBIAIABIAAAJAAJIJBIJABBBAJBJAIIAJJJJJJJJJJJIAAAAAAAAAAIBIbRABJJKZAAJAAASSDTCaKIAaJbCBJJJJJJJJJJJAAAAAAAAAIBJIAAAAAAAIIAIIBIJIJABIAIIBJABIJJJJJJJJJJJIAAAAAAAAABIAAAAAAAABBAAAAAJAAAAAAAAAAAAABJJJJJJJJJJJAAJAAAAAAIBAAAAAAAAABIABAAABAJBBIAJJBJJBJJJJJJJJJJJJIAAAAAAAABIAAAAAAAAABJAAJYBJBJACAAYBTQJIJBJJJJJJJJJJJAAAAAAAAAIIBAAAAAAAAIIAAJJIJAJRAAAAIAABBZJJJJJJJJJJJIAIAAAAAAJBAIAAAAAAABBAAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAJJAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAAAJIAAAAAAAAABAAAAAAAAAAAAAAABAAABJJJJJJJJJJJAAAAAAAABBJAAAAAAAAABJAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAABBAAAAAAAAABIQAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAIAAAAAAAAIAJKAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAAAAIAAAAAABAAIAAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAIBAAAAAAAAAJIAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAIBJIAIBIBAAAAAAAIAAJAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAABBAACDIJAAAJIJIIDAABAAAAAAAAAAAAAAAAJJJJJJJJJJJIAIAAIAAABBJAAAIAIAABJQBAIAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAAIAAAABIIAABIBIAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAABAIAYAAAAJAIBAJAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAABJLBJIBAAAABJIIIAAAAIAAAAAAAIAAAAAJJJJJJJJJJJIAAAABBAIQJJCAAAAAABRAILJIIAAAAAAAAIAAAAABJJJJJJJJJJJAABJBJAJQBABQAAAAAAIJBJZBJAAAAAAAAAAAAAAAJJJJJJJJJJJIAAJAIAIAAAIIAAAAAAAAIIBJBJAAAAAAAAAAAAAABJJJJJJJJJJJAABJJBIAIIBBAAAAAABAAJAAJAAAAAAAAAAAAAAAAJJJJJJJJJJJIABABJIBJZQQYAAIJAAAAJAABIAAAAAAAAAAAAAAABJJJJJJJJJJJAIJJJBBBIBBJAIBAIAAAAIAABAJAAAAAAAAAAAAAAJJJJJJJJJJJIAAABABBJBBJBIAAYAAAAJAAAIABAAAAAAAAAAAAABJJJJJJJJJJJAAAAJJJJIABAJABJAAAAAIAAABBJAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAABAAAAAAAAAABIAAABAQKAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAIAAAABIJAAABJAABAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAABIAAAAIAAAAAIIAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAABAAAABIAAAAJJAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAAAIAAAAIAAAIJJIJAAAABAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAIAAAAAJBIABIIARIIAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAABABAAABBAAACJJCAIAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAABIAABIAAAAAAAIAIAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAIAAAABAAAAAJAABBBIAAAIAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAJAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAAAIAAAIAAAAAABAAAIAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAABAAAAAAAAAAAJAAAAIAAAAIAAAAAAAAABJJJJJJJJJJJAAAAAAAAAIAAAAAAAAAABIAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAAAIAAAAAAAAAABBAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAAJAAAABAAAAAAIAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAABIAAAAIAAAAABAAAAAAAAAAAAAAAAAAABJJJJJJJJJJJBAAAAAAAAIBAAABJIAAAAAAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJIAAAAAAAAIABJAAIJBIJIIIAAAAAAAAAAAAAAAAAABJJJJJJJJJJJAAAAAAAAABBBBAIAJAAJAIAAJAAAAAAAAAAAAAAAAJJJJJJJJJJJIIAAAAAAAAAAABBAAAAAABAAAAAAAAAAAAAAAAJAABJJJJJJJJ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",
+      "respuesta": "α = δ / L, donde δ es el asentamiento diferencial (la diferencia entre los asentamientos totales de A y de B) y L la distancia entre ambos apoyos."
+     },
+     "citas": [
+      {
+       "articulo": "Figura 4",
+       "extracto": "Distorsión Angular (α) = δ / L"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Dos columnas vecinas, unidas por una viga, están separadas L = {L} m y su asentamiento diferencial es δ = {D} mm. Si la distorsión angular α = δ/L se expresa como 1/x, ¿cuánto vale x?",
+      "variables": {
+       "L": {
+        "etiqueta": "L",
+        "valores": [
+         5,
+         6,
+         7.5
+        ],
+        "unidad": "m"
+       },
+       "D": {
+        "etiqueta": "δ",
+        "valores": [
+         10,
+         12,
+         15,
+         20
+        ],
+        "unidad": "mm"
+       }
+      },
+      "formula": "L*1000/D",
+      "tolerancia": 0.02,
+      "explicacion": "Con δ y L en las mismas unidades: x = L / δ. Por ejemplo, 6000 mm / 12 mm = 500, es decir α = 1/500."
+     },
+     "citas": [
+      {
+       "articulo": "Figura 4",
+       "extracto": "Distorsión Angular (α) = δ / L"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 8 de la E.050, ¿qué distorsión angular es el límite seguro para edificios en los que no se permiten grietas?",
+      "opciones": [
+       "1/150",
+       "1/750",
+       "1/500",
+       "1/300"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/500 | Límite seguro para edificios en los que no se permiten grietas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 8 de la E.050, ¿a partir de qué distorsión angular debe esperarse daño estructural en edificios convencionales?",
+      "opciones": [
+       "1/250",
+       "1/300",
+       "1/150",
+       "1/500"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/150 | Límite en el que se debe esperar daño estructural en edificios convencionales."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 8 de la E.050, ¿con qué distorsión angular deben esperarse las primeras grietas en paredes?",
+      "opciones": [
+       "1/150",
+       "1/500",
+       "1/650",
+       "1/300"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/300 | Límite en que se debe esperar las primeras grietas en paredes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 8 de la E.050, ¿qué distorsión angular es el límite donde se esperan dificultades en maquinaria sensible a asentamientos?",
+      "opciones": [
+       "1/500",
+       "1/300",
+       "1/750",
+       "1/650"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/750 | Límite donde se esperan dificultades en maquinaria sensible a asentamientos."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 8 de la E.050, ¿con qué distorsión angular puede hacerse visible la pérdida de verticalidad de edificios altos y rígidos?",
+      "opciones": [
+       "1/150",
+       "1/500",
+       "1/750",
+       "1/250"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/250 | Límite en que la pérdida de verticalidad de edificios altos y rígidos puede ser visible."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 8 de la E.050, ¿qué distorsión angular límite corresponde a edificios rígidos de concreto cimentados sobre un solado de unos 1,20 m de espesor?",
+      "opciones": [
+       "1/300",
+       "1/750",
+       "1/650",
+       "1/500"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/650 | Límite para edificios rígidos de concreto cimentados sobre un solado con espesor aproximado de 1,20 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 8 · Distorsión angular α = δ/L",
+      "columnas": [
+       "α límite"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Daño estructural en edificios convencionales",
+        "valores": [
+         "1/150"
+        ]
+       },
+       {
+        "etiqueta": "Primeras grietas en paredes",
+        "valores": [
+         "1/300"
+        ]
+       },
+       {
+        "etiqueta": "Límite seguro sin grietas",
+        "valores": [
+         "1/500"
+        ]
+       },
+       {
+        "etiqueta": "Maquinaria sensible a asentamientos",
+        "valores": [
+         "1/750"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 2,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/500 | Límite seguro para edificios en los que no se permiten grietas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 8 de la E.050, ¿qué distorsión angular límite corresponde a cimentaciones rígidas circulares o anillos de cimentación de estructuras rígidas, altas y esbeltas?",
+      "opciones": [
+       "1/250",
+       "1/150",
+       "1/750",
+       "1/500"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 8",
+       "extracto": "1/500 | Límite para cimentaciones rígidas circulares o para anillos de cimentación de estructuras rígidas, altas y esbeltas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Al calcular la capacidad de carga de un suelo cohesivo (arcilla, arcilla limosa, limo arcilloso), ¿qué ángulo de fricción interna indica usar la E.050?",
+      "opciones": [
+       "φ = 2/3 del ángulo medido",
+       "φ = 0",
+       "El φ del ensayo de corte directo drenado",
+       "φ = 30°"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "20.2",
+       "extracto": "En suelos cohesivos (arcilla, arcilla limosa y limo-arcilloso), se emplea un ángulo de fricción interna (φ) igual a cero."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Al calcular la capacidad de carga de un suelo friccionante (gravas, arenas, gravas arenosas), ¿qué cohesión indica usar la E.050?",
+      "opciones": [
+       "La mitad de la cohesión medida en laboratorio",
+       "c = 0",
+       "c = 10 kPa",
+       "La cohesión no drenada Cu de la veleta"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "20.3",
+       "extracto": "En suelos friccionantes (gravas, arenas y gravas-arenosas), se emplea una cohesión (c) igual a cero."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la expresión de capacidad de carga para suelos cohesivos de la E.050, qd = sc ic c Nc, ¿qué valor toma el coeficiente Nc?",
+      "opciones": [
+       "5,70",
+       "5,14",
+       "3,14",
+       "9,00"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "20.4",
+       "extracto": "Nc = coeficiente de capacidad de carga correspondiente a la cohesión = 5.14"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Zapata rectangular de B = {B} m por L = {L} m sobre arcilla saturada con cohesión c = {C} kPa, con carga vertical (ic = 1). Con qd = sc ic c Nc, Nc = 5,14 y sc = 1 + 0,2 B/L, ¿cuál es la capacidad de carga qd (kPa)?",
+      "variables": {
+       "B": {
+        "etiqueta": "B",
+        "valores": [
+         1.5,
+         2.0
+        ],
+        "unidad": "m"
+       },
+       "L": {
+        "etiqueta": "L",
+        "valores": [
+         2.0,
+         3.0,
+         4.0
+        ],
+        "unidad": "m"
+       },
+       "C": {
+        "etiqueta": "c",
+        "valores": [
+         50,
+         75,
+         100
+        ],
+        "unidad": "kPa"
+       }
+      },
+      "formula": "(1 + 0.2*B/L)*C*5.14",
+      "unidadResultado": "kPa",
+      "tolerancia": 0.02
+     },
+     "citas": [
+      {
+       "articulo": "20.2",
+       "extracto": "qd = sc ic c Nc"
+      },
+      {
+       "articulo": "20.4",
+       "extracto": "Sc = 1 + 0,2 B/L"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "La carga sobre una zapata está inclinada α = {A}° respecto de la vertical. Con la expresión de la E.050 ic = iq = (1 − α°/90°)², ¿cuánto vale el factor de inclinación?",
+      "variables": {
+       "A": {
+        "etiqueta": "α",
+        "valores": [
+         5,
+         10,
+         15,
+         20
+        ],
+        "unidad": "°"
+       }
+      },
+      "formula": "(1 - A/90)^2",
+      "tolerancia": 0.02
+     },
+     "citas": [
+      {
+       "articulo": "20.4",
+       "extracto": "ic = iq = (1 − α°/90°)²"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Zapata rectangular de B = {B} m por L = {L} m sobre suelo friccionante. Con la expresión de la E.050 sγ = 1 − 0,2 B/L, ¿cuánto vale el factor de forma sγ?",
+      "variables": {
+       "B": {
+        "etiqueta": "B",
+        "valores": [
+         1.5,
+         2.0,
+         2.5
+        ],
+        "unidad": "m"
+       },
+       "L": {
+        "etiqueta": "L",
+        "valores": [
+         3.0,
+         4.0,
+         5.0
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "1 - 0.2*B/L",
+      "tolerancia": 0.02
+     },
+     "citas": [
+      {
+       "articulo": "20.4",
+       "extracto": "Sγ = 1 − 0,2 B/L"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la expresión de capacidad de carga de la E.050 para suelos friccionantes, qd = iq γ1 Df Nq + 0,5 sγ iγ γ2 B′ Nγ, ¿qué representa γ2?",
+      "opciones": [
+       "El peso unitario efectivo del suelo bajo el nivel de cimentación",
+       "El peso unitario del concreto de la zapata",
+       "El peso unitario del suelo sobre el nivel de cimentación",
+       "El peso unitario del agua"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "20.4",
+       "extracto": "γ2 = peso unitario volumétrico efectivo de suelo ubicado bajo el nivel de cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la expresión de capacidad de carga de la E.050 para suelos friccionantes, ¿qué ancho se usa en el término de fricción 0,5 sγ iγ γ2 B′ Nγ?",
+      "opciones": [
+       "B, el ancho total de la zapata",
+       "B′, el ancho del área efectiva",
+       "El diámetro de la columna",
+       "1,5 B, la profundidad de exploración"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "20.4",
+       "extracto": "B’ = ancho del “área efectiva”"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué factor de seguridad mínimo frente a falla por corte exige la E.050 a una cimentación bajo cargas estáticas?",
+      "opciones": [
+       "1,5",
+       "2,5",
+       "2,0",
+       "3,0"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "21.1",
+       "extracto": "Para cargas estáticas: 3,0"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué factor de seguridad mínimo frente a falla por corte exige la E.050 a una cimentación bajo la solicitación máxima de sismo o viento?",
+      "opciones": [
+       "1,5",
+       "2,5",
+       "3,0",
+       "1,25"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "21.2",
+       "extracto": "Para solicitación máxima de sismo o viento (la que sea más desfavorable): 2,5"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Un EMS obtiene una capacidad de carga por corte qd = {Q} kPa para una zapata. Considerando solo la falla por corte bajo cargas estáticas, ¿cuál es la presión admisible máxima (kPa)?",
+      "variables": {
+       "Q": {
+        "etiqueta": "qd",
+        "valores": [
+         450,
+         600,
+         750,
+         900
+        ],
+        "unidad": "kPa"
+       }
+      },
+      "formula": "Q/3",
+      "unidadResultado": "kPa",
+      "tolerancia": 0.02,
+      "explicacion": "Además debe verificarse que esa presión no produzca un asentamiento mayor que el admisible; la presión admisible es la menor de las dos."
+     },
+     "citas": [
+      {
+       "articulo": "21.1",
+       "extracto": "Para cargas estáticas: 3,0"
+      },
+      {
+       "articulo": "22.2.1",
+       "extracto": "La aplicación de las ecuaciones de capacidad de carga por corte afectada por el factor de seguridad correspondiente"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para una zapata, la capacidad de carga por corte es 600 kPa y la presión que causa el asentamiento admisible es 170 kPa. Con cargas estáticas, ¿cuál es la presión admisible según la E.050?",
+      "opciones": [
+       "200 kPa",
+       "170 kPa",
+       "385 kPa",
+       "600 kPa"
+      ],
+      "correcta": 1,
+      "explicacion": "Por corte: 600 / 3,0 = 200 kPa. Por asentamiento: 170 kPa. Manda la menor."
+     },
+     "citas": [
+      {
+       "articulo": "22.2",
+       "extracto": "La presión admisible es la menor de la que se obtenga mediante:"
+      },
+      {
+       "articulo": "22.2.2",
+       "extracto": "La presión que cause el asentamiento admisible."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se determina la presión admisible de una cimentación según la E.050?",
+      "respuesta": "Es la menor entre la capacidad de carga por corte dividida entre el factor de seguridad correspondiente y la presión que causa el asentamiento admisible."
+     },
+     "citas": [
+      {
+       "articulo": "22.2.1",
+       "extracto": "La aplicación de las ecuaciones de capacidad de carga por corte afectada por el factor de seguridad correspondiente"
+      },
+      {
+       "articulo": "22.2.2",
+       "extracto": "La presión que cause el asentamiento admisible."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estos factores NO menciona la E.050 entre los que deben considerarse para determinar la presión admisible?",
+      "opciones": [
+       "El asentamiento tolerable de la edificación",
+       "El tipo de cemento de la zapata",
+       "Los cambios de las propiedades del suelo por variaciones de humedad",
+       "La ubicación del nivel freático y su probable variación durante la vida útil"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "22.1",
+       "extracto": "d) Ubicación del Nivel Freático, considerando su probable variación durante la vida útil de la edificación e) Probable modificación de las características físico – mecánicas de los suelos, como consecuencia de los cambios en el contenido de humedad. f) Asentamiento tolerable de la edificación"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

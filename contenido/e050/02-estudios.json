@@ -1,0 +1,2291 @@
+{
+ "formato": "tekluma-mazos/1",
+ "norma": {
+  "codigo": "E.050",
+  "titulo": "Suelos y Cimentaciones",
+  "disciplina": "structures",
+  "dispositivo": "RM N° 406-2018-VIVIENDA",
+  "publicadaEn": "2018-12-03"
+ },
+ "fuente": "Norma E.050 Suelos y Cimentaciones (RM N° 406-2018-VIVIENDA), publicada en Normas Legales de El Peruano el 3 de diciembre de 2018 (págs. 22 a 68)",
+ "articulos": [
+  {
+   "numero": "13",
+   "epigrafe": "Información previa",
+   "texto": "Información previa",
+   "pagina": 6
+  },
+  {
+   "numero": "13.1",
+   "texto": "Es la que se requiere para ejecutar el EMS.",
+   "pagina": 6
+  },
+  {
+   "numero": "13.2",
+   "texto": "Los datos indicados en los numerales 13.4, 13.5.1, 13.5.2. y 13.6 son proporcionados por quien solicita el EMS (el Solicitante) al PR antes de ejecutarlo.",
+   "pagina": 6
+  },
+  {
+   "numero": "13.3",
+   "texto": "Los datos indicados en los numerales restantes son obtenidos por el PR.",
+   "pagina": 6
+  },
+  {
+   "numero": "13.4",
+   "epigrafe": "Del terreno a explorar",
+   "texto": "Del terreno a explorar",
+   "pagina": 7
+  },
+  {
+   "numero": "13.4.1",
+   "texto": "Plano de ubicación, plano de planta y cortes donde se visualice los niveles de piso terminado y cualquier tipo de estructura enterrada (cisternas, pit del ascensor, etc.) y accesos.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.4.2",
+   "texto": "Plano topográfico con curvas de nivel y perfiles longitudinales. Si la pendiente promedio del terreno fuera inferior al 5%, basta un plano planimétrico. En todos los casos se hacen indicaciones de linderos, usos del terreno, obras anteriores, obras existentes, zonas con restos arqueológicos, situación y disposición de acequias y drenajes. El plano debe indicar obligatoriamente la ubicación prevista de las obras a edificar. De no ser así, el programa de exploración de campo (Ver artículo 15), cubre toda el área del terreno.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.4.3",
+   "texto": "Las características de las edificaciones u otras obras colindantes al proyecto, accesos al sitio, servidumbre de paso y limitaciones de servidumbre.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.4.4",
+   "texto": "El permiso para el ingreso al terreno del proyecto, el cual debe encontrarse libre (completamente desocupado en la zona de trabajo) para poder efectuar la exploración de campo y de ser el caso, contar con las autorizaciones respectivas de la entidad competente para efectuar el trabajo de exploración de campo.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.5",
+   "epigrafe": "De la obra a cimentar",
+   "texto": "De la obra a cimentar",
+   "pagina": 7
+  },
+  {
+   "numero": "13.5.1",
+   "texto": "Características generales acerca del uso de la edificación, número de pisos, niveles de piso terminado, área aproximada, tipo de estructura, número de sótanos profundidad, luces y cargas estimadas.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.5.2",
+   "texto": "En el caso de edificaciones especiales (que transmitan cargas concentradas importantes, que presenten luces grandes, alberguen maquinaria pesada o que vibren, que generen calor o frío o que usen cantidades importantes de agua), debe contarse con la indicación de la magnitud de las cargas a transmitirse a la cimentación y niveles de piso terminado, o los parámetros dinámicos de la máquina, las tolerancias de las estructuras a movimientos totales o diferenciales y sus condiciones límite de servicio y las eventuales vibraciones o efectos térmicos generados en la utilización de la estructura.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.5.3",
+   "texto": "Plano de plataformado indicando los niveles correspondientes, si la obra requiere cortes y Rellenos Controlados.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.5.4",
+   "texto": "Para los fines de la determinación del Programa de Exploración Mínimo (PM) del EMS (Ver sub numeral 15.3), las edificaciones son calificadas, según la Tabla 1, donde I, II, III y IV designan la importancia relativa de la estructura desde el punto de vista de la exploración de suelos necesaria para cada tipo de edificación, siendo el I más exigente que el II, éste que el III y éste que el IV.",
+   "pagina": 7
+  },
+  {
+   "numero": "Tabla 1",
+   "epigrafe": "Tipo de edificación u obra para determinar el número de puntos de exploración (Tabla 6)",
+   "texto": "DESCRIPCIÓN | DISTANCIA MAYOR ENTRE APOYOS • (m) | NÚMERO DE PISOS (Incluidos los sótanos): ≤ 3 | 4 a 8 | 9 a 12 | > 12\nAPORTICADA DE ACERO | < 12 | III | III | III | II\nPÓRTICOS Y/O MUROS DE CONCRETO | < 10 | III | III | II | I\nMUROS PORTANTES DE ALBAÑILERÍA | < 12 | II | I | --- | ---\nBASES DE MÁQUINAS Y SIMILARES | Cualquiera | I | --- | --- | ---\nESTRUCTURAS ESPECIALES | Cualquiera | I | I | I | I\nOTRAS ESTRUCTURAS | Cualquiera | II | I | I | I\n- Cuando la distancia sobrepasa la indicada, se clasificará en el tipo de edificación inmediato superior.\nTANQUES ELEVADOS Y SIMILARES | ≤ 9 m de altura: II | > 9 m de altura: I\nPLANTAS DE TRATAMIENTO DE AGUA | III\nINSTALACIONES SANITARIAS DE AGUA Y ALCANTARILLADO EN OBRAS URBANAS. | IV",
+   "pagina": 7
+  },
+  {
+   "numero": "13.6",
+   "epigrafe": "Datos generales de la zona",
+   "texto": "El PR recibe del solicitante los datos disponibles del terreno sobre:",
+   "pagina": 7
+  },
+  {
+   "numero": "13.6.1",
+   "texto": "Usos anteriores (terreno de cultivo, cantera, explotación minera, botadero, relleno sanitario, etc.).",
+   "pagina": 7
+  },
+  {
+   "numero": "13.6.2",
+   "texto": "Construcciones antiguas, restos arqueológicos u obras semejantes que puedan afectar al EMS.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.7",
+   "epigrafe": "De las edificaciones colindantes",
+   "texto": "Números de pisos incluidos sótanos, tipo y estado de las estructuras relativas al comportamiento del suelo. De ser posible, tipo y nivel de cimentación.",
+   "pagina": 7
+  },
+  {
+   "numero": "13.8",
+   "epigrafe": "Otra información",
+   "texto": "Cuando el PR lo considere necesario, debe incluir cualquier otra información de carácter técnico, relacionada con el EMS, que pueda afectar la capacidad portante, deformabilidad y/o la estabilidad del terreno.",
+   "pagina": 7
+  },
+  {
+   "numero": "14",
+   "epigrafe": "Técnicas de exploración de Campo para ITS y EMS",
+   "texto": "Técnicas de exploración de Campo para ITS y EMS",
+   "pagina": 7
+  },
+  {
+   "numero": "14.1",
+   "epigrafe": "Técnicas de Exploración de Campo",
+   "texto": "Las Técnicas de Exploración de Campo aplicables en los ITS y EMS son las indicadas en la Tabla 2.",
+   "pagina": 7
+  },
+  {
+   "numero": "Tabla 2",
+   "epigrafe": "Técnicas de exploración de campo",
+   "texto": "DESCRIPCIÓN | NORMA APLICABLE*\nSUELOS. Método de ensayo de penetración estándar SPT. | NTP 339.133\nSUELOS. Método para la clasificación de suelos con propósitos de ingeniería (sistema unificado de clasificación de suelos SUCS). | NTP 339.134\nSUELOS. Método de ensayo estándar para la densidad y peso unitario del suelo in situ mediante el método del cono de arena. ** | NTP 339.143\nSUELOS. Métodos de ensayos estándar para densidad in situ del suelo y suelo agregado por medio de métodos nucleares (profundidad superficial). | NTP 339.144\nSUELOS. Ensayo de penetración cuasi-estática profunda de suelos con cono y cono de fricción (CPT).*** | NTP 339.148\nSUELOS. Descripción e identificación de suelos. Procedimiento visual – manual. | NTP 339.150\nSUELOS. Método de ensayo normalizado para la capacidad portante del suelo por carga estática y para cimientos aislados. | NTP 339.153\nSUELOS. Método normalizado para ensayo de corte por veleta de campo de suelos cohesivos. | NTP 339.155\nSUELOS. Método de ensayo normalizado para la auscultación con penetrómetro dinámico ligero de punta cónica (DPL). | NTP 339.159\nSUELOS. Práctica para la investigación y muestreo de suelos por perforaciones con barrena. | NTP 339.161\nSUELOS. Guía normalizada para caracterización de campo con fines de diseño de ingeniería y construcción. | NTP 339.162\nSUELOS. Método de ensayo normalizado de corte por veleta en miniatura de laboratorio en suelos finos arcillosos saturados. | NTP 339.168\nSUELOS. Práctica normalizada para la perforación de núcleos de roca para la investigación del sitio. | NTP 339.173\nSUELOS. Método de ensayo normalizado para la medición de la densidad de suelos y rocas in-situ por el método de reemplazo con agua en un pozo de exploración. ** | NTP 339.253\nSUELOS. Métodos de ensayo estándar para la determinación de la densidad y peso unitario de suelos in situ por el método del balón de jebe. ** | NTP 339.256\nMétodo de ensayo normalizado para la medición del potencial de colapso de suelos. | NTP 339.163\nCono Dinámico Superpesado (DPSH) - ver ANEXO II | UNE 103-801\nAuscultación Dinámica mediante el Cono Tipo Peck (CTP) | (ver ANEXO III)\nMétodo de ensayo estándar para pruebas de integridad de impacto con baja deformación en cimentaciones profundas (Standard test method for low strain impact integrity testing of deep foundations) | ASTM D5882\nMétodos de ensayo estándar para cimentaciones profundas bajo carga lateral (Standard test methods for deep foundations under lateral load) | ASTM D3966.\n* En todos los casos se utiliza la última versión de la Norma.\n** Estos ensayos solo se emplean para el control de la compactación de rellenos Controlados o de Ingeniería.\n*** También conocido como “Ensayo de cono estático”\nNOTA: Los ensayos de densidad de campo, no se emplean para determinar la densidad relativa y la presión admisible de un suelo granular. Solo se emplean para el control de la densidad de los Rellenos Controlados o de Ingeniería.",
+   "pagina": 7
+  },
+  {
+   "numero": "14.2",
+   "epigrafe": "Aplicación de las Técnicas de Exploración",
+   "texto": "La exploración de campo se realiza de acuerdo a lo indicado en el presente Capítulo, respetando las cantidades, valores mínimos y limitaciones que se indican en esta Norma y adicionalmente, en todo aquello que no se contradiga, se aplica lo indicado en la NTP 339.162.",
+   "pagina": 8
+  },
+  {
+   "numero": "14.2.1",
+   "epigrafe": "Pozos o Calicatas y Trincheras",
+   "texto": "Son excavaciones de formas diversas que permiten una observación directa del terreno, así como la toma de muestras y la realización de ensayos in situ que no requieran confinamiento. Las calicatas y trincheras son realizadas según la NTP 339.162. El PR debe tomar las precauciones necesarias a fin de evitar accidentes. Se prohíbe el uso de este tipo de técnica de exploración en suelos arenosos con un porcentaje de finos menores e iguales a 5%.",
+   "pagina": 8
+  },
+  {
+   "numero": "14.2.2",
+   "epigrafe": "Perforaciones Manuales y Mecánicas",
+   "texto": "Son sondeos que permiten reconocer la naturaleza y localización de las diferentes capas del terreno, así como extraer muestras del mismo y realizar ensayos in situ. La profundidad máxima es 10 metros en perforación manual, sin limitación en perforación mecánica. Las perforaciones manuales o mecánicas tienen las siguientes limitaciones:\na) Perforaciones mediante Espiral Mecánico Los espirales mecánicos que no dispongan de un dispositivo para introducir herramientas de muestreo en el eje, no deben usarse en terrenos donde sea necesario conocer con precisión la cota de los estratos, o donde el espesor de los mismos sea menor de 0,30 m.\nb) Perforaciones por Lavado con Agua (Wash Boring). El diámetro de la perforación no debe ser mayor a 4 pulgadas. En ningún caso, las muestras procedentes del agua del lavado deben emplearse para ensayos de laboratorio.",
+   "pagina": 8
+  },
+  {
+   "numero": "14.2.3",
+   "epigrafe": "Método de Ensayo de Penetración Estándar (SPT) NTP 339.133",
+   "texto": "Los Ensayos de Penetración Estándar (SPT) son aplicables según se indica en la Tabla 3. Se prohíbe ejecutar ensayos SPT en el fondo de calicatas, trincheras o cualquier tipo de excavación en suelos naturales, debido a la pérdida de confinamiento. Solo pueden ejecutarse en perforaciones manuales o mecánicas indicadas en el sub numeral 14.2.2. En el eventual caso de detectar Rellenos No Controlados a profundidades no mayores a 3 m, se permite retirar estos materiales hasta dejar una superficie de terreno natural sobre la que se inicia la ejecución de los ensayos SPT. En el caso que la profundidad sea mayor que 3 m, se debe cambiar el sistema de perforación a rotativo mecánico sin la necesidad de eliminar el Relleno No Controlado.",
+   "pagina": 8
+  },
+  {
+   "numero": "14.2.4",
+   "epigrafe": "Ensayo de Penetración Cuasi-Estática Profunda de Suelos con Cono y Cono de Fricción (CPT) NTP 339.148",
+   "texto": "Este método se conoce también como el Cono Holandés. Véase aplicación en la Tabla 3.",
+   "pagina": 8
+  },
+  {
+   "numero": "14.2.5",
+   "epigrafe": "Prueba de Penetración Dinámica Superpesada (DPSH) UNE 103-801 (ver ANEXO II)",
+   "texto": "Se utiliza para auscultaciones dinámicas que requieren investigación adicional de suelos para su interpretación y no sustituyen al Ensayo de Penetración Estándar. Los parámetros obtenidos con este ensayo (N20) deben ser obligatoriamente correlacionados con los parámetros de los ensayos SPT (N) en el terreno en el cual se está efectuando el EMS. Se prohíbe ejecutar ensayos DPSH en el fondo de calicatas, trincheras o cualquier tipo de excavación, debido a la pérdida de confinamiento.",
+   "pagina": 8
+  },
+  {
+   "numero": "14.2.6",
+   "epigrafe": "Auscultación Dinámica Mediante el Cono Dinámico Tipo Peck (CTP ver ANEXO III)",
+   "texto": "Es un ensayo desarrollado en el Perú que se utiliza para efectuar auscultaciones dinámicas que, como en los casos del DPSH y el DPL, requieren de investigación adicional de suelos para su interpretación y no sustituyen al Ensayo de Penetración Estándar (SPT). Los parámetros obtenidos con este ensayo (Cn) deben ser obligatoriamente correlacionados con los parámetros de los ensayos SPT (N) en el terreno en el cual se está efectuando el EMS. Se prohíbe ejecutar ensayos Cono Dinámico Tipo Peck (CTP) en el fondo de calicatas, trincheras o cualquier tipo de excavación, debido a la pérdida de confinamiento.",
+   "pagina": 9
+  },
+  {
+   "numero": "14.2.7",
+   "epigrafe": "Método de ensayo normalizado para la auscultación con penetrómetro dinámico ligero de punta cónica (DPL) NTP 339.159",
+   "texto": "Las auscultaciones dinámicas son ensayos que requieren investigación adicional de suelos para su interpretación y no sustituyen al Ensayo de Penetración Estándar (SPT). Los parámetros obtenidos con este ensayo (n) deben ser obligatoriamente correlacionados con los parámetros de los ensayos SPT (N) en el terreno en el cual se está efectuando el EMS. Se prohíbe ejecutar ensayos DPL en el fondo de calicatas, trincheras o cualquier tipo de excavación, debido a la pérdida de confinamiento. Se prohíbe emplear este tipo de ensayo a profundidades mayores de 3.00 metros.",
+   "pagina": 9
+  },
+  {
+   "numero": "14.2.8",
+   "epigrafe": "Método Normalizado para Ensayo de Corte con Veleta de Campo en Suelos Cohesivos NTP 339.155",
+   "texto": "Este ensayo es aplicable únicamente cuando se trata de suelos cohesivos saturados desprovistos de arena o grava, como complemento de la información obtenida mediante calicatas o perforaciones. Su aplicación se indica en la Tabla 3.",
+   "pagina": 9
+  },
+  {
+   "numero": "14.2.9",
+   "epigrafe": "Método de Ensayo Normalizado para la Capacidad Portante del Suelo por Carga Estática y para Cimientos Aislados NTP 339.153",
+   "texto": "Las pruebas de carga deben ser precedidas por un EMS y se recomienda su uso únicamente cuando el suelo a ensayar es tridimensionalmente homogéneo, comprende la profundidad activa de la cimentación y es semejante al ubicado bajo el plato de carga. Las aplicaciones y limitaciones de estos ensayos, se indican en la Tabla 3.",
+   "pagina": 9
+  },
+  {
+   "numero": "Tabla 3",
+   "epigrafe": "Aplicación y limitaciones de los ensayos",
+   "texto": "Ensayos In Situ | Norma Aplicable | Permitida: Técnica de Exploración | Tipo de Suelo(1) | Parámetro a obtener(2) | No Permitida: Técnica de Exploración | Tipo de Suelo(1)\nSPT | NTP 339.133 | Perforación | Todos excepto gravas | N | Calicata | Gravas\nCPT | NTP 339.148 | Auscultación | Todos excepto gravas | qc, fc | Calicata | Gravas\nDPSH | UNE 103 801:1994 | Auscultación | Todos excepto gravas | N20 | Calicata | Gravas\nCTP | ANEXO III | Auscultación | Todos excepto gravas | Cn | Calicata | Gravas\nDPL | NTP 339.159 | Auscultación | SP, SW, SM (con limos no plásticos) | n | Calicata | Lo restante\nVeleta de Campo(3) | NTP 339.155 | Perforación/ Calicata | CL, ML, CH, MH. Para todos los casos con IP > 0 y saturados | Cu, St | --- | Lo restante\nPrueba de carga | NTP 339.153 | --- | Rocas blandas y todo tipo de suelo excepto gravas | Asentamiento vs. Presión | --- | Gravas\n(1) Según Clasificación SUCS, cuando los ensayos son aplicables a suelos de doble simbología, ambos están incluidos.\n(2) Leyenda: Cu = Cohesión en condiciones no drenadas. N = Número de golpes por cada 0,30 m de penetración en el ensayo estándar de penetración. N20 = Número de golpes por cada 0,20 m de penetración mediante auscultación con DPSH. Cn = Número de golpes por cada 0,30 m de penetración mediante auscultación con Cono Tipo Peck. n = Número de golpes por cada 0,10 m de penetración mediante auscultación con DPL. qc = Resistencia de punta del cono en unidades de presión. fc = Fricción en el manguito. St = Sensitividad.\n(3) Sólo para suelos finos saturados, sin arenas ni gravas.\nNota: Ver títulos de las Normas en la Tabla 2.",
+   "pagina": 9
+  },
+  {
+   "numero": "14.3",
+   "epigrafe": "Correlación entre ensayos y propiedades de los suelos",
+   "texto": "En base a los parámetros obtenidos en los ensayos “in situ” y mediante correlaciones debidamente comprobadas, el PR puede obtener valores de resistencia al corte no drenado, ángulo de fricción interna, relación de pre consolidación, relación entre asentamientos y carga, coeficiente de balasto, módulo de elasticidad, entre otros. En el caso de los ensayos de campo Cono tipo Peck (CPT) y auscultación con penetrómetro dinámico ligero de punta cónica (DPL), los parámetros obtenidos con estos ensayos deben ser obligatoriamente correlacionados con los parámetros de los ensayos SPT (N) en el terreno en el cual se está efectuando el EMS.",
+   "pagina": 9
+  },
+  {
+   "numero": "14.4",
+   "epigrafe": "Tipos de Muestras",
+   "texto": "Se considera los cuatro tipos de muestras que se indican en la Tabla 4, en función de las exigencias que deben atenderse en cada caso, respecto del terreno que representan.",
+   "pagina": 9
+  },
+  {
+   "numero": "Tabla 4",
+   "epigrafe": "Tipos de muestras",
+   "texto": "TIPO DE MUESTRA | NORMA APLICABLE | FORMAS DE OBTENER Y TRANSPORTAR | ESTADO DE LA MUESTRA | CARACTERÍSTICAS\nMuestra inalterada en bloque (Mib) | NTP 339.151 SUELOS. Prácticas normalizadas para la preservación y transporte de suelos | Bloques | Inalterada | Debe mantener inalteradas las propiedades físicas y mecánicas del suelo en su estado natural al momento del muestreo (Aplicable solamente a suelos cohesivos, rocas blandas o suelos granulares finos suficientemente cementados para permitir su obtención).\nMuestra inalterada en tubo de pared delgada (Mit) | NTP 339.169 SUELOS. Muestreo geotécnico de suelos con tubo de pared delgada | Tubos de pared delgada | Inalterada | [celda combinada con la fila anterior]\nMuestra alterada en bolsa de plástico (Mab) | NTP 339.151 SUELOS. Prácticas normalizadas para la preservación y transporte de suelos | Con bolsas de plástico | Alterada | Debe mantener inalterada la granulometría del suelo en su estado natural al momento del muestreo.\nMuestra alterada para humedad en lata sellada (Mah) | NTP 339.151 SUELOS. Prácticas normalizadas para la preservación y transporte de suelos | En lata sellada | Alterada | Debe mantener inalterado el contenido de agua.",
+   "pagina": 10
+  },
+  {
+   "numero": "14.5",
+   "epigrafe": "Ensayos de Laboratorio",
+   "texto": "Se realizan de acuerdo con las normas que se indican en la Tabla 5.",
+   "pagina": 10
+  },
+  {
+   "numero": "Tabla 5",
+   "epigrafe": "Ensayos de laboratorio",
+   "texto": "DESCRIPCIÓN | NORMA APLICABLE *\nSUELOS. Métodos de ensayo para determinar el contenido de humedad de un suelo | NTP 339.127\nSUELOS. Método de ensayo para el análisis granulométrico | NTP 339.128\nSUELOS. Método de ensayo para determinar el límite líquido, límite Plástico e índice de plasticidad de suelos | NTP 339.129\nSUELOS. Método de ensayo para determinar el peso específico relativo de las partículas sólidas de un suelo | NTP 339.131\nSUELOS. Método para la clasificación de suelos con propósitos de ingeniería (sistema unificado de clasificación de suelos, SUCS). | NTP 339.134\nSUELOS. Determinación del peso volumétrico de suelo cohesivo | NTP 339.139\nSUELOS. Determinación de los factores de contracción de suelos mediante el método del mercurio | NTP 339.140\nSUELOS. Método de ensayo para la compactación de suelos en Laboratorio utilizando una energía modificada ** (2700 kN- m/m3(56000 pie-lbf/ pie3)) | NTP 339.141\nSUELOS. Descripción e identificación de suelos. Procedimiento visual - manual | NTP 339.150\nSUELOS. Método de ensayo normalizado para la determinación del contenido de sales solubles en suelos y agua subterránea | NTP 339.152\nSUELOS. Método normalizado de ensayo para propiedades de consolidación unidimensional de suelos. | NTP 339.154\nSUELOS. Método de ensayo normalizado para la medición del potencial de colapso de suelos | NTP 339.163\nSUELOS. Método de ensayo normalizado de compresión triaxial no consolidado no drenado para suelos cohesivos | NTP 339.164\nSUELOS. Método de ensayo normalizado de compresión triaxial consolidado no drenado para suelos cohesivos | NTP 339.166\nSUELOS. Método de ensayo estándar para la resistencia a la compresión no confinada de suelos cohesivos | NTP 339.167\nSUELOS. Método de ensayo para la determinación cuantitativa de sulfatos solubles en suelos y agua subterránea. | NTP 339.169\nSUELOS. Método de ensayo normalizado para la determinación del hinchamiento unidimensional o potencial de asentamiento de suelos cohesivos. | NTP 339.170\nSUELOS. Método de ensayo normalizado para el ensayo de corte directo en suelos bajo condiciones consolidadas drenadas *** | NTP 339.171\nSUELOS. Método de ensayo para la determinación cuantitativa de cloruros solubles en suelos y agua subterránea. | NTP 339.177\n* En todos los casos se utiliza la última versión de la Norma.\n** Este ensayo se emplea únicamente para el control de Rellenos de Ingeniería o Rellenos Controlados.\n*** Este ensayo se emplea únicamente para determinar las propiedades mecánicas de los Rellenos de Ingeniería o Rellenos Controlados.",
+   "pagina": 10
+  },
+  {
+   "numero": "14.6",
+   "epigrafe": "Compatibilización de perfiles estratigráficos",
+   "texto": "El PR selecciona y define las muestras para ejecutar con ellas ensayos de clasificación. Como resultado de estos ensayos, las muestras se clasifican, en todos los casos, de acuerdo al Sistema Unificado de Clasificación de Suelos – SUCS NTP 339.134 y los resultados de esta clasificación son comparados con la descripción visual – manual NTP 339.150 obtenida para el perfil estratigráfico de campo, procediéndose a compatibilizar las diferencias existentes a fin de obtener el perfil estratigráfico definitivo, que se incluye en el informe del EMS.",
+   "pagina": 10
+  },
+  {
+   "numero": "15",
+   "epigrafe": "Programa de exploración de campo y ensayos de laboratorio",
+   "texto": "Programa de exploración de campo y ensayos de laboratorio",
+   "pagina": 10
+  },
+  {
+   "numero": "15.1",
+   "texto": "El programa de exploración de campo y ensayos de laboratorio comprende:",
+   "pagina": 10
+  },
+  {
+   "numero": "15.1.1",
+   "texto": "Condiciones de frontera.",
+   "pagina": 10
+  },
+  {
+   "numero": "15.1.2",
+   "texto": "Número n de puntos de exploración.",
+   "pagina": 10
+  },
+  {
+   "numero": "15.1.3",
+   "texto": "Profundidad p a alcanzar en cada punto.",
+   "pagina": 10
+  },
+  {
+   "numero": "15.1.4",
+   "texto": "Distribución de los puntos en la superficie del terreno.",
+   "pagina": 10
+  },
+  {
+   "numero": "15.1.5",
+   "texto": "Número y tipo de muestras a extraer.",
+   "pagina": 10
+  },
+  {
+   "numero": "15.1.6",
+   "texto": "Ensayos a realizar “In situ” y en el laboratorio.",
+   "pagina": 10
+  },
+  {
+   "numero": "15.2",
+   "texto": "Un EMS puede plantearse inicialmente con un PM (Programa Mínimo), debiendo aumentarse los alcances del programa en cualquiera de sus partes si las condiciones encontradas así lo exigieran.",
+   "pagina": 11
+  },
+  {
+   "numero": "15.3",
+   "epigrafe": "Programa Mínimo – PM",
+   "texto": "Programa Mínimo – PM",
+   "pagina": 11
+  },
+  {
+   "numero": "15.3.1",
+   "texto": "El Programa de Exploración aquí detallado constituye el programa mínimo requerido por un EMS, siempre y cuando se cumplan las condiciones dadas en el literal a) del sub numeral 15.3.2.",
+   "pagina": 11
+  },
+  {
+   "numero": "15.3.2",
+   "texto": "En el caso de no detectar un suelo adecuado para apoyar las cimentaciones superficiales dentro de la Profundidad Activa de la cimentación (Ver Capítulo VI, Artículo 24), el PR debe informar al solicitante ampliar el programa de la manera más adecuada para lograr los objetivos del EMS.",
+   "pagina": 11
+  },
+  {
+   "numero": "15.3.2 a)",
+   "epigrafe": "Condiciones de Frontera",
+   "texto": "Tienen como objetivo la comprobación de las características del suelo, supuestamente iguales a las de los terrenos colindantes ya edificados. Son de aplicación cuando se cumplan simultáneamente las siguientes condiciones:\na-1) No existen en los terrenos colindantes grandes irregularidades como afloramientos rocosos, fallas, ruinas arqueológicas, estratos erráticos, rellenos o cavidades.\na-2) No existen edificaciones situadas a menos de 100 m del terreno a edificar que presenten anomalías como grietas o desplomes originados por el terreno de cimentación.\na-3) El tipo de edificación (Tabla 1) a cimentar es de la misma o de menor exigencia que las edificaciones situadas a menos de 100 m.\na-4) El número de plantas del edificio a cimentar (incluidos los sótanos y estructuras soterradas tales como pit de ascensores, cisternas, cuarto de máquinas, etc.), la modulación media entre apoyos y las cargas en éstos son iguales o inferiores que las correspondientes a las edificaciones situadas a menos de 100 m.\na-5) Las cimentaciones de los edificios situados a menos de 100 m y la prevista para el edificio a cimentar son de tipo superficial.\na-6) La cimentación prevista para el edificio en estudio no profundiza respecto de las inmediatamente contiguas más de 1,5 m.",
+   "pagina": 11
+  },
+  {
+   "numero": "15.3.2 b)",
+   "epigrafe": "Número “n” de puntos de exploración",
+   "texto": "El número de puntos de exploración se determina en la Tabla 6 en función del tipo de edificación y del área de la superficie a ocupar por ésta.\nn nunca será menor de 3.\nCuando se conozca el emplazamiento exacto de la estructura, n se determina en función del área techada en planta del primer piso de la misma; cuando no se conozca dicho emplazamiento, n se determina en función del área total del terreno.",
+   "pagina": 11
+  },
+  {
+   "numero": "Tabla 6",
+   "epigrafe": "Número de puntos de exploración",
+   "texto": "Tipo de edificación u obra (Tabla 1) | Número de puntos de exploración (n)\nI | uno por cada 225 m2 de área techada del primer piso\nII | uno por cada 450 m2 de área techada del primer piso\nIII | uno por cada 900 m2 de área techada del primer piso*\nIV | uno por cada 100 m de instalaciones sanitarias de agua y alcantarillado en obras urbanas\nHabilitación urbana para Viviendas Unifamiliares de hasta 3 pisos | 3 por cada hectárea de terreno por habilitar\n* Dentro de esta categoría se incluyen las plantas de tratamiento de agua en la que se considera en lugar de área techada, el área en planta de la misma.",
+   "pagina": 11
+  },
+  {
+   "numero": "15.3.2 c)",
+   "epigrafe": "Profundidad “p” mínima a alcanzar en cada punto de exploración",
+   "texto": "c-1) Cimentación Superficial\nSe determina de la siguiente manera:\nEDIFICACIÓN SIN SÓTANO: p = Df + z\nEDIFICACIÓN CON SÓTANO: p = h + Df + z\nDonde: Df = En una edificación sin sótano, es la distancia vertical desde la superficie del terreno o desde el nivel del piso terminado, hasta el fondo de la cimentación, la que resulte menor. En edificaciones con sótano, es la distancia vertical entre el nivel de piso terminado del sótano más profundo y el fondo de la cimentación, excepto en el caso de cimentación con plateas o subsolados. Ver figura 1(c-1) (iii) h = Distancia vertical entre el nivel de piso terminado del sótano más profundo y la superficie del terreno natural. z = 1,5 B; siendo B el ancho de la cimentación prevista de mayor área. En el caso de ser ubicado dentro de la profundidad activa de cimentación el estrato resistente típico de la zona, que normalmente se utiliza como plano de apoyo de la cimentación, a juicio y bajo responsabilidad del PR, se puede adoptar una profundidad z menor a 1,5 B. En este caso la profundidad mínima de exploración es la profundidad del estrato resistente más una profundidad de verificación no menor a 3 m. Uno de los puntos debe llegar hasta el nivel más bajo de las estructuras soterradas más 3 m. En ningún caso p es menor de 3 m en el caso de estructuras sin sótano y de 6 m en el caso de estructuras con sótano, excepto si se encontrase roca antes de alcanzar la profundidad p, en cuyo caso el PR debe llevar a cabo una verificación de su calidad por un método adecuado.\nc-2) Cimentación Profunda\nLa profundidad mínima de exploración, corresponde a la longitud del elemento que transmite la carga a mayores profundidades (pilote, pilar, etc.), más la profundidad z.\np = h + Df + z\nDonde: Df = En una edificación sin sótano, es la distancia vertical desde la superficie del terreno hasta el extremo de la cimentación profunda (pilote, pilar, etc.). En edificaciones con sótano, es la distancia vertical entre el nivel de piso terminado del sótano más profundo y el extremo de la cimentación profunda. h = Distancia vertical entre el nivel de piso terminado del sótano más profundo y la superficie del terreno natural. z = 6,00 metros, en el 80 % de los sondeos y 1,5 B, en el 20 % de los sondeos, siendo B el ancho de la cimentación, delimitada por los puntos de todos los pilotes o las bases de todos los pilares. En el caso de ser conocida la existencia de un estrato de suelo resistente que normalmente se utiliza como plano de apoyo de la cimentación en la zona, a juicio y bajo responsabilidad del PR, se puede adoptar para p, la profundidad del estrato resistente más una profundidad de verificación, la cual en el caso de cimentaciones profundas no debe ser menor de 5 metros o de 15 metros si existen antecedentes de licuación en la zona o si se considera que se dan las condiciones indicadas en los numerales 38.1, 38.2 y 38.3 para la ocurrencia de este fenómeno. Si se encontrase roca antes de alcanzar la profundidad p, el PR debe llevar a cabo una verificación de su calidad, por un método adecuado, en una longitud mínima de 3 metros.",
+   "pagina": 11
+  },
+  {
+   "numero": "Figura 1 (c-1)",
+   "epigrafe": "Profundidad de cimentación (Df) y profundidad de exploración p en cimentaciones superficiales",
+   "texto": "(i) Profundidad de Cimentación (Df) en Zapatas Superficiales\n(ii) Profundidad de Cimentación (Df) en Zapatas Bajo Sótanos\n(iii) Profundidad de Cimentación (Df) en Plateas o Losas (incluyendo reservorios y tanques elevados apoyados en estos elementos)\n(iv) Profundidad de Cimentación (Df) en tuberías. D = 1.5 DP. e: espesor de la cama de arena\n(v) Profundidad de cimentación (Df) en canales. z = 3 m. mínimo = B, cuando B < C = C, cuando B > C\nNota: Las zapatas ubicadas en el límite de propiedad no deben invadir el terreno vecino.",
+   "pagina": 12
+  },
+  {
+   "numero": "Figura 2 (c-2)",
+   "epigrafe": "Profundidad de exploración p en cimentaciones profundas",
+   "texto": "P | h | Df | z | PRIMER PISO | SOTANO\n[Transcripción: edificación con sótano cimentada sobre pilotes; P suma h, Df y z.]\nNota: Las zapatas ubicadas en el límite de propiedad no deben invadir el terreno vecino.",
+   "pagina": 13
+  },
+  {
+   "numero": "15.3.2 d)",
+   "epigrafe": "Distribución de los puntos de exploración",
+   "texto": "Se distribuyen adecuadamente, teniendo en cuenta las características y dimensiones del terreno, así como la ubicación de las estructuras previstas cuando éstas estén definidas.",
+   "pagina": 13
+  },
+  {
+   "numero": "15.3.2 e)",
+   "epigrafe": "Número y tipo de muestras a extraer",
+   "texto": "Cuando el plano de apoyo de la cimentación prevista no sea roca, el PR determina el número de muestras que deben tomarse tipo Mab, hasta el plano de apoyo de la cimentación prevista Df y a partir de esta profundidad se debe tomar las muestras tipo Mib o Mit en suelos cohesivos o ejecutar los ensayos “in situ” de los indicados en la Tabla 3 en los suelos granulares y una muestra tipo Mab en cada uno de los ensayos SPT que se ejecuten. El PR es responsable de seleccionar y determinar el número de muestras y/o ensayos necesarios a fin de determinar las propiedades físico-mecánicas requeridas para el análisis de la cimentación y sistemas de sostenimiento.",
+   "pagina": 13
+  },
+  {
+   "numero": "15.3.2 f)",
+   "epigrafe": "Ensayos a realizar “in situ” y en laboratorio",
+   "texto": "Se realizan sobre los estratos típicos y/o sobre las muestras extraídas según las normas aplicables indicadas en las Tablas 3 y 5 de la presente norma. Las determinaciones a realizar, así como el número de muestras a ensayar son determinadas por el PR.",
+   "pagina": 14
+  },
+  {
+   "numero": "16",
+   "epigrafe": "Informe del EMS",
+   "texto": "Informe del EMS",
+   "pagina": 14
+  },
+  {
+   "numero": "16.1",
+   "texto": "El informe del EMS comprende:",
+   "pagina": 14
+  },
+  {
+   "numero": "16.1.1",
+   "epigrafe": "Memoria Descriptiva",
+   "texto": "Memoria Descriptiva",
+   "pagina": 14
+  },
+  {
+   "numero": "16.1.2",
+   "texto": "Planos de Ubicación de las Obras y de Distribución de los Puntos de exploración.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.1.3",
+   "epigrafe": "Perfiles de Suelos",
+   "texto": "Perfiles de Suelos",
+   "pagina": 14
+  },
+  {
+   "numero": "16.1.4",
+   "texto": "Resultados de los Ensayos “in situ” y de Laboratorio.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2",
+   "epigrafe": "Memoria Descriptiva",
+   "texto": "Memoria Descriptiva",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.1",
+   "epigrafe": "Resumen de las Condiciones de Cimentación",
+   "texto": "Descripción resumida de todos y cada uno de los temas principales del informe:\na) Tipo de cimentación\nb) Estrato de apoyo de la cimentación\nc) Parámetros de diseño para la cimentación (Profundidad de la Cimentación, Presión Admisible, Factor de Seguridad por Corte y Asentamiento Diferencial o Total)\nd) Agresividad del suelo a la cimentación\ne) Recomendaciones adicionales",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.2",
+   "epigrafe": "Información Previa",
+   "texto": "Descripción detallada de la información recibida de quien solicita el EMS y de la recolectada por el PR de acuerdo al artículo 13.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.3",
+   "epigrafe": "Exploración de Campo",
+   "texto": "Descripción de los pozos, calicatas, trincheras, perforaciones y auscultaciones, así como de los ensayos efectuados, con referencia a las Normas empleadas.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.4",
+   "epigrafe": "Ensayos de Laboratorio",
+   "texto": "Descripción de los ensayos efectuados, con referencia a las Normas empleadas.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.5",
+   "epigrafe": "Perfil del Suelo",
+   "texto": "Descripción de los diferentes estratos que constituyen el terreno investigado indicando para cada uno de ellos: origen, nombre y símbolo del grupo del suelo, según el Sistema Unificado de Clasificación de Suelos - SUCS, NTP 339.134, plasticidad de los finos, consistencia o densidad relativa, humedad, color, tamaño máximo y angularidad de las partículas, olor, cementación y otros comentarios (raíces, cavidades, etc.), de acuerdo a la NTP 339.150.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.6",
+   "epigrafe": "Nivel de la Napa Freática",
+   "texto": "Ubicación de la Napa Freática dentro de la profundidad de exploración, indicando la fecha de medición.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.7",
+   "epigrafe": "Análisis de la Cimentación",
+   "texto": "Descripción de las características físico – mecánicas de los suelos que controlan el diseño de la cimentación. Análisis y diseño de solución para cimentación. Se incluye memorias de cálculo en cada caso, en las que se indican todos los parámetros utilizados y los resultados obtenidos. En este numeral se incluye como mínimo:\na) Memoria de cálculo. Se utiliza cualquier método de diseño geotécnico sustentado en teorías y experiencias a largo plazo comúnmente empleadas en el Perú. El uso de cualquier otra metodología de diseño obliga a incluirla como anexo a la Memoria Descriptiva.\nb) Tipo de cimentación y otras soluciones si las hubiera.\nc) Profundidad de cimentación (Df ).\nd) Cálculo de la carga de rotura por corte y cálculo del factor de seguridad (FS).\ne) Estimación de los asentamientos que sufriría la estructura con la carga aplicada (diferenciales y/o totales).\nf) Presión admisible del terreno.\ng) Otros parámetros que se requieran para el diseño o construcción de las estructuras y cuyo valor dependan directamente del suelo.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.8",
+   "epigrafe": "Efecto del Sismo",
+   "texto": "En concordancia con la NTE E.030 Diseño Sismorresistente, el EMS o el PM, proporcionan de acuerdo al perfil encontrado lo siguiente:\na) Zona sísmica\nb) Tipo de perfil del suelo\nc) Factor del suelo (S)\nd) Período TP (s)\ne) Período TL (s) En el caso que se encuentren suelos granulares sumergidos de los tipos: arenas y limos no plásticos, el PR debe obligatoriamente efectuar los análisis determinísticos y probabilísticos del potencial de licuación de los suelos, de acuerdo con el artículo 36.",
+   "pagina": 14
+  },
+  {
+   "numero": "16.2.9",
+   "texto": "Luego del análisis de los perfiles encontrados el PR debe indicar los siguientes parámetros que se deben emplear para los diseños de las obras de sostenimiento:\na) Peso unitario γ (ton/m3)\nb) Cohesión c (kg/cm2):\nc) Angulo de fricción φ (°)\nd) Coeficiente Activo Estático Ka\ne) Coeficiente en Reposo Estático Ko\nf) Coeficiente Pasivo Estático Kp\ng) Factor de Reducción del Empuje Pasivo R\nh) Coeficiente Activo Dinámico Kas\ni) Coeficiente en Reposo Dinámico Kos\nj) Coeficiente Pasivo Dinámico Kps\nk) Coeficiente de Fricción bajo la cimentación Tan δ",
+   "pagina": 14,
+   "epigrafe": "Parámetros para el diseño y construcción de obras de sostenimiento"
+  },
+  {
+   "numero": "16.2.10",
+   "epigrafe": "Análisis Adicionales",
+   "texto": "Indicación de las precauciones especiales que toma el proyectista o el constructor de la obra, como consecuencia de las características particulares del terreno investigado (efecto de la Napa Freática, contenido de sales agresivas al concreto, expansión o colapso del suelo, licuación y otros que considere pertinente el PR.)",
+   "pagina": 15
+  },
+  {
+   "numero": "16.3",
+   "epigrafe": "Planos y Perfiles de puntos investigados",
+   "texto": "Planos y Perfiles de puntos investigados",
+   "pagina": 15
+  },
+  {
+   "numero": "16.3.1",
+   "epigrafe": "Plano de Ubicación de los puntos de exploración",
+   "texto": "Plano planimétrico o topográfico (Ver numeral 13.4) del terreno, relacionado a una base de referencia (BM). En el plano de ubicación se indica la ubicación física de los puntos investigados empleándose la simbología indicada en la Tabla 7.",
+   "pagina": 15
+  },
+  {
+   "numero": "Tabla 7",
+   "epigrafe": "Técnicas de exploración",
+   "texto": "TÉCNICA DE EXPLORACIÓN | SÍMBOLO\nPozo o Calicata | C – n\nPerforación | P – n\nTrinchera | T - n\nAuscultación | A – n\nn = número correlativo de sondaje o punto de exploración.",
+   "pagina": 15
+  },
+  {
+   "numero": "16.3.2",
+   "epigrafe": "Perfil Estratigráfico por Punto explorado",
+   "texto": "Se incluye la información de cada estrato de suelo como se indica en el sub numeral 16.2.5, así como las muestras obtenidas y los resultados de los ensayos “in situ”. En caso se requiera un plano topográfico para el EMS, se debe indicar la cota de arranque del punto investigado y la cota de fondo. Se sugiere incluir los símbolos gráficos indicados en la Figura 3.",
+   "pagina": 15
+  },
+  {
+   "numero": "Figura 3",
+   "epigrafe": "Simbología de Suelos (Referencial)",
+   "texto": "DIVISIONES MAYORES | SÍMBOLO SUCS | DESCRIPCIÓN\nSUELOS GRANULARES · GRAVA Y SUELOS GRAVOSOS | GW | GRAVA BIEN GRADUADA\n| GP | GRAVA MAL GRADUADA\n| GM | GRAVA LIMOSA\n| GC | GRAVA ARCILLOSA\nSUELOS GRANULARES · ARENA Y SUELOS ARENOSOS | SW | ARENA BIEN GRADUADA\n| SP | ARENA MAL GRADUADA\n| SM | ARENA LIMOSA\n| SC | ARENA ARCILLOSA\nSUELOS FINOS · LIMOS Y ARCILLAS (LL < 50) | ML | LIMO INORGÁNICO DE BAJA PLASTICIDAD\n| CL | ARCILLA INORGÁNICA DE BAJA PLASTICIDAD\n| OL | LIMO ORGÁNICO O ARCILLA ORGÁNICA DE BAJA PLASTICIDAD\nSUELOS FINOS · LIMOS Y ARCILLAS (LL > 50) | MH | LIMO INORGÁNICO DE ALTA PLASTICIDAD\n| CH | ARCILLA INORGÁNICA DE ALTA PLASTICIDAD\n| OH | LIMO ORGÁNICO O ARCILLA ORGÁNICA DE ALTA PLASTICIDAD\nSUELOS ALTAMENTE ORGÁNICOS | Pt | TURBA Y OTROS SUELOS ALTAMENTE ORGÁNICOS.",
+   "pagina": 15
+  },
+  {
+   "numero": "16.4",
+   "epigrafe": "Resultados de los Ensayos de Laboratorio",
+   "texto": "Se incluyen todos los gráficos y resultados obtenidos en el Laboratorio según la aplicación de las normas de la Tabla 5.",
+   "pagina": 15
+  },
+  {
+   "numero": "Anexo II",
+   "epigrafe": "Norma española UNE 103-801-94 · Prueba de penetración dinámica superpesada",
+   "texto": "GEOTECNIA PRUEBA DE PENETRACIÓN DINÁMICA SUPERPESADA",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.1",
+   "epigrafe": "Objetivo",
+   "texto": "Esta norma tiene por objeto describir el procedimiento para la realización de la denominada prueba de penetración dinámica superpesada. Con esta prueba se determina la resistencia del terreno a la penetración de un cono cuando es golpeado según el procedimiento establecido.",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.2",
+   "epigrafe": "Campo de aplicación",
+   "texto": "La prueba de penetración dinámica está especialmente indicada para suelos granulares (1) Su utilización permite:\n- Determinar la resistencia a la penetración dinámica de un terreno.\n- Evaluar la compacidad de un suelo granular. Cuando el suelo contenga partículas de tamaños tales (2) que obstaculicen la penetración del cono en el terreno el resultado de la prueba puede no ser representativo.\n- Investigar la homogeneidad o anomalías de una capa de suelo.\n- Comprobar la situación en profundidad de una capa cuya existencia se conoce.",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.3",
+   "epigrafe": "Símbolos y abreviaturas",
+   "texto": "D.P.S.H. Abreviatura de la prueba de penetración dinámica en su procedimiento superpesado, que proviene de su denominación de inglés (DPSH). N20 = Número de golpes necesarios para un penetración del cono en el terreno de 20 cm de profundidad. R = Anotación a incluir cuando el número de golpes requerido para una penetración de 20 cm es superior a 100 golpes.",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.4",
+   "epigrafe": "Aparatos y material necesario",
+   "texto": "APARATOS Y MATERIAL NECESARIO",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.4.1",
+   "texto": "Cono: Es una pieza de acero cilíndrica que termina en forma cónica con un ángulo de 90º. El cono puede ser perdido o recuperable con las configuraciones respectivas que se reflejan en la figura 1.",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.4.2",
+   "texto": "Varillaje: Conjunto de varillas de acero macizas que se utilizan para transmitir la energía de golpeo desde la cabeza del varillaje hasta el cono.",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.4.3",
+   "texto": "Maza: Cuerpo de acero de 63,5 kg ± 0,5 kg de masa. La ejecución de pruebas de penetración dinámica debe ser precedida por un reconocimiento mediante sondeos que permita identificar las capas de suelos en el área investigada. La existencia de partículas con tamaño superior a 6 mm puede obstaculizar el avance del cono sin que ello suponga un incremento de compacidad.",
+   "pagina": 43
+  },
+  {
+   "numero": "Anexo II.4.4",
+   "texto": "Cabeza de impacto: Cuerpo de acero que recibe el impacto de la maza y que queda unido solidariamente a la parte superior de varillaje, sin que durante el golpeo pueda existir desplazamiento relativo entre ambos.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.4.5",
+   "texto": "Guiadera: Elemento de acero que guía suavemente la maza durante su caída.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.4.6",
+   "texto": "Sistema de elevación y escape: Mecanismo mediante el cual se eleva la maza a una altura de 760 mm ± 10 mm, se libera y se permite su caída libre por la guiadera hasta la cabeza de impacto. La velocidad de la maza cuando se libere será nula.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.4.7",
+   "texto": "Dispositivos de golpeo: Conjunto de elementos que comprende la maza, la cabeza de impacto, la guiadera y el sistema de elevación y escape.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.4.8",
+   "texto": "Martillo de seguridad: Dispositivo de golpeo automático en el que la maza, la cabeza de impacto, la guiadera, y el sistema de elevación y escape están integrados en un mismo elemento. Permite izar la maza y liberarla siempre a la misma altura sin producir movimientos sobre el varillaje de forma que la caída por la guiadera sea totalmente libre y la energía transferida a la cabeza de impacto sea la misma en todos los golpes. El martillo de seguridad permite igualmente establecer una frecuencia de golpeo uniforme (3).",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.4.9",
+   "texto": "Guía soporte: Pieza que asegura la verticalidad y el soporte lateral en el tramo del varillaje que sobresale del suelo.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.5",
+   "epigrafe": "Dimensiones y masas",
+   "texto": "En el procedimiento descrito en la Norma los aparatos definidos en el Capítulo IV tendrán las siguientes dimensiones y masas. Cono A = Área nominal de la sección 20 cm2 D = Diámetro 50,5 mm ± 0,5 mm. L1 = Longitud parte cónica 25 mm ± 0,2 mm. L2 = Longitud parte cilíndrica 50 mm ± 0,5 mm. L3 = Longitud parte troncocónica < 50 mm. Varillaje d = Diámetro – 33 mm ± 2 mm. Masa (máx.) – 8kg/m. Deflexión (máx.) – 0,2 % (4) Excentricidad en las conexiones (máx.) – 0,2 mm. Dispositivo de golpeo Maza: Masa – 63,5 kg ± 0,5 kg. Relación altura Lm al diámetro Dm – 1 ≤ Lm/Dm ≤ 2 Altura de caída: 760 mm ± 10 mm. Cabeza de impacto: Diámetro dc – 100 mm < dc < 0,5 Dm. Masa total dispositivos de golpeo ≤ 115 kg.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.6",
+   "epigrafe": "Instrumentos de medida",
+   "texto": "INSTRUMENTOS DE MEDIDA",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.6.1",
+   "texto": "Contador de golpes: El dispositivo de golpeo utilizado, deberá disponer de un contador automático de golpes.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.6.2",
+   "texto": "Referencia de profundidad: el equipo de penetración deberá incluir una escala de profundidad de avance marcada de forma indeleble y visible.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.6.3",
+   "texto": "Medidor de par: Permitirá la media en N-m del par necesario para girar el varillaje. La capacidad de medida no será inferior a 200 N-m con una graduación de 10 N-m. Su exactitud será comprobada periódicamente.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.6.4",
+   "texto": "Referencia de Verticalidad: Inclinómetro que permitirá observar en grados o en tanto por ciento la desviación de verticalidad del varillaje durante la ejecución de la prueba.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.7",
+   "epigrafe": "Procedimiento operativo",
+   "texto": "PROCEDIMIENTO OPERATIVO",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.7.1",
+   "texto": "Selección del punto de ensayo: Con el fin de que no haya habido perturbaciones en el punto de ensayo este debe distanciarse por lo menos metro y medio de cualquier otro punto ya ensayado y en el caso de existir sondeos previos, la separación deberá ser como mínimo de veinticinco diámetros.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.7.2",
+   "texto": "Emplazamiento y conexiones: En el punto seleccionado se emplazará el dispositivo de golpeo de tal forma que el soporte guía y el eje de la guiadera queden perfectamente verticales y centrados sobre el punto (5 ). Utilización de otros dispositivos de golpeo que no cumplan las especificaciones descritas en esta norma implica que pueda obtenerse un número de golpes diferente de N20 Deflexión medida entre extremos de una misma varilla y entre los puntos medios de dos adyacentes. Debe comprobarse que durante el proceso de golpeo el dispositivo no se desplaza de su posicionamiento inicial. Si es necesario se disponen anclajes o soportes. El cono ya acoplado (perdido) o enroscado (recuperable) a un extremo del primer tramo de varillaje, se situará sobre el punto elegido a través del soporte guía, conectando posteriormente el otro extremo de varillaje al dispositivo de golpeo. Una vez efectuada esta conexión se comprobará que:\n- El varillaje y la guiadera quedan coaxiales.\n- Las desviaciones de la verticalidad del primer tramo de varillaje no supere el 2%.\n- La longitud libre de varillaje entre el soporte guía y la conexión al dispositivo de golpeo no supere 1,2 m.",
+   "pagina": 44
+  },
+  {
+   "numero": "Anexo II.7.3",
+   "texto": "Golpeo y penetración: El golpeo se efectuará con una frecuencia comprendida entre 15 golpes y 30 golpes por minuto registrando el número de golpes necesario para introducir en el terreno el cono cada intervalo de 20 cm. Este número de golpes se anota cono N20. Cuando sea necesario añadir una varilla debe asegurarse que al retirar el dispositivo de golpeo no se introduzcan movimientos de ascenso o rotación en el varillaje. Se comprobará cuando se añada la varilla que esta queda enroscada a tope y la desviación de su inclinación frente a la vertical no excede de 5%. El tramo que sobresalga a partir del soporte guía no será superior 1,2 m. Deberán anotarse todas las introducciones mayores de 15 minutos durante todo el proceso de penetración.",
+   "pagina": 45
+  },
+  {
+   "numero": "Anexo II.7.4",
+   "texto": "Rotación: Cada metro de penetración debe medirse y anotarse el par necesario para girar el tren de varillaje una vuelta y media (6). Se considerará que el rozamiento no es significativo por debajo del valor de 10 N.m.",
+   "pagina": 45
+  },
+  {
+   "numero": "Anexo II.7.5",
+   "texto": "Finalización de la prueba: La prueba se dará por finalizada cuando se satisfagan algunas de las siguientes condiciones:\n- Se alcance la profundidad que previamente se haya establecido.\n- Se supere los 100 golpes para una penetración de 20 cm. Es decir N20 > 100.\n- Cuando tres valores consecutivos de N20 sean iguales o superiores a 75 golpes.\n- El valor del par de rozamiento supere los 200 N.m.",
+   "pagina": 45
+  },
+  {
+   "numero": "Anexo II.8",
+   "epigrafe": "Presentación de resultados",
+   "texto": "De cada prueba realizada con arreglo a esta norma se presentará un gráfico como el de la figura 2 en el que se incluyan los siguientes puntos: Comprobaciones antes de la prueba\n- Tipo de cono utilizado. Dimensiones y masa\n- Longitud de cada varilla. Masa por metro de varillaje, incluidos nicles de unión.\n- Masa de dispositivos de golpeo.\n- Fecha y hora de la prueba. Tiempo de duración. Comprobaciones después de la prueba\n- Diámetros del cono.\n- Excentricidad y deflexiones del varillaje. Observaciones\n- Interrupciones superiores a 5 min. pérdidas de verticalidad superiores al 5%. Penetraciones sin golpeo. Obstrucciones temporales, etc.",
+   "pagina": 45
+  },
+  {
+   "numero": "Anexo II.9",
+   "epigrafe": "Correspondencia con otras normas",
+   "texto": "Para la redacción de esta norma se han consultado los documentos y normas que a continuación se relacionan:\n- Report of the ISSMFE Technical Comite on Penetration Testing of Soils 16 with Reference Test Procedures for Dynamic probing super heavy DPSH. Swedish Geotechnical, Linkoping, June 1989.\n- NFP 94 – 115 (December 1990). Sondage an penetrometro dynamique type B.\n- BS 1377: Part 9 (1990): Dynamic probing super heavy (DPSH). El par de rozamiento medido debe ser originado exclusivamente por el cono y tren de varillas introducidos en el terreno.",
+   "pagina": 45
+  },
+  {
+   "numero": "Anexo III",
+   "epigrafe": "Auscultación dinámica mediante el Cono Tipo Peck (CTP)",
+   "texto": "AUSCULTACIÓN DINÁMICA MEDIANTE EL CONO TIPO PECK (CTP)",
+   "pagina": 46
+  },
+  {
+   "numero": "Anexo III.1",
+   "epigrafe": "Objetivo",
+   "texto": "Este anexo tiene por objeto describir el procedimiento para la realización de la prueba de penetración dinámica con el Cono Tipo Peck. Con esta prueba se determina la resistencia del terreno a la penetración de un cono cuando es golpeado según el procedimiento establecido en este Anexo.",
+   "pagina": 46
+  },
+  {
+   "numero": "Anexo III.2",
+   "epigrafe": "Campo de aplicación",
+   "texto": "La prueba de penetración dinámica está especialmente indicada para suelos granulares(1), como se indica en la Tabla 3 de esta norma. Su utilización permite:\n- Determinar la resistencia a la penetración dinámica de un terreno.\n- Evaluar la compacidad de un suelo granular. Cuando el suelo contenga partículas de grava que obstaculicen la penetración del cono en el terreno el resultado de la prueba puede no ser representativo.\n- Investigar la homogeneidad o anomalías de una capa de suelo.\n− Comprobar la situación en profundidad de una capa de suelo cuya existencia se conoce.",
+   "pagina": 46
+  },
+  {
+   "numero": "Anexo III.3",
+   "epigrafe": "Símbolos y abreviaturas",
+   "texto": "CTP = Abreviatura de la prueba de penetración dinámica con el Cono Tipo Peck. Cn = Número de golpes necesarios para una penetración del cono en el terreno de 15 cm de profundidad. R = Anotación a incluir cuando el número de golpes requerido para una penetración de 15 cm es superior a 100 golpes. Significa “rechazo”.",
+   "pagina": 46
+  },
+  {
+   "numero": "Anexo III.4",
+   "epigrafe": "Aparatos y material necesario",
+   "texto": "APARATOS Y MATERIAL NECESARIO",
+   "pagina": 46
+  },
+  {
+   "numero": "Anexo III.4.1",
+   "texto": "Cono: Es una pieza de fierro fundido cilíndrica que termina en forma cónica con un ángulo de 60º. El cono tiene la configuración mostrada en la Figura 1.",
+   "pagina": 46
+  },
+  {
+   "numero": "Anexo III.4.2",
+   "texto": "Varillaje: Conjunto de varillas de acero de unión rápida que se utilizan para conectar el cono con el ensamblaje de caída de peso para transmitir la energía de golpeo desde la cabeza del varillaje hasta el cono. Las varillas de muestreo tienen una rigidez (momento de inercia) igual o mayor a la de una varilla “AW”.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.4.3",
+   "texto": "Martillo: Cuerpo de acero sólido y rígido de 63,5 kg ± 1,0 kg de masa.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.4.4",
+   "texto": "Yunque o Cabeza de impacto: Cuerpo de acero que recibe el impacto del martillo y que queda unido solidariamente a la parte superior de varillaje, sin que durante el golpeo pueda existir desplazamiento relativo entre ambos.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.4.5",
+   "texto": "Guía: Elemento de acero que guía suavemente al martillo durante su caída.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.4.6",
+   "texto": "Sistema de caída del martillo: Puede utilizarse sistemas de malacate con soga de manila de una pulgada de diámetro, semi-automático o automático, siempre y cuando el aparato de izaje no cause penetración del cono cuando se engancha y levanta el martillo.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.4.7",
+   "texto": "Equipo accesorio: Se proporcionan etiquetas, contenedores, hojas de datos y equipos para medir el nivel del agua, de acuerdo con los requisitos del Proyecto.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.5",
+   "epigrafe": "Procedimiento operativo",
+   "texto": "PROCEDIMIENTO OPERATIVO",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.5.1",
+   "texto": "Selección del punto de ensayo: Con el fin de que no haya perturbaciones en el punto de ensayo, este debe distanciarse por lo menos metro y medio de cualquier otro punto ya ensayado y en el caso de existir sondeos previos, la separación es como mínimo de veinticinco diámetros",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.5.2",
+   "texto": "Emplazamiento y conexiones: En el punto seleccionado se emplaza el dispositivo de golpeo de tal forma que el soporte guía y el eje de la guiadera queden perfectamente verticales y centrados sobre el punto (2 ). El cono ya acoplado a un extremo del primer tramo de varillaje, se sitúa sobre el punto elegido a través del soporte guía, conectando posteriormente el otro extremo de varillaje al dispositivo de golpeo. Una vez efectuada esta conexión se comprueba que:\n− El varillaje y la guiadera quedan coaxiales.\n− Las desviaciones de la verticalidad del primer tramo de varillaje no supera el 2%.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.5.3",
+   "texto": "Golpeo y penetración: El golpeo se efectúa con una frecuencia comprendida entre 15 golpes y 30 golpes por minuto registrando el número de golpes necesario para introducir en el terreno el cono cada intervalo de 15 cm. La suma del número de golpes en dos intervalos consecutivos se anota cono Cn. Cuando sea necesario añadir una varilla debe asegurarse que al retirar el dispositivo de golpeo no se introduce movimientos de ascenso o rotación en el varillaje. Cuando se añada la varilla se comprueba que ésta quede enroscada a tope y la desviación de su inclinación frente a la vertical no exceda de 5%. Deben anotarse todas las interrupciones mayores de 15 minutos durante todo el proceso de penetración.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.5.4",
+   "texto": "Finalización de la prueba: La prueba se da por finalizada cuando se satisfagan algunas de las siguientes condiciones:\n− Se alcance la profundidad que previamente se haya establecido.\n− Se supere los 100 golpes para una penetración de 15 cm, es decir: Cn > 100.\n− Cuando tres valores consecutivos de Cn sean iguales o superiores a 75 golpes.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.6",
+   "epigrafe": "Presentación de resultados",
+   "texto": "De cada prueba realizada con arreglo a este anexo se presenta un gráfico N60 vs profundidad y se indica:\n− Fecha y hora de la prueba.\n− Excentricidad y deflexiones del varillaje si las hubiere.\n− Interrupciones superiores a 15 min. Perdidas de verticalidad superiores al 5%. Penetraciones sin golpeo. Obstrucciones temporales, etc.",
+   "pagina": 47
+  },
+  {
+   "numero": "Anexo III.7",
+   "epigrafe": "Correspondencia con otras normas",
+   "texto": "Para la redacción de este anexo se han consultado los documentos y normas que a continuación se relacionan:\n- Norma Española – UNE 103-801-94 – Geotecnia - Prueba de Penetración Dinámica Superpesada.\n- NTP 339.133 :1999. SUELOS. Método de ensayo de penetración estándar SPT.\n(1) La ejecución de pruebas con el Cono Dinámico Tipo Peck requiere de la realización de perforaciones con la ejecución de ensayos SPT que permitan identificar las capas de suelos en el área investigada y la correlación de sus resultados.\n(2) Debe comprobarse que durante el proceso de golpeo el dispositivo no se desplaza de su posicionamiento inicial. Si es necesario se disponen anclajes o soportes. 1718935-1",
+   "pagina": 47
+  }
+ ],
+ "mazos": [
+  {
+   "slug": "e050-c02-estudios",
+   "titulo": "E.050 · Cap. 2 · Estudios",
+   "descripcion": "Información previa, técnicas de exploración (calicatas, perforaciones, SPT, CPT, DPSH, CTP, DPL), Tablas 1 a 7, programa mínimo, profundidad de exploración, informe del EMS y Anexos II y III.",
+   "acceso": "free",
+   "orden": 202,
+   "tarjetas": [
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Antes de ejecutar un EMS, ¿quién debe entregar al PR los planos del terreno y las características de la obra a cimentar?",
+      "opciones": [
+       "El propio PR, con su topógrafo",
+       "El solicitante del EMS",
+       "La municipalidad que otorga la licencia",
+       "El constructor de la obra"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "13.2",
+       "extracto": "son proporcionados por quien solicita el EMS (el Solicitante) al PR antes de ejecutarlo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la información previa de un EMS, ¿por debajo de qué pendiente promedio del terreno basta un plano planimétrico en lugar de uno topográfico?",
+      "opciones": [
+       "2 %",
+       "15 %",
+       "5 %",
+       "10 %"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "13.4.2",
+       "extracto": "Si la pendiente promedio del terreno fuera inferior al 5%, basta un plano planimétrico."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si el plano entregado por el solicitante no indica la ubicación prevista de las obras, ¿qué área debe cubrir la exploración de campo del EMS?",
+      "opciones": [
+       "Solo el área que el PR estime para la edificación",
+       "Solo la mitad frontal del terreno",
+       "Toda el área del terreno",
+       "Un círculo de 30 m alrededor del centro del terreno"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "13.4.2",
+       "extracto": "El plano debe indicar obligatoriamente la ubicación prevista de las obras a edificar. De no ser así, el programa de exploración de campo (Ver artículo 15), cubre toda el área del terreno."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para fijar el programa de exploración mínimo, la E.050 clasifica las edificaciones en tipos I, II, III y IV. ¿Cuál es el más exigente?",
+      "opciones": [
+       "El tipo I",
+       "El tipo II",
+       "El tipo III",
+       "El tipo IV"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "13.5.4",
+       "extracto": "donde I, II, III y IV designan la importancia relativa de la estructura desde el punto de vista de la exploración de suelos necesaria para cada tipo de edificación, siendo el I más exigente que el II, éste que el III y éste que el IV."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 1 · Pórticos y/o muros de concreto (distancia entre apoyos < 10 m)",
+      "columnas": [
+       "≤ 3 pisos",
+       "4 a 8 pisos",
+       "9 a 12 pisos",
+       "> 12 pisos"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Tipo de edificación",
+        "valores": [
+         "III",
+         "III",
+         "II",
+         "I"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 0,
+       "columna": 2
+      },
+      "explicacion": "El número de pisos incluye los sótanos."
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 1",
+       "extracto": "PÓRTICOS Y/O MUROS DE CONCRETO | < 10 | III | III | II | I"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un edificio de pórticos de concreto tiene 14 pisos incluidos sus sótanos y luces menores de 10 m. ¿Qué tipo de edificación le asigna la Tabla 1 de la E.050 para el programa de exploración?",
+      "opciones": [
+       "Tipo III",
+       "Tipo II",
+       "Tipo IV",
+       "Tipo I"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 1",
+       "extracto": "PÓRTICOS Y/O MUROS DE CONCRETO | < 10 | III | III | II | I"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Un edificio de muros portantes de albañilería de 5 pisos, con distancias entre apoyos menores de 12 m, ¿qué tipo de edificación es según la Tabla 1 de la E.050?",
+      "opciones": [
+       "Tipo III",
+       "Tipo IV",
+       "Tipo II",
+       "Tipo I"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 1",
+       "extracto": "MUROS PORTANTES DE ALBAÑILERÍA | < 12 | II | I | --- | ---"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 1 de la E.050, ¿qué tipo de edificación es un tanque elevado de más de 9 m de altura?",
+      "opciones": [
+       "Tipo I",
+       "Tipo III",
+       "Tipo II",
+       "Tipo IV"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 1",
+       "extracto": "TANQUES ELEVADOS Y SIMILARES | ≤ 9 m de altura: II | > 9 m de altura: I"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 1 de la E.050, ¿qué tipo de obra son las instalaciones sanitarias de agua y alcantarillado en obras urbanas?",
+      "opciones": [
+       "Tipo III",
+       "Tipo I",
+       "Tipo II",
+       "Tipo IV"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 1",
+       "extracto": "INSTALACIONES SANITARIAS DE AGUA Y ALCANTARILLADO EN OBRAS URBANAS. | IV"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la Tabla 1 de la E.050, si la distancia entre apoyos de una estructura supera la indicada para su sistema, ¿cómo se clasifica?",
+      "opciones": [
+       "En el tipo de edificación inmediato superior (más exigente)",
+       "En el tipo inmediato inferior (menos exigente)",
+       "Siempre como tipo I",
+       "Se mantiene el mismo tipo"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 1",
+       "extracto": "- Cuando la distancia sobrepasa la indicada, se clasificará en el tipo de edificación inmediato superior."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Para qué se usan exclusivamente los ensayos de densidad de campo (cono de arena, balón de jebe, reemplazo con agua) según la E.050?",
+      "opciones": [
+       "Para determinar la densidad relativa de suelos granulares naturales",
+       "Para controlar la compactación de los rellenos controlados o de ingeniería",
+       "Para calcular la presión admisible de suelos granulares",
+       "Para clasificar los suelos según SUCS"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 2",
+       "extracto": "NOTA: Los ensayos de densidad de campo, no se emplean para determinar la densidad relativa y la presión admisible de un suelo granular. Solo se emplean para el control de la densidad de los Rellenos Controlados o de Ingeniería."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En qué suelos prohíbe la E.050 explorar con calicatas o trincheras?",
+      "opciones": [
+       "En arcillas saturadas con más de 50 % de finos",
+       "En suelos arenosos con un porcentaje de finos menor o igual a 5 %",
+       "En gravas con bolonería",
+       "En suelos con nivel freático a más de 3 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.2.1",
+       "extracto": "Se prohíbe el uso de este tipo de técnica de exploración en suelos arenosos con un porcentaje de finos menores e iguales a 5%."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué profundidad máxima admite la E.050 para una perforación manual?",
+      "opciones": [
+       "10 m",
+       "15 m",
+       "3 m",
+       "5 m"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "14.2.2",
+       "extracto": "La profundidad máxima es 10 metros en perforación manual, sin limitación en perforación mecánica."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En una perforación por lavado con agua (wash boring), ¿qué diámetro máximo permite la E.050?",
+      "opciones": [
+       "6 pulgadas",
+       "2 pulgadas",
+       "8 pulgadas",
+       "4 pulgadas"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "14.2.2",
+       "extracto": "b) Perforaciones por Lavado con Agua (Wash Boring). El diámetro de la perforación no debe ser mayor a 4 pulgadas."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Pueden usarse para ensayos de laboratorio las muestras recuperadas del agua de lavado de una perforación wash boring?",
+      "respuesta": "No. En ningún caso las muestras del agua de lavado deben emplearse para ensayos de laboratorio."
+     },
+     "citas": [
+      {
+       "articulo": "14.2.2",
+       "extracto": "En ningún caso, las muestras procedentes del agua del lavado deben emplearse para ensayos de laboratorio."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Por qué la E.050 prohíbe ejecutar el ensayo SPT en el fondo de una calicata excavada en suelo natural?",
+      "opciones": [
+       "Porque el martillo no cabe en la calicata",
+       "Porque el SPT solo se permite en rocas",
+       "Porque el agua de la calicata altera el número de golpes",
+       "Por la pérdida de confinamiento del suelo"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "14.2.3",
+       "extracto": "Se prohíbe ejecutar ensayos SPT en el fondo de calicatas, trincheras o cualquier tipo de excavación en suelos naturales, debido a la pérdida de confinamiento."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Al hacer ensayos SPT se encuentra un relleno no controlado de 5 m de espesor. ¿Qué indica la E.050?",
+      "opciones": [
+       "Reemplazar el SPT por un ensayo DPL",
+       "Cambiar a perforación rotativa mecánica, sin necesidad de eliminar el relleno",
+       "Ejecutar el SPT desde el fondo de una calicata de 5 m",
+       "Retirar el relleno hasta el terreno natural y ensayar desde allí"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "14.2.3",
+       "extracto": "En el caso que la profundidad sea mayor que 3 m, se debe cambiar el sistema de perforación a rotativo mecánico sin la necesidad de eliminar el Relleno No Controlado."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si al ejecutar ensayos SPT se detecta un relleno no controlado, ¿hasta qué profundidad del relleno se permite retirarlo e iniciar los ensayos sobre el terreno natural?",
+      "opciones": [
+       "Hasta 5 m",
+       "Hasta 10 m",
+       "Hasta 1,5 m",
+       "Hasta 3 m"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "14.2.3",
+       "extracto": "En el eventual caso de detectar Rellenos No Controlados a profundidades no mayores a 3 m, se permite retirar estos materiales"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "completar",
+      "texto": "El ensayo de penetración cuasi-estática con cono y cono de fricción (CPT) se conoce también como el {{Cono Holandés}}."
+     },
+     "citas": [
+      {
+       "articulo": "14.2.4",
+       "extracto": "Este método se conoce también como el Cono Holandés."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Puede un ensayo DPSH (penetración dinámica superpesada) sustituir al ensayo de penetración estándar SPT en un EMS?",
+      "opciones": [
+       "Sí, en cualquier suelo granular",
+       "Solo en suelos cohesivos saturados",
+       "Sí, si se hacen el doble de ensayos",
+       "No; sus valores N20 deben correlacionarse obligatoriamente con los N del SPT en el mismo terreno"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "14.2.5",
+       "extracto": "no sustituyen al Ensayo de Penetración Estándar. Los parámetros obtenidos con este ensayo (N20) deben ser obligatoriamente correlacionados con los parámetros de los ensayos SPT (N)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estas técnicas de auscultación dinámica fue desarrollada en el Perú?",
+      "opciones": [
+       "El Cono Dinámico Tipo Peck (CTP)",
+       "El cono holandés (CPT)",
+       "El penetrómetro dinámico superpesado (DPSH)",
+       "El penetrómetro dinámico ligero (DPL)"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "14.2.6",
+       "extracto": "Es un ensayo desarrollado en el Perú que se utiliza para efectuar auscultaciones dinámicas"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Hasta qué profundidad permite la E.050 emplear el penetrómetro dinámico ligero (DPL)?",
+      "opciones": [
+       "6,00 m",
+       "1,50 m",
+       "3,00 m",
+       "10,00 m"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "14.2.7",
+       "extracto": "Se prohíbe emplear este tipo de ensayo a profundidades mayores de 3.00 metros."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿En qué suelos es aplicable el ensayo de corte con veleta de campo según la E.050?",
+      "opciones": [
+       "En gravas arenosas compactas",
+       "En cualquier suelo, saturado o no",
+       "Solo en suelos cohesivos saturados, sin arena ni grava",
+       "En arenas limpias sumergidas"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "14.2.8",
+       "extracto": "Este ensayo es aplicable únicamente cuando se trata de suelos cohesivos saturados desprovistos de arena o grava"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Qué condiciones pone la E.050 a la prueba de carga con plato (NTP 339.153)?",
+      "respuesta": "Debe ir precedida de un EMS y se recomienda solo cuando el suelo es tridimensionalmente homogéneo, abarca la profundidad activa de la cimentación y es semejante al que está bajo el plato."
+     },
+     "citas": [
+      {
+       "articulo": "14.2.9",
+       "extracto": "Las pruebas de carga deben ser precedidas por un EMS y se recomienda su uso únicamente cuando el suelo a ensayar es tridimensionalmente homogéneo, comprende la profundidad activa de la cimentación y es semejante al ubicado bajo el plato de carga."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 3 de la E.050, ¿en qué tipo de suelo no se permiten los ensayos SPT, CPT, DPSH y CTP?",
+      "opciones": [
+       "Arenas limosas",
+       "Gravas",
+       "Arcillas de alta plasticidad",
+       "Limos no plásticos"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 3",
+       "extracto": "SPT | NTP 339.133 | Perforación | Todos excepto gravas | N | Calicata | Gravas"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 3 de la E.050, ¿en qué suelos está permitido el penetrómetro dinámico ligero (DPL)?",
+      "opciones": [
+       "GW, GP y GM",
+       "SP, SW y SM (con limos no plásticos)",
+       "Todos excepto gravas",
+       "CL, ML, CH y MH saturados"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 3",
+       "extracto": "DPL | NTP 339.159 | Auscultación | SP, SW, SM (con limos no plásticos) | n | Calicata | Lo restante"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Golpes que se cuentan en cada ensayo de penetración (leyenda de la Tabla 3)",
+      "columnas": [
+       "Penetración por cada conteo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "N (SPT)",
+        "valores": [
+         "0,30 m"
+        ]
+       },
+       {
+        "etiqueta": "N20 (DPSH)",
+        "valores": [
+         "0,20 m"
+        ]
+       },
+       {
+        "etiqueta": "Cn (Cono Tipo Peck)",
+        "valores": [
+         "0,30 m"
+        ]
+       },
+       {
+        "etiqueta": "n (DPL)",
+        "valores": [
+         "0,10 m"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 3,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 3",
+       "extracto": "n = Número de golpes por cada 0,10 m de penetración mediante auscultación con DPL."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En el ensayo SPT, ¿por cada cuánta penetración se cuenta el número de golpes N, según la leyenda de la Tabla 3?",
+      "opciones": [
+       "0,15 m",
+       "0,20 m",
+       "0,10 m",
+       "0,30 m"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 3",
+       "extracto": "N = Número de golpes por cada 0,30 m de penetración en el ensayo estándar de penetración."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 3 de la E.050, ¿qué parámetros se obtienen con el ensayo de veleta de campo?",
+      "opciones": [
+       "qc y fc (resistencia de punta y fricción en el manguito)",
+       "Asentamiento vs. presión",
+       "N20 (golpes por 0,20 m)",
+       "Cu (cohesión no drenada) y St (sensitividad)"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 3",
+       "extracto": "Veleta de Campo(3) | NTP 339.155 | Perforación/ Calicata | CL, ML, CH, MH. Para todos los casos con IP > 0 y saturados | Cu, St"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué debe conservar una muestra alterada en bolsa de plástico (Mab), según la Tabla 4 de la E.050?",
+      "opciones": [
+       "El contenido de agua natural",
+       "La granulometría del suelo en su estado natural",
+       "La estructura y la cementación del suelo",
+       "Las propiedades mecánicas del suelo inalterado"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 4",
+       "extracto": "Debe mantener inalterada la granulometría del suelo en su estado natural al momento del muestreo."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 4 · Tipos de muestra",
+      "columnas": [
+       "Estado",
+       "Se obtiene en"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Mib",
+        "valores": [
+         "Inalterada",
+         "Bloques"
+        ]
+       },
+       {
+        "etiqueta": "Mit",
+        "valores": [
+         "Inalterada",
+         "Tubos de pared delgada"
+        ]
+       },
+       {
+        "etiqueta": "Mab",
+        "valores": [
+         "Alterada",
+         "Bolsas de plástico"
+        ]
+       },
+       {
+        "etiqueta": "Mah",
+        "valores": [
+         "Alterada",
+         "Lata sellada"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 3,
+       "columna": 1
+      }
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 4",
+       "extracto": "Muestra alterada para humedad en lata sellada (Mah) | NTP 339.151 SUELOS. Prácticas normalizadas para la preservación y transporte de suelos | En lata sellada | Alterada | Debe mantener inalterado el contenido de agua."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A qué suelos se limita la muestra inalterada en bloque (Mib) según la Tabla 4 de la E.050?",
+      "opciones": [
+       "Solo rellenos controlados",
+       "Suelos cohesivos, rocas blandas o suelos granulares finos suficientemente cementados",
+       "Arenas limpias y gravas",
+       "Cualquier suelo bajo el nivel freático"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 4",
+       "extracto": "(Aplicable solamente a suelos cohesivos, rocas blandas o suelos granulares finos suficientemente cementados para permitir su obtención)."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 5 de la E.050, ¿para qué se emplea el ensayo de compactación Proctor modificado (NTP 339.141)?",
+      "opciones": [
+       "Para medir el potencial de colapso",
+       "Para obtener la capacidad de carga del suelo natural",
+       "Únicamente para el control de rellenos de ingeniería o rellenos controlados",
+       "Para clasificar el suelo según SUCS"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 5",
+       "extracto": "** Este ensayo se emplea únicamente para el control de Rellenos de Ingeniería o Rellenos Controlados."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "¿Cómo se obtiene el perfil estratigráfico definitivo que va en el informe del EMS?",
+      "respuesta": "Las muestras se clasifican según SUCS (NTP 339.134) y esa clasificación se compara con la descripción visual-manual de campo (NTP 339.150); se compatibilizan las diferencias."
+     },
+     "citas": [
+      {
+       "articulo": "14.6",
+       "extracto": "las muestras se clasifican, en todos los casos, de acuerdo al Sistema Unificado de Clasificación de Suelos – SUCS NTP 339.134 y los resultados de esta clasificación son comparados con la descripción visual – manual NTP 339.150"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para aplicar las «condiciones de frontera» del programa mínimo de exploración, ¿a qué distancia del terreno no debe haber edificaciones con grietas o desplomes originados por el suelo?",
+      "opciones": [
+       "200 m",
+       "50 m",
+       "30 m",
+       "100 m"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 a)",
+       "extracto": "a-2) No existen edificaciones situadas a menos de 100 m del terreno a edificar que presenten anomalías como grietas o desplomes originados por el terreno de cimentación."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Entre las «condiciones de frontera» del programa mínimo, ¿cuánto puede profundizar como máximo la cimentación prevista respecto de las cimentaciones contiguas?",
+      "opciones": [
+       "1,5 m",
+       "1,0 m",
+       "3,0 m",
+       "0,5 m"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 a)",
+       "extracto": "a-6) La cimentación prevista para el edificio en estudio no profundiza respecto de las inmediatamente contiguas más de 1,5 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 6 · Número de puntos de exploración (n)",
+      "columnas": [
+       "Un punto por cada"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Tipo I",
+        "valores": [
+         "225 m² de área techada del primer piso"
+        ]
+       },
+       {
+        "etiqueta": "Tipo II",
+        "valores": [
+         "450 m² de área techada del primer piso"
+        ]
+       },
+       {
+        "etiqueta": "Tipo III",
+        "valores": [
+         "900 m² de área techada del primer piso"
+        ]
+       },
+       {
+        "etiqueta": "Tipo IV",
+        "valores": [
+         "100 m de instalaciones sanitarias"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 1,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 6",
+       "extracto": "II | uno por cada 450 m2 de área techada del primer piso"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 6 de la E.050, ¿cada cuántos m² de área techada del primer piso se exige un punto de exploración en una edificación tipo I?",
+      "opciones": [
+       "225 m²",
+       "100 m²",
+       "900 m²",
+       "450 m²"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 6",
+       "extracto": "I | uno por cada 225 m2 de área techada del primer piso"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Según la Tabla 6 de la E.050, ¿cuántos puntos de exploración se exigen en una habilitación urbana para viviendas unifamiliares de hasta 3 pisos?",
+      "opciones": [
+       "5 por cada hectárea por habilitar",
+       "1 por cada 900 m² de terreno",
+       "3 por cada hectárea por habilitar",
+       "1 por cada hectárea por habilitar"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 6",
+       "extracto": "Habilitación urbana para Viviendas Unifamiliares de hasta 3 pisos | 3 por cada hectárea de terreno por habilitar"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es el número mínimo de puntos de exploración de un EMS, cualquiera que sea el área?",
+      "opciones": [
+       "3",
+       "2",
+       "1",
+       "4"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 b)",
+       "extracto": "n nunca será menor de 3."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si al hacer el EMS todavía no se conoce el emplazamiento exacto de la estructura en el terreno, ¿con qué área se calcula el número de puntos de exploración n?",
+      "opciones": [
+       "Con la mitad del área del terreno",
+       "Con el área techada estimada del primer piso",
+       "Con el área total del terreno",
+       "Con el área de la mayor zapata multiplicada por 10"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 b)",
+       "extracto": "cuando no se conozca dicho emplazamiento, n se determina en función del área total del terreno."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Un edificio de tipo II (Tabla 1) tendrá {A} m² de área techada en el primer piso. Según la Tabla 6, ¿cuántos puntos de exploración exige como mínimo el EMS?",
+      "variables": {
+       "A": {
+        "etiqueta": "Área techada del primer piso",
+        "valores": [
+         1800,
+         2250,
+         2700,
+         3600
+        ],
+        "unidad": "m²"
+       }
+      },
+      "formula": "A/450",
+      "unidadResultado": "puntos",
+      "tolerancia": 0.02,
+      "explicacion": "n = área / 450 m², y nunca menos de 3."
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 6",
+       "extracto": "II | uno por cada 450 m2 de área techada del primer piso"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Una edificación de tipo I (Tabla 1) tendrá {A} m² de área techada en el primer piso. Según la Tabla 6, ¿cuántos puntos de exploración exige como mínimo el EMS?",
+      "variables": {
+       "A": {
+        "etiqueta": "Área techada del primer piso",
+        "valores": [
+         900,
+         1125,
+         1350,
+         1800
+        ],
+        "unidad": "m²"
+       }
+      },
+      "formula": "A/225",
+      "unidadResultado": "puntos",
+      "tolerancia": 0.02,
+      "explicacion": "n = área / 225 m², y nunca menos de 3."
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 6",
+       "extracto": "I | uno por cada 225 m2 de área techada del primer piso"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para una cimentación superficial sin sótano, ¿con qué expresión calcula la E.050 la profundidad mínima p de cada punto de exploración?",
+      "opciones": [
+       "p = Df + 3 B",
+       "p = Df + B",
+       "p = 2 Df",
+       "p = Df + z, con z = 1,5 B"
+      ],
+      "correcta": 3,
+      "explicacion": "Df: profundidad de cimentación; B: ancho de la cimentación prevista de mayor área."
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "EDIFICACIÓN SIN SÓTANO: p = Df + z"
+      },
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "z = 1,5 B; siendo B el ancho de la cimentación prevista de mayor área."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Edificación sin sótano con cimentación superficial: profundidad de cimentación Df = {D} m y ancho de la zapata de mayor área B = {B} m. ¿Cuál es la profundidad mínima de exploración p (m)?",
+      "variables": {
+       "D": {
+        "etiqueta": "Df",
+        "valores": [
+         1.2,
+         1.5,
+         2.0
+        ],
+        "unidad": "m"
+       },
+       "B": {
+        "etiqueta": "B",
+        "valores": [
+         1.5,
+         2.0,
+         2.5,
+         3.0
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "D + 1.5*B",
+      "unidadResultado": "m",
+      "tolerancia": 0.02,
+      "explicacion": "p = Df + 1,5 B. Con estos valores p siempre supera el mínimo absoluto de 3 m."
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "EDIFICACIÓN SIN SÓTANO: p = Df + z"
+      },
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "z = 1,5 B"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "caso_numerico",
+      "enunciado": "Edificación con sótano y cimentación superficial: desnivel entre el piso terminado del sótano más profundo y el terreno natural h = {H} m, profundidad de cimentación bajo ese piso Df = {D} m y ancho de la zapata de mayor área B = {B} m. ¿Cuál es la profundidad mínima de exploración p (m), medida desde el terreno natural?",
+      "variables": {
+       "H": {
+        "etiqueta": "h",
+        "valores": [
+         3.0,
+         3.5,
+         6.0
+        ],
+        "unidad": "m"
+       },
+       "D": {
+        "etiqueta": "Df",
+        "valores": [
+         1.2,
+         1.5
+        ],
+        "unidad": "m"
+       },
+       "B": {
+        "etiqueta": "B",
+        "valores": [
+         1.5,
+         2.0,
+         2.5
+        ],
+        "unidad": "m"
+       }
+      },
+      "formula": "H + D + 1.5*B",
+      "unidadResultado": "m",
+      "tolerancia": 0.02,
+      "explicacion": "p = h + Df + 1,5 B. Con estos valores p siempre supera el mínimo de 6 m para estructuras con sótano."
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "EDIFICACIÓN CON SÓTANO: p = h + Df + z"
+      },
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "z = 1,5 B"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es la profundidad mínima absoluta de cada punto de exploración para una cimentación superficial de una estructura con sótano, salvo que se encuentre roca antes?",
+      "opciones": [
+       "10 m",
+       "6 m",
+       "4,5 m",
+       "3 m"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "En ningún caso p es menor de 3 m en el caso de estructuras sin sótano y de 6 m en el caso de estructuras con sótano"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál es la profundidad mínima absoluta de cada punto de exploración para una cimentación superficial de una estructura sin sótano, salvo que se encuentre roca antes?",
+      "opciones": [
+       "6 m",
+       "2 m",
+       "3 m",
+       "1,5 m"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "En ningún caso p es menor de 3 m en el caso de estructuras sin sótano"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En cimentaciones superficiales, si dentro de la profundidad activa aparece el estrato resistente típico de la zona, el PR puede adoptar una z menor que 1,5 B. ¿Qué profundidad de verificación mínima debe explorar entonces bajo ese estrato?",
+      "opciones": [
+       "1,5 m",
+       "6 m",
+       "3 m",
+       "5 m"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "En este caso la profundidad mínima de exploración es la profundidad del estrato resistente más una profundidad de verificación no menor a 3 m."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "imagen",
+      "pregunta": "En la figura de una edificación con sótano y zapatas, ¿qué tramos suma la profundidad mínima de exploración P?",
+      "imagenUrl": "data:image/jpeg;base64,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kkkkkkkkkkkkkkkEAkkkkkkEEkkkkkEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEkkkkkEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEAggkkEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEETfDEEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEkAAgkEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEkkkkkEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEkH0EkEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEkEgkkEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEkkkkkEEkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkEAkkkkkkEEkkkkkEEkkkkkkkkkkkkkkkkkkkkkkEkkgkkkkkkEAkkkkkkEEkkkkkEkkkkkkkkkkkkkkkkkkkkkkg0kgikkkkAAkAkkkkkkEAkkkkkkkkkkkkkkgAEEkkkkkkkkkkgkkkgkkkgf8A/JJJJJJJJJJJJJJJJJJJJJJJE/35JJJJJJJJJJJBJJIJJJIAIAAAAAAAAJBAAAAAAAAAAAAAJAJAJJJJJJJJJJJJBJJIJJJJJJBAJJJJJJBBJJJJJBJJJJJJJJJJJJJJJJJJJJJJJBJAAJJJJJJBAJJJJJJBBJJJJJBBJJJJJJJJJJJJJJJJJJJJJJBJBgJJJJJJBAJJJJJJBBBIIABBBJJJJJJJJJJJJJJJJJJJJJJBJIIJJJJJJBAJJJJJJBBI83nhBBJJJJJJJJJJJJJJJJJJJJJJBJJIJJJJJJBAJJJJJJBBBAIJJBBJJJJJJJJJJJJJJJJJJJJJJBJJIJJJJJJBAJJJJJJBBJJJJJBBJJJJJJJJJJJJJJJJJJJJJJBJJIJJJJJJBAJJJJJJBBJJJJJBJJJJJJJJJJJJJJJJJJJJJJJBJJAwAABJJBBAAAAAABJAAAAAJAAAAAAAJJJJJJJJJJJJJJJJBJJIJJJJJJBJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJAIJJJJJJBBJJJJJJJIJJJJJJBJJJJJJBJJJJJJJJJJJJJJJJJAgJJJJJJBAJJJJJJ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",
+      "respuesta": "P = h + Df + z: h es el desnivel entre el terreno natural y el piso terminado del sótano más profundo, Df la profundidad de la zapata bajo ese piso y z = 1,5 B."
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "EDIFICACIÓN CON SÓTANO: p = h + Df + z"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Para cimentaciones profundas (pilotes o pilares), ¿qué valor toma z en la expresión p = h + Df + z en el 80 % de los sondeos?",
+      "opciones": [
+       "15,00 m",
+       "3,00 m",
+       "6,00 m",
+       "1,5 B"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "z = 6,00 metros, en el 80 % de los sondeos y 1,5 B, en el 20 % de los sondeos"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "concepto",
+      "pregunta": "En cimentaciones profundas, ¿qué es B al calcular z = 1,5 B en el 20 % de los sondeos?",
+      "respuesta": "El ancho de la cimentación delimitada por los puntos de todos los pilotes o por las bases de todos los pilares."
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "siendo B el ancho de la cimentación, delimitada por los puntos de todos los pilotes o las bases de todos los pilares."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En cimentaciones profundas apoyadas en un estrato resistente conocido, ¿qué profundidad de verificación mínima bajo ese estrato exige la E.050 si en la zona hay antecedentes de licuación?",
+      "opciones": [
+       "6 m",
+       "3 m",
+       "5 m",
+       "15 m"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "la cual en el caso de cimentaciones profundas no debe ser menor de 5 metros o de 15 metros si existen antecedentes de licuación en la zona"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En cimentaciones profundas apoyadas en un estrato resistente conocido, sin antecedentes de licuación, ¿qué profundidad de verificación mínima bajo ese estrato exige la E.050?",
+      "opciones": [
+       "3 m",
+       "1,5 B",
+       "15 m",
+       "5 m"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "la cual en el caso de cimentaciones profundas no debe ser menor de 5 metros"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la exploración para cimentaciones profundas, si se encuentra roca antes de alcanzar la profundidad p, ¿en qué longitud mínima debe verificarse su calidad?",
+      "opciones": [
+       "5 m",
+       "6 m",
+       "1 m",
+       "3 m"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 c)",
+       "extracto": "Si se encontrase roca antes de alcanzar la profundidad p, el PR debe llevar a cabo una verificación de su calidad, por un método adecuado, en una longitud mínima de 3 metros."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En suelos cohesivos, ¿qué tipo de muestras deben tomarse por debajo del nivel de apoyo previsto Df?",
+      "opciones": [
+       "Solo muestras en lata sellada Mah",
+       "Muestras alteradas Mab",
+       "Ninguna muestra; solo ensayos DPL",
+       "Muestras inalteradas Mib o Mit"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "15.3.2 e)",
+       "extracto": "a partir de esta profundidad se debe tomar las muestras tipo Mib o Mit en suelos cohesivos"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estos datos NO forma parte del «Resumen de las Condiciones de Cimentación» del EMS?",
+      "opciones": [
+       "El tipo de cimentación",
+       "La agresividad del suelo a la cimentación",
+       "La presión admisible y el factor de seguridad por corte",
+       "El presupuesto de la cimentación"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "16.2.1",
+       "extracto": "a) Tipo de cimentación b) Estrato de apoyo de la cimentación c) Parámetros de diseño para la cimentación (Profundidad de la Cimentación, Presión Admisible, Factor de Seguridad por Corte y Asentamiento Diferencial o Total) d) Agresividad del suelo a la cimentación e) Recomendaciones adicionales"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Qué parámetros sísmicos debe proporcionar el EMS, de acuerdo con la E.030, según el perfil de suelo encontrado?",
+      "opciones": [
+       "Aceleración espectral y desplazamiento máximo del techo",
+       "Solo la zona sísmica",
+       "Factor de uso U, coeficiente R y período fundamental T",
+       "Zona sísmica, tipo de perfil del suelo, factor de suelo S y los períodos TP y TL"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "16.2.8",
+       "extracto": "a) Zona sísmica b) Tipo de perfil del suelo c) Factor del suelo (S) d) Período TP (s) e) Período TL (s)"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "Si el EMS encuentra arenas o limos no plásticos sumergidos, ¿qué análisis debe hacer obligatoriamente el PR?",
+      "opciones": [
+       "Ensayo de hinchamiento unidimensional",
+       "Análisis químico de sulfatos y cloruros",
+       "Análisis determinístico y probabilístico del potencial de licuación",
+       "Ensayo de colapso en consolidómetro"
+      ],
+      "correcta": 2,
+      "explicacion": "La norma remite aquí al «artículo 36», pero la licuación está en el artículo 38 (el 36 trata del ataque químico). Es una remisión errada de la propia norma."
+     },
+     "citas": [
+      {
+       "articulo": "16.2.8",
+       "extracto": "En el caso que se encuentren suelos granulares sumergidos de los tipos: arenas y limos no plásticos, el PR debe obligatoriamente efectuar los análisis determinísticos y probabilísticos del potencial de licuación de los suelos"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Cuál de estos parámetros debe indicar el EMS para el diseño de las obras de sostenimiento?",
+      "opciones": [
+       "El módulo de rotura del concreto",
+       "El período fundamental de la edificación",
+       "La cuantía mínima de acero del muro",
+       "Los coeficientes de empuje activo, en reposo y pasivo, estáticos y dinámicos"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "16.2.9",
+       "extracto": "d) Coeficiente Activo Estático Ka e) Coeficiente en Reposo Estático Ko f) Coeficiente Pasivo Estático Kp"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "tabla",
+      "titulo": "Tabla 7 · Símbolos de las técnicas de exploración",
+      "columnas": [
+       "Símbolo"
+      ],
+      "filas": [
+       {
+        "etiqueta": "Pozo o calicata",
+        "valores": [
+         "C – n"
+        ]
+       },
+       {
+        "etiqueta": "Perforación",
+        "valores": [
+         "P – n"
+        ]
+       },
+       {
+        "etiqueta": "Trinchera",
+        "valores": [
+         "T – n"
+        ]
+       },
+       {
+        "etiqueta": "Auscultación",
+        "valores": [
+         "A – n"
+        ]
+       }
+      ],
+      "pregunta": {
+       "fila": 3,
+       "columna": 0
+      }
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 7",
+       "extracto": "Auscultación | A – n"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En el plano de ubicación de un EMS, ¿qué símbolo identifica una perforación según la Tabla 7 de la E.050?",
+      "opciones": [
+       "T – n",
+       "C – n",
+       "P – n",
+       "A – n"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Tabla 7",
+       "extracto": "Perforación | P – n"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la simbología SUCS de la Figura 3 de la E.050, ¿qué suelo es SP?",
+      "opciones": [
+       "Arena bien graduada",
+       "Arena mal graduada",
+       "Grava mal graduada",
+       "Arena limosa"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Figura 3",
+       "extracto": "| SP | ARENA MAL GRADUADA"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la simbología SUCS de la Figura 3 de la E.050, ¿qué suelo es CH?",
+      "opciones": [
+       "Arcilla orgánica de alta plasticidad",
+       "Arcilla inorgánica de alta plasticidad",
+       "Arcilla inorgánica de baja plasticidad",
+       "Limo inorgánico de alta plasticidad"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Figura 3",
+       "extracto": "| CH | ARCILLA INORGÁNICA DE ALTA PLASTICIDAD"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la prueba de penetración dinámica superpesada (DPSH, Anexo II de la E.050), ¿qué masa tiene la maza y desde qué altura cae?",
+      "opciones": [
+       "10 kg desde 500 mm",
+       "50 kg desde 760 mm",
+       "63,5 kg desde 500 mm",
+       "63,5 kg desde 760 mm"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Anexo II.4.3",
+       "extracto": "Maza: Cuerpo de acero de 63,5 kg ± 0,5 kg de masa."
+      },
+      {
+       "articulo": "Anexo II.4.6",
+       "extracto": "se eleva la maza a una altura de 760 mm ± 10 mm"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la prueba DPSH del Anexo II de la E.050, ¿qué ángulo tiene la punta del cono?",
+      "opciones": [
+       "60°",
+       "30°",
+       "45°",
+       "90°"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Anexo II.4.1",
+       "extracto": "Cono: Es una pieza de acero cilíndrica que termina en forma cónica con un ángulo de 90º."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la prueba DPSH del Anexo II de la E.050, ¿qué número de golpes da por terminada la prueba en un solo intervalo de 20 cm?",
+      "opciones": [
+       "Más de 75 golpes",
+       "Más de 100 golpes",
+       "Más de 150 golpes",
+       "Más de 50 golpes"
+      ],
+      "correcta": 1
+     },
+     "citas": [
+      {
+       "articulo": "Anexo II.7.5",
+       "extracto": "Se supere los 100 golpes para una penetración de 20 cm. Es decir N20 > 100."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En la prueba DPSH del Anexo II de la E.050, ¿cuándo se da por terminada la prueba según los valores consecutivos de N20?",
+      "opciones": [
+       "Cuando dos valores consecutivos de N20 superan 50",
+       "Cuando cinco valores consecutivos de N20 superan 30",
+       "Cuando tres valores consecutivos de N20 superan 100",
+       "Cuando tres valores consecutivos de N20 son iguales o superiores a 75"
+      ],
+      "correcta": 3
+     },
+     "citas": [
+      {
+       "articulo": "Anexo II.7.5",
+       "extracto": "Cuando tres valores consecutivos de N20 sean iguales o superiores a 75 golpes."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿A qué distancia mínima de otro punto ya ensayado debe ubicarse un nuevo ensayo DPSH?",
+      "opciones": [
+       "3 m",
+       "25 m",
+       "1,5 m",
+       "0,5 m"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Anexo II.7.1",
+       "extracto": "este debe distanciarse por lo menos metro y medio de cualquier otro punto ya ensayado y en el caso de existir sondeos previos, la separación deberá ser como mínimo de veinticinco diámetros."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "¿Con qué frecuencia de golpeo se ejecutan los ensayos DPSH y CTP de los anexos de la E.050?",
+      "opciones": [
+       "Entre 15 y 30 golpes por minuto",
+       "Exactamente 40 golpes por minuto",
+       "Entre 5 y 10 golpes por minuto",
+       "Entre 30 y 60 golpes por minuto"
+      ],
+      "correcta": 0
+     },
+     "citas": [
+      {
+       "articulo": "Anexo II.7.3",
+       "extracto": "El golpeo se efectuará con una frecuencia comprendida entre 15 golpes y 30 golpes por minuto"
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En el Cono Tipo Peck (CTP, Anexo III de la E.050), ¿de qué material es el cono y qué ángulo tiene su punta?",
+      "opciones": [
+       "Fierro fundido, con punta de 90°",
+       "Acero, con punta de 90°",
+       "Fierro fundido, con punta de 60°",
+       "Acero, con punta de 60°"
+      ],
+      "correcta": 2
+     },
+     "citas": [
+      {
+       "articulo": "Anexo III.4.1",
+       "extracto": "Cono: Es una pieza de fierro fundido cilíndrica que termina en forma cónica con un ángulo de 60º."
+      }
+     ]
+    },
+    {
+     "contenido": {
+      "tipo": "opcion_multiple",
+      "pregunta": "En el procedimiento del Cono Tipo Peck (CTP, Anexo III de la E.050), ¿cómo se obtiene el valor Cn que se anota?",
+      "opciones": [
+       "Sumando los golpes de dos intervalos consecutivos de 15 cm",
+       "Promediando los golpes de tres intervalos de 15 cm",
+       "Contando los golpes de un intervalo de 10 cm",
+       "Contando los golpes de un intervalo de 20 cm"
+      ],
+      "correcta": 0,
+      "explicacion": "Así Cn corresponde a 30 cm, como dice la leyenda de la Tabla 3. Ojo: la lista de símbolos del Anexo III (numeral 3) define Cn para 15 cm; la propia norma es incoherente."
+     },
+     "citas": [
+      {
+       "articulo": "Anexo III.5.3",
+       "extracto": "registrando el número de golpes necesario para introducir en el terreno el cono cada intervalo de 15 cm. La suma del número de golpes en dos intervalos consecutivos se anota cono Cn."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
